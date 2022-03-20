@@ -306,7 +306,13 @@ OpenApiMethodObject<LcuParameterObject, LcuSchemaObject> FunctionToMethodObject(
             switch (argumentSchema.Type)
             {
                 case string stringValue:
-                    parameter.Type = stringValue;
+                    if (stringValue.StartsWith("uint") || stringValue.StartsWith("int"))
+                    {
+                        parameter.Type = "integer";
+                        parameter.Format = stringValue.TrimStart('u');
+                    }
+                    else
+                        parameter.Type = stringValue;
                     break;
                 case Dictionary<string, HelpConsoleTypeSchema> typeValue:
                     if (typeValue.Single().Value.Values != null) // Enum

@@ -12,6 +12,9 @@ using RiotGames.Help2Swagger;
 
 Console.WriteLine("Hello, World!");
 
+string[] postTypes = { "string", "uint32", "uint64", "int32", "int64", "double", "float", "vector of object", "vector of uint32", "map of object" };
+
+
 using HttpClient client = new HttpClient();
 var helpConsole = await client.GetFromJsonAsync<HelpConsoleSchema>("https://gist.githubusercontent.com/mikaeldui/57d57b4bc4d1a9e606fa6bb00e7ebf4a/raw/1817255f2d273fa46ab61a500c8e8c6823bac422/help.console.20220322.json");
 var helpFull = await client.GetFromJsonAsync<HelpFullSchema>("https://www.mingweisamuel.com/lcu-schema/lcu/help.json");
@@ -64,6 +67,7 @@ foreach (var type in helpConsole.Types)
 {
     var typeSchema = type.Value;
     var schema = new LcuComponentSchemaObject();
+    schema.Description = typeSchema.Description;
 
     if (typeSchema.Fields != null)
     {
@@ -222,11 +226,34 @@ OpenApiMethodObject<LcuParameterObject, LcuSchemaObject> FunctionToMethodObject(
             parameter.Required = argument.Value.Optional == false;
 
             if (schema.HttpMethod == "GET")
-                parameter.In = schema.Url.Contains($"{{{argument.Key}}}") ? "path" : "query"; // And body?
-            else if (schema.Url.Contains($"{{{argument.Key}}}"))
+                parameter.In = schema.Url.Contains($"{{{argument.Key}}}") ? "path" : "query"; // And body? HelpConsoleTypeSchema
+            else if (schema.Url.Contains($"{{{argument.Key}}}") || schema.Url.Contains($"{{+{argument.Key}}}"))
                 parameter.In = "path";
+            else if (schema.Usage.Contains($"[{argument.Key}]") || schema.Usage.Contains($"[<{argument.Key}>]") ||
+                     (schema.Arguments.Length > 1 && schema.Arguments.All((a => postTypes.Contains((a.Single().Value.Type as string))))))
+                parameter.In = "query";
             else
+            {
+                if (method.RequestBody != null)
+                    throw new Exception("RequestBody already set!");
+
+                var contentSchema = typeToLcuSchemaObject(argument.Value.Type);
+
+                method.RequestBody = new OpenApiResponseObject<LcuSchemaObject>()
+                {
+                    Content = new Dictionary<string, OpenApiContentObject<LcuSchemaObject>>()
+                    {
+                        {
+                            "application/json", new OpenApiContentObject<LcuSchemaObject>()
+                            {
+                                Schema = contentSchema
+                            }
+                        }
+                    }
+                };
+
                 continue; // And add request body.
+            }
 
             switch (argument.Value.Type)
             {
@@ -251,81 +278,7 @@ OpenApiMethodObject<LcuParameterObject, LcuSchemaObject> FunctionToMethodObject(
     method.Responses = new();
     if (schema.Returns != null)
     {
-        LcuSchemaObject contentSchema;
-        switch (schema.Returns)
-        {
-            case string stringValue:
-                if (stringValue.StartsWith("vector of "))
-                {
-                    contentSchema = new LcuSchemaObject()
-                    {
-                        Type = "array",
-                        Items = new OpenApiSchemaObject
-                        {
-                            Ref = "#/components/schemas/" + stringValue.Remove(0, "vector of ".Length)
-                        }
-                    };
-                }
-                else if (stringValue.StartsWith("map of "))
-                {
-                    var typeName = stringValue.Remove(0, "map of ".Length);
-                    contentSchema = new LcuSchemaObject()
-                    {
-                        Type = "array"
-                    };
-                    if (typeName == "object")
-                    {
-                        contentSchema.Items = new OpenApiSchemaObject
-                        {
-                            Type = "object",
-                        };
-                    }
-                }
-                else if (stringValue == "object")
-                    contentSchema = new LcuSchemaObject()
-                    {
-                        Type = "object",
-                        AdditionalProperties = true
-                    };
-                else if (stringValue == "bool")
-                    contentSchema = new LcuSchemaObject()
-                    {
-                        Type = "boolean"
-                    };
-                else if (stringValue == "string")
-                    contentSchema = new LcuSchemaObject()
-                    {
-                        Type = stringValue
-                    };
-                else if (stringValue.StartsWith("int") || stringValue.StartsWith("uint"))
-                    contentSchema = new LcuSchemaObject()
-                    {
-                        Type = "integer",
-                        Format = stringValue
-                    };
-                else if (stringValue == "double")
-                    contentSchema = new LcuSchemaObject()
-                    {
-                        Type = "number",
-                        Format = stringValue
-                    };
-                else
-                {
-                    Debugger.Break();
-                    throw new Exception();
-                }
-
-                break;
-            case Dictionary<string, HelpConsoleTypeSchema> dictionaryValue:
-                contentSchema = new LcuSchemaObject()
-                {
-                    Ref = "#/components/schemas/" + dictionaryValue.Single().Key
-                };
-                break;
-            default:
-                throw new NotImplementedException("Not sure what happened.");
-        }
-
+        var contentSchema = typeToLcuSchemaObject(schema.Returns);
 
         method.Responses.Add("200", new OpenApiResponseObject<LcuSchemaObject>()
         {
@@ -352,4 +305,84 @@ OpenApiMethodObject<LcuParameterObject, LcuSchemaObject> FunctionToMethodObject(
     method.Tags = helpFull.Functions.Single(f => f.Name == function.Key).Tags.Where(t => t != "$remoting-binding-module").ToArray();
 
     return method;
+}
+
+LcuSchemaObject typeToLcuSchemaObject(object type)
+{
+    LcuSchemaObject contentSchema;
+    switch (type)
+    {
+        case string stringValue:
+            if (stringValue.StartsWith("vector of "))
+            {
+                contentSchema = new LcuSchemaObject()
+                {
+                    Type = "array",
+                    Items = new OpenApiSchemaObject
+                    {
+                        Ref = "#/components/schemas/" + stringValue.Remove(0, "vector of ".Length)
+                    }
+                };
+            }
+            else if (stringValue.StartsWith("map of "))
+            {
+                var typeName = stringValue.Remove(0, "map of ".Length);
+                contentSchema = new LcuSchemaObject()
+                {
+                    Type = "array"
+                };
+                if (typeName == "object")
+                {
+                    contentSchema.Items = new OpenApiSchemaObject
+                    {
+                        Type = "object",
+                    };
+                }
+            }
+            else if (stringValue == "object")
+                contentSchema = new LcuSchemaObject()
+                {
+                    Type = "object",
+                    AdditionalProperties = true
+                };
+            else if (stringValue == "bool")
+                contentSchema = new LcuSchemaObject()
+                {
+                    Type = "boolean"
+                };
+            else if (stringValue == "string")
+                contentSchema = new LcuSchemaObject()
+                {
+                    Type = stringValue
+                };
+            else if (stringValue.StartsWith("int") || stringValue.StartsWith("uint"))
+                contentSchema = new LcuSchemaObject()
+                {
+                    Type = "integer",
+                    Format = stringValue
+                };
+            else if (stringValue == "double")
+                contentSchema = new LcuSchemaObject()
+                {
+                    Type = "number",
+                    Format = stringValue
+                };
+            else
+            {
+                Debugger.Break();
+                throw new Exception();
+            }
+
+            break;
+        case Dictionary<string, HelpConsoleTypeSchema> dictionaryValue:
+            contentSchema = new LcuSchemaObject()
+            {
+                Ref = "#/components/schemas/" + dictionaryValue.Single().Key
+            };
+            break;
+        default:
+            throw new NotImplementedException("Not sure what happened.");
+    }
+
+    return contentSchema;
 }

@@ -2,6 +2,7 @@
 
 using System.Diagnostics;
 using System.Net.Http.Json;
+using System.Reflection;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 using MingweiSamuel;
@@ -12,13 +13,19 @@ using RiotGames.Help2Swagger;
 Console.WriteLine("Hello, World!");
 
 using HttpClient client = new HttpClient();
-var help = await client.GetFromJsonAsync<HelpConsoleSchema>("https://gist.githubusercontent.com/mikaeldui/57d57b4bc4d1a9e606fa6bb00e7ebf4a/raw/1817255f2d273fa46ab61a500c8e8c6823bac422/help.console.20220322.json");
+var helpConsole = await client.GetFromJsonAsync<HelpConsoleSchema>("https://gist.githubusercontent.com/mikaeldui/57d57b4bc4d1a9e606fa6bb00e7ebf4a/raw/1817255f2d273fa46ab61a500c8e8c6823bac422/help.console.20220322.json");
+var helpFull = await client.GetFromJsonAsync<HelpFullSchema>("https://www.mingweisamuel.com/lcu-schema/lcu/help.json");
 
 var openApi = new LcuApiOpenApiSchema();
 
 openApi.Paths = new Dictionary<string, OpenApiPathObject<OpenApiMethodObject<LcuParameterObject, LcuSchemaObject>, OpenApiMethodObject<LcuParameterObject, LcuSchemaObject>, OpenApiMethodObject<LcuParameterObject, LcuSchemaObject>, LcuParameterObject, LcuSchemaObject>>();
+openApi.Components = new OpenApiComponentsObject<LcuComponentSchemaObject, LcuComponentPropertyObject>();
+openApi.Components.Schemas = new Dictionary<string, LcuComponentSchemaObject>();
 
-var httpFunctions = help.Functions.Where(f => f.Value.HttpMethod != null).ToArray();
+var typeNames = helpConsole.Types.Keys.ToArray();
+
+
+var httpFunctions = helpConsole.Functions.Where(f => f.Value.HttpMethod != null).ToArray();
 
 var httpFunctionsByUrl = httpFunctions.GroupBy(f => f.Value.Url);
 
@@ -51,6 +58,141 @@ foreach (var urlFunctions in httpFunctionsByUrl)
     }
 
     openApi.Paths.Add(url, pathObject);
+}
+
+foreach (var type in helpConsole.Types)
+{
+    var typeSchema = type.Value;
+    var schema = new LcuComponentSchemaObject();
+
+    if (typeSchema.Fields != null)
+    {
+        schema.Type = "object";
+        schema.Properties = new Dictionary<string, LcuComponentPropertyObject>();
+
+        foreach(var field in typeSchema.Fields.SelectMany(d => d).DistinctBy(f => f.Key))
+        {
+            var property = new LcuComponentPropertyObject();
+            switch (field.Value.Type)
+            {
+                case string stringType:
+                    switch (stringType)
+                    {
+                        case "string":
+                            property.Type = stringType;
+                            break;
+                        case "bool":
+                            property.Type = "boolean";
+                            break;
+                        case "object":
+                            property.AdditionalProperties = true;
+                            property.Type = stringType;
+                            break;
+                        case "double":
+                            property.Type = "number";
+                            property.Format = "double";
+                            break;
+                        case "float":
+                            property.Type = "number";
+                            property.Format = "float";
+                            break;
+                        default:
+                        {
+                            if (stringType.StartsWith("uint") || stringType.StartsWith("int"))
+                            {
+                                property.Type = "integer";
+                                property.Format = stringType.TrimStart('u');
+                            }
+                            else
+                            {
+                                if (stringType.StartsWith("vector of "))
+                                {
+                                    property.Items = new LcuComponentPropertyObject();
+                                    property.Type = "array";
+                                    var ofType = stringType.Remove(0, "vector of ".Length);
+
+                                    if (typeNames.Contains(ofType))
+                                    {
+                                        property.Items.Ref = "#/components/schemas/" + ofType;
+                                    }
+                                    else
+                                    {
+                                        if (ofType is "object" or "string")
+                                        {
+                                            property.Items.Type = ofType;
+                                        }
+                                        else if (ofType.StartsWith("uint") || ofType.StartsWith("int"))
+                                        {
+                                            property.Items.Type = "integer";
+                                            property.Items.Format = ofType.TrimStart('u');
+                                        }
+                                        else
+                                            Debugger.Break();
+                                    }
+                                }
+                                else if (stringType.StartsWith("map of "))
+                                {
+                                    property.Items = new LcuComponentPropertyObject();
+                                    property.Type = "array";
+                                    var ofType = stringType.Remove(0, "map of ".Length);
+                                    if (typeNames.Contains(ofType))
+                                    {
+                                        property.Items.Ref = "#/components/schemas/" + ofType;
+                                    }
+                                    else
+                                    {
+                                        if (ofType is "object" or "string")
+                                        {
+                                            property.Items.Type = ofType;
+                                        }
+                                        else if (ofType == "bool")
+                                            property.Items.Type = "boolean";
+                                        else if (ofType == "double")
+                                        {
+                                            property.Items.Type = "number";
+                                            property.Items.Format = "double";
+                                        }
+                                        else if (ofType.StartsWith("uint") || ofType.StartsWith("int"))
+                                        {
+                                            property.Items.Type = "integer";
+                                            property.Items.Format = ofType.TrimStart('u');
+                                        }
+                                        else
+                                            Debugger.Break();
+                                    }
+
+                                }
+                                else
+                                    Debugger.Break();
+                            }
+
+                            break;
+                        }
+                    }
+                    break;
+                case Dictionary<string, HelpConsoleTypeSchema> typeType:
+                    property.Ref = "#/components/schemas/" + typeType.Single().Key;
+                    break;
+                default:
+                    Debugger.Break();
+                    break;
+            }
+
+            schema.Properties.Add(field.Key, property);
+        }
+    }
+    else if (typeSchema.Values != null)
+    {
+        schema.Type = "string";
+        schema.Enum = typeSchema.Values.Select(v => v.Name).ToArray();
+    }
+    else
+    {
+        Debugger.Break();
+        throw new NotImplementedException("Unknown component type");
+    }
+
+    openApi.Components.Schemas.Add(type.Key, schema);
 }
 
 var openApiJson = JsonSerializer.Serialize(openApi, new JsonSerializerOptions() { WriteIndented = true, DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull });
@@ -106,6 +248,7 @@ OpenApiMethodObject<LcuParameterObject, LcuSchemaObject> FunctionToMethodObject(
         method.Parameters = parameters.ToArray();
     }
 
+    method.Responses = new();
     if (schema.Returns != null)
     {
         LcuSchemaObject contentSchema;
@@ -184,7 +327,6 @@ OpenApiMethodObject<LcuParameterObject, LcuSchemaObject> FunctionToMethodObject(
         }
 
 
-        method.Responses = new();
         method.Responses.Add("200", new OpenApiResponseObject<LcuSchemaObject>()
         {
             Description = "Successful response",
@@ -199,6 +341,15 @@ OpenApiMethodObject<LcuParameterObject, LcuSchemaObject> FunctionToMethodObject(
             }
         });
     }
+    else
+    {
+        method.Responses.Add("204", new OpenApiResponseObject<LcuSchemaObject>()
+        {
+            Description = "No content"
+        });
+    }
+
+    method.Tags = helpFull.Functions.Single(f => f.Name == function.Key).Tags.Where(t => t != "$remoting-binding-module").ToArray();
 
     return method;
 }

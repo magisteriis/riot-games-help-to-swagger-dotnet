@@ -1,2 +1,2 @@
-# riot-games-help-to-swagger
+# Help2Swagger
 Converts Riot Games' native help format to Swagger and OpenAPI.

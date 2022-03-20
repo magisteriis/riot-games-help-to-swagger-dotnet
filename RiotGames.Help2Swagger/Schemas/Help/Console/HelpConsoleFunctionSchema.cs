@@ -17,7 +17,7 @@ public class HelpConsoleFunctionArgument
 
 public class HelpConsoleFunctionSchema
 {
-    public (string name, HelpConsoleFunctionArgument argument)[] Arguments { get; set; }
+    public Dictionary<string, HelpConsoleFunctionArgument>[] Arguments { get; set; }
     
     public string Description { get; set; }
 

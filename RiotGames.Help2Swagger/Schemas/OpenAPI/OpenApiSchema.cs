@@ -40,6 +40,7 @@ internal class OpenApiMethodObject<TParameter, TSchema>
     where TParameter : OpenApiParameterObject
     where TSchema : OpenApiSchemaObject
 {
+    public string? Description { get; set; }
     public string? OperationId { get; set; }
     public string[]? Tags { get; set; }
     public TParameter[]? Parameters { get; set; }

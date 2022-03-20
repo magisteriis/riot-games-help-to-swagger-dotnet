@@ -1,4 +1,6 @@
-﻿namespace MingweiSamuel.Lcu;
+﻿using RiotGames.Help;
+
+namespace MingweiSamuel.Lcu;
 
 using LcuMethod = OpenApiMethodObject<LcuParameterObject, LcuSchemaObject>;
 using LcuComponentsObject = OpenApiComponentsObject<LcuComponentSchemaObject, LcuComponentPropertyObject>;
@@ -19,6 +21,7 @@ internal class LcuParameterObject : OpenApiParameterObject
 {
     public string? Type { get; set; }
     public string? Format { get; set; }
+    public string[]? Enum { get; set; }
 }
 
 internal class LcuComponentSchemaObject : OpenApiComponentSchemaObject<LcuComponentPropertyObject>

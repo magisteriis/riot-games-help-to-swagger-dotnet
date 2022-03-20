@@ -1,7 +1,4 @@
-﻿using System.Dynamic;
-using RiotGames.Help;
-
-namespace MingweiSamuel.Lcu;
+﻿namespace MingweiSamuel.Lcu;
 
 using LcuMethod = OpenApiMethodObject<LcuParameterObject, LcuSchemaObject>;
 using LcuComponentsObject = OpenApiComponentsObject<LcuComponentSchemaObject, LcuComponentPropertyObject>;

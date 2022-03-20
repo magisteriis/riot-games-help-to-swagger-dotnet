@@ -23,7 +23,7 @@ public class HelpConsoleTypeFieldSchema
     public bool Optional { get; set; }
 
     /// <summary>
-    /// Either a string or a (string name, HelpConsoleTypeSchema type).
+    ///     Either a string or a (string name, HelpConsoleTypeSchema type).
     /// </summary>
     [JsonConverter(typeof(HelpConsoleTypeReferenceConverter))]
     public object Type { get; set; }

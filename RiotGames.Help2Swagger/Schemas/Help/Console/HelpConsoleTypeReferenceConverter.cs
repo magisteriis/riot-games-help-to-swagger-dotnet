@@ -9,10 +9,7 @@ public class HelpConsoleTypeReferenceConverter : JsonConverter<object>
         JsonSerializerOptions options)
     {
         // If the token is a string, return null
-        if (reader.TokenType == JsonTokenType.String)
-        {
-            return reader.GetString()!;
-        }
+        if (reader.TokenType == JsonTokenType.String) return reader.GetString()!;
 
         // Skip over the object and property name
         //reader.Read(); // Object

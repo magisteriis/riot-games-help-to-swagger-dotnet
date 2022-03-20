@@ -7,7 +7,7 @@ public abstract class HelpFullSchemaItemBase
     public string NameSpace { get; set; }
 
     /// <summary>
-    /// E.g. "$builtin, Plugins, Plugin lol-login".
+    ///     E.g. "$builtin, Plugins, Plugin lol-login".
     /// </summary>
     public string[] Tags { get; set; }
 }

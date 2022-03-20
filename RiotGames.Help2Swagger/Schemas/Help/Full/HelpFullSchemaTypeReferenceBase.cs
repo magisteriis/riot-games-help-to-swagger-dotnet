@@ -3,11 +3,12 @@
 public abstract class HelpFullSchemaTypeReferenceBase
 {
     /// <summary>
-    /// E.g. "string".
+    ///     E.g. "string".
     /// </summary>
     public string ElementType { get; set; }
+
     /// <summary>
-    /// E.g. "vector" or "string".
+    ///     E.g. "vector" or "string".
     /// </summary>
     public string Type { get; set; }
 }

@@ -12,6 +12,7 @@ internal class LcuApiOpenApiSchema : OpenApiSchema<
 
 internal class LcuSchemaObject : OpenApiSchemaObject
 {
+    public string? Description { get; set; }
     public object? AdditionalProperties { get; set; }
 }
 
@@ -31,4 +32,5 @@ internal class LcuComponentSchemaObject : OpenApiComponentSchemaObject<LcuCompon
 internal class LcuComponentPropertyObject : OpenApiComponentPropertyObject
 {
     public object? AdditionalProperties { get; set; }
+    public string? Description { get; set; }
 }

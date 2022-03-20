@@ -19,8 +19,7 @@ string[] postTypes =
 
 
 using var client = new HttpClient();
-var helpConsole = await client.GetFromJsonAsync<HelpConsoleSchema>(
-    "https://gist.githubusercontent.com/mikaeldui/57d57b4bc4d1a9e606fa6bb00e7ebf4a/raw/1817255f2d273fa46ab61a500c8e8c6823bac422/help.console.20220322.json");
+var helpConsole = await client.GetFromJsonAsync<HelpConsoleSchema>("https://www.mingweisamuel.com/lcu-schema/lcu/help.console.json");
 var helpFull = await client.GetFromJsonAsync<HelpFullSchema>("https://www.mingweisamuel.com/lcu-schema/lcu/help.json");
 
 var openApi = new LcuApiOpenApiSchema
@@ -38,6 +37,8 @@ var typeNames = helpConsole!.Types.Keys.ToArray();
 
 
 var httpFunctions = helpConsole.Functions.Where(f => f.Value.HttpMethod != null).ToArray();
+
+var otherFunctions = helpConsole.Functions.Where(f => !httpFunctions.Contains(f)).ToArray();
 
 var httpFunctionsByUrl = httpFunctions.GroupBy(f => f.Value.Url!);
 
@@ -70,9 +71,21 @@ foreach (var urlFunctions in httpFunctionsByUrl)
     openApi.Paths.Add(url, pathObject);
 }
 
-foreach (var type in helpConsole.Types)
+foreach (var function in otherFunctions)
 {
-    var typeSchema = type.Value;
+    var pathObject =
+        new OpenApiPathObject<OpenApiMethodObject<LcuParameterObject, LcuSchemaObject>,
+            OpenApiMethodObject<LcuParameterObject, LcuSchemaObject>,
+            OpenApiMethodObject<LcuParameterObject, LcuSchemaObject>, LcuParameterObject, LcuSchemaObject>
+        {
+            Post = FunctionToMethodObject(function)
+        };
+
+    openApi.Paths.Add(function.Key, pathObject);
+}
+
+foreach (var (typeIdentifier, typeSchema) in helpConsole.Types)
+{
     var schema = new LcuComponentSchemaObject
     {
         Description = typeSchema.Description
@@ -83,10 +96,12 @@ foreach (var type in helpConsole.Types)
         schema.Type = "object";
         schema.Properties = new Dictionary<string, LcuComponentPropertyObject>();
 
-        foreach (var field in typeSchema.Fields.SelectMany(d => d).DistinctBy(f => f.Key))
+        foreach (var (fieldIdentifier, fieldSchema) in typeSchema.Fields.SelectMany(d => d).DistinctBy(f => f.Key))
         {
             var property = new LcuComponentPropertyObject();
-            switch (field.Value.Type)
+            if (!string.IsNullOrEmpty(fieldSchema.Description))
+                property.Description = fieldSchema.Description;
+            switch (fieldSchema.Type)
             {
                 case string stringType:
                     switch (stringType)
@@ -156,27 +171,33 @@ foreach (var type in helpConsole.Types)
                                     }
                                     else
                                     {
-                                        if (ofType is "object" or "string")
+                                        switch (ofType)
                                         {
-                                            property.Items.Type = ofType;
-                                        }
-                                        else if (ofType == "bool")
-                                        {
-                                            property.Items.Type = "boolean";
-                                        }
-                                        else if (ofType == "double")
-                                        {
-                                            property.Items.Type = "number";
-                                            property.Items.Format = "double";
-                                        }
-                                        else if (ofType.StartsWith("uint") || ofType.StartsWith("int"))
-                                        {
-                                            property.Items.Type = "integer";
-                                            property.Items.Format = ofType.TrimStart('u');
-                                        }
-                                        else
-                                        {
-                                            Debugger.Break();
+                                            case "object" or "string":
+                                                property.Items.Type = ofType;
+                                                break;
+                                            case "bool":
+                                                property.Items.Type = "boolean";
+                                                break;
+                                            case "double":
+                                                property.Items.Type = "number";
+                                                property.Items.Format = "double";
+                                                break;
+                                            default:
+                                            {
+                                                if (ofType.StartsWith("uint") || ofType.StartsWith("int"))
+                                                {
+                                                    property.Items.Type = "integer";
+                                                    property.Items.Format = ofType.TrimStart('u');
+                                                }
+                                                else
+                                                {
+                                                    Debugger.Break();
+                                                    throw new Exception("Unknown type");
+                                                }
+
+                                                break;
+                                            }
                                         }
                                     }
                                 }
@@ -199,7 +220,7 @@ foreach (var type in helpConsole.Types)
                     break;
             }
 
-            schema.Properties.Add(field.Key, property);
+            schema.Properties.Add(fieldIdentifier, property);
         }
     }
     else if (typeSchema.Values != null)
@@ -213,7 +234,7 @@ foreach (var type in helpConsole.Types)
         throw new NotImplementedException("Unknown component type");
     }
 
-    openApi.Components.Schemas.Add(type.Key, schema);
+    openApi.Components.Schemas.Add('/' + typeIdentifier, schema);
 }
 
 var openApiJson = JsonSerializer.Serialize(openApi,
@@ -249,7 +270,7 @@ OpenApiMethodObject<LcuParameterObject, LcuSchemaObject> FunctionToMethodObject(
                 parameter.In =
                     functionSchema.Url!.Contains($"{{{argumentIdentifier}}}") ? "path" : "query"; // And body? HelpConsoleTypeSchema
             }
-            else if (functionSchema.Url!.Contains($"{{{argumentIdentifier}}}") || functionSchema.Url.Contains($"{{+{argumentIdentifier}}}"))
+            else if (functionSchema.Url != null && (functionSchema.Url.Contains($"{{{argumentIdentifier}}}") || functionSchema.Url.Contains($"{{+{argumentIdentifier}}}")))
             {
                 parameter.In = "path";
             }

@@ -64,7 +64,8 @@ OpenApiMethodObject<LcuParameterObject, LcuSchemaObject> FunctionToMethodObject(
     var method = new OpenApiMethodObject<LcuParameterObject, LcuSchemaObject>()
     {
         OperationId = function.Key,
-        Description = function.Value.Description
+        Description = function.Value.Help,
+        Summary = function.Value.Description
     };
 
     var schema = function.Value;
@@ -111,14 +112,65 @@ OpenApiMethodObject<LcuParameterObject, LcuSchemaObject> FunctionToMethodObject(
         switch (schema.Returns)
         {
             case string stringValue:
-                contentSchema = new LcuSchemaObject()
+                if (stringValue.StartsWith("vector of "))
                 {
-                    Type = "object"
-                };
-                if (stringValue == "object")
-                    contentSchema.AdditionalProperties = true;
+                    contentSchema = new LcuSchemaObject()
+                    {
+                        Type = "array",
+                        Items = new OpenApiSchemaObject
+                        {
+                            Ref = "#/components/schemas/" + stringValue.Remove(0, "vector of ".Length)
+                        }
+                    };
+                }
+                else if (stringValue.StartsWith("map of "))
+                {
+                    var typeName = stringValue.Remove(0, "map of ".Length);
+                    contentSchema = new LcuSchemaObject()
+                    {
+                        Type = "array"
+                    };
+                    if (typeName == "object")
+                    {
+                        contentSchema.Items = new OpenApiSchemaObject
+                        {
+                            Type = "object",
+                        };
+                    }
+                }
+                else if (stringValue == "object")
+                    contentSchema = new LcuSchemaObject()
+                    {
+                        Type = "object",
+                        AdditionalProperties = true
+                    };
+                else if (stringValue == "bool")
+                    contentSchema = new LcuSchemaObject()
+                    {
+                        Type = "boolean"
+                    };
+                else if (stringValue == "string")
+                    contentSchema = new LcuSchemaObject()
+                    {
+                        Type = stringValue
+                    };
+                else if (stringValue.StartsWith("int") || stringValue.StartsWith("uint"))
+                    contentSchema = new LcuSchemaObject()
+                    {
+                        Type = "integer",
+                        Format = stringValue
+                    };
+                else if (stringValue == "double")
+                    contentSchema = new LcuSchemaObject()
+                    {
+                        Type = "number",
+                        Format = stringValue
+                    };
                 else
+                {
                     Debugger.Break();
+                    throw new Exception();
+                }
 
                 break;
             case Dictionary<string, HelpConsoleTypeSchema> dictionaryValue:

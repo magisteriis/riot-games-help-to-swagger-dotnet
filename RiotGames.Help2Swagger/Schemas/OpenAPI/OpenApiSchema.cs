@@ -45,6 +45,7 @@ internal class OpenApiMethodObject<TParameter, TSchema>
     public string[]? Tags { get; set; }
     public TParameter[]? Parameters { get; set; }
     public Dictionary<string, OpenApiResponseObject<TSchema>>? Responses { get; set; }
+    public string? Summary { get; set; }
 }
 
 internal class OpenApiParameterObject

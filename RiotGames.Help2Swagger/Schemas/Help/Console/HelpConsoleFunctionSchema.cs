@@ -22,7 +22,7 @@ public class HelpConsoleFunctionSchema
     public string Description { get; set; }
 
     [JsonPropertyName("http_method")]
-    public string HttpMethod { get; set; }
+    public string? HttpMethod { get; set; }
 
     public int Privilege { get; set; }
 
@@ -30,9 +30,10 @@ public class HelpConsoleFunctionSchema
     /// Either a string or a (string name, HelpConsoleTypeSchema type).
     /// </summary>
     [JsonConverter(typeof(HelpConsoleTypeReferenceConverter))]
-    public object Returns { get; set; }
+    public object? Returns { get; set; }
 
-    public string Url { get; set; }
+    public string? Url { get; set; }
 
     public string Usage { get; set; }
+    public string? Help { get; set; }
 }

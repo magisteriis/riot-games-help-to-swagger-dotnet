@@ -17,8 +17,10 @@ internal class OpenApiSchema<
     where TComponentSchema : OpenApiComponentSchemaObject<TComponentProperty>
     where TComponentProperty : OpenApiComponentPropertyObject
 {
-    public Dictionary<string, TPath>? Paths { get; set; }
+    [JsonPropertyOrder(1)]
     public TComponents? Components { get; set; }
+    [JsonPropertyOrder(2)]
+    public Dictionary<string, TPath>? Paths { get; set; }
 }
 
 #region Open API Paths
@@ -30,10 +32,10 @@ internal class OpenApiPathObject<TGetMethodObject, TPostMethodObject, TPutMethod
     where TParameter : OpenApiParameterObject
     where TSchema : OpenApiSchemaObject
 {
+    public OpenApiMethodObject<LcuParameterObject, LcuSchemaObject>? Delete { get; set; }
     public TGetMethodObject? Get { get; set; }
     public TPostMethodObject? Post { get; set; }
     public TPutMethodObject? Put { get; set; }
-    public OpenApiMethodObject<LcuParameterObject, LcuSchemaObject>? Delete { get; set; }
 }
 
 internal class OpenApiMethodObject<TParameter, TSchema>
@@ -42,26 +44,30 @@ internal class OpenApiMethodObject<TParameter, TSchema>
 {
     public string? Description { get; set; }
     public string? OperationId { get; set; }
-    public string[]? Tags { get; set; }
     public TParameter[]? Parameters { get; set; }
     public Dictionary<string, OpenApiResponseObject<TSchema>>? Responses { get; set; }
     public OpenApiResponseObject<TSchema>? RequestBody { get; set; }
     public string? Summary { get; set; }
+    public string[]? Tags { get; set; }
 }
 
 internal class OpenApiParameterObject
 {
-    public string? Name { get; set; }
+    public string? Description { get; set; }
+    public string? Format { get; set; }
+    public string[]? Enum { get; set; }
     public string? In { get; set; }
+    public string? Name { get; set; }
     public bool? Required { get; set; }
+    public string? Type { get; set; }
 }
 
 [DebuggerDisplay("Description = {Description}")]
 internal class OpenApiResponseObject<TSchema>
     where TSchema : OpenApiSchemaObject
 {
-    public string? Description { get; set; }
     public Dictionary<string, OpenApiContentObject<TSchema>>? Content { get; set; }
+    public string? Description { get; set; }
 }
 
 internal class OpenApiContentObject<TSchema>
@@ -72,10 +78,10 @@ internal class OpenApiContentObject<TSchema>
 
 internal class OpenApiSchemaObject
 {
-    [JsonPropertyName("$ref")] public string? Ref { get; set; }
-    public OpenApiSchemaObject? Items { get; set; }
-    public string? Type { get; set; }
     public string? Format { get; set; }
+    public OpenApiSchemaObject? Items { get; set; }
+    [JsonPropertyName("$ref")] public string? Ref { get; set; }
+    public string? Type { get; set; }
 }
 
 #endregion Open API Paths
@@ -93,19 +99,19 @@ internal class OpenApiComponentsObject<TComponentSchema, TComponentProperty>
 internal class OpenApiComponentSchemaObject<TProperty>
     where TProperty : OpenApiComponentPropertyObject
 {
-    public string? Type { get; set; }
     public Dictionary<string, TProperty>? Properties { get; set; }
+    public string? Type { get; set; }
 }
 
 [DebuggerDisplay("Type = {Type} $ref = {Ref}")]
 internal class OpenApiComponentPropertyObject
 {
+    public bool? AdditionalProperties { get; set; }
+    public string[]? Enum { get; set; }
+    public string? Format { get; set; }
+    public OpenApiComponentPropertyObject? Items { get; set; }
     [JsonPropertyName("$ref")] public string? Ref { get; set; }
     public string? Type { get; set; }
-    public string? Format { get; set; }
-    public string[]? Enum { get; set; }
-    public OpenApiComponentPropertyObject? Items { get; set; }
-    public bool? AdditionalProperties { get; set; }
 }
 
 #endregion Open API Component

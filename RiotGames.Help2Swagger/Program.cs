@@ -71,6 +71,8 @@ foreach (var urlFunctions in httpFunctionsByUrl)
     openApi.Paths.Add(url, pathObject);
 }
 
+Dictionary<string, OpenApiPathObject<OpenApiMethodObject<LcuParameterObject, LcuSchemaObject>, OpenApiMethodObject<LcuParameterObject, LcuSchemaObject>, OpenApiMethodObject<LcuParameterObject, LcuSchemaObject>, LcuParameterObject, LcuSchemaObject>> corePaths = new();
+
 foreach (var function in otherFunctions)
 {
     var pathObject =
@@ -81,7 +83,7 @@ foreach (var function in otherFunctions)
             Post = FunctionToMethodObject(function)
         };
 
-    openApi.Paths.Add('/' + function.Key, pathObject);
+    corePaths.Add('/' + function.Key, pathObject);
 }
 
 foreach (var (typeIdentifier, typeSchema) in helpConsole.Types)
@@ -96,7 +98,7 @@ foreach (var (typeIdentifier, typeSchema) in helpConsole.Types)
         schema.Type = "object";
         schema.Properties = new Dictionary<string, LcuComponentPropertyObject>();
 
-        foreach (var (fieldIdentifier, fieldSchema) in typeSchema.Fields.SelectMany(d => d).DistinctBy(f => f.Key))
+        foreach (var (fieldIdentifier, fieldSchema) in typeSchema.Fields.SelectMany(d => d).DistinctBy(f => f.Key).OrderBy(f => f.Key))
         {
             var property = new LcuComponentPropertyObject();
             if (!string.IsNullOrEmpty(fieldSchema.Description))
@@ -148,7 +150,8 @@ foreach (var (typeIdentifier, typeSchema) in helpConsole.Types)
                                         if (ofType is "object" or "string")
                                         {
                                             property.Items.Type = ofType;
-                                            property.Items.AdditionalProperties = true;
+                                            if (ofType == "object")
+                                                property.Items.AdditionalProperties = true;
                                         }
                                         else if (ofType.StartsWith("uint") || ofType.StartsWith("int"))
                                         {
@@ -238,8 +241,12 @@ foreach (var (typeIdentifier, typeSchema) in helpConsole.Types)
     openApi.Components.Schemas.Add(typeIdentifier, schema);
 }
 
+openApi.Paths = openApi.Paths.OrderBy(kvp => kvp.Key).ToDictionary(kvp => kvp.Key, kvp => kvp.Value);
+openApi.Paths = corePaths.OrderBy(kvp => kvp.Key).ToDictionary(kvp => kvp.Key, kvp => kvp.Value).ToDictionary(kvp => kvp.Key, kvp => kvp.Value).Concat(openApi.Paths).ToDictionary(kvp => kvp.Key, kvp => kvp.Value);
+openApi.Components.Schemas = openApi.Components.Schemas.OrderBy(kvp => kvp.Key).ToDictionary(kvp => kvp.Key, kvp => kvp.Value);
+
 var openApiJson = JsonSerializer.Serialize(openApi,
-    new JsonSerializerOptions {WriteIndented = true, DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull});
+    new JsonSerializerOptions {WriteIndented = true, DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull, PropertyNamingPolicy = JsonNamingPolicy.CamelCase});
 
 Console.ReadKey();
 
@@ -257,13 +264,15 @@ OpenApiMethodObject<LcuParameterObject, LcuSchemaObject> FunctionToMethodObject(
 
     var parameters = new List<LcuParameterObject>();
 
-    foreach (var (argumentIdentifier, argumentSchema) in functionSchema.Arguments.SelectMany(a => a))
+    foreach (var (argumentIdentifier, argumentSchema) in functionSchema.Arguments.SelectMany(a => a).OrderBy(a => a.Key))
     {
         var parameter = new LcuParameterObject
         {
             Name = argumentIdentifier,
             Required = argumentSchema.Optional == false
         };
+        if (!string.IsNullOrEmpty(argumentSchema.Description))
+            parameter.Description = argumentSchema.Description;
 
         if (functionSchema.HttpMethod == "GET")
         {

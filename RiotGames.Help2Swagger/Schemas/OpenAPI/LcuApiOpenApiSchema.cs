@@ -18,9 +18,6 @@ internal class LcuSchemaObject : OpenApiSchemaObject
 
 internal class LcuParameterObject : OpenApiParameterObject
 {
-    public string? Type { get; set; }
-    public string? Format { get; set; }
-    public string[]? Enum { get; set; }
 }
 
 internal class LcuComponentSchemaObject : OpenApiComponentSchemaObject<LcuComponentPropertyObject>

@@ -374,14 +374,65 @@ LcuSchemaObject TypeToLcuSchemaObject(object type)
         case string stringValue:
             if (stringValue.StartsWith("vector of "))
             {
+                var ofType = stringValue.Remove(0, "vector of ".Length);
                 contentSchema = new LcuSchemaObject
                 {
-                    Type = "array",
-                    Items = new OpenApiSchemaObject
-                    {
-                        Ref = "#/components/schemas/" + stringValue.Remove(0, "vector of ".Length)
-                    }
+                    Type = "array"
                 };
+
+                if (typeNames.Contains(ofType))
+                    contentSchema.Items = new OpenApiSchemaObject
+                    {
+                        Ref = "#/components/schemas/" + ofType
+                    };
+                else switch (ofType)
+                {
+                    case "object":
+                        contentSchema.Items = new LcuSchemaObject
+                        {
+                            Type = "object",
+                            AdditionalProperties = true
+                        };
+                        break;
+                    case "bool":
+                        contentSchema.Items = new LcuSchemaObject
+                        {
+                            Type = "boolean"
+                        };
+                        break;
+                    case "string":
+                        contentSchema.Items = new LcuSchemaObject
+                        {
+                            Type = ofType
+                        };
+                        break;
+                    case "double":
+                        contentSchema.Items = new LcuSchemaObject
+                        {
+                            Type = "number",
+                            Format = ofType
+                        };
+                        break;
+                    default:
+                    {
+                        if (ofType.StartsWith("int") || ofType.StartsWith("uint"))
+                        {
+                            contentSchema.Items = new LcuSchemaObject
+                            {
+                                Type = "integer",
+                                Format = ofType
+                            };
+                        }
+                        else
+                        {
+                            Debugger.Break();
+                            throw new Exception();
+                        }
+
+                        break;
+                    }
+                }
+
             }
             else if (stringValue.StartsWith("map of "))
             {

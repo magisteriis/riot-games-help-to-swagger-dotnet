@@ -34,6 +34,7 @@ internal class OpenApiPathObject<TGetMethodObject, TPostMethodObject, TPutMethod
 {
     public OpenApiMethodObject<LcuParameterObject, LcuSchemaObject>? Delete { get; set; }
     public TGetMethodObject? Get { get; set; }
+    public OpenApiMethodObject<LcuParameterObject, LcuSchemaObject>? Patch { get; set; }
     public TPostMethodObject? Post { get; set; }
     public TPutMethodObject? Put { get; set; }
 }
@@ -45,8 +46,8 @@ internal class OpenApiMethodObject<TParameter, TSchema>
     public string? Description { get; set; }
     public string? OperationId { get; set; }
     public TParameter[]? Parameters { get; set; }
-    public Dictionary<string, OpenApiResponseObject<TSchema>>? Responses { get; set; }
     public OpenApiResponseObject<TSchema>? RequestBody { get; set; }
+    public Dictionary<string, OpenApiResponseObject<TSchema>>? Responses { get; set; }
     public string? Summary { get; set; }
     public string[]? Tags { get; set; }
 }

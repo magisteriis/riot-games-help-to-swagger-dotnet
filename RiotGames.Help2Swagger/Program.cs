@@ -57,6 +57,9 @@ foreach (var urlFunctions in httpFunctionsByUrl)
             case "GET":
                 pathObject.Get = FunctionToMethodObject(function);
                 break;
+            case "PATCH":
+                pathObject.Patch = FunctionToMethodObject(function);
+                break;
             case "POST":
                 pathObject.Post = FunctionToMethodObject(function);
                 break;
@@ -316,6 +319,9 @@ OpenApiMethodObject<LcuParameterObject, LcuSchemaObject> FunctionToMethodObject(
             continue; // And add request body.
         }
 
+        parameter.Required = !helpFull!.Functions.Single(f => f.Name == function.Key).Arguments
+            .Single(a => a.Name == argumentIdentifier).Optional;
+
         switch (argumentSchema.Type)
         {
             case string stringValue:
@@ -324,6 +330,8 @@ OpenApiMethodObject<LcuParameterObject, LcuSchemaObject> FunctionToMethodObject(
                     parameter.Type = "integer";
                     parameter.Format = stringValue.TrimStart('u');
                 }
+                else if (stringValue == "bool")
+                    parameter.Type = "boolean";
                 else
                     parameter.Type = stringValue;
 

@@ -81,7 +81,7 @@ foreach (var function in otherFunctions)
             Post = FunctionToMethodObject(function)
         };
 
-    openApi.Paths.Add(function.Key, pathObject);
+    openApi.Paths.Add('/' + function.Key, pathObject);
 }
 
 foreach (var (typeIdentifier, typeSchema) in helpConsole.Types)
@@ -234,7 +234,7 @@ foreach (var (typeIdentifier, typeSchema) in helpConsole.Types)
         throw new NotImplementedException("Unknown component type");
     }
 
-    openApi.Components.Schemas.Add('/' + typeIdentifier, schema);
+    openApi.Components.Schemas.Add(typeIdentifier, schema);
 }
 
 var openApiJson = JsonSerializer.Serialize(openApi,

@@ -12,8 +12,6 @@ internal class LcuApiOpenApiSchema : OpenApiSchema<
 
 internal class LcuSchemaObject : OpenApiSchemaObject
 {
-    public string? Description { get; set; }
-    public object? AdditionalProperties { get; set; }
 }
 
 internal class LcuParameterObject : OpenApiParameterObject

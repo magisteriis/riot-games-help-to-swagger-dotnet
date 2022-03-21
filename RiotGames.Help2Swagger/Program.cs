@@ -180,8 +180,12 @@ foreach (var (typeIdentifier, typeSchema) in helpConsole.Types)
                                     {
                                         switch (ofType)
                                         {
-                                            case "object" or "string":
+                                            case "object":
                                                 property.Items.Type = ofType;
+                                                property.Items.AdditionalProperties = true;
+                                                break;
+                                            case "string":
+                                                property.Items.Type = "string";
                                                 break;
                                             case "bool":
                                                 property.Items.Type = "boolean";
@@ -267,7 +271,9 @@ OpenApiMethodObject<LcuParameterObject, LcuSchemaObject> FunctionToMethodObject(
 
     var parameters = new List<LcuParameterObject>();
 
-    foreach (var (argumentIdentifier, argumentSchema) in functionSchema.Arguments.SelectMany(a => a).OrderBy(a => a.Key))
+    foreach (var (argumentIdentifier, argumentSchema) in functionSchema.Arguments.SelectMany(a => a)
+                 //.OrderBy(a => a.Key)
+             )
     {
         var parameter = new LcuParameterObject
         {
@@ -325,15 +331,50 @@ OpenApiMethodObject<LcuParameterObject, LcuSchemaObject> FunctionToMethodObject(
         switch (argumentSchema.Type)
         {
             case string stringValue:
-                if (stringValue.StartsWith("uint") || stringValue.StartsWith("int"))
+                if (stringValue.StartsWith("vector of "))
+                {
+                    parameter.Type = "array";
+                    parameter.Items = new OpenApiParameterObject();
+                    var ofType = stringValue.Remove(0, "vector of ".Length);
+                    if (typeNames.Contains(ofType))
+                        parameter.Ref = "#/components/schemas/" + ofType;
+                    else if (ofType.StartsWith("uint") || ofType.StartsWith("int"))
+                    {
+                        parameter.Items.Type = "integer";
+                        parameter.Items.Format = ofType.TrimStart('u');
+                    }
+                    else if (ofType == "string")
+                        parameter.Items.Type = "string";
+                    else if (ofType == "object")
+                    {
+                        parameter.Items.Type = "object";
+                        parameter.Items.AdditionalProperties = true;
+                    }
+                    else
+                    {
+                        Debugger.Break();
+                        throw new Exception("Unexpected parameter item type");
+                    }
+
+                }
+                else if (stringValue.StartsWith("uint") || stringValue.StartsWith("int"))
                 {
                     parameter.Type = "integer";
                     parameter.Format = stringValue.TrimStart('u');
                 }
-                else if (stringValue == "bool")
-                    parameter.Type = "boolean";
-                else
-                    parameter.Type = stringValue;
+                else switch (stringValue)
+                {
+                    case "double" or "float":
+                        parameter.Type = "number";
+                        parameter.Format = stringValue;
+                        break;
+                    case "bool":
+                        parameter.Type = "boolean";
+                        break;
+                    default:
+                        parameter.Type = stringValue;
+                        break;
+                }
 
                 break;
             case Dictionary<string, HelpConsoleTypeSchema> typeValue:
@@ -398,12 +439,7 @@ LcuSchemaObject TypeToLcuSchemaObject(object type)
                     Type = "array"
                 };
 
-                if (typeNames.Contains(ofType))
-                    contentSchema.Items = new OpenApiSchemaObject
-                    {
-                        Ref = "#/components/schemas/" + ofType
-                    };
-                else switch (ofType)
+                switch (ofType)
                 {
                     case "object":
                         contentSchema.Items = new LcuSchemaObject
@@ -433,12 +469,17 @@ LcuSchemaObject TypeToLcuSchemaObject(object type)
                         break;
                     default:
                     {
-                        if (ofType.StartsWith("int") || ofType.StartsWith("uint"))
+                        if (typeNames.Contains(ofType))
+                            contentSchema.Items = new OpenApiSchemaObject
+                            {
+                                Ref = "#/components/schemas/" + ofType
+                            };
+                        else if (ofType.StartsWith("int") || ofType.StartsWith("uint"))
                         {
                             contentSchema.Items = new LcuSchemaObject
                             {
                                 Type = "integer",
-                                Format = ofType
+                                Format = ofType.TrimStart('u')
                             };
                         }
                         else
@@ -454,16 +495,50 @@ LcuSchemaObject TypeToLcuSchemaObject(object type)
             }
             else if (stringValue.StartsWith("map of "))
             {
-                var typeName = stringValue.Remove(0, "map of ".Length);
+                var ofType = stringValue.Remove(0, "map of ".Length);
                 contentSchema = new LcuSchemaObject
                 {
                     Type = "array"
                 };
-                if (typeName == "object")
-                    contentSchema.Items = new OpenApiSchemaObject
+                switch (ofType)
+                {
+                    case "object":
+                        contentSchema.Items = new LcuSchemaObject()
+                        {
+                            Type = "object",
+                            AdditionalProperties = true
+                        };
+                        break;
+                    case "string":
+                        contentSchema.Items = new LcuSchemaObject
+                        {
+                            Type = "string"
+                        };
+                        break;
+                    default:
                     {
-                        Type = "object"
-                    };
+                        if (typeNames.Contains(ofType))
+                            contentSchema.Items = new LcuSchemaObject()
+                            {
+                                Ref = "#/components/schemas/" + ofType
+                            };
+                        else if (ofType.StartsWith("uint") || ofType.StartsWith("int"))
+                        {
+                            contentSchema.Items = new LcuSchemaObject
+                            {
+                                Type = "integer",
+                                Format = ofType.TrimStart('u')
+                            };
+                        }
+                        else
+                        {
+                            Debugger.Break();
+                            throw new Exception("Unknown map type");
+                        }
+
+                        break;
+                    }
+                }
             }
             else switch (stringValue)
             {
@@ -493,7 +568,7 @@ LcuSchemaObject TypeToLcuSchemaObject(object type)
                         contentSchema = new LcuSchemaObject
                         {
                             Type = "integer",
-                            Format = stringValue
+                            Format = stringValue.TrimStart('u')
                         };
                     }
                     else if (stringValue == "double")

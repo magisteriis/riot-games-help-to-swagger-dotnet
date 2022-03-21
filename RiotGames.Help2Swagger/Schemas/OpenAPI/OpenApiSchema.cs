@@ -54,11 +54,14 @@ internal class OpenApiMethodObject<TParameter, TSchema>
 
 internal class OpenApiParameterObject
 {
+    public bool? AdditionalProperties { get; set; }
     public string? Description { get; set; }
     public string? Format { get; set; }
     public string[]? Enum { get; set; }
     public string? In { get; set; }
+    public OpenApiParameterObject? Items { get; set; }
     public string? Name { get; set; }
+    [JsonPropertyName("$ref")] public string? Ref { get; set; }
     public bool? Required { get; set; }
     public string? Type { get; set; }
 }
@@ -79,6 +82,8 @@ internal class OpenApiContentObject<TSchema>
 
 internal class OpenApiSchemaObject
 {
+    public object? AdditionalProperties { get; set; }
+    public string? Description { get; set; }
     public string? Format { get; set; }
     public OpenApiSchemaObject? Items { get; set; }
     [JsonPropertyName("$ref")] public string? Ref { get; set; }
@@ -107,11 +112,11 @@ internal class OpenApiComponentSchemaObject<TProperty>
 [DebuggerDisplay("Type = {Type} $ref = {Ref}")]
 internal class OpenApiComponentPropertyObject
 {
+    [JsonPropertyName("$ref")] public string? Ref { get; set; }
     public bool? AdditionalProperties { get; set; }
     public string[]? Enum { get; set; }
     public string? Format { get; set; }
     public OpenApiComponentPropertyObject? Items { get; set; }
-    [JsonPropertyName("$ref")] public string? Ref { get; set; }
     public string? Type { get; set; }
 }
 

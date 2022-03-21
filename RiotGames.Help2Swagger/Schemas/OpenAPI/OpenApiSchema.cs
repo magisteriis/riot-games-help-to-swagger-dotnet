@@ -105,6 +105,7 @@ internal class OpenApiComponentPropertyObject
     public string? Format { get; set; }
     public string[]? Enum { get; set; }
     public OpenApiComponentPropertyObject? Items { get; set; }
+    public bool? AdditionalProperties { get; set; }
 }
 
 #endregion Open API Component

@@ -148,6 +148,7 @@ foreach (var (typeIdentifier, typeSchema) in helpConsole.Types)
                                         if (ofType is "object" or "string")
                                         {
                                             property.Items.Type = ofType;
+                                            property.Items.AdditionalProperties = true;
                                         }
                                         else if (ofType.StartsWith("uint") || ofType.StartsWith("int"))
                                         {
@@ -498,6 +499,11 @@ LcuSchemaObject TypeToLcuSchemaObject(object type)
 
             break;
         case Dictionary<string, HelpConsoleTypeSchema> dictionaryValue:
+            if (!typeNames.Contains(dictionaryValue.Single().Key))
+            {
+                Debugger.Break();
+                throw new Exception("Unexpected type name");
+            }
             contentSchema = new LcuSchemaObject
             {
                 Ref = "#/components/schemas/" + dictionaryValue.Single().Key

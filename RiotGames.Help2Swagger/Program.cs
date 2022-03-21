@@ -254,81 +254,84 @@ OpenApiMethodObject<LcuParameterObject, LcuSchemaObject> FunctionToMethodObject(
         Summary = functionSchema.Description
     };
 
-    if (functionSchema.Arguments.Any())
+    var parameters = new List<LcuParameterObject>();
+
+    foreach (var (argumentIdentifier, argumentSchema) in functionSchema.Arguments.SelectMany(a => a))
     {
-        var parameters = new List<LcuParameterObject>();
-        foreach (var (argumentIdentifier, argumentSchema) in functionSchema.Arguments.SelectMany(a => a))
+        var parameter = new LcuParameterObject
         {
-            var parameter = new LcuParameterObject
-            {
-                Name = argumentIdentifier,
-                Required = argumentSchema.Optional == false
-            };
+            Name = argumentIdentifier,
+            Required = argumentSchema.Optional == false
+        };
 
-            if (functionSchema.HttpMethod == "GET")
-            {
-                parameter.In =
-                    functionSchema.Url!.Contains($"{{{argumentIdentifier}}}") ? "path" : "query"; // And body? HelpConsoleTypeSchema
-            }
-            else if (functionSchema.Url != null && (functionSchema.Url.Contains($"{{{argumentIdentifier}}}") || functionSchema.Url.Contains($"{{+{argumentIdentifier}}}")))
-            {
-                parameter.In = "path";
-            }
-            else if (functionSchema.Usage.Contains($"[{argumentIdentifier}]") || functionSchema.Usage.Contains($"[<{argumentIdentifier}>]") ||
-                     functionSchema.Arguments.Length > 1 &&
-                     functionSchema.Arguments.All(a => postTypes.Contains(a.Single().Value.Type as string)))
-            {
-                parameter.In = "query";
-            }
-            else
-            {
-                if (method.RequestBody != null)
-                    throw new Exception("RequestBody already set!");
+        if (functionSchema.HttpMethod == "GET")
+        {
+            parameter.In =
+                functionSchema.Url!.Contains($"{{{argumentIdentifier}}}")
+                    ? "path"
+                    : "query"; // And body? HelpConsoleTypeSchema
+        }
+        else if (functionSchema.Url != null && (functionSchema.Url.Contains($"{{{argumentIdentifier}}}") ||
+                                                functionSchema.Url.Contains($"{{+{argumentIdentifier}}}")))
+        {
+            parameter.In = "path";
+        }
+        else if (functionSchema.Usage.Contains($"[{argumentIdentifier}]") ||
+                 functionSchema.Usage.Contains($"[<{argumentIdentifier}>]") ||
+                 functionSchema.Arguments.Length > 1 &&
+                 functionSchema.Arguments.All(a => postTypes.Contains(a.Single().Value.Type as string)))
+        {
+            parameter.In = "query";
+        }
+        else
+        {
+            if (method.RequestBody != null)
+                throw new Exception("RequestBody already set!");
 
-                var contentSchema = TypeToLcuSchemaObject(argumentSchema.Type);
+            var contentSchema = TypeToLcuSchemaObject(argumentSchema.Type);
 
-                method.RequestBody = new OpenApiResponseObject<LcuSchemaObject>
+            method.RequestBody = new OpenApiResponseObject<LcuSchemaObject>
+            {
+                Content = new Dictionary<string, OpenApiContentObject<LcuSchemaObject>>
                 {
-                    Content = new Dictionary<string, OpenApiContentObject<LcuSchemaObject>>
                     {
+                        "application/json", new OpenApiContentObject<LcuSchemaObject>
                         {
-                            "application/json", new OpenApiContentObject<LcuSchemaObject>
-                            {
-                                Schema = contentSchema
-                            }
+                            Schema = contentSchema
                         }
                     }
-                };
+                }
+            };
 
-                continue; // And add request body.
-            }
-
-            switch (argumentSchema.Type)
-            {
-                case string stringValue:
-                    if (stringValue.StartsWith("uint") || stringValue.StartsWith("int"))
-                    {
-                        parameter.Type = "integer";
-                        parameter.Format = stringValue.TrimStart('u');
-                    }
-                    else
-                        parameter.Type = stringValue;
-                    break;
-                case Dictionary<string, HelpConsoleTypeSchema> typeValue:
-                    if (typeValue.Single().Value.Values != null) // Enum
-                    {
-                        parameter.Type = "string";
-                        parameter.Enum = typeValue.Single().Value.Values!.Select(v => v.Name).ToArray();
-                    }
-
-                    break;
-            }
-
-            parameters.Add(parameter);
+            continue; // And add request body.
         }
 
-        method.Parameters = parameters.ToArray();
+        switch (argumentSchema.Type)
+        {
+            case string stringValue:
+                if (stringValue.StartsWith("uint") || stringValue.StartsWith("int"))
+                {
+                    parameter.Type = "integer";
+                    parameter.Format = stringValue.TrimStart('u');
+                }
+                else
+                    parameter.Type = stringValue;
+
+                break;
+            case Dictionary<string, HelpConsoleTypeSchema> typeValue:
+                if (typeValue.Single().Value.Values != null) // Enum
+                {
+                    parameter.Type = "string";
+                    parameter.Enum = typeValue.Single().Value.Values!.Select(v => v.Name).ToArray();
+                }
+
+                break;
+        }
+
+        parameters.Add(parameter);
     }
+
+    method.Parameters = parameters.ToArray();
 
     method.Responses = new Dictionary<string, OpenApiResponseObject<LcuSchemaObject>>();
     if (functionSchema.Returns != null)

@@ -13,13 +13,14 @@ using RiotGames.Help2Swagger.Converters;
 Console.WriteLine("Help2Swagger");
 
 string? outPath = null;
-string helpFullUrl = "https://www.mingweisamuel.com/lcu-schema/lcu/help.json";
-string helpConsoleUrl = "https://www.mingweisamuel.com/lcu-schema/lcu/help.console.json";
+var helpFullUrl = "https://www.mingweisamuel.com/lcu-schema/lcu/help.json";
+var helpConsoleUrl = "https://www.mingweisamuel.com/lcu-schema/lcu/help.console.json";
 
 switch (args.Length)
 {
     case 0:
-        Console.WriteLine("No arguments specified. Downloading Help from default locations and doesn't output anything.");
+        Console.WriteLine(
+            "No arguments specified. Downloading Help from default locations and doesn't output anything.");
         break;
     case 1:
         Console.WriteLine("Custom out-path set.");
@@ -49,13 +50,77 @@ var helpFull = await client.GetFromJsonAsync<HelpFullSchema>(helpFullUrl);
 
 var openApi = new OpenApiDocument
 {
-    Info = new OpenApiInfo()
+    Info = new OpenApiInfo
     {
-        Title = "League Client Update"
+        Title = "League Client Update",
+        Version = "1.0.0-magisteriis",
+        Contact = new OpenApiContact
+        {
+            Name = "Mikael Dúi Bolinder (DevOps Activist)",
+            Url = new Uri("https://discord.gg/riotgamesdevrel")
+        },
+        Description = "Auto-generated from the LCU help files.",
+        License = new OpenApiLicense
+        {
+            Name = "The Unlicense"
+        }
     },
     Paths = new OpenApiPaths(),
-    Components = new OpenApiComponents()
+    Components = new OpenApiComponents
+    {
+        SecuritySchemes =
+        {
+            {
+                "basicAuth", new OpenApiSecurityScheme
+                {
+                    Type = SecuritySchemeType.Http,
+                    Scheme = "basic",
+                    Description = "Username: riot. Password randomly generated on LCU start."
+                }
+            }
+        }
+    },
+    SecurityRequirements =
+    {
+        new OpenApiSecurityRequirement
+        {
+            {
+                new OpenApiSecurityScheme
+                    {Reference = new OpenApiReference {Type = ReferenceType.SecurityScheme, Id = "basicAuth"}},
+                new List<string>()
+            }
+        }
+    },
+    Servers =
+    {
+        new OpenApiServer
+        {
+            Description = "YOUR local instance of LCU.",
+            Url = "https://127.0.0.1:{port}",
+            Variables =
+            {
+                {
+                    "username", new OpenApiServerVariable()
+                    {
+                        Description = "The username, which is always \"riot\"",
+                        Enum =
+                        {
+                            "riot"
+                        }
+                    }
+                },
+                {
+                    "port", new OpenApiServerVariable()
+                    {
+                        Description = "The port this LCU instance is running on. Changes every restart."
+                    }
+                }
+            }
+        }
+    }
 };
+
+//openApi.SecurityRequirements.
 
 var typeNames = helpConsole!.Types.Keys.ToArray();
 
@@ -90,7 +155,7 @@ foreach (var (typeIdentifier, typeSchema) in helpConsole.Types)
     else if (typeSchema.Values != null)
     {
         schema.Type = "string";
-        schema.Enum = typeSchema.Values.Select(v => (IOpenApiAny)new OpenApiString(v.Name)).ToList();
+        schema.Enum = typeSchema.Values.Select(v => (IOpenApiAny) new OpenApiString(v.Name)).ToList();
     }
     else
     {
@@ -133,7 +198,7 @@ var openApiJson = openApi.SerializeAsJson(OpenApiSpecVersion.OpenApi3_0);
 
 if (outPath != null)
 {
-    (new FileInfo(outPath)).Directory!.Create();
+    new FileInfo(outPath).Directory!.Create();
     await File.WriteAllTextAsync(outPath, openApiJson);
 }
 
@@ -166,7 +231,7 @@ OpenApiOperation FunctionToOperation(
                 .Arguments
                 .Single(a => a.Name == argument.Key)
                 .Optional;
-        
+
         operation.Parameters.Add(parameter);
     }
 

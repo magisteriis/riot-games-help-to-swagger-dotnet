@@ -10,12 +10,42 @@ using RiotGames.Help;
 using RiotGames.Help2Swagger;
 using RiotGames.Help2Swagger.Converters;
 
-Console.WriteLine("Hello, World!");
+Console.WriteLine("Help2Swagger");
+
+string? outPath = null;
+string helpFullUrl = "https://www.mingweisamuel.com/lcu-schema/lcu/help.json";
+string helpConsoleUrl = "https://www.mingweisamuel.com/lcu-schema/lcu/help.console.json";
+
+switch (args.Length)
+{
+    case 0:
+        Console.WriteLine("No arguments specified. Downloading Help from default locations and doesn't output anything.");
+        break;
+    case 1:
+        Console.WriteLine("Custom out-path set.");
+        outPath = args[0];
+        break;
+    case 2:
+        Console.WriteLine("Downloading Help from custom locations.");
+        helpFullUrl = args[0];
+        helpConsoleUrl = args[1];
+        break;
+    case 3:
+        Console.WriteLine("Custom Help locations, and an output path set.");
+        helpFullUrl = args[0];
+        helpConsoleUrl = args[1];
+        outPath = args[3];
+        break;
+    default:
+        Console.WriteLine("This many arguments isn't supported.");
+        Environment.Exit(1);
+        break;
+}
+
 
 using var client = new HttpClient();
-var helpConsole =
-    await client.GetFromJsonAsync<HelpConsoleSchema>("https://www.mingweisamuel.com/lcu-schema/lcu/help.console.json");
-var helpFull = await client.GetFromJsonAsync<HelpFullSchema>("https://www.mingweisamuel.com/lcu-schema/lcu/help.json");
+var helpConsole = await client.GetFromJsonAsync<HelpConsoleSchema>(helpConsoleUrl);
+var helpFull = await client.GetFromJsonAsync<HelpFullSchema>(helpFullUrl);
 
 var openApi = new OpenApiDocument
 {
@@ -101,7 +131,10 @@ foreach (var function in otherFunctions)
 
 var openApiJson = openApi.SerializeAsJson(OpenApiSpecVersion.OpenApi3_0);
 
-Console.ReadKey();
+if (outPath != null)
+    await File.WriteAllTextAsync(outPath, openApiJson);
+
+Console.WriteLine("Done!");
 
 OpenApiOperation FunctionToOperation(
     KeyValuePair<string, HelpConsoleFunctionSchema> function)

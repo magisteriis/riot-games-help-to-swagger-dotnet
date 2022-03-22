@@ -120,7 +120,7 @@ var otherFunctions = helpConsole.Functions.Where(f => !httpFunctions.Contains(f)
 
 var httpFunctionsByUrl = httpFunctions.GroupBy(f => f.Value.Url!);
 
-foreach (var (typeIdentifier, typeSchema) in helpConsole.Types)
+foreach (var (typeIdentifier, typeSchema) in helpConsole.Types.OrderBy(t => t.Key))
 {
     var schema = new OpenApiSchema
     {

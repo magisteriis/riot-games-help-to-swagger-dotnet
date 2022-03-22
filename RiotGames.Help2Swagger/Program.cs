@@ -75,7 +75,7 @@ var openApi = new OpenApiDocument
                 {
                     Type = SecuritySchemeType.Http,
                     Scheme = "basic",
-                    Description = "Username: riot. Password randomly generated on LCU start."
+                    Description = "Username: riot. Password randomly generated on LCU start, it's NOT your account password."
                 }
             }
         }
@@ -99,16 +99,6 @@ var openApi = new OpenApiDocument
             Url = "https://127.0.0.1:{port}",
             Variables =
             {
-                {
-                    "username", new OpenApiServerVariable()
-                    {
-                        Description = "The username, which is always \"riot\"",
-                        Enum =
-                        {
-                            "riot"
-                        }
-                    }
-                },
                 {
                     "port", new OpenApiServerVariable()
                     {

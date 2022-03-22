@@ -24,4 +24,15 @@ jobs:
     - name: Test
       run: dotnet test --no-build --verbosity normal
     - name: Run
-      run: dotnet run --project ./RiotGames.Help2Swagger/RiotGames.Help2Swagger.csproj --no-build --verbosity normal -- openapi.json
+      run: dotnet run --project ./RiotGames.Help2Swagger/RiotGames.Help2Swagger.csproj --no-build --verbosity normal -- ./release/wwwroot/openapi.json
+      
+    - name: Deploy to GitHub Pages
+      if: success()
+      uses: crazy-max/ghaction-github-pages@v2
+      with:
+        target_branch: gh-pages
+        build_dir: release/wwwroot
+        jekyll: false
+        keep_history: false
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

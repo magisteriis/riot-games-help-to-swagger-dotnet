@@ -188,6 +188,7 @@ foreach (var urlFunctions in httpFunctionsByUrl.OrderBy(g => g.Key))
 openApi.Tags = openApi.Paths
     .SelectMany(p => p.Value.Operations)
     .SelectMany(o => o.Value.Tags)
+    .DistinctBy(t => t.Name)
     .OrderBy(t => t.Name.StartsWith("Plugin"))
     .ThenBy(t => !t.Name.StartsWith("Plugins"))
     .ThenBy(t => !t.Name.StartsWith("Plugin Manager"))

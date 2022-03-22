@@ -184,6 +184,16 @@ foreach (var urlFunctions in httpFunctionsByUrl.OrderBy(g => g.Key))
     openApi.Paths.Add(url, pathObject);
 }
 
+foreach (var (path, operations) in openApi.Paths
+             .Select(p => (p.Key, p.Value.Operations.Where(o => !o.Value.Tags.Any())))
+             .Where(x => x.Item2.Any()))
+{
+    foreach (var operation in operations)
+    {
+        operation.Value.Tags.Add(new OpenApiTag {Name = path.Split('/', StringSplitOptions.RemoveEmptyEntries).First()});
+    }
+}
+
 // Customize the tag sort order in Swagger UI
 openApi.Tags = openApi.Paths
     .SelectMany(p => p.Value.Operations)

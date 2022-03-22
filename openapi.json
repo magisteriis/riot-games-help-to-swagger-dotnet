@@ -1071,6 +1071,9 @@
     },
     "/cookie-jar/v1/cookies": {
       "get": {
+        "tags": [
+          "cookie-jar"
+        ],
         "summary": "Get all cookies.",
         "operationId": "GetCookieJarV1Cookies",
         "responses": {
@@ -1090,6 +1093,9 @@
         }
       },
       "post": {
+        "tags": [
+          "cookie-jar"
+        ],
         "summary": "Set a cookie.",
         "operationId": "PostCookieJarV1Cookies",
         "requestBody": {
@@ -1120,6 +1126,9 @@
     },
     "/crash-reporting/v1/crash-status": {
       "get": {
+        "tags": [
+          "crash-reporting"
+        ],
         "summary": "Returns whether or not the game or client have crashed",
         "operationId": "GetCrashReportingV1CrashStatus",
         "responses": {
@@ -1138,6 +1147,9 @@
     },
     "/data-store/v1/install-dir": {
       "get": {
+        "tags": [
+          "data-store"
+        ],
         "summary": "Gets the current install directory (used internally.)",
         "operationId": "GetDataStoreV1InstallDir",
         "responses": {
@@ -1156,6 +1168,9 @@
     },
     "/data-store/v1/install-settings/{+path}": {
       "get": {
+        "tags": [
+          "data-store"
+        ],
         "summary": "Get the data for the specified key from the install settings.",
         "operationId": "GetDataStoreV1InstallSettingsByPath",
         "parameters": [
@@ -1183,6 +1198,9 @@
         }
       },
       "post": {
+        "tags": [
+          "data-store"
+        ],
         "summary": "Set the data for the specified key from the install settings.",
         "operationId": "PostDataStoreV1InstallSettingsByPath",
         "parameters": [
@@ -1214,6 +1232,9 @@
     },
     "/data-store/v1/system-settings/{+path}": {
       "get": {
+        "tags": [
+          "data-store"
+        ],
         "summary": "Get the setting for the specified key.",
         "operationId": "GetDataStoreV1SystemSettingsByPath",
         "parameters": [
@@ -26085,6 +26106,9 @@
     },
     "/memory/v1/fe-processes-ready": {
       "get": {
+        "tags": [
+          "memory"
+        ],
         "summary": "Returns whether or not the frontend processes are ready",
         "operationId": "GetMemoryV1FeProcessesReady",
         "responses": {
@@ -26103,6 +26127,9 @@
     },
     "/memory/v1/notify-fe-processes-ready": {
       "post": {
+        "tags": [
+          "memory"
+        ],
         "summary": "Sends an event that the frontend processes are ready",
         "operationId": "PostMemoryV1NotifyFeProcessesReady",
         "responses": {
@@ -26114,6 +26141,9 @@
     },
     "/memory/v1/snapshot": {
       "post": {
+        "tags": [
+          "memory"
+        ],
         "summary": "Sends current memory usage info to telemetry.",
         "operationId": "PostMemoryV1Snapshot",
         "parameters": [
@@ -26771,6 +26801,9 @@
     },
     "/performance/v1/memory": {
       "get": {
+        "tags": [
+          "performance"
+        ],
         "summary": "Returns process memory status",
         "operationId": "GetPerformanceV1Memory",
         "responses": {
@@ -26883,6 +26916,9 @@
     },
     "/performance/v1/system-info": {
       "get": {
+        "tags": [
+          "performance"
+        ],
         "summary": "Returns hardware and software specs for the machine the client is running on.",
         "operationId": "GetPerformanceV1SystemInfo",
         "parameters": [
@@ -27303,6 +27339,9 @@
     },
     "/process-control/v1/process": {
       "get": {
+        "tags": [
+          "process-control"
+        ],
         "summary": "Returns information about the process-control.",
         "operationId": "GetProcessControlV1Process",
         "responses": {
@@ -27321,6 +27360,9 @@
     },
     "/process-control/v1/process/quit": {
       "post": {
+        "tags": [
+          "process-control"
+        ],
         "summary": "Quits the application.",
         "operationId": "PostProcessControlV1ProcessQuit",
         "responses": {
@@ -27332,6 +27374,9 @@
     },
     "/process-control/v1/process/restart": {
       "post": {
+        "tags": [
+          "process-control"
+        ],
         "summary": "Restarts the application.  Does nothing if there is already a waiting delayed restart.  Optionally accepts specific version to restart.",
         "operationId": "PostProcessControlV1ProcessRestart",
         "parameters": [
@@ -27362,6 +27407,9 @@
     },
     "/process-control/v1/process/restart-to-repair": {
       "post": {
+        "tags": [
+          "process-control"
+        ],
         "summary": "Restarts the application in order to perform a full repair (including self repair).",
         "operationId": "PostProcessControlV1ProcessRestartToRepair",
         "responses": {
@@ -27858,6 +27906,9 @@
     },
     "/riotclient/affinity": {
       "delete": {
+        "tags": [
+          "riotclient"
+        ],
         "summary": "Deletes the current runtime affinity of the application.",
         "operationId": "DeleteRiotclientAffinity",
         "responses": {
@@ -27867,6 +27918,9 @@
         }
       },
       "get": {
+        "tags": [
+          "riotclient"
+        ],
         "summary": "Get the current runtime affinity of the application.",
         "operationId": "GetRiotclientAffinity",
         "responses": {
@@ -27883,6 +27937,9 @@
         }
       },
       "post": {
+        "tags": [
+          "riotclient"
+        ],
         "summary": "Sets the current runtime affinity of the application.",
         "operationId": "PostRiotclientAffinity",
         "parameters": [
@@ -27905,6 +27962,9 @@
     },
     "/riotclient/app-name": {
       "get": {
+        "tags": [
+          "riotclient"
+        ],
         "summary": "Application name without file extension",
         "operationId": "GetRiotclientAppName",
         "responses": {
@@ -27923,6 +27983,9 @@
     },
     "/riotclient/app-port": {
       "get": {
+        "tags": [
+          "riotclient"
+        ],
         "summary": "Get the TCP port number that the remoting server is listening on.",
         "operationId": "GetRiotclientAppPort",
         "responses": {
@@ -27942,6 +28005,9 @@
     },
     "/riotclient/auth-token": {
       "get": {
+        "tags": [
+          "riotclient"
+        ],
         "summary": "Return the auth token used by the remoting server",
         "operationId": "GetRiotclientAuthToken",
         "responses": {
@@ -27960,6 +28026,9 @@
     },
     "/riotclient/command-line-args": {
       "get": {
+        "tags": [
+          "riotclient"
+        ],
         "summary": "Get the command line parameters for the application",
         "operationId": "GetRiotclientCommandLineArgs",
         "responses": {
@@ -27981,6 +28050,9 @@
     },
     "/riotclient/get_region_locale": {
       "get": {
+        "tags": [
+          "riotclient"
+        ],
         "summary": "Get the current region and locale.",
         "operationId": "GetRiotclientGetRegionLocale",
         "responses": {
@@ -27999,6 +28071,9 @@
     },
     "/riotclient/kill-and-restart-ux": {
       "post": {
+        "tags": [
+          "riotclient"
+        ],
         "summary": "Kills the ux process and restarts it. Used only when the ux process crashes.",
         "operationId": "PostRiotclientKillAndRestartUx",
         "responses": {
@@ -28010,6 +28085,9 @@
     },
     "/riotclient/kill-ux": {
       "post": {
+        "tags": [
+          "riotclient"
+        ],
         "summary": "Kills the ux process.",
         "operationId": "PostRiotclientKillUx",
         "responses": {
@@ -28021,6 +28099,9 @@
     },
     "/riotclient/launch-ux": {
       "post": {
+        "tags": [
+          "riotclient"
+        ],
         "summary": "Launches the ux process.",
         "operationId": "PostRiotclientLaunchUx",
         "responses": {
@@ -28032,6 +28113,9 @@
     },
     "/riotclient/machine-id": {
       "get": {
+        "tags": [
+          "riotclient"
+        ],
         "summary": "Base64 encoded uuid identifying the user's machine",
         "operationId": "GetRiotclientMachineId",
         "responses": {
@@ -28050,6 +28134,9 @@
     },
     "/riotclient/new-args": {
       "post": {
+        "tags": [
+          "riotclient"
+        ],
         "summary": "Endpoint for passing in new data.",
         "operationId": "PostRiotclientNewArgs",
         "requestBody": {
@@ -28073,6 +28160,9 @@
     },
     "/riotclient/open-url-in-browser": {
       "post": {
+        "tags": [
+          "riotclient"
+        ],
         "summary": "Opens a URL in the player's system browser. The browser will use its existing cookies to determine if the player is logged in, meaning that using this API can result in three differenet cases:\n\n* The player is signed in with the current account\n* The player is signed in with a different account\n* The player is not signed in at all.\n\nIn order to ensure the player is signed in with the same account as the client, leverage Player Platform's [authentication redirect](https://platform.riotgames.com/docs/authenticate-players/how-rso-works/sign-in-on-mobile/authentication-redirect) feature.",
         "description": "Open a URL in a browser.",
         "operationId": "PostRiotclientOpenUrlInBrowser",
@@ -28096,6 +28186,9 @@
     },
     "/riotclient/region-locale": {
       "get": {
+        "tags": [
+          "riotclient"
+        ],
         "summary": "Get the current region and locale.",
         "operationId": "GetRiotclientRegionLocale",
         "responses": {
@@ -28112,6 +28205,9 @@
         }
       },
       "put": {
+        "tags": [
+          "riotclient"
+        ],
         "summary": "Update the region and locale.",
         "operationId": "PutRiotclientRegionLocale",
         "requestBody": {
@@ -28132,6 +28228,9 @@
     },
     "/riotclient/region-locale/ack": {
       "put": {
+        "tags": [
+          "riotclient"
+        ],
         "summary": "Ux acknowledges the update to the region and locale.",
         "operationId": "PutRiotclientRegionLocaleAck",
         "parameters": [
@@ -28155,6 +28254,9 @@
     },
     "/riotclient/set_region_locale": {
       "post": {
+        "tags": [
+          "riotclient"
+        ],
         "summary": "Update the region and locale.",
         "operationId": "PostRiotclientSetRegionLocale",
         "parameters": [
@@ -28186,6 +28288,9 @@
     },
     "/riotclient/show-swagger": {
       "post": {
+        "tags": [
+          "riotclient"
+        ],
         "summary": "Open swagger in the default browser.",
         "operationId": "PostRiotclientShowSwagger",
         "responses": {
@@ -28197,6 +28302,9 @@
     },
     "/riotclient/splash": {
       "delete": {
+        "tags": [
+          "riotclient"
+        ],
         "summary": "Hide the splash screen.",
         "operationId": "DeleteRiotclientSplash",
         "responses": {
@@ -28206,6 +28314,9 @@
         }
       },
       "put": {
+        "tags": [
+          "riotclient"
+        ],
         "summary": "Show the splash screen.",
         "operationId": "PutRiotclientSplash",
         "parameters": [
@@ -28227,6 +28338,9 @@
     },
     "/riotclient/system-info/v1/basic-info": {
       "get": {
+        "tags": [
+          "riotclient"
+        ],
         "summary": "Get basic system information: OS, memory, processor speed, and number of physical cores",
         "operationId": "GetRiotclientSystemInfoV1BasicInfo",
         "responses": {
@@ -28245,6 +28359,9 @@
     },
     "/riotclient/trace": {
       "get": {
+        "tags": [
+          "riotclient"
+        ],
         "summary": "Retrieves a completed scheduler trace.",
         "operationId": "GetRiotclientTrace",
         "responses": {
@@ -28263,6 +28380,9 @@
     },
     "/riotclient/unload": {
       "post": {
+        "tags": [
+          "riotclient"
+        ],
         "summary": "Unloads the UX process",
         "operationId": "PostRiotclientUnload",
         "responses": {
@@ -28274,6 +28394,9 @@
     },
     "/riotclient/ux-allow-foreground": {
       "post": {
+        "tags": [
+          "riotclient"
+        ],
         "summary": "Allows the background process to launch the game into the foregound.",
         "operationId": "PostRiotclientUxAllowForeground",
         "responses": {
@@ -28285,6 +28408,9 @@
     },
     "/riotclient/ux-crash-count": {
       "get": {
+        "tags": [
+          "riotclient"
+        ],
         "summary": "Returns whether the ux has crashed or not",
         "operationId": "GetRiotclientUxCrashCount",
         "responses": {
@@ -28304,6 +28430,9 @@
     },
     "/riotclient/ux-flash": {
       "post": {
+        "tags": [
+          "riotclient"
+        ],
         "summary": "Flash the ux process' main window and the taskbar/dock icon, if they exist.",
         "operationId": "PostRiotclientUxFlash",
         "responses": {
@@ -28315,6 +28444,9 @@
     },
     "/riotclient/ux-load-complete": {
       "put": {
+        "tags": [
+          "riotclient"
+        ],
         "summary": "Ux notification that it has completed loading the main window.",
         "operationId": "PutRiotclientUxLoadComplete",
         "responses": {
@@ -28326,6 +28458,9 @@
     },
     "/riotclient/ux-minimize": {
       "post": {
+        "tags": [
+          "riotclient"
+        ],
         "summary": "Minimize the ux process and all its windows if it exists. This does not kill the ux.",
         "operationId": "PostRiotclientUxMinimize",
         "responses": {
@@ -28337,6 +28472,9 @@
     },
     "/riotclient/ux-show": {
       "post": {
+        "tags": [
+          "riotclient"
+        ],
         "summary": "Shows the ux process if it exists; create and show if it does not.",
         "operationId": "PostRiotclientUxShow",
         "responses": {
@@ -28348,6 +28486,9 @@
     },
     "/riotclient/ux-state": {
       "get": {
+        "tags": [
+          "riotclient"
+        ],
         "summary": "Get the current Ux state.",
         "operationId": "GetRiotclientUxState",
         "responses": {
@@ -28366,6 +28507,9 @@
     },
     "/riotclient/ux-state/ack": {
       "put": {
+        "tags": [
+          "riotclient"
+        ],
         "summary": "Ux acknowledges the update to the Ux state.",
         "operationId": "PutRiotclientUxStateAck",
         "parameters": [
@@ -28389,6 +28533,9 @@
     },
     "/riotclient/v1/auth-tokens/{authToken}": {
       "delete": {
+        "tags": [
+          "riotclient"
+        ],
         "summary": "Unregister an existing auth token.",
         "operationId": "DeleteRiotclientV1AuthTokensByAuthToken",
         "parameters": [
@@ -28415,6 +28562,9 @@
         }
       },
       "put": {
+        "tags": [
+          "riotclient"
+        ],
         "summary": "Register an auth token.  This is any alpha-numeric string that will be used as a password with the `riot` user when making requests.",
         "operationId": "PutRiotclientV1AuthTokensByAuthToken",
         "parameters": [
@@ -28444,6 +28594,9 @@
     },
     "/riotclient/v1/crash-reporting/environment": {
       "get": {
+        "tags": [
+          "riotclient"
+        ],
         "summary": "Get the crash reporting environment identifier.",
         "operationId": "GetRiotclientV1CrashReportingEnvironment",
         "responses": {
@@ -28460,6 +28613,9 @@
         }
       },
       "put": {
+        "tags": [
+          "riotclient"
+        ],
         "summary": "Tags the crash with an environment so it can be filtered more easily.",
         "operationId": "PutRiotclientV1CrashReportingEnvironment",
         "requestBody": {
@@ -28480,6 +28636,9 @@
     },
     "/riotclient/v1/crash-reporting/logs": {
       "post": {
+        "tags": [
+          "riotclient"
+        ],
         "summary": "Adds the enclosed log to the app's crash report.",
         "operationId": "PostRiotclientV1CrashReportingLogs",
         "parameters": [
@@ -28502,6 +28661,9 @@
     },
     "/riotclient/v1/elevation-requests": {
       "post": {
+        "tags": [
+          "riotclient"
+        ],
         "operationId": "PostRiotclientV1ElevationRequests",
         "requestBody": {
           "content": {
@@ -28521,6 +28683,9 @@
     },
     "/riotclient/v1/self-update-info": {
       "put": {
+        "tags": [
+          "riotclient"
+        ],
         "operationId": "PutRiotclientV1SelfUpdateInfo",
         "parameters": [
           {
@@ -28549,6 +28714,9 @@
     },
     "/riotclient/zoom-scale": {
       "get": {
+        "tags": [
+          "riotclient"
+        ],
         "summary": "Gets the last known posted zoom-scale value.",
         "operationId": "GetRiotclientZoomScale",
         "responses": {
@@ -28566,6 +28734,9 @@
         }
       },
       "post": {
+        "tags": [
+          "riotclient"
+        ],
         "summary": "Handles changing the zoom scale value.",
         "operationId": "PostRiotclientZoomScale",
         "parameters": [
@@ -28670,6 +28841,9 @@
     },
     "/system/v1/builds": {
       "get": {
+        "tags": [
+          "system"
+        ],
         "summary": "Information about the current artifacts that make up this build",
         "operationId": "GetSystemV1Builds",
         "responses": {
@@ -28688,6 +28862,9 @@
     },
     "/telemetry/v1/application-start-time": {
       "get": {
+        "tags": [
+          "telemetry"
+        ],
         "summary": "Gets the millisecond UNIX timestamp of when the application was started.",
         "operationId": "GetTelemetryV1ApplicationStartTime",
         "responses": {
@@ -28707,6 +28884,9 @@
     },
     "/telemetry/v1/common-data/{key}": {
       "post": {
+        "tags": [
+          "telemetry"
+        ],
         "summary": "Adds/updates a common data key and value to be sent with every subsequent event.",
         "operationId": "PostTelemetryV1CommonDataByKey",
         "parameters": [
@@ -28738,6 +28918,9 @@
     },
     "/telemetry/v1/events-once/{eventType}": {
       "post": {
+        "tags": [
+          "telemetry"
+        ],
         "summary": "Adds a new event to be sent to Dradis and/or other analytics/monitoring data sinks that will be sent only once during this client executable run regardless of any javascript frontend restarts. All events will have their eventType prefixed with \"riot__rclient__\"",
         "operationId": "PostTelemetryV1EventsOnceByEventType",
         "parameters": [
@@ -28781,6 +28964,9 @@
     },
     "/telemetry/v1/events-with-perf-info/{eventType}": {
       "post": {
+        "tags": [
+          "telemetry"
+        ],
         "summary": "Adds a new event to be sent to Dradis and/or other analytics/monitoring data sinks. This will include current performance information along with the passed in data. Each call will record the performance counters then reset them for use in the next call. All events will have their eventType prefixed with \"riot__rclient__\"",
         "operationId": "PostTelemetryV1EventsWithPerfInfoByEventType",
         "parameters": [
@@ -28815,6 +29001,9 @@
     },
     "/telemetry/v1/events/{eventType}": {
       "post": {
+        "tags": [
+          "telemetry"
+        ],
         "summary": "Adds a new event to be sent to Dradis and/or other analytics/monitoring data sinks. All events will have their eventType prefixed with \"riot__rclient__\"",
         "operationId": "PostTelemetryV1EventsByEventType",
         "parameters": [
@@ -28849,6 +29038,9 @@
     },
     "/telemetry/v3/events-once/{eventType}": {
       "post": {
+        "tags": [
+          "telemetry"
+        ],
         "summary": "Adds a new event to be sent to Dradis and/or other analytics/monitoring data sinks using the Riot Data API that will be sent only once during this client executable run regardless of any javascript frontend restarts. All events will have their eventType prefixed with \"riot__rclient__\"",
         "operationId": "PostTelemetryV3EventsOnceByEventType",
         "parameters": [
@@ -28892,6 +29084,9 @@
     },
     "/telemetry/v3/events/{eventType}": {
       "post": {
+        "tags": [
+          "telemetry"
+        ],
         "summary": "Adds a new event to be sent to Dradis and/or other analytics/monitoring data sinks using the Riot Data API. All events will have their eventType prefixed with \"riot__rclient__\"",
         "operationId": "PostTelemetryV3EventsByEventType",
         "parameters": [
@@ -75202,7 +75397,16 @@
       "name": "builtin"
     },
     {
+      "name": "cookie-jar"
+    },
+    {
       "name": "core"
+    },
+    {
+      "name": "crash-reporting"
+    },
+    {
+      "name": "data-store"
     },
     {
       "name": "http"
@@ -75215,6 +75419,18 @@
     },
     {
       "name": "performance"
+    },
+    {
+      "name": "process-control"
+    },
+    {
+      "name": "riotclient"
+    },
+    {
+      "name": "system"
+    },
+    {
+      "name": "telemetry"
     },
     {
       "name": "Tracing"

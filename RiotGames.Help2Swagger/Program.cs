@@ -132,7 +132,10 @@ foreach (var function in otherFunctions)
 var openApiJson = openApi.SerializeAsJson(OpenApiSpecVersion.OpenApi3_0);
 
 if (outPath != null)
+{
+    (new FileInfo(outPath)).Directory!.Create();
     await File.WriteAllTextAsync(outPath, openApiJson);
+}
 
 Console.WriteLine("Done!");
 

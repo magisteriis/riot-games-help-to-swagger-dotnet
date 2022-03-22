@@ -184,6 +184,16 @@ foreach (var urlFunctions in httpFunctionsByUrl.OrderBy(g => g.Key))
     openApi.Paths.Add(url, pathObject);
 }
 
+// Customize the tag sort order in Swagger UI
+openApi.Tags = openApi.Paths
+    .SelectMany(p => p.Value.Operations)
+    .SelectMany(o => o.Value.Tags)
+    .OrderBy(t => t.Name)
+    .ThenBy(t => !t.Name.StartsWith("Plugin"))
+    .ThenBy(t => t.Name.StartsWith("Plugin Manager"))
+    .ThenBy(t => t.Name)
+    .ToList();
+
 var openApiJson = openApi.SerializeAsJson(OpenApiSpecVersion.OpenApi3_0);
 
 if (outPath != null)

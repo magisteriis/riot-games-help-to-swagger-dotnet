@@ -24,4 +24,4 @@ jobs:
     - name: Test
       run: dotnet test --no-build --verbosity normal
     - name: Run
-      run: dotnet run --no-build --verbosity normal -- openapi.json
+      run: dotnet run RiotGames.Help2Swagger/RiotGames.Help2Swagger.csproj --no-build --verbosity normal -- openapi.json

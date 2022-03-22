@@ -156,22 +156,7 @@ foreach (var (typeIdentifier, typeSchema) in helpConsole.Types)
     openApi.Components.Schemas.Add(typeIdentifier, schema);
 }
 
-foreach (var urlFunctions in httpFunctionsByUrl)
-{
-    var url = urlFunctions.Key;
-
-    var pathObject = new OpenApiPathItem();
-
-    foreach (var function in urlFunctions)
-    {
-        var operation = FunctionToOperation(function);
-        pathObject.AddOperation(Enum.Parse<OperationType>(function.Value.HttpMethod!, true), operation);
-    }
-
-    openApi.Paths.Add(url, pathObject);
-}
-
-foreach (var function in otherFunctions)
+foreach (var function in otherFunctions.OrderBy(f => f.Key))
 {
     var pathObject = new OpenApiPathItem
     {
@@ -182,6 +167,21 @@ foreach (var function in otherFunctions)
     };
 
     openApi.Paths.Add('/' + function.Key, pathObject);
+}
+
+foreach (var urlFunctions in httpFunctionsByUrl.OrderBy(g => g.Key))
+{
+    var url = urlFunctions.Key;
+
+    var pathObject = new OpenApiPathItem();
+
+    foreach (var function in urlFunctions.OrderBy(f => f.Key))
+    {
+        var operation = FunctionToOperation(function);
+        pathObject.AddOperation(Enum.Parse<OperationType>(function.Value.HttpMethod!, true), operation);
+    }
+
+    openApi.Paths.Add(url, pathObject);
 }
 
 var openApiJson = openApi.SerializeAsJson(OpenApiSpecVersion.OpenApi3_0);

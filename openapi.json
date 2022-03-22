@@ -1,8 +1,34 @@
 {
   "openapi": "3.0.1",
   "info": {
-    "title": "League Client Update"
+    "title": "League Client Update",
+    "description": "Auto-generated from the LCU help files.",
+    "contact": {
+      "name": "Mikael Dúi Bolinder (DevOps Activist)",
+      "url": "https://discord.gg/riotgamesdevrel"
+    },
+    "license": {
+      "name": "The Unlicense"
+    },
+    "version": "1.0.0-magisteriis"
   },
+  "servers": [
+    {
+      "url": "https://127.0.0.1:{port}",
+      "description": "YOUR local instance of LCU.",
+      "variables": {
+        "username": {
+          "description": "The username, which is always \"riot\"",
+          "enum": [
+            "riot"
+          ]
+        },
+        "port": {
+          "description": "The port this LCU instance is running on. Changes every restart."
+        }
+      }
+    }
+  ],
   "paths": {
     "/lol-summoner/v1/current-summoner": {
       "get": {
@@ -75160,6 +75186,18 @@
           }
         }
       }
+    },
+    "securitySchemes": {
+      "basicAuth": {
+        "type": "http",
+        "description": "Username: riot. Password randomly generated on LCU start.",
+        "scheme": "basic"
+      }
     }
-  }
+  },
+  "security": [
+    {
+      "basicAuth": [ ]
+    }
+  ]
 }

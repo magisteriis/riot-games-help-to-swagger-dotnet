@@ -250,7 +250,7 @@ OpenApiOperation FunctionToOperation(
     }
 
     operation.Tags = helpFull!.Functions.Single(f => f.Name == functionIdentifier).Tags
-        .Where(t => t != "$remoting-binding-module").Select(t => new OpenApiTag {Name = t}).ToList();
+        .Where(t => t != "$remoting-binding-module").Select(t => new OpenApiTag {Name = t.Trim('$')}).ToList();
 
     return operation;
 }

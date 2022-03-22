@@ -189,7 +189,10 @@ openApi.Tags = openApi.Paths
     .SelectMany(p => p.Value.Operations)
     .SelectMany(o => o.Value.Tags)
     .OrderBy(t => t.Name.StartsWith("Plugin"))
+    .ThenBy(t => !t.Name.StartsWith("Plugins"))
     .ThenBy(t => !t.Name.StartsWith("Plugin Manager"))
+    .ThenBy(t => !t.Name.StartsWith("Plugin Asset"))
+    .ThenBy(t => t.Name.StartsWith("Plugin lol-"))
     .ThenBy(t => t.Name)
     .ToList();
 

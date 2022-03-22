@@ -155,11 +155,14 @@ OpenApiOperation FunctionToOperation(
 
         if (parameter == null) continue;
 
-        parameter.Required = !helpFull!.Functions
-            .Single(f => f.Name == function.Key)
-            .Arguments
-            .Single(a => a.Name == argument.Key)
-            .Optional;
+        if (parameter.In == ParameterLocation.Path)
+            parameter.Required = true; // Microsoft.OpenApi should set this, but doesn't right now.
+        else
+            parameter.Required = !helpFull!.Functions
+                .Single(f => f.Name == function.Key)
+                .Arguments
+                .Single(a => a.Name == argument.Key)
+                .Optional;
         
         operation.Parameters.Add(parameter);
     }

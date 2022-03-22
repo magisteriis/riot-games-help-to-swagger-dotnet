@@ -17,12 +17,6 @@
       "url": "https://127.0.0.1:{port}",
       "description": "YOUR local instance of LCU.",
       "variables": {
-        "username": {
-          "description": "The username, which is always \"riot\"",
-          "enum": [
-            "riot"
-          ]
-        },
         "port": {
           "description": "The port this LCU instance is running on. Changes every restart."
         }
@@ -75190,7 +75184,7 @@
     "securitySchemes": {
       "basicAuth": {
         "type": "http",
-        "description": "Username: riot. Password randomly generated on LCU start.",
+        "description": "Username: riot. Password randomly generated on LCU start, it's NOT your account password.",
         "scheme": "basic"
       }
     }

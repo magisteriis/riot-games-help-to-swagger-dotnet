@@ -27,7 +27,7 @@
     "/AsyncDelete": {
       "post": {
         "tags": [
-          "$builtin",
+          "builtin",
           "async"
         ],
         "summary": "Cancels the asynchronous operation or removes its completion status.",
@@ -61,7 +61,7 @@
     "/AsyncResult": {
       "post": {
         "tags": [
-          "$builtin",
+          "builtin",
           "async"
         ],
         "summary": "Retrieves the result of a completed asynchronous operation.",
@@ -95,7 +95,7 @@
     "/AsyncStatus": {
       "post": {
         "tags": [
-          "$builtin",
+          "builtin",
           "async"
         ],
         "summary": "Retrieves details on the current state of an asynchronous operation.",
@@ -129,7 +129,7 @@
     "/Cancel": {
       "post": {
         "tags": [
-          "$builtin",
+          "builtin",
           "async"
         ],
         "summary": "Attempts to cancel an asynchronous operation",
@@ -163,7 +163,7 @@
     "/Exit": {
       "post": {
         "tags": [
-          "$builtin"
+          "builtin"
         ],
         "summary": "Closes the connection.",
         "operationId": "Exit",
@@ -184,7 +184,7 @@
     "/Help": {
       "post": {
         "tags": [
-          "$builtin"
+          "builtin"
         ],
         "summary": "Returns information on available functions and types",
         "description": "With no arguments, returns a list of all available functions and types along with a short description. If a function or type is specified, returns detailed information about it.",
@@ -373,7 +373,7 @@
     "/Subscribe": {
       "post": {
         "tags": [
-          "$builtin"
+          "builtin"
         ],
         "summary": "Subscribes to a given event",
         "operationId": "Subscribe",
@@ -413,7 +413,7 @@
     "/Unsubscribe": {
       "post": {
         "tags": [
-          "$builtin"
+          "builtin"
         ],
         "summary": "Unsubscribes from a given event",
         "operationId": "Unsubscribe",
@@ -445,7 +445,7 @@
     "/WebSocketFormat": {
       "post": {
         "tags": [
-          "$builtin",
+          "builtin",
           "websocket"
         ],
         "summary": "Controls the console output format",
@@ -609,7 +609,7 @@
     "/async/v1/result/{asyncToken}": {
       "get": {
         "tags": [
-          "$builtin",
+          "builtin",
           "http",
           "async"
         ],
@@ -644,7 +644,7 @@
     "/async/v1/status/{asyncToken}": {
       "delete": {
         "tags": [
-          "$builtin",
+          "builtin",
           "http",
           "async"
         ],
@@ -677,7 +677,7 @@
       },
       "get": {
         "tags": [
-          "$builtin",
+          "builtin",
           "http",
           "async"
         ],

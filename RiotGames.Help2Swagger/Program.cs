@@ -101,7 +101,7 @@ foreach (var function in otherFunctions)
 
 var openApiJson = openApi.SerializeAsJson(OpenApiSpecVersion.OpenApi3_0);
 
-File.WriteAllText(@"C:\Users\Mikael\Documents\newopenapi.json", openApiJson);
+Console.ReadKey();
 
 OpenApiOperation FunctionToOperation(
     KeyValuePair<string, HelpConsoleFunctionSchema> function)

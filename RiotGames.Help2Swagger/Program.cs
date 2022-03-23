@@ -36,7 +36,7 @@ switch (args.Length)
         Console.WriteLine("Custom Help locations, and an output path set.");
         helpFullUrl = args[0];
         helpConsoleUrl = args[1];
-        outPath = args[3];
+        outPath = args[2];
         break;
     default:
         Console.WriteLine("This many arguments isn't supported.");

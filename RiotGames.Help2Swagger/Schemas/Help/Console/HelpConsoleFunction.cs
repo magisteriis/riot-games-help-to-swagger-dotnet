@@ -7,7 +7,7 @@ public class HelpConsoleFunctionArgument
     public string? Description { get; set; }
 
     /// <summary>
-    ///     Either a string or a (string name, HelpConsoleTypeSchema type).
+    ///     Either a string or a Dictionary (string name, HelpConsoleType type).
     /// </summary>
     [JsonConverter(typeof(HelpConsoleTypeReferenceConverter))]
     public object Type { get; set; }
@@ -15,7 +15,7 @@ public class HelpConsoleFunctionArgument
     public bool? Optional { get; set; }
 }
 
-public class HelpConsoleFunctionSchema
+public class HelpConsoleFunction
 {
     public Dictionary<string, HelpConsoleFunctionArgument>[] Arguments { get; set; }
 
@@ -26,7 +26,7 @@ public class HelpConsoleFunctionSchema
     public int Privilege { get; set; }
 
     /// <summary>
-    ///     Either a string or a (string name, HelpConsoleTypeSchema type).
+    ///     Either a string or a Dictionary (string name, HelpConsoleTypeSchema type).
     /// </summary>
     [JsonConverter(typeof(HelpConsoleTypeReferenceConverter))]
     public object? Returns { get; set; }

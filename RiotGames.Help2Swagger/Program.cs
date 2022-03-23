@@ -9,6 +9,7 @@ using Microsoft.OpenApi.Models;
 using RiotGames.Help;
 using RiotGames.Help2Swagger;
 using RiotGames.Help2Swagger.Converters;
+using RiotGames.Help2Swagger.Extensions;
 
 Console.WriteLine("Help2Swagger");
 
@@ -45,8 +46,8 @@ switch (args.Length)
 
 
 using var client = new HttpClient();
-var helpConsole = await client.GetFromJsonAsync<HelpConsoleSchema>(helpConsoleUrl);
-var helpFull = await client.GetFromJsonAsync<HelpFullSchema>(helpFullUrl);
+var helpConsole = await client.GetFromJsonAsync<HelpConsoleDocument>(helpConsoleUrl);
+var helpFull = await client.GetFromJsonAsync<HelpFullDocument>(helpFullUrl);
 
 var openApi = new OpenApiDocument
 {
@@ -142,7 +143,7 @@ foreach (var (typeIdentifier, typeSchema) in helpConsole.Types.OrderBy(t => t.Ke
             schema.Properties.Add(fieldIdentifier, property);
         }
     }
-    else if (typeSchema.Values != null)
+    else if (typeSchema.Values != null) // TODO: oneOf string, integer
     {
         schema.Type = "string";
         schema.Enum = typeSchema.Values.Select(v => (IOpenApiAny) new OpenApiString(v.Name)).ToList();
@@ -162,7 +163,7 @@ foreach (var function in otherFunctions.OrderBy(f => f.Key))
     {
         Operations =
         {
-            [OperationType.Post] = FunctionToOperation(function)
+            [OperationType.Post] = OperationConverter.Convert(function, openApi, helpFull!)
         }
     };
 
@@ -177,7 +178,7 @@ foreach (var urlFunctions in httpFunctionsByUrl.OrderBy(g => g.Key))
 
     foreach (var function in urlFunctions.OrderBy(f => f.Key))
     {
-        var operation = FunctionToOperation(function);
+        var operation = OperationConverter.Convert(function, openApi, helpFull!);
         pathObject.AddOperation(Enum.Parse<OperationType>(function.Value.HttpMethod!, true), operation);
     }
 
@@ -215,65 +216,4 @@ if (outPath != null)
     await File.WriteAllTextAsync(outPath, openApiJson);
 }
 
-Console.WriteLine("Done!");
-
-OpenApiOperation FunctionToOperation(
-    KeyValuePair<string, HelpConsoleFunctionSchema> function)
-{
-    var (functionIdentifier, functionSchema) = function;
-    var operation = new OpenApiOperation
-    {
-        OperationId = functionIdentifier,
-        Description = functionSchema.Help,
-        Summary = functionSchema.Description
-    };
-
-    foreach (var argument in functionSchema.Arguments.SelectMany(a => a)
-             //.OrderBy(a => a.Key)
-            )
-    {
-        var parameter = ParameterConverter.Convert(argument, functionSchema, operation, openApi);
-
-        if (parameter == null) continue;
-
-        if (parameter.In == ParameterLocation.Path)
-            parameter.Required = true; // Microsoft.OpenApi should set this, but doesn't right now.
-        else
-            parameter.Required = !helpFull!.Functions
-                .Single(f => f.Name == function.Key)
-                .Arguments
-                .Single(a => a.Name == argument.Key)
-                .Optional;
-
-        operation.Parameters.Add(parameter);
-    }
-
-    if (functionSchema.Returns != null)
-    {
-        var contentSchema = SchemaConverter.Convert(functionSchema.Returns, openApi);
-
-        operation.Responses.Add("200", new OpenApiResponse
-        {
-            Description = "Successful response",
-            Content =
-            {
-                ["application/json"] = new OpenApiMediaType
-                {
-                    Schema = contentSchema
-                }
-            }
-        });
-    }
-    else
-    {
-        operation.Responses.Add("204", new OpenApiResponse
-        {
-            Description = "No content"
-        });
-    }
-
-    operation.Tags = helpFull!.Functions.Single(f => f.Name == functionIdentifier).Tags
-        .Where(t => t != "$remoting-binding-module").Select(t => new OpenApiTag {Name = t.Trim('$')}).ToList();
-
-    return operation;
-}
+Console.WriteLine("Done!");  

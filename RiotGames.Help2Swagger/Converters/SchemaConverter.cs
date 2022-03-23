@@ -182,7 +182,7 @@ namespace RiotGames.Help2Swagger.Converters
                     }
 
                     break;
-                case Dictionary<string, HelpConsoleTypeSchema> dictionaryValue:
+                case Dictionary<string, HelpConsoleType> dictionaryValue:
                     if (!openApi.Components.Schemas.Keys.Contains(dictionaryValue.Single().Key))
                     {
                         Debugger.Break();

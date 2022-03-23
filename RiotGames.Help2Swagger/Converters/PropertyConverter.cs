@@ -11,7 +11,7 @@ namespace RiotGames.Help2Swagger.Converters
 {
     internal static class PropertyConverter
     {
-        public static OpenApiSchema Convert(HelpConsoleTypeFieldSchema fieldSchema, string[] typeNames, OpenApiDocument openApi)
+        public static OpenApiSchema Convert(HelpConsoleTypeField fieldSchema, string[] typeNames, OpenApiDocument openApi)
         {
             var property = new OpenApiSchema();
             if (!string.IsNullOrEmpty(fieldSchema.Description))
@@ -131,7 +131,7 @@ namespace RiotGames.Help2Swagger.Converters
                     }
 
                     break;
-                case Dictionary<string, HelpConsoleTypeSchema> typeType:
+                case Dictionary<string, HelpConsoleType> typeType:
                     property.Reference = new OpenApiReference { Type = ReferenceType.Schema, Id = typeType.Single().Key };
                     break;
                 default:

@@ -18,7 +18,7 @@ internal static class ParameterConverter
 
     public static OpenApiParameter? Convert(
         KeyValuePair<string, HelpConsoleFunctionArgument> argument,
-        HelpConsoleFunctionSchema functionSchema,
+        HelpConsoleFunction functionSchema,
         OpenApiOperation operation,
         OpenApiDocument openApi)
     {
@@ -51,7 +51,7 @@ internal static class ParameterConverter
         {
             parameter.In = ParameterLocation.Query;
         }
-        else if (argumentSchema.Type is Dictionary<string, HelpConsoleTypeSchema> argumentSchemaTypeSchema &&
+        else if (argumentSchema.Type is Dictionary<string, HelpConsoleType> argumentSchemaTypeSchema &&
                  openApi.Components.Schemas.ContainsEnum(argumentSchemaTypeSchema.Single().Key))
             parameter.In = ParameterLocation.Query;
         else
@@ -134,7 +134,7 @@ internal static class ParameterConverter
                 }
 
                 break;
-            case Dictionary<string, HelpConsoleTypeSchema> typeValue:
+            case Dictionary<string, HelpConsoleType> typeValue:
                 if (typeValue.Single().Value.Values != null) // Enum
                 {
                     schema.Reference = new OpenApiReference {Type = ReferenceType.Schema, Id = typeValue.Single().Key};

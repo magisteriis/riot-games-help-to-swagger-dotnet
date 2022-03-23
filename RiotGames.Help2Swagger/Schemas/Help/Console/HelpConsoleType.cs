@@ -2,21 +2,21 @@
 
 namespace RiotGames.Help;
 
-public class HelpConsoleTypeSchema
+public class HelpConsoleType
 {
     public string? Description { get; set; }
-    public Dictionary<string, HelpConsoleTypeFieldSchema>[]? Fields { get; set; }
-    public HelpConsoleTypeValueSchema[]? Values { get; set; }
+    public Dictionary<string, HelpConsoleTypeField>[]? Fields { get; set; }
+    public HelpConsoleTypeValue[]? Values { get; set; }
 }
 
-public class HelpConsoleTypeValueSchema
+public class HelpConsoleTypeValue
 {
     public string Description { get; set; }
     public string Name { get; set; }
     public int Value { get; set; }
 }
 
-public class HelpConsoleTypeFieldSchema
+public class HelpConsoleTypeField
 {
     public string Description { get; set; }
     public int Offset { get; set; }

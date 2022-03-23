@@ -1,6 +1,6 @@
 ﻿namespace RiotGames.Help2Swagger;
 
-public abstract class HelpFullSchemaTypeReferenceBase
+public abstract class HelpFullTypeReferenceBase
 {
     /// <summary>
     ///     E.g. "string".

@@ -10,6 +10,8 @@ internal static class OpenApiExtensions
     private const string STATUS_CODE_OK = "200";
     private const string STATUS_CODE_NO_CONTENT = "204";
     private const string MEDIA_TYPE_JSON = "application/json";
+    private const string MEDIA_TYPE_YAML = "application/x-yaml";
+    private const string MEDIA_TYPE_MSGPACK = "application/x-msgpack";
 
     [DebuggerStepThrough]
     public static bool ContainsEnum(this IDictionary<string, OpenApiSchema> schemas, string key)
@@ -76,6 +78,44 @@ internal static class OpenApiExtensions
     public static void AddOkJson(this OpenApiResponses responses, OpenApiSchema schema)
     {
         responses.AddOkJson("Successful response", schema);
+    }
+
+    [DebuggerStepThrough]
+    public static void AddOkYaml(this OpenApiResponses responses, string description,
+        OpenApiMediaType mediaTypeObject)
+    {
+        responses.AddOk(description, MEDIA_TYPE_YAML, mediaTypeObject);
+    }
+
+    [DebuggerStepThrough]
+    public static void AddOkYaml(this OpenApiResponses responses, string description, OpenApiSchema schema)
+    {
+        responses.AddOk(description, MEDIA_TYPE_YAML, schema);
+    }
+
+    [DebuggerStepThrough]
+    public static void AddOkYaml(this OpenApiResponses responses, OpenApiSchema schema)
+    {
+        responses.AddOkYaml("Successful response", schema);
+    }
+
+    [DebuggerStepThrough]
+    public static void AddOkMsgPack(this OpenApiResponses responses, string description,
+        OpenApiMediaType mediaTypeObject)
+    {
+        responses.AddOk(description, MEDIA_TYPE_MSGPACK, mediaTypeObject);
+    }
+
+    [DebuggerStepThrough]
+    public static void AddOkMsgPack(this OpenApiResponses responses, string description, OpenApiSchema schema)
+    {
+        responses.AddOk(description, MEDIA_TYPE_MSGPACK, schema);
+    }
+
+    [DebuggerStepThrough]
+    public static void AddOkMsgPack(this OpenApiResponses responses, OpenApiSchema schema)
+    {
+        responses.AddOkMsgPack("Successful response", schema);
     }
 
     [DebuggerStepThrough]

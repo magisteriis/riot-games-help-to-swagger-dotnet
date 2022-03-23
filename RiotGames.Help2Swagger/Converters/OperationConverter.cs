@@ -42,6 +42,8 @@ internal static class OperationConverter
             var contentSchema = SchemaConverter.Convert(functionSchema.Returns, openApi);
 
             operation.Responses.AddOkJson(contentSchema);
+            operation.Responses.AddOkYaml(contentSchema);
+            operation.Responses.AddOkMsgPack(contentSchema);
         }
         else
         {

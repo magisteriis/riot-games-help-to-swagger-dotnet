@@ -41,12 +41,20 @@
       const ui = SwaggerUIBundle({
         urls: [
           {
-            name: "League Client Update",
+            name: "League Client Update (OpenAPI 3, JSON)",
             url: "lcu/openapi.json"
           },
           {
-            name: "Riot Client Services",
+            name: "League Client Update (OpenAPI 3, YAML)",
+            url: "lcu/openapi.yaml"
+          },
+          {
+            name: "Riot Client Services (OpenAPI 3, JSON",
             url: "rcs/openapi.json"
+          },
+          {
+            name: "Riot Client Services (OpenAPI 3, YAML",
+            url: "rcs/openapi.yaml"
           }
          ],
         dom_id: '#swagger-ui',

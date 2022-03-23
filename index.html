@@ -39,7 +39,16 @@
     window.onload = function() {
       // Begin Swagger UI call region
       const ui = SwaggerUIBundle({
-        url: "lcu/openapi.json",
+        urls: [
+          {
+            name: "League Client Update",
+            url: "lcu/openapi.json"
+          },
+          {
+            name: "Riot Client Services",
+            url: "rcs/openapi.json"
+          }
+         ],
         dom_id: '#swagger-ui',
         deepLinking: true,
         presets: [

@@ -2261,20 +2261,21 @@
             "schema": {
               "type": "string"
             }
-          },
-          {
-            "name": "itemIds",
-            "in": "query",
-            "required": true,
-            "schema": {
-              "type": "array",
-              "items": {
-                "type": "integer",
-                "format": "int64"
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "integer",
+                  "format": "int64"
+                }
               }
             }
           }
-        ],
+        },
         "responses": {
           "200": {
             "description": "Successful response",
@@ -6277,18 +6278,19 @@
           "Plugin lol-clash"
         ],
         "operationId": "PostLolClashV1Events",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
+        "parameters": [
+          {
+            "name": "uuids",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
               }
             }
           }
-        },
+        ],
         "responses": {
           "200": {
             "description": "Successful response",
@@ -7173,21 +7175,20 @@
             "schema": {
               "type": "string"
             }
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "array",
-                "items": {
-                  "type": "integer",
-                  "format": "int64"
-                }
+          },
+          {
+            "name": "summonerIds",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "integer",
+                "format": "int64"
               }
             }
           }
-        },
+        ],
         "responses": {
           "200": {
             "description": "Successful response",
@@ -7610,21 +7611,20 @@
             "schema": {
               "type": "string"
             }
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "array",
-                "items": {
-                  "type": "integer",
-                  "format": "int64"
-                }
+          },
+          {
+            "name": "summonerIds",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "integer",
+                "format": "int64"
               }
             }
           }
-        },
+        ],
         "responses": {
           "200": {
             "description": "Successful response",
@@ -9403,20 +9403,19 @@
             "schema": {
               "type": "string"
             }
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
+          },
+          {
+            "name": "contentIds",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
               }
             }
           }
-        },
+        ],
         "responses": {
           "200": {
             "description": "Successful response",
@@ -10822,18 +10821,19 @@
           "Plugin lol-gameflow"
         ],
         "operationId": "PostLolGameflowV1ExtraGameClientArgs",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
+        "parameters": [
+          {
+            "name": "extraGameClientArgs",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
               }
             }
           }
-        },
+        ],
         "responses": {
           "204": {
             "description": "No content"
@@ -11387,18 +11387,19 @@
           "Plugin lol-gameflow"
         ],
         "operationId": "PostLolGameflowV1WatchLaunch",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
+        "parameters": [
+          {
+            "name": "args",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
               }
             }
           }
-        },
+        ],
         "responses": {
           "200": {
             "description": "Successful response",
@@ -17335,6 +17336,17 @@
             }
           },
           {
+            "name": "playerLootList",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          {
             "name": "repeat",
             "in": "query",
             "schema": {
@@ -17343,18 +17355,6 @@
             }
           }
         ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              }
-            }
-          }
-        },
         "responses": {
           "200": {
             "description": "Successful response",
@@ -22188,16 +22188,20 @@
                 "format": "int64"
               }
             }
-          },
-          {
-            "name": "queueTypes",
-            "in": "query",
-            "required": true,
-            "schema": {
-              "$ref": "#/components/schemas/LolRankedLeagueQueueType"
-            }
           }
         ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/LolRankedLeagueQueueType"
+                }
+              }
+            }
+          }
+        },
         "responses": {
           "200": {
             "description": "Successful response",
@@ -23954,18 +23958,19 @@
           "Plugin lol-spectator"
         ],
         "operationId": "PostLolSpectatorV1BuddySpectate",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
+        "parameters": [
+          {
+            "name": "summonerOrTeamNames",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
               }
             }
           }
-        },
+        ],
         "responses": {
           "200": {
             "description": "Successful response",
@@ -24434,19 +24439,21 @@
                 "type": "string"
               }
             }
-          },
-          {
-            "name": "itemId",
-            "in": "query",
-            "schema": {
-              "type": "array",
-              "items": {
-                "type": "integer",
-                "format": "int32"
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "integer",
+                  "format": "int32"
+                }
               }
             }
           }
-        ],
+        },
         "responses": {
           "200": {
             "description": "Successful response",
@@ -24479,20 +24486,21 @@
             "schema": {
               "type": "string"
             }
-          },
-          {
-            "name": "itemIds",
-            "in": "query",
-            "required": true,
-            "schema": {
-              "type": "array",
-              "items": {
-                "type": "integer",
-                "format": "int32"
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "integer",
+                  "format": "int32"
+                }
               }
             }
           }
-        ],
+        },
         "responses": {
           "200": {
             "description": "Successful response",
@@ -25806,18 +25814,19 @@
           "Plugin lol-summoner"
         ],
         "operationId": "PostLolSummonerV2SummonersNames",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
+        "parameters": [
+          {
+            "name": "summonerNames",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
               }
             }
           }
-        },
+        ],
         "responses": {
           "200": {
             "description": "Successful response",
@@ -25842,18 +25851,19 @@
           "Plugin lol-summoner"
         ],
         "operationId": "PostLolSummonerV2SummonersPuuid",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
+        "parameters": [
+          {
+            "name": "puuids",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
               }
             }
           }
-        },
+        ],
         "responses": {
           "200": {
             "description": "Successful response",
@@ -28139,18 +28149,20 @@
         ],
         "summary": "Endpoint for passing in new data.",
         "operationId": "PostRiotclientNewArgs",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
+        "parameters": [
+          {
+            "name": "args",
+            "in": "query",
+            "description": "Vector of new command line arguments",
+            "required": true,
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "string"
               }
             }
           }
-        },
+        ],
         "responses": {
           "204": {
             "description": "No content"

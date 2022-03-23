@@ -50,7 +50,7 @@ internal static class SchemaConverter
                             break;
                         default:
                         {
-                            if (openApi.Components.Schemas.Keys.Contains(ofType))
+                            if (openApi.Components.Schemas.ContainsKey(ofType))
                             {
                                 contentSchema.Items = new OpenApiSchema
                                 {
@@ -99,7 +99,7 @@ internal static class SchemaConverter
                             break;
                         default:
                         {
-                            if (openApi.Components.Schemas.Keys.Contains(ofType))
+                            if (openApi.Components.Schemas.ContainsKey(ofType))
                             {
                                 contentSchema.Items = new OpenApiSchema
                                 {

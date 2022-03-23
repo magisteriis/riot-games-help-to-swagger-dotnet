@@ -217,3 +217,4 @@ if (outPath != null)
 }
 
 Console.WriteLine("Done!");  
+Debugger.Break();

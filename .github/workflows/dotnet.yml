@@ -26,10 +26,10 @@ jobs:
       run: dotnet test --no-build --verbosity normal
       
     - name: Run (LCU)
-      run: dotnet run --project ./RiotGames.Help2Swagger/RiotGames.Help2Swagger.csproj --no-build --verbosity normal -- ./release/wwwroot/lcu/openapi.json      
+      run: dotnet run --project ./RiotGames.Help2Swagger/RiotGames.Help2Swagger.csproj --no-build --verbosity normal -- lcu ./release/wwwroot/lcu/openapi.json      
       
     - name: Run (RCS)
-      run: dotnet run --project ./RiotGames.Help2Swagger/RiotGames.Help2Swagger.csproj --no-build --verbosity normal -- https://www.mingweisamuel.com/lcu-schema/rcs/help.json https://www.mingweisamuel.com/lcu-schema/rcs/help.console.json ./release/wwwroot/rcs/openapi.json
+      run: dotnet run --project ./RiotGames.Help2Swagger/RiotGames.Help2Swagger.csproj --no-build --verbosity normal -- rcs ./release/wwwroot/rcs/openapi.json
       
     - name: Deploy to GitHub Pages
       if: success()

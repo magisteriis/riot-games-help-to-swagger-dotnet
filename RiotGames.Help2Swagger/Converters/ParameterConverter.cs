@@ -9,7 +9,8 @@ internal static class ParameterConverter
 {
     private static readonly string[] postTypes =
     {
-        "string", "uint32", "uint64", "int32", "int64", "double", "float", "bool"
+        "string", "uint32", "uint64", "int32", "int64", "double", "float", "bool", 
+        "" // RCS
         //, "vector of object", "vector of uint32",
         //"map of object"
     };
@@ -42,10 +43,16 @@ internal static class ParameterConverter
         {
             parameter.In = ParameterLocation.Path;
         }
-        else if (functionSchema.HttpMethod == "GET")
+        else if (functionSchema.Arguments.Length ==
+                 functionSchema.Arguments.Count(a => postTypes.Contains(a.Single().Value.Type as string)) &&
+                                                    postTypes.Contains(argumentSchema.Type as string))
         {
             parameter.In = ParameterLocation.Query;
         }
+        //else if (functionSchema.HttpMethod == "GET") // RCS has bodies for GET.....................
+        //{
+        //    parameter.In = ParameterLocation.Query;
+        //}
         else if ((functionSchema.Usage.Contains($"[{argumentIdentifier}]") ||
                   functionSchema.Usage.Contains($"[<{argumentIdentifier}>]") ||
                   functionSchema.Arguments.Length > 1) &&
@@ -140,7 +147,7 @@ internal static class ParameterConverter
 
                 break;
             case Dictionary<string, HelpConsoleType> typeValue:
-                if (typeValue.Single().Value.Values != null) // Enum
+                if (typeValue.Single().Value.Values != null || openApi.Components.Schemas[typeValue.Keys.Single()].Enum.Any()) // Enum
                 {
                     schema.Reference = new OpenApiReference {Type = ReferenceType.Schema, Id = typeValue.Single().Key};
                 }

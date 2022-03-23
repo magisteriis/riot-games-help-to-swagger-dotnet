@@ -85,6 +85,8 @@ internal static class SchemaConverter
                     switch (ofType)
                     {
                         case "object":
+                        case "": // RCS
+                        case "map of ": // RCS
                             contentSchema.Items = new OpenApiSchema
                             {
                                 Type = "object",

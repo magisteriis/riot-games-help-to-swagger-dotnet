@@ -85,6 +85,8 @@ internal static class PropertyConverter
                                     switch (ofType)
                                     {
                                         case "object":
+                                        case "": // RCS, unspecified type.
+                                        case "map of ": // RCS, double depth map?
                                             property.Items.Type = ofType;
                                             property.Items.AdditionalPropertiesAllowed = true;
                                             break;

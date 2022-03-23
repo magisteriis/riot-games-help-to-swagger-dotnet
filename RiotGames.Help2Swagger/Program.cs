@@ -14,14 +14,13 @@ using RiotGames.Help2Swagger.Extensions;
 Console.WriteLine("Help2Swagger");
 
 string? outPath = null;
-var helpFullUrl = "https://www.mingweisamuel.com/lcu-schema/lcu/help.json";
-var helpConsoleUrl = "https://www.mingweisamuel.com/lcu-schema/lcu/help.console.json";
-
+HelpHttpLocations? helpHttpLocations = null;
 switch (args.Length)
 {
     case 0:
         Console.WriteLine(
-            "No arguments specified. Downloading Help from default locations and doesn't output anything.");
+            "No arguments specified. Downloading LCU Help from default locations and doesn't output anything.");
+        helpHttpLocations = HelpHttpLocations.Rcs;
         break;
     case 1:
         Console.WriteLine("Custom out-path set.");
@@ -29,13 +28,24 @@ switch (args.Length)
         break;
     case 2:
         Console.WriteLine("Downloading Help from custom locations.");
-        helpFullUrl = args[0];
-        helpConsoleUrl = args[1];
+        if (args[0].ToLower() is "lcu" or "rcs")
+        {
+            helpHttpLocations = args[0].ToLower() switch
+            {
+                "lcu" => HelpHttpLocations.Lcu,
+                "rcs" => HelpHttpLocations.Rcs,
+                _ => throw new ArgumentOutOfRangeException()
+            };
+            outPath = args[1];
+        }
+        else
+        {
+            helpHttpLocations = new HelpHttpLocations(args[0], args[1]);
+        }
         break;
     case 3:
         Console.WriteLine("Custom Help locations, and an output path set.");
-        helpFullUrl = args[0];
-        helpConsoleUrl = args[1];
+        helpHttpLocations = new HelpHttpLocations(args[0], args[1]);
         outPath = args[2];
         break;
     default:
@@ -46,13 +56,13 @@ switch (args.Length)
 
 
 using var client = new HttpClient();
-var helpConsole = await client.GetFromJsonAsync<HelpConsoleDocument>(helpConsoleUrl);
-var helpFull = await client.GetFromJsonAsync<HelpFullDocument>(helpFullUrl);
+var helpConsole = await client.GetFromJsonAsync<HelpConsoleDocument>(helpHttpLocations!.HelpConsoleUrl);
+var helpFull = await client.GetFromJsonAsync<HelpFullDocument>(helpHttpLocations!.HelpFullUrl);
 
 OpenApiDocument openApi;
-if (helpFullUrl.Contains("lcu/help")) 
+if (helpHttpLocations.HelpFullUrl.AbsoluteUri.Contains("lcu/help")) 
     openApi = new LcuOpenApiDocument();
-else if (helpFullUrl.Contains("rcs/help"))
+else if (helpHttpLocations.HelpFullUrl.AbsoluteUri.Contains("rcs/help"))
     openApi = new RcsOpenApiDocument();
 else
     openApi = new OpenApiDocument()

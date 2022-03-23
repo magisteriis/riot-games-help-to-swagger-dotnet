@@ -49,67 +49,22 @@ using var client = new HttpClient();
 var helpConsole = await client.GetFromJsonAsync<HelpConsoleDocument>(helpConsoleUrl);
 var helpFull = await client.GetFromJsonAsync<HelpFullDocument>(helpFullUrl);
 
-var openApi = new OpenApiDocument
-{
-    Info = new OpenApiInfo
+OpenApiDocument openApi;
+if (helpFullUrl.Contains("lcu/help")) 
+    openApi = new LcuOpenApiDocument();
+else if (helpFullUrl.Contains("rcs/help"))
+    openApi = new RcsOpenApiDocument();
+else
+    openApi = new OpenApiDocument()
     {
-        Title = "League Client Update",
-        Version = "1.0.0-magisteriis",
-        Contact = new OpenApiContact
+        Info = new OpenApiInfo
         {
-            Name = "Mikael Dúi Bolinder (DevOps Activist)",
-            Url = new Uri("https://discord.gg/riotgamesdevrel")
+            Title = "",
+            Version = "1.0.0",
         },
-        Description = "Auto-generated from the LCU help files.",
-        License = new OpenApiLicense
-        {
-            Name = "The Unlicense"
-        }
-    },
-    Paths = new OpenApiPaths(),
-    Components = new OpenApiComponents
-    {
-        SecuritySchemes =
-        {
-            {
-                "basicAuth", new OpenApiSecurityScheme
-                {
-                    Type = SecuritySchemeType.Http,
-                    Scheme = "basic",
-                    Description = "Username: riot. Password randomly generated on LCU start, it's NOT your account password."
-                }
-            }
-        }
-    },
-    SecurityRequirements =
-    {
-        new OpenApiSecurityRequirement
-        {
-            {
-                new OpenApiSecurityScheme
-                    {Reference = new OpenApiReference {Type = ReferenceType.SecurityScheme, Id = "basicAuth"}},
-                new List<string>()
-            }
-        }
-    },
-    Servers =
-    {
-        new OpenApiServer
-        {
-            Description = "YOUR local instance of LCU.",
-            Url = "https://127.0.0.1:{port}",
-            Variables =
-            {
-                {
-                    "port", new OpenApiServerVariable()
-                    {
-                        Description = "The port this LCU instance is running on. Changes every restart."
-                    }
-                }
-            }
-        }
-    }
-};
+        Paths = new OpenApiPaths(),
+        Components = new OpenApiComponents()
+    };
 
 //openApi.SecurityRequirements.
 

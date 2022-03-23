@@ -1,4 +1,6 @@
 ﻿using System.Diagnostics;
+using Microsoft.OpenApi;
+using Microsoft.OpenApi.Extensions;
 using Microsoft.OpenApi.Models;
 
 namespace RiotGames.Help2Swagger.Extensions;
@@ -74,5 +76,19 @@ internal static class OpenApiExtensions
     public static void AddOkJson(this OpenApiResponses responses, OpenApiSchema schema)
     {
         responses.AddOkJson("Successful response", schema);
+    }
+
+    [DebuggerStepThrough]
+    public static async Task WriteV3AsJson(this OpenApiDocument document, string path)
+    {
+        var openApiJson = document.SerializeAsJson(OpenApiSpecVersion.OpenApi3_0);
+        await File.WriteAllTextAsync(path, openApiJson);
+    }
+    
+    [DebuggerStepThrough]
+    public static async Task WriteV3AsYaml(this OpenApiDocument document, string path)
+    {
+        var openApiYaml = document.SerializeAsYaml(OpenApiSpecVersion.OpenApi3_0);
+        await File.WriteAllTextAsync(path, openApiYaml);
     }
 }

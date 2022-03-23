@@ -173,12 +173,24 @@ openApi.Tags = openApi.Paths
     .ThenBy(t => t.Name)
     .ToList();
 
-var openApiJson = openApi.SerializeAsJson(OpenApiSpecVersion.OpenApi3_0);
 
 if (outPath != null)
 {
     new FileInfo(outPath).Directory!.Create();
-    await File.WriteAllTextAsync(outPath, openApiJson);
+    switch (outPath.Split('.', StringSplitOptions.RemoveEmptyEntries).Last().ToLower())
+    {
+        case "json":
+            await openApi.WriteV3AsJson(outPath);
+            break;
+        case "yaml":
+        case "yml":
+            await openApi.WriteV3AsYaml(outPath);
+            break;
+        default:
+            await openApi.WriteV3AsJson(Path.Combine(outPath, "openapi.json"));
+            await openApi.WriteV3AsYaml(Path.Combine(outPath, "openapi.yaml"));
+            break;
+    }
 }
 
 Console.WriteLine("Done!");  

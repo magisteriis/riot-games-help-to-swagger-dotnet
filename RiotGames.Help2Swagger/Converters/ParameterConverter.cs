@@ -7,9 +7,10 @@ namespace RiotGames.Help2Swagger.Converters;
 
 internal static class ParameterConverter
 {
-    private static readonly string[] postTypes =
+    private static readonly string[] queryTypes =
     {
         "string", "uint32", "uint64", "int32", "int64", "double", "float", "bool", 
+        "vector of string", "map of string", "vector of uint64",
         "" // RCS
         //, "vector of object", "vector of uint32",
         //"map of object"
@@ -44,8 +45,8 @@ internal static class ParameterConverter
             parameter.In = ParameterLocation.Path;
         }
         else if (functionSchema.Arguments.Length ==
-                 functionSchema.Arguments.Count(a => postTypes.Contains(a.Single().Value.Type as string)) &&
-                                                    postTypes.Contains(argumentSchema.Type as string))
+                 functionSchema.Arguments.Count(a => queryTypes.Contains(a.Single().Value.Type as string)) &&
+                                                    queryTypes.Contains(argumentSchema.Type as string))
         {
             parameter.In = ParameterLocation.Query;
         }
@@ -56,8 +57,8 @@ internal static class ParameterConverter
         else if ((functionSchema.Usage.Contains($"[{argumentIdentifier}]") ||
                   functionSchema.Usage.Contains($"[<{argumentIdentifier}>]") ||
                   functionSchema.Arguments.Length > 1) &&
-                 postTypes.Contains(argumentSchema.Type as string) ||
-                 functionSchema.Arguments.All(a => postTypes.Contains(a.Single().Value.Type as string)))
+                 queryTypes.Contains(argumentSchema.Type as string) ||
+                 functionSchema.Arguments.All(a => queryTypes.Contains(a.Single().Value.Type as string)))
         {
             parameter.In = ParameterLocation.Query;
         }

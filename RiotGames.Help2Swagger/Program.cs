@@ -20,7 +20,7 @@ switch (args.Length)
     case 0:
         Console.WriteLine(
             "No arguments specified. Downloading LCU Help from default locations and doesn't output anything.");
-        helpHttpLocations = HelpHttpLocations.Rcs;
+        helpHttpLocations = HelpHttpLocations.Lcu;
         break;
     case 1:
         Console.WriteLine("Custom out-path set.");

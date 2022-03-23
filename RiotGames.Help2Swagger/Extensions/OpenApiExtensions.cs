@@ -26,4 +26,40 @@ internal static class OpenApiExtensions
             Description = "No content"
         });
     }
+
+
+    /// <param name="description">E.g. "Successful response".</param>
+    /// <param name="mediaType">E.g. "application/json".</param>
+    [DebuggerStepThrough]
+    public static void AddSuccess(this OpenApiResponses responses, string description, string mediaType,
+        OpenApiMediaType mediaTypeObject)
+    {
+        responses.Add("200", new OpenApiResponse
+        {
+            Description = description,
+            Content =
+            {
+                [mediaType] = mediaTypeObject
+            }
+        });
+    }
+
+    [DebuggerStepThrough]
+    public static void AddSuccessJson(this OpenApiResponses responses, string description,
+        OpenApiMediaType mediaTypeObject)
+    {
+        responses.AddSuccess(description, "application/json", mediaTypeObject);
+    }
+
+    [DebuggerStepThrough]
+    public static void AddSuccessJson(this OpenApiResponses responses, string description, OpenApiSchema schema)
+    {
+        responses.AddSuccessJson(description, new OpenApiMediaType() {Schema = schema});
+    }
+
+    [DebuggerStepThrough]
+    public static void AddSuccessJson(this OpenApiResponses responses, OpenApiSchema schema)
+    {
+        responses.AddSuccessJson("Successful response", schema);
+    }
 }

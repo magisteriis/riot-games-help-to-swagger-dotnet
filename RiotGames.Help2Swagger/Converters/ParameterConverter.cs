@@ -34,7 +34,9 @@ internal static class ParameterConverter
             parameter.Description = argumentSchema.Description;
 
         if (headerParameters.Contains(argumentIdentifier))
+        {
             parameter.In = ParameterLocation.Header;
+        }
         else if (functionSchema.Url != null && (functionSchema.Url!.Contains($"{{{argumentIdentifier}}}") ||
                                                 functionSchema.Url.Contains($"{{+{argumentIdentifier}}}")))
         {
@@ -44,16 +46,19 @@ internal static class ParameterConverter
         {
             parameter.In = ParameterLocation.Query;
         }
-        else if (((functionSchema.Usage.Contains($"[{argumentIdentifier}]") ||
+        else if ((functionSchema.Usage.Contains($"[{argumentIdentifier}]") ||
                   functionSchema.Usage.Contains($"[<{argumentIdentifier}>]") ||
                   functionSchema.Arguments.Length > 1) &&
-                 postTypes.Contains(argumentSchema.Type as string)) || functionSchema.Arguments.All(a => postTypes.Contains(a.Single().Value.Type as string)))
+                 postTypes.Contains(argumentSchema.Type as string) ||
+                 functionSchema.Arguments.All(a => postTypes.Contains(a.Single().Value.Type as string)))
         {
             parameter.In = ParameterLocation.Query;
         }
         else if (argumentSchema.Type is Dictionary<string, HelpConsoleType> argumentSchemaTypeSchema &&
                  openApi.Components.Schemas.ContainsEnum(argumentSchemaTypeSchema.Single().Key))
+        {
             parameter.In = ParameterLocation.Query;
+        }
         else
         {
             if (operation.RequestBody != null)

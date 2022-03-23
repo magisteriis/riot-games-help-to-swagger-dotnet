@@ -12,7 +12,7 @@ public class HelpConsoleTypeReferenceConverter : JsonConverter<object>
         if (reader.TokenType == JsonTokenType.String) return reader.GetString()!;
 
         var type = JsonSerializer.Deserialize<Dictionary<string, HelpConsoleType>>(ref reader, options);
-        
+
         return type!;
     }
 

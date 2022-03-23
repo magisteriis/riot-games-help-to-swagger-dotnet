@@ -42,14 +42,19 @@ internal static class OpenApiExtensions
     public static void AddOk(this OpenApiResponses responses, string description, string mediaType,
         OpenApiMediaType mediaTypeObject)
     {
-        responses.Add(STATUS_CODE_OK, new OpenApiResponse
-        {
-            Description = description,
-            Content =
+        if (!responses.ContainsKey(STATUS_CODE_OK))
+            responses.Add(STATUS_CODE_OK, new OpenApiResponse
             {
-                [mediaType] = mediaTypeObject
-            }
-        });
+                Description = description,
+                Content =
+                {
+                    [mediaType] = mediaTypeObject
+                }
+            });
+        else
+        {
+            responses[STATUS_CODE_OK].Content[mediaType] = mediaTypeObject;
+        }
     }
 
     /// <param name="description">E.g. "Successful response".</param>

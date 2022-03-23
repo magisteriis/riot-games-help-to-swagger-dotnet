@@ -5,6 +5,10 @@ namespace RiotGames.Help2Swagger.Extensions;
 
 internal static class OpenApiExtensions
 {
+    private const string STATUS_CODE_OK = "200";
+    private const string STATUS_CODE_NO_CONTENT = "204";
+    private const string MEDIA_TYPE_JSON = "application/json";
+
     [DebuggerStepThrough]
     public static bool ContainsEnum(this IDictionary<string, OpenApiSchema> schemas, string key)
     {
@@ -21,7 +25,7 @@ internal static class OpenApiExtensions
     [DebuggerStepThrough]
     public static void AddNoContent(this OpenApiResponses responses)
     {
-        responses.Add("204", new OpenApiResponse
+        responses.Add(STATUS_CODE_NO_CONTENT, new OpenApiResponse
         {
             Description = "No content"
         });
@@ -31,10 +35,10 @@ internal static class OpenApiExtensions
     /// <param name="description">E.g. "Successful response".</param>
     /// <param name="mediaType">E.g. "application/json".</param>
     [DebuggerStepThrough]
-    public static void AddSuccess(this OpenApiResponses responses, string description, string mediaType,
+    public static void AddOk(this OpenApiResponses responses, string description, string mediaType,
         OpenApiMediaType mediaTypeObject)
     {
-        responses.Add("200", new OpenApiResponse
+        responses.Add(STATUS_CODE_OK, new OpenApiResponse
         {
             Description = description,
             Content =
@@ -44,22 +48,31 @@ internal static class OpenApiExtensions
         });
     }
 
+    /// <param name="description">E.g. "Successful response".</param>
+    /// <param name="mediaType">E.g. "application/json".</param>
     [DebuggerStepThrough]
-    public static void AddSuccessJson(this OpenApiResponses responses, string description,
+    public static void AddOk(this OpenApiResponses responses, string description, string mediaType,
+        OpenApiSchema schema)
+    {
+        responses.AddOk(description, mediaType, new OpenApiMediaType {Schema = schema});
+    }
+
+    [DebuggerStepThrough]
+    public static void AddOkJson(this OpenApiResponses responses, string description,
         OpenApiMediaType mediaTypeObject)
     {
-        responses.AddSuccess(description, "application/json", mediaTypeObject);
+        responses.AddOk(description, MEDIA_TYPE_JSON, mediaTypeObject);
     }
 
     [DebuggerStepThrough]
-    public static void AddSuccessJson(this OpenApiResponses responses, string description, OpenApiSchema schema)
+    public static void AddOkJson(this OpenApiResponses responses, string description, OpenApiSchema schema)
     {
-        responses.AddSuccessJson(description, new OpenApiMediaType() {Schema = schema});
+        responses.AddOk(description, MEDIA_TYPE_JSON, schema);
     }
 
     [DebuggerStepThrough]
-    public static void AddSuccessJson(this OpenApiResponses responses, OpenApiSchema schema)
+    public static void AddOkJson(this OpenApiResponses responses, OpenApiSchema schema)
     {
-        responses.AddSuccessJson("Successful response", schema);
+        responses.AddOkJson("Successful response", schema);
     }
 }

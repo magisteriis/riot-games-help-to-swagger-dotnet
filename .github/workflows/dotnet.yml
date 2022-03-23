@@ -25,7 +25,7 @@ jobs:
     - name: Test
       run: dotnet test --no-build --verbosity normal
     - name: Run
-      run: dotnet run --project ./RiotGames.Help2Swagger/RiotGames.Help2Swagger.csproj --no-build --verbosity normal -- ./release/wwwroot/openapi.json
+      run: dotnet run --project ./RiotGames.Help2Swagger/RiotGames.Help2Swagger.csproj --no-build --verbosity normal -- ./release/wwwroot/lcu/openapi.json
       
     - name: Deploy to GitHub Pages
       if: success()

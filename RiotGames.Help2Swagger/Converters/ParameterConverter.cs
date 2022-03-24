@@ -74,16 +74,9 @@ internal static class ParameterConverter
 
             var contentSchema = SchemaConverter.Convert(argumentSchema.Type, openApi);
 
-            operation.RequestBody = new OpenApiRequestBody
-            {
-                Content =
-                {
-                    ["application/json"] = new OpenApiMediaType
-                    {
-                        Schema = contentSchema
-                    }
-                }
-            };
+            operation.AddRequestBodyJson(contentSchema);
+            operation.AddRequestBodyYaml(contentSchema);
+            operation.AddRequestBodyMsgPack(contentSchema);
 
             return null; // And add request body.
         }

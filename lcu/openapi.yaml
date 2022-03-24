@@ -680,6 +680,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/ClientConfigEntitlementsUpdate'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/ClientConfigEntitlementsUpdate'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/ClientConfigEntitlementsUpdate'
       responses:
         '204':
           description: No content
@@ -751,6 +757,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/ClientConfigConfigNamespaceUpdate'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/ClientConfigConfigNamespaceUpdate'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/ClientConfigConfigNamespaceUpdate'
       responses:
@@ -886,6 +898,16 @@ paths:
               type: array
               items:
                 $ref: '#/components/schemas/cookie'
+          application/x-yaml:
+            schema:
+              type: array
+              items:
+                $ref: '#/components/schemas/cookie'
+          application/x-msgpack:
+            schema:
+              type: array
+              items:
+                $ref: '#/components/schemas/cookie'
       responses:
         '200':
           description: Successful response
@@ -980,6 +1002,12 @@ paths:
           application/json:
             schema:
               type: object
+          application/x-yaml:
+            schema:
+              type: object
+          application/x-msgpack:
+            schema:
+              type: object
       responses:
         '204':
           description: No content
@@ -1037,6 +1065,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/LolAccountVerificationAuthenticateRequest'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/LolAccountVerificationAuthenticateRequest'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/LolAccountVerificationAuthenticateRequest'
       responses:
@@ -1120,6 +1154,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/LolAccountVerificationSendTokenRequest'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/LolAccountVerificationSendTokenRequest'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/LolAccountVerificationSendTokenRequest'
       responses:
         '200':
           description: Successful response
@@ -1142,6 +1182,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/LolAccountVerificationVerifyRequest'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/LolAccountVerificationVerifyRequest'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/LolAccountVerificationVerifyRequest'
       responses:
@@ -1247,6 +1293,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/LolBannersBannerFlag'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/LolBannersBannerFlag'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/LolBannersBannerFlag'
       responses:
@@ -1487,6 +1539,16 @@ paths:
               type: array
               items:
                 $ref: '#/components/schemas/LolCareerStatsStatsQueryRequest'
+          application/x-yaml:
+            schema:
+              type: array
+              items:
+                $ref: '#/components/schemas/LolCareerStatsStatsQueryRequest'
+          application/x-msgpack:
+            schema:
+              type: array
+              items:
+                $ref: '#/components/schemas/LolCareerStatsStatsQueryRequest'
       responses:
         '200':
           description: Successful response
@@ -1663,6 +1725,16 @@ paths:
               type: array
               items:
                 $ref: '#/components/schemas/LolCareerStatsPositionStatsQueryRequest'
+          application/x-yaml:
+            schema:
+              type: array
+              items:
+                $ref: '#/components/schemas/LolCareerStatsPositionStatsQueryRequest'
+          application/x-msgpack:
+            schema:
+              type: array
+              items:
+                $ref: '#/components/schemas/LolCareerStatsPositionStatsQueryRequest'
       responses:
         '200':
           description: Successful response
@@ -1830,6 +1902,18 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              type: array
+              items:
+                type: integer
+                format: int64
+          application/x-yaml:
+            schema:
+              type: array
+              items:
+                type: integer
+                format: int64
+          application/x-msgpack:
             schema:
               type: array
               items:
@@ -2171,6 +2255,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/LolChallengesChallengesPlayerPreferences'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/LolChallengesChallengesPlayerPreferences'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/LolChallengesChallengesPlayerPreferences'
       responses:
         '204':
           description: No content
@@ -2414,6 +2504,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/LolChampSelectLegacyChampSelectAction'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/LolChampSelectLegacyChampSelectAction'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/LolChampSelectLegacyChampSelectAction'
       responses:
         '200':
           description: Successful response
@@ -2462,6 +2558,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/LolChampSelectLegacyChampSelectMySelection'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/LolChampSelectLegacyChampSelectMySelection'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/LolChampSelectLegacyChampSelectMySelection'
       responses:
@@ -3038,6 +3140,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/LolChampSelectChampSelectAction'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/LolChampSelectChampSelectAction'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/LolChampSelectChampSelectAction'
       responses:
         '200':
           description: Successful response
@@ -3112,6 +3220,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/LolChampSelectChampSelectMySelection'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/LolChampSelectChampSelectMySelection'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/LolChampSelectChampSelectMySelection'
       responses:
@@ -3514,6 +3628,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/LolChampSelectMutedPlayerInfo'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/LolChampSelectMutedPlayerInfo'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/LolChampSelectMutedPlayerInfo'
       responses:
         '200':
           description: Successful response
@@ -3861,6 +3981,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/LolChatBlockedPlayerResource'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/LolChatBlockedPlayerResource'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/LolChatBlockedPlayerResource'
       responses:
         '200':
           description: Successful response
@@ -3977,6 +4103,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/LolChatConversationResource'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/LolChatConversationResource'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/LolChatConversationResource'
       responses:
         '200':
           description: Successful response
@@ -4053,6 +4185,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/LolChatConversationResource'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/LolChatConversationResource'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/LolChatConversationResource'
       responses:
@@ -4188,6 +4326,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/LolChatConversationMessageResource'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/LolChatConversationMessageResource'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/LolChatConversationMessageResource'
       responses:
         '200':
           description: Successful response
@@ -4246,6 +4390,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/LolChatUserResource'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/LolChatUserResource'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/LolChatUserResource'
       responses:
@@ -4336,6 +4486,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/LolChatActiveConversationResource'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/LolChatActiveConversationResource'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/LolChatActiveConversationResource'
       responses:
@@ -4501,6 +4657,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/LolChatGroupResource'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/LolChatGroupResource'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/LolChatGroupResource'
       responses:
         '200':
           description: Successful response
@@ -4582,6 +4744,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/LolChatGroupResource'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/LolChatGroupResource'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/LolChatGroupResource'
       responses:
         '200':
           description: Successful response
@@ -4638,6 +4806,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/LolChatFriendGroupOrder'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/LolChatFriendGroupOrder'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/LolChatFriendGroupOrder'
       responses:
         '200':
           description: Successful response
@@ -4684,6 +4858,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/LolChatFriendRequestResource'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/LolChatFriendRequestResource'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/LolChatFriendRequestResource'
       responses:
@@ -4738,6 +4918,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/LolChatFriendRequestResource'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/LolChatFriendRequestResource'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/LolChatFriendRequestResource'
       responses:
@@ -4843,6 +5029,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/LolChatFriendResource'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/LolChatFriendResource'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/LolChatFriendResource'
       responses:
         '200':
           description: Successful response
@@ -4883,6 +5075,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/LolChatUserResource'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/LolChatUserResource'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/LolChatUserResource'
       responses:
@@ -4965,6 +5163,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/LolChatAuthResourcePlain'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/LolChatAuthResourcePlain'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/LolChatAuthResourcePlain'
       responses:
         '200':
           description: Successful response
@@ -4987,6 +5191,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/LolChatAuthResourceRsoAccessToken'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/LolChatAuthResourceRsoAccessToken'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/LolChatAuthResourceRsoAccessToken'
       responses:
@@ -5034,6 +5244,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              type: object
+          application/x-yaml:
+            schema:
+              type: object
+          application/x-msgpack:
             schema:
               type: object
       responses:
@@ -5120,6 +5336,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              type: object
+          application/x-yaml:
+            schema:
+              type: object
+          application/x-msgpack:
             schema:
               type: object
       responses:
@@ -5479,6 +5701,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/LolClashLftState'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/LolClashLftState'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/LolClashLftState'
       responses:
         '200':
           description: Successful response
@@ -5501,6 +5729,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/LolClashFindPlayers'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/LolClashFindPlayers'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/LolClashFindPlayers'
       responses:
@@ -5531,6 +5765,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/LolClashTeamOpenState'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/LolClashTeamOpenState'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/LolClashTeamOpenState'
       responses:
@@ -5606,6 +5846,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/LolClashFindTeams'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/LolClashFindTeams'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/LolClashFindTeams'
       responses:
@@ -5946,6 +6192,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/LolClashRosterDetails'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/LolClashRosterDetails'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/LolClashRosterDetails'
       responses:
         '200':
           description: Successful response
@@ -5974,6 +6226,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/LolClashChangeIconRequest'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/LolClashChangeIconRequest'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/LolClashChangeIconRequest'
       responses:
@@ -6006,6 +6264,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/LolClashChangeNameRequest'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/LolClashChangeNameRequest'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/LolClashChangeNameRequest'
       responses:
         '200':
           description: Successful response
@@ -6034,6 +6298,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/LolClashChangeNameRequest'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/LolClashChangeNameRequest'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/LolClashChangeNameRequest'
       responses:
@@ -6155,6 +6425,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/LolClashKickRequest'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/LolClashKickRequest'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/LolClashKickRequest'
       responses:
         '200':
           description: Successful response
@@ -6235,6 +6511,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/LolClashSetPositionRequest'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/LolClashSetPositionRequest'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/LolClashSetPositionRequest'
       responses:
         '200':
           description: Successful response
@@ -6263,6 +6545,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/LolClashSetTicketRequest'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/LolClashSetTicketRequest'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/LolClashSetTicketRequest'
       responses:
@@ -6400,6 +6688,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/LolClashInviteSubRequest'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/LolClashInviteSubRequest'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/LolClashInviteSubRequest'
       responses:
@@ -6655,6 +6949,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/LolClashOfferTicketRequest'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/LolClashOfferTicketRequest'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/LolClashOfferTicketRequest'
       responses:
@@ -7103,6 +7403,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/LolClashRosterDetails'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/LolClashRosterDetails'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/LolClashRosterDetails'
       responses:
@@ -7863,6 +8169,14 @@ paths:
             schema:
               type: integer
               format: int8
+          application/x-yaml:
+            schema:
+              type: integer
+              format: int8
+          application/x-msgpack:
+            schema:
+              type: integer
+              format: int8
       responses:
         '200':
           description: Successful response
@@ -8163,6 +8477,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/LolEmailVerificationEmailUpdate'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/LolEmailVerificationEmailUpdate'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/LolEmailVerificationEmailUpdate'
       responses:
         '200':
           description: Successful response
@@ -8241,6 +8561,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/LolEndOfGameGameClientEndOfGameStats'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/LolEndOfGameGameClientEndOfGameStats'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/LolEndOfGameGameClientEndOfGameStats'
       responses:
@@ -8331,6 +8657,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/LolEndOfGameEndOfGamePlayerComplaintV2'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/LolEndOfGameEndOfGamePlayerComplaintV2'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/LolEndOfGameEndOfGamePlayerComplaintV2'
       responses:
@@ -8740,6 +9072,12 @@ paths:
           application/json:
             schema:
               type: object
+          application/x-yaml:
+            schema:
+              type: object
+          application/x-msgpack:
+            schema:
+              type: object
       responses:
         '200':
           description: Successful response
@@ -8799,6 +9137,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              type: object
+          application/x-yaml:
+            schema:
+              type: object
+          application/x-msgpack:
             schema:
               type: object
       responses:
@@ -9224,6 +9568,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/LolGameflowPlayerStatus'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/LolGameflowPlayerStatus'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/LolGameflowPlayerStatus'
       responses:
         '204':
           description: No content
@@ -9254,6 +9604,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/LolGameflowRegistrationStatus'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/LolGameflowRegistrationStatus'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/LolGameflowRegistrationStatus'
       responses:
@@ -9342,6 +9698,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/LolGameflowGameflowGameDodge'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/LolGameflowGameflowGameDodge'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/LolGameflowGameflowGameDodge'
       responses:
         '204':
           description: No content
@@ -9369,6 +9731,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/LolGameflowQueue'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/LolGameflowQueue'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/LolGameflowQueue'
       responses:
@@ -9671,6 +10039,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/LolGameflowSpectateGameInfoResource'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/LolGameflowSpectateGameInfoResource'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/LolGameflowSpectateGameInfoResource'
       responses:
         '200':
           description: Successful response
@@ -9928,6 +10302,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/LolHighlightsHighlight'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/LolHighlightsHighlight'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/LolHighlightsHighlight'
       responses:
         '200':
           description: Successful response
@@ -9988,6 +10368,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/LolHonorV2ApiHonorPlayerServerRequest'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/LolHonorV2ApiHonorPlayerServerRequest'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/LolHonorV2ApiHonorPlayerServerRequest'
       responses:
@@ -10788,6 +11174,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/LolItemSetsItemSet'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/LolItemSetsItemSet'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/LolItemSetsItemSet'
       responses:
         '204':
           description: No content
@@ -10806,6 +11198,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/LolItemSetsItemSets'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/LolItemSetsItemSets'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/LolItemSetsItemSets'
       responses:
@@ -10827,6 +11225,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/LolItemSetsValidateItemSetNameInput'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/LolItemSetsValidateItemSetNameInput'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/LolItemSetsValidateItemSetNameInput'
       responses:
@@ -11282,6 +11686,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/LolLoadoutsCreateLoadoutDTO'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/LolLoadoutsCreateLoadoutDTO'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/LolLoadoutsCreateLoadoutDTO'
       responses:
         '200':
           description: Successful response
@@ -11326,6 +11736,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/LolLoadoutsUpdateLoadoutDTO'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/LolLoadoutsUpdateLoadoutDTO'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/LolLoadoutsUpdateLoadoutDTO'
       responses:
         '200':
           description: Successful response
@@ -11353,6 +11769,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/LolLoadoutsUpdateLoadoutDTO'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/LolLoadoutsUpdateLoadoutDTO'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/LolLoadoutsUpdateLoadoutDTO'
       responses:
@@ -11740,6 +12162,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/LolLobbyTeamBuilderChampSelectAction'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/LolLobbyTeamBuilderChampSelectAction'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/LolLobbyTeamBuilderChampSelectAction'
       responses:
         '200':
           description: Successful response
@@ -11814,6 +12242,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/LolLobbyTeamBuilderChampSelectMySelection'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/LolLobbyTeamBuilderChampSelectMySelection'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/LolLobbyTeamBuilderChampSelectMySelection'
       responses:
@@ -12275,6 +12709,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/LolLobbyLobbyCustomJoinParameters'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/LolLobbyLobbyCustomJoinParameters'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/LolLobbyLobbyCustomJoinParameters'
       responses:
         '200':
           description: Successful response
@@ -12359,6 +12799,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/LolLobbyLobbyBotParams'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/LolLobbyLobbyBotParams'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/LolLobbyLobbyBotParams'
       responses:
         '200':
           description: Successful response
@@ -12411,6 +12857,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/LolLobbyLobbyBotParams'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/LolLobbyLobbyBotParams'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/LolLobbyLobbyBotParams'
       responses:
@@ -12523,6 +12975,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/LolLobbyLobbyInvitation'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/LolLobbyLobbyInvitation'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/LolLobbyLobbyInvitation'
       responses:
         '200':
           description: Successful response
@@ -12570,6 +13028,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/LolLobbyLobbyPositionPreferences'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/LolLobbyLobbyPositionPreferences'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/LolLobbyLobbyPositionPreferences'
       responses:
@@ -12654,6 +13118,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/LolLobbyPartyMemberMetadataDto'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/LolLobbyPartyMemberMetadataDto'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/LolLobbyPartyMemberMetadataDto'
       responses:
@@ -12896,6 +13366,16 @@ paths:
               type: array
               items:
                 $ref: '#/components/schemas/LolLobbyLobbyInvitationDto'
+          application/x-yaml:
+            schema:
+              type: array
+              items:
+                $ref: '#/components/schemas/LolLobbyLobbyInvitationDto'
+          application/x-msgpack:
+            schema:
+              type: array
+              items:
+                $ref: '#/components/schemas/LolLobbyLobbyInvitationDto'
       responses:
         '200':
           description: Successful response
@@ -12950,6 +13430,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/LolLobbyLobbyChangeGameDto'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/LolLobbyLobbyChangeGameDto'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/LolLobbyLobbyChangeGameDto'
       responses:
@@ -13042,6 +13528,16 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              type: array
+              items:
+                $ref: '#/components/schemas/LolLobbyLobbyInvitationDto'
+          application/x-yaml:
+            schema:
+              type: array
+              items:
+                $ref: '#/components/schemas/LolLobbyLobbyInvitationDto'
+          application/x-msgpack:
             schema:
               type: array
               items:
@@ -13273,6 +13769,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/LolLobbyLobbyPositionPreferences'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/LolLobbyLobbyPositionPreferences'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/LolLobbyLobbyPositionPreferences'
       responses:
         '200':
           description: Successful response
@@ -13337,6 +13839,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/LolLobbyLobbyChangeGameDto'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/LolLobbyLobbyChangeGameDto'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/LolLobbyLobbyChangeGameDto'
       responses:
         '200':
           description: Successful response
@@ -13383,6 +13891,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/LolLobbyLobbyNotification'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/LolLobbyLobbyNotification'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/LolLobbyLobbyNotification'
       responses:
@@ -13462,6 +13976,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/LolLobbyCustomJoinOptionsDto'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/LolLobbyCustomJoinOptionsDto'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/LolLobbyCustomJoinOptionsDto'
       responses:
@@ -13924,6 +14444,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/LolLoginUsernameAndPassword'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/LolLoginUsernameAndPassword'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/LolLoginUsernameAndPassword'
       responses:
         '200':
           description: Successful response
@@ -13957,6 +14483,16 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              type: array
+              items:
+                type: object
+          application/x-yaml:
+            schema:
+              type: array
+              items:
+                type: object
+          application/x-msgpack:
             schema:
               type: array
               items:
@@ -14012,6 +14548,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/LolLoginSummonerSessionResource'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/LolLoginSummonerSessionResource'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/LolLoginSummonerSessionResource'
       responses:
@@ -14931,6 +15473,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/LolLoyaltyLoyaltyRewards'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/LolLoyaltyLoyaltyRewards'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/LolLoyaltyLoyaltyRewards'
       responses:
         '204':
           description: No content
@@ -14943,6 +15491,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/LolMapsMaps'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/LolMapsMaps'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/LolMapsMaps'
       responses:
@@ -15100,6 +15654,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/LolMatchHistoryAcsEndPoint'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/LolMatchHistoryAcsEndPoint'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/LolMatchHistoryAcsEndPoint'
       responses:
@@ -15492,6 +16052,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/LolMatchmakingMatchmakingSearchResource'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/LolMatchmakingMatchmakingSearchResource'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/LolMatchmakingMatchmakingSearchResource'
       responses:
         '200':
           description: Successful response
@@ -15620,6 +16186,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/IdsDTO'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/IdsDTO'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/IdsDTO'
       responses:
         '204':
           description: No content
@@ -15638,6 +16210,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/LolMissionsRewardGroupsSelection'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/LolMissionsRewardGroupsSelection'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/LolMissionsRewardGroupsSelection'
       responses:
@@ -15677,6 +16255,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/LolMissionsSeriesOpt'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/LolMissionsSeriesOpt'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/LolMissionsSeriesOpt'
       responses:
@@ -15832,6 +16416,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/LolNpeTutorialPathAccountSettingsTutorial'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/LolNpeTutorialPathAccountSettingsTutorial'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/LolNpeTutorialPathAccountSettingsTutorial'
       responses:
@@ -16160,6 +16750,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/LolPatchUxResource'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/LolPatchUxResource'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/LolPatchUxResource'
       responses:
         '204':
           description: No content
@@ -16298,6 +16894,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/LolPerksPerkPageResource'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/LolPerksPerkPageResource'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/LolPerksPerkPageResource'
       responses:
         '200':
           description: Successful response
@@ -16379,6 +16981,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/LolPerksPerkPageResource'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/LolPerksPerkPageResource'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/LolPerksPerkPageResource'
       responses:
         '200':
           description: Successful response
@@ -16429,6 +17037,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/LolPerksValidatePageNameData'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/LolPerksValidatePageNameData'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/LolPerksValidatePageNameData'
       responses:
         '200':
           description: Successful response
@@ -16476,6 +17090,18 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              type: array
+              items:
+                type: integer
+                format: int32
+          application/x-yaml:
+            schema:
+              type: array
+              items:
+                type: integer
+                format: int32
+          application/x-msgpack:
             schema:
               type: array
               items:
@@ -16620,6 +17246,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/LolPerksUISettings'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/LolPerksUISettings'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/LolPerksUISettings'
       responses:
         '200':
           description: Successful response
@@ -16704,6 +17336,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/LolPerksUpdatePageOrderRequest'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/LolPerksUpdatePageOrderRequest'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/LolPerksUpdatePageOrderRequest'
       responses:
@@ -16868,6 +17506,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/LolPftPFTEvent'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/LolPftPFTEvent'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/LolPftPFTEvent'
       responses:
         '200':
           description: Successful response
@@ -16908,6 +17552,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/LolPftPFTSurvey'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/LolPftPFTSurvey'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/LolPftPFTSurvey'
       responses:
@@ -17331,6 +17981,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/LolPlayerLevelUpPlayerLevelUpEventAck'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/LolPlayerLevelUpPlayerLevelUpEventAck'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/LolPlayerLevelUpPlayerLevelUpEventAck'
       responses:
         '204':
           description: No content
@@ -17460,6 +18116,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/LolPlayerPreferencesPlayerPreferencesEndpoint'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/LolPlayerPreferencesPlayerPreferencesEndpoint'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/LolPlayerPreferencesPlayerPreferencesEndpoint'
       responses:
         '200':
           description: Successful response
@@ -17501,6 +18163,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/LolPlayerPreferencesPlayerPreferences'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/LolPlayerPreferencesPlayerPreferences'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/LolPlayerPreferencesPlayerPreferences'
       responses:
@@ -17584,6 +18252,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/LolPlayerReportSenderEndOfGamePlayerReport'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/LolPlayerReportSenderEndOfGamePlayerReport'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/LolPlayerReportSenderEndOfGamePlayerReport'
       responses:
@@ -18202,6 +18876,18 @@ paths:
               items:
                 type: integer
                 format: int64
+          application/x-yaml:
+            schema:
+              type: array
+              items:
+                type: integer
+                format: int64
+          application/x-msgpack:
+            schema:
+              type: array
+              items:
+                type: integer
+                format: int64
       responses:
         '200':
           description: Successful response
@@ -18224,6 +18910,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/LolPurchaseWidgetPurchaseRequest'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/LolPurchaseWidgetPurchaseRequest'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/LolPurchaseWidgetPurchaseRequest'
       responses:
@@ -18294,6 +18986,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/LolPurchaseWidgetPurchaseOfferRequestV3'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/LolPurchaseWidgetPurchaseOfferRequestV3'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/LolPurchaseWidgetPurchaseOfferRequestV3'
       responses:
         '200':
           description: Successful response
@@ -18316,6 +19014,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/LolPurchaseWidgetValidateOfferRequestV3'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/LolPurchaseWidgetValidateOfferRequestV3'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/LolPurchaseWidgetValidateOfferRequestV3'
       responses:
@@ -18781,6 +19485,16 @@ paths:
               type: array
               items:
                 $ref: '#/components/schemas/LolRankedLeagueQueueType'
+          application/x-yaml:
+            schema:
+              type: array
+              items:
+                $ref: '#/components/schemas/LolRankedLeagueQueueType'
+          application/x-msgpack:
+            schema:
+              type: array
+              items:
+                $ref: '#/components/schemas/LolRankedLeagueQueueType'
       responses:
         '200':
           description: Successful response
@@ -18846,6 +19560,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/LolRegaliaRegaliaPreferences'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/LolRegaliaRegaliaPreferences'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/LolRegaliaRegaliaPreferences'
       responses:
@@ -19080,6 +19800,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/LolReplaysReplayContextData'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/LolReplaysReplayContextData'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/LolReplaysReplayContextData'
       responses:
         '204':
           description: No content
@@ -19101,6 +19827,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/LolReplaysReplayContextData'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/LolReplaysReplayContextData'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/LolReplaysReplayContextData'
       responses:
         '204':
           description: No content
@@ -19120,6 +19852,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/LolReplaysReplayContextData'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/LolReplaysReplayContextData'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/LolReplaysReplayContextData'
       responses:
@@ -19190,6 +19928,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/LolReplaysReplayCreateMetadata'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/LolReplaysReplayCreateMetadata'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/LolReplaysReplayCreateMetadata'
       responses:
         '204':
           description: No content
@@ -19238,6 +19982,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/LolRewardsSelectionRequestDTO'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/LolRewardsSelectionRequestDTO'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/LolRewardsSelectionRequestDTO'
       responses:
@@ -19473,6 +20223,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/LolRsoAuthRSOPlayerCredentials'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/LolRsoAuthRSOPlayerCredentials'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/LolRsoAuthRSOPlayerCredentials'
       responses:
         '200':
           description: Successful response
@@ -19633,6 +20389,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/LolRsoAuthPublicClientConfig'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/LolRsoAuthPublicClientConfig'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/LolRsoAuthPublicClientConfig'
       responses:
         '204':
           description: No content
@@ -19721,6 +20483,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/LolSettingsSettingCategory'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/LolSettingsSettingCategory'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/LolSettingsSettingCategory'
       responses:
         '200':
           description: Successful response
@@ -19748,6 +20516,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/LolSettingsSettingCategory'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/LolSettingsSettingCategory'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/LolSettingsSettingCategory'
       responses:
@@ -19832,6 +20606,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/LolSettingsSettingCategory'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/LolSettingsSettingCategory'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/LolSettingsSettingCategory'
       responses:
         '200':
           description: Successful response
@@ -19896,6 +20676,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/LolSettingsSettingCategory'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/LolSettingsSettingCategory'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/LolSettingsSettingCategory'
       responses:
         '200':
           description: Successful response
@@ -19928,6 +20714,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/LolSettingsSettingCategory'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/LolSettingsSettingCategory'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/LolSettingsSettingCategory'
       responses:
@@ -20007,6 +20799,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/LolSettingsSettingCategory'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/LolSettingsSettingCategory'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/LolSettingsSettingCategory'
       responses:
@@ -20093,6 +20891,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/LolSimpleDialogMessagesLocalMessageRequest'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/LolSimpleDialogMessagesLocalMessageRequest'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/LolSimpleDialogMessagesLocalMessageRequest'
       responses:
@@ -20244,6 +21048,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/LolSpectatorSpectateGameInfo'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/LolSpectatorSpectateGameInfo'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/LolSpectatorSpectateGameInfo'
       responses:
         '200':
           description: Successful response
@@ -20359,6 +21169,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/LolStatstonesStatstoneFeaturedRequest'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/LolStatstonesStatstoneFeaturedRequest'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/LolStatstonesStatstoneFeaturedRequest'
       responses:
@@ -20610,6 +21426,18 @@ paths:
               items:
                 type: integer
                 format: int32
+          application/x-yaml:
+            schema:
+              type: array
+              items:
+                type: integer
+                format: int32
+          application/x-msgpack:
+            schema:
+              type: array
+              items:
+                type: integer
+                format: int32
       responses:
         '200':
           description: Successful response
@@ -20644,6 +21472,18 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              type: array
+              items:
+                type: integer
+                format: int32
+          application/x-yaml:
+            schema:
+              type: array
+              items:
+                type: integer
+                format: int32
+          application/x-msgpack:
             schema:
               type: array
               items:
@@ -21055,6 +21895,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/LolStoreItemCost'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/LolStoreItemCost'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/LolStoreItemCost'
       responses:
         '200':
           description: Successful response
@@ -21136,6 +21982,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/LolSuggestedPlayersSuggestedPlayersReportedPlayer'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/LolSuggestedPlayersSuggestedPlayersReportedPlayer'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/LolSuggestedPlayersSuggestedPlayersReportedPlayer'
       responses:
         '204':
           description: No content
@@ -21199,6 +22051,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/LolSuggestedPlayersSuggestedPlayersVictoriousComrade'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/LolSuggestedPlayersSuggestedPlayersVictoriousComrade'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/LolSuggestedPlayersSuggestedPlayersVictoriousComrade'
       responses:
@@ -21326,6 +22184,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/LolSummonerSummonerIcon'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/LolSummonerSummonerIcon'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/LolSummonerSummonerIcon'
       responses:
@@ -21476,6 +22340,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/LolSummonerSummonerProfileUpdate'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/LolSummonerSummonerProfileUpdate'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/LolSummonerSummonerProfileUpdate'
       responses:
         '200':
           description: Successful response
@@ -21604,6 +22474,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/LolSummonerSummonerRequestedName'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/LolSummonerSummonerRequestedName'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/LolSummonerSummonerRequestedName'
       responses:
@@ -22093,6 +22969,18 @@ paths:
               items:
                 type: integer
                 format: int32
+          application/x-yaml:
+            schema:
+              type: array
+              items:
+                type: integer
+                format: int32
+          application/x-msgpack:
+            schema:
+              type: array
+              items:
+                type: integer
+                format: int32
       responses:
         '204':
           description: No content
@@ -22187,6 +23075,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/PatcherP2PStatusUpdate'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/PatcherP2PStatusUpdate'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/PatcherP2PStatusUpdate'
       responses:
@@ -22588,6 +23482,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/PatcherUxResource'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/PatcherUxResource'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/PatcherUxResource'
       responses:
         '204':
           description: No content
@@ -22600,6 +23500,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/PaymentsFrontEndRequest'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/PaymentsFrontEndRequest'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/PaymentsFrontEndRequest'
       responses:
@@ -22769,6 +23675,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/PlayerNotificationsPlayerNotificationConfigResource'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/PlayerNotificationsPlayerNotificationConfigResource'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/PlayerNotificationsPlayerNotificationConfigResource'
       responses:
         '200':
           description: Successful response
@@ -22815,6 +23727,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/PlayerNotificationsPlayerNotificationResource'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/PlayerNotificationsPlayerNotificationResource'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/PlayerNotificationsPlayerNotificationResource'
       responses:
@@ -22896,6 +23814,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              type: object
+          application/x-yaml:
+            schema:
+              type: object
+          application/x-msgpack:
             schema:
               type: object
       responses:
@@ -23182,6 +24106,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/RiotMessagingServiceEntitlementsToken'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/RiotMessagingServiceEntitlementsToken'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/RiotMessagingServiceEntitlementsToken'
       responses:
@@ -23750,6 +24680,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/RegionLocale'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/RegionLocale'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/RegionLocale'
       responses:
         '204':
           description: No content
@@ -24053,6 +24989,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/CrashReportingEnvironment'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/CrashReportingEnvironment'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/CrashReportingEnvironment'
       responses:
         '204':
           description: No content
@@ -24080,6 +25022,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/ElevationRequest'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/ElevationRequest'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/ElevationRequest'
       responses:
@@ -24153,6 +25101,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/SanitizerContainsSanitizedRequest'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/SanitizerContainsSanitizedRequest'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/SanitizerContainsSanitizedRequest'
       responses:
         '200':
           description: Successful response
@@ -24175,6 +25129,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/SanitizerSanitizeRequest'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/SanitizerSanitizeRequest'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/SanitizerSanitizeRequest'
       responses:
@@ -24298,6 +25258,16 @@ paths:
               type: array
               items:
                 type: object
+          application/x-yaml:
+            schema:
+              type: array
+              items:
+                type: object
+          application/x-msgpack:
+            schema:
+              type: array
+              items:
+                type: object
       responses:
         '204':
           description: No content
@@ -24321,6 +25291,16 @@ paths:
               type: array
               items:
                 type: object
+          application/x-yaml:
+            schema:
+              type: array
+              items:
+                type: object
+          application/x-msgpack:
+            schema:
+              type: array
+              items:
+                type: object
       responses:
         '204':
           description: No content
@@ -24340,6 +25320,16 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              type: array
+              items:
+                type: object
+          application/x-yaml:
+            schema:
+              type: array
+              items:
+                type: object
+          application/x-msgpack:
             schema:
               type: array
               items:
@@ -24373,6 +25363,16 @@ paths:
               type: array
               items:
                 type: object
+          application/x-yaml:
+            schema:
+              type: array
+              items:
+                type: object
+          application/x-msgpack:
+            schema:
+              type: array
+              items:
+                type: object
       responses:
         '204':
           description: No content
@@ -24392,6 +25392,16 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              type: array
+              items:
+                type: object
+          application/x-yaml:
+            schema:
+              type: array
+              items:
+                type: object
+          application/x-msgpack:
             schema:
               type: array
               items:
@@ -24439,6 +25449,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/TracingEventV1'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/TracingEventV1'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/TracingEventV1'
       responses:
         '204':
           description: No content
@@ -24451,6 +25467,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/TracingModuleV1'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/TracingModuleV1'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/TracingModuleV1'
       responses:
@@ -24502,6 +25524,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/TracingPhaseBeginV1'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/TracingPhaseBeginV1'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/TracingPhaseBeginV1'
       responses:
         '204':
           description: No content
@@ -24514,6 +25542,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/TracingPhaseEndV1'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/TracingPhaseEndV1'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/TracingPhaseEndV1'
       responses:
@@ -24712,6 +25746,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/VoiceChatUpdateCodecSettingsResource'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/VoiceChatUpdateCodecSettingsResource'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/VoiceChatUpdateCodecSettingsResource'
       responses:
         '204':
           description: No content
@@ -24786,6 +25826,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/VoiceChatPushToTalkResource'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/VoiceChatPushToTalkResource'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/VoiceChatPushToTalkResource'
       responses:
@@ -25081,6 +26127,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/VoiceChatUpdateParticipantResource'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/VoiceChatUpdateParticipantResource'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/VoiceChatUpdateParticipantResource'
       responses:
         '204':
           description: No content
@@ -25111,6 +26163,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/VoiceChatUpdateSettingsResource'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/VoiceChatUpdateSettingsResource'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/VoiceChatUpdateSettingsResource'
       responses:

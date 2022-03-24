@@ -235,6 +235,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/ConnectionInfo'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/ConnectionInfo'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/ConnectionInfo'
       responses:
         '204':
           description: No content
@@ -270,6 +276,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/UriHandlerRequest'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/UriHandlerRequest'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/UriHandlerRequest'
       responses:
         '200':
           description: Successful response
@@ -293,6 +305,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/PreparePermissionsRequest'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/PreparePermissionsRequest'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/PreparePermissionsRequest'
       responses:
@@ -320,6 +338,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/PreparePermissionsRequest'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/PreparePermissionsRequest'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/PreparePermissionsRequest'
       responses:
         '200':
           description: Successful response
@@ -345,6 +369,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/RegisterWatchPathRequest'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/RegisterWatchPathRequest'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/RegisterWatchPathRequest'
       responses:
         '200':
           description: Successful response
@@ -368,6 +398,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/ThirdPartyDependencyRequest'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/ThirdPartyDependencyRequest'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/ThirdPartyDependencyRequest'
       responses:
@@ -489,6 +525,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/AntiAddictionAntiAddictionState'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/AntiAddictionAntiAddictionState'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/AntiAddictionAntiAddictionState'
       responses:
         '204':
           description: No content
@@ -531,6 +573,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/AppCommandCommand'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/AppCommandCommand'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/AppCommandCommand'
       responses:
@@ -621,6 +669,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/ChatDebugConfig'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/ChatDebugConfig'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/ChatDebugConfig'
       responses:
         '204':
           description: No content
@@ -660,6 +714,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/ChatDeviceChatSettings'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/ChatDeviceChatSettings'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/ChatDeviceChatSettings'
       responses:
@@ -729,6 +789,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/ChatSessionPlatform'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/ChatSessionPlatform'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/ChatSessionPlatform'
       responses:
         '204':
           description: No content
@@ -768,6 +834,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/ChatProductSessionState'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/ChatProductSessionState'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/ChatProductSessionState'
       responses:
         '204':
           description: No content
@@ -803,6 +875,16 @@ paths:
               type: array
               items:
                 type: object
+          application/x-yaml:
+            schema:
+              type: array
+              items:
+                type: object
+          application/x-msgpack:
+            schema:
+              type: array
+              items:
+                type: object
       responses:
         '204':
           description: No content
@@ -814,6 +896,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/ChatAccountChatSettings'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/ChatAccountChatSettings'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/ChatAccountChatSettings'
       responses:
@@ -828,6 +916,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/ChatSocialDataReq'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/ChatSocialDataReq'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/ChatSocialDataReq'
       responses:
@@ -877,6 +971,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/ChatFriendRequestAdd'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/ChatFriendRequestAdd'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/ChatFriendRequestAdd'
       responses:
@@ -944,6 +1044,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/ChatPresenceProduct'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/ChatPresenceProduct'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/ChatPresenceProduct'
       responses:
         '204':
           description: No content
@@ -961,6 +1067,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/ChatChatGamePresence'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/ChatChatGamePresence'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/ChatChatGamePresence'
       responses:
@@ -981,6 +1093,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/ChatDebugChatGamePresence'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/ChatDebugChatGamePresence'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/ChatDebugChatGamePresence'
       responses:
@@ -1030,6 +1148,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/ChatSessionPlatform'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/ChatSessionPlatform'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/ChatSessionPlatform'
       responses:
         '204':
           description: No content
@@ -1062,6 +1186,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/ChatProductSessionState'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/ChatProductSessionState'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/ChatProductSessionState'
       responses:
         '204':
           description: No content
@@ -1080,6 +1210,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/ChatBlockPid'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/ChatBlockPid'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/ChatBlockPid'
       responses:
@@ -1129,6 +1265,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/ChatBlockPid'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/ChatBlockPid'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/ChatBlockPid'
       responses:
         '204':
           description: No content
@@ -1141,6 +1283,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/ChatErrorId'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/ChatErrorId'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/ChatErrorId'
       responses:
@@ -1187,6 +1335,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/ChatRequestPid'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/ChatRequestPid'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/ChatRequestPid'
       responses:
         '204':
           description: No content
@@ -1230,6 +1384,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/ChatFriendRequestAdd'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/ChatFriendRequestAdd'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/ChatFriendRequestAdd'
       responses:
         '204':
           description: No content
@@ -1248,6 +1408,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/ChatFriendPid'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/ChatFriendPid'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/ChatFriendPid'
       responses:
@@ -1297,6 +1463,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/ChatFriendUpdate'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/ChatFriendUpdate'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/ChatFriendUpdate'
       responses:
         '204':
           description: No content
@@ -1315,6 +1487,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/ChatFriendGroupName'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/ChatFriendGroupName'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/ChatFriendGroupName'
       responses:
@@ -1360,6 +1538,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/ChatFriendGroupCreate'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/ChatFriendGroupCreate'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/ChatFriendGroupCreate'
       responses:
         '204':
           description: No content
@@ -1377,6 +1561,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/ChatChatGroupUpdate'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/ChatChatGroupUpdate'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/ChatChatGroupUpdate'
       responses:
@@ -1399,6 +1589,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/ChatFriendGroupOrder'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/ChatFriendGroupOrder'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/ChatFriendGroupOrder'
       responses:
         '204':
           description: No content
@@ -1413,6 +1609,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/ChatPresenceProduct'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/ChatPresenceProduct'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/ChatPresenceProduct'
       responses:
         '204':
           description: No content
@@ -1424,6 +1626,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/ChatChatGamePresence'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/ChatChatGamePresence'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/ChatChatGamePresence'
       responses:
@@ -1440,6 +1648,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/ChatDebugChatGamePresence'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/ChatDebugChatGamePresence'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/ChatDebugChatGamePresence'
       responses:
         '204':
           description: No content
@@ -1452,6 +1666,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/ChatBlockPid'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/ChatBlockPid'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/ChatBlockPid'
       responses:
@@ -1493,6 +1713,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/ChatBlockPid'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/ChatBlockPid'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/ChatBlockPid'
       responses:
@@ -1584,6 +1810,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/ChatUIStateConversationJoin'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/ChatUIStateConversationJoin'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/ChatUIStateConversationJoin'
       responses:
         '204':
           description: No content
@@ -1606,6 +1838,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/ChatUIStateConversationUpdate'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/ChatUIStateConversationUpdate'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/ChatUIStateConversationUpdate'
       responses:
@@ -1679,6 +1917,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/ChatMessageSend'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/ChatMessageSend'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/ChatMessageSend'
       responses:
@@ -1838,6 +2082,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/ChatActiveConvo'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/ChatActiveConvo'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/ChatActiveConvo'
       responses:
         '204':
           description: No content
@@ -1876,6 +2126,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/ChatRequestPid'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/ChatRequestPid'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/ChatRequestPid'
       responses:
@@ -1921,6 +2177,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/ChatFriendRequestAdd'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/ChatFriendRequestAdd'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/ChatFriendRequestAdd'
       responses:
         '200':
           description: Successful response
@@ -1943,6 +2205,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/ChatFriendPid'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/ChatFriendPid'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/ChatFriendPid'
       responses:
@@ -1987,6 +2255,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/ChatFriendUpdate'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/ChatFriendUpdate'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/ChatFriendUpdate'
       responses:
         '204':
           description: No content
@@ -1999,6 +2273,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/ChatFriendGroupName'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/ChatFriendGroupName'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/ChatFriendGroupName'
       responses:
@@ -2039,6 +2319,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/ChatFriendGroupCreate'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/ChatFriendGroupCreate'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/ChatFriendGroupCreate'
       responses:
         '204':
           description: No content
@@ -2053,6 +2339,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/ChatChatGroupUpdate'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/ChatChatGroupUpdate'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/ChatChatGroupUpdate'
       responses:
         '204':
           description: No content
@@ -2065,6 +2357,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/ChatFriendGroupOrder'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/ChatFriendGroupOrder'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/ChatFriendGroupOrder'
       responses:
@@ -2119,6 +2417,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/ChatConvoCid'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/ChatConvoCid'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/ChatConvoCid'
       responses:
         '204':
           description: No content
@@ -2162,6 +2466,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/ChatConvoJoin'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/ChatConvoJoin'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/ChatConvoJoin'
       responses:
         '204':
           description: No content
@@ -2179,6 +2489,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/ChatConvoUpdate'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/ChatConvoUpdate'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/ChatConvoUpdate'
       responses:
@@ -2224,6 +2540,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/ChatActiveConvo'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/ChatActiveConvo'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/ChatActiveConvo'
       responses:
         '204':
           description: No content
@@ -2237,6 +2559,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/ChatConvoCid'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/ChatConvoCid'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/ChatConvoCid'
       responses:
@@ -2257,6 +2585,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/ChatRequestPuuid'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/ChatRequestPuuid'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/ChatRequestPuuid'
       responses:
@@ -2302,6 +2636,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/ChatFriendRequestPost'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/ChatFriendRequestPost'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/ChatFriendRequestPost'
       responses:
         '200':
           description: Successful response
@@ -2330,6 +2670,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/ChatConvoCid'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/ChatConvoCid'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/ChatConvoCid'
       responses:
@@ -2377,6 +2723,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/ChatMessagePost'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/ChatMessagePost'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/ChatMessagePost'
       responses:
@@ -2464,6 +2816,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/ChatParticipantEdit'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/ChatParticipantEdit'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/ChatParticipantEdit'
       responses:
         '204':
           description: No content
@@ -2513,6 +2871,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/ChatConvoCid'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/ChatConvoCid'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/ChatConvoCid'
       responses:
         '204':
           description: No content
@@ -2556,6 +2920,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/ChatConvoJoinFederated'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/ChatConvoJoinFederated'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/ChatConvoJoinFederated'
       responses:
         '200':
           description: Successful response
@@ -2583,6 +2953,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/ChatConvoUpdate'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/ChatConvoUpdate'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/ChatConvoUpdate'
       responses:
@@ -2658,6 +3034,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/ChatActiveConvo'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/ChatActiveConvo'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/ChatActiveConvo'
       responses:
         '204':
           description: No content
@@ -2673,6 +3055,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/ChatConvoCid'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/ChatConvoCid'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/ChatConvoCid'
       responses:
         '204':
           description: No content
@@ -2685,6 +3073,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/ChatRequestPuuid'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/ChatRequestPuuid'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/ChatRequestPuuid'
       responses:
@@ -2724,6 +3118,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/ChatFriendRequestPost'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/ChatFriendRequestPost'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/ChatFriendRequestPost'
       responses:
         '200':
           description: Successful response
@@ -2746,6 +3146,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/ChatConvoCid'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/ChatConvoCid'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/ChatConvoCid'
       responses:
@@ -2788,6 +3194,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/ChatMessagePost'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/ChatMessagePost'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/ChatMessagePost'
       responses:
@@ -2843,6 +3255,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/ChatConvoCid'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/ChatConvoCid'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/ChatConvoCid'
       responses:
         '204':
           description: No content
@@ -2879,6 +3297,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/ChatConvoJoinFederated'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/ChatConvoJoinFederated'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/ChatConvoJoinFederated'
       responses:
         '200':
           description: Successful response
@@ -2900,6 +3324,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/ChatConvoUpdate'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/ChatConvoUpdate'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/ChatConvoUpdate'
       responses:
@@ -2971,6 +3401,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/ChatActiveConvo'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/ChatActiveConvo'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/ChatActiveConvo'
       responses:
         '204':
           description: No content
@@ -2983,6 +3419,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/ChatConvoCid'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/ChatConvoCid'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/ChatConvoCid'
       responses:
@@ -3005,6 +3447,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/ClientConfigRiotClientAuthAuthorization'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/ClientConfigRiotClientAuthAuthorization'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/ClientConfigRiotClientAuthAuthorization'
       responses:
@@ -3133,6 +3581,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/ClientConfigSessionsUpdate'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/ClientConfigSessionsUpdate'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/ClientConfigSessionsUpdate'
       responses:
         '204':
           description: No content
@@ -3212,6 +3666,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/ClientConfigTokenV2'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/ClientConfigTokenV2'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/ClientConfigTokenV2'
       responses:
         '204':
           description: No content
@@ -3224,6 +3684,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/ClientConfigConfigNamespaceUpdate'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/ClientConfigConfigNamespaceUpdate'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/ClientConfigConfigNamespaceUpdate'
       responses:
@@ -3380,6 +3846,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/ClientFeatureFlagsConfigurationSource'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/ClientFeatureFlagsConfigurationSource'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/ClientFeatureFlagsConfigurationSource'
       responses:
@@ -3587,6 +4059,16 @@ paths:
               type: array
               items:
                 $ref: '#/components/schemas/CookieJarCookie'
+          application/x-yaml:
+            schema:
+              type: array
+              items:
+                $ref: '#/components/schemas/CookieJarCookie'
+          application/x-msgpack:
+            schema:
+              type: array
+              items:
+                $ref: '#/components/schemas/CookieJarCookie'
       responses:
         '204':
           description: No content
@@ -3622,6 +4104,16 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              type: array
+              items:
+                $ref: '#/components/schemas/CookieJarCookie'
+          application/x-yaml:
+            schema:
+              type: array
+              items:
+                $ref: '#/components/schemas/CookieJarCookie'
+          application/x-msgpack:
             schema:
               type: array
               items:
@@ -3674,6 +4166,16 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              type: array
+              items:
+                type: object
+          application/x-yaml:
+            schema:
+              type: array
+              items:
+                type: object
+          application/x-msgpack:
             schema:
               type: array
               items:
@@ -3749,6 +4251,16 @@ paths:
               type: array
               items:
                 type: object
+          application/x-yaml:
+            schema:
+              type: array
+              items:
+                type: object
+          application/x-msgpack:
+            schema:
+              type: array
+              items:
+                type: object
       responses:
         '204':
           description: No content
@@ -3807,6 +4319,16 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              type: array
+              items:
+                type: object
+          application/x-yaml:
+            schema:
+              type: array
+              items:
+                type: object
+          application/x-msgpack:
             schema:
               type: array
               items:
@@ -3879,6 +4401,16 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              type: array
+              items:
+                type: object
+          application/x-yaml:
+            schema:
+              type: array
+              items:
+                type: object
+          application/x-msgpack:
             schema:
               type: array
               items:
@@ -4173,6 +4705,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/EulaProductContext'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/EulaProductContext'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/EulaProductContext'
       responses:
         '204':
           description: No content
@@ -4186,6 +4724,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/FirstPartyFulfillmentFirstPartyFulfillmentFulfillmentRequest'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/FirstPartyFulfillmentFirstPartyFulfillmentFulfillmentRequest'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/FirstPartyFulfillmentFirstPartyFulfillmentFulfillmentRequest'
       responses:
@@ -4203,6 +4747,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/FriendsFriendsV1AddFriendData'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/FriendsFriendsV1AddFriendData'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/FriendsFriendsV1AddFriendData'
       responses:
         '204':
           description: No content
@@ -4216,6 +4766,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/FriendsFriendsV1BlockListOptions'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/FriendsFriendsV1BlockListOptions'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/FriendsFriendsV1BlockListOptions'
       responses:
@@ -4241,6 +4797,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/FriendsFriendsV1FriendsListOptions'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/FriendsFriendsV1FriendsListOptions'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/FriendsFriendsV1FriendsListOptions'
       responses:
@@ -4288,6 +4850,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/FriendsFriendsV1ProfilesRequest'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/FriendsFriendsV1ProfilesRequest'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/FriendsFriendsV1ProfilesRequest'
       responses:
         '200':
           description: Successful response
@@ -4313,6 +4881,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/FriendsFriendsV1PromoteBlockData'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/FriendsFriendsV1PromoteBlockData'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/FriendsFriendsV1PromoteBlockData'
       responses:
         '204':
           description: No content
@@ -4326,6 +4900,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/FriendsFriendsV1ShowProfileData'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/FriendsFriendsV1ShowProfileData'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/FriendsFriendsV1ShowProfileData'
       responses:
@@ -4369,6 +4949,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/GaWarningPluginCallerId_MockCallerId'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/GaWarningPluginCallerId_MockCallerId'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/GaWarningPluginCallerId_MockCallerId'
       responses:
@@ -4494,6 +5080,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/GameSessionPluginCallerId_MockCallerId'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/GameSessionPluginCallerId_MockCallerId'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/GameSessionPluginCallerId_MockCallerId'
       responses:
         '204':
           description: No content
@@ -4507,6 +5099,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/GameSessionGameSessionV1GameSessionRequest'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/GameSessionGameSessionV1GameSessionRequest'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/GameSessionGameSessionV1GameSessionRequest'
       responses:
@@ -4594,6 +5192,16 @@ paths:
               type: array
               items:
                 type: object
+          application/x-yaml:
+            schema:
+              type: array
+              items:
+                type: object
+          application/x-msgpack:
+            schema:
+              type: array
+              items:
+                type: object
       responses:
         '204':
           description: No content
@@ -4636,6 +5244,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/JwtAuthenticatorJWTVerifyResource'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/JwtAuthenticatorJWTVerifyResource'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/JwtAuthenticatorJWTVerifyResource'
       responses:
@@ -4827,6 +5441,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/MailboxPluginCallerId_MockCallerId'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/MailboxPluginCallerId_MockCallerId'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/MailboxPluginCallerId_MockCallerId'
       responses:
         '204':
           description: No content
@@ -4862,6 +5482,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/MailboxRequestMailParameters'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/MailboxRequestMailParameters'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/MailboxRequestMailParameters'
       responses:
         '200':
           description: Successful response
@@ -4893,6 +5519,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/MailboxUpdateMailStateRequest'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/MailboxUpdateMailStateRequest'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/MailboxUpdateMailStateRequest'
       responses:
         '204':
           description: No content
@@ -4912,6 +5544,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/MailboxRequestMailParameters'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/MailboxRequestMailParameters'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/MailboxRequestMailParameters'
       responses:
@@ -5043,6 +5681,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/MobilePushMobilePushRegisterPush'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/MobilePushMobilePushRegisterPush'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/MobilePushMobilePushRegisterPush'
       responses:
         '204':
           description: No content
@@ -5055,6 +5699,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/MobilePushMobilePushSubscribeToTopic'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/MobilePushMobilePushSubscribeToTopic'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/MobilePushMobilePushSubscribeToTopic'
       responses:
@@ -5195,6 +5845,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/NintendoAccountAuthorizationParameters'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/NintendoAccountAuthorizationParameters'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/NintendoAccountAuthorizationParameters'
       responses:
         '200':
           description: Successful response
@@ -5217,6 +5873,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/NintendoAccountGetNetworkServiceAccountParameters'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/NintendoAccountGetNetworkServiceAccountParameters'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/NintendoAccountGetNetworkServiceAccountParameters'
       responses:
@@ -5363,6 +6025,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/PatchProxyPatchRequestOptions'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/PatchProxyPatchRequestOptions'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/PatchProxyPatchRequestOptions'
       responses:
         '200':
           description: Successful response
@@ -5450,6 +6118,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/PatchProxyPatchRequestOptions'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/PatchProxyPatchRequestOptions'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/PatchProxyPatchRequestOptions'
       responses:
         '200':
           description: Successful response
@@ -5491,6 +6165,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/PatchConfiguration'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/PatchConfiguration'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/PatchConfiguration'
       responses:
@@ -5578,6 +6258,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/PatchInstallParams'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/PatchInstallParams'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/PatchInstallParams'
       responses:
         '204':
           description: No content
@@ -5612,6 +6298,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/PatchPatchRequest'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/PatchPatchRequest'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/PatchPatchRequest'
       responses:
@@ -5650,6 +6342,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/PatchPreviewRequest'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/PatchPreviewRequest'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/PatchPreviewRequest'
       responses:
         '204':
           description: No content
@@ -5683,6 +6381,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/PatchRepairRequest'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/PatchRepairRequest'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/PatchRepairRequest'
       responses:
@@ -5719,6 +6423,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/PatchSeedRequest'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/PatchSeedRequest'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/PatchSeedRequest'
       responses:
@@ -5884,6 +6594,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/PatchV2Configuration'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/PatchV2Configuration'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/PatchV2Configuration'
       responses:
         '204':
           description: No content
@@ -5896,6 +6612,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/PatchDebugSetup'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/PatchDebugSetup'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/PatchDebugSetup'
       responses:
@@ -5968,6 +6690,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/PatchInstallRequest'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/PatchInstallRequest'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/PatchInstallRequest'
       responses:
         '204':
           description: No content
@@ -6023,6 +6751,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/PatchComponentRequest'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/PatchComponentRequest'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/PatchComponentRequest'
       responses:
         '204':
           description: No content
@@ -6047,6 +6781,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/PatchStartFullRepairRequest'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/PatchStartFullRepairRequest'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/PatchStartFullRepairRequest'
       responses:
@@ -6085,6 +6825,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/PatchStartPartialRepairRequest'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/PatchStartPartialRepairRequest'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/PatchStartPartialRepairRequest'
       responses:
         '200':
           description: Successful response
@@ -6119,6 +6865,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/PatchStartPatchingOrSeedingRequest'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/PatchStartPatchingOrSeedingRequest'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/PatchStartPatchingOrSeedingRequest'
       responses:
@@ -6157,6 +6909,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/PatchStartPreviewRequest'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/PatchStartPreviewRequest'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/PatchStartPreviewRequest'
       responses:
         '200':
           description: Successful response
@@ -6191,6 +6949,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/PatchStartPatchingOrSeedingRequest'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/PatchStartPatchingOrSeedingRequest'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/PatchStartPatchingOrSeedingRequest'
       responses:
@@ -6365,6 +7129,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/PatchPatchsieveRequest'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/PatchPatchsieveRequest'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/PatchPatchsieveRequest'
       responses:
@@ -6668,6 +7438,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/PlayRestrictionsPluginCallerId_MockCallerId'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/PlayRestrictionsPluginCallerId_MockCallerId'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/PlayRestrictionsPluginCallerId_MockCallerId'
       responses:
         '204':
           description: No content
@@ -6699,6 +7475,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/PlayRestrictionsPlayRestrictionV1Data'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/PlayRestrictionsPlayRestrictionV1Data'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/PlayRestrictionsPlayRestrictionV1Data'
       responses:
@@ -6752,6 +7534,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/PlayerAccountAliasesV1AliasInput'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/PlayerAccountAliasesV1AliasInput'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/PlayerAccountAliasesV1AliasInput'
       responses:
         '200':
           description: Successful response
@@ -6795,6 +7583,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/PlayerAccountGenerateTaglineInput'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/PlayerAccountGenerateTaglineInput'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/PlayerAccountGenerateTaglineInput'
       responses:
         '200':
           description: Successful response
@@ -6836,6 +7630,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/PlayerAccountAliasesV1AliasInput'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/PlayerAccountAliasesV1AliasInput'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/PlayerAccountAliasesV1AliasInput'
       responses:
@@ -6937,6 +7737,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/PlayerAccountPromotionV1AccountDetails'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/PlayerAccountPromotionV1AccountDetails'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/PlayerAccountPromotionV1AccountDetails'
       responses:
@@ -7081,6 +7887,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/PlayerAccountVngV1WebUrlRequest'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/PlayerAccountVngV1WebUrlRequest'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/PlayerAccountVngV1WebUrlRequest'
       responses:
         '200':
           description: Successful response
@@ -7104,6 +7916,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/PlayerAffinityAffinityV1AffinityInput'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/PlayerAffinityAffinityV1AffinityInput'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/PlayerAffinityAffinityV1AffinityInput'
       responses:
@@ -7171,6 +7989,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/PlayerAffinityAffinityV2AffinityProductInput'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/PlayerAffinityAffinityV2AffinityProductInput'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/PlayerAffinityAffinityV2AffinityProductInput'
       responses:
         '200':
           description: Successful response
@@ -7222,6 +8046,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/PlayerAffinityPlayerAffinityTokenProduct'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/PlayerAffinityPlayerAffinityTokenProduct'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/PlayerAffinityPlayerAffinityTokenProduct'
       responses:
         '200':
           description: Successful response
@@ -7269,6 +8099,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/PlayerAffinityProductAffinityInput'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/PlayerAffinityProductAffinityInput'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/PlayerAffinityProductAffinityInput'
       responses:
@@ -7320,6 +8156,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/PlayerAffinityPlayerAffinityProductToken'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/PlayerAffinityPlayerAffinityProductToken'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/PlayerAffinityPlayerAffinityProductToken'
       responses:
         '200':
           description: Successful response
@@ -7343,6 +8185,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/PlayerAffinityAffinityV1AffinityInput'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/PlayerAffinityAffinityV1AffinityInput'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/PlayerAffinityAffinityV1AffinityInput'
       responses:
@@ -7394,6 +8242,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/PlayerAffinityServiceAffinityInput'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/PlayerAffinityServiceAffinityInput'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/PlayerAffinityServiceAffinityInput'
       responses:
         '200':
           description: Successful response
@@ -7416,6 +8270,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/PlayerAffinityPlayerAffinityShardInfo'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/PlayerAffinityPlayerAffinityShardInfo'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/PlayerAffinityPlayerAffinityShardInfo'
       responses:
@@ -7466,6 +8326,16 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              type: array
+              items:
+                type: object
+          application/x-yaml:
+            schema:
+              type: array
+              items:
+                type: object
+          application/x-msgpack:
             schema:
               type: array
               items:
@@ -7601,6 +8471,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/PlayerReportingPlayerReport'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/PlayerReportingPlayerReport'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/PlayerReportingPlayerReport'
       responses:
         '204':
           description: No content
@@ -7696,6 +8572,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/PlayerReportingPlayerReportV2'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/PlayerReportingPlayerReportV2'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/PlayerReportingPlayerReportV2'
       responses:
         '204':
           description: No content
@@ -7737,6 +8619,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/PlayerSessionLifecycleInitiateLoginSessionRequest'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/PlayerSessionLifecycleInitiateLoginSessionRequest'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/PlayerSessionLifecycleInitiateLoginSessionRequest'
       responses:
         '204':
           description: No content
@@ -7748,6 +8636,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/PlayerSessionLifecycleInitiateLoginSessionRequest'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/PlayerSessionLifecycleInitiateLoginSessionRequest'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/PlayerSessionLifecycleInitiateLoginSessionRequest'
       responses:
@@ -7762,6 +8656,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/PlaystationAccountAuthorizationParameters'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/PlaystationAccountAuthorizationParameters'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/PlaystationAccountAuthorizationParameters'
       responses:
@@ -8136,6 +9036,16 @@ paths:
               type: array
               items:
                 type: object
+          application/x-yaml:
+            schema:
+              type: array
+              items:
+                type: object
+          application/x-msgpack:
+            schema:
+              type: array
+              items:
+                type: object
       responses:
         '204':
           description: No content
@@ -8360,6 +9270,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/ProductIntegrationDepsAppRepairApplyRequest'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/ProductIntegrationDepsAppRepairApplyRequest'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/ProductIntegrationDepsAppRepairApplyRequest'
       responses:
         '204':
           description: No content
@@ -8436,6 +9352,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/ProductIntegrationDepsAppUpdateApplyRequest'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/ProductIntegrationDepsAppUpdateApplyRequest'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/ProductIntegrationDepsAppUpdateApplyRequest'
       responses:
         '204':
           description: No content
@@ -8492,6 +9414,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/ProductIntegrationDepsAppUpdateStatus'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/ProductIntegrationDepsAppUpdateStatus'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/ProductIntegrationDepsAppUpdateStatus'
       responses:
         '204':
           description: No content
@@ -8515,6 +9443,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/ProductIntegrationProductIntegrationAppRepairBody'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/ProductIntegrationProductIntegrationAppRepairBody'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/ProductIntegrationProductIntegrationAppRepairBody'
       responses:
         '204':
           description: No content
@@ -8528,6 +9462,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/ProductIntegrationProductIntegrationAppImmediateRepairRequestBody'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/ProductIntegrationProductIntegrationAppImmediateRepairRequestBody'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/ProductIntegrationProductIntegrationAppImmediateRepairRequestBody'
       responses:
@@ -8600,6 +9540,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/ProductIntegrationAppRepairApplyRequest'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/ProductIntegrationAppRepairApplyRequest'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/ProductIntegrationAppRepairApplyRequest'
       responses:
         '204':
           description: No content
@@ -8613,6 +9559,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/ProductIntegrationAppImmediateRepairRequest'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/ProductIntegrationAppImmediateRepairRequest'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/ProductIntegrationAppImmediateRepairRequest'
       responses:
@@ -8711,6 +9663,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/ProductIntegrationProductIntegrationAppUpdateStatus'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/ProductIntegrationProductIntegrationAppUpdateStatus'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/ProductIntegrationProductIntegrationAppUpdateStatus'
       responses:
@@ -9020,6 +9978,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/ProductLocalizationTranslateRequest'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/ProductLocalizationTranslateRequest'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/ProductLocalizationTranslateRequest'
       responses:
         '200':
           description: Successful response
@@ -9042,6 +10006,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/ProductLocalizationTranslateRequest'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/ProductLocalizationTranslateRequest'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/ProductLocalizationTranslateRequest'
       responses:
@@ -9118,6 +10088,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/ProductMetadataDebugClientConfigSource'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/ProductMetadataDebugClientConfigSource'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/ProductMetadataDebugClientConfigSource'
       responses:
@@ -9544,6 +10520,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/ProductSessionSession'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/ProductSessionSession'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/ProductSessionSession'
       responses:
         '200':
           description: Successful response
@@ -9689,6 +10671,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/ProductSessionSession'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/ProductSessionSession'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/ProductSessionSession'
       responses:
         '200':
           description: Successful response
@@ -9748,6 +10736,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/ProductSessionSession'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/ProductSessionSession'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/ProductSessionSession'
       responses:
         '200':
           description: Successful response
@@ -9779,6 +10773,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/ProductSessionHeartbeatInfo'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/ProductSessionHeartbeatInfo'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/ProductSessionHeartbeatInfo'
       responses:
         '200':
           description: Successful response
@@ -9808,6 +10808,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/ProductSessionHeartbeatInfo'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/ProductSessionHeartbeatInfo'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/ProductSessionHeartbeatInfo'
       responses:
@@ -10328,6 +11334,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/RegionLocale'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/RegionLocale'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/RegionLocale'
       responses:
         '200':
           description: Successful response
@@ -10379,6 +11391,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/ProductPatchline'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/ProductPatchline'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/ProductPatchline'
       responses:
@@ -10474,6 +11492,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/UxCommand'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/UxCommand'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/UxCommand'
       responses:
         '204':
           description: No content
@@ -10505,6 +11529,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/RiotMessagingServiceAcknowledgeBody'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/RiotMessagingServiceAcknowledgeBody'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/RiotMessagingServiceAcknowledgeBody'
       responses:
@@ -10550,6 +11580,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/RiotMessagingServiceEntitlementsToken'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/RiotMessagingServiceEntitlementsToken'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/RiotMessagingServiceEntitlementsToken'
       responses:
@@ -10867,6 +11903,16 @@ paths:
               type: array
               items:
                 type: object
+          application/x-yaml:
+            schema:
+              type: array
+              items:
+                type: object
+          application/x-msgpack:
+            schema:
+              type: array
+              items:
+                type: object
       responses:
         '204':
           description: No content
@@ -10944,6 +11990,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/RiotMessagingServiceMessage'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/RiotMessagingServiceMessage'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/RiotMessagingServiceMessage'
       responses:
@@ -11231,6 +12283,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/LifecycleData'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/LifecycleData'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/LifecycleData'
       responses:
         '204':
           description: No content
@@ -11352,6 +12410,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/RegionLocale'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/RegionLocale'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/RegionLocale'
       responses:
@@ -11608,6 +12672,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/PlatformUser'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/PlatformUser'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/PlatformUser'
       responses:
         '204':
           description: No content
@@ -11777,6 +12847,12 @@ paths:
           application/json:
             schema:
               type: object
+          application/x-yaml:
+            schema:
+              type: object
+          application/x-msgpack:
+            schema:
+              type: object
       responses:
         '200':
           description: Successful response
@@ -11828,6 +12904,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/RnetLifecycleProductContext'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/RnetLifecycleProductContext'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/RnetLifecycleProductContext'
       responses:
@@ -11913,6 +12995,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/RnetLifecycleUxCommand'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/RnetLifecycleUxCommand'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/RnetLifecycleUxCommand'
       responses:
         '204':
           description: No content
@@ -11926,6 +13014,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/RnetPftSurveyRequest'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/RnetPftSurveyRequest'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/RnetPftSurveyRequest'
       responses:
@@ -12079,6 +13173,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/RnetProductRegistryAvailableDiskSpaceRequest'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/RnetProductRegistryAvailableDiskSpaceRequest'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/RnetProductRegistryAvailableDiskSpaceRequest'
       responses:
         '200':
           description: Successful response
@@ -12125,6 +13225,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/RnetProductRegistryDirectorySizeRequest'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/RnetProductRegistryDirectorySizeRequest'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/RnetProductRegistryDirectorySizeRequest'
       responses:
@@ -12221,6 +13327,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/RnetProductRegistryMoveInstallOptions'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/RnetProductRegistryMoveInstallOptions'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/RnetProductRegistryMoveInstallOptions'
       responses:
@@ -12403,6 +13515,12 @@ paths:
           application/json:
             schema:
               type: object
+          application/x-yaml:
+            schema:
+              type: object
+          application/x-msgpack:
+            schema:
+              type: object
       responses:
         '204':
           description: No content
@@ -12469,6 +13587,12 @@ paths:
           application/json:
             schema:
               type: object
+          application/x-yaml:
+            schema:
+              type: object
+          application/x-msgpack:
+            schema:
+              type: object
       responses:
         '204':
           description: No content
@@ -12525,6 +13649,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/RnetProductRegistryPatchRequestOptions'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/RnetProductRegistryPatchRequestOptions'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/RnetProductRegistryPatchRequestOptions'
       responses:
@@ -12716,6 +13846,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/RnetProductRegistryPatchRequestOptions'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/RnetProductRegistryPatchRequestOptions'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/RnetProductRegistryPatchRequestOptions'
       responses:
         '200':
           description: Successful response
@@ -12808,6 +13944,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/RnetProductRegistryPatchlineUpdate'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/RnetProductRegistryPatchlineUpdate'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/RnetProductRegistryPatchlineUpdate'
       responses:
         '204':
           description: No content
@@ -12832,6 +13974,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/RnetProductRegistryCreateShortcutsRequest'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/RnetProductRegistryCreateShortcutsRequest'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/RnetProductRegistryCreateShortcutsRequest'
       responses:
@@ -12919,6 +14067,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/RnetSanitizerContainsSanitizedRequest'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/RnetSanitizerContainsSanitizedRequest'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/RnetSanitizerContainsSanitizedRequest'
       responses:
         '200':
           description: Successful response
@@ -12941,6 +14095,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/RnetSanitizerSanitizeRequest'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/RnetSanitizerSanitizeRequest'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/RnetSanitizerSanitizeRequest'
       responses:
@@ -13183,6 +14343,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/RsoAuthAuthHint'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/RsoAuthAuthHint'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/RsoAuthAuthHint'
       responses:
         '204':
           description: No content
@@ -13265,6 +14431,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/RsoAuthRSOPlayerCredentials'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/RsoAuthRSOPlayerCredentials'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/RsoAuthRSOPlayerCredentials'
       responses:
@@ -13416,6 +14588,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/RsoAuthAuthorizationKeyRequest'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/RsoAuthAuthorizationKeyRequest'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/RsoAuthAuthorizationKeyRequest'
       responses:
         '200':
           description: Successful response
@@ -13470,6 +14648,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/RsoAuthSessionCredentials'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/RsoAuthSessionCredentials'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/RsoAuthSessionCredentials'
       responses:
         '200':
           description: Successful response
@@ -13495,6 +14679,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/RsoAuthSessionLoginToken'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/RsoAuthSessionLoginToken'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/RsoAuthSessionLoginToken'
       responses:
         '200':
           description: Successful response
@@ -13518,6 +14708,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/RsoAuthSessionMultifactor'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/RsoAuthSessionMultifactor'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/RsoAuthSessionMultifactor'
       responses:
@@ -13572,6 +14768,16 @@ paths:
               type: array
               items:
                 type: object
+          application/x-yaml:
+            schema:
+              type: array
+              items:
+                type: object
+          application/x-msgpack:
+            schema:
+              type: array
+              items:
+                type: object
       responses:
         '204':
           description: No content
@@ -13585,6 +14791,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/RsoAuthSessionReauthentication'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/RsoAuthSessionReauthentication'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/RsoAuthSessionReauthentication'
       responses:
@@ -13610,6 +14822,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/RsoAuthSessionSignup'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/RsoAuthSessionSignup'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/RsoAuthSessionSignup'
       responses:
@@ -13652,6 +14870,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/RsoAuthStatusMessage'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/RsoAuthStatusMessage'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/RsoAuthStatusMessage'
       responses:
@@ -13743,6 +14967,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/RsoAuthAuthorizationRequest'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/RsoAuthAuthorizationRequest'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/RsoAuthAuthorizationRequest'
       responses:
         '200':
           description: Successful response
@@ -13814,6 +15044,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/RsoAuthAuthorizationUpdateRequest'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/RsoAuthAuthorizationUpdateRequest'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/RsoAuthAuthorizationUpdateRequest'
       responses:
         '200':
           description: Successful response
@@ -13873,6 +15109,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/RsoAuthPublicClientConfig'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/RsoAuthPublicClientConfig'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/RsoAuthPublicClientConfig'
       responses:
         '204':
           description: No content
@@ -13885,6 +15127,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/RsoAuthPartnerCredentials'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/RsoAuthPartnerCredentials'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/RsoAuthPartnerCredentials'
       responses:
@@ -13939,6 +15187,16 @@ paths:
               type: array
               items:
                 type: object
+          application/x-yaml:
+            schema:
+              type: array
+              items:
+                type: object
+          application/x-msgpack:
+            schema:
+              type: array
+              items:
+                type: object
       responses:
         '200':
           description: Successful response
@@ -13961,6 +15219,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/RsoAuthenticatorV1AuthenticateOpenIdConnectInput'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/RsoAuthenticatorV1AuthenticateOpenIdConnectInput'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/RsoAuthenticatorV1AuthenticateOpenIdConnectInput'
       responses:
@@ -13987,6 +15251,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/RsoAuthenticatorV1AuthenticateCodeInput'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/RsoAuthenticatorV1AuthenticateCodeInput'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/RsoAuthenticatorV1AuthenticateCodeInput'
       responses:
         '200':
           description: Successful response
@@ -14009,6 +15279,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/RsoAuthenticatorV1AuthenticateFacebookInput'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/RsoAuthenticatorV1AuthenticateFacebookInput'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/RsoAuthenticatorV1AuthenticateFacebookInput'
       responses:
@@ -14036,6 +15312,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/RsoAuthenticatorV1AuthenticateGameCenterInput'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/RsoAuthenticatorV1AuthenticateGameCenterInput'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/RsoAuthenticatorV1AuthenticateGameCenterInput'
       responses:
         '200':
           description: Successful response
@@ -14060,6 +15342,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/RsoAuthenticatorV1AuthenticateOpenIdConnectInput'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/RsoAuthenticatorV1AuthenticateOpenIdConnectInput'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/RsoAuthenticatorV1AuthenticateOpenIdConnectInput'
       responses:
         '200':
           description: Successful response
@@ -14082,6 +15370,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/RsoAuthenticatorV1OpenIdConnectInput'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/RsoAuthenticatorV1OpenIdConnectInput'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/RsoAuthenticatorV1OpenIdConnectInput'
       responses:
@@ -14133,6 +15427,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/RsoAuthenticatorV1FacebookInput'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/RsoAuthenticatorV1FacebookInput'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/RsoAuthenticatorV1FacebookInput'
       responses:
         '200':
           description: Successful response
@@ -14155,6 +15455,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/RsoAuthenticatorV1GameCenterInput'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/RsoAuthenticatorV1GameCenterInput'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/RsoAuthenticatorV1GameCenterInput'
       responses:
@@ -14181,6 +15487,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/RsoAuthenticatorV1OpenIdConnectInput'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/RsoAuthenticatorV1OpenIdConnectInput'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/RsoAuthenticatorV1OpenIdConnectInput'
       responses:
         '200':
           description: Successful response
@@ -14203,6 +15515,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/RsoAuthenticatorV1NintendoInput'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/RsoAuthenticatorV1NintendoInput'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/RsoAuthenticatorV1NintendoInput'
       responses:
@@ -14246,6 +15564,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/RsoAuthenticatorV1RiotIdentityInput'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/RsoAuthenticatorV1RiotIdentityInput'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/RsoAuthenticatorV1RiotIdentityInput'
       responses:
@@ -14299,6 +15623,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/RsoAuthenticatorV1AuthenticateMultifactorInput'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/RsoAuthenticatorV1AuthenticateMultifactorInput'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/RsoAuthenticatorV1AuthenticateMultifactorInput'
       responses:
         '200':
           description: Successful response
@@ -14321,6 +15651,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/RsoAuthenticatorV1AuthenticateNintendoInput'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/RsoAuthenticatorV1AuthenticateNintendoInput'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/RsoAuthenticatorV1AuthenticateNintendoInput'
       responses:
@@ -14347,6 +15683,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/RsoAuthenticatorV1AuthenticatePlaystationInput'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/RsoAuthenticatorV1AuthenticatePlaystationInput'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/RsoAuthenticatorV1AuthenticatePlaystationInput'
       responses:
         '200':
           description: Successful response
@@ -14369,6 +15711,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/RsoAuthenticatorV1AuthenticationRedirectInput'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/RsoAuthenticatorV1AuthenticationRedirectInput'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/RsoAuthenticatorV1AuthenticationRedirectInput'
       responses:
@@ -14395,6 +15743,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/RsoAuthenticatorV1AuthenticateRiotIdentityInput'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/RsoAuthenticatorV1AuthenticateRiotIdentityInput'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/RsoAuthenticatorV1AuthenticateRiotIdentityInput'
       responses:
         '200':
           description: Successful response
@@ -14417,6 +15771,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/RsoAuthenticatorV1AuthenticateXboxInput'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/RsoAuthenticatorV1AuthenticateXboxInput'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/RsoAuthenticatorV1AuthenticateXboxInput'
       responses:
@@ -14462,6 +15822,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/RsoAuthenticatorV1LoginRequest'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/RsoAuthenticatorV1LoginRequest'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/RsoAuthenticatorV1LoginRequest'
       responses:
         '204':
           description: No content
@@ -14474,6 +15840,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/RsoAuthenticatorV1WebAuthenticationUrlRequest'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/RsoAuthenticatorV1WebAuthenticationUrlRequest'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/RsoAuthenticatorV1WebAuthenticationUrlRequest'
       responses:
@@ -14528,6 +15900,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/RsoMobileUiAuthenticationRedirectRequest'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/RsoMobileUiAuthenticationRedirectRequest'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/RsoMobileUiAuthenticationRedirectRequest'
       responses:
         '204':
           description: No content
@@ -14539,6 +15917,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/RsoMobileUiIOSEventInfo'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/RsoMobileUiIOSEventInfo'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/RsoMobileUiIOSEventInfo'
       responses:
@@ -14591,6 +15975,16 @@ paths:
               type: array
               items:
                 type: object
+          application/x-yaml:
+            schema:
+              type: array
+              items:
+                type: object
+          application/x-msgpack:
+            schema:
+              type: array
+              items:
+                type: object
       responses:
         '200':
           description: Successful response
@@ -14622,6 +16016,16 @@ paths:
               type: array
               items:
                 type: object
+          application/x-yaml:
+            schema:
+              type: array
+              items:
+                type: object
+          application/x-msgpack:
+            schema:
+              type: array
+              items:
+                type: object
       responses:
         '200':
           description: Successful response
@@ -14647,6 +16051,16 @@ paths:
               type: array
               items:
                 type: object
+          application/x-yaml:
+            schema:
+              type: array
+              items:
+                type: object
+          application/x-msgpack:
+            schema:
+              type: array
+              items:
+                type: object
       responses:
         '204':
           description: No content
@@ -14659,6 +16073,16 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              type: array
+              items:
+                type: object
+          application/x-yaml:
+            schema:
+              type: array
+              items:
+                type: object
+          application/x-msgpack:
             schema:
               type: array
               items:
@@ -14694,6 +16118,16 @@ paths:
               type: array
               items:
                 type: object
+          application/x-yaml:
+            schema:
+              type: array
+              items:
+                type: object
+          application/x-msgpack:
+            schema:
+              type: array
+              items:
+                type: object
       responses:
         '200':
           description: Successful response
@@ -14722,6 +16156,16 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              type: array
+              items:
+                type: object
+          application/x-yaml:
+            schema:
+              type: array
+              items:
+                type: object
+          application/x-msgpack:
             schema:
               type: array
               items:
@@ -14801,6 +16245,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/RsoMobileUiEULAUIInitiate'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/RsoMobileUiEULAUIInitiate'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/RsoMobileUiEULAUIInitiate'
       responses:
         '204':
           description: No content
@@ -14834,6 +16284,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/RsoMobileUiFederatedLoginRequest'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/RsoMobileUiFederatedLoginRequest'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/RsoMobileUiFederatedLoginRequest'
       responses:
         '204':
           description: No content
@@ -14846,6 +16302,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/RsoMobileUiIOSEventInfo'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/RsoMobileUiIOSEventInfo'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/RsoMobileUiIOSEventInfo'
       responses:
@@ -14870,6 +16332,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/RsoMobileUiLoginInitiateRequest'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/RsoMobileUiLoginInitiateRequest'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/RsoMobileUiLoginInitiateRequest'
       responses:
@@ -14966,6 +16434,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/RsoMobileUiRegionElectionV1InitiateRequest'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/RsoMobileUiRegionElectionV1InitiateRequest'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/RsoMobileUiRegionElectionV1InitiateRequest'
       responses:
         '200':
           description: Successful response
@@ -14987,6 +16461,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/RsoMobileUiRegionElectionV1UpdateRequest'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/RsoMobileUiRegionElectionV1UpdateRequest'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/RsoMobileUiRegionElectionV1UpdateRequest'
       responses:
@@ -15030,6 +16510,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/RsoMobileUiGameOutOfDateUIInitiate'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/RsoMobileUiGameOutOfDateUIInitiate'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/RsoMobileUiGameOutOfDateUIInitiate'
       responses:
@@ -15144,6 +16630,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/RsoMobileUiEULAUIV2Agreement'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/RsoMobileUiEULAUIV2Agreement'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/RsoMobileUiEULAUIV2Agreement'
       responses:
@@ -15444,6 +16936,16 @@ paths:
               type: array
               items:
                 type: object
+          application/x-yaml:
+            schema:
+              type: array
+              items:
+                type: object
+          application/x-msgpack:
+            schema:
+              type: array
+              items:
+                type: object
       responses:
         '204':
           description: No content
@@ -15465,6 +16967,12 @@ paths:
           application/json:
             schema:
               type: object
+          application/x-yaml:
+            schema:
+              type: object
+          application/x-msgpack:
+            schema:
+              type: object
       responses:
         '204':
           description: No content
@@ -15478,6 +16986,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              type: object
+          application/x-yaml:
+            schema:
+              type: object
+          application/x-msgpack:
             schema:
               type: object
       responses:
@@ -15501,6 +17015,12 @@ paths:
           application/json:
             schema:
               type: object
+          application/x-yaml:
+            schema:
+              type: object
+          application/x-msgpack:
+            schema:
+              type: object
       responses:
         '204':
           description: No content
@@ -15517,6 +17037,16 @@ paths:
               type: array
               items:
                 type: object
+          application/x-yaml:
+            schema:
+              type: array
+              items:
+                type: object
+          application/x-msgpack:
+            schema:
+              type: array
+              items:
+                type: object
       responses:
         '204':
           description: No content
@@ -15529,6 +17059,16 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              type: array
+              items:
+                $ref: '#/components/schemas/StructuredLogRequest'
+          application/x-yaml:
+            schema:
+              type: array
+              items:
+                $ref: '#/components/schemas/StructuredLogRequest'
+          application/x-msgpack:
             schema:
               type: array
               items:
@@ -15572,6 +17112,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/ExtendedEventData'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/ExtendedEventData'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/ExtendedEventData'
       responses:
         '204':
           description: No content
@@ -15593,6 +17139,12 @@ paths:
           application/json:
             schema:
               type: object
+          application/x-yaml:
+            schema:
+              type: object
+          application/x-msgpack:
+            schema:
+              type: object
       responses:
         '204':
           description: No content
@@ -15612,6 +17164,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              type: object
+          application/x-yaml:
+            schema:
+              type: object
+          application/x-msgpack:
             schema:
               type: object
       responses:
@@ -15672,6 +17230,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              type: object
+          application/x-yaml:
+            schema:
+              type: object
+          application/x-msgpack:
             schema:
               type: object
       responses:
@@ -15846,6 +17410,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/VoiceChatUnnormalizedPushToTalkResource'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/VoiceChatUnnormalizedPushToTalkResource'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/VoiceChatUnnormalizedPushToTalkResource'
       responses:
         '204':
           description: No content
@@ -15997,6 +17567,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/VoiceChatUnnormalizedPushToTalkResource'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/VoiceChatUnnormalizedPushToTalkResource'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/VoiceChatUnnormalizedPushToTalkResource'
       responses:
         '204':
           description: No content
@@ -16097,6 +17673,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/VoiceChatUpdateSessionResource'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/VoiceChatUpdateSessionResource'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/VoiceChatUpdateSessionResource'
       responses:
         '204':
           description: No content
@@ -16158,6 +17740,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/VoiceChatUpdateSessionResource'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/VoiceChatUpdateSessionResource'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/VoiceChatUpdateSessionResource'
       responses:
         '204':
           description: No content
@@ -16214,6 +17802,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/VoiceChatUpdateParticipantResource'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/VoiceChatUpdateParticipantResource'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/VoiceChatUpdateParticipantResource'
       responses:
         '204':
           description: No content
@@ -16246,6 +17840,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/VoiceChatUpdateSettingsResource'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/VoiceChatUpdateSettingsResource'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/VoiceChatUpdateSettingsResource'
       responses:
@@ -16365,6 +17965,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/VoiceChatUpdateSessionResource'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/VoiceChatUpdateSessionResource'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/VoiceChatUpdateSessionResource'
       responses:
         '204':
           description: No content
@@ -16441,6 +18047,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/VoiceChatUpdateSessionResource'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/VoiceChatUpdateSessionResource'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/VoiceChatUpdateSessionResource'
       responses:
         '204':
           description: No content
@@ -16507,6 +18119,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/VoiceChatUpdateParticipantResource'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/VoiceChatUpdateParticipantResource'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/VoiceChatUpdateParticipantResource'
       responses:
         '204':
           description: No content
@@ -16549,6 +18167,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/VoiceChatUpdateSettingsResource'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/VoiceChatUpdateSettingsResource'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/VoiceChatUpdateSettingsResource'
       responses:
@@ -16615,6 +18239,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/VoiceChatJoinSession'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/VoiceChatJoinSession'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/VoiceChatJoinSession'
       responses:
         '200':
           description: Successful response
@@ -16643,6 +18273,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/VoiceChatUpdateSessionResource'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/VoiceChatUpdateSessionResource'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/VoiceChatUpdateSessionResource'
       responses:
@@ -16719,6 +18355,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/VoiceChatUpdateSessionResource'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/VoiceChatUpdateSessionResource'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/VoiceChatUpdateSessionResource'
       responses:
         '204':
           description: No content
@@ -16783,6 +18425,12 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/VoiceChatUpdateParticipantResource'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/VoiceChatUpdateParticipantResource'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/VoiceChatUpdateParticipantResource'
       responses:
         '204':
           description: No content
@@ -16795,6 +18443,12 @@ paths:
       requestBody:
         content:
           application/json:
+            schema:
+              $ref: '#/components/schemas/XboxAccountAuthorizationParameters'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/XboxAccountAuthorizationParameters'
+          application/x-msgpack:
             schema:
               $ref: '#/components/schemas/XboxAccountAuthorizationParameters'
       responses:

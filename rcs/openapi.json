@@ -375,6 +375,16 @@
               "schema": {
                 "$ref": "#/components/schemas/ConnectionInfo"
               }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/ConnectionInfo"
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "$ref": "#/components/schemas/ConnectionInfo"
+              }
             }
           }
         },
@@ -431,6 +441,16 @@
               "schema": {
                 "$ref": "#/components/schemas/UriHandlerRequest"
               }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/UriHandlerRequest"
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "$ref": "#/components/schemas/UriHandlerRequest"
+              }
             }
           }
         },
@@ -469,6 +489,16 @@
         "requestBody": {
           "content": {
             "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PreparePermissionsRequest"
+              }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/PreparePermissionsRequest"
+              }
+            },
+            "application/x-msgpack": {
               "schema": {
                 "$ref": "#/components/schemas/PreparePermissionsRequest"
               }
@@ -513,6 +543,16 @@
               "schema": {
                 "$ref": "#/components/schemas/PreparePermissionsRequest"
               }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/PreparePermissionsRequest"
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "$ref": "#/components/schemas/PreparePermissionsRequest"
+              }
             }
           }
         },
@@ -554,6 +594,16 @@
               "schema": {
                 "$ref": "#/components/schemas/RegisterWatchPathRequest"
               }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/RegisterWatchPathRequest"
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "$ref": "#/components/schemas/RegisterWatchPathRequest"
+              }
             }
           }
         },
@@ -592,6 +642,16 @@
         "requestBody": {
           "content": {
             "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ThirdPartyDependencyRequest"
+              }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/ThirdPartyDependencyRequest"
+              }
+            },
+            "application/x-msgpack": {
               "schema": {
                 "$ref": "#/components/schemas/ThirdPartyDependencyRequest"
               }
@@ -785,6 +845,16 @@
               "schema": {
                 "$ref": "#/components/schemas/AntiAddictionAntiAddictionState"
               }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/AntiAddictionAntiAddictionState"
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "$ref": "#/components/schemas/AntiAddictionAntiAddictionState"
+              }
             }
           }
         },
@@ -854,6 +924,16 @@
         "requestBody": {
           "content": {
             "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AppCommandCommand"
+              }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/AppCommandCommand"
+              }
+            },
+            "application/x-msgpack": {
               "schema": {
                 "$ref": "#/components/schemas/AppCommandCommand"
               }
@@ -997,6 +1077,16 @@
               "schema": {
                 "$ref": "#/components/schemas/ChatDebugConfig"
               }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/ChatDebugConfig"
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "$ref": "#/components/schemas/ChatDebugConfig"
+              }
             }
           }
         },
@@ -1060,6 +1150,16 @@
         "requestBody": {
           "content": {
             "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ChatDeviceChatSettings"
+              }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/ChatDeviceChatSettings"
+              }
+            },
+            "application/x-msgpack": {
               "schema": {
                 "$ref": "#/components/schemas/ChatDeviceChatSettings"
               }
@@ -1170,6 +1270,16 @@
               "schema": {
                 "$ref": "#/components/schemas/ChatSessionPlatform"
               }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/ChatSessionPlatform"
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "$ref": "#/components/schemas/ChatSessionPlatform"
+              }
             }
           }
         },
@@ -1233,6 +1343,16 @@
               "schema": {
                 "$ref": "#/components/schemas/ChatProductSessionState"
               }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/ChatProductSessionState"
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "$ref": "#/components/schemas/ChatProductSessionState"
+              }
             }
           }
         },
@@ -1289,6 +1409,22 @@
                   "type": "object"
                 }
               }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "object"
+                }
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "object"
+                }
+              }
             }
           }
         },
@@ -1307,6 +1443,16 @@
         "requestBody": {
           "content": {
             "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ChatAccountChatSettings"
+              }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/ChatAccountChatSettings"
+              }
+            },
+            "application/x-msgpack": {
               "schema": {
                 "$ref": "#/components/schemas/ChatAccountChatSettings"
               }
@@ -1330,6 +1476,16 @@
         "requestBody": {
           "content": {
             "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ChatSocialDataReq"
+              }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/ChatSocialDataReq"
+              }
+            },
+            "application/x-msgpack": {
               "schema": {
                 "$ref": "#/components/schemas/ChatSocialDataReq"
               }
@@ -1410,6 +1566,16 @@
         "requestBody": {
           "content": {
             "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ChatFriendRequestAdd"
+              }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/ChatFriendRequestAdd"
+              }
+            },
+            "application/x-msgpack": {
               "schema": {
                 "$ref": "#/components/schemas/ChatFriendRequestAdd"
               }
@@ -1518,6 +1684,16 @@
               "schema": {
                 "$ref": "#/components/schemas/ChatPresenceProduct"
               }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/ChatPresenceProduct"
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "$ref": "#/components/schemas/ChatPresenceProduct"
+              }
             }
           }
         },
@@ -1546,6 +1722,16 @@
         "requestBody": {
           "content": {
             "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ChatChatGamePresence"
+              }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/ChatChatGamePresence"
+              }
+            },
+            "application/x-msgpack": {
               "schema": {
                 "$ref": "#/components/schemas/ChatChatGamePresence"
               }
@@ -1579,6 +1765,16 @@
         "requestBody": {
           "content": {
             "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ChatDebugChatGamePresence"
+              }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/ChatDebugChatGamePresence"
+              }
+            },
+            "application/x-msgpack": {
               "schema": {
                 "$ref": "#/components/schemas/ChatDebugChatGamePresence"
               }
@@ -1657,6 +1853,16 @@
               "schema": {
                 "$ref": "#/components/schemas/ChatSessionPlatform"
               }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/ChatSessionPlatform"
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "$ref": "#/components/schemas/ChatSessionPlatform"
+              }
             }
           }
         },
@@ -1709,6 +1915,16 @@
               "schema": {
                 "$ref": "#/components/schemas/ChatProductSessionState"
               }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/ChatProductSessionState"
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "$ref": "#/components/schemas/ChatProductSessionState"
+              }
             }
           }
         },
@@ -1739,6 +1955,16 @@
         "requestBody": {
           "content": {
             "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ChatBlockPid"
+              }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/ChatBlockPid"
+              }
+            },
+            "application/x-msgpack": {
               "schema": {
                 "$ref": "#/components/schemas/ChatBlockPid"
               }
@@ -1819,6 +2045,16 @@
               "schema": {
                 "$ref": "#/components/schemas/ChatBlockPid"
               }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/ChatBlockPid"
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "$ref": "#/components/schemas/ChatBlockPid"
+              }
             }
           }
         },
@@ -1839,6 +2075,16 @@
         "requestBody": {
           "content": {
             "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ChatErrorId"
+              }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/ChatErrorId"
+              }
+            },
+            "application/x-msgpack": {
               "schema": {
                 "$ref": "#/components/schemas/ChatErrorId"
               }
@@ -1914,6 +2160,16 @@
               "schema": {
                 "$ref": "#/components/schemas/ChatRequestPid"
               }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/ChatRequestPid"
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "$ref": "#/components/schemas/ChatRequestPid"
+              }
             }
           }
         },
@@ -1984,6 +2240,16 @@
               "schema": {
                 "$ref": "#/components/schemas/ChatFriendRequestAdd"
               }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/ChatFriendRequestAdd"
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "$ref": "#/components/schemas/ChatFriendRequestAdd"
+              }
             }
           }
         },
@@ -2014,6 +2280,16 @@
         "requestBody": {
           "content": {
             "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ChatFriendPid"
+              }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/ChatFriendPid"
+              }
+            },
+            "application/x-msgpack": {
               "schema": {
                 "$ref": "#/components/schemas/ChatFriendPid"
               }
@@ -2094,6 +2370,16 @@
               "schema": {
                 "$ref": "#/components/schemas/ChatFriendUpdate"
               }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/ChatFriendUpdate"
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "$ref": "#/components/schemas/ChatFriendUpdate"
+              }
             }
           }
         },
@@ -2124,6 +2410,16 @@
         "requestBody": {
           "content": {
             "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ChatFriendGroupName"
+              }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/ChatFriendGroupName"
+              }
+            },
+            "application/x-msgpack": {
               "schema": {
                 "$ref": "#/components/schemas/ChatFriendGroupName"
               }
@@ -2197,6 +2493,16 @@
               "schema": {
                 "$ref": "#/components/schemas/ChatFriendGroupCreate"
               }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/ChatFriendGroupCreate"
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "$ref": "#/components/schemas/ChatFriendGroupCreate"
+              }
             }
           }
         },
@@ -2225,6 +2531,16 @@
         "requestBody": {
           "content": {
             "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ChatChatGroupUpdate"
+              }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/ChatChatGroupUpdate"
+              }
+            },
+            "application/x-msgpack": {
               "schema": {
                 "$ref": "#/components/schemas/ChatChatGroupUpdate"
               }
@@ -2261,6 +2577,16 @@
               "schema": {
                 "$ref": "#/components/schemas/ChatFriendGroupOrder"
               }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/ChatFriendGroupOrder"
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "$ref": "#/components/schemas/ChatFriendGroupOrder"
+              }
             }
           }
         },
@@ -2284,6 +2610,16 @@
               "schema": {
                 "$ref": "#/components/schemas/ChatPresenceProduct"
               }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/ChatPresenceProduct"
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "$ref": "#/components/schemas/ChatPresenceProduct"
+              }
             }
           }
         },
@@ -2302,6 +2638,16 @@
         "requestBody": {
           "content": {
             "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ChatChatGamePresence"
+              }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/ChatChatGamePresence"
+              }
+            },
+            "application/x-msgpack": {
               "schema": {
                 "$ref": "#/components/schemas/ChatChatGamePresence"
               }
@@ -2328,6 +2674,16 @@
               "schema": {
                 "$ref": "#/components/schemas/ChatDebugChatGamePresence"
               }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/ChatDebugChatGamePresence"
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "$ref": "#/components/schemas/ChatDebugChatGamePresence"
+              }
             }
           }
         },
@@ -2348,6 +2704,16 @@
         "requestBody": {
           "content": {
             "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ChatBlockPid"
+              }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/ChatBlockPid"
+              }
+            },
+            "application/x-msgpack": {
               "schema": {
                 "$ref": "#/components/schemas/ChatBlockPid"
               }
@@ -2415,6 +2781,16 @@
         "requestBody": {
           "content": {
             "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ChatBlockPid"
+              }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/ChatBlockPid"
+              }
+            },
+            "application/x-msgpack": {
               "schema": {
                 "$ref": "#/components/schemas/ChatBlockPid"
               }
@@ -2561,6 +2937,16 @@
               "schema": {
                 "$ref": "#/components/schemas/ChatUIStateConversationJoin"
               }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/ChatUIStateConversationJoin"
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "$ref": "#/components/schemas/ChatUIStateConversationJoin"
+              }
             }
           }
         },
@@ -2597,6 +2983,16 @@
         "requestBody": {
           "content": {
             "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ChatUIStateConversationUpdate"
+              }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/ChatUIStateConversationUpdate"
+              }
+            },
+            "application/x-msgpack": {
               "schema": {
                 "$ref": "#/components/schemas/ChatUIStateConversationUpdate"
               }
@@ -2715,6 +3111,16 @@
         "requestBody": {
           "content": {
             "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ChatMessageSend"
+              }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/ChatMessageSend"
+              }
+            },
+            "application/x-msgpack": {
               "schema": {
                 "$ref": "#/components/schemas/ChatMessageSend"
               }
@@ -2969,6 +3375,16 @@
               "schema": {
                 "$ref": "#/components/schemas/ChatActiveConvo"
               }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/ChatActiveConvo"
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "$ref": "#/components/schemas/ChatActiveConvo"
+              }
             }
           }
         },
@@ -3031,6 +3447,16 @@
         "requestBody": {
           "content": {
             "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ChatRequestPid"
+              }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/ChatRequestPid"
+              }
+            },
+            "application/x-msgpack": {
               "schema": {
                 "$ref": "#/components/schemas/ChatRequestPid"
               }
@@ -3104,6 +3530,16 @@
               "schema": {
                 "$ref": "#/components/schemas/ChatFriendRequestAdd"
               }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/ChatFriendRequestAdd"
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "$ref": "#/components/schemas/ChatFriendRequestAdd"
+              }
             }
           }
         },
@@ -3141,6 +3577,16 @@
         "requestBody": {
           "content": {
             "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ChatFriendPid"
+              }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/ChatFriendPid"
+              }
+            },
+            "application/x-msgpack": {
               "schema": {
                 "$ref": "#/components/schemas/ChatFriendPid"
               }
@@ -3212,6 +3658,16 @@
               "schema": {
                 "$ref": "#/components/schemas/ChatFriendUpdate"
               }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/ChatFriendUpdate"
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "$ref": "#/components/schemas/ChatFriendUpdate"
+              }
             }
           }
         },
@@ -3232,6 +3688,16 @@
         "requestBody": {
           "content": {
             "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ChatFriendGroupName"
+              }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/ChatFriendGroupName"
+              }
+            },
+            "application/x-msgpack": {
               "schema": {
                 "$ref": "#/components/schemas/ChatFriendGroupName"
               }
@@ -3296,6 +3762,16 @@
               "schema": {
                 "$ref": "#/components/schemas/ChatFriendGroupCreate"
               }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/ChatFriendGroupCreate"
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "$ref": "#/components/schemas/ChatFriendGroupCreate"
+              }
             }
           }
         },
@@ -3315,6 +3791,16 @@
         "requestBody": {
           "content": {
             "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ChatChatGroupUpdate"
+              }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/ChatChatGroupUpdate"
+              }
+            },
+            "application/x-msgpack": {
               "schema": {
                 "$ref": "#/components/schemas/ChatChatGroupUpdate"
               }
@@ -3338,6 +3824,16 @@
         "requestBody": {
           "content": {
             "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ChatFriendGroupOrder"
+              }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/ChatFriendGroupOrder"
+              }
+            },
+            "application/x-msgpack": {
               "schema": {
                 "$ref": "#/components/schemas/ChatFriendGroupOrder"
               }
@@ -3428,6 +3924,16 @@
               "schema": {
                 "$ref": "#/components/schemas/ChatConvoCid"
               }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/ChatConvoCid"
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "$ref": "#/components/schemas/ChatConvoCid"
+              }
             }
           }
         },
@@ -3498,6 +4004,16 @@
               "schema": {
                 "$ref": "#/components/schemas/ChatConvoJoin"
               }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/ChatConvoJoin"
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "$ref": "#/components/schemas/ChatConvoJoin"
+              }
             }
           }
         },
@@ -3526,6 +4042,16 @@
         "requestBody": {
           "content": {
             "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ChatConvoUpdate"
+              }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/ChatConvoUpdate"
+              }
+            },
+            "application/x-msgpack": {
               "schema": {
                 "$ref": "#/components/schemas/ChatConvoUpdate"
               }
@@ -3596,6 +4122,16 @@
               "schema": {
                 "$ref": "#/components/schemas/ChatActiveConvo"
               }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/ChatActiveConvo"
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "$ref": "#/components/schemas/ChatActiveConvo"
+              }
             }
           }
         },
@@ -3617,6 +4153,16 @@
         "requestBody": {
           "content": {
             "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ChatConvoCid"
+              }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/ChatConvoCid"
+              }
+            },
+            "application/x-msgpack": {
               "schema": {
                 "$ref": "#/components/schemas/ChatConvoCid"
               }
@@ -3650,6 +4196,16 @@
         "requestBody": {
           "content": {
             "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ChatRequestPuuid"
+              }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/ChatRequestPuuid"
+              }
+            },
+            "application/x-msgpack": {
               "schema": {
                 "$ref": "#/components/schemas/ChatRequestPuuid"
               }
@@ -3723,6 +4279,16 @@
               "schema": {
                 "$ref": "#/components/schemas/ChatFriendRequestPost"
               }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/ChatFriendRequestPost"
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "$ref": "#/components/schemas/ChatFriendRequestPost"
+              }
             }
           }
         },
@@ -3770,6 +4336,16 @@
         "requestBody": {
           "content": {
             "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ChatConvoCid"
+              }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/ChatConvoCid"
+              }
+            },
+            "application/x-msgpack": {
               "schema": {
                 "$ref": "#/components/schemas/ChatConvoCid"
               }
@@ -3847,6 +4423,16 @@
         "requestBody": {
           "content": {
             "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ChatMessagePost"
+              }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/ChatMessagePost"
+              }
+            },
+            "application/x-msgpack": {
               "schema": {
                 "$ref": "#/components/schemas/ChatMessagePost"
               }
@@ -3991,6 +4577,16 @@
               "schema": {
                 "$ref": "#/components/schemas/ChatParticipantEdit"
               }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/ChatParticipantEdit"
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "$ref": "#/components/schemas/ChatParticipantEdit"
+              }
             }
           }
         },
@@ -4072,6 +4668,16 @@
               "schema": {
                 "$ref": "#/components/schemas/ChatConvoCid"
               }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/ChatConvoCid"
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "$ref": "#/components/schemas/ChatConvoCid"
+              }
             }
           }
         },
@@ -4142,6 +4748,16 @@
               "schema": {
                 "$ref": "#/components/schemas/ChatConvoJoinFederated"
               }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/ChatConvoJoinFederated"
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "$ref": "#/components/schemas/ChatConvoJoinFederated"
+              }
             }
           }
         },
@@ -4187,6 +4803,16 @@
         "requestBody": {
           "content": {
             "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ChatConvoUpdate"
+              }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/ChatConvoUpdate"
+              }
+            },
+            "application/x-msgpack": {
               "schema": {
                 "$ref": "#/components/schemas/ChatConvoUpdate"
               }
@@ -4306,6 +4932,16 @@
               "schema": {
                 "$ref": "#/components/schemas/ChatActiveConvo"
               }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/ChatActiveConvo"
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "$ref": "#/components/schemas/ChatActiveConvo"
+              }
             }
           }
         },
@@ -4330,6 +4966,16 @@
               "schema": {
                 "$ref": "#/components/schemas/ChatConvoCid"
               }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/ChatConvoCid"
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "$ref": "#/components/schemas/ChatConvoCid"
+              }
             }
           }
         },
@@ -4350,6 +4996,16 @@
         "requestBody": {
           "content": {
             "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ChatRequestPuuid"
+              }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/ChatRequestPuuid"
+              }
+            },
+            "application/x-msgpack": {
               "schema": {
                 "$ref": "#/components/schemas/ChatRequestPuuid"
               }
@@ -4413,6 +5069,16 @@
               "schema": {
                 "$ref": "#/components/schemas/ChatFriendRequestPost"
               }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/ChatFriendRequestPost"
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "$ref": "#/components/schemas/ChatFriendRequestPost"
+              }
             }
           }
         },
@@ -4450,6 +5116,16 @@
         "requestBody": {
           "content": {
             "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ChatConvoCid"
+              }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/ChatConvoCid"
+              }
+            },
+            "application/x-msgpack": {
               "schema": {
                 "$ref": "#/components/schemas/ChatConvoCid"
               }
@@ -4518,6 +5194,16 @@
         "requestBody": {
           "content": {
             "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ChatMessagePost"
+              }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/ChatMessagePost"
+              }
+            },
+            "application/x-msgpack": {
               "schema": {
                 "$ref": "#/components/schemas/ChatMessagePost"
               }
@@ -4609,6 +5295,16 @@
               "schema": {
                 "$ref": "#/components/schemas/ChatConvoCid"
               }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/ChatConvoCid"
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "$ref": "#/components/schemas/ChatConvoCid"
+              }
             }
           }
         },
@@ -4668,6 +5364,16 @@
               "schema": {
                 "$ref": "#/components/schemas/ChatConvoJoinFederated"
               }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/ChatConvoJoinFederated"
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "$ref": "#/components/schemas/ChatConvoJoinFederated"
+              }
             }
           }
         },
@@ -4703,6 +5409,16 @@
         "requestBody": {
           "content": {
             "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ChatConvoUpdate"
+              }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/ChatConvoUpdate"
+              }
+            },
+            "application/x-msgpack": {
               "schema": {
                 "$ref": "#/components/schemas/ChatConvoUpdate"
               }
@@ -4818,6 +5534,16 @@
               "schema": {
                 "$ref": "#/components/schemas/ChatActiveConvo"
               }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/ChatActiveConvo"
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "$ref": "#/components/schemas/ChatActiveConvo"
+              }
             }
           }
         },
@@ -4838,6 +5564,16 @@
         "requestBody": {
           "content": {
             "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ChatConvoCid"
+              }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/ChatConvoCid"
+              }
+            },
+            "application/x-msgpack": {
               "schema": {
                 "$ref": "#/components/schemas/ChatConvoCid"
               }
@@ -4873,6 +5609,16 @@
         "requestBody": {
           "content": {
             "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ClientConfigRiotClientAuthAuthorization"
+              }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/ClientConfigRiotClientAuthAuthorization"
+              }
+            },
+            "application/x-msgpack": {
               "schema": {
                 "$ref": "#/components/schemas/ClientConfigRiotClientAuthAuthorization"
               }
@@ -5084,6 +5830,16 @@
               "schema": {
                 "$ref": "#/components/schemas/ClientConfigSessionsUpdate"
               }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/ClientConfigSessionsUpdate"
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "$ref": "#/components/schemas/ClientConfigSessionsUpdate"
+              }
             }
           }
         },
@@ -5211,6 +5967,16 @@
               "schema": {
                 "$ref": "#/components/schemas/ClientConfigTokenV2"
               }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/ClientConfigTokenV2"
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "$ref": "#/components/schemas/ClientConfigTokenV2"
+              }
             }
           }
         },
@@ -5231,6 +5997,16 @@
         "requestBody": {
           "content": {
             "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ClientConfigConfigNamespaceUpdate"
+              }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/ClientConfigConfigNamespaceUpdate"
+              }
+            },
+            "application/x-msgpack": {
               "schema": {
                 "$ref": "#/components/schemas/ClientConfigConfigNamespaceUpdate"
               }
@@ -5479,6 +6255,16 @@
         "requestBody": {
           "content": {
             "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ClientFeatureFlagsConfigurationSource"
+              }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/ClientFeatureFlagsConfigurationSource"
+              }
+            },
+            "application/x-msgpack": {
               "schema": {
                 "$ref": "#/components/schemas/ClientFeatureFlagsConfigurationSource"
               }
@@ -5807,6 +6593,22 @@
                   "$ref": "#/components/schemas/CookieJarCookie"
                 }
               }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/CookieJarCookie"
+                }
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/CookieJarCookie"
+                }
+              }
             }
           }
         },
@@ -5863,6 +6665,22 @@
         "requestBody": {
           "content": {
             "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/CookieJarCookie"
+                }
+              }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/CookieJarCookie"
+                }
+              }
+            },
+            "application/x-msgpack": {
               "schema": {
                 "type": "array",
                 "items": {
@@ -5947,6 +6765,22 @@
         "requestBody": {
           "content": {
             "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "object"
+                }
+              }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "object"
+                }
+              }
+            },
+            "application/x-msgpack": {
               "schema": {
                 "type": "array",
                 "items": {
@@ -6068,6 +6902,22 @@
                   "type": "object"
                 }
               }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "object"
+                }
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "object"
+                }
+              }
             }
           }
         },
@@ -6162,6 +7012,22 @@
         "requestBody": {
           "content": {
             "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "object"
+                }
+              }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "object"
+                }
+              }
+            },
+            "application/x-msgpack": {
               "schema": {
                 "type": "array",
                 "items": {
@@ -6278,6 +7144,22 @@
         "requestBody": {
           "content": {
             "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "object"
+                }
+              }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "object"
+                }
+              }
+            },
+            "application/x-msgpack": {
               "schema": {
                 "type": "array",
                 "items": {
@@ -6751,6 +7633,16 @@
               "schema": {
                 "$ref": "#/components/schemas/EulaProductContext"
               }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/EulaProductContext"
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "$ref": "#/components/schemas/EulaProductContext"
+              }
             }
           }
         },
@@ -6772,6 +7664,16 @@
         "requestBody": {
           "content": {
             "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FirstPartyFulfillmentFirstPartyFulfillmentFulfillmentRequest"
+              }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/FirstPartyFulfillmentFirstPartyFulfillmentFulfillmentRequest"
+              }
+            },
+            "application/x-msgpack": {
               "schema": {
                 "$ref": "#/components/schemas/FirstPartyFulfillmentFirstPartyFulfillmentFulfillmentRequest"
               }
@@ -6799,6 +7701,16 @@
               "schema": {
                 "$ref": "#/components/schemas/FriendsFriendsV1AddFriendData"
               }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/FriendsFriendsV1AddFriendData"
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "$ref": "#/components/schemas/FriendsFriendsV1AddFriendData"
+              }
             }
           }
         },
@@ -6820,6 +7732,16 @@
         "requestBody": {
           "content": {
             "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FriendsFriendsV1BlockListOptions"
+              }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/FriendsFriendsV1BlockListOptions"
+              }
+            },
+            "application/x-msgpack": {
               "schema": {
                 "$ref": "#/components/schemas/FriendsFriendsV1BlockListOptions"
               }
@@ -6861,6 +7783,16 @@
         "requestBody": {
           "content": {
             "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FriendsFriendsV1FriendsListOptions"
+              }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/FriendsFriendsV1FriendsListOptions"
+              }
+            },
+            "application/x-msgpack": {
               "schema": {
                 "$ref": "#/components/schemas/FriendsFriendsV1FriendsListOptions"
               }
@@ -6937,6 +7869,16 @@
               "schema": {
                 "$ref": "#/components/schemas/FriendsFriendsV1ProfilesRequest"
               }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/FriendsFriendsV1ProfilesRequest"
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "$ref": "#/components/schemas/FriendsFriendsV1ProfilesRequest"
+              }
             }
           }
         },
@@ -6978,6 +7920,16 @@
               "schema": {
                 "$ref": "#/components/schemas/FriendsFriendsV1PromoteBlockData"
               }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/FriendsFriendsV1PromoteBlockData"
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "$ref": "#/components/schemas/FriendsFriendsV1PromoteBlockData"
+              }
             }
           }
         },
@@ -6999,6 +7951,16 @@
         "requestBody": {
           "content": {
             "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FriendsFriendsV1ShowProfileData"
+              }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/FriendsFriendsV1ShowProfileData"
+              }
+            },
+            "application/x-msgpack": {
               "schema": {
                 "$ref": "#/components/schemas/FriendsFriendsV1ShowProfileData"
               }
@@ -7066,6 +8028,16 @@
         "requestBody": {
           "content": {
             "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GaWarningPluginCallerId_MockCallerId"
+              }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/GaWarningPluginCallerId_MockCallerId"
+              }
+            },
+            "application/x-msgpack": {
               "schema": {
                 "$ref": "#/components/schemas/GaWarningPluginCallerId_MockCallerId"
               }
@@ -7263,6 +8235,16 @@
               "schema": {
                 "$ref": "#/components/schemas/GameSessionPluginCallerId_MockCallerId"
               }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/GameSessionPluginCallerId_MockCallerId"
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "$ref": "#/components/schemas/GameSessionPluginCallerId_MockCallerId"
+              }
             }
           }
         },
@@ -7284,6 +8266,16 @@
         "requestBody": {
           "content": {
             "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GameSessionGameSessionV1GameSessionRequest"
+              }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/GameSessionGameSessionV1GameSessionRequest"
+              }
+            },
+            "application/x-msgpack": {
               "schema": {
                 "$ref": "#/components/schemas/GameSessionGameSessionV1GameSessionRequest"
               }
@@ -7425,6 +8417,22 @@
                   "type": "object"
                 }
               }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "object"
+                }
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "object"
+                }
+              }
             }
           }
         },
@@ -7493,6 +8501,16 @@
         "requestBody": {
           "content": {
             "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/JwtAuthenticatorJWTVerifyResource"
+              }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/JwtAuthenticatorJWTVerifyResource"
+              }
+            },
+            "application/x-msgpack": {
               "schema": {
                 "$ref": "#/components/schemas/JwtAuthenticatorJWTVerifyResource"
               }
@@ -7799,6 +8817,16 @@
               "schema": {
                 "$ref": "#/components/schemas/MailboxPluginCallerId_MockCallerId"
               }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/MailboxPluginCallerId_MockCallerId"
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "$ref": "#/components/schemas/MailboxPluginCallerId_MockCallerId"
+              }
             }
           }
         },
@@ -7855,6 +8883,16 @@
               "schema": {
                 "$ref": "#/components/schemas/MailboxRequestMailParameters"
               }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/MailboxRequestMailParameters"
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "$ref": "#/components/schemas/MailboxRequestMailParameters"
+              }
             }
           }
         },
@@ -7905,6 +8943,16 @@
               "schema": {
                 "$ref": "#/components/schemas/MailboxUpdateMailStateRequest"
               }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/MailboxUpdateMailStateRequest"
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "$ref": "#/components/schemas/MailboxUpdateMailStateRequest"
+              }
             }
           }
         },
@@ -7936,6 +8984,16 @@
         "requestBody": {
           "content": {
             "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MailboxRequestMailParameters"
+              }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/MailboxRequestMailParameters"
+              }
+            },
+            "application/x-msgpack": {
               "schema": {
                 "$ref": "#/components/schemas/MailboxRequestMailParameters"
               }
@@ -8144,6 +9202,16 @@
               "schema": {
                 "$ref": "#/components/schemas/MobilePushMobilePushRegisterPush"
               }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/MobilePushMobilePushRegisterPush"
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "$ref": "#/components/schemas/MobilePushMobilePushRegisterPush"
+              }
             }
           }
         },
@@ -8164,6 +9232,16 @@
         "requestBody": {
           "content": {
             "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MobilePushMobilePushSubscribeToTopic"
+              }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/MobilePushMobilePushSubscribeToTopic"
+              }
+            },
+            "application/x-msgpack": {
               "schema": {
                 "$ref": "#/components/schemas/MobilePushMobilePushSubscribeToTopic"
               }
@@ -8386,6 +9464,16 @@
               "schema": {
                 "$ref": "#/components/schemas/NintendoAccountAuthorizationParameters"
               }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/NintendoAccountAuthorizationParameters"
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "$ref": "#/components/schemas/NintendoAccountAuthorizationParameters"
+              }
             }
           }
         },
@@ -8423,6 +9511,16 @@
         "requestBody": {
           "content": {
             "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/NintendoAccountGetNetworkServiceAccountParameters"
+              }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/NintendoAccountGetNetworkServiceAccountParameters"
+              }
+            },
+            "application/x-msgpack": {
               "schema": {
                 "$ref": "#/components/schemas/NintendoAccountGetNetworkServiceAccountParameters"
               }
@@ -8657,6 +9755,16 @@
               "schema": {
                 "$ref": "#/components/schemas/PatchProxyPatchRequestOptions"
               }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/PatchProxyPatchRequestOptions"
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "$ref": "#/components/schemas/PatchProxyPatchRequestOptions"
+              }
             }
           }
         },
@@ -8798,6 +9906,16 @@
               "schema": {
                 "$ref": "#/components/schemas/PatchProxyPatchRequestOptions"
               }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/PatchProxyPatchRequestOptions"
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "$ref": "#/components/schemas/PatchProxyPatchRequestOptions"
+              }
             }
           }
         },
@@ -8865,6 +9983,16 @@
         "requestBody": {
           "content": {
             "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PatchConfiguration"
+              }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/PatchConfiguration"
+              }
+            },
+            "application/x-msgpack": {
               "schema": {
                 "$ref": "#/components/schemas/PatchConfiguration"
               }
@@ -9004,6 +10132,16 @@
               "schema": {
                 "$ref": "#/components/schemas/PatchInstallParams"
               }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/PatchInstallParams"
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "$ref": "#/components/schemas/PatchInstallParams"
+              }
             }
           }
         },
@@ -9058,6 +10196,16 @@
         "requestBody": {
           "content": {
             "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PatchPatchRequest"
+              }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/PatchPatchRequest"
+              }
+            },
+            "application/x-msgpack": {
               "schema": {
                 "$ref": "#/components/schemas/PatchPatchRequest"
               }
@@ -9118,6 +10266,16 @@
               "schema": {
                 "$ref": "#/components/schemas/PatchPreviewRequest"
               }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/PatchPreviewRequest"
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "$ref": "#/components/schemas/PatchPreviewRequest"
+              }
             }
           }
         },
@@ -9171,6 +10329,16 @@
         "requestBody": {
           "content": {
             "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PatchRepairRequest"
+              }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/PatchRepairRequest"
+              }
+            },
+            "application/x-msgpack": {
               "schema": {
                 "$ref": "#/components/schemas/PatchRepairRequest"
               }
@@ -9228,6 +10396,16 @@
         "requestBody": {
           "content": {
             "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PatchSeedRequest"
+              }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/PatchSeedRequest"
+              }
+            },
+            "application/x-msgpack": {
               "schema": {
                 "$ref": "#/components/schemas/PatchSeedRequest"
               }
@@ -9494,6 +10672,16 @@
               "schema": {
                 "$ref": "#/components/schemas/PatchV2Configuration"
               }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/PatchV2Configuration"
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "$ref": "#/components/schemas/PatchV2Configuration"
+              }
             }
           }
         },
@@ -9514,6 +10702,16 @@
         "requestBody": {
           "content": {
             "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PatchDebugSetup"
+              }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/PatchDebugSetup"
+              }
+            },
+            "application/x-msgpack": {
               "schema": {
                 "$ref": "#/components/schemas/PatchDebugSetup"
               }
@@ -9630,6 +10828,16 @@
               "schema": {
                 "$ref": "#/components/schemas/PatchInstallRequest"
               }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/PatchInstallRequest"
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "$ref": "#/components/schemas/PatchInstallRequest"
+              }
             }
           }
         },
@@ -9719,6 +10927,16 @@
               "schema": {
                 "$ref": "#/components/schemas/PatchComponentRequest"
               }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/PatchComponentRequest"
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "$ref": "#/components/schemas/PatchComponentRequest"
+              }
             }
           }
         },
@@ -9758,6 +10976,16 @@
         "requestBody": {
           "content": {
             "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PatchStartFullRepairRequest"
+              }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/PatchStartFullRepairRequest"
+              }
+            },
+            "application/x-msgpack": {
               "schema": {
                 "$ref": "#/components/schemas/PatchStartFullRepairRequest"
               }
@@ -9820,6 +11048,16 @@
               "schema": {
                 "$ref": "#/components/schemas/PatchStartPartialRepairRequest"
               }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/PatchStartPartialRepairRequest"
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "$ref": "#/components/schemas/PatchStartPartialRepairRequest"
+              }
             }
           }
         },
@@ -9876,6 +11114,16 @@
         "requestBody": {
           "content": {
             "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PatchStartPatchingOrSeedingRequest"
+              }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/PatchStartPatchingOrSeedingRequest"
+              }
+            },
+            "application/x-msgpack": {
               "schema": {
                 "$ref": "#/components/schemas/PatchStartPatchingOrSeedingRequest"
               }
@@ -9938,6 +11186,16 @@
               "schema": {
                 "$ref": "#/components/schemas/PatchStartPreviewRequest"
               }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/PatchStartPreviewRequest"
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "$ref": "#/components/schemas/PatchStartPreviewRequest"
+              }
             }
           }
         },
@@ -9994,6 +11252,16 @@
         "requestBody": {
           "content": {
             "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PatchStartPatchingOrSeedingRequest"
+              }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/PatchStartPatchingOrSeedingRequest"
+              }
+            },
+            "application/x-msgpack": {
               "schema": {
                 "$ref": "#/components/schemas/PatchStartPatchingOrSeedingRequest"
               }
@@ -10275,6 +11543,16 @@
         "requestBody": {
           "content": {
             "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PatchPatchsieveRequest"
+              }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/PatchPatchsieveRequest"
+              }
+            },
+            "application/x-msgpack": {
               "schema": {
                 "$ref": "#/components/schemas/PatchPatchsieveRequest"
               }
@@ -10758,6 +12036,16 @@
               "schema": {
                 "$ref": "#/components/schemas/PlayRestrictionsPluginCallerId_MockCallerId"
               }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/PlayRestrictionsPluginCallerId_MockCallerId"
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "$ref": "#/components/schemas/PlayRestrictionsPluginCallerId_MockCallerId"
+              }
             }
           }
         },
@@ -10808,6 +12096,16 @@
         "requestBody": {
           "content": {
             "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PlayRestrictionsPlayRestrictionV1Data"
+              }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/PlayRestrictionsPlayRestrictionV1Data"
+              }
+            },
+            "application/x-msgpack": {
               "schema": {
                 "$ref": "#/components/schemas/PlayRestrictionsPlayRestrictionV1Data"
               }
@@ -10894,6 +12192,16 @@
               "schema": {
                 "$ref": "#/components/schemas/PlayerAccountAliasesV1AliasInput"
               }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/PlayerAccountAliasesV1AliasInput"
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "$ref": "#/components/schemas/PlayerAccountAliasesV1AliasInput"
+              }
             }
           }
         },
@@ -10965,6 +12273,16 @@
               "schema": {
                 "$ref": "#/components/schemas/PlayerAccountGenerateTaglineInput"
               }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/PlayerAccountGenerateTaglineInput"
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "$ref": "#/components/schemas/PlayerAccountGenerateTaglineInput"
+              }
             }
           }
         },
@@ -11033,6 +12351,16 @@
         "requestBody": {
           "content": {
             "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PlayerAccountAliasesV1AliasInput"
+              }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/PlayerAccountAliasesV1AliasInput"
+              }
+            },
+            "application/x-msgpack": {
               "schema": {
                 "$ref": "#/components/schemas/PlayerAccountAliasesV1AliasInput"
               }
@@ -11197,6 +12525,16 @@
         "requestBody": {
           "content": {
             "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PlayerAccountPromotionV1AccountDetails"
+              }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/PlayerAccountPromotionV1AccountDetails"
+              }
+            },
+            "application/x-msgpack": {
               "schema": {
                 "$ref": "#/components/schemas/PlayerAccountPromotionV1AccountDetails"
               }
@@ -11433,6 +12771,16 @@
               "schema": {
                 "$ref": "#/components/schemas/PlayerAccountVngV1WebUrlRequest"
               }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/PlayerAccountVngV1WebUrlRequest"
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "$ref": "#/components/schemas/PlayerAccountVngV1WebUrlRequest"
+              }
             }
           }
         },
@@ -11471,6 +12819,16 @@
         "requestBody": {
           "content": {
             "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PlayerAffinityAffinityV1AffinityInput"
+              }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/PlayerAffinityAffinityV1AffinityInput"
+              }
+            },
+            "application/x-msgpack": {
               "schema": {
                 "$ref": "#/components/schemas/PlayerAffinityAffinityV1AffinityInput"
               }
@@ -11579,6 +12937,16 @@
               "schema": {
                 "$ref": "#/components/schemas/PlayerAffinityAffinityV2AffinityProductInput"
               }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/PlayerAffinityAffinityV2AffinityProductInput"
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "$ref": "#/components/schemas/PlayerAffinityAffinityV2AffinityProductInput"
+              }
             }
           }
         },
@@ -11659,6 +13027,16 @@
         "requestBody": {
           "content": {
             "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PlayerAffinityPlayerAffinityTokenProduct"
+              }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/PlayerAffinityPlayerAffinityTokenProduct"
+              }
+            },
+            "application/x-msgpack": {
               "schema": {
                 "$ref": "#/components/schemas/PlayerAffinityPlayerAffinityTokenProduct"
               }
@@ -11743,6 +13121,16 @@
               "schema": {
                 "$ref": "#/components/schemas/PlayerAffinityProductAffinityInput"
               }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/PlayerAffinityProductAffinityInput"
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "$ref": "#/components/schemas/PlayerAffinityProductAffinityInput"
+              }
             }
           }
         },
@@ -11824,6 +13212,16 @@
               "schema": {
                 "$ref": "#/components/schemas/PlayerAffinityPlayerAffinityProductToken"
               }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/PlayerAffinityPlayerAffinityProductToken"
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "$ref": "#/components/schemas/PlayerAffinityPlayerAffinityProductToken"
+              }
             }
           }
         },
@@ -11862,6 +13260,16 @@
         "requestBody": {
           "content": {
             "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PlayerAffinityAffinityV1AffinityInput"
+              }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/PlayerAffinityAffinityV1AffinityInput"
+              }
+            },
+            "application/x-msgpack": {
               "schema": {
                 "$ref": "#/components/schemas/PlayerAffinityAffinityV1AffinityInput"
               }
@@ -11946,6 +13354,16 @@
               "schema": {
                 "$ref": "#/components/schemas/PlayerAffinityServiceAffinityInput"
               }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/PlayerAffinityServiceAffinityInput"
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "$ref": "#/components/schemas/PlayerAffinityServiceAffinityInput"
+              }
             }
           }
         },
@@ -11983,6 +13401,16 @@
         "requestBody": {
           "content": {
             "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PlayerAffinityPlayerAffinityShardInfo"
+              }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/PlayerAffinityPlayerAffinityShardInfo"
+              }
+            },
+            "application/x-msgpack": {
               "schema": {
                 "$ref": "#/components/schemas/PlayerAffinityPlayerAffinityShardInfo"
               }
@@ -12064,6 +13492,22 @@
         "requestBody": {
           "content": {
             "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "object"
+                }
+              }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "object"
+                }
+              }
+            },
+            "application/x-msgpack": {
               "schema": {
                 "type": "array",
                 "items": {
@@ -12281,6 +13725,16 @@
               "schema": {
                 "$ref": "#/components/schemas/PlayerReportingPlayerReport"
               }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/PlayerReportingPlayerReport"
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "$ref": "#/components/schemas/PlayerReportingPlayerReport"
+              }
             }
           }
         },
@@ -12433,6 +13887,16 @@
               "schema": {
                 "$ref": "#/components/schemas/PlayerReportingPlayerReportV2"
               }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/PlayerReportingPlayerReportV2"
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "$ref": "#/components/schemas/PlayerReportingPlayerReportV2"
+              }
             }
           }
         },
@@ -12498,6 +13962,16 @@
               "schema": {
                 "$ref": "#/components/schemas/PlayerSessionLifecycleInitiateLoginSessionRequest"
               }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/PlayerSessionLifecycleInitiateLoginSessionRequest"
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "$ref": "#/components/schemas/PlayerSessionLifecycleInitiateLoginSessionRequest"
+              }
             }
           }
         },
@@ -12516,6 +13990,16 @@
         "requestBody": {
           "content": {
             "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PlayerSessionLifecycleInitiateLoginSessionRequest"
+              }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/PlayerSessionLifecycleInitiateLoginSessionRequest"
+              }
+            },
+            "application/x-msgpack": {
               "schema": {
                 "$ref": "#/components/schemas/PlayerSessionLifecycleInitiateLoginSessionRequest"
               }
@@ -12539,6 +14023,16 @@
         "requestBody": {
           "content": {
             "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PlaystationAccountAuthorizationParameters"
+              }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/PlaystationAccountAuthorizationParameters"
+              }
+            },
+            "application/x-msgpack": {
               "schema": {
                 "$ref": "#/components/schemas/PlaystationAccountAuthorizationParameters"
               }
@@ -13133,6 +14627,22 @@
                   "type": "object"
                 }
               }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "object"
+                }
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "object"
+                }
+              }
             }
           }
         },
@@ -13490,6 +15000,16 @@
               "schema": {
                 "$ref": "#/components/schemas/ProductIntegrationDepsAppRepairApplyRequest"
               }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/ProductIntegrationDepsAppRepairApplyRequest"
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "$ref": "#/components/schemas/ProductIntegrationDepsAppRepairApplyRequest"
+              }
             }
           }
         },
@@ -13611,6 +15131,16 @@
               "schema": {
                 "$ref": "#/components/schemas/ProductIntegrationDepsAppUpdateApplyRequest"
               }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/ProductIntegrationDepsAppUpdateApplyRequest"
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "$ref": "#/components/schemas/ProductIntegrationDepsAppUpdateApplyRequest"
+              }
             }
           }
         },
@@ -13701,6 +15231,16 @@
               "schema": {
                 "$ref": "#/components/schemas/ProductIntegrationDepsAppUpdateStatus"
               }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/ProductIntegrationDepsAppUpdateStatus"
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "$ref": "#/components/schemas/ProductIntegrationDepsAppUpdateStatus"
+              }
             }
           }
         },
@@ -13737,6 +15277,16 @@
               "schema": {
                 "$ref": "#/components/schemas/ProductIntegrationProductIntegrationAppRepairBody"
               }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/ProductIntegrationProductIntegrationAppRepairBody"
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "$ref": "#/components/schemas/ProductIntegrationProductIntegrationAppRepairBody"
+              }
             }
           }
         },
@@ -13758,6 +15308,16 @@
         "requestBody": {
           "content": {
             "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProductIntegrationProductIntegrationAppImmediateRepairRequestBody"
+              }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/ProductIntegrationProductIntegrationAppImmediateRepairRequestBody"
+              }
+            },
+            "application/x-msgpack": {
               "schema": {
                 "$ref": "#/components/schemas/ProductIntegrationProductIntegrationAppImmediateRepairRequestBody"
               }
@@ -13872,6 +15432,16 @@
               "schema": {
                 "$ref": "#/components/schemas/ProductIntegrationAppRepairApplyRequest"
               }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/ProductIntegrationAppRepairApplyRequest"
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "$ref": "#/components/schemas/ProductIntegrationAppRepairApplyRequest"
+              }
             }
           }
         },
@@ -13893,6 +15463,16 @@
         "requestBody": {
           "content": {
             "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProductIntegrationAppImmediateRepairRequest"
+              }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/ProductIntegrationAppImmediateRepairRequest"
+              }
+            },
+            "application/x-msgpack": {
               "schema": {
                 "$ref": "#/components/schemas/ProductIntegrationAppImmediateRepairRequest"
               }
@@ -14050,6 +15630,16 @@
         "requestBody": {
           "content": {
             "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProductIntegrationProductIntegrationAppUpdateStatus"
+              }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/ProductIntegrationProductIntegrationAppUpdateStatus"
+              }
+            },
+            "application/x-msgpack": {
               "schema": {
                 "$ref": "#/components/schemas/ProductIntegrationProductIntegrationAppUpdateStatus"
               }
@@ -14540,6 +16130,16 @@
               "schema": {
                 "$ref": "#/components/schemas/ProductLocalizationTranslateRequest"
               }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/ProductLocalizationTranslateRequest"
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "$ref": "#/components/schemas/ProductLocalizationTranslateRequest"
+              }
             }
           }
         },
@@ -14577,6 +16177,16 @@
         "requestBody": {
           "content": {
             "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProductLocalizationTranslateRequest"
+              }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/ProductLocalizationTranslateRequest"
+              }
+            },
+            "application/x-msgpack": {
               "schema": {
                 "$ref": "#/components/schemas/ProductLocalizationTranslateRequest"
               }
@@ -14700,6 +16310,16 @@
         "requestBody": {
           "content": {
             "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProductMetadataDebugClientConfigSource"
+              }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/ProductMetadataDebugClientConfigSource"
+              }
+            },
+            "application/x-msgpack": {
               "schema": {
                 "$ref": "#/components/schemas/ProductMetadataDebugClientConfigSource"
               }
@@ -15384,6 +17004,16 @@
               "schema": {
                 "$ref": "#/components/schemas/ProductSessionSession"
               }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/ProductSessionSession"
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "$ref": "#/components/schemas/ProductSessionSession"
+              }
             }
           }
         },
@@ -15620,6 +17250,16 @@
               "schema": {
                 "$ref": "#/components/schemas/ProductSessionSession"
               }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/ProductSessionSession"
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "$ref": "#/components/schemas/ProductSessionSession"
+              }
             }
           }
         },
@@ -15716,6 +17356,16 @@
               "schema": {
                 "$ref": "#/components/schemas/ProductSessionSession"
               }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/ProductSessionSession"
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "$ref": "#/components/schemas/ProductSessionSession"
+              }
             }
           }
         },
@@ -15763,6 +17413,16 @@
         "requestBody": {
           "content": {
             "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProductSessionHeartbeatInfo"
+              }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/ProductSessionHeartbeatInfo"
+              }
+            },
+            "application/x-msgpack": {
               "schema": {
                 "$ref": "#/components/schemas/ProductSessionHeartbeatInfo"
               }
@@ -15814,6 +17474,16 @@
         "requestBody": {
           "content": {
             "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProductSessionHeartbeatInfo"
+              }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/ProductSessionHeartbeatInfo"
+              }
+            },
+            "application/x-msgpack": {
               "schema": {
                 "$ref": "#/components/schemas/ProductSessionHeartbeatInfo"
               }
@@ -16644,6 +18314,16 @@
               "schema": {
                 "$ref": "#/components/schemas/RegionLocale"
               }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/RegionLocale"
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "$ref": "#/components/schemas/RegionLocale"
+              }
             }
           }
         },
@@ -16725,6 +18405,16 @@
         "requestBody": {
           "content": {
             "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProductPatchline"
+              }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/ProductPatchline"
+              }
+            },
+            "application/x-msgpack": {
               "schema": {
                 "$ref": "#/components/schemas/ProductPatchline"
               }
@@ -16872,6 +18562,16 @@
               "schema": {
                 "$ref": "#/components/schemas/UxCommand"
               }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/UxCommand"
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "$ref": "#/components/schemas/UxCommand"
+              }
             }
           }
         },
@@ -16923,6 +18623,16 @@
         "requestBody": {
           "content": {
             "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RiotMessagingServiceAcknowledgeBody"
+              }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/RiotMessagingServiceAcknowledgeBody"
+              }
+            },
+            "application/x-msgpack": {
               "schema": {
                 "$ref": "#/components/schemas/RiotMessagingServiceAcknowledgeBody"
               }
@@ -16994,6 +18704,16 @@
         "requestBody": {
           "content": {
             "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RiotMessagingServiceEntitlementsToken"
+              }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/RiotMessagingServiceEntitlementsToken"
+              }
+            },
+            "application/x-msgpack": {
               "schema": {
                 "$ref": "#/components/schemas/RiotMessagingServiceEntitlementsToken"
               }
@@ -17504,6 +19224,22 @@
                   "type": "object"
                 }
               }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "object"
+                }
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "object"
+                }
+              }
             }
           }
         },
@@ -17628,6 +19364,16 @@
         "requestBody": {
           "content": {
             "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RiotMessagingServiceMessage"
+              }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/RiotMessagingServiceMessage"
+              }
+            },
+            "application/x-msgpack": {
               "schema": {
                 "$ref": "#/components/schemas/RiotMessagingServiceMessage"
               }
@@ -18089,6 +19835,16 @@
               "schema": {
                 "$ref": "#/components/schemas/LifecycleData"
               }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/LifecycleData"
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "$ref": "#/components/schemas/LifecycleData"
+              }
             }
           }
         },
@@ -18284,6 +20040,16 @@
         "requestBody": {
           "content": {
             "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RegionLocale"
+              }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/RegionLocale"
+              }
+            },
+            "application/x-msgpack": {
               "schema": {
                 "$ref": "#/components/schemas/RegionLocale"
               }
@@ -18694,6 +20460,16 @@
               "schema": {
                 "$ref": "#/components/schemas/PlatformUser"
               }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/PlatformUser"
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "$ref": "#/components/schemas/PlatformUser"
+              }
             }
           }
         },
@@ -18960,6 +20736,16 @@
               "schema": {
                 "type": "object"
               }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "type": "object"
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "type": "object"
+              }
             }
           }
         },
@@ -19041,6 +20827,16 @@
         "requestBody": {
           "content": {
             "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RnetLifecycleProductContext"
+              }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/RnetLifecycleProductContext"
+              }
+            },
+            "application/x-msgpack": {
               "schema": {
                 "$ref": "#/components/schemas/RnetLifecycleProductContext"
               }
@@ -19173,6 +20969,16 @@
               "schema": {
                 "$ref": "#/components/schemas/RnetLifecycleUxCommand"
               }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/RnetLifecycleUxCommand"
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "$ref": "#/components/schemas/RnetLifecycleUxCommand"
+              }
             }
           }
         },
@@ -19194,6 +21000,16 @@
         "requestBody": {
           "content": {
             "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RnetPftSurveyRequest"
+              }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/RnetPftSurveyRequest"
+              }
+            },
+            "application/x-msgpack": {
               "schema": {
                 "$ref": "#/components/schemas/RnetPftSurveyRequest"
               }
@@ -19437,6 +21253,16 @@
               "schema": {
                 "$ref": "#/components/schemas/RnetProductRegistryAvailableDiskSpaceRequest"
               }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/RnetProductRegistryAvailableDiskSpaceRequest"
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "$ref": "#/components/schemas/RnetProductRegistryAvailableDiskSpaceRequest"
+              }
             }
           }
         },
@@ -19510,6 +21336,16 @@
         "requestBody": {
           "content": {
             "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RnetProductRegistryDirectorySizeRequest"
+              }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/RnetProductRegistryDirectorySizeRequest"
+              }
+            },
+            "application/x-msgpack": {
               "schema": {
                 "$ref": "#/components/schemas/RnetProductRegistryDirectorySizeRequest"
               }
@@ -19663,6 +21499,16 @@
         "requestBody": {
           "content": {
             "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RnetProductRegistryMoveInstallOptions"
+              }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/RnetProductRegistryMoveInstallOptions"
+              }
+            },
+            "application/x-msgpack": {
               "schema": {
                 "$ref": "#/components/schemas/RnetProductRegistryMoveInstallOptions"
               }
@@ -19955,6 +21801,16 @@
               "schema": {
                 "type": "object"
               }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "type": "object"
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "type": "object"
+              }
             }
           }
         },
@@ -20061,6 +21917,16 @@
               "schema": {
                 "type": "object"
               }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "type": "object"
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "type": "object"
+              }
             }
           }
         },
@@ -20152,6 +22018,16 @@
         "requestBody": {
           "content": {
             "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RnetProductRegistryPatchRequestOptions"
+              }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/RnetProductRegistryPatchRequestOptions"
+              }
+            },
+            "application/x-msgpack": {
               "schema": {
                 "$ref": "#/components/schemas/RnetProductRegistryPatchRequestOptions"
               }
@@ -20458,6 +22334,16 @@
               "schema": {
                 "$ref": "#/components/schemas/RnetProductRegistryPatchRequestOptions"
               }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/RnetProductRegistryPatchRequestOptions"
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "$ref": "#/components/schemas/RnetProductRegistryPatchRequestOptions"
+              }
             }
           }
         },
@@ -20606,6 +22492,16 @@
               "schema": {
                 "$ref": "#/components/schemas/RnetProductRegistryPatchlineUpdate"
               }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/RnetProductRegistryPatchlineUpdate"
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "$ref": "#/components/schemas/RnetProductRegistryPatchlineUpdate"
+              }
             }
           }
         },
@@ -20645,6 +22541,16 @@
         "requestBody": {
           "content": {
             "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RnetProductRegistryCreateShortcutsRequest"
+              }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/RnetProductRegistryCreateShortcutsRequest"
+              }
+            },
+            "application/x-msgpack": {
               "schema": {
                 "$ref": "#/components/schemas/RnetProductRegistryCreateShortcutsRequest"
               }
@@ -20784,6 +22690,16 @@
               "schema": {
                 "$ref": "#/components/schemas/RnetSanitizerContainsSanitizedRequest"
               }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/RnetSanitizerContainsSanitizedRequest"
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "$ref": "#/components/schemas/RnetSanitizerContainsSanitizedRequest"
+              }
             }
           }
         },
@@ -20821,6 +22737,16 @@
         "requestBody": {
           "content": {
             "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RnetSanitizerSanitizeRequest"
+              }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/RnetSanitizerSanitizeRequest"
+              }
+            },
+            "application/x-msgpack": {
               "schema": {
                 "$ref": "#/components/schemas/RnetSanitizerSanitizeRequest"
               }
@@ -21209,6 +23135,16 @@
               "schema": {
                 "$ref": "#/components/schemas/RsoAuthAuthHint"
               }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/RsoAuthAuthHint"
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "$ref": "#/components/schemas/RsoAuthAuthHint"
+              }
             }
           }
         },
@@ -21339,6 +23275,16 @@
         "requestBody": {
           "content": {
             "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RsoAuthRSOPlayerCredentials"
+              }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/RsoAuthRSOPlayerCredentials"
+              }
+            },
+            "application/x-msgpack": {
               "schema": {
                 "$ref": "#/components/schemas/RsoAuthRSOPlayerCredentials"
               }
@@ -21579,6 +23525,16 @@
               "schema": {
                 "$ref": "#/components/schemas/RsoAuthAuthorizationKeyRequest"
               }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/RsoAuthAuthorizationKeyRequest"
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "$ref": "#/components/schemas/RsoAuthAuthorizationKeyRequest"
+              }
             }
           }
         },
@@ -21665,6 +23621,16 @@
               "schema": {
                 "$ref": "#/components/schemas/RsoAuthSessionCredentials"
               }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/RsoAuthSessionCredentials"
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "$ref": "#/components/schemas/RsoAuthSessionCredentials"
+              }
             }
           }
         },
@@ -21706,6 +23672,16 @@
               "schema": {
                 "$ref": "#/components/schemas/RsoAuthSessionLoginToken"
               }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/RsoAuthSessionLoginToken"
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "$ref": "#/components/schemas/RsoAuthSessionLoginToken"
+              }
             }
           }
         },
@@ -21744,6 +23720,16 @@
         "requestBody": {
           "content": {
             "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RsoAuthSessionMultifactor"
+              }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/RsoAuthSessionMultifactor"
+              }
+            },
+            "application/x-msgpack": {
               "schema": {
                 "$ref": "#/components/schemas/RsoAuthSessionMultifactor"
               }
@@ -21830,6 +23816,22 @@
                   "type": "object"
                 }
               }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "object"
+                }
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "object"
+                }
+              }
             }
           }
         },
@@ -21851,6 +23853,16 @@
         "requestBody": {
           "content": {
             "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RsoAuthSessionReauthentication"
+              }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/RsoAuthSessionReauthentication"
+              }
+            },
+            "application/x-msgpack": {
               "schema": {
                 "$ref": "#/components/schemas/RsoAuthSessionReauthentication"
               }
@@ -21892,6 +23904,16 @@
         "requestBody": {
           "content": {
             "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RsoAuthSessionSignup"
+              }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/RsoAuthSessionSignup"
+              }
+            },
+            "application/x-msgpack": {
               "schema": {
                 "$ref": "#/components/schemas/RsoAuthSessionSignup"
               }
@@ -21961,6 +23983,16 @@
         "requestBody": {
           "content": {
             "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RsoAuthStatusMessage"
+              }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/RsoAuthStatusMessage"
+              }
+            },
+            "application/x-msgpack": {
               "schema": {
                 "$ref": "#/components/schemas/RsoAuthStatusMessage"
               }
@@ -22106,6 +24138,16 @@
               "schema": {
                 "$ref": "#/components/schemas/RsoAuthAuthorizationRequest"
               }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/RsoAuthAuthorizationRequest"
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "$ref": "#/components/schemas/RsoAuthAuthorizationRequest"
+              }
             }
           }
         },
@@ -22220,6 +24262,16 @@
               "schema": {
                 "$ref": "#/components/schemas/RsoAuthAuthorizationUpdateRequest"
               }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/RsoAuthAuthorizationUpdateRequest"
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "$ref": "#/components/schemas/RsoAuthAuthorizationUpdateRequest"
+              }
             }
           }
         },
@@ -22314,6 +24366,16 @@
               "schema": {
                 "$ref": "#/components/schemas/RsoAuthPublicClientConfig"
               }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/RsoAuthPublicClientConfig"
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "$ref": "#/components/schemas/RsoAuthPublicClientConfig"
+              }
             }
           }
         },
@@ -22334,6 +24396,16 @@
         "requestBody": {
           "content": {
             "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RsoAuthPartnerCredentials"
+              }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/RsoAuthPartnerCredentials"
+              }
+            },
+            "application/x-msgpack": {
               "schema": {
                 "$ref": "#/components/schemas/RsoAuthPartnerCredentials"
               }
@@ -22421,6 +24493,22 @@
                   "type": "object"
                 }
               }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "object"
+                }
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "object"
+                }
+              }
             }
           }
         },
@@ -22458,6 +24546,16 @@
         "requestBody": {
           "content": {
             "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RsoAuthenticatorV1AuthenticateOpenIdConnectInput"
+              }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/RsoAuthenticatorV1AuthenticateOpenIdConnectInput"
+              }
+            },
+            "application/x-msgpack": {
               "schema": {
                 "$ref": "#/components/schemas/RsoAuthenticatorV1AuthenticateOpenIdConnectInput"
               }
@@ -22501,6 +24599,16 @@
               "schema": {
                 "$ref": "#/components/schemas/RsoAuthenticatorV1AuthenticateCodeInput"
               }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/RsoAuthenticatorV1AuthenticateCodeInput"
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "$ref": "#/components/schemas/RsoAuthenticatorV1AuthenticateCodeInput"
+              }
             }
           }
         },
@@ -22538,6 +24646,16 @@
         "requestBody": {
           "content": {
             "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RsoAuthenticatorV1AuthenticateFacebookInput"
+              }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/RsoAuthenticatorV1AuthenticateFacebookInput"
+              }
+            },
+            "application/x-msgpack": {
               "schema": {
                 "$ref": "#/components/schemas/RsoAuthenticatorV1AuthenticateFacebookInput"
               }
@@ -22582,6 +24700,16 @@
               "schema": {
                 "$ref": "#/components/schemas/RsoAuthenticatorV1AuthenticateGameCenterInput"
               }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/RsoAuthenticatorV1AuthenticateGameCenterInput"
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "$ref": "#/components/schemas/RsoAuthenticatorV1AuthenticateGameCenterInput"
+              }
             }
           }
         },
@@ -22622,6 +24750,16 @@
               "schema": {
                 "$ref": "#/components/schemas/RsoAuthenticatorV1AuthenticateOpenIdConnectInput"
               }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/RsoAuthenticatorV1AuthenticateOpenIdConnectInput"
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "$ref": "#/components/schemas/RsoAuthenticatorV1AuthenticateOpenIdConnectInput"
+              }
             }
           }
         },
@@ -22659,6 +24797,16 @@
         "requestBody": {
           "content": {
             "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RsoAuthenticatorV1OpenIdConnectInput"
+              }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/RsoAuthenticatorV1OpenIdConnectInput"
+              }
+            },
+            "application/x-msgpack": {
               "schema": {
                 "$ref": "#/components/schemas/RsoAuthenticatorV1OpenIdConnectInput"
               }
@@ -22743,6 +24891,16 @@
               "schema": {
                 "$ref": "#/components/schemas/RsoAuthenticatorV1FacebookInput"
               }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/RsoAuthenticatorV1FacebookInput"
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "$ref": "#/components/schemas/RsoAuthenticatorV1FacebookInput"
+              }
             }
           }
         },
@@ -22780,6 +24938,16 @@
         "requestBody": {
           "content": {
             "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RsoAuthenticatorV1GameCenterInput"
+              }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/RsoAuthenticatorV1GameCenterInput"
+              }
+            },
+            "application/x-msgpack": {
               "schema": {
                 "$ref": "#/components/schemas/RsoAuthenticatorV1GameCenterInput"
               }
@@ -22823,6 +24991,16 @@
               "schema": {
                 "$ref": "#/components/schemas/RsoAuthenticatorV1OpenIdConnectInput"
               }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/RsoAuthenticatorV1OpenIdConnectInput"
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "$ref": "#/components/schemas/RsoAuthenticatorV1OpenIdConnectInput"
+              }
             }
           }
         },
@@ -22860,6 +25038,16 @@
         "requestBody": {
           "content": {
             "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RsoAuthenticatorV1NintendoInput"
+              }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/RsoAuthenticatorV1NintendoInput"
+              }
+            },
+            "application/x-msgpack": {
               "schema": {
                 "$ref": "#/components/schemas/RsoAuthenticatorV1NintendoInput"
               }
@@ -22931,6 +25119,16 @@
         "requestBody": {
           "content": {
             "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RsoAuthenticatorV1RiotIdentityInput"
+              }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/RsoAuthenticatorV1RiotIdentityInput"
+              }
+            },
+            "application/x-msgpack": {
               "schema": {
                 "$ref": "#/components/schemas/RsoAuthenticatorV1RiotIdentityInput"
               }
@@ -23017,6 +25215,16 @@
               "schema": {
                 "$ref": "#/components/schemas/RsoAuthenticatorV1AuthenticateMultifactorInput"
               }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/RsoAuthenticatorV1AuthenticateMultifactorInput"
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "$ref": "#/components/schemas/RsoAuthenticatorV1AuthenticateMultifactorInput"
+              }
             }
           }
         },
@@ -23054,6 +25262,16 @@
         "requestBody": {
           "content": {
             "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RsoAuthenticatorV1AuthenticateNintendoInput"
+              }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/RsoAuthenticatorV1AuthenticateNintendoInput"
+              }
+            },
+            "application/x-msgpack": {
               "schema": {
                 "$ref": "#/components/schemas/RsoAuthenticatorV1AuthenticateNintendoInput"
               }
@@ -23097,6 +25315,16 @@
               "schema": {
                 "$ref": "#/components/schemas/RsoAuthenticatorV1AuthenticatePlaystationInput"
               }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/RsoAuthenticatorV1AuthenticatePlaystationInput"
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "$ref": "#/components/schemas/RsoAuthenticatorV1AuthenticatePlaystationInput"
+              }
             }
           }
         },
@@ -23134,6 +25362,16 @@
         "requestBody": {
           "content": {
             "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RsoAuthenticatorV1AuthenticationRedirectInput"
+              }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/RsoAuthenticatorV1AuthenticationRedirectInput"
+              }
+            },
+            "application/x-msgpack": {
               "schema": {
                 "$ref": "#/components/schemas/RsoAuthenticatorV1AuthenticationRedirectInput"
               }
@@ -23177,6 +25415,16 @@
               "schema": {
                 "$ref": "#/components/schemas/RsoAuthenticatorV1AuthenticateRiotIdentityInput"
               }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/RsoAuthenticatorV1AuthenticateRiotIdentityInput"
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "$ref": "#/components/schemas/RsoAuthenticatorV1AuthenticateRiotIdentityInput"
+              }
             }
           }
         },
@@ -23214,6 +25462,16 @@
         "requestBody": {
           "content": {
             "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RsoAuthenticatorV1AuthenticateXboxInput"
+              }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/RsoAuthenticatorV1AuthenticateXboxInput"
+              }
+            },
+            "application/x-msgpack": {
               "schema": {
                 "$ref": "#/components/schemas/RsoAuthenticatorV1AuthenticateXboxInput"
               }
@@ -23288,6 +25546,16 @@
               "schema": {
                 "$ref": "#/components/schemas/RsoAuthenticatorV1LoginRequest"
               }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/RsoAuthenticatorV1LoginRequest"
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "$ref": "#/components/schemas/RsoAuthenticatorV1LoginRequest"
+              }
             }
           }
         },
@@ -23308,6 +25576,16 @@
         "requestBody": {
           "content": {
             "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RsoAuthenticatorV1WebAuthenticationUrlRequest"
+              }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/RsoAuthenticatorV1WebAuthenticationUrlRequest"
+              }
+            },
+            "application/x-msgpack": {
               "schema": {
                 "$ref": "#/components/schemas/RsoAuthenticatorV1WebAuthenticationUrlRequest"
               }
@@ -23396,6 +25674,16 @@
               "schema": {
                 "$ref": "#/components/schemas/RsoMobileUiAuthenticationRedirectRequest"
               }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/RsoMobileUiAuthenticationRedirectRequest"
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "$ref": "#/components/schemas/RsoMobileUiAuthenticationRedirectRequest"
+              }
             }
           }
         },
@@ -23415,6 +25703,16 @@
         "requestBody": {
           "content": {
             "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RsoMobileUiIOSEventInfo"
+              }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/RsoMobileUiIOSEventInfo"
+              }
+            },
+            "application/x-msgpack": {
               "schema": {
                 "$ref": "#/components/schemas/RsoMobileUiIOSEventInfo"
               }
@@ -23500,6 +25798,22 @@
                   "type": "object"
                 }
               }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "object"
+                }
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "object"
+                }
+              }
             }
           }
         },
@@ -23551,6 +25865,22 @@
                   "type": "object"
                 }
               }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "object"
+                }
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "object"
+                }
+              }
             }
           }
         },
@@ -23593,6 +25923,22 @@
                   "type": "object"
                 }
               }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "object"
+                }
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "object"
+                }
+              }
             }
           }
         },
@@ -23613,6 +25959,22 @@
         "requestBody": {
           "content": {
             "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "object"
+                }
+              }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "object"
+                }
+              }
+            },
+            "application/x-msgpack": {
               "schema": {
                 "type": "array",
                 "items": {
@@ -23670,6 +26032,22 @@
                   "type": "object"
                 }
               }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "object"
+                }
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "object"
+                }
+              }
             }
           }
         },
@@ -23716,6 +26094,22 @@
         "requestBody": {
           "content": {
             "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "object"
+                }
+              }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "object"
+                }
+              }
+            },
+            "application/x-msgpack": {
               "schema": {
                 "type": "array",
                 "items": {
@@ -23843,6 +26237,16 @@
               "schema": {
                 "$ref": "#/components/schemas/RsoMobileUiEULAUIInitiate"
               }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/RsoMobileUiEULAUIInitiate"
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "$ref": "#/components/schemas/RsoMobileUiEULAUIInitiate"
+              }
             }
           }
         },
@@ -23897,6 +26301,16 @@
               "schema": {
                 "$ref": "#/components/schemas/RsoMobileUiFederatedLoginRequest"
               }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/RsoMobileUiFederatedLoginRequest"
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "$ref": "#/components/schemas/RsoMobileUiFederatedLoginRequest"
+              }
             }
           }
         },
@@ -23917,6 +26331,16 @@
         "requestBody": {
           "content": {
             "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RsoMobileUiIOSEventInfo"
+              }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/RsoMobileUiIOSEventInfo"
+              }
+            },
+            "application/x-msgpack": {
               "schema": {
                 "$ref": "#/components/schemas/RsoMobileUiIOSEventInfo"
               }
@@ -23957,6 +26381,16 @@
         "requestBody": {
           "content": {
             "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RsoMobileUiLoginInitiateRequest"
+              }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/RsoMobileUiLoginInitiateRequest"
+              }
+            },
+            "application/x-msgpack": {
               "schema": {
                 "$ref": "#/components/schemas/RsoMobileUiLoginInitiateRequest"
               }
@@ -24112,6 +26546,16 @@
               "schema": {
                 "$ref": "#/components/schemas/RsoMobileUiRegionElectionV1InitiateRequest"
               }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/RsoMobileUiRegionElectionV1InitiateRequest"
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "$ref": "#/components/schemas/RsoMobileUiRegionElectionV1InitiateRequest"
+              }
             }
           }
         },
@@ -24147,6 +26591,16 @@
         "requestBody": {
           "content": {
             "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RsoMobileUiRegionElectionV1UpdateRequest"
+              }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/RsoMobileUiRegionElectionV1UpdateRequest"
+              }
+            },
+            "application/x-msgpack": {
               "schema": {
                 "$ref": "#/components/schemas/RsoMobileUiRegionElectionV1UpdateRequest"
               }
@@ -24218,6 +26672,16 @@
         "requestBody": {
           "content": {
             "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RsoMobileUiGameOutOfDateUIInitiate"
+              }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/RsoMobileUiGameOutOfDateUIInitiate"
+              }
+            },
+            "application/x-msgpack": {
               "schema": {
                 "$ref": "#/components/schemas/RsoMobileUiGameOutOfDateUIInitiate"
               }
@@ -24403,6 +26867,16 @@
         "requestBody": {
           "content": {
             "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RsoMobileUiEULAUIV2Agreement"
+              }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/RsoMobileUiEULAUIV2Agreement"
+              }
+            },
+            "application/x-msgpack": {
               "schema": {
                 "$ref": "#/components/schemas/RsoMobileUiEULAUIV2Agreement"
               }
@@ -24883,6 +27357,22 @@
                   "type": "object"
                 }
               }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "object"
+                }
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "object"
+                }
+              }
             }
           }
         },
@@ -24917,6 +27407,16 @@
               "schema": {
                 "type": "object"
               }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "type": "object"
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "type": "object"
+              }
             }
           }
         },
@@ -24938,6 +27438,16 @@
         "requestBody": {
           "content": {
             "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "type": "object"
+              }
+            },
+            "application/x-msgpack": {
               "schema": {
                 "type": "object"
               }
@@ -24975,6 +27485,16 @@
               "schema": {
                 "type": "object"
               }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "type": "object"
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "type": "object"
+              }
             }
           }
         },
@@ -25001,6 +27521,22 @@
                   "type": "object"
                 }
               }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "object"
+                }
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "object"
+                }
+              }
             }
           }
         },
@@ -25021,6 +27557,22 @@
         "requestBody": {
           "content": {
             "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/StructuredLogRequest"
+                }
+              }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/StructuredLogRequest"
+                }
+              }
+            },
+            "application/x-msgpack": {
               "schema": {
                 "type": "array",
                 "items": {
@@ -25089,6 +27641,16 @@
               "schema": {
                 "$ref": "#/components/schemas/ExtendedEventData"
               }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/ExtendedEventData"
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "$ref": "#/components/schemas/ExtendedEventData"
+              }
             }
           }
         },
@@ -25123,6 +27685,16 @@
               "schema": {
                 "type": "object"
               }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "type": "object"
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "type": "object"
+              }
             }
           }
         },
@@ -25154,6 +27726,16 @@
         "requestBody": {
           "content": {
             "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "type": "object"
+              }
+            },
+            "application/x-msgpack": {
               "schema": {
                 "type": "object"
               }
@@ -25247,6 +27829,16 @@
         "requestBody": {
           "content": {
             "application/json": {
+              "schema": {
+                "type": "object"
+              }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "type": "object"
+              }
+            },
+            "application/x-msgpack": {
               "schema": {
                 "type": "object"
               }
@@ -25526,6 +28118,16 @@
               "schema": {
                 "$ref": "#/components/schemas/VoiceChatUnnormalizedPushToTalkResource"
               }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/VoiceChatUnnormalizedPushToTalkResource"
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "$ref": "#/components/schemas/VoiceChatUnnormalizedPushToTalkResource"
+              }
             }
           }
         },
@@ -25768,6 +28370,16 @@
               "schema": {
                 "$ref": "#/components/schemas/VoiceChatUnnormalizedPushToTalkResource"
               }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/VoiceChatUnnormalizedPushToTalkResource"
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "$ref": "#/components/schemas/VoiceChatUnnormalizedPushToTalkResource"
+              }
             }
           }
         },
@@ -25926,6 +28538,16 @@
               "schema": {
                 "$ref": "#/components/schemas/VoiceChatUpdateSessionResource"
               }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/VoiceChatUpdateSessionResource"
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "$ref": "#/components/schemas/VoiceChatUpdateSessionResource"
+              }
             }
           }
         },
@@ -26023,6 +28645,16 @@
               "schema": {
                 "$ref": "#/components/schemas/VoiceChatUpdateSessionResource"
               }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/VoiceChatUpdateSessionResource"
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "$ref": "#/components/schemas/VoiceChatUpdateSessionResource"
+              }
             }
           }
         },
@@ -26113,6 +28745,16 @@
               "schema": {
                 "$ref": "#/components/schemas/VoiceChatUpdateParticipantResource"
               }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/VoiceChatUpdateParticipantResource"
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "$ref": "#/components/schemas/VoiceChatUpdateParticipantResource"
+              }
             }
           }
         },
@@ -26164,6 +28806,16 @@
         "requestBody": {
           "content": {
             "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/VoiceChatUpdateSettingsResource"
+              }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/VoiceChatUpdateSettingsResource"
+              }
+            },
+            "application/x-msgpack": {
               "schema": {
                 "$ref": "#/components/schemas/VoiceChatUpdateSettingsResource"
               }
@@ -26353,6 +29005,16 @@
               "schema": {
                 "$ref": "#/components/schemas/VoiceChatUpdateSessionResource"
               }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/VoiceChatUpdateSessionResource"
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "$ref": "#/components/schemas/VoiceChatUpdateSessionResource"
+              }
             }
           }
         },
@@ -26474,6 +29136,16 @@
               "schema": {
                 "$ref": "#/components/schemas/VoiceChatUpdateSessionResource"
               }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/VoiceChatUpdateSessionResource"
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "$ref": "#/components/schemas/VoiceChatUpdateSessionResource"
+              }
             }
           }
         },
@@ -26580,6 +29252,16 @@
               "schema": {
                 "$ref": "#/components/schemas/VoiceChatUpdateParticipantResource"
               }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/VoiceChatUpdateParticipantResource"
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "$ref": "#/components/schemas/VoiceChatUpdateParticipantResource"
+              }
             }
           }
         },
@@ -26649,6 +29331,16 @@
         "requestBody": {
           "content": {
             "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/VoiceChatUpdateSettingsResource"
+              }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/VoiceChatUpdateSettingsResource"
+              }
+            },
+            "application/x-msgpack": {
               "schema": {
                 "$ref": "#/components/schemas/VoiceChatUpdateSettingsResource"
               }
@@ -26755,6 +29447,16 @@
               "schema": {
                 "$ref": "#/components/schemas/VoiceChatJoinSession"
               }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/VoiceChatJoinSession"
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "$ref": "#/components/schemas/VoiceChatJoinSession"
+              }
             }
           }
         },
@@ -26801,6 +29503,16 @@
         "requestBody": {
           "content": {
             "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/VoiceChatUpdateSessionResource"
+              }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/VoiceChatUpdateSessionResource"
+              }
+            },
+            "application/x-msgpack": {
               "schema": {
                 "$ref": "#/components/schemas/VoiceChatUpdateSessionResource"
               }
@@ -26923,6 +29635,16 @@
               "schema": {
                 "$ref": "#/components/schemas/VoiceChatUpdateSessionResource"
               }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/VoiceChatUpdateSessionResource"
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "$ref": "#/components/schemas/VoiceChatUpdateSessionResource"
+              }
             }
           }
         },
@@ -27027,6 +29749,16 @@
               "schema": {
                 "$ref": "#/components/schemas/VoiceChatUpdateParticipantResource"
               }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/VoiceChatUpdateParticipantResource"
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "$ref": "#/components/schemas/VoiceChatUpdateParticipantResource"
+              }
             }
           }
         },
@@ -27047,6 +29779,16 @@
         "requestBody": {
           "content": {
             "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/XboxAccountAuthorizationParameters"
+              }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/XboxAccountAuthorizationParameters"
+              }
+            },
+            "application/x-msgpack": {
               "schema": {
                 "$ref": "#/components/schemas/XboxAccountAuthorizationParameters"
               }

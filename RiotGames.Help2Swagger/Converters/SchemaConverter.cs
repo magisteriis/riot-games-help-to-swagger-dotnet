@@ -80,21 +80,20 @@ internal static class SchemaConverter
                     var ofType = stringValue.Remove(0, "map of ".Length);
                     contentSchema = new OpenApiSchema
                     {
-                        Type = "array"
+                        Type = "object"
                     };
                     switch (ofType)
                     {
                         case "object":
                         case "": // RCS
                         case "map of ": // RCS
-                            contentSchema.Items = new OpenApiSchema
+                            contentSchema.AdditionalProperties = new OpenApiSchema
                             {
                                 Type = "object",
-                                AdditionalPropertiesAllowed = true
                             };
                             break;
                         case "string":
-                            contentSchema.Items = new OpenApiSchema
+                            contentSchema.AdditionalProperties = new OpenApiSchema
                             {
                                 Type = "string"
                             };
@@ -103,14 +102,14 @@ internal static class SchemaConverter
                         {
                             if (openApi.Components.Schemas.ContainsKey(ofType))
                             {
-                                contentSchema.Items = new OpenApiSchema
+                                contentSchema.AdditionalProperties = new OpenApiSchema
                                 {
                                     Reference = new OpenApiReference {Type = ReferenceType.Schema, Id = ofType}
                                 };
                             }
                             else if (ofType.StartsWith("uint") || ofType.StartsWith("int"))
                             {
-                                contentSchema.Items = new OpenApiSchema
+                                contentSchema.AdditionalProperties = new OpenApiSchema
                                 {
                                     Type = "integer",
                                     Format = ofType.TrimStart('u')

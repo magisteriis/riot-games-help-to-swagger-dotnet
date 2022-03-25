@@ -75,11 +75,11 @@ internal static class PropertyConverter
                             }
                             else if (stringType.StartsWith("map of "))
                             {
-                                property.Items = new OpenApiSchema();
-                                property.Type = "array";
+                                property.AdditionalProperties = new OpenApiSchema();
+                                property.Type = "object";
                                 var ofType = stringType.Remove(0, "map of ".Length);
                                 if (typeNames.Contains(ofType))
-                                    property.Items.Reference = new OpenApiReference
+                                    property.AdditionalProperties.Reference = new OpenApiReference
                                         {Type = ReferenceType.Schema, Id = ofType};
                                 else
                                     switch (ofType)
@@ -87,25 +87,24 @@ internal static class PropertyConverter
                                         case "object":
                                         case "": // RCS, unspecified type.
                                         case "map of ": // RCS, double depth map?
-                                            property.Items.Type = ofType;
-                                            property.Items.AdditionalPropertiesAllowed = true;
+                                            property.AdditionalProperties.Type = ofType;
                                             break;
                                         case "string":
-                                            property.Items.Type = "string";
+                                            property.AdditionalProperties.Type = "string";
                                             break;
                                         case "bool":
-                                            property.Items.Type = "boolean";
+                                            property.AdditionalProperties.Type = "boolean";
                                             break;
                                         case "double":
-                                            property.Items.Type = "number";
-                                            property.Items.Format = "double";
+                                            property.AdditionalProperties.Type = "number";
+                                            property.AdditionalProperties.Format = "double";
                                             break;
                                         default:
                                         {
                                             if (ofType.StartsWith("uint") || ofType.StartsWith("int"))
                                             {
-                                                property.Items.Type = "integer";
-                                                property.Items.Format = ofType.TrimStart('u');
+                                                property.AdditionalProperties.Type = "integer";
+                                                property.AdditionalProperties.Format = ofType.TrimStart('u');
                                             }
                                             else
                                             {

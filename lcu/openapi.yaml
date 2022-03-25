@@ -610,18 +610,18 @@ paths:
           content:
             application/json:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: object
             application/x-yaml:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: object
             application/x-msgpack:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: object
   '/client-config/v1/config/{name}':
     get:
@@ -786,18 +786,18 @@ paths:
           content:
             application/json:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: object
             application/x-yaml:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: object
             application/x-msgpack:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: object
   '/client-config/v2/namespace/{namespace}/player':
     get:
@@ -817,18 +817,18 @@ paths:
           content:
             application/json:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: object
             application/x-yaml:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: object
             application/x-msgpack:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: object
   '/client-config/v2/namespace/{namespace}/public':
     get:
@@ -848,18 +848,18 @@ paths:
           content:
             application/json:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: object
             application/x-yaml:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: object
             application/x-msgpack:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: object
   /cookie-jar/v1/cookies:
     get:
@@ -2053,20 +2053,20 @@ paths:
           content:
             application/json:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: integer
                   format: int64
             application/x-yaml:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: integer
                   format: int64
             application/x-msgpack:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: integer
                   format: int64
   '/lol-challenges/v1/my-updated-challenges/{gameId}':
@@ -2206,18 +2206,18 @@ paths:
           content:
             application/json:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   $ref: '#/components/schemas/LolChallengesUIPlayerSummary'
             application/x-yaml:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   $ref: '#/components/schemas/LolChallengesUIPlayerSummary'
             application/x-msgpack:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   $ref: '#/components/schemas/LolChallengesUIPlayerSummary'
   /lol-challenges/v1/titles/local-player:
     get:
@@ -5576,18 +5576,18 @@ paths:
           content:
             application/json:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   $ref: '#/components/schemas/ClashEventData'
             application/x-yaml:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   $ref: '#/components/schemas/ClashEventData'
             application/x-msgpack:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   $ref: '#/components/schemas/ClashEventData'
   /lol-clash/v1/game-end:
     get:
@@ -9754,18 +9754,18 @@ paths:
           content:
             application/json:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   $ref: '#/components/schemas/LolGameflowGameModeSpellList'
             application/x-yaml:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   $ref: '#/components/schemas/LolGameflowGameModeSpellList'
             application/x-msgpack:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   $ref: '#/components/schemas/LolGameflowGameModeSpellList'
   /lol-gameflow/v1/session/per-position-summoner-spells/disallowed/as-string:
     get:
@@ -9798,18 +9798,18 @@ paths:
           content:
             application/json:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   $ref: '#/components/schemas/LolGameflowGameModeSpellList'
             application/x-yaml:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   $ref: '#/components/schemas/LolGameflowGameModeSpellList'
             application/x-msgpack:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   $ref: '#/components/schemas/LolGameflowGameModeSpellList'
   /lol-gameflow/v1/session/per-position-summoner-spells/required/as-string:
     get:
@@ -10872,18 +10872,18 @@ paths:
           content:
             application/json:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: string
             application/x-yaml:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: string
             application/x-msgpack:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: string
   /lol-inventory/v1/signedInventory/simple:
     get:
@@ -10928,18 +10928,18 @@ paths:
           content:
             application/json:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: string
             application/x-yaml:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: string
             application/x-msgpack:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: string
   /lol-inventory/v1/signedInventoryCache:
     get:
@@ -10953,18 +10953,18 @@ paths:
           content:
             application/json:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   $ref: '#/components/schemas/LolInventoryInventoryCacheEntry'
             application/x-yaml:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   $ref: '#/components/schemas/LolInventoryInventoryCacheEntry'
             application/x-msgpack:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   $ref: '#/components/schemas/LolInventoryInventoryCacheEntry'
   /lol-inventory/v1/signedWallet:
     get:
@@ -10986,18 +10986,18 @@ paths:
           content:
             application/json:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: string
             application/x-yaml:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: string
             application/x-msgpack:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: string
   '/lol-inventory/v1/signedWallet/{currencyType}':
     get:
@@ -11017,18 +11017,18 @@ paths:
           content:
             application/json:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: string
             application/x-yaml:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: string
             application/x-msgpack:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: string
   /lol-inventory/v1/wallet:
     get:
@@ -11050,20 +11050,20 @@ paths:
           content:
             application/json:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: integer
                   format: int32
             application/x-yaml:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: integer
                   format: int32
             application/x-msgpack:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: integer
                   format: int32
   '/lol-inventory/v1/wallet/{currencyType}':
@@ -11084,20 +11084,20 @@ paths:
           content:
             application/json:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: integer
                   format: int32
             application/x-yaml:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: integer
                   format: int32
             application/x-msgpack:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: integer
                   format: int32
   '/lol-inventory/v2/inventory/{inventoryType}':
@@ -15047,18 +15047,18 @@ paths:
           content:
             application/json:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   $ref: '#/components/schemas/LolLootPlayerLoot'
             application/x-yaml:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   $ref: '#/components/schemas/LolLootPlayerLoot'
             application/x-msgpack:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   $ref: '#/components/schemas/LolLootPlayerLoot'
   /lol-loot/v1/player-loot-notifications:
     get:
@@ -19299,18 +19299,18 @@ paths:
           content:
             application/json:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   $ref: '#/components/schemas/LolRankedRankedStats'
             application/x-yaml:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   $ref: '#/components/schemas/LolRankedRankedStats'
             application/x-msgpack:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   $ref: '#/components/schemas/LolRankedRankedStats'
   '/lol-ranked/v1/ranked-stats/{puuid}':
     get:
@@ -19406,18 +19406,18 @@ paths:
           content:
             application/json:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   $ref: '#/components/schemas/LolRankedSocialLeaderboardRankedQueueStats'
             application/x-yaml:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   $ref: '#/components/schemas/LolRankedSocialLeaderboardRankedQueueStats'
             application/x-msgpack:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   $ref: '#/components/schemas/LolRankedSocialLeaderboardRankedQueueStats'
   /lol-ranked/v1/splits-config:
     get:
@@ -21630,18 +21630,18 @@ paths:
           content:
             application/json:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   $ref: '#/components/schemas/LolStoreItemKey'
             application/x-yaml:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   $ref: '#/components/schemas/LolStoreItemKey'
             application/x-msgpack:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   $ref: '#/components/schemas/LolStoreItemKey'
   /lol-store/v1/itemKeysFromOfferIds:
     get:
@@ -21663,18 +21663,18 @@ paths:
           content:
             application/json:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   $ref: '#/components/schemas/LolStoreItemKey'
             application/x-yaml:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   $ref: '#/components/schemas/LolStoreItemKey'
             application/x-msgpack:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   $ref: '#/components/schemas/LolStoreItemKey'
   /lol-store/v1/lastPage:
     get:
@@ -23214,18 +23214,18 @@ paths:
           content:
             application/json:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: string
             application/x-yaml:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: string
             application/x-msgpack:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: string
   '/patcher/v1/products/{product-id}/signal-start-patching-delayed':
     post:
@@ -23395,18 +23395,18 @@ paths:
           content:
             application/json:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: string
             application/x-yaml:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: string
             application/x-msgpack:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: string
   /patcher/v1/products/league_of_legends/full-repair-request:
     post:
@@ -25255,18 +25255,18 @@ paths:
         content:
           application/json:
             schema:
-              type: array
-              items:
+              type: object
+              additionalProperties:
                 type: object
           application/x-yaml:
             schema:
-              type: array
-              items:
+              type: object
+              additionalProperties:
                 type: object
           application/x-msgpack:
             schema:
-              type: array
-              items:
+              type: object
+              additionalProperties:
                 type: object
       responses:
         '204':
@@ -25288,18 +25288,18 @@ paths:
         content:
           application/json:
             schema:
-              type: array
-              items:
+              type: object
+              additionalProperties:
                 type: object
           application/x-yaml:
             schema:
-              type: array
-              items:
+              type: object
+              additionalProperties:
                 type: object
           application/x-msgpack:
             schema:
-              type: array
-              items:
+              type: object
+              additionalProperties:
                 type: object
       responses:
         '204':
@@ -25321,18 +25321,18 @@ paths:
         content:
           application/json:
             schema:
-              type: array
-              items:
+              type: object
+              additionalProperties:
                 type: object
           application/x-yaml:
             schema:
-              type: array
-              items:
+              type: object
+              additionalProperties:
                 type: object
           application/x-msgpack:
             schema:
-              type: array
-              items:
+              type: object
+              additionalProperties:
                 type: object
       responses:
         '204':
@@ -25360,18 +25360,18 @@ paths:
         content:
           application/json:
             schema:
-              type: array
-              items:
+              type: object
+              additionalProperties:
                 type: object
           application/x-yaml:
             schema:
-              type: array
-              items:
+              type: object
+              additionalProperties:
                 type: object
           application/x-msgpack:
             schema:
-              type: array
-              items:
+              type: object
+              additionalProperties:
                 type: object
       responses:
         '204':
@@ -25393,18 +25393,18 @@ paths:
         content:
           application/json:
             schema:
-              type: array
-              items:
+              type: object
+              additionalProperties:
                 type: object
           application/x-yaml:
             schema:
-              type: array
-              items:
+              type: object
+              additionalProperties:
                 type: object
           application/x-msgpack:
             schema:
-              type: array
-              items:
+              type: object
+              additionalProperties:
                 type: object
       responses:
         '204':
@@ -26657,8 +26657,8 @@ components:
           type: integer
           format: int64
         multiUserChatJwtMap:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: string
         name:
           type: string
@@ -26829,8 +26829,8 @@ components:
       type: object
       properties:
         metaData:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: string
         reason:
           type: string
@@ -27003,8 +27003,8 @@ components:
       type: object
       properties:
         data:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: object
         params:
           $ref: '#/components/schemas/ClientConfigConfigParams'
@@ -27967,8 +27967,8 @@ components:
           type: integer
           format: int32
         multiUserChatJwtMap:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: string
         name:
           type: string
@@ -28179,8 +28179,8 @@ components:
         body:
           type: string
         headers:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: string
         method:
           type: string
@@ -28665,8 +28665,8 @@ components:
         id:
           type: string
         loadout:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             $ref: '#/components/schemas/LolBannersLoadoutsSlot'
         name:
           type: string
@@ -28924,8 +28924,8 @@ components:
           items:
             $ref: '#/components/schemas/LolCatalogItemKey'
         localizations:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             $ref: '#/components/schemas/LolCatalogItemLocalization'
         metadata:
           type: array
@@ -29490,14 +29490,14 @@ components:
           type: integer
           format: int64
         categoryPoints:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             $ref: '#/components/schemas/LolChallengesChallengePoints'
         id:
           type: string
         levelPoints:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: integer
             format: int64
         playerChallenges:
@@ -29511,8 +29511,8 @@ components:
         source:
           $ref: '#/components/schemas/LolChallengesSource'
         tags:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: string
         totalPoints:
           $ref: '#/components/schemas/LolChallengesChallengePoints'
@@ -29534,8 +29534,8 @@ components:
       type: object
       properties:
         tokensByType:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: object
     LolChallengesChallengesPlayerPreferences:
       type: object
@@ -29627,8 +29627,8 @@ components:
         leaderboard:
           type: boolean
         levelToIconPath:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: string
         name:
           type: string
@@ -29642,23 +29642,23 @@ components:
         source:
           type: string
         tags:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: string
         thresholds:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             $ref: '#/components/schemas/LolChallengesChallengeThreshold'
     LolChallengesGameDataChallengesData:
       type: object
       properties:
         challenges:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             $ref: '#/components/schemas/LolChallengesGameDataChallengeConfig'
         titles:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             $ref: '#/components/schemas/LolChallengesGameDataChallengeTitle'
     LolChallengesGameDataChallengeTitle:
       type: object
@@ -29774,8 +29774,8 @@ components:
         isReverseDirection:
           type: boolean
         levelToIconPath:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: string
         name:
           type: string
@@ -29803,8 +29803,8 @@ components:
         source:
           type: string
         thresholds:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             $ref: '#/components/schemas/LolChallengesUIChallengeThreshold'
         valueMapping:
           type: string
@@ -30429,8 +30429,8 @@ components:
         critical:
           type: boolean
         data:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: string
         detailKey:
           type: string
@@ -31084,13 +31084,13 @@ components:
       type: object
       properties:
         skins:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: integer
             format: int32
         spells:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: object
     LolChampSelectLegacyChampSelectAction:
       type: object
@@ -31833,15 +31833,15 @@ components:
           type: integer
           format: int32
         closed-conversations:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: integer
             format: int64
         friendRequestToastsDisabled:
           type: boolean
         hidden-conversations:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: integer
             format: int64
         linkClickWarningEnabled:
@@ -31851,8 +31851,8 @@ components:
         moreUnreadsEnabled:
           type: boolean
         muted-conversations:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: integer
             format: int8
         recentlyPlayedFirstOpen:
@@ -31860,8 +31860,8 @@ components:
         recentlyPlayedOpen:
           type: boolean
         roster-group-collapsed:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: boolean
         showWhenTypingEnabled:
           type: boolean
@@ -32320,8 +32320,8 @@ components:
         lastSeenOnlineTimestamp:
           type: string
         lol:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: string
         name:
           type: string
@@ -32448,8 +32448,8 @@ components:
         gameNameTaglineEnabled:
           type: boolean
         platformToRegionMap:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: string
         QueueJobGraceSeconds:
           type: integer
@@ -32701,8 +32701,8 @@ components:
           items:
             $ref: '#/components/schemas/LolChatContentCookies'
         content_paths:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: string
         id:
           type: string
@@ -32745,15 +32745,15 @@ components:
         name:
           type: string
         patchlines:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             $ref: '#/components/schemas/LolChatPatchlineMetadata'
     LolChatProductMetadataMap:
       type: object
       properties:
         products:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             $ref: '#/components/schemas/LolChatProductMetadata'
     LolChatQueue:
       type: object
@@ -32965,8 +32965,8 @@ components:
         lastSeenOnlineTimestamp:
           type: string
         lol:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: string
         name:
           type: string
@@ -33569,8 +33569,8 @@ components:
         secondaryPos:
           type: string
         tickets:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: integer
             format: int32
         tier:
@@ -33586,8 +33586,8 @@ components:
         critical:
           type: boolean
         data:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: string
         detailKey:
           type: string
@@ -34008,8 +34008,8 @@ components:
         opponentShortName:
           type: string
         playerChampionIds:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: integer
             format: int32
         round:
@@ -34140,8 +34140,8 @@ components:
           type: integer
           format: int32
         playerBids:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: integer
             format: int32
         time:
@@ -34165,13 +34165,13 @@ components:
       type: object
       properties:
         rawStatsMax:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: integer
             format: int32
         rawStatsSum:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: integer
             format: int32
         sub:
@@ -34199,8 +34199,8 @@ components:
           items:
             $ref: '#/components/schemas/LolClashRosterPeriodAggregatedStats'
         playerStats:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             $ref: '#/components/schemas/LolClashRosterPlayerAggregatedStats'
         rosterIconColorId:
           type: integer
@@ -34687,8 +34687,8 @@ components:
       type: object
       properties:
         lol:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: string
         summonerId:
           type: integer
@@ -35081,8 +35081,8 @@ components:
         critical:
           type: boolean
         data:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: string
         detailKey:
           type: string
@@ -35411,8 +35411,8 @@ components:
       type: object
       properties:
         result:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: object
     LolContentTargetingToken:
       type: object
@@ -35425,8 +35425,8 @@ components:
       type: object
       properties:
         typeToLastOpenedDate:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: integer
             format: int64
     LolCosmeticsCapOffer:
@@ -35462,8 +35462,8 @@ components:
         itemInstanceId:
           type: string
         itemPriceMap:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: integer
             format: int32
     LolCosmeticsCompanionsGroupedViewModel:
@@ -35835,8 +35835,8 @@ components:
           type: integer
           format: int32
         loadout:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             $ref: '#/components/schemas/LolCosmeticsLoadoutItem'
         name:
           type: string
@@ -35856,8 +35856,8 @@ components:
       type: object
       properties:
         loadout:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             $ref: '#/components/schemas/LolCosmeticsLoadoutItem'
     LolCosmeticsTFTDamageSkinGroupedViewModel:
       type: object
@@ -35936,8 +35936,8 @@ components:
       type: object
       properties:
         lol:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: string
         summonerId:
           type: integer
@@ -36765,16 +36765,16 @@ components:
       type: object
       properties:
         brackets:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             $ref: '#/components/schemas/LolEsportStreamNotificationsEsportsAPI_highlanderTournaments_brackets'
         description:
           type: string
         id:
           type: string
         rosters:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             $ref: '#/components/schemas/LolEsportStreamNotificationsEsportsAPI_highlanderTournaments_rosters'
         title:
           type: string
@@ -36784,8 +36784,8 @@ components:
         id:
           type: string
         matches:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             $ref: '#/components/schemas/LolEsportStreamNotificationsEsportsAPI_highlanderTournaments_matches'
     LolEsportStreamNotificationsEsportsAPI_highlanderTournaments_matches:
       type: object
@@ -36974,8 +36974,8 @@ components:
         critical:
           type: boolean
         data:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: string
         detailKey:
           type: string
@@ -37034,8 +37034,8 @@ components:
           type: integer
           format: int64
         restrictionArgs:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: string
         restrictionCode:
           $ref: '#/components/schemas/LolFeaturedModesEligibilityRestrictionCode'
@@ -37142,8 +37142,8 @@ components:
       type: object
       properties:
         assets:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: string
         gameModeName:
           type: string
@@ -37157,8 +37157,8 @@ components:
         critical:
           type: boolean
         data:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: string
         detailKey:
           type: string
@@ -37344,12 +37344,12 @@ components:
         name:
           type: string
         perPositionDisallowedSummonerSpells:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             $ref: '#/components/schemas/LolGameflowGameModeSpellList'
         perPositionRequiredSummonerSpells:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             $ref: '#/components/schemas/LolGameflowGameModeSpellList'
         platformId:
           type: string
@@ -38462,8 +38462,8 @@ components:
         id:
           type: string
         lol:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: string
         name:
           type: string
@@ -38505,8 +38505,8 @@ components:
         id:
           type: string
         lol:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: string
         masteryScore:
           type: integer
@@ -38564,8 +38564,8 @@ components:
           items:
             $ref: '#/components/schemas/LolHovercardContentCookies'
         content_paths:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: string
         id:
           type: string
@@ -38579,15 +38579,15 @@ components:
         name:
           type: string
         patchlines:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             $ref: '#/components/schemas/LolHovercardPatchlineMetadata'
     LolHovercardProductMetadataMap:
       type: object
       properties:
         products:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             $ref: '#/components/schemas/LolHovercardProductMetadata'
     LolHovercardSummoner:
       type: object
@@ -38667,8 +38667,8 @@ components:
           type: integer
           format: int32
         subCurrencies:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: integer
             format: int32
     LolInventoryInventoryCacheEntry:
@@ -38696,8 +38696,8 @@ components:
         expires:
           type: string
         items:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: object
         itemsJwt:
           type: string
@@ -38935,8 +38935,8 @@ components:
         expires:
           type: string
         items:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: object
         itemsJwt:
           type: string
@@ -38983,8 +38983,8 @@ components:
           type: integer
           format: int64
         balances:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: integer
             format: int32
         balancesJwt:
@@ -39287,8 +39287,8 @@ components:
         critical:
           type: boolean
         data:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: string
         detailKey:
           type: string
@@ -39376,8 +39376,8 @@ components:
           type: integer
           format: int32
         loadout:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             $ref: '#/components/schemas/LolLoadoutsItemKey'
         name:
           type: string
@@ -39391,8 +39391,8 @@ components:
         loadout:
           $ref: '#/components/schemas/LolLoadoutsCreateLoadoutDTO'
         serviceToJwtsMap:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: object
     LolLoadoutsCreateOrUpdateItemsRequest:
       type: object
@@ -39405,8 +39405,8 @@ components:
           items:
             type: string
         items:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: object
     LolLoadoutsFrontendInventoryResponse:
       type: object
@@ -39467,8 +39467,8 @@ components:
         expires:
           type: string
         items:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: object
         itemsJwt:
           type: string
@@ -39533,8 +39533,8 @@ components:
           type: integer
           format: int32
         items:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: object
         name:
           type: string
@@ -39542,8 +39542,8 @@ components:
       type: object
       properties:
         serviceToJwtsMap:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: object
     LolLoadoutsLoginSession:
       type: object
@@ -39583,8 +39583,8 @@ components:
           type: integer
           format: int32
         loadout:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             $ref: '#/components/schemas/LolLoadoutsItemKey'
         name:
           type: string
@@ -39596,12 +39596,12 @@ components:
       type: object
       properties:
         loadout:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             $ref: '#/components/schemas/LolLoadoutsItemKey'
         serviceToJwtsMap:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: object
     LolLoadoutsUpdateLoadoutDTO:
       type: object
@@ -39609,8 +39609,8 @@ components:
         id:
           type: string
         loadout:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             $ref: '#/components/schemas/LolLoadoutsItemKey'
         name:
           type: string
@@ -39620,8 +39620,8 @@ components:
         loadout:
           $ref: '#/components/schemas/LolLoadoutsUpdateLoadoutDTO'
         serviceToJwtsMap:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: object
     LolLobbyAccountIdAndSummonerId:
       type: object
@@ -39690,8 +39690,8 @@ components:
       type: object
       properties:
         lol:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: string
         summonerId:
           type: integer
@@ -39837,8 +39837,8 @@ components:
           type: integer
           format: int64
         restrictionArgs:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: string
         restrictionCode:
           $ref: '#/components/schemas/LolLobbyEligibilityRestrictionCode'
@@ -40023,8 +40023,8 @@ components:
         customsSettings:
           $ref: '#/components/schemas/LolLobbyCustomGameSettingsDto'
         gameCustomization:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: string
         gameType:
           type: string
@@ -40050,8 +40050,8 @@ components:
           type: integer
           format: int64
         details:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: string
         payload:
           type: string
@@ -40250,8 +40250,8 @@ components:
         customGameLobby:
           $ref: '#/components/schemas/LolLobbyLobbyCustomGameLobby'
         gameCustomization:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: string
         isCustom:
           type: boolean
@@ -41181,8 +41181,8 @@ components:
         partyId:
           type: string
         players:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             $ref: '#/components/schemas/LolLobbyPremadeMemberDto'
     LolLobbyPremadeRelationshipAnalytics:
       type: object
@@ -41643,13 +41643,13 @@ components:
       type: object
       properties:
         skins:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: integer
             format: int32
         spells:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: object
     LolLobbyTeamBuilderChampionSelectStateV1:
       type: object
@@ -41669,8 +41669,8 @@ components:
         cells:
           $ref: '#/components/schemas/LolLobbyTeamBuilderCellsV1'
         ceremoniesByActionSetIndex:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: object
         championBenchState:
           $ref: '#/components/schemas/LolLobbyTeamBuilderChampionBenchStateV1'
@@ -41982,12 +41982,12 @@ components:
       type: object
       properties:
         perPositionDisallowedSummonerSpells:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             $ref: '#/components/schemas/LolLobbyTeamBuilderGameModeSpellList'
         perPositionRequiredSummonerSpells:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             $ref: '#/components/schemas/LolLobbyTeamBuilderGameModeSpellList'
     LolLobbyTeamBuilderGameflowSession:
       type: object
@@ -42501,8 +42501,8 @@ components:
             type: integer
             format: int32
         lastSelectedSkinIdByChampionId:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: integer
             format: int32
         skinIds:
@@ -42636,8 +42636,8 @@ components:
       type: object
       properties:
         lol:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: string
         summonerId:
           type: integer
@@ -43551,8 +43551,8 @@ components:
         name:
           type: string
         properties:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: string
         triggerValue:
           type: integer
@@ -43707,8 +43707,8 @@ components:
       type: object
       properties:
         playerLoot:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             $ref: '#/components/schemas/LolLootPlayerLoot'
         version:
           type: integer
@@ -43970,12 +43970,12 @@ components:
         itemType:
           type: string
         localizations:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: string
         media:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: string
         quantity:
           type: integer
@@ -44074,12 +44074,12 @@ components:
         itemType:
           type: string
         localizations:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: string
         media:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: string
         quantity:
           type: integer
@@ -44102,12 +44102,12 @@ components:
         internalName:
           type: string
         localizations:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: string
         media:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: string
         productId:
           type: string
@@ -44156,8 +44156,8 @@ components:
       type: object
       properties:
         items:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: object
     LolLoyaltyInventoryItemDTO:
       type: object
@@ -44277,8 +44277,8 @@ components:
       type: object
       properties:
         assets:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: string
         categorizedContentBundles:
           type: object
@@ -44302,20 +44302,20 @@ components:
         isRGM:
           type: boolean
         locStrings:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: string
         mapStringId:
           type: string
         name:
           type: string
         perPositionDisallowedSummonerSpells:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             $ref: '#/components/schemas/LolMapsGameModeSpellList'
         perPositionRequiredSummonerSpells:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             $ref: '#/components/schemas/LolMapsGameModeSpellList'
         platformId:
           type: string
@@ -45051,28 +45051,28 @@ components:
       type: object
       properties:
         creepsPerMinDeltas:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: number
             format: double
         csDiffPerMinDeltas:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: number
             format: double
         damageTakenDiffPerMinDeltas:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: number
             format: double
         damageTakenPerMinDeltas:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: number
             format: double
         goldPerMinDeltas:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: number
             format: double
         lane:
@@ -45083,13 +45083,13 @@ components:
         role:
           type: string
         xpDiffPerMinDeltas:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: number
             format: double
         xpPerMinDeltas:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: number
             format: double
     LolMatchHistoryMatchHistoryTimelineFrame:
@@ -45100,8 +45100,8 @@ components:
           items:
             $ref: '#/components/schemas/LolMatchHistoryMatchHistoryEvent'
         participantFrames:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             $ref: '#/components/schemas/LolMatchHistoryMatchHistoryParticipantFrame'
         timestamp:
           type: integer
@@ -45539,8 +45539,8 @@ components:
         critical:
           type: boolean
         data:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: string
         detailKey:
           type: string
@@ -45599,12 +45599,12 @@ components:
         itemType:
           type: string
         localizations:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: string
         media:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: string
         quantity:
           type: integer
@@ -45646,12 +45646,12 @@ components:
         internalName:
           type: string
         localizations:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: string
         media:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: string
         productId:
           type: string
@@ -45718,12 +45718,12 @@ components:
         itemId:
           type: string
         localizations:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: string
         media:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: string
         quantity:
           type: integer
@@ -45816,8 +45816,8 @@ components:
         internalName:
           type: string
         media:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: string
         pcPurchaseRequirement:
           type: string
@@ -45897,8 +45897,8 @@ components:
         id:
           type: string
         loadout:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             $ref: '#/components/schemas/LolModeProgressionLoadoutsSlot'
         name:
           type: string
@@ -46445,8 +46445,8 @@ components:
       type: object
       properties:
         displayRewards:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: string
         queueId:
           type: string
@@ -46573,8 +46573,8 @@ components:
       type: object
       properties:
         data:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: object
         id:
           type: string
@@ -46634,8 +46634,8 @@ components:
         channel:
           type: string
         headers:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: string
         patchsieve_url:
           type: string
@@ -46685,8 +46685,8 @@ components:
         id:
           type: string
         labels:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             $ref: '#/components/schemas/LolPatchPatchSieveLabelValue'
         product:
           type: string
@@ -46722,8 +46722,8 @@ components:
         timestamp:
           type: string
         toggles:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: number
             format: double
         version:
@@ -47163,8 +47163,8 @@ components:
           items:
             $ref: '#/components/schemas/LolPerksPerkPageResource'
         perShardPerkBooks:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             $ref: '#/components/schemas/LolPerksPerkBook'
         settings:
           $ref: '#/components/schemas/LolPerksUISettings'
@@ -47177,8 +47177,8 @@ components:
             type: integer
             format: int32
         assetMap:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: string
         defaultPageName:
           type: string
@@ -47276,8 +47276,8 @@ components:
             type: integer
             format: int32
         assetMap:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: string
         defaultPageName:
           type: string
@@ -47920,8 +47920,8 @@ components:
         caption:
           type: string
         data:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: object
         display:
           type: string
@@ -48055,8 +48055,8 @@ components:
         critical:
           type: boolean
         data:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: string
         detailKey:
           type: string
@@ -48748,8 +48748,8 @@ components:
         partyId:
           type: string
         players:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             $ref: '#/components/schemas/LolPremadeVoicePlayerDto'
     LolPremadeVoicePartyMemberRoleEnum:
       enum:
@@ -48978,8 +48978,8 @@ components:
         itemInstanceId:
           type: string
         itemPriceMap:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: integer
             format: int32
     LolPurchaseWidgetCapOrdersDataDto:
@@ -49424,8 +49424,8 @@ components:
       type: object
       properties:
         statuses:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             $ref: '#/components/schemas/LolPurchaseWidgetPurchaseOfferOrderStatus'
     LolPurchaseWidgetPurchaseOfferRequestV3:
       type: object
@@ -49625,8 +49625,8 @@ components:
         errorCode:
           type: string
         errorDetails:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: string
         message:
           type: string
@@ -49768,8 +49768,8 @@ components:
       type: object
       properties:
         rewards:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: string
         season:
           type: integer
@@ -50075,8 +50075,8 @@ components:
           type: integer
           format: int32
         splitPointsBreakdown:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: integer
             format: int32
         tier:
@@ -50384,8 +50384,8 @@ components:
         highestRankedEntrySR:
           $ref: '#/components/schemas/LolRankedRankedQueueStats'
         queueMap:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             $ref: '#/components/schemas/LolRankedRankedQueueStats'
         queues:
           type: array
@@ -50395,12 +50395,12 @@ components:
           type: integer
           format: int32
         seasons:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             $ref: '#/components/schemas/LolRankedSeasonDTO'
         splitsProgress:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: integer
             format: int32
     LolRankedRankedStatsDTO:
@@ -50423,12 +50423,12 @@ components:
           items:
             $ref: '#/components/schemas/LolRankedRankedQueueStatsDTO'
         seasons:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             $ref: '#/components/schemas/LolRankedSeasonDTO'
         splitsProgress:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: integer
             format: int32
     LolRankedRatedLadderEntryDTO:
@@ -50509,8 +50509,8 @@ components:
           type: integer
           format: int32
         rewardInfoByRewardId:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             $ref: '#/components/schemas/LolRankedSplitReward'
         splits:
           type: array
@@ -50601,12 +50601,12 @@ components:
           items:
             $ref: '#/components/schemas/LolRankedRankedQueueStatsDTO'
         seasons:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             $ref: '#/components/schemas/LolRankedSeasonDTO'
         splitsProgress:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: integer
             format: int32
     LolRankedSocialLeaderboardRankedQueueStats:
@@ -50690,8 +50690,8 @@ components:
           type: integer
           format: int32
         splitPointsBreakdown:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: integer
             format: int32
         splitPointsDelta:
@@ -50731,8 +50731,8 @@ components:
         rewardType:
           type: string
         tieredRewardIds:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: string
     LolRankedSplitRewardGroup:
       type: object
@@ -50796,8 +50796,8 @@ components:
         id:
           type: string
         lol:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: string
         summonerId:
           type: integer
@@ -51283,12 +51283,12 @@ components:
         itemType:
           type: string
         localizations:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: string
         media:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: string
         quantity:
           type: integer
@@ -51381,12 +51381,12 @@ components:
         itemType:
           type: string
         localizations:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: string
         media:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: string
         quantity:
           type: integer
@@ -51409,12 +51409,12 @@ components:
         internalName:
           type: string
         localizations:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: string
         media:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: string
         productId:
           type: string
@@ -52030,8 +52030,8 @@ components:
       type: object
       properties:
         queueMap:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             $ref: '#/components/schemas/LolSocialLeaderboardRankedQueueStats'
     LolSocialLeaderboardSocialLeaderboardData:
       type: object
@@ -52328,8 +52328,8 @@ components:
           type: integer
           format: int32
         loadout:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: object
         name:
           type: string
@@ -52812,16 +52812,16 @@ components:
         itemInstanceId:
           type: string
         itemPriceMap:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: integer
             format: int32
     LolStoreCatalogInstanceToItemKeyMap:
       type: object
       properties:
         platformIds:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             $ref: '#/components/schemas/LolStoreItemKey'
     LolStoreCatalogItem:
       type: object
@@ -52846,8 +52846,8 @@ components:
           items:
             $ref: '#/components/schemas/LolStoreItemKey'
         localizations:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             $ref: '#/components/schemas/LolStoreItemLocalization'
         maxQuantity:
           type: integer
@@ -53031,8 +53031,8 @@ components:
         critical:
           type: boolean
         data:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: string
         detailKey:
           type: string
@@ -53077,8 +53077,8 @@ components:
           items:
             type: string
         itemGroups:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             $ref: '#/components/schemas/LolStorePageGroupingDTO'
         Player:
           $ref: '#/components/schemas/LolStorePlayer'
@@ -53712,8 +53712,8 @@ components:
         id:
           type: string
         loadout:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             $ref: '#/components/schemas/LolTrophiesLoadoutItem'
         name:
           type: string
@@ -53723,8 +53723,8 @@ components:
       type: object
       properties:
         data:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: string
         inventoryType:
           type: string
@@ -53980,12 +53980,12 @@ components:
           items:
             type: string
         localizationLongDescriptionMap:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: string
         localizationMap:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: string
         lootName:
           type: string
@@ -54091,8 +54091,8 @@ components:
           type: integer
           format: int64
         lootProgressionRecipeDTOMap:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             $ref: '#/components/schemas/LootProgressionRecipeConfiguration'
     LootProgressionRecipeConfiguration:
       type: object
@@ -54643,8 +54643,8 @@ components:
       type: object
       properties:
         data:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: object
         id:
           type: string
@@ -55226,8 +55226,8 @@ components:
         locale:
           type: string
         media:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: string
         metadata:
           $ref: '#/components/schemas/MissionMetadata'
@@ -55311,8 +55311,8 @@ components:
         itemId:
           type: string
         media:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: string
         quantity:
           type: integer
@@ -55348,8 +55348,8 @@ components:
         critical:
           type: boolean
         data:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: string
         detailKey:
           type: string
@@ -55416,8 +55416,8 @@ components:
         name:
           type: string
         pluginDependencies:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: string
         riotMeta:
           $ref: '#/components/schemas/PluginMetadataResource'
@@ -55465,14 +55465,14 @@ components:
         hasBundledAssets:
           type: boolean
         implements:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: string
         mock:
           type: string
         perLocaleAssetBundles:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: object
         subtype:
           type: string
@@ -55509,8 +55509,8 @@ components:
           items:
             $ref: '#/components/schemas/PluginResourceContract'
         mountedAssetBundles:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: string
         orderWADFileMounted:
           type: integer
@@ -55896,8 +55896,8 @@ components:
           items:
             $ref: '#/components/schemas/RosterPeriodAggregatedStatsDTO'
         playerStats:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             $ref: '#/components/schemas/RosterPlayerAggregatedStatsDTO'
     RosterDTO:
       type: object
@@ -56016,8 +56016,8 @@ components:
         opponentShortName:
           type: string
         playerChampionIds:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: integer
             format: int32
         round:
@@ -56070,8 +56070,8 @@ components:
           type: integer
           format: int32
         playerBids:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: integer
             format: int32
         time:
@@ -56081,13 +56081,13 @@ components:
       type: object
       properties:
         rawStatsMax:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: integer
             format: int32
         rawStatsSum:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: integer
             format: int32
         sub:
@@ -56204,8 +56204,8 @@ components:
           type: integer
           format: int32
         filteredWordCountsByLevel:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: integer
             format: int32
         locale:
@@ -56218,8 +56218,8 @@ components:
         region:
           type: string
         whitelistedWordCountsByLevel:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: integer
             format: int32
     SeriesDTO:
@@ -56811,8 +56811,8 @@ components:
       type: object
       properties:
         displayRewards:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: string
         queueId:
           type: string

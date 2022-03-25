@@ -1404,24 +1404,24 @@
           "content": {
             "application/json": {
               "schema": {
-                "type": "array",
-                "items": {
+                "type": "object",
+                "additionalProperties": {
                   "type": "object"
                 }
               }
             },
             "application/x-yaml": {
               "schema": {
-                "type": "array",
-                "items": {
+                "type": "object",
+                "additionalProperties": {
                   "type": "object"
                 }
               }
             },
             "application/x-msgpack": {
               "schema": {
-                "type": "array",
-                "items": {
+                "type": "object",
+                "additionalProperties": {
                   "type": "object"
                 }
               }
@@ -5690,24 +5690,24 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "type": "object"
                   }
                 }
               },
               "application/x-yaml": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "type": "object"
                   }
                 }
               },
               "application/x-msgpack": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "type": "object"
                   }
                 }
@@ -5776,24 +5776,24 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "type": "object"
                   }
                 }
               },
               "application/x-yaml": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "type": "object"
                   }
                 }
               },
               "application/x-msgpack": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "type": "object"
                   }
                 }
@@ -5915,24 +5915,24 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "type": "object"
                   }
                 }
               },
               "application/x-yaml": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "type": "object"
                   }
                 }
               },
               "application/x-msgpack": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "type": "object"
                   }
                 }
@@ -6044,24 +6044,24 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "type": "object"
                   }
                 }
               },
               "application/x-yaml": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "type": "object"
                   }
                 }
               },
               "application/x-msgpack": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "type": "object"
                   }
                 }
@@ -6095,24 +6095,24 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "type": "object"
                   }
                 }
               },
               "application/x-yaml": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "type": "object"
                   }
                 }
               },
               "application/x-msgpack": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "type": "object"
                   }
                 }
@@ -6146,24 +6146,24 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "type": "object"
                   }
                 }
               },
               "application/x-yaml": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "type": "object"
                   }
                 }
               },
               "application/x-msgpack": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "type": "object"
                   }
                 }
@@ -6187,24 +6187,24 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "type": "object"
                   }
                 }
               },
               "application/x-yaml": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "type": "object"
                   }
                 }
               },
               "application/x-msgpack": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "type": "object"
                   }
                 }
@@ -6277,24 +6277,24 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "type": "object"
                   }
                 }
               },
               "application/x-yaml": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "type": "object"
                   }
                 }
               },
               "application/x-msgpack": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "type": "object"
                   }
                 }
@@ -6376,24 +6376,24 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "type": "object"
                   }
                 }
               },
               "application/x-yaml": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "type": "object"
                   }
                 }
               },
               "application/x-msgpack": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "type": "object"
                   }
                 }
@@ -6435,24 +6435,24 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "type": "object"
                   }
                 }
               },
               "application/x-yaml": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "type": "object"
                   }
                 }
               },
               "application/x-msgpack": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "type": "object"
                   }
                 }
@@ -6500,24 +6500,24 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "type": "object"
                   }
                 }
               },
               "application/x-yaml": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "type": "object"
                   }
                 }
               },
               "application/x-msgpack": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "type": "object"
                   }
                 }
@@ -6720,24 +6720,24 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "type": "object"
                   }
                 }
               },
               "application/x-yaml": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "type": "object"
                   }
                 }
               },
               "application/x-msgpack": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "type": "object"
                   }
                 }
@@ -6766,24 +6766,24 @@
           "content": {
             "application/json": {
               "schema": {
-                "type": "array",
-                "items": {
+                "type": "object",
+                "additionalProperties": {
                   "type": "object"
                 }
               }
             },
             "application/x-yaml": {
               "schema": {
-                "type": "array",
-                "items": {
+                "type": "object",
+                "additionalProperties": {
                   "type": "object"
                 }
               }
             },
             "application/x-msgpack": {
               "schema": {
-                "type": "array",
-                "items": {
+                "type": "object",
+                "additionalProperties": {
                   "type": "object"
                 }
               }
@@ -6851,24 +6851,24 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "type": "object"
                   }
                 }
               },
               "application/x-yaml": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "type": "object"
                   }
                 }
               },
               "application/x-msgpack": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "type": "object"
                   }
                 }
@@ -6897,24 +6897,24 @@
           "content": {
             "application/json": {
               "schema": {
-                "type": "array",
-                "items": {
+                "type": "object",
+                "additionalProperties": {
                   "type": "object"
                 }
               }
             },
             "application/x-yaml": {
               "schema": {
-                "type": "array",
-                "items": {
+                "type": "object",
+                "additionalProperties": {
                   "type": "object"
                 }
               }
             },
             "application/x-msgpack": {
               "schema": {
-                "type": "array",
-                "items": {
+                "type": "object",
+                "additionalProperties": {
                   "type": "object"
                 }
               }
@@ -6959,24 +6959,24 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "type": "object"
                   }
                 }
               },
               "application/x-yaml": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "type": "object"
                   }
                 }
               },
               "application/x-msgpack": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "type": "object"
                   }
                 }
@@ -7013,24 +7013,24 @@
           "content": {
             "application/json": {
               "schema": {
-                "type": "array",
-                "items": {
+                "type": "object",
+                "additionalProperties": {
                   "type": "object"
                 }
               }
             },
             "application/x-yaml": {
               "schema": {
-                "type": "array",
-                "items": {
+                "type": "object",
+                "additionalProperties": {
                   "type": "object"
                 }
               }
             },
             "application/x-msgpack": {
               "schema": {
-                "type": "array",
-                "items": {
+                "type": "object",
+                "additionalProperties": {
                   "type": "object"
                 }
               }
@@ -7083,24 +7083,24 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "type": "object"
                   }
                 }
               },
               "application/x-yaml": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "type": "object"
                   }
                 }
               },
               "application/x-msgpack": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "type": "object"
                   }
                 }
@@ -7145,24 +7145,24 @@
           "content": {
             "application/json": {
               "schema": {
-                "type": "array",
-                "items": {
+                "type": "object",
+                "additionalProperties": {
                   "type": "object"
                 }
               }
             },
             "application/x-yaml": {
               "schema": {
-                "type": "array",
-                "items": {
+                "type": "object",
+                "additionalProperties": {
                   "type": "object"
                 }
               }
             },
             "application/x-msgpack": {
               "schema": {
-                "type": "array",
-                "items": {
+                "type": "object",
+                "additionalProperties": {
                   "type": "object"
                 }
               }
@@ -7231,24 +7231,24 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "type": "object"
                   }
                 }
               },
               "application/x-yaml": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "type": "object"
                   }
                 }
               },
               "application/x-msgpack": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "type": "object"
                   }
                 }
@@ -8412,24 +8412,24 @@
           "content": {
             "application/json": {
               "schema": {
-                "type": "array",
-                "items": {
+                "type": "object",
+                "additionalProperties": {
                   "type": "object"
                 }
               }
             },
             "application/x-yaml": {
               "schema": {
-                "type": "array",
-                "items": {
+                "type": "object",
+                "additionalProperties": {
                   "type": "object"
                 }
               }
             },
             "application/x-msgpack": {
               "schema": {
-                "type": "array",
-                "items": {
+                "type": "object",
+                "additionalProperties": {
                   "type": "object"
                 }
               }
@@ -8523,24 +8523,24 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "type": "object"
                   }
                 }
               },
               "application/x-yaml": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "type": "object"
                   }
                 }
               },
               "application/x-msgpack": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "type": "object"
                   }
                 }
@@ -13447,24 +13447,24 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "type": "object"
                   }
                 }
               },
               "application/x-yaml": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "type": "object"
                   }
                 }
               },
               "application/x-msgpack": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "type": "object"
                   }
                 }
@@ -13493,24 +13493,24 @@
           "content": {
             "application/json": {
               "schema": {
-                "type": "array",
-                "items": {
+                "type": "object",
+                "additionalProperties": {
                   "type": "object"
                 }
               }
             },
             "application/x-yaml": {
               "schema": {
-                "type": "array",
-                "items": {
+                "type": "object",
+                "additionalProperties": {
                   "type": "object"
                 }
               }
             },
             "application/x-msgpack": {
               "schema": {
-                "type": "array",
-                "items": {
+                "type": "object",
+                "additionalProperties": {
                   "type": "object"
                 }
               }
@@ -13523,24 +13523,24 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "type": "object"
                   }
                 }
               },
               "application/x-yaml": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "type": "object"
                   }
                 }
               },
               "application/x-msgpack": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "type": "object"
                   }
                 }
@@ -13573,24 +13573,24 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "type": "object"
                   }
                 }
               },
               "application/x-yaml": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "type": "object"
                   }
                 }
               },
               "application/x-msgpack": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "type": "object"
                   }
                 }
@@ -13629,24 +13629,24 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "type": "object"
                   }
                 }
               },
               "application/x-yaml": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "type": "object"
                   }
                 }
               },
               "application/x-msgpack": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "type": "object"
                   }
                 }
@@ -13759,24 +13759,24 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "$ref": "#/components/schemas/PlayerReportingLocalizedReporterFeedbackMessage"
                   }
                 }
               },
               "application/x-yaml": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "$ref": "#/components/schemas/PlayerReportingLocalizedReporterFeedbackMessage"
                   }
                 }
               },
               "application/x-msgpack": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "$ref": "#/components/schemas/PlayerReportingLocalizedReporterFeedbackMessage"
                   }
                 }
@@ -14568,24 +14568,24 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "type": "object"
                   }
                 }
               },
               "application/x-yaml": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "type": "object"
                   }
                 }
               },
               "application/x-msgpack": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "type": "object"
                   }
                 }
@@ -14622,24 +14622,24 @@
           "content": {
             "application/json": {
               "schema": {
-                "type": "array",
-                "items": {
+                "type": "object",
+                "additionalProperties": {
                   "type": "object"
                 }
               }
             },
             "application/x-yaml": {
               "schema": {
-                "type": "array",
-                "items": {
+                "type": "object",
+                "additionalProperties": {
                   "type": "object"
                 }
               }
             },
             "application/x-msgpack": {
               "schema": {
-                "type": "array",
-                "items": {
+                "type": "object",
+                "additionalProperties": {
                   "type": "object"
                 }
               }
@@ -15542,24 +15542,24 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "$ref": "#/components/schemas/ProductIntegrationDebugAppUpdateStatus"
                   }
                 }
               },
               "application/x-yaml": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "$ref": "#/components/schemas/ProductIntegrationDebugAppUpdateStatus"
                   }
                 }
               },
               "application/x-msgpack": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "$ref": "#/components/schemas/ProductIntegrationDebugAppUpdateStatus"
                   }
                 }
@@ -15966,24 +15966,24 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "$ref": "#/components/schemas/ProductLocalizationProductLocalizationData"
                   }
                 }
               },
               "application/x-yaml": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "$ref": "#/components/schemas/ProductLocalizationProductLocalizationData"
                   }
                 }
               },
               "application/x-msgpack": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "$ref": "#/components/schemas/ProductLocalizationProductLocalizationData"
                   }
                 }
@@ -16032,24 +16032,24 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "type": "string"
                   }
                 }
               },
               "application/x-yaml": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "type": "string"
                   }
                 }
               },
               "application/x-msgpack": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "type": "string"
                   }
                 }
@@ -16090,24 +16090,24 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "type": "string"
                   }
                 }
               },
               "application/x-yaml": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "type": "string"
                   }
                 }
               },
               "application/x-msgpack": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "type": "string"
                   }
                 }
@@ -16332,24 +16332,24 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "type": "object"
                   }
                 }
               },
               "application/x-yaml": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "type": "object"
                   }
                 }
               },
               "application/x-msgpack": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "type": "object"
                   }
                 }
@@ -16851,24 +16851,24 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "$ref": "#/components/schemas/ProductSessionSession"
                   }
                 }
               },
               "application/x-yaml": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "$ref": "#/components/schemas/ProductSessionSession"
                   }
                 }
               },
               "application/x-msgpack": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "$ref": "#/components/schemas/ProductSessionSession"
                   }
                 }
@@ -17200,24 +17200,24 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "$ref": "#/components/schemas/ProductSessionSession"
                   }
                 }
               },
               "application/x-yaml": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "$ref": "#/components/schemas/ProductSessionSession"
                   }
                 }
               },
               "application/x-msgpack": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "$ref": "#/components/schemas/ProductSessionSession"
                   }
                 }
@@ -17269,24 +17269,24 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "type": "object"
                   }
                 }
               },
               "application/x-yaml": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "type": "object"
                   }
                 }
               },
               "application/x-msgpack": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "type": "object"
                   }
                 }
@@ -17375,24 +17375,24 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "type": "object"
                   }
                 }
               },
               "application/x-yaml": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "type": "object"
                   }
                 }
               },
               "application/x-msgpack": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "type": "object"
                   }
                 }
@@ -19219,24 +19219,24 @@
           "content": {
             "application/json": {
               "schema": {
-                "type": "array",
-                "items": {
+                "type": "object",
+                "additionalProperties": {
                   "type": "object"
                 }
               }
             },
             "application/x-yaml": {
               "schema": {
-                "type": "array",
-                "items": {
+                "type": "object",
+                "additionalProperties": {
                   "type": "object"
                 }
               }
             },
             "application/x-msgpack": {
               "schema": {
-                "type": "array",
-                "items": {
+                "type": "object",
+                "additionalProperties": {
                   "type": "object"
                 }
               }
@@ -20265,24 +20265,24 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "type": "object"
                   }
                 }
               },
               "application/x-yaml": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "type": "object"
                   }
                 }
               },
               "application/x-msgpack": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "type": "object"
                   }
                 }
@@ -23774,24 +23774,24 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "type": "object"
                   }
                 }
               },
               "application/x-yaml": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "type": "object"
                   }
                 }
               },
               "application/x-msgpack": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "type": "object"
                   }
                 }
@@ -23811,24 +23811,24 @@
           "content": {
             "application/json": {
               "schema": {
-                "type": "array",
-                "items": {
+                "type": "object",
+                "additionalProperties": {
                   "type": "object"
                 }
               }
             },
             "application/x-yaml": {
               "schema": {
-                "type": "array",
-                "items": {
+                "type": "object",
+                "additionalProperties": {
                   "type": "object"
                 }
               }
             },
             "application/x-msgpack": {
               "schema": {
-                "type": "array",
-                "items": {
+                "type": "object",
+                "additionalProperties": {
                   "type": "object"
                 }
               }
@@ -24488,24 +24488,24 @@
           "content": {
             "application/json": {
               "schema": {
-                "type": "array",
-                "items": {
+                "type": "object",
+                "additionalProperties": {
                   "type": "object"
                 }
               }
             },
             "application/x-yaml": {
               "schema": {
-                "type": "array",
-                "items": {
+                "type": "object",
+                "additionalProperties": {
                   "type": "object"
                 }
               }
             },
             "application/x-msgpack": {
               "schema": {
-                "type": "array",
-                "items": {
+                "type": "object",
+                "additionalProperties": {
                   "type": "object"
                 }
               }
@@ -25756,24 +25756,24 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "type": "object"
                   }
                 }
               },
               "application/x-yaml": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "type": "object"
                   }
                 }
               },
               "application/x-msgpack": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "type": "object"
                   }
                 }
@@ -25793,24 +25793,24 @@
           "content": {
             "application/json": {
               "schema": {
-                "type": "array",
-                "items": {
+                "type": "object",
+                "additionalProperties": {
                   "type": "object"
                 }
               }
             },
             "application/x-yaml": {
               "schema": {
-                "type": "array",
-                "items": {
+                "type": "object",
+                "additionalProperties": {
                   "type": "object"
                 }
               }
             },
             "application/x-msgpack": {
               "schema": {
-                "type": "array",
-                "items": {
+                "type": "object",
+                "additionalProperties": {
                   "type": "object"
                 }
               }
@@ -25823,24 +25823,24 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "type": "object"
                   }
                 }
               },
               "application/x-yaml": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "type": "object"
                   }
                 }
               },
               "application/x-msgpack": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "type": "object"
                   }
                 }
@@ -25860,24 +25860,24 @@
           "content": {
             "application/json": {
               "schema": {
-                "type": "array",
-                "items": {
+                "type": "object",
+                "additionalProperties": {
                   "type": "object"
                 }
               }
             },
             "application/x-yaml": {
               "schema": {
-                "type": "array",
-                "items": {
+                "type": "object",
+                "additionalProperties": {
                   "type": "object"
                 }
               }
             },
             "application/x-msgpack": {
               "schema": {
-                "type": "array",
-                "items": {
+                "type": "object",
+                "additionalProperties": {
                   "type": "object"
                 }
               }
@@ -25918,24 +25918,24 @@
           "content": {
             "application/json": {
               "schema": {
-                "type": "array",
-                "items": {
+                "type": "object",
+                "additionalProperties": {
                   "type": "object"
                 }
               }
             },
             "application/x-yaml": {
               "schema": {
-                "type": "array",
-                "items": {
+                "type": "object",
+                "additionalProperties": {
                   "type": "object"
                 }
               }
             },
             "application/x-msgpack": {
               "schema": {
-                "type": "array",
-                "items": {
+                "type": "object",
+                "additionalProperties": {
                   "type": "object"
                 }
               }
@@ -25960,24 +25960,24 @@
           "content": {
             "application/json": {
               "schema": {
-                "type": "array",
-                "items": {
+                "type": "object",
+                "additionalProperties": {
                   "type": "object"
                 }
               }
             },
             "application/x-yaml": {
               "schema": {
-                "type": "array",
-                "items": {
+                "type": "object",
+                "additionalProperties": {
                   "type": "object"
                 }
               }
             },
             "application/x-msgpack": {
               "schema": {
-                "type": "array",
-                "items": {
+                "type": "object",
+                "additionalProperties": {
                   "type": "object"
                 }
               }
@@ -25990,24 +25990,24 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "type": "object"
                   }
                 }
               },
               "application/x-yaml": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "type": "object"
                   }
                 }
               },
               "application/x-msgpack": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "type": "object"
                   }
                 }
@@ -26027,24 +26027,24 @@
           "content": {
             "application/json": {
               "schema": {
-                "type": "array",
-                "items": {
+                "type": "object",
+                "additionalProperties": {
                   "type": "object"
                 }
               }
             },
             "application/x-yaml": {
               "schema": {
-                "type": "array",
-                "items": {
+                "type": "object",
+                "additionalProperties": {
                   "type": "object"
                 }
               }
             },
             "application/x-msgpack": {
               "schema": {
-                "type": "array",
-                "items": {
+                "type": "object",
+                "additionalProperties": {
                   "type": "object"
                 }
               }
@@ -26057,24 +26057,24 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "type": "object"
                   }
                 }
               },
               "application/x-yaml": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "type": "object"
                   }
                 }
               },
               "application/x-msgpack": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "type": "object"
                   }
                 }
@@ -26095,24 +26095,24 @@
           "content": {
             "application/json": {
               "schema": {
-                "type": "array",
-                "items": {
+                "type": "object",
+                "additionalProperties": {
                   "type": "object"
                 }
               }
             },
             "application/x-yaml": {
               "schema": {
-                "type": "array",
-                "items": {
+                "type": "object",
+                "additionalProperties": {
                   "type": "object"
                 }
               }
             },
             "application/x-msgpack": {
               "schema": {
-                "type": "array",
-                "items": {
+                "type": "object",
+                "additionalProperties": {
                   "type": "object"
                 }
               }
@@ -26125,24 +26125,24 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "type": "object"
                   }
                 }
               },
               "application/x-yaml": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "type": "object"
                   }
                 }
               },
               "application/x-msgpack": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "type": "object"
                   }
                 }
@@ -26165,24 +26165,24 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "type": "object"
                   }
                 }
               },
               "application/x-yaml": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "type": "object"
                   }
                 }
               },
               "application/x-msgpack": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "type": "object"
                   }
                 }
@@ -26718,24 +26718,24 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "type": "object"
                   }
                 }
               },
               "application/x-yaml": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "type": "object"
                   }
                 }
               },
               "application/x-msgpack": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "type": "object"
                   }
                 }
@@ -26768,24 +26768,24 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "type": "object"
                   }
                 }
               },
               "application/x-yaml": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "type": "object"
                   }
                 }
               },
               "application/x-msgpack": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "type": "object"
                   }
                 }
@@ -27105,24 +27105,24 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "type": "object"
                   }
                 }
               },
               "application/x-yaml": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "type": "object"
                   }
                 }
               },
               "application/x-msgpack": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "type": "object"
                   }
                 }
@@ -27145,24 +27145,24 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "type": "object"
                   }
                 }
               },
               "application/x-yaml": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "type": "object"
                   }
                 }
               },
               "application/x-msgpack": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "type": "object"
                   }
                 }
@@ -27195,24 +27195,24 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "type": "object"
                   }
                 }
               },
               "application/x-yaml": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "type": "object"
                   }
                 }
               },
               "application/x-msgpack": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "type": "object"
                   }
                 }
@@ -27269,24 +27269,24 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "$ref": "#/components/schemas/CollectorAvailability"
                   }
                 }
               },
               "application/x-yaml": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "$ref": "#/components/schemas/CollectorAvailability"
                   }
                 }
               },
               "application/x-msgpack": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "$ref": "#/components/schemas/CollectorAvailability"
                   }
                 }
@@ -27352,24 +27352,24 @@
           "content": {
             "application/json": {
               "schema": {
-                "type": "array",
-                "items": {
+                "type": "object",
+                "additionalProperties": {
                   "type": "object"
                 }
               }
             },
             "application/x-yaml": {
               "schema": {
-                "type": "array",
-                "items": {
+                "type": "object",
+                "additionalProperties": {
                   "type": "object"
                 }
               }
             },
             "application/x-msgpack": {
               "schema": {
-                "type": "array",
-                "items": {
+                "type": "object",
+                "additionalProperties": {
                   "type": "object"
                 }
               }
@@ -27516,24 +27516,24 @@
           "content": {
             "application/json": {
               "schema": {
-                "type": "array",
-                "items": {
+                "type": "object",
+                "additionalProperties": {
                   "type": "object"
                 }
               }
             },
             "application/x-yaml": {
               "schema": {
-                "type": "array",
-                "items": {
+                "type": "object",
+                "additionalProperties": {
                   "type": "object"
                 }
               }
             },
             "application/x-msgpack": {
               "schema": {
-                "type": "array",
-                "items": {
+                "type": "object",
+                "additionalProperties": {
                   "type": "object"
                 }
               }
@@ -30041,8 +30041,8 @@
         "type": "object",
         "properties": {
           "hopePayload": {
-            "type": "array",
-            "items": {
+            "type": "object",
+            "additionalProperties": {
               "type": "string"
             }
           },
@@ -30068,14 +30068,14 @@
             "$ref": "#/components/schemas/AntiAddictionDisplayType"
           },
           "hopePayload": {
-            "type": "array",
-            "items": {
+            "type": "object",
+            "additionalProperties": {
               "type": "string"
             }
           },
           "localizationContext": {
-            "type": "array",
-            "items": {
+            "type": "object",
+            "additionalProperties": {
               "type": "string"
             }
           },
@@ -30160,8 +30160,8 @@
             "$ref": "#/components/schemas/AppCommandCommandKind"
           },
           "payload": {
-            "type": "array",
-            "items": {
+            "type": "object",
+            "additionalProperties": {
               "type": ""
             }
           }
@@ -30532,8 +30532,8 @@
             "format": "int32"
           },
           "closed-conversations": {
-            "type": "array",
-            "items": {
+            "type": "object",
+            "additionalProperties": {
               "type": "integer",
               "format": "int64"
             }
@@ -30542,8 +30542,8 @@
             "type": "boolean"
           },
           "hidden-conversations": {
-            "type": "array",
-            "items": {
+            "type": "object",
+            "additionalProperties": {
               "type": "integer",
               "format": "int64"
             }
@@ -30558,8 +30558,8 @@
             "type": "boolean"
           },
           "muted-conversations": {
-            "type": "array",
-            "items": {
+            "type": "object",
+            "additionalProperties": {
               "type": "integer",
               "format": "int8"
             }
@@ -30571,8 +30571,8 @@
             "type": "boolean"
           },
           "roster-group-collapsed": {
-            "type": "array",
-            "items": {
+            "type": "object",
+            "additionalProperties": {
               "type": "boolean"
             }
           },
@@ -30643,8 +30643,8 @@
         "type": "object",
         "properties": {
           "blocks": {
-            "type": "array",
-            "items": {
+            "type": "object",
+            "additionalProperties": {
               "$ref": "#/components/schemas/ChatChatBlockedPlayer"
             }
           }
@@ -31763,8 +31763,8 @@
         "type": "object",
         "properties": {
           "key": {
-            "type": "array",
-            "items": {
+            "type": "object",
+            "additionalProperties": {
               "type": "string"
             }
           },
@@ -32071,8 +32071,8 @@
         "type": "object",
         "properties": {
           "data": {
-            "type": "array",
-            "items": {
+            "type": "object",
+            "additionalProperties": {
               "type": ""
             }
           },
@@ -32375,8 +32375,8 @@
         "type": "object",
         "properties": {
           "products": {
-            "type": "array",
-            "items": {
+            "type": "object",
+            "additionalProperties": {
               "$ref": "#/components/schemas/ChatProductSessionState"
             }
           }
@@ -32525,8 +32525,8 @@
         "type": "object",
         "properties": {
           "settings": {
-            "type": "array",
-            "items": {
+            "type": "object",
+            "additionalProperties": {
               "type": ""
             }
           },
@@ -32651,8 +32651,8 @@
         "type": "object",
         "properties": {
           "affinityDomains": {
-            "type": "array",
-            "items": {
+            "type": "object",
+            "additionalProperties": {
               "type": "string"
             }
           },
@@ -32660,14 +32660,14 @@
             "type": "boolean"
           },
           "affinityHints": {
-            "type": "array",
-            "items": {
+            "type": "object",
+            "additionalProperties": {
               "type": "string"
             }
           },
           "affinityHosts": {
-            "type": "array",
-            "items": {
+            "type": "object",
+            "additionalProperties": {
               "type": "string"
             }
           },
@@ -32784,8 +32784,8 @@
         "type": "object",
         "properties": {
           "data": {
-            "type": "array",
-            "items": {
+            "type": "object",
+            "additionalProperties": {
               "type": "map of "
             }
           },
@@ -33004,8 +33004,8 @@
         "type": "object",
         "properties": {
           "sessions": {
-            "type": "array",
-            "items": {
+            "type": "object",
+            "additionalProperties": {
               "$ref": "#/components/schemas/ClientConfigDepInjectorSession"
             }
           },
@@ -33147,8 +33147,8 @@
         "type": "object",
         "properties": {
           "sessions": {
-            "type": "array",
-            "items": {
+            "type": "object",
+            "additionalProperties": {
               "$ref": "#/components/schemas/ClientConfigSession"
             }
           },
@@ -33192,8 +33192,8 @@
         "type": "object",
         "properties": {
           "configuredFeatureFlags": {
-            "type": "array",
-            "items": {
+            "type": "object",
+            "additionalProperties": {
               "type": ""
             }
           },
@@ -33201,8 +33201,8 @@
             "type": "boolean"
           },
           "featureFlags": {
-            "type": "array",
-            "items": {
+            "type": "object",
+            "additionalProperties": {
               "type": ""
             }
           },
@@ -33210,8 +33210,8 @@
             "type": "boolean"
           },
           "installSettings": {
-            "type": "array",
-            "items": {
+            "type": "object",
+            "additionalProperties": {
               "type": ""
             }
           },
@@ -33219,8 +33219,8 @@
             "type": "boolean"
           },
           "playerCohorts": {
-            "type": "array",
-            "items": {
+            "type": "object",
+            "additionalProperties": {
               "type": ""
             }
           },
@@ -33228,8 +33228,8 @@
             "type": "boolean"
           },
           "stickyFlagCohortsActiveAtBoot": {
-            "type": "array",
-            "items": {
+            "type": "object",
+            "additionalProperties": {
               "type": "string"
             }
           },
@@ -33676,8 +33676,8 @@
         "type": "object",
         "properties": {
           "data": {
-            "type": "array",
-            "items": {
+            "type": "object",
+            "additionalProperties": {
               "type": ""
             }
           },
@@ -33895,8 +33895,8 @@
             "type": "string"
           },
           "image_urls": {
-            "type": "array",
-            "items": {
+            "type": "object",
+            "additionalProperties": {
               "type": "string"
             }
           },
@@ -34008,8 +34008,8 @@
         "type": "object",
         "properties": {
           "context": {
-            "type": "array",
-            "items": {
+            "type": "object",
+            "additionalProperties": {
               "type": ""
             }
           },
@@ -34194,8 +34194,8 @@
         "type": "object",
         "properties": {
           "config": {
-            "type": "array",
-            "items": {
+            "type": "object",
+            "additionalProperties": {
               "type": ""
             }
           }
@@ -34205,8 +34205,8 @@
         "type": "object",
         "properties": {
           "config": {
-            "type": "array",
-            "items": {
+            "type": "object",
+            "additionalProperties": {
               "type": ""
             }
           }
@@ -34285,8 +34285,8 @@
         "type": "object",
         "properties": {
           "claims": {
-            "type": "array",
-            "items": {
+            "type": "object",
+            "additionalProperties": {
               "type": ""
             }
           },
@@ -34341,8 +34341,8 @@
         "type": "object",
         "properties": {
           "claims": {
-            "type": "array",
-            "items": {
+            "type": "object",
+            "additionalProperties": {
               "type": ""
             }
           },
@@ -34370,8 +34370,8 @@
         "type": "object",
         "properties": {
           "bypassQueueClaims": {
-            "type": "array",
-            "items": {
+            "type": "object",
+            "additionalProperties": {
               "type": ""
             }
           },
@@ -34388,8 +34388,8 @@
             "type": "string"
           },
           "loginQueueClaims": {
-            "type": "array",
-            "items": {
+            "type": "object",
+            "additionalProperties": {
               "type": ""
             }
           },
@@ -34407,8 +34407,8 @@
             "format": "int64"
           },
           "sessionClaims": {
-            "type": "array",
-            "items": {
+            "type": "object",
+            "additionalProperties": {
               "type": ""
             }
           },
@@ -35300,8 +35300,8 @@
         "type": "object",
         "properties": {
           "gaWarningMessages": {
-            "type": "array",
-            "items": {
+            "type": "object",
+            "additionalProperties": {
               "$ref": "#/components/schemas/GaWarningLocalizedWarningMessage"
             }
           }
@@ -35501,8 +35501,8 @@
         "type": "object",
         "properties": {
           "key": {
-            "type": "array",
-            "items": {
+            "type": "object",
+            "additionalProperties": {
               "type": "string"
             }
           },
@@ -35623,8 +35623,8 @@
         "type": "object",
         "properties": {
           "data": {
-            "type": "array",
-            "items": {
+            "type": "object",
+            "additionalProperties": {
               "type": ""
             }
           },
@@ -35656,8 +35656,8 @@
             "$ref": "#/components/schemas/LifecycleStateAppRepairBindingState"
           },
           "subscribers": {
-            "type": "array",
-            "items": {
+            "type": "object",
+            "additionalProperties": {
               "type": "integer",
               "format": "int32"
             }
@@ -35685,8 +35685,8 @@
             "$ref": "#/components/schemas/HomeBaseCountry"
           },
           "subscribers": {
-            "type": "array",
-            "items": {
+            "type": "object",
+            "additionalProperties": {
               "type": "integer",
               "format": "int32"
             }
@@ -36093,8 +36093,8 @@
         "type": "object",
         "properties": {
           "affinities": {
-            "type": "array",
-            "items": {
+            "type": "object",
+            "additionalProperties": {
               "type": "string"
             }
           },
@@ -36144,8 +36144,8 @@
         "type": "object",
         "properties": {
           "affinities": {
-            "type": "array",
-            "items": {
+            "type": "object",
+            "additionalProperties": {
               "type": "string"
             }
           },
@@ -36239,8 +36239,8 @@
         "type": "object",
         "properties": {
           "affinities": {
-            "type": "array",
-            "items": {
+            "type": "object",
+            "additionalProperties": {
               "type": "string"
             }
           },
@@ -36848,8 +36848,8 @@
             "type": "string"
           },
           "params": {
-            "type": "array",
-            "items": {
+            "type": "object",
+            "additionalProperties": {
               "type": "string"
             }
           },
@@ -36991,8 +36991,8 @@
             "type": "boolean"
           },
           "shards_data": {
-            "type": "array",
-            "items": {
+            "type": "object",
+            "additionalProperties": {
               "type": "string"
             }
           },
@@ -37119,8 +37119,8 @@
             "type": "string"
           },
           "sieveLabels": {
-            "type": "array",
-            "items": {
+            "type": "object",
+            "additionalProperties": {
               "type": "string"
             }
           },
@@ -37139,8 +37139,8 @@
         "type": "object",
         "properties": {
           "patching_metadata": {
-            "type": "array",
-            "items": {
+            "type": "object",
+            "additionalProperties": {
               "$ref": "#/components/schemas/PatchPatchSetMetadata"
             }
           }
@@ -37162,8 +37162,8 @@
             "type": "boolean"
           },
           "headers": {
-            "type": "array",
-            "items": {
+            "type": "object",
+            "additionalProperties": {
               "type": "string"
             }
           },
@@ -37244,8 +37244,8 @@
             "type": "string"
           },
           "extraParams": {
-            "type": "array",
-            "items": {
+            "type": "object",
+            "additionalProperties": {
               "type": "string"
             }
           },
@@ -37358,8 +37358,8 @@
             "type": "boolean"
           },
           "headers": {
-            "type": "array",
-            "items": {
+            "type": "object",
+            "additionalProperties": {
               "type": "string"
             }
           },
@@ -37763,8 +37763,8 @@
             "$ref": "#/components/schemas/PatchProxyConfigurationResource"
           },
           "dependency_status": {
-            "type": "array",
-            "items": {
+            "type": "object",
+            "additionalProperties": {
               "$ref": "#/components/schemas/ThirdPartyDependencyStatus"
             }
           },
@@ -37778,8 +37778,8 @@
             "$ref": "#/components/schemas/PatchProxyRepairCode"
           },
           "shards_data": {
-            "type": "array",
-            "items": {
+            "type": "object",
+            "additionalProperties": {
               "type": "string"
             }
           },
@@ -37813,8 +37813,8 @@
             "$ref": "#/components/schemas/PatchProxyConfigurationStatus"
           },
           "content_paths": {
-            "type": "array",
-            "items": {
+            "type": "object",
+            "additionalProperties": {
               "type": "string"
             }
           },
@@ -37828,8 +37828,8 @@
             }
           },
           "dependencyStates": {
-            "type": "array",
-            "items": {
+            "type": "object",
+            "additionalProperties": {
               "$ref": "#/components/schemas/PatchProxyDependencyState"
             }
           },
@@ -37925,8 +37925,8 @@
             "type": "object"
           },
           "shards_data": {
-            "type": "array",
-            "items": {
+            "type": "object",
+            "additionalProperties": {
               "type": "string"
             }
           },
@@ -38309,8 +38309,8 @@
             }
           },
           "headers": {
-            "type": "array",
-            "items": {
+            "type": "object",
+            "additionalProperties": {
               "type": "string"
             }
           },
@@ -38398,8 +38398,8 @@
             }
           },
           "headers": {
-            "type": "array",
-            "items": {
+            "type": "object",
+            "additionalProperties": {
               "type": "string"
             }
           }
@@ -38421,8 +38421,8 @@
             "type": "boolean"
           },
           "headers": {
-            "type": "array",
-            "items": {
+            "type": "object",
+            "additionalProperties": {
               "type": "string"
             }
           },
@@ -38501,8 +38501,8 @@
             "type": "boolean"
           },
           "headers": {
-            "type": "array",
-            "items": {
+            "type": "object",
+            "additionalProperties": {
               "type": "string"
             }
           }
@@ -38521,8 +38521,8 @@
             }
           },
           "headers": {
-            "type": "array",
-            "items": {
+            "type": "object",
+            "additionalProperties": {
               "type": "string"
             }
           }
@@ -38532,8 +38532,8 @@
         "type": "object",
         "properties": {
           "headers": {
-            "type": "array",
-            "items": {
+            "type": "object",
+            "additionalProperties": {
               "type": "string"
             }
           },
@@ -38553,8 +38553,8 @@
             "type": "boolean"
           },
           "headers": {
-            "type": "array",
-            "items": {
+            "type": "object",
+            "additionalProperties": {
               "type": "string"
             }
           },
@@ -38791,8 +38791,8 @@
         "type": "object",
         "properties": {
           "products": {
-            "type": "array",
-            "items": {
+            "type": "object",
+            "additionalProperties": {
               "$ref": "#/components/schemas/PayMobileProduct"
             }
           },
@@ -39205,8 +39205,8 @@
             }
           },
           "required_fields_hints": {
-            "type": "array",
-            "items": {
+            "type": "object",
+            "additionalProperties": {
               "type": ""
             }
           }
@@ -39330,8 +39330,8 @@
             }
           },
           "userInfo": {
-            "type": "array",
-            "items": {
+            "type": "object",
+            "additionalProperties": {
               "type": ""
             }
           }
@@ -39431,8 +39431,8 @@
             }
           },
           "required_fields_hints": {
-            "type": "array",
-            "items": {
+            "type": "object",
+            "additionalProperties": {
               "type": ""
             }
           }
@@ -39622,8 +39622,8 @@
         "type": "object",
         "properties": {
           "context": {
-            "type": "array",
-            "items": {
+            "type": "object",
+            "additionalProperties": {
               "type": ""
             }
           },
@@ -40145,8 +40145,8 @@
         "type": "object",
         "properties": {
           "affinities": {
-            "type": "array",
-            "items": {
+            "type": "object",
+            "additionalProperties": {
               "type": "string"
             }
           },
@@ -40196,8 +40196,8 @@
         "type": "object",
         "properties": {
           "affinities": {
-            "type": "array",
-            "items": {
+            "type": "object",
+            "additionalProperties": {
               "type": "string"
             }
           },
@@ -40291,8 +40291,8 @@
         "type": "object",
         "properties": {
           "affinities": {
-            "type": "array",
-            "items": {
+            "type": "object",
+            "additionalProperties": {
               "type": "string"
             }
           },
@@ -40330,8 +40330,8 @@
         "type": "object",
         "properties": {
           "affinities": {
-            "type": "array",
-            "items": {
+            "type": "object",
+            "additionalProperties": {
               "type": "string"
             }
           },
@@ -40889,8 +40889,8 @@
             }
           },
           "required_fields_hints": {
-            "type": "array",
-            "items": {
+            "type": "object",
+            "additionalProperties": {
               "type": ""
             }
           }
@@ -41049,8 +41049,8 @@
         "type": "object",
         "properties": {
           "affinities": {
-            "type": "array",
-            "items": {
+            "type": "object",
+            "additionalProperties": {
               "type": "string"
             }
           },
@@ -41104,8 +41104,8 @@
             }
           },
           "userInfo": {
-            "type": "array",
-            "items": {
+            "type": "object",
+            "additionalProperties": {
               "type": ""
             }
           }
@@ -41304,8 +41304,8 @@
             }
           },
           "required_fields_hints": {
-            "type": "array",
-            "items": {
+            "type": "object",
+            "additionalProperties": {
               "type": ""
             }
           }
@@ -41530,14 +41530,14 @@
             "type": "boolean"
           },
           "implements": {
-            "type": "array",
-            "items": {
+            "type": "object",
+            "additionalProperties": {
               "type": "string"
             }
           },
           "perLocaleAssetBundles": {
-            "type": "array",
-            "items": {
+            "type": "object",
+            "additionalProperties": {
               "type": "object"
             }
           },
@@ -41609,8 +41609,8 @@
             "type": "boolean"
           },
           "mountedAssetBundles": {
-            "type": "array",
-            "items": {
+            "type": "object",
+            "additionalProperties": {
               "type": "string"
             }
           },
@@ -42248,8 +42248,8 @@
             }
           },
           "content_paths": {
-            "type": "array",
-            "items": {
+            "type": "object",
+            "additionalProperties": {
               "type": "string"
             }
           },
@@ -42291,8 +42291,8 @@
             "type": "string"
           },
           "patchlines": {
-            "type": "array",
-            "items": {
+            "type": "object",
+            "additionalProperties": {
               "$ref": "#/components/schemas/ProductLocalizationPatchlineMetadata"
             }
           }
@@ -42302,8 +42302,8 @@
         "type": "object",
         "properties": {
           "products": {
-            "type": "array",
-            "items": {
+            "type": "object",
+            "additionalProperties": {
               "$ref": "#/components/schemas/ProductLocalizationProductMetadata"
             }
           }
@@ -42382,8 +42382,8 @@
             "format": "int32"
           },
           "translations": {
-            "type": "array",
-            "items": {
+            "type": "object",
+            "additionalProperties": {
               "type": "string"
             }
           }
@@ -42494,20 +42494,20 @@
             "type": "boolean"
           },
           "patchlines": {
-            "type": "array",
-            "items": {
+            "type": "object",
+            "additionalProperties": {
               "$ref": "#/components/schemas/ProductMetadataPatchlineMetadata"
             }
           },
           "products": {
-            "type": "array",
-            "items": {
+            "type": "object",
+            "additionalProperties": {
               "$ref": "#/components/schemas/ProductMetadataProductDefinition"
             }
           },
           "rawConfig": {
-            "type": "array",
-            "items": {
+            "type": "object",
+            "additionalProperties": {
               "type": ""
             }
           }
@@ -42616,8 +42616,8 @@
             "type": "string"
           },
           "sieveLabels": {
-            "type": "array",
-            "items": {
+            "type": "object",
+            "additionalProperties": {
               "type": "string"
             }
           },
@@ -42699,8 +42699,8 @@
             "type": "string"
           },
           "patching": {
-            "type": "array",
-            "items": {
+            "type": "object",
+            "additionalProperties": {
               "$ref": "#/components/schemas/ProductMetadataPatchSetMetadata"
             }
           },
@@ -42770,8 +42770,8 @@
             }
           },
           "content_paths": {
-            "type": "array",
-            "items": {
+            "type": "object",
+            "additionalProperties": {
               "type": "string"
             }
           },
@@ -42846,8 +42846,8 @@
             "$ref": "#/components/schemas/ProductMetadataLocaleDataResource"
           },
           "matching_shards_data": {
-            "type": "array",
-            "items": {
+            "type": "object",
+            "additionalProperties": {
               "type": "string"
             }
           },
@@ -42864,8 +42864,8 @@
             "type": "string"
           },
           "patching_metadata": {
-            "type": "array",
-            "items": {
+            "type": "object",
+            "additionalProperties": {
               "$ref": "#/components/schemas/ProductMetadataPatchSetMetadata"
             }
           },
@@ -42967,8 +42967,8 @@
         "type": "object",
         "properties": {
           "affinities": {
-            "type": "array",
-            "items": {
+            "type": "object",
+            "additionalProperties": {
               "type": "string"
             }
           },
@@ -43015,8 +43015,8 @@
         "type": "object",
         "properties": {
           "productDefinitions": {
-            "type": "array",
-            "items": {
+            "type": "object",
+            "additionalProperties": {
               "$ref": "#/components/schemas/ProductMetadataProductDefinition"
             }
           }
@@ -43032,8 +43032,8 @@
             "type": "string"
           },
           "patchlines": {
-            "type": "array",
-            "items": {
+            "type": "object",
+            "additionalProperties": {
               "$ref": "#/components/schemas/ProductMetadataPatchlineMetadata"
             }
           }
@@ -43043,8 +43043,8 @@
         "type": "object",
         "properties": {
           "products": {
-            "type": "array",
-            "items": {
+            "type": "object",
+            "additionalProperties": {
               "$ref": "#/components/schemas/ProductMetadataProductMetadata"
             }
           }
@@ -43118,8 +43118,8 @@
         "type": "object",
         "properties": {
           "secondaryPatchlines": {
-            "type": "array",
-            "items": {
+            "type": "object",
+            "additionalProperties": {
               "$ref": "#/components/schemas/ProductMetadataSecondaryPatchlineMetadata"
             }
           }
@@ -44075,8 +44075,8 @@
             "type": "object"
           },
           "subscribers": {
-            "type": "array",
-            "items": {
+            "type": "object",
+            "additionalProperties": {
               "type": "integer",
               "format": "int32"
             }
@@ -44090,8 +44090,8 @@
             "$ref": "#/components/schemas/PlayerAffinityProductToken"
           },
           "subscribers": {
-            "type": "array",
-            "items": {
+            "type": "object",
+            "additionalProperties": {
               "type": "integer",
               "format": "int32"
             }
@@ -44173,8 +44173,8 @@
         "type": "object",
         "properties": {
           "additionalFields": {
-            "type": "array",
-            "items": {
+            "type": "object",
+            "additionalProperties": {
               "type": ""
             }
           },
@@ -44517,8 +44517,8 @@
             "$ref": "#/components/schemas/RiotStatusConfigType"
           },
           "content_paths": {
-            "type": "array",
-            "items": {
+            "type": "object",
+            "additionalProperties": {
               "type": "string"
             }
           },
@@ -44543,8 +44543,8 @@
             "type": "string"
           },
           "patchlines": {
-            "type": "array",
-            "items": {
+            "type": "object",
+            "additionalProperties": {
               "$ref": "#/components/schemas/RiotStatusPatchlineMetadata"
             }
           }
@@ -44554,8 +44554,8 @@
         "type": "object",
         "properties": {
           "products": {
-            "type": "array",
-            "items": {
+            "type": "object",
+            "additionalProperties": {
               "$ref": "#/components/schemas/RiotStatusProductMetadata"
             }
           }
@@ -45149,8 +45149,8 @@
             "$ref": "#/components/schemas/RnetProductRegistryLifecycleStateAppRepairBindingState"
           },
           "subscribers": {
-            "type": "array",
-            "items": {
+            "type": "object",
+            "additionalProperties": {
               "type": "integer",
               "format": "int32"
             }
@@ -45178,8 +45178,8 @@
             "$ref": "#/components/schemas/RnetProductRegistryHomeBaseCountry"
           },
           "subscribers": {
-            "type": "array",
-            "items": {
+            "type": "object",
+            "additionalProperties": {
               "type": "integer",
               "format": "int32"
             }
@@ -45193,8 +45193,8 @@
             "$ref": "#/components/schemas/RnetProductRegistryPlayerAffinityProductToken"
           },
           "subscribers": {
-            "type": "array",
-            "items": {
+            "type": "object",
+            "additionalProperties": {
               "type": "integer",
               "format": "int32"
             }
@@ -45208,8 +45208,8 @@
             "$ref": "#/components/schemas/RnetProductRegistryRegionLocale"
           },
           "subscribers": {
-            "type": "array",
-            "items": {
+            "type": "object",
+            "additionalProperties": {
               "type": "integer",
               "format": "int32"
             }
@@ -45298,8 +45298,8 @@
             "$ref": "#/components/schemas/RnetProductRegistryCombinedPatchState"
           },
           "dependency_status": {
-            "type": "array",
-            "items": {
+            "type": "object",
+            "additionalProperties": {
               "$ref": "#/components/schemas/ThirdPartyDependencyStatus"
             }
           },
@@ -45313,8 +45313,8 @@
             "$ref": "#/components/schemas/RnetProductRegistryRepairCode"
           },
           "shards_data": {
-            "type": "array",
-            "items": {
+            "type": "object",
+            "additionalProperties": {
               "type": "string"
             }
           },
@@ -45354,8 +45354,8 @@
             }
           },
           "content_paths": {
-            "type": "array",
-            "items": {
+            "type": "object",
+            "additionalProperties": {
               "type": "string"
             }
           },
@@ -45369,8 +45369,8 @@
             }
           },
           "dependencyStates": {
-            "type": "array",
-            "items": {
+            "type": "object",
+            "additionalProperties": {
               "$ref": "#/components/schemas/RnetProductRegistryDependencyState"
             }
           },
@@ -45466,8 +45466,8 @@
             "type": "object"
           },
           "shards_data": {
-            "type": "array",
-            "items": {
+            "type": "object",
+            "additionalProperties": {
               "type": "string"
             }
           },
@@ -45519,8 +45519,8 @@
             }
           },
           "content_paths": {
-            "type": "array",
-            "items": {
+            "type": "object",
+            "additionalProperties": {
               "type": "string"
             }
           },
@@ -45595,8 +45595,8 @@
             "$ref": "#/components/schemas/RnetProductRegistryLocaleDataResource"
           },
           "matching_shards_data": {
-            "type": "array",
-            "items": {
+            "type": "object",
+            "additionalProperties": {
               "type": "string"
             }
           },
@@ -45704,8 +45704,8 @@
             "type": "boolean"
           },
           "headers": {
-            "type": "array",
-            "items": {
+            "type": "object",
+            "additionalProperties": {
               "type": "string"
             }
           },
@@ -45787,8 +45787,8 @@
         "type": "object",
         "properties": {
           "affinities": {
-            "type": "array",
-            "items": {
+            "type": "object",
+            "additionalProperties": {
               "type": "string"
             }
           },
@@ -45879,8 +45879,8 @@
             "type": "boolean"
           },
           "headers": {
-            "type": "array",
-            "items": {
+            "type": "object",
+            "additionalProperties": {
               "type": "string"
             }
           },
@@ -45965,8 +45965,8 @@
         "type": "object",
         "properties": {
           "productDefinitions": {
-            "type": "array",
-            "items": {
+            "type": "object",
+            "additionalProperties": {
               "$ref": "#/components/schemas/RnetProductRegistryProductDefinition"
             }
           }
@@ -45982,8 +45982,8 @@
             "type": "string"
           },
           "patchline_install_states": {
-            "type": "array",
-            "items": {
+            "type": "object",
+            "additionalProperties": {
               "$ref": "#/components/schemas/RnetProductRegistryInstallState"
             }
           }
@@ -45999,8 +45999,8 @@
             "type": "string"
           },
           "patchlines": {
-            "type": "array",
-            "items": {
+            "type": "object",
+            "additionalProperties": {
               "$ref": "#/components/schemas/RnetProductRegistryPatchlineMetadata"
             }
           }
@@ -46010,8 +46010,8 @@
         "type": "object",
         "properties": {
           "products": {
-            "type": "array",
-            "items": {
+            "type": "object",
+            "additionalProperties": {
               "$ref": "#/components/schemas/RnetProductRegistryProductMetadata"
             }
           }
@@ -46386,8 +46386,8 @@
             "format": "int32"
           },
           "filteredWordCountsByLevel": {
-            "type": "array",
-            "items": {
+            "type": "object",
+            "additionalProperties": {
               "type": "integer",
               "format": "int32"
             }
@@ -46406,8 +46406,8 @@
             "type": "string"
           },
           "whitelistedWordCountsByLevel": {
-            "type": "array",
-            "items": {
+            "type": "object",
+            "additionalProperties": {
               "type": "integer",
               "format": "int32"
             }
@@ -46541,8 +46541,8 @@
         "type": "object",
         "properties": {
           "headers": {
-            "type": "array",
-            "items": {
+            "type": "object",
+            "additionalProperties": {
               "type": "string"
             }
           },
@@ -46626,8 +46626,8 @@
         "type": "object",
         "properties": {
           "context": {
-            "type": "array",
-            "items": {
+            "type": "object",
+            "additionalProperties": {
               "type": ""
             }
           },
@@ -46798,8 +46798,8 @@
         "type": "object",
         "properties": {
           "config": {
-            "type": "array",
-            "items": {
+            "type": "object",
+            "additionalProperties": {
               "type": ""
             }
           }
@@ -46809,8 +46809,8 @@
         "type": "object",
         "properties": {
           "config": {
-            "type": "array",
-            "items": {
+            "type": "object",
+            "additionalProperties": {
               "type": ""
             }
           }
@@ -47379,8 +47379,8 @@
             }
           },
           "required_fields_hints": {
-            "type": "array",
-            "items": {
+            "type": "object",
+            "additionalProperties": {
               "type": ""
             }
           }
@@ -47601,8 +47601,8 @@
             }
           },
           "required_fields_hints": {
-            "type": "array",
-            "items": {
+            "type": "object",
+            "additionalProperties": {
               "type": ""
             }
           }
@@ -48617,14 +48617,14 @@
         "type": "object",
         "properties": {
           "options": {
-            "type": "array",
-            "items": {
+            "type": "object",
+            "additionalProperties": {
               "type": ""
             }
           },
           "parameters": {
-            "type": "array",
-            "items": {
+            "type": "object",
+            "additionalProperties": {
               "type": ""
             }
           },
@@ -49008,8 +49008,8 @@
             }
           },
           "required_fields_hints": {
-            "type": "array",
-            "items": {
+            "type": "object",
+            "additionalProperties": {
               "type": ""
             }
           }
@@ -49118,8 +49118,8 @@
             }
           },
           "required_fields_hints": {
-            "type": "array",
-            "items": {
+            "type": "object",
+            "additionalProperties": {
               "type": ""
             }
           }
@@ -49213,8 +49213,8 @@
         "type": "object",
         "properties": {
           "config": {
-            "type": "array",
-            "items": {
+            "type": "object",
+            "additionalProperties": {
               "type": ""
             }
           }
@@ -49337,8 +49337,8 @@
         "type": "object",
         "properties": {
           "fields": {
-            "type": "array",
-            "items": {
+            "type": "object",
+            "additionalProperties": {
               "type": ""
             }
           },
@@ -49454,8 +49454,8 @@
         "type": "object",
         "properties": {
           "body": {
-            "type": "array",
-            "items": {
+            "type": "object",
+            "additionalProperties": {
               "type": ""
             }
           },
@@ -49477,8 +49477,8 @@
         "type": "object",
         "properties": {
           "body": {
-            "type": "array",
-            "items": {
+            "type": "object",
+            "additionalProperties": {
               "type": ""
             }
           },
@@ -49509,8 +49509,8 @@
             "type": "string"
           },
           "value": {
-            "type": "array",
-            "items": {
+            "type": "object",
+            "additionalProperties": {
               "type": ""
             }
           }
@@ -49566,8 +49566,8 @@
             "type": "string"
           },
           "fields": {
-            "type": "array",
-            "items": {
+            "type": "object",
+            "additionalProperties": {
               "type": ""
             }
           },
@@ -49642,8 +49642,8 @@
         "type": "object",
         "properties": {
           "fields": {
-            "type": "array",
-            "items": {
+            "type": "object",
+            "additionalProperties": {
               "type": "object"
             }
           },
@@ -49873,8 +49873,8 @@
             "type": "string"
           },
           "headers": {
-            "type": "array",
-            "items": {
+            "type": "object",
+            "additionalProperties": {
               "type": "string"
             }
           },

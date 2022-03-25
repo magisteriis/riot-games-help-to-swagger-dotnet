@@ -872,18 +872,18 @@ paths:
         content:
           application/json:
             schema:
-              type: array
-              items:
+              type: object
+              additionalProperties:
                 type: object
           application/x-yaml:
             schema:
-              type: array
-              items:
+              type: object
+              additionalProperties:
                 type: object
           application/x-msgpack:
             schema:
-              type: array
-              items:
+              type: object
+              additionalProperties:
                 type: object
       responses:
         '204':
@@ -3496,18 +3496,18 @@ paths:
           content:
             application/json:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: object
             application/x-yaml:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: object
             application/x-msgpack:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: object
   '/client-config/v1/config/{name}':
     get:
@@ -3548,18 +3548,18 @@ paths:
           content:
             application/json:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: object
             application/x-yaml:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: object
             application/x-msgpack:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: object
   /client-config/v1/refresh-config-status:
     put:
@@ -3634,18 +3634,18 @@ paths:
           content:
             application/json:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: object
             application/x-yaml:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: object
             application/x-msgpack:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: object
   /client-config/v2/entitlements-token:
     delete:
@@ -3714,18 +3714,18 @@ paths:
           content:
             application/json:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: object
             application/x-yaml:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: object
             application/x-msgpack:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: object
   '/client-config/v2/namespace/{namespace}/player':
     get:
@@ -3746,18 +3746,18 @@ paths:
           content:
             application/json:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: object
             application/x-yaml:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: object
             application/x-msgpack:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: object
   '/client-config/v2/namespace/{namespace}/public':
     get:
@@ -3778,18 +3778,18 @@ paths:
           content:
             application/json:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: object
             application/x-yaml:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: object
             application/x-msgpack:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: object
   /client-feature-flags/v1/debug/all-subscribed-flags:
     get:
@@ -3804,18 +3804,18 @@ paths:
           content:
             application/json:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: object
             application/x-yaml:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: object
             application/x-msgpack:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: object
   /client-feature-flags/v1/debug/mock-data:
     get:
@@ -3860,18 +3860,18 @@ paths:
           content:
             application/json:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: object
             application/x-yaml:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: object
             application/x-msgpack:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: object
   /client-feature-flags/v1/debug/mock-mode:
     delete:
@@ -3924,18 +3924,18 @@ paths:
           content:
             application/json:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: object
             application/x-yaml:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: object
             application/x-msgpack:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: object
   '/client-feature-flags/v1/debug/overrides/flags/{namespace}/{flag}':
     delete:
@@ -3961,18 +3961,18 @@ paths:
           content:
             application/json:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: object
             application/x-yaml:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: object
             application/x-msgpack:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: object
     put:
       tags:
@@ -4002,18 +4002,18 @@ paths:
           content:
             application/json:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: object
             application/x-yaml:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: object
             application/x-msgpack:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: object
   '/client-feature-flags/v1/flags/{namespace}/{flag}':
     get:
@@ -4139,18 +4139,18 @@ paths:
           content:
             application/json:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: object
             application/x-yaml:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: object
             application/x-msgpack:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: object
     post:
       tags:
@@ -4167,18 +4167,18 @@ paths:
         content:
           application/json:
             schema:
-              type: array
-              items:
+              type: object
+              additionalProperties:
                 type: object
           application/x-yaml:
             schema:
-              type: array
-              items:
+              type: object
+              additionalProperties:
                 type: object
           application/x-msgpack:
             schema:
-              type: array
-              items:
+              type: object
+              additionalProperties:
                 type: object
       responses:
         '204':
@@ -4220,18 +4220,18 @@ paths:
           content:
             application/json:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: object
             application/x-yaml:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: object
             application/x-msgpack:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: object
     post:
       tags:
@@ -4248,18 +4248,18 @@ paths:
         content:
           application/json:
             schema:
-              type: array
-              items:
+              type: object
+              additionalProperties:
                 type: object
           application/x-yaml:
             schema:
-              type: array
-              items:
+              type: object
+              additionalProperties:
                 type: object
           application/x-msgpack:
             schema:
-              type: array
-              items:
+              type: object
+              additionalProperties:
                 type: object
       responses:
         '204':
@@ -4287,18 +4287,18 @@ paths:
           content:
             application/json:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: object
             application/x-yaml:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: object
             application/x-msgpack:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: object
     post:
       tags:
@@ -4320,18 +4320,18 @@ paths:
         content:
           application/json:
             schema:
-              type: array
-              items:
+              type: object
+              additionalProperties:
                 type: object
           application/x-yaml:
             schema:
-              type: array
-              items:
+              type: object
+              additionalProperties:
                 type: object
           application/x-msgpack:
             schema:
-              type: array
-              items:
+              type: object
+              additionalProperties:
                 type: object
       responses:
         '204':
@@ -4364,18 +4364,18 @@ paths:
           content:
             application/json:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: object
             application/x-yaml:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: object
             application/x-msgpack:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: object
     post:
       tags:
@@ -4402,18 +4402,18 @@ paths:
         content:
           application/json:
             schema:
-              type: array
-              items:
+              type: object
+              additionalProperties:
                 type: object
           application/x-yaml:
             schema:
-              type: array
-              items:
+              type: object
+              additionalProperties:
                 type: object
           application/x-msgpack:
             schema:
-              type: array
-              items:
+              type: object
+              additionalProperties:
                 type: object
       responses:
         '204':
@@ -4456,18 +4456,18 @@ paths:
           content:
             application/json:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: object
             application/x-yaml:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: object
             application/x-msgpack:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: object
   /disambiguation/v1/magic-link:
     post:
@@ -5189,18 +5189,18 @@ paths:
         content:
           application/json:
             schema:
-              type: array
-              items:
+              type: object
+              additionalProperties:
                 type: object
           application/x-yaml:
             schema:
-              type: array
-              items:
+              type: object
+              additionalProperties:
                 type: object
           application/x-msgpack:
             schema:
-              type: array
-              items:
+              type: object
+              additionalProperties:
                 type: object
       responses:
         '204':
@@ -5258,18 +5258,18 @@ paths:
           content:
             application/json:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: object
             application/x-yaml:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: object
             application/x-msgpack:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: object
   /kr-account/config/v1/config:
     get:
@@ -8299,18 +8299,18 @@ paths:
           content:
             application/json:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: object
             application/x-yaml:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: object
             application/x-msgpack:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: object
     put:
       tags:
@@ -8327,18 +8327,18 @@ paths:
         content:
           application/json:
             schema:
-              type: array
-              items:
+              type: object
+              additionalProperties:
                 type: object
           application/x-yaml:
             schema:
-              type: array
-              items:
+              type: object
+              additionalProperties:
                 type: object
           application/x-msgpack:
             schema:
-              type: array
-              items:
+              type: object
+              additionalProperties:
                 type: object
       responses:
         '200':
@@ -8346,18 +8346,18 @@ paths:
           content:
             application/json:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: object
             application/x-yaml:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: object
             application/x-msgpack:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: object
   '/player-preferences/v1/data/{type}':
     get:
@@ -8377,18 +8377,18 @@ paths:
           content:
             application/json:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: object
             application/x-yaml:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: object
             application/x-msgpack:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: object
     put:
       tags:
@@ -8412,18 +8412,18 @@ paths:
           content:
             application/json:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: object
             application/x-yaml:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: object
             application/x-msgpack:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: object
   /player-preferences/v1/ready:
     get:
@@ -8493,18 +8493,18 @@ paths:
           content:
             application/json:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   $ref: '#/components/schemas/PlayerReportingLocalizedReporterFeedbackMessage'
             application/x-yaml:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   $ref: '#/components/schemas/PlayerReportingLocalizedReporterFeedbackMessage'
             application/x-msgpack:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   $ref: '#/components/schemas/PlayerReportingLocalizedReporterFeedbackMessage'
   /player-reporting/v1/reporter-feedback/ack:
     post:
@@ -9000,18 +9000,18 @@ paths:
           content:
             application/json:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: object
             application/x-yaml:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: object
             application/x-msgpack:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: object
     put:
       tags:
@@ -9033,18 +9033,18 @@ paths:
         content:
           application/json:
             schema:
-              type: array
-              items:
+              type: object
+              additionalProperties:
                 type: object
           application/x-yaml:
             schema:
-              type: array
-              items:
+              type: object
+              additionalProperties:
                 type: object
           application/x-msgpack:
             schema:
-              type: array
-              items:
+              type: object
+              additionalProperties:
                 type: object
       responses:
         '204':
@@ -9609,18 +9609,18 @@ paths:
           content:
             application/json:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   $ref: '#/components/schemas/ProductIntegrationDebugAppUpdateStatus'
             application/x-yaml:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   $ref: '#/components/schemas/ProductIntegrationDebugAppUpdateStatus'
             application/x-msgpack:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   $ref: '#/components/schemas/ProductIntegrationDebugAppUpdateStatus'
   '/product-integration/v1/debug/app-update/statuses/{sessionId}':
     get:
@@ -9877,18 +9877,18 @@ paths:
           content:
             application/json:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   $ref: '#/components/schemas/ProductLocalizationProductLocalizationData'
             application/x-yaml:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   $ref: '#/components/schemas/ProductLocalizationProductLocalizationData'
             application/x-msgpack:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   $ref: '#/components/schemas/ProductLocalizationProductLocalizationData'
   '/product-localization/v1/products/{productId}/patchlines/{patchlineId}/translations/{locale}':
     get:
@@ -9918,18 +9918,18 @@ paths:
           content:
             application/json:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: string
             application/x-yaml:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: string
             application/x-msgpack:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: string
   '/product-localization/v1/products/{productId}/translations/{locale}':
     get:
@@ -9954,18 +9954,18 @@ paths:
           content:
             application/json:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: string
             application/x-yaml:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: string
             application/x-msgpack:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: string
   /product-localization/v1/translate:
     post:
@@ -10102,18 +10102,18 @@ paths:
           content:
             application/json:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: object
             application/x-yaml:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: object
             application/x-msgpack:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: object
   /product-metadata/v1/debug/mock-mode:
     delete:
@@ -10426,18 +10426,18 @@ paths:
           content:
             application/json:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   $ref: '#/components/schemas/ProductSessionSession'
             application/x-yaml:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   $ref: '#/components/schemas/ProductSessionSession'
             application/x-msgpack:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   $ref: '#/components/schemas/ProductSessionSession'
   '/product-session/v1/external-sessions/{session-id}':
     get:
@@ -10641,18 +10641,18 @@ paths:
           content:
             application/json:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   $ref: '#/components/schemas/ProductSessionSession'
             application/x-yaml:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   $ref: '#/components/schemas/ProductSessionSession'
             application/x-msgpack:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   $ref: '#/components/schemas/ProductSessionSession'
   '/product-session/v1/sessions/{session-id}':
     delete:
@@ -10683,18 +10683,18 @@ paths:
           content:
             application/json:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: object
             application/x-yaml:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: object
             application/x-msgpack:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: object
     get:
       tags:
@@ -10748,18 +10748,18 @@ paths:
           content:
             application/json:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: object
             application/x-yaml:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: object
             application/x-msgpack:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: object
   /product-session/v2/heartbeat:
     post:
@@ -11900,18 +11900,18 @@ paths:
         content:
           application/json:
             schema:
-              type: array
-              items:
+              type: object
+              additionalProperties:
                 type: object
           application/x-yaml:
             schema:
-              type: array
-              items:
+              type: object
+              additionalProperties:
                 type: object
           application/x-msgpack:
             schema:
-              type: array
-              items:
+              type: object
+              additionalProperties:
                 type: object
       responses:
         '204':
@@ -12552,18 +12552,18 @@ paths:
           content:
             application/json:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: object
             application/x-yaml:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: object
             application/x-msgpack:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: object
   /riotclient/ux-load-complete:
     put:
@@ -14742,18 +14742,18 @@ paths:
           content:
             application/json:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: object
             application/x-yaml:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: object
             application/x-msgpack:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: object
     put:
       tags:
@@ -14765,18 +14765,18 @@ paths:
         content:
           application/json:
             schema:
-              type: array
-              items:
+              type: object
+              additionalProperties:
                 type: object
           application/x-yaml:
             schema:
-              type: array
-              items:
+              type: object
+              additionalProperties:
                 type: object
           application/x-msgpack:
             schema:
-              type: array
-              items:
+              type: object
+              additionalProperties:
                 type: object
       responses:
         '204':
@@ -15184,18 +15184,18 @@ paths:
         content:
           application/json:
             schema:
-              type: array
-              items:
+              type: object
+              additionalProperties:
                 type: object
           application/x-yaml:
             schema:
-              type: array
-              items:
+              type: object
+              additionalProperties:
                 type: object
           application/x-msgpack:
             schema:
-              type: array
-              items:
+              type: object
+              additionalProperties:
                 type: object
       responses:
         '200':
@@ -15950,18 +15950,18 @@ paths:
           content:
             application/json:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: object
             application/x-yaml:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: object
             application/x-msgpack:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: object
   /rso-mobile-ui/v1/debug/sdk:
     post:
@@ -15972,18 +15972,18 @@ paths:
         content:
           application/json:
             schema:
-              type: array
-              items:
+              type: object
+              additionalProperties:
                 type: object
           application/x-yaml:
             schema:
-              type: array
-              items:
+              type: object
+              additionalProperties:
                 type: object
           application/x-msgpack:
             schema:
-              type: array
-              items:
+              type: object
+              additionalProperties:
                 type: object
       responses:
         '200':
@@ -15991,18 +15991,18 @@ paths:
           content:
             application/json:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: object
             application/x-yaml:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: object
             application/x-msgpack:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: object
   /rso-mobile-ui/v1/debug/webview/decide-navigation-policy:
     post:
@@ -16013,18 +16013,18 @@ paths:
         content:
           application/json:
             schema:
-              type: array
-              items:
+              type: object
+              additionalProperties:
                 type: object
           application/x-yaml:
             schema:
-              type: array
-              items:
+              type: object
+              additionalProperties:
                 type: object
           application/x-msgpack:
             schema:
-              type: array
-              items:
+              type: object
+              additionalProperties:
                 type: object
       responses:
         '200':
@@ -16048,18 +16048,18 @@ paths:
         content:
           application/json:
             schema:
-              type: array
-              items:
+              type: object
+              additionalProperties:
                 type: object
           application/x-yaml:
             schema:
-              type: array
-              items:
+              type: object
+              additionalProperties:
                 type: object
           application/x-msgpack:
             schema:
-              type: array
-              items:
+              type: object
+              additionalProperties:
                 type: object
       responses:
         '204':
@@ -16074,18 +16074,18 @@ paths:
         content:
           application/json:
             schema:
-              type: array
-              items:
+              type: object
+              additionalProperties:
                 type: object
           application/x-yaml:
             schema:
-              type: array
-              items:
+              type: object
+              additionalProperties:
                 type: object
           application/x-msgpack:
             schema:
-              type: array
-              items:
+              type: object
+              additionalProperties:
                 type: object
       responses:
         '200':
@@ -16093,18 +16093,18 @@ paths:
           content:
             application/json:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: object
             application/x-yaml:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: object
             application/x-msgpack:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: object
   /rso-mobile-ui/v1/debug/webview/load-error-page:
     post:
@@ -16115,18 +16115,18 @@ paths:
         content:
           application/json:
             schema:
-              type: array
-              items:
+              type: object
+              additionalProperties:
                 type: object
           application/x-yaml:
             schema:
-              type: array
-              items:
+              type: object
+              additionalProperties:
                 type: object
           application/x-msgpack:
             schema:
-              type: array
-              items:
+              type: object
+              additionalProperties:
                 type: object
       responses:
         '200':
@@ -16134,18 +16134,18 @@ paths:
           content:
             application/json:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: object
             application/x-yaml:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: object
             application/x-msgpack:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: object
   /rso-mobile-ui/v1/debug/webview/simulate-onfinish:
     post:
@@ -16157,18 +16157,18 @@ paths:
         content:
           application/json:
             schema:
-              type: array
-              items:
+              type: object
+              additionalProperties:
                 type: object
           application/x-yaml:
             schema:
-              type: array
-              items:
+              type: object
+              additionalProperties:
                 type: object
           application/x-msgpack:
             schema:
-              type: array
-              items:
+              type: object
+              additionalProperties:
                 type: object
       responses:
         '200':
@@ -16176,18 +16176,18 @@ paths:
           content:
             application/json:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: object
             application/x-yaml:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: object
             application/x-msgpack:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: object
   /rso-mobile-ui/v1/delete-account:
     post:
@@ -16201,18 +16201,18 @@ paths:
           content:
             application/json:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: object
             application/x-yaml:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: object
             application/x-msgpack:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: object
   /rso-mobile-ui/v1/delete-account/status:
     get:
@@ -16539,18 +16539,18 @@ paths:
           content:
             application/json:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: object
             application/x-yaml:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: object
             application/x-msgpack:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: object
   '/rso-mobile-ui/v1/vng/register/{productId}':
     post:
@@ -16570,18 +16570,18 @@ paths:
           content:
             application/json:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: object
             application/x-yaml:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: object
             application/x-msgpack:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: object
   /rso-mobile-ui/v1/vng/status:
     get:
@@ -16778,18 +16778,18 @@ paths:
           content:
             application/json:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: object
             application/x-yaml:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: object
             application/x-msgpack:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: object
   /swagger/v2/swagger.json:
     get:
@@ -16803,18 +16803,18 @@ paths:
           content:
             application/json:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: object
             application/x-yaml:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: object
             application/x-msgpack:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: object
   /swagger/v3/openapi.json:
     get:
@@ -16834,18 +16834,18 @@ paths:
           content:
             application/json:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: object
             application/x-yaml:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: object
             application/x-msgpack:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   type: object
   /telemetry/v1/application-start-time:
     get:
@@ -16881,18 +16881,18 @@ paths:
           content:
             application/json:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   $ref: '#/components/schemas/CollectorAvailability'
             application/x-yaml:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   $ref: '#/components/schemas/CollectorAvailability'
             application/x-msgpack:
               schema:
-                type: array
-                items:
+                type: object
+                additionalProperties:
                   $ref: '#/components/schemas/CollectorAvailability'
   '/telemetry/v1/common-data/{key}':
     post:
@@ -16933,18 +16933,18 @@ paths:
         content:
           application/json:
             schema:
-              type: array
-              items:
+              type: object
+              additionalProperties:
                 type: object
           application/x-yaml:
             schema:
-              type: array
-              items:
+              type: object
+              additionalProperties:
                 type: object
           application/x-msgpack:
             schema:
-              type: array
-              items:
+              type: object
+              additionalProperties:
                 type: object
       responses:
         '204':
@@ -17034,18 +17034,18 @@ paths:
         content:
           application/json:
             schema:
-              type: array
-              items:
+              type: object
+              additionalProperties:
                 type: object
           application/x-yaml:
             schema:
-              type: array
-              items:
+              type: object
+              additionalProperties:
                 type: object
           application/x-msgpack:
             schema:
-              type: array
-              items:
+              type: object
+              additionalProperties:
                 type: object
       responses:
         '204':
@@ -18608,8 +18608,8 @@ components:
       type: object
       properties:
         hopePayload:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: string
         localizationKey:
           type: string
@@ -18626,12 +18626,12 @@ components:
         displayType:
           $ref: '#/components/schemas/AntiAddictionDisplayType'
         hopePayload:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: string
         localizationContext:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: string
         localizationKey:
           type: string
@@ -18690,8 +18690,8 @@ components:
         kind:
           $ref: '#/components/schemas/AppCommandCommandKind'
         payload:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: ''
     AppCommandCommandAuthV1:
       type: object
@@ -18939,15 +18939,15 @@ components:
           type: integer
           format: int32
         closed-conversations:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: integer
             format: int64
         friendRequestToastsDisabled:
           type: boolean
         hidden-conversations:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: integer
             format: int64
         linkClickWarningEnabled:
@@ -18957,8 +18957,8 @@ components:
         moreUnreadsEnabled:
           type: boolean
         muted-conversations:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: integer
             format: int8
         recentlyPlayedFirstOpen:
@@ -18966,8 +18966,8 @@ components:
         recentlyPlayedOpen:
           type: boolean
         roster-group-collapsed:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: boolean
         showWhenTypingEnabled:
           type: boolean
@@ -19015,8 +19015,8 @@ components:
       type: object
       properties:
         blocks:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             $ref: '#/components/schemas/ChatChatBlockedPlayer'
     ChatBlockPid:
       type: object
@@ -19752,8 +19752,8 @@ components:
       type: object
       properties:
         key:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: string
         token:
           type: string
@@ -19956,8 +19956,8 @@ components:
       type: object
       properties:
         data:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: ''
         modified:
           type: integer
@@ -20153,8 +20153,8 @@ components:
       type: object
       properties:
         products:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             $ref: '#/components/schemas/ChatProductSessionState'
     ChatSocialData:
       type: object
@@ -20256,8 +20256,8 @@ components:
       type: object
       properties:
         settings:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: ''
         shouldSave:
           type: boolean
@@ -20347,18 +20347,18 @@ components:
       type: object
       properties:
         affinityDomains:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: string
         affinityEnabled:
           type: boolean
         affinityHints:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: string
         affinityHosts:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: string
         allowBadCert:
           type: boolean
@@ -20437,8 +20437,8 @@ components:
       type: object
       properties:
         data:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: 'map of '
         params:
           $ref: '#/components/schemas/ClientConfigConfigParams'
@@ -20582,8 +20582,8 @@ components:
       type: object
       properties:
         sessions:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             $ref: '#/components/schemas/ClientConfigDepInjectorSession'
         updateType:
           $ref: '#/components/schemas/ClientConfigDepInjectorUpdateType'
@@ -20676,8 +20676,8 @@ components:
       type: object
       properties:
         sessions:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             $ref: '#/components/schemas/ClientConfigSession'
         updateType:
           $ref: '#/components/schemas/ClientConfigUpdateType'
@@ -20706,32 +20706,32 @@ components:
       type: object
       properties:
         configuredFeatureFlags:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: ''
         configuredFeatureFlagsAvailable:
           type: boolean
         featureFlags:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: ''
         featureFlagsAvailable:
           type: boolean
         installSettings:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: ''
         installSettingsAvailable:
           type: boolean
         playerCohorts:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: ''
         playerCohortsAvailable:
           type: boolean
         stickyFlagCohortsActiveAtBoot:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: string
         stickyFlagCohortsInactiveAtBoot:
           type: array
@@ -21029,8 +21029,8 @@ components:
       type: object
       properties:
         data:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: ''
         type:
           type: string
@@ -21177,8 +21177,8 @@ components:
         display_name:
           type: string
         image_urls:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: string
         platform_id:
           type: string
@@ -21251,8 +21251,8 @@ components:
       type: object
       properties:
         context:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: ''
         required:
           type: boolean
@@ -21374,15 +21374,15 @@ components:
       type: object
       properties:
         config:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: ''
     GameSessionConfigV3PartnerAuthConfig:
       type: object
       properties:
         config:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: ''
     GameSessionConfigV3ReadyState:
       type: object
@@ -21433,8 +21433,8 @@ components:
       type: object
       properties:
         claims:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: ''
         product:
           type: string
@@ -21473,8 +21473,8 @@ components:
       type: object
       properties:
         claims:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: ''
         clientName:
           type: string
@@ -21492,8 +21492,8 @@ components:
       type: object
       properties:
         bypassQueueClaims:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: ''
         bypassQueueToken:
           type: string
@@ -21504,8 +21504,8 @@ components:
         id:
           type: string
         loginQueueClaims:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: ''
         loginQueueToken:
           type: string
@@ -21517,8 +21517,8 @@ components:
           type: integer
           format: int64
         sessionClaims:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: ''
         sessionToken:
           type: string
@@ -22112,8 +22112,8 @@ components:
       type: object
       properties:
         gaWarningMessages:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             $ref: '#/components/schemas/GaWarningLocalizedWarningMessage'
     HomeBaseCountry:
       type: object
@@ -22242,8 +22242,8 @@ components:
       type: object
       properties:
         key:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: string
         token:
           type: string
@@ -22321,8 +22321,8 @@ components:
       type: object
       properties:
         data:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: ''
         lifecycleEventType:
           $ref: '#/components/schemas/LifecycleEventType'
@@ -22346,8 +22346,8 @@ components:
         state:
           $ref: '#/components/schemas/LifecycleStateAppRepairBindingState'
         subscribers:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: integer
             format: int32
     LifecycleStateAppRepairBindingState:
@@ -22365,8 +22365,8 @@ components:
         state:
           $ref: '#/components/schemas/HomeBaseCountry'
         subscribers:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: integer
             format: int32
     LoginPhase:
@@ -22636,8 +22636,8 @@ components:
       type: object
       properties:
         affinities:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: string
         product:
           type: string
@@ -22669,8 +22669,8 @@ components:
       type: object
       properties:
         affinities:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: string
         expiry:
           type: integer
@@ -22733,8 +22733,8 @@ components:
       type: object
       properties:
         affinities:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: string
         expiry:
           type: integer
@@ -23142,8 +23142,8 @@ components:
         metadataPath:
           type: string
         params:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: string
         seedPath:
           type: string
@@ -23243,8 +23243,8 @@ components:
         patch_requested:
           type: boolean
         shards_data:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: string
         user_cancelled_patching:
           type: boolean
@@ -23327,8 +23327,8 @@ components:
         path:
           type: string
         sieveLabels:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: string
         sieveProductId:
           type: string
@@ -23340,8 +23340,8 @@ components:
       type: object
       properties:
         patching_metadata:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             $ref: '#/components/schemas/PatchPatchSetMetadata'
     PatchPatchRequest:
       type: object
@@ -23355,8 +23355,8 @@ components:
         delete_foreign_paths:
           type: boolean
         headers:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: string
         max_download_speed:
           type: integer
@@ -23409,8 +23409,8 @@ components:
         cpuArch:
           type: string
         extraParams:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: string
         fromArtifactType:
           type: string
@@ -23489,8 +23489,8 @@ components:
         fast:
           type: boolean
         headers:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: string
         stage:
           type: integer
@@ -23766,8 +23766,8 @@ components:
         configuration:
           $ref: '#/components/schemas/PatchProxyConfigurationResource'
         dependency_status:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             $ref: '#/components/schemas/ThirdPartyDependencyStatus'
         patch_requested:
           type: boolean
@@ -23776,8 +23776,8 @@ components:
         repair_code:
           $ref: '#/components/schemas/PatchProxyRepairCode'
         shards_data:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: string
         user_cancelled_patching:
           type: boolean
@@ -23799,8 +23799,8 @@ components:
         configuration_status:
           $ref: '#/components/schemas/PatchProxyConfigurationStatus'
         content_paths:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: string
         default_theme_manifest:
           type: string
@@ -23809,8 +23809,8 @@ components:
           items:
             $ref: '#/components/schemas/PatchProxyDependency'
         dependencyStates:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             $ref: '#/components/schemas/PatchProxyDependencyState'
         disallow_32bit_windows:
           type: boolean
@@ -23874,8 +23874,8 @@ components:
         settings:
           type: object
         shards_data:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: string
         should_repair:
           type: boolean
@@ -24135,8 +24135,8 @@ components:
           items:
             type: string
         headers:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: string
         manifest_url:
           type: string
@@ -24195,8 +24195,8 @@ components:
           items:
             type: string
         headers:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: string
     PatchSeedRequest:
       type: object
@@ -24210,8 +24210,8 @@ components:
         delete_foreign_paths:
           type: boolean
         headers:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: string
         max_download_speed:
           type: integer
@@ -24264,8 +24264,8 @@ components:
         deleteForeignPaths:
           type: boolean
         headers:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: string
     PatchStartPartialRepairRequest:
       type: object
@@ -24277,15 +24277,15 @@ components:
           items:
             type: string
         headers:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: string
     PatchStartPatchingOrSeedingRequest:
       type: object
       properties:
         headers:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: string
         stage:
           type: integer
@@ -24298,8 +24298,8 @@ components:
         fast:
           type: boolean
         headers:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: string
         stage:
           type: integer
@@ -24466,8 +24466,8 @@ components:
       type: object
       properties:
         products:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             $ref: '#/components/schemas/PayMobileProduct'
         status:
           $ref: '#/components/schemas/PayMobileProductListStatus'
@@ -24757,8 +24757,8 @@ components:
           items:
             type: string
         required_fields_hints:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: ''
     PlatformUiIdToken:
       type: object
@@ -24841,8 +24841,8 @@ components:
           items:
             $ref: '#/components/schemas/PlatformUiSuggestedAction'
         userInfo:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: ''
     PlatformUiPlayerSessionStateType:
       enum:
@@ -24914,8 +24914,8 @@ components:
           items:
             type: string
         required_fields_hints:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: ''
     PlatformUistatus:
       enum:
@@ -25042,8 +25042,8 @@ components:
       type: object
       properties:
         context:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: ''
         required:
           type: boolean
@@ -25387,8 +25387,8 @@ components:
       type: object
       properties:
         affinities:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: string
         product:
           type: string
@@ -25420,8 +25420,8 @@ components:
       type: object
       properties:
         affinities:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: string
         expiry:
           type: integer
@@ -25484,8 +25484,8 @@ components:
       type: object
       properties:
         affinities:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: string
         expiry:
           type: integer
@@ -25510,8 +25510,8 @@ components:
       type: object
       properties:
         affinities:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: string
         product:
           type: string
@@ -25878,8 +25878,8 @@ components:
           items:
             type: string
         required_fields_hints:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: ''
     PlayerSessionLifecycleIdToken:
       type: object
@@ -25985,8 +25985,8 @@ components:
       type: object
       properties:
         affinities:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: string
         expiry:
           type: integer
@@ -26022,8 +26022,8 @@ components:
           items:
             $ref: '#/components/schemas/PlayerSessionLifecycleSuggestedAction'
         userInfo:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: ''
     PlayerSessionLifecyclePlayerSessionStateType:
       enum:
@@ -26162,8 +26162,8 @@ components:
           items:
             type: string
         required_fields_hints:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: ''
     PlayerSessionLifecycleSuccessResponseDetails:
       type: object
@@ -26308,12 +26308,12 @@ components:
         hasBundledAssets:
           type: boolean
         implements:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: string
         perLocaleAssetBundles:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: object
         subtype:
           type: string
@@ -26360,8 +26360,8 @@ components:
         isDynamicLibraryLoaded:
           type: boolean
         mountedAssetBundles:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: string
         orderDynamicLibraryInited:
           type: integer
@@ -26783,8 +26783,8 @@ components:
           items:
             $ref: '#/components/schemas/ProductLocalizationContentCookies'
         content_paths:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: string
         full_name:
           type: string
@@ -26811,15 +26811,15 @@ components:
         name:
           type: string
         patchlines:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             $ref: '#/components/schemas/ProductLocalizationPatchlineMetadata'
     ProductLocalizationProductMetadataMap:
       type: object
       properties:
         products:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             $ref: '#/components/schemas/ProductLocalizationProductMetadata'
     ProductLocalizationTranslateRequest:
       type: object
@@ -26871,8 +26871,8 @@ components:
           type: integer
           format: int32
         translations:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: string
     ProductMetadataAppStoreUpdateInfo:
       type: object
@@ -26948,16 +26948,16 @@ components:
         parseRequired:
           type: boolean
         patchlines:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             $ref: '#/components/schemas/ProductMetadataPatchlineMetadata'
         products:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             $ref: '#/components/schemas/ProductMetadataProductDefinition'
         rawConfig:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: ''
     ProductMetadataDependency:
       type: object
@@ -27027,8 +27027,8 @@ components:
         path:
           type: string
         sieveLabels:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: string
         sieveProductId:
           type: string
@@ -27082,8 +27082,8 @@ components:
         patch_url:
           type: string
         patching:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             $ref: '#/components/schemas/ProductMetadataPatchSetMetadata'
         region_data:
           $ref: '#/components/schemas/ProductMetadataRegionDataResource'
@@ -27129,8 +27129,8 @@ components:
           items:
             $ref: '#/components/schemas/ProductMetadataContentCookies'
         content_paths:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: string
         default_theme_manifest:
           type: string
@@ -27180,8 +27180,8 @@ components:
         locale_data:
           $ref: '#/components/schemas/ProductMetadataLocaleDataResource'
         matching_shards_data:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: string
         parent_patchline_id:
           type: string
@@ -27192,8 +27192,8 @@ components:
         patch_url:
           type: string
         patching_metadata:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             $ref: '#/components/schemas/ProductMetadataPatchSetMetadata'
         path_name:
           type: string
@@ -27260,8 +27260,8 @@ components:
       type: object
       properties:
         affinities:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: string
         product:
           type: string
@@ -27291,8 +27291,8 @@ components:
       type: object
       properties:
         productDefinitions:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             $ref: '#/components/schemas/ProductMetadataProductDefinition'
     ProductMetadataProductMetadata:
       type: object
@@ -27302,15 +27302,15 @@ components:
         name:
           type: string
         patchlines:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             $ref: '#/components/schemas/ProductMetadataPatchlineMetadata'
     ProductMetadataProductMetadataMap:
       type: object
       properties:
         products:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             $ref: '#/components/schemas/ProductMetadataProductMetadata'
     ProductMetadataPublishState:
       enum:
@@ -27358,8 +27358,8 @@ components:
       type: object
       properties:
         secondaryPatchlines:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             $ref: '#/components/schemas/ProductMetadataSecondaryPatchlineMetadata'
     ProductMetadataSecondaryPatchlineMetadata:
       type: object
@@ -27993,8 +27993,8 @@ components:
         state:
           type: object
         subscribers:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: integer
             format: int32
     RiotClientLifecycleStatePlayerAffinityProductToken:
@@ -28003,8 +28003,8 @@ components:
         state:
           $ref: '#/components/schemas/PlayerAffinityProductToken'
         subscribers:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: integer
             format: int32
     RiotClientLifecycleStateRegionLocale:
@@ -28061,8 +28061,8 @@ components:
       type: object
       properties:
         additionalFields:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: ''
         error:
           type: string
@@ -28296,8 +28296,8 @@ components:
         config_type:
           $ref: '#/components/schemas/RiotStatusConfigType'
         content_paths:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: string
         full_name:
           type: string
@@ -28313,15 +28313,15 @@ components:
         name:
           type: string
         patchlines:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             $ref: '#/components/schemas/RiotStatusPatchlineMetadata'
     RiotStatusProductMetadataMap:
       type: object
       properties:
         products:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             $ref: '#/components/schemas/RiotStatusProductMetadata'
     RmsMessage:
       type: object
@@ -28717,8 +28717,8 @@ components:
         state:
           $ref: '#/components/schemas/RnetProductRegistryLifecycleStateAppRepairBindingState'
         subscribers:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: integer
             format: int32
     RnetProductRegistryLifecycleStateAppRepairBindingState:
@@ -28736,8 +28736,8 @@ components:
         state:
           $ref: '#/components/schemas/RnetProductRegistryHomeBaseCountry'
         subscribers:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: integer
             format: int32
     RnetProductRegistryLifecycleStatePlayerAffinityProductToken:
@@ -28746,8 +28746,8 @@ components:
         state:
           $ref: '#/components/schemas/RnetProductRegistryPlayerAffinityProductToken'
         subscribers:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: integer
             format: int32
     RnetProductRegistryLifecycleStateRegionLocale:
@@ -28756,8 +28756,8 @@ components:
         state:
           $ref: '#/components/schemas/RnetProductRegistryRegionLocale'
         subscribers:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: integer
             format: int32
     RnetProductRegistryLocaleDataResource:
@@ -28818,8 +28818,8 @@ components:
         combined_patch_state:
           $ref: '#/components/schemas/RnetProductRegistryCombinedPatchState'
         dependency_status:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             $ref: '#/components/schemas/ThirdPartyDependencyStatus'
         patch_requested:
           type: boolean
@@ -28828,8 +28828,8 @@ components:
         repair_code:
           $ref: '#/components/schemas/RnetProductRegistryRepairCode'
         shards_data:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: string
         user_cancelled_patching:
           type: boolean
@@ -28855,8 +28855,8 @@ components:
           items:
             $ref: '#/components/schemas/ProductRegistryContentCookies'
         content_paths:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: string
         default_theme_manifest:
           type: string
@@ -28865,8 +28865,8 @@ components:
           items:
             $ref: '#/components/schemas/RnetProductRegistryDependency'
         dependencyStates:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             $ref: '#/components/schemas/RnetProductRegistryDependencyState'
         disallow_32bit_windows:
           type: boolean
@@ -28930,8 +28930,8 @@ components:
         settings:
           type: object
         shards_data:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: string
         theme_manifest:
           type: string
@@ -28965,8 +28965,8 @@ components:
           items:
             $ref: '#/components/schemas/ProductRegistryContentCookies'
         content_paths:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: string
         default_theme_manifest:
           type: string
@@ -29016,8 +29016,8 @@ components:
         locale_data:
           $ref: '#/components/schemas/RnetProductRegistryLocaleDataResource'
         matching_shards_data:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: string
         parent_patchline_id:
           type: string
@@ -29088,8 +29088,8 @@ components:
         delete_foreign_paths:
           type: boolean
         headers:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: string
         repair:
           type: boolean
@@ -29145,8 +29145,8 @@ components:
       type: object
       properties:
         affinities:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: string
         product:
           type: string
@@ -29208,8 +29208,8 @@ components:
         fast:
           type: boolean
         headers:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: string
         stage:
           type: integer
@@ -29265,8 +29265,8 @@ components:
       type: object
       properties:
         productDefinitions:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             $ref: '#/components/schemas/RnetProductRegistryProductDefinition'
     RnetProductRegistryProductInstallStateResource:
       type: object
@@ -29276,8 +29276,8 @@ components:
         id:
           type: string
         patchline_install_states:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             $ref: '#/components/schemas/RnetProductRegistryInstallState'
     RnetProductRegistryProductMetadata:
       type: object
@@ -29287,15 +29287,15 @@ components:
         name:
           type: string
         patchlines:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             $ref: '#/components/schemas/RnetProductRegistryPatchlineMetadata'
     RnetProductRegistryProductMetadataMap:
       type: object
       properties:
         products:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             $ref: '#/components/schemas/RnetProductRegistryProductMetadata'
     RnetProductRegistryProductPatchlineKey:
       type: object
@@ -29545,8 +29545,8 @@ components:
           type: integer
           format: int32
         filteredWordCountsByLevel:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: integer
             format: int32
         locale:
@@ -29559,8 +29559,8 @@ components:
         region:
           type: string
         whitelistedWordCountsByLevel:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: integer
             format: int32
     RnetSelfUpdateBuildInfo:
@@ -29650,8 +29650,8 @@ components:
       type: object
       properties:
         headers:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: string
         url:
           type: string
@@ -29707,8 +29707,8 @@ components:
       type: object
       properties:
         context:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: ''
         required:
           type: boolean
@@ -29821,15 +29821,15 @@ components:
       type: object
       properties:
         config:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: ''
     RsoAuthConfigV3PartnerAuthConfig:
       type: object
       properties:
         config:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: ''
     RsoAuthConfigV3ReadyState:
       type: object
@@ -30200,8 +30200,8 @@ components:
           items:
             type: string
         required_fields_hints:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: ''
     RsoAuthenticatorV1LoginRequest:
       type: object
@@ -30347,8 +30347,8 @@ components:
           items:
             type: string
         required_fields_hints:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: ''
     RsoAuthenticatorV1SuccessResponseDetails:
       type: object
@@ -31035,12 +31035,12 @@ components:
       type: object
       properties:
         options:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: ''
         parameters:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: ''
         requestId:
           type: integer
@@ -31295,8 +31295,8 @@ components:
           items:
             type: string
         required_fields_hints:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: ''
     RsoMobileUiRsoAuthenticatorMultifactorInput:
       type: object
@@ -31368,8 +31368,8 @@ components:
           items:
             type: string
         required_fields_hints:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: ''
     RsoMobileUiRsoAuthenticatorSuccessResponseDetails:
       type: object
@@ -31432,8 +31432,8 @@ components:
       type: object
       properties:
         config:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: ''
     RsoMobileUiRSOAuthorizationTrustLevel:
       enum:
@@ -31517,8 +31517,8 @@ components:
       type: object
       properties:
         fields:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: ''
         message:
           type: string
@@ -31593,8 +31593,8 @@ components:
       type: object
       properties:
         body:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: ''
         id:
           type: string
@@ -31608,8 +31608,8 @@ components:
       type: object
       properties:
         body:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: ''
         code:
           type: integer
@@ -31629,8 +31629,8 @@ components:
         url:
           type: string
         value:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: ''
     RsoMobileUiUIWebViewOutgoingResourceRequest:
       type: object
@@ -31667,8 +31667,8 @@ components:
         error:
           type: string
         fields:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: ''
         success:
           type: boolean
@@ -31717,8 +31717,8 @@ components:
       type: object
       properties:
         fields:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: object
         message:
           type: string
@@ -31870,8 +31870,8 @@ components:
         hash:
           type: string
         headers:
-          type: array
-          items:
+          type: object
+          additionalProperties:
             type: string
         optional:
           type: boolean

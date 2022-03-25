@@ -110,7 +110,7 @@ foreach (var (typeIdentifier, typeSchema) in helpConsole.Types.OrderBy(t => t.Ke
     else if (typeSchema.Values != null) // TODO: oneOf string, integer
     {
         schema.Type = "string";
-        schema.Enum = typeSchema.Values.Select(v => (IOpenApiAny) new OpenApiString(v.Name)).ToList();
+        schema.Enum.AddStrings(typeSchema.Values.Select(v => v.Name));
     }
     else
     {

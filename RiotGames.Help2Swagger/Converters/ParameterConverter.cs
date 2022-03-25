@@ -1,7 +1,7 @@
 ﻿using System.Diagnostics;
+using Microsoft.OpenApi;
 using Microsoft.OpenApi.Models;
 using RiotGames.Help;
-using RiotGames.Help2Swagger.Extensions;
 
 namespace RiotGames.Help2Swagger.Converters;
 
@@ -9,7 +9,7 @@ internal static class ParameterConverter
 {
     private static readonly string[] queryTypes =
     {
-        "string", "uint32", "uint64", "int32", "int64", "double", "float", "bool", 
+        "string", "uint32", "uint64", "int32", "int64", "double", "float", "bool",
         "vector of string", "map of string", "vector of uint64",
         "" // RCS
         //, "vector of object", "vector of uint32",
@@ -34,7 +34,7 @@ internal static class ParameterConverter
 
         if (!string.IsNullOrEmpty(argumentSchema.Description))
             parameter.Description = argumentSchema.Description;
-        
+
         if (headerParameters.Contains(argumentIdentifier))
         {
             parameter.In = ParameterLocation.Header;
@@ -46,7 +46,7 @@ internal static class ParameterConverter
         }
         else if (functionSchema.Arguments.Length ==
                  functionSchema.Arguments.Count(a => queryTypes.Contains(a.Single().Value.Type as string)) &&
-                                                    queryTypes.Contains(argumentSchema.Type as string))
+                 queryTypes.Contains(argumentSchema.Type as string))
         {
             parameter.In = ParameterLocation.Query;
         }
@@ -141,7 +141,8 @@ internal static class ParameterConverter
 
                 break;
             case Dictionary<string, HelpConsoleType> typeValue:
-                if (typeValue.Single().Value.Values != null || openApi.Components.Schemas[typeValue.Keys.Single()].Enum.Any()) // Enum
+                if (typeValue.Single().Value.Values != null ||
+                    openApi.Components.Schemas[typeValue.Keys.Single()].Enum.Any()) // Enum
                 {
                     schema.Reference = new OpenApiReference {Type = ReferenceType.Schema, Id = typeValue.Single().Key};
                 }

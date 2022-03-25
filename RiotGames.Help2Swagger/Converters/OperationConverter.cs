@@ -1,6 +1,6 @@
-﻿using Microsoft.OpenApi.Models;
+﻿using Microsoft.OpenApi;
+using Microsoft.OpenApi.Models;
 using RiotGames.Help;
-using RiotGames.Help2Swagger.Extensions;
 
 namespace RiotGames.Help2Swagger.Converters;
 

@@ -180,7 +180,7 @@ internal static class SchemaConverter
 
                 break;
             case Dictionary<string, HelpConsoleType> dictionaryValue:
-                if (!openApi.Components.Schemas.Keys.Contains(dictionaryValue.Single().Key))
+                if (!openApi.Components.Schemas.ContainsKey(dictionaryValue.Single().Key))
                 {
                     Debugger.Break();
                     throw new Exception("Unexpected type name");

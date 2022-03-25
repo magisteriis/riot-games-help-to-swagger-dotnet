@@ -4,12 +4,10 @@ using System.Diagnostics;
 using System.Net.Http.Json;
 using Microsoft.OpenApi;
 using Microsoft.OpenApi.Any;
-using Microsoft.OpenApi.Extensions;
 using Microsoft.OpenApi.Models;
 using RiotGames.Help;
 using RiotGames.Help2Swagger;
 using RiotGames.Help2Swagger.Converters;
-using RiotGames.Help2Swagger.Extensions;
 
 Console.WriteLine("Help2Swagger");
 
@@ -42,6 +40,7 @@ switch (args.Length)
         {
             helpHttpLocations = new HelpHttpLocations(args[0], args[1]);
         }
+
         break;
     case 3:
         Console.WriteLine("Custom Help locations, and an output path set.");
@@ -60,17 +59,17 @@ var helpConsole = await client.GetFromJsonAsync<HelpConsoleDocument>(helpHttpLoc
 var helpFull = await client.GetFromJsonAsync<HelpFullDocument>(helpHttpLocations!.HelpFullUrl);
 
 OpenApiDocument openApi;
-if (helpHttpLocations.HelpFullUrl.AbsoluteUri.Contains("lcu/help")) 
+if (helpHttpLocations.HelpFullUrl.AbsoluteUri.Contains("lcu/help"))
     openApi = new LcuOpenApiDocument();
 else if (helpHttpLocations.HelpFullUrl.AbsoluteUri.Contains("rcs/help"))
     openApi = new RcsOpenApiDocument();
 else
-    openApi = new OpenApiDocument()
+    openApi = new OpenApiDocument
     {
         Info = new OpenApiInfo
         {
             Title = "",
-            Version = "1.0.0",
+            Version = "1.0.0"
         },
         Paths = new OpenApiPaths(),
         Components = new OpenApiComponents()
@@ -144,7 +143,7 @@ foreach (var urlFunctions in httpFunctionsByUrl.OrderBy(g => g.Key))
     foreach (var function in urlFunctions.OrderBy(f => f.Key))
     {
         var operation = OperationConverter.Convert(function, openApi, helpFull!);
-        pathObject.AddOperation(Enum.Parse<OperationType>(function.Value.HttpMethod!, true), operation);
+        pathObject.AddOperation(function.Value.HttpMethod!, operation);
     }
 
     openApi.Paths.Add(url, pathObject);
@@ -153,12 +152,8 @@ foreach (var urlFunctions in httpFunctionsByUrl.OrderBy(g => g.Key))
 foreach (var (path, operations) in openApi.Paths
              .Select(p => (p.Key, p.Value.Operations.Where(o => !o.Value.Tags.Any())))
              .Where(x => x.Item2.Any()))
-{
-    foreach (var operation in operations)
-    {
-        operation.Value.Tags.Add(new OpenApiTag {Name = path.Split('/', StringSplitOptions.RemoveEmptyEntries).First()});
-    }
-}
+foreach (var operation in operations)
+    operation.Value.Tags.Add(path.Split('/', StringSplitOptions.RemoveEmptyEntries).First());
 
 // Customize the tag sort order in Swagger UI
 openApi.Tags = openApi.Paths
@@ -180,18 +175,18 @@ if (outPath != null)
     switch (outPath.Split('.', StringSplitOptions.RemoveEmptyEntries).Last().ToLower())
     {
         case "json":
-            await openApi.WriteV3AsJson(outPath);
+            await openApi.WriteAsV3JsonAsync(outPath);
             break;
         case "yaml":
         case "yml":
-            await openApi.WriteV3AsYaml(outPath);
+            await openApi.WriteAsV3YamlAsync(outPath);
             break;
         default:
-            await openApi.WriteV3AsJson(Path.Combine(outPath, "openapi.json"));
-            await openApi.WriteV3AsYaml(Path.Combine(outPath, "openapi.yaml"));
+            await openApi.WriteAsV3JsonAsync(Path.Combine(outPath, "openapi.json"));
+            await openApi.WriteAsV3YamlAsync(Path.Combine(outPath, "openapi.yaml"));
             break;
     }
 }
 
-Console.WriteLine("Done!");  
+Console.WriteLine("Done!");
 Debugger.Break();

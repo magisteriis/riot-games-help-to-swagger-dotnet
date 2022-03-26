@@ -35,7 +35,7 @@ internal static class ParameterConverter
         if (!string.IsNullOrEmpty(argumentSchema.Description))
             parameter.Description = argumentSchema.Description;
 
-        if (headerParameters.Contains(argumentIdentifier))
+        if (headerParameters.Contains(argumentIdentifier.ToLower()))
         {
             parameter.In = ParameterLocation.Header;
         }

@@ -9188,12 +9188,12 @@ paths:
           required: true
           schema:
             type: integer
-            format: int32
+            format: uint32
         - name: restartVersion
           in: query
           schema:
             type: integer
-            format: int32
+            format: uint32
       responses:
         '204':
           description: No content

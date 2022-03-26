@@ -29,7 +29,7 @@ paths:
           required: true
           schema:
             type: integer
-            format: int32
+            format: uint32
       responses:
         '200':
           description: Successful response
@@ -57,7 +57,7 @@ paths:
           required: true
           schema:
             type: integer
-            format: int32
+            format: uint32
       responses:
         '200':
           description: Successful response
@@ -85,7 +85,7 @@ paths:
           required: true
           schema:
             type: integer
-            format: int32
+            format: uint32
       responses:
         '200':
           description: Successful response
@@ -113,7 +113,7 @@ paths:
           required: true
           schema:
             type: integer
-            format: int32
+            format: uint32
       responses:
         '200':
           description: Successful response
@@ -501,7 +501,7 @@ paths:
           required: true
           schema:
             type: integer
-            format: int32
+            format: uint32
       responses:
         '200':
           description: Successful response
@@ -530,7 +530,7 @@ paths:
           required: true
           schema:
             type: integer
-            format: int32
+            format: uint32
       responses:
         '200':
           description: Successful response
@@ -558,7 +558,7 @@ paths:
           required: true
           schema:
             type: integer
-            format: int32
+            format: uint32
       responses:
         '200':
           description: Successful response
@@ -1411,7 +1411,7 @@ paths:
           required: true
           schema:
             type: integer
-            format: int32
+            format: uint32
         - name: championId
           in: path
           required: true
@@ -1495,7 +1495,7 @@ paths:
           required: true
           schema:
             type: integer
-            format: int32
+            format: uint32
         - name: championId
           in: path
           required: true
@@ -1615,7 +1615,7 @@ paths:
           required: true
           schema:
             type: integer
-            format: int32
+            format: uint32
         - name: position
           in: path
           required: true
@@ -1687,7 +1687,7 @@ paths:
           required: true
           schema:
             type: integer
-            format: int32
+            format: uint32
         - name: position
           in: path
           required: true
@@ -1796,7 +1796,7 @@ paths:
           required: true
           schema:
             type: integer
-            format: int32
+            format: uint32
       responses:
         '200':
           description: Successful response
@@ -1827,7 +1827,7 @@ paths:
           required: true
           schema:
             type: integer
-            format: int32
+            format: uint32
         - name: queue
           in: path
           required: true
@@ -2069,7 +2069,7 @@ paths:
           required: true
           schema:
             type: integer
-            format: int64
+            format: uint64
       responses:
         '200':
           description: Successful response
@@ -2101,7 +2101,7 @@ paths:
           required: true
           schema:
             type: integer
-            format: int64
+            format: uint64
       responses:
         '204':
           description: No content
@@ -2264,7 +2264,7 @@ paths:
           required: true
           schema:
             type: integer
-            format: int64
+            format: uint64
         - name: puuid
           in: path
           required: true
@@ -2486,7 +2486,7 @@ paths:
           required: true
           schema:
             type: integer
-            format: int64
+            format: uint64
       requestBody:
         content:
           application/json:
@@ -3522,7 +3522,7 @@ paths:
           required: true
           schema:
             type: integer
-            format: int32
+            format: uint32
       responses:
         '200':
           description: Successful response
@@ -3647,7 +3647,7 @@ paths:
           required: true
           schema:
             type: integer
-            format: int64
+            format: uint64
       responses:
         '200':
           description: Successful response
@@ -3679,7 +3679,7 @@ paths:
           required: true
           schema:
             type: integer
-            format: int64
+            format: uint64
       responses:
         '200':
           description: Successful response
@@ -3711,7 +3711,7 @@ paths:
           required: true
           schema:
             type: integer
-            format: int64
+            format: uint64
       responses:
         '200':
           description: Successful response
@@ -3737,7 +3737,7 @@ paths:
           required: true
           schema:
             type: integer
-            format: int64
+            format: uint64
         - name: championId
           in: path
           required: true
@@ -3769,7 +3769,7 @@ paths:
           required: true
           schema:
             type: integer
-            format: int64
+            format: uint64
         - name: championId
           in: path
           required: true
@@ -3807,7 +3807,7 @@ paths:
           required: true
           schema:
             type: integer
-            format: int64
+            format: uint64
         - name: championId
           in: path
           required: true
@@ -3845,7 +3845,7 @@ paths:
           required: true
           schema:
             type: integer
-            format: int64
+            format: uint64
         - name: championId
           in: path
           required: true
@@ -3889,7 +3889,7 @@ paths:
           required: true
           schema:
             type: integer
-            format: int64
+            format: uint64
       responses:
         '200':
           description: Successful response
@@ -4551,7 +4551,7 @@ paths:
           required: true
           schema:
             type: integer
-            format: int64
+            format: uint64
       responses:
         '200':
           description: Successful response
@@ -4596,7 +4596,7 @@ paths:
           required: true
           schema:
             type: integer
-            format: int64
+            format: uint64
       responses:
         '200':
           description: Successful response
@@ -4676,7 +4676,7 @@ paths:
           required: true
           schema:
             type: integer
-            format: int32
+            format: uint32
       responses:
         '200':
           description: Successful response
@@ -4701,7 +4701,7 @@ paths:
           required: true
           schema:
             type: integer
-            format: int32
+            format: uint32
       responses:
         '200':
           description: Successful response
@@ -4726,7 +4726,7 @@ paths:
           required: true
           schema:
             type: integer
-            format: int32
+            format: uint32
       requestBody:
         content:
           application/json:
@@ -4763,7 +4763,7 @@ paths:
           required: true
           schema:
             type: integer
-            format: int32
+            format: uint32
       responses:
         '200':
           description: Successful response
@@ -6376,7 +6376,7 @@ paths:
             type: array
             items:
               type: integer
-              format: int64
+              format: uint64
       responses:
         '200':
           description: Successful response
@@ -6597,7 +6597,7 @@ paths:
           required: true
           schema:
             type: integer
-            format: int64
+            format: uint64
       responses:
         '200':
           description: Successful response
@@ -6747,7 +6747,7 @@ paths:
             type: array
             items:
               type: integer
-              format: int64
+              format: uint64
       responses:
         '200':
           description: Successful response
@@ -6778,7 +6778,7 @@ paths:
           required: true
           schema:
             type: integer
-            format: int64
+            format: uint64
       responses:
         '200':
           description: Successful response
@@ -6809,7 +6809,7 @@ paths:
           required: true
           schema:
             type: integer
-            format: int64
+            format: uint64
       responses:
         '200':
           description: Successful response
@@ -6840,7 +6840,7 @@ paths:
           required: true
           schema:
             type: integer
-            format: int64
+            format: uint64
       responses:
         '200':
           description: Successful response
@@ -6871,7 +6871,7 @@ paths:
           required: true
           schema:
             type: integer
-            format: int64
+            format: uint64
       responses:
         '200':
           description: Successful response
@@ -6902,7 +6902,7 @@ paths:
           required: true
           schema:
             type: integer
-            format: int64
+            format: uint64
       responses:
         '200':
           description: Successful response
@@ -6933,7 +6933,7 @@ paths:
           required: true
           schema:
             type: integer
-            format: int64
+            format: uint64
       requestBody:
         content:
           application/json:
@@ -6975,7 +6975,7 @@ paths:
           required: true
           schema:
             type: integer
-            format: int64
+            format: uint64
       responses:
         '200':
           description: Successful response
@@ -7006,7 +7006,7 @@ paths:
           required: true
           schema:
             type: integer
-            format: int64
+            format: uint64
       responses:
         '200':
           description: Successful response
@@ -7134,7 +7134,7 @@ paths:
             type: array
             items:
               type: integer
-              format: int64
+              format: uint64
       responses:
         '200':
           description: Successful response
@@ -7168,7 +7168,7 @@ paths:
             type: array
             items:
               type: integer
-              format: int64
+              format: uint64
       responses:
         '200':
           description: Successful response
@@ -7432,7 +7432,7 @@ paths:
             type: array
             items:
               type: integer
-              format: int64
+              format: uint64
       responses:
         '200':
           description: Successful response
@@ -7810,7 +7810,7 @@ paths:
           required: true
           schema:
             type: integer
-            format: int64
+            format: uint64
       responses:
         '200':
           description: Successful response
@@ -7836,7 +7836,7 @@ paths:
           required: true
           schema:
             type: integer
-            format: int64
+            format: uint64
       responses:
         '200':
           description: Successful response
@@ -7868,13 +7868,13 @@ paths:
           required: true
           schema:
             type: integer
-            format: int64
+            format: uint64
         - name: limit
           in: query
           required: true
           schema:
             type: integer
-            format: int64
+            format: uint64
         - name: sortRule
           in: query
           schema:
@@ -7904,7 +7904,7 @@ paths:
           required: true
           schema:
             type: integer
-            format: int64
+            format: uint64
       responses:
         '200':
           description: Successful response
@@ -7930,7 +7930,7 @@ paths:
           required: true
           schema:
             type: integer
-            format: int64
+            format: uint64
         - name: verificationCode
           in: query
           required: true
@@ -7961,7 +7961,7 @@ paths:
           required: true
           schema:
             type: integer
-            format: int64
+            format: uint64
       responses:
         '200':
           description: Successful response
@@ -7993,7 +7993,7 @@ paths:
           required: true
           schema:
             type: integer
-            format: int64
+            format: uint64
         - name: wardSkinId
           in: path
           required: true
@@ -8068,7 +8068,7 @@ paths:
             type: array
             items:
               type: integer
-              format: int64
+              format: uint64
       responses:
         '200':
           description: Successful response
@@ -8890,7 +8890,7 @@ paths:
           required: true
           schema:
             type: integer
-            format: int32
+            format: uint32
       responses:
         '200':
           description: Successful response
@@ -8916,7 +8916,7 @@ paths:
           required: true
           schema:
             type: integer
-            format: int32
+            format: uint32
         - name: mapId
           in: path
           required: true
@@ -10121,7 +10121,7 @@ paths:
           required: true
           schema:
             type: integer
-            format: int64
+            format: uint64
       responses:
         '200':
           description: Successful response
@@ -10234,7 +10234,7 @@ paths:
           required: true
           schema:
             type: integer
-            format: int64
+            format: uint64
       responses:
         '200':
           description: Successful response
@@ -10259,7 +10259,7 @@ paths:
           required: true
           schema:
             type: integer
-            format: int64
+            format: uint64
       responses:
         '200':
           description: Successful response
@@ -10284,7 +10284,7 @@ paths:
           required: true
           schema:
             type: integer
-            format: int64
+            format: uint64
       requestBody:
         content:
           application/json:
@@ -10620,7 +10620,7 @@ paths:
           required: true
           schema:
             type: integer
-            format: int64
+            format: uint64
       responses:
         '200':
           description: Successful response
@@ -11131,7 +11131,7 @@ paths:
           required: true
           schema:
             type: integer
-            format: int64
+            format: uint64
       responses:
         '200':
           description: Successful response
@@ -11156,7 +11156,7 @@ paths:
           required: true
           schema:
             type: integer
-            format: int64
+            format: uint64
       requestBody:
         content:
           application/json:
@@ -11182,7 +11182,7 @@ paths:
           required: true
           schema:
             type: integer
-            format: int64
+            format: uint64
       requestBody:
         content:
           application/json:
@@ -11209,7 +11209,7 @@ paths:
           required: true
           schema:
             type: integer
-            format: int64
+            format: uint64
       requestBody:
         content:
           application/json:
@@ -11486,7 +11486,7 @@ paths:
           required: true
           schema:
             type: integer
-            format: int32
+            format: uint32
       responses:
         '200':
           description: Successful response
@@ -11511,7 +11511,7 @@ paths:
           required: true
           schema:
             type: integer
-            format: int32
+            format: uint32
       responses:
         '200':
           description: Successful response
@@ -11820,7 +11820,7 @@ paths:
           required: true
           schema:
             type: integer
-            format: int32
+            format: uint32
       responses:
         '200':
           description: Successful response
@@ -12691,7 +12691,7 @@ paths:
           required: true
           schema:
             type: integer
-            format: int64
+            format: uint64
       requestBody:
         content:
           application/json:
@@ -13642,7 +13642,7 @@ paths:
           required: true
           schema:
             type: integer
-            format: int64
+            format: uint64
       responses:
         '200':
           description: Successful response
@@ -13671,7 +13671,7 @@ paths:
           required: true
           schema:
             type: integer
-            format: int64
+            format: uint64
       responses:
         '200':
           description: Successful response
@@ -13700,7 +13700,7 @@ paths:
           required: true
           schema:
             type: integer
-            format: int64
+            format: uint64
       responses:
         '200':
           description: Successful response
@@ -13729,7 +13729,7 @@ paths:
           required: true
           schema:
             type: integer
-            format: int64
+            format: uint64
       responses:
         '200':
           description: Successful response
@@ -14319,7 +14319,7 @@ paths:
           required: true
           schema:
             type: integer
-            format: int32
+            format: uint32
       responses:
         '204':
           description: No content
@@ -14344,7 +14344,7 @@ paths:
           required: true
           schema:
             type: integer
-            format: int32
+            format: uint32
       responses:
         '204':
           description: No content
@@ -14370,13 +14370,13 @@ paths:
           required: true
           schema:
             type: integer
-            format: int32
+            format: uint32
         - name: timeoutMillis
           in: query
           required: true
           schema:
             type: integer
-            format: int64
+            format: uint64
         - name: payload
           in: query
           required: true
@@ -15694,7 +15694,7 @@ paths:
           required: true
           schema:
             type: integer
-            format: int64
+            format: uint64
       responses:
         '200':
           description: Successful response
@@ -15720,7 +15720,7 @@ paths:
           required: true
           schema:
             type: integer
-            format: int64
+            format: uint64
       responses:
         '200':
           description: Successful response
@@ -15750,12 +15750,12 @@ paths:
           in: query
           schema:
             type: integer
-            format: int32
+            format: uint32
         - name: endIndex
           in: query
           schema:
             type: integer
-            format: int32
+            format: uint32
       responses:
         '200':
           description: Successful response
@@ -15780,12 +15780,12 @@ paths:
           in: query
           schema:
             type: integer
-            format: int32
+            format: uint32
         - name: endIndex
           in: query
           schema:
             type: integer
-            format: int32
+            format: uint32
       responses:
         '200':
           description: Successful response
@@ -15815,12 +15815,12 @@ paths:
           in: query
           schema:
             type: integer
-            format: int32
+            format: uint32
         - name: count
           in: query
           schema:
             type: integer
-            format: int32
+            format: uint32
         - name: tag
           in: query
           schema:
@@ -15894,17 +15894,17 @@ paths:
           required: true
           schema:
             type: integer
-            format: int64
+            format: uint64
         - name: begIndex
           in: query
           schema:
             type: integer
-            format: int32
+            format: uint32
         - name: endIndex
           in: query
           schema:
             type: integer
-            format: int32
+            format: uint32
       responses:
         '200':
           description: Successful response
@@ -18009,7 +18009,7 @@ paths:
           required: true
           schema:
             type: integer
-            format: int32
+            format: uint32
       responses:
         '200':
           description: Successful response
@@ -18054,7 +18054,7 @@ paths:
           required: true
           schema:
             type: integer
-            format: int32
+            format: uint32
       responses:
         '200':
           description: Successful response
@@ -19241,7 +19241,7 @@ paths:
           required: true
           schema:
             type: integer
-            format: int64
+            format: uint64
       responses:
         '200':
           description: Successful response
@@ -19453,7 +19453,7 @@ paths:
             type: array
             items:
               type: integer
-              format: int64
+              format: uint64
       requestBody:
         content:
           application/json:
@@ -19569,7 +19569,7 @@ paths:
           required: true
           schema:
             type: integer
-            format: int64
+            format: uint64
         - name: queue
           in: path
           required: true
@@ -19605,7 +19605,7 @@ paths:
           required: true
           schema:
             type: integer
-            format: int64
+            format: uint64
         - name: queue
           in: path
           required: true
@@ -19636,7 +19636,7 @@ paths:
           required: true
           schema:
             type: integer
-            format: int64
+            format: uint64
         - name: hovercard
           in: query
           required: true
@@ -19667,7 +19667,7 @@ paths:
           required: true
           schema:
             type: integer
-            format: int64
+            format: uint64
       responses:
         '200':
           description: Successful response
@@ -19712,7 +19712,7 @@ paths:
           required: true
           schema:
             type: integer
-            format: int64
+            format: uint64
       responses:
         '200':
           description: Successful response
@@ -19738,7 +19738,7 @@ paths:
           required: true
           schema:
             type: integer
-            format: int64
+            format: uint64
         - name: gameVersion
           in: path
           required: true
@@ -19770,7 +19770,7 @@ paths:
           required: true
           schema:
             type: integer
-            format: int64
+            format: uint64
       requestBody:
         content:
           application/json:
@@ -19797,7 +19797,7 @@ paths:
           required: true
           schema:
             type: integer
-            format: int64
+            format: uint64
       requestBody:
         content:
           application/json:
@@ -19824,7 +19824,7 @@ paths:
           required: true
           schema:
             type: integer
-            format: int64
+            format: uint64
       requestBody:
         content:
           application/json:
@@ -19898,7 +19898,7 @@ paths:
           required: true
           schema:
             type: integer
-            format: int64
+            format: uint64
       requestBody:
         content:
           application/json:
@@ -20063,7 +20063,7 @@ paths:
           required: true
           schema:
             type: integer
-            format: int64
+            format: uint64
       responses:
         '200':
           description: Successful response
@@ -21779,7 +21779,7 @@ paths:
           required: true
           schema:
             type: integer
-            format: int64
+            format: uint64
       responses:
         '200':
           description: Successful response
@@ -21809,7 +21809,7 @@ paths:
           in: query
           schema:
             type: integer
-            format: int64
+            format: uint64
         - name: giftMessage
           in: query
           schema:
@@ -22004,7 +22004,7 @@ paths:
           required: true
           schema:
             type: integer
-            format: int64
+            format: uint64
       responses:
         '200':
           description: Successful response
@@ -22508,7 +22508,7 @@ paths:
           required: true
           schema:
             type: integer
-            format: int64
+            format: uint64
       responses:
         '200':
           description: Successful response
@@ -22536,7 +22536,7 @@ paths:
             type: array
             items:
               type: integer
-              format: int64
+              format: uint64
       responses:
         '200':
           description: Successful response
@@ -22570,7 +22570,7 @@ paths:
             type: array
             items:
               type: integer
-              format: int64
+              format: uint64
       responses:
         '200':
           description: Successful response
@@ -22603,7 +22603,7 @@ paths:
             type: array
             items:
               type: integer
-              format: int64
+              format: uint64
       responses:
         '200':
           description: Successful response
@@ -23529,7 +23529,7 @@ paths:
           required: true
           schema:
             type: integer
-            format: int32
+            format: uint32
       responses:
         '204':
           description: No content
@@ -23736,7 +23736,7 @@ paths:
           required: true
           schema:
             type: integer
-            format: int64
+            format: uint64
       responses:
         '200':
           description: Successful response
@@ -23761,7 +23761,7 @@ paths:
           required: true
           schema:
             type: integer
-            format: int64
+            format: uint64
       responses:
         '200':
           description: Successful response
@@ -23786,7 +23786,7 @@ paths:
           required: true
           schema:
             type: integer
-            format: int64
+            format: uint64
       requestBody:
         content:
           application/json:
@@ -24024,12 +24024,12 @@ paths:
           required: true
           schema:
             type: integer
-            format: int32
+            format: uint32
         - name: restartVersion
           in: query
           schema:
             type: integer
-            format: int32
+            format: uint32
       responses:
         '204':
           description: No content
@@ -24396,7 +24396,7 @@ paths:
           required: true
           schema:
             type: integer
-            format: int64
+            format: uint64
       responses:
         '204':
           description: No content
@@ -24678,7 +24678,7 @@ paths:
           required: true
           schema:
             type: integer
-            format: int32
+            format: uint32
       responses:
         '204':
           description: No content
@@ -24882,7 +24882,7 @@ paths:
           required: true
           schema:
             type: integer
-            format: int32
+            format: uint32
       responses:
         '204':
           description: No content
@@ -25473,7 +25473,7 @@ paths:
           required: true
           schema:
             type: integer
-            format: int64
+            format: uint64
         - name: value
           in: query
           description: The value to be recorded
@@ -25564,7 +25564,7 @@ paths:
           required: true
           schema:
             type: integer
-            format: int64
+            format: uint64
         - name: suffix
           in: query
           description: Optional eventName suffix to apply that mutates the event name to indicate the outcome
@@ -25591,7 +25591,7 @@ paths:
           required: true
           schema:
             type: integer
-            format: int64
+            format: uint64
       responses:
         '204':
           description: No content
@@ -25620,7 +25620,7 @@ paths:
           required: true
           schema:
             type: integer
-            format: int64
+            format: uint64
       responses:
         '204':
           description: No content

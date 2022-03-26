@@ -1899,26 +1899,14 @@ paths:
           required: true
           schema:
             type: string
-      requestBody:
-        content:
-          application/json:
-            schema:
-              type: array
-              items:
-                type: integer
-                format: int64
-          application/x-yaml:
-            schema:
-              type: array
-              items:
-                type: integer
-                format: int64
-          application/x-msgpack:
-            schema:
-              type: array
-              items:
-                type: integer
-                format: int64
+        - name: itemIds
+          in: query
+          required: true
+          schema:
+            type: array
+            items:
+              type: integer
+              format: int64
       responses:
         '200':
           description: Successful response
@@ -18868,26 +18856,14 @@ paths:
           required: true
           schema:
             type: string
-      requestBody:
-        content:
-          application/json:
-            schema:
-              type: array
-              items:
-                type: integer
-                format: int64
-          application/x-yaml:
-            schema:
-              type: array
-              items:
-                type: integer
-                format: int64
-          application/x-msgpack:
-            schema:
-              type: array
-              items:
-                type: integer
-                format: int64
+        - name: itemIds
+          in: query
+          required: true
+          schema:
+            type: array
+            items:
+              type: integer
+              format: int64
       responses:
         '200':
           description: Successful response

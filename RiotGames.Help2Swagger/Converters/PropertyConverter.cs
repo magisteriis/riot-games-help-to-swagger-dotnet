@@ -39,7 +39,7 @@ internal static class PropertyConverter
                         if (stringType.StartsWith("uint") || stringType.StartsWith("int"))
                         {
                             property.Type = "integer";
-                            property.Format = stringType.TrimStart('u');
+                            property.Format = stringType;
                         }
                         else
                         {
@@ -65,7 +65,7 @@ internal static class PropertyConverter
                                     else if (ofType.StartsWith("uint") || ofType.StartsWith("int"))
                                     {
                                         property.Items.Type = "integer";
-                                        property.Items.Format = ofType.TrimStart('u');
+                                        property.Items.Format = ofType;
                                     }
                                     else
                                     {
@@ -104,7 +104,7 @@ internal static class PropertyConverter
                                             if (ofType.StartsWith("uint") || ofType.StartsWith("int"))
                                             {
                                                 property.AdditionalProperties.Type = "integer";
-                                                property.AdditionalProperties.Format = ofType.TrimStart('u');
+                                                property.AdditionalProperties.Format = ofType;
                                             }
                                             else
                                             {

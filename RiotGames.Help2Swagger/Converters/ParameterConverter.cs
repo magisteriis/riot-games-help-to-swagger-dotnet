@@ -100,7 +100,7 @@ internal static class ParameterConverter
                     else if (ofType.StartsWith("uint") || ofType.StartsWith("int"))
                     {
                         schema.Items.Type = "integer";
-                        schema.Items.Format = ofType.TrimStart('u');
+                        schema.Items.Format = ofType;
                     }
                     else if (ofType == "string")
                     {
@@ -120,7 +120,7 @@ internal static class ParameterConverter
                 else if (stringValue.StartsWith("uint") || stringValue.StartsWith("int"))
                 {
                     schema.Type = "integer";
-                    schema.Format = stringValue.TrimStart('u');
+                    schema.Format = stringValue;
                 }
                 else
                 {

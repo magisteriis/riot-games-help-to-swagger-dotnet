@@ -18567,7 +18567,7 @@ components:
           type: boolean
         processsId:
           type: integer
-          format: int32
+          format: uint32
     AgeRestriction:
       type: object
       properties:
@@ -18764,13 +18764,13 @@ components:
           $ref: '#/components/schemas/basicOperatingSystemInfo'
         physicalMemory:
           type: integer
-          format: int64
+          format: uint64
         physicalProcessorCores:
           type: integer
-          format: int32
+          format: uint32
         processorSpeed:
           type: integer
-          format: int32
+          format: uint32
       description: User Experience Settings System Information
     BindingFullApiHelp:
       type: object
@@ -18836,7 +18836,7 @@ components:
           type: string
         offset:
           type: integer
-          format: int32
+          format: uint32
         optional:
           type: boolean
         type:
@@ -18889,7 +18889,7 @@ components:
           type: string
         size:
           type: integer
-          format: int32
+          format: uint32
         tags:
           type: array
           items:
@@ -18937,19 +18937,19 @@ components:
           $ref: '#/components/schemas/ChatChatWindowSettings'
         chatWindowDockedHeight:
           type: integer
-          format: int32
+          format: uint32
         closed-conversations:
           type: object
           additionalProperties:
             type: integer
-            format: int64
+            format: uint64
         friendRequestToastsDisabled:
           type: boolean
         hidden-conversations:
           type: object
           additionalProperties:
             type: integer
-            format: int64
+            format: uint64
         linkClickWarningEnabled:
           type: boolean
         messageNotificationsEnabled:
@@ -18993,7 +18993,7 @@ components:
       properties:
         duration:
           type: integer
-          format: int64
+          format: uint64
         method:
           type: string
         pid:
@@ -19062,7 +19062,7 @@ components:
           type: string
         last_online_ts:
           type: integer
-          format: int64
+          format: uint64
         name:
           type: string
         note:
@@ -19300,7 +19300,7 @@ components:
           type: string
         time:
           type: integer
-          format: int64
+          format: uint64
     ChatChatWindowSettings:
       type: object
       properties:
@@ -19308,7 +19308,7 @@ components:
           type: boolean
         height:
           type: integer
-          format: int32
+          format: uint32
         left:
           type: integer
           format: int32
@@ -19317,7 +19317,7 @@ components:
           format: int32
         width:
           type: integer
-          format: int32
+          format: uint32
     ChatCommandTelemetry:
       type: object
       properties:
@@ -19329,25 +19329,25 @@ components:
           type: boolean
         mutatorExecutionTimeUs:
           type: integer
-          format: int64
+          format: uint64
         notifierExecutionTimeUs:
           type: integer
-          format: int64
+          format: uint64
         promiseFulfillmentTimeUs:
           type: integer
-          format: int64
+          format: uint64
         queueSize:
           type: integer
-          format: int64
+          format: uint64
         timeInQueueMs:
           type: integer
-          format: int64
+          format: uint64
         totalExecutionTimeUs:
           type: integer
-          format: int64
+          format: uint64
         validatorExecutionTimeUs:
           type: integer
-          format: int64
+          format: uint64
     ChatConfigReadinessEnum:
       enum:
         - NotReady
@@ -19360,7 +19360,7 @@ components:
           $ref: '#/components/schemas/ChatConfigReadinessEnum'
         updateId:
           type: integer
-          format: int64
+          format: uint64
     ChatConversationCreateJoin:
       type: object
       properties:
@@ -19425,7 +19425,7 @@ components:
           type: string
         readTs:
           type: integer
-          format: int64
+          format: uint64
     ChatConversationReadershipList:
       type: object
       properties:
@@ -19501,7 +19501,7 @@ components:
           type: string
         jwt_time:
           type: integer
-          format: int64
+          format: uint64
         msg:
           type: string
         private:
@@ -19817,7 +19817,7 @@ components:
             $ref: '#/components/schemas/ChatMessage'
         readPointTs:
           type: integer
-          format: int64
+          format: uint64
         xmppId:
           type: string
     ChatMessageSend:
@@ -19832,15 +19832,15 @@ components:
       properties:
         before:
           type: integer
-          format: int32
+          format: uint32
         cid:
           type: string
         count:
           type: integer
-          format: int32
+          format: uint32
         since:
           type: integer
-          format: int32
+          format: uint32
     ChatMessagesSendChatMessage:
       type: object
       properties:
@@ -19902,7 +19902,7 @@ components:
           type: string
         time:
           type: integer
-          format: int64
+          format: uint64
     ChatMultiGamePresenceDelete:
       type: object
       properties:
@@ -19942,10 +19942,10 @@ components:
           type: string
         expiry:
           type: integer
-          format: int64
+          format: uint64
         issuedAt:
           type: integer
-          format: int64
+          format: uint64
         puuid:
           type: string
         service:
@@ -19961,7 +19961,7 @@ components:
             type: ''
         modified:
           type: integer
-          format: int64
+          format: uint64
         type:
           type: string
     ChatPlayRestrictionV1Data:
@@ -20104,7 +20104,7 @@ components:
       properties:
         currentAccountId:
           type: integer
-          format: int64
+          format: uint64
         currentPlatformId:
           type: string
         subject:
@@ -20121,7 +20121,7 @@ components:
           type: boolean
         level:
           type: integer
-          format: int32
+          format: uint32
         text:
           type: string
         texts:
@@ -20225,7 +20225,7 @@ components:
           $ref: '#/components/schemas/ChatUIState'
         unread_count:
           type: integer
-          format: int64
+          format: uint64
     ChatUIStateConversationJoin:
       type: object
       properties:
@@ -20235,7 +20235,7 @@ components:
           type: string
         process:
           type: integer
-          format: int32
+          format: uint32
         type:
           $ref: '#/components/schemas/ChatMessageType'
     ChatUIStateConversationList:
@@ -20368,7 +20368,7 @@ components:
           type: string
         chatPort:
           type: integer
-          format: int16
+          format: uint16
         defaultMobileProductId:
           type: string
         enableKeystonePresence:
@@ -20377,17 +20377,17 @@ components:
           type: boolean
         heartBeatIntervalSecs:
           type: integer
-          format: int32
+          format: uint32
         immediateConnectProducts:
           type: array
           items:
             type: string
         keepAliveIntervalSecs:
           type: integer
-          format: int32
+          format: uint32
         keepAliveTimeoutSecs:
           type: integer
-          format: int32
+          format: uint32
         productsRequiringJwtPresence:
           type: array
           items:
@@ -20484,7 +20484,7 @@ components:
           $ref: '#/components/schemas/ClientConfigConfigReadinessEnum'
         updateId:
           type: integer
-          format: int64
+          format: uint64
     ClientConfigConfigType:
       enum:
         - public
@@ -20548,7 +20548,7 @@ components:
           type: string
         expiry:
           type: integer
-          format: int64
+          format: uint64
         scopes:
           type: array
           items:
@@ -20562,7 +20562,7 @@ components:
           type: string
         expiry:
           type: integer
-          format: int64
+          format: uint64
         nonce:
           type: string
         token:
@@ -20642,7 +20642,7 @@ components:
           type: string
         expiry:
           type: integer
-          format: int64
+          format: uint64
         scopes:
           type: array
           items:
@@ -20656,7 +20656,7 @@ components:
           type: string
         expiry:
           type: integer
-          format: int64
+          format: uint64
         nonce:
           type: string
         token:
@@ -20782,10 +20782,10 @@ components:
       properties:
         pid:
           type: integer
-          format: int32
+          format: uint32
         port:
           type: integer
-          format: int16
+          format: uint16
         token:
           type: string
     CookieJarCookie:
@@ -20846,7 +20846,7 @@ components:
       properties:
         expiry:
           type: integer
-          format: int64
+          format: uint64
         token:
           type: string
     DisambiguationConfigReadinessEnum:
@@ -20864,7 +20864,7 @@ components:
       properties:
         expiry:
           type: integer
-          format: int64
+          format: uint64
         token:
           type: string
     DisambiguationRegionLocale:
@@ -20883,10 +20883,10 @@ components:
       properties:
         bytes_to_download:
           type: integer
-          format: int64
+          format: uint64
         downloaded_bytes:
           type: integer
-          format: int64
+          format: uint64
     EligibilityCheckResponse:
       type: object
       properties:
@@ -20932,7 +20932,7 @@ components:
           type: string
         expiry:
           type: integer
-          format: int64
+          format: uint64
         scopes:
           type: array
           items:
@@ -20946,7 +20946,7 @@ components:
           type: string
         expiry:
           type: integer
-          format: int64
+          format: uint64
         nonce:
           type: string
         token:
@@ -21008,7 +21008,7 @@ components:
       properties:
         currentAccountId:
           type: integer
-          format: int64
+          format: uint64
         currentPlatformId:
           type: string
         subject:
@@ -21103,7 +21103,7 @@ components:
           $ref: '#/components/schemas/FriendsFriendsV1DisplayName'
         platformId:
           type: integer
-          format: int64
+          format: uint64
         riotId:
           type: string
     FriendsFriendsV1BlockInfoList:
@@ -21134,7 +21134,7 @@ components:
       properties:
         appGroupPlayedOnly:
           type: integer
-          format: int64
+          format: uint64
         favoriteOnly:
           type: boolean
         presence:
@@ -21159,7 +21159,7 @@ components:
       properties:
         id:
           type: integer
-          format: int64
+          format: uint64
     FriendsFriendsV1Presence:
       enum:
         - unknown
@@ -21212,7 +21212,7 @@ components:
           $ref: '#/components/schemas/FriendsFriendsV1DisplayName'
         platformId:
           type: integer
-          format: int64
+          format: uint64
         targetDisplayName:
           $ref: '#/components/schemas/FriendsFriendsV1DisplayName'
     FriendsFrindsV1BlockInfoList:
@@ -21227,7 +21227,7 @@ components:
       properties:
         expiry:
           type: integer
-          format: int64
+          format: uint64
         scopes:
           type: array
           items:
@@ -21271,7 +21271,7 @@ components:
       properties:
         currentAccountId:
           type: integer
-          format: int64
+          format: uint64
         currentPlatformId:
           type: string
         subject:
@@ -21411,7 +21411,7 @@ components:
             type: string
         expiry:
           type: integer
-          format: int64
+          format: uint64
         token:
           type: string
     GameSessionGameCenterAuthCredentials:
@@ -21515,7 +21515,7 @@ components:
           type: boolean
         queuePosition:
           type: integer
-          format: int64
+          format: uint64
         sessionClaims:
           type: object
           additionalProperties:
@@ -21526,7 +21526,7 @@ components:
           $ref: '#/components/schemas/GameSessionGameSessionV1GameSessionState'
         waitTime:
           type: integer
-          format: int64
+          format: uint64
     GameSessionGameSessionV1GameSessionState:
       enum:
         - initializing
@@ -21580,7 +21580,7 @@ components:
       properties:
         expiry:
           type: integer
-          format: int64
+          format: uint64
         token:
           type: string
     GameSessionImplicitAuthorization:
@@ -21638,12 +21638,12 @@ components:
       properties:
         exp:
           type: integer
-          format: int64
+          format: uint64
         full:
           type: boolean
         iat:
           type: integer
-          format: int64
+          format: uint64
         queuePos:
           type: integer
           format: int32
@@ -21695,7 +21695,7 @@ components:
           type: string
         multiFactorCodeLength:
           type: integer
-          format: int64
+          format: uint64
     GameSessionMultifactorMethod:
       enum:
         - method_not_set
@@ -21991,7 +21991,7 @@ components:
       properties:
         createdAt:
           type: integer
-          format: int64
+          format: uint64
         mailId:
           type: string
         mailType:
@@ -22005,7 +22005,7 @@ components:
       properties:
         lastUpdateReceived:
           type: integer
-          format: int64
+          format: uint64
     GaWarningMailState:
       enum:
         - NEW
@@ -22047,14 +22047,14 @@ components:
       properties:
         count:
           type: integer
-          format: int64
+          format: uint64
         includedStates:
           type: array
           items:
             $ref: '#/components/schemas/GaWarningMailState'
         startIndex:
           type: integer
-          format: int64
+          format: uint64
         tags:
           type: array
           items:
@@ -22207,7 +22207,7 @@ components:
       properties:
         channelsInUse:
           type: integer
-          format: int32
+          format: uint32
         patchlineId:
           type: string
         productId:
@@ -22267,7 +22267,7 @@ components:
           type: string
         expiry:
           type: integer
-          format: int64
+          format: uint64
         scopes:
           type: array
           items:
@@ -22423,16 +22423,16 @@ components:
           format: double
         webRequestInitialRetryDelayInMilliSec:
           type: integer
-          format: int64
+          format: uint64
         webRequestMaxRetryDelayInMilliSec:
           type: integer
-          format: int64
+          format: uint64
         webRequestRetryCount:
           type: integer
-          format: int64
+          format: uint64
         webRequestTimeoutInSec:
           type: integer
-          format: int32
+          format: uint32
     LoyaltyV2PCBangInfo:
       type: object
       properties:
@@ -22457,7 +22457,7 @@ components:
           type: string
         expiry:
           type: integer
-          format: int64
+          format: uint64
         scopes:
           type: array
           items:
@@ -22596,7 +22596,7 @@ components:
           type: string
         expiry:
           type: integer
-          format: int64
+          format: uint64
         nonce:
           type: string
         token:
@@ -22606,7 +22606,7 @@ components:
       properties:
         createdAt:
           type: integer
-          format: int64
+          format: uint64
         mailId:
           type: string
         mailType:
@@ -22620,7 +22620,7 @@ components:
       properties:
         lastUpdateReceived:
           type: integer
-          format: int64
+          format: uint64
     MailboxMailState:
       enum:
         - NEW
@@ -22674,10 +22674,10 @@ components:
             type: string
         expiry:
           type: integer
-          format: int64
+          format: uint64
         issuedAt:
           type: integer
-          format: int64
+          format: uint64
         product:
           type: string
         puuid:
@@ -22691,10 +22691,10 @@ components:
           type: string
         expiry:
           type: integer
-          format: int64
+          format: uint64
         issuedAt:
           type: integer
-          format: int64
+          format: uint64
         puuid:
           type: string
         service:
@@ -22717,10 +22717,10 @@ components:
           type: string
         expiry:
           type: integer
-          format: int64
+          format: uint64
         issuedAt:
           type: integer
-          format: int64
+          format: uint64
         puuid:
           type: string
         service:
@@ -22738,10 +22738,10 @@ components:
             type: string
         expiry:
           type: integer
-          format: int64
+          format: uint64
         issuedAt:
           type: integer
-          format: int64
+          format: uint64
         product:
           type: string
         puuid:
@@ -22778,14 +22778,14 @@ components:
       properties:
         count:
           type: integer
-          format: int64
+          format: uint64
         includedStates:
           type: array
           items:
             $ref: '#/components/schemas/MailboxMailState'
         startIndex:
           type: integer
-          format: int64
+          format: uint64
         tags:
           type: array
           items:
@@ -22797,7 +22797,7 @@ components:
           type: string
         expiry:
           type: integer
-          format: int64
+          format: uint64
         scopes:
           type: array
           items:
@@ -22852,7 +22852,7 @@ components:
           type: string
         expiry:
           type: integer
-          format: int64
+          format: uint64
         nonce:
           type: string
         token:
@@ -22901,7 +22901,7 @@ components:
           type: string
         id:
           type: integer
-          format: int32
+          format: uint32
         middlewareManagerPhase:
           $ref: '#/components/schemas/MiddlewareManagerPhase'
         patchlineId:
@@ -22980,7 +22980,7 @@ components:
       properties:
         expiry:
           type: integer
-          format: int64
+          format: uint64
         scopes:
           type: array
           items:
@@ -23081,22 +23081,22 @@ components:
       properties:
         bytesToDownload:
           type: integer
-          format: int64
+          format: uint64
         bytesToRead:
           type: integer
-          format: int64
+          format: uint64
         bytesToRepair:
           type: integer
-          format: int64
+          format: uint64
         bytesToWrite:
           type: integer
-          format: int64
+          format: uint64
         downloadedBytes:
           type: integer
-          format: int64
+          format: uint64
         filesToRepair:
           type: integer
-          format: int64
+          format: uint64
         phase:
           $ref: '#/components/schemas/PatchComponentActionProgressPhase'
         progress:
@@ -23104,19 +23104,19 @@ components:
           format: double
         readBytes:
           type: integer
-          format: int64
+          format: uint64
         repairedBytes:
           type: integer
-          format: int64
+          format: uint64
         repairedFiles:
           type: integer
-          format: int64
+          format: uint64
         stage:
           type: integer
-          format: int64
+          format: uint64
         writtenBytes:
           type: integer
-          format: int64
+          format: uint64
     PatchComponentActionProgressPhase:
       enum:
         - None
@@ -23171,7 +23171,7 @@ components:
           type: string
         cache_size:
           type: integer
-          format: int64
+          format: uint64
     PatchCookie:
       type: object
       properties:
@@ -23303,7 +23303,7 @@ components:
       properties:
         process_id:
           type: integer
-          format: int64
+          format: uint64
         process_name:
           type: string
     PatchManifestProgress:
@@ -23311,10 +23311,10 @@ components:
       properties:
         bytes_to_download:
           type: integer
-          format: int64
+          format: uint64
         downloaded_bytes:
           type: integer
-          format: int64
+          format: uint64
     PatchPatchComponentMetadata:
       type: object
       properties:
@@ -23360,12 +23360,12 @@ components:
             type: string
         max_download_speed:
           type: integer
-          format: int32
+          format: uint32
         repair:
           type: boolean
         stage:
           type: integer
-          format: int8
+          format: uint8
         tags:
           type: array
           items:
@@ -23464,25 +23464,25 @@ components:
       properties:
         cache_read_bytes:
           type: integer
-          format: int64
+          format: uint64
         cache_write_bytes:
           type: integer
-          format: int64
+          format: uint64
         disk_read_bytes:
           type: integer
-          format: int64
+          format: uint64
         disk_size_diff:
           type: integer
           format: int64
         disk_write_bytes:
           type: integer
-          format: int64
+          format: uint64
         network_bytes_compressed:
           type: integer
-          format: int64
+          format: uint64
         new_bytes:
           type: integer
-          format: int64
+          format: uint64
     PatchPreviewRequest:
       type: object
       properties:
@@ -23494,7 +23494,7 @@ components:
             type: string
         stage:
           type: integer
-          format: int8
+          format: uint8
         tags:
           type: array
           items:
@@ -23746,7 +23746,7 @@ components:
       properties:
         process_id:
           type: integer
-          format: int64
+          format: uint64
         process_name:
           type: string
     PatchProxyManifestProgress:
@@ -23754,10 +23754,10 @@ components:
       properties:
         bytes_to_download:
           type: integer
-          format: int64
+          format: uint64
         downloaded_bytes:
           type: integer
-          format: int64
+          format: uint64
     PatchProxyPatchingResource:
       type: object
       properties:
@@ -23830,7 +23830,7 @@ components:
           type: string
         install_size_bytes:
           type: integer
-          format: int64
+          format: uint64
         launch_disabled:
           type: boolean
         launcher_arguments:
@@ -23917,7 +23917,7 @@ components:
           type: boolean
         stage:
           type: integer
-          format: int8
+          format: uint8
         tags:
           type: array
           items:
@@ -24025,16 +24025,16 @@ components:
       properties:
         bytes_to_repair:
           type: integer
-          format: int64
+          format: uint64
         files_to_repair:
           type: integer
-          format: int64
+          format: uint64
         repaired_bytes:
           type: integer
-          format: int64
+          format: uint64
         repaired_files:
           type: integer
-          format: int64
+          format: uint64
     PatchProxySecondaryPatchline:
       type: object
       properties:
@@ -24064,25 +24064,25 @@ components:
       properties:
         bytes_to_download:
           type: integer
-          format: int64
+          format: uint64
         bytes_to_read:
           type: integer
-          format: int64
+          format: uint64
         bytes_to_write:
           type: integer
-          format: int64
+          format: uint64
         downloaded_bytes:
           type: integer
-          format: int64
+          format: uint64
         read_bytes:
           type: integer
-          format: int64
+          format: uint64
         stage:
           type: integer
-          format: int8
+          format: uint8
         written_bytes:
           type: integer
-          format: int64
+          format: uint64
     PatchRegionLocale:
       type: object
       properties:
@@ -24111,16 +24111,16 @@ components:
       properties:
         bytes_to_repair:
           type: integer
-          format: int64
+          format: uint64
         files_to_repair:
           type: integer
-          format: int64
+          format: uint64
         repaired_bytes:
           type: integer
-          format: int64
+          format: uint64
         repaired_files:
           type: integer
-          format: int64
+          format: uint64
     PatchRepairRequest:
       type: object
       properties:
@@ -24142,7 +24142,7 @@ components:
           type: string
         max_download_speed:
           type: integer
-          format: int32
+          format: uint32
     PatchRepairStatus:
       type: object
       properties:
@@ -24215,10 +24215,10 @@ components:
             type: string
         max_download_speed:
           type: integer
-          format: int32
+          format: uint32
         stage:
           type: integer
-          format: int8
+          format: uint8
         tags:
           type: array
           items:
@@ -24289,7 +24289,7 @@ components:
             type: string
         stage:
           type: integer
-          format: int8
+          format: uint8
         tempPath:
           type: string
     PatchStartPreviewRequest:
@@ -24303,7 +24303,7 @@ components:
             type: string
         stage:
           type: integer
-          format: int8
+          format: uint8
     PatchStatus:
       type: object
       properties:
@@ -24320,25 +24320,25 @@ components:
       properties:
         bytes_to_download:
           type: integer
-          format: int64
+          format: uint64
         bytes_to_read:
           type: integer
-          format: int64
+          format: uint64
         bytes_to_write:
           type: integer
-          format: int64
+          format: uint64
         downloaded_bytes:
           type: integer
-          format: int64
+          format: uint64
         read_bytes:
           type: integer
-          format: int64
+          format: uint64
         stage:
           type: integer
-          format: int8
+          format: uint8
         written_bytes:
           type: integer
-          format: int64
+          format: uint64
     PatchV2Configuration:
       type: object
       properties:
@@ -24381,7 +24381,7 @@ components:
           type: string
         expiry:
           type: integer
-          format: int64
+          format: uint64
         nonce:
           type: string
         token:
@@ -24398,17 +24398,17 @@ components:
           type: string
         virtualAmount:
           type: integer
-          format: int32
+          format: uint32
         virtualBonusAmount:
           type: integer
-          format: int32
+          format: uint32
         virtualCurrencyCode:
           type: string
         virtualCurrencyName:
           type: string
         virtualTotalAmount:
           type: integer
-          format: int32
+          format: uint32
     PayMobileInitializePurchaseResponse:
       type: object
       properties:
@@ -24436,16 +24436,16 @@ components:
           type: string
         virtualAmount:
           type: integer
-          format: int32
+          format: uint32
         virtualBonusAmount:
           type: integer
-          format: int32
+          format: uint32
     PayMobileProduct:
       type: object
       properties:
         amountInCents:
           type: integer
-          format: int32
+          format: uint32
         currencyCode:
           type: string
         description:
@@ -24458,10 +24458,10 @@ components:
           type: string
         virtualAmount:
           type: integer
-          format: int32
+          format: uint32
         virtualBonusAmount:
           type: integer
-          format: int32
+          format: uint32
     PayMobileProductListResult:
       type: object
       properties:
@@ -24499,13 +24499,13 @@ components:
           $ref: '#/components/schemas/PayMobilePurchaseStatus'
         virtualAmount:
           type: integer
-          format: int32
+          format: uint32
         virtualBonusAmount:
           type: integer
-          format: int32
+          format: uint32
         virtualTotalAmount:
           type: integer
-          format: int32
+          format: uint32
     PayMobilePurchaseStatus:
       enum:
         - Ready
@@ -24527,7 +24527,7 @@ components:
       properties:
         amountInCents:
           type: integer
-          format: int32
+          format: uint32
         currencyCode:
           type: string
         productId:
@@ -24557,17 +24557,17 @@ components:
           type: string
         virtualAmount:
           type: integer
-          format: int32
+          format: uint32
         virtualBonusAmount:
           type: integer
-          format: int32
+          format: uint32
         virtualCurrencyCode:
           type: string
         virtualCurrencyName:
           type: string
         virtualTotalAmount:
           type: integer
-          format: int32
+          format: uint32
     PayMobileSubmitPurchaseResultStatus:
       enum:
         - PmcTransient
@@ -24583,7 +24583,7 @@ components:
       properties:
         durationMs:
           type: integer
-          format: int32
+          format: uint32
         endpointApi:
           type: string
         iapStatus:
@@ -24610,7 +24610,7 @@ components:
       properties:
         expiry:
           type: integer
-          format: int64
+          format: uint64
         scopes:
           type: array
           items:
@@ -24624,7 +24624,7 @@ components:
           type: boolean
         created_datetime:
           type: integer
-          format: int64
+          format: uint64
         game_name:
           type: string
         summoner:
@@ -24765,7 +24765,7 @@ components:
       properties:
         expiry:
           type: integer
-          format: int64
+          format: uint64
         token:
           type: string
     PlatformUiInitiateLoginSessionRequest:
@@ -24978,7 +24978,7 @@ components:
           type: string
         expiry:
           type: integer
-          format: int64
+          format: uint64
         scopes:
           type: array
           items:
@@ -24992,7 +24992,7 @@ components:
           type: boolean
         created_datetime:
           type: integer
-          format: int64
+          format: uint64
         game_name:
           type: string
         summoner:
@@ -25062,7 +25062,7 @@ components:
       properties:
         currentAccountId:
           type: integer
-          format: int64
+          format: uint64
         currentPlatformId:
           type: string
         subject:
@@ -25123,7 +25123,7 @@ components:
           type: string
         expiry:
           type: integer
-          format: int64
+          format: uint64
         nonce:
           type: string
         token:
@@ -25318,7 +25318,7 @@ components:
           type: string
         expiry:
           type: integer
-          format: int64
+          format: uint64
         scopes:
           type: array
           items:
@@ -25378,7 +25378,7 @@ components:
           type: string
         expiry:
           type: integer
-          format: int64
+          format: uint64
         nonce:
           type: string
         token:
@@ -25425,10 +25425,10 @@ components:
             type: string
         expiry:
           type: integer
-          format: int64
+          format: uint64
         issuedAt:
           type: integer
-          format: int64
+          format: uint64
         product:
           type: string
         puuid:
@@ -25442,10 +25442,10 @@ components:
           type: string
         expiry:
           type: integer
-          format: int64
+          format: uint64
         issuedAt:
           type: integer
-          format: int64
+          format: uint64
         puuid:
           type: string
         service:
@@ -25468,10 +25468,10 @@ components:
           type: string
         expiry:
           type: integer
-          format: int64
+          format: uint64
         issuedAt:
           type: integer
-          format: int64
+          format: uint64
         puuid:
           type: string
         service:
@@ -25489,10 +25489,10 @@ components:
             type: string
         expiry:
           type: integer
-          format: int64
+          format: uint64
         issuedAt:
           type: integer
-          format: int64
+          format: uint64
         product:
           type: string
         puuid:
@@ -25568,7 +25568,7 @@ components:
       properties:
         createdAt:
           type: integer
-          format: int64
+          format: uint64
         mailId:
           type: string
         mailType:
@@ -25582,7 +25582,7 @@ components:
       properties:
         lastUpdateReceived:
           type: integer
-          format: int64
+          format: uint64
     PlayerReportingMailState:
       enum:
         - NEW
@@ -25693,14 +25693,14 @@ components:
       properties:
         count:
           type: integer
-          format: int64
+          format: uint64
         includedStates:
           type: array
           items:
             $ref: '#/components/schemas/PlayerReportingMailState'
         startIndex:
           type: integer
-          format: int64
+          format: uint64
         tags:
           type: array
           items:
@@ -25723,7 +25723,7 @@ components:
       properties:
         expiry:
           type: integer
-          format: int64
+          format: uint64
         scopes:
           type: array
           items:
@@ -25850,7 +25850,7 @@ components:
             type: string
         expiry:
           type: integer
-          format: int64
+          format: uint64
         token:
           type: string
     PlayerSessionLifecycleGameCenterInput:
@@ -25886,7 +25886,7 @@ components:
       properties:
         expiry:
           type: integer
-          format: int64
+          format: uint64
         token:
           type: string
     PlayerSessionLifecycleImplicitAuthorization:
@@ -25990,10 +25990,10 @@ components:
             type: string
         expiry:
           type: integer
-          format: int64
+          format: uint64
         issuedAt:
           type: integer
-          format: int64
+          format: uint64
         product:
           type: string
         puuid:
@@ -26476,7 +26476,7 @@ components:
       properties:
         pid:
           type: integer
-          format: int32
+          format: uint32
         restart-countdown-seconds:
           type: number
           format: float
@@ -26731,7 +26731,7 @@ components:
       properties:
         sessionTTL:
           type: integer
-          format: int32
+          format: uint32
     ProductLauncherVngStatusResponse:
       type: object
       properties:
@@ -26861,10 +26861,10 @@ components:
           type: string
         last_query_id:
           type: integer
-          format: int32
+          format: uint32
         latest_response_id:
           type: integer
-          format: int32
+          format: uint32
         locale:
           type: string
         response_code:
@@ -27168,7 +27168,7 @@ components:
           type: string
         install_size_bytes:
           type: integer
-          format: int64
+          format: uint64
         launch_disabled:
           type: boolean
         launchable_on_update_fail:
@@ -27518,7 +27518,7 @@ components:
           $ref: '#/components/schemas/ProductSessionProductPhase'
         sessionTTL:
           type: integer
-          format: int32
+          format: uint32
     ProductSessionLaunchConfiguration:
       type: object
       properties:
@@ -27568,7 +27568,7 @@ components:
       properties:
         sessionTTL:
           type: integer
-          format: int32
+          format: uint32
     ProductSessionTerminationReason:
       enum:
         - StillRunning
@@ -27910,7 +27910,7 @@ components:
           type: string
         expiry:
           type: integer
-          format: int64
+          format: uint64
         scopes:
           type: array
           items:
@@ -27965,7 +27965,7 @@ components:
           type: string
         expiry:
           type: integer
-          format: int64
+          format: uint64
         nonce:
           type: string
         token:
@@ -28172,7 +28172,7 @@ components:
       properties:
         expiry:
           type: integer
-          format: int64
+          format: uint64
         token:
           type: string
     RiotMessagingServiceAcknowledgeBody:
@@ -28227,10 +28227,10 @@ components:
           type: string
         expiry:
           type: integer
-          format: int64
+          format: uint64
         issuedAt:
           type: integer
-          format: int64
+          format: uint64
         puuid:
           type: string
         service:
@@ -28506,7 +28506,7 @@ components:
       properties:
         currentAccountId:
           type: integer
-          format: int64
+          format: uint64
         currentPlatformId:
           type: string
         subject:
@@ -28774,7 +28774,7 @@ components:
       properties:
         process_id:
           type: integer
-          format: int64
+          format: uint64
         process_name:
           type: string
     RnetProductRegistryManifestProgress:
@@ -28782,10 +28782,10 @@ components:
       properties:
         bytes_to_download:
           type: integer
-          format: int64
+          format: uint64
         downloaded_bytes:
           type: integer
-          format: int64
+          format: uint64
     RnetProductRegistryMoveInstallOptions:
       type: object
       properties:
@@ -28886,7 +28886,7 @@ components:
           type: string
         install_size_bytes:
           type: integer
-          format: int64
+          format: uint64
         launch_disabled:
           type: boolean
         launcher_arguments:
@@ -29004,7 +29004,7 @@ components:
           type: string
         install_size_bytes:
           type: integer
-          format: int64
+          format: uint64
         launch_disabled:
           type: boolean
         launchable_on_update_fail:
@@ -29183,25 +29183,25 @@ components:
       properties:
         cache_read_bytes:
           type: integer
-          format: int64
+          format: uint64
         cache_write_bytes:
           type: integer
-          format: int64
+          format: uint64
         disk_read_bytes:
           type: integer
-          format: int64
+          format: uint64
         disk_size_diff:
           type: integer
           format: int64
         disk_write_bytes:
           type: integer
-          format: int64
+          format: uint64
         network_bytes_compressed:
           type: integer
-          format: int64
+          format: uint64
         new_bytes:
           type: integer
-          format: int64
+          format: uint64
     RnetProductRegistryPreviewRequest:
       type: object
       properties:
@@ -29213,7 +29213,7 @@ components:
             type: string
         stage:
           type: integer
-          format: int8
+          format: uint8
         tags:
           type: array
           items:
@@ -29389,16 +29389,16 @@ components:
       properties:
         bytes_to_repair:
           type: integer
-          format: int64
+          format: uint64
         files_to_repair:
           type: integer
-          format: int64
+          format: uint64
         repaired_bytes:
           type: integer
-          format: int64
+          format: uint64
         repaired_files:
           type: integer
-          format: int64
+          format: uint64
     RnetProductRegistryScdCookie:
       type: object
       properties:
@@ -29473,25 +29473,25 @@ components:
       properties:
         bytes_to_download:
           type: integer
-          format: int64
+          format: uint64
         bytes_to_read:
           type: integer
-          format: int64
+          format: uint64
         bytes_to_write:
           type: integer
-          format: int64
+          format: uint64
         downloaded_bytes:
           type: integer
-          format: int64
+          format: uint64
         read_bytes:
           type: integer
-          format: int64
+          format: uint64
         stage:
           type: integer
-          format: int8
+          format: uint8
         written_bytes:
           type: integer
-          format: int64
+          format: uint64
     RnetProductRegistryUpToDateStatus:
       enum:
         - UpToDate
@@ -29505,7 +29505,7 @@ components:
           type: boolean
         level:
           type: integer
-          format: int32
+          format: uint32
         text:
           type: string
     RnetSanitizerContainsSanitizedResponse:
@@ -29520,7 +29520,7 @@ components:
           type: boolean
         level:
           type: integer
-          format: int32
+          format: uint32
         text:
           type: string
         texts:
@@ -29543,17 +29543,17 @@ components:
       properties:
         breakingCharsCount:
           type: integer
-          format: int32
+          format: uint32
         filteredWordCountsByLevel:
           type: object
           additionalProperties:
             type: integer
-            format: int32
+            format: uint32
         locale:
           type: string
         projectedCharsCount:
           type: integer
-          format: int32
+          format: uint32
         ready:
           type: boolean
         region:
@@ -29562,7 +29562,7 @@ components:
           type: object
           additionalProperties:
             type: integer
-            format: int32
+            format: uint32
     RnetSelfUpdateBuildInfo:
       type: object
       properties:
@@ -29582,10 +29582,10 @@ components:
       properties:
         bytes_to_download:
           type: integer
-          format: int64
+          format: uint64
         downloaded_bytes:
           type: integer
-          format: int64
+          format: uint64
     RnetSelfUpdatePatchError:
       type: object
       properties:
@@ -29642,10 +29642,10 @@ components:
       properties:
         bytes_to_download:
           type: integer
-          format: int64
+          format: uint64
         downloaded_bytes:
           type: integer
-          format: int64
+          format: uint64
     RnetSelfUpdateSeedRequest:
       type: object
       properties:
@@ -29683,7 +29683,7 @@ components:
       properties:
         expiry:
           type: integer
-          format: int64
+          format: uint64
         scopes:
           type: array
           items:
@@ -29727,7 +29727,7 @@ components:
       properties:
         currentAccountId:
           type: integer
-          format: int64
+          format: uint64
         currentPlatformId:
           type: string
         subject:
@@ -29915,7 +29915,7 @@ components:
       properties:
         expiry:
           type: integer
-          format: int64
+          format: uint64
         scopes:
           type: array
           items:
@@ -29959,7 +29959,7 @@ components:
       properties:
         expiry:
           type: integer
-          format: int64
+          format: uint64
         token:
           type: string
     RsoAuthenticatorRsoAuthImplicitAuthorization:
@@ -30416,7 +30416,7 @@ components:
             type: string
         expiry:
           type: integer
-          format: int64
+          format: uint64
         token:
           type: string
     RsoAuthGameCenterAuthCredentials:
@@ -30475,7 +30475,7 @@ components:
       properties:
         expiry:
           type: integer
-          format: int64
+          format: uint64
         token:
           type: string
     RsoAuthImplicitAuthorization:
@@ -30544,7 +30544,7 @@ components:
           type: string
         multiFactorCodeLength:
           type: integer
-          format: int64
+          format: uint64
     RsoAuthMultifactorMethod:
       enum:
         - method_not_set
@@ -31150,7 +31150,7 @@ components:
       properties:
         expiry:
           type: integer
-          format: int64
+          format: uint64
         scopes:
           type: array
           items:
@@ -31403,7 +31403,7 @@ components:
       properties:
         expiry:
           type: integer
-          format: int64
+          format: uint64
         token:
           type: string
     RsoMobileUiRsoAuthImplicitAuthorization:
@@ -31529,7 +31529,7 @@ components:
       properties:
         currentAccountId:
           type: integer
-          format: int64
+          format: uint64
         currentPlatformId:
           type: string
         subject:
@@ -31967,7 +31967,7 @@ components:
       properties:
         currentAccountId:
           type: integer
-          format: int64
+          format: uint64
         currentPlatformId:
           type: string
         subject:
@@ -32085,19 +32085,19 @@ components:
           type: boolean
         micEnergy:
           type: integer
-          format: int32
+          format: uint32
         micVolume:
           type: integer
-          format: int32
+          format: uint32
         noiseFloorMeter:
           type: number
           format: double
         speakerEnergy:
           type: integer
-          format: int32
+          format: uint32
         speakerVolume:
           type: integer
-          format: int32
+          format: uint32
         speechThresholdMeter:
           type: number
           format: double
@@ -32154,7 +32154,7 @@ components:
       properties:
         energy:
           type: integer
-          format: int32
+          format: uint32
         id:
           type: string
         isMuted:
@@ -32165,12 +32165,12 @@ components:
           type: string
         speakingTimestamp:
           type: integer
-          format: int32
+          format: uint32
         uri:
           type: string
         volume:
           type: integer
-          format: int32
+          format: uint32
     VoiceChatProductSession:
       type: object
       properties:
@@ -32192,10 +32192,10 @@ components:
       properties:
         key:
           type: integer
-          format: int32
+          format: uint32
         mouseButton:
           type: integer
-          format: int32
+          format: uint32
     VoiceChatPushToTalkResource:
       type: object
       properties:
@@ -32232,7 +32232,7 @@ components:
           $ref: '#/components/schemas/VoiceChatSessionStatus'
         volume:
           type: integer
-          format: int32
+          format: uint32
     VoiceChatSessionStatus:
       enum:
         - active
@@ -32251,16 +32251,16 @@ components:
           type: boolean
         micLevel:
           type: integer
-          format: int32
+          format: uint32
         speakerLevel:
           type: integer
-          format: int32
+          format: uint32
         vadHangoverTime:
           type: integer
-          format: int32
+          format: uint32
         vadSensitivity:
           type: integer
-          format: int32
+          format: uint32
     VoiceChatStateResource:
       type: object
       properties:
@@ -32280,10 +32280,10 @@ components:
       properties:
         key:
           type: integer
-          format: int32
+          format: uint32
         mouseButton:
           type: integer
-          format: int32
+          format: uint32
     VoiceChatUnnormalizedPushToTalkResource:
       type: object
       properties:
@@ -32302,7 +32302,7 @@ components:
           type: boolean
         volume:
           type: integer
-          format: int32
+          format: uint32
     VoiceChatUpdateSessionResource:
       type: object
       properties:
@@ -32312,7 +32312,7 @@ components:
           type: boolean
         volume:
           type: integer
-          format: int32
+          format: uint32
     VoiceChatUpdateSettingsResource:
       type: object
       properties:
@@ -32326,16 +32326,16 @@ components:
           type: boolean
         micLevel:
           type: integer
-          format: int32
+          format: uint32
         speakerLevel:
           type: integer
-          format: int32
+          format: uint32
         vadHangoverTime:
           type: integer
-          format: int32
+          format: uint32
         vadSensitivity:
           type: integer
-          format: int32
+          format: uint32
     VoiceChatVivoxCallStats:
       type: object
       properties:
@@ -32460,7 +32460,7 @@ components:
       properties:
         channelsInUse:
           type: integer
-          format: int32
+          format: uint32
         patchlineId:
           type: string
         productId:

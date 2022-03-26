@@ -7217,15 +7217,15 @@ paths:
             application/json:
               schema:
                 type: integer
-                format: int32
+                format: uint32
             application/x-yaml:
               schema:
                 type: integer
-                format: int32
+                format: uint32
             application/x-msgpack:
               schema:
                 type: integer
-                format: int32
+                format: uint32
   /pay-mobile/v1/purchaseResult:
     get:
       tags:
@@ -7266,15 +7266,15 @@ paths:
             application/json:
               schema:
                 type: integer
-                format: int32
+                format: uint32
             application/x-yaml:
               schema:
                 type: integer
-                format: int32
+                format: uint32
             application/x-msgpack:
               schema:
                 type: integer
-                format: int32
+                format: uint32
   /pay-mobile/v1/request-price-point-products:
     post:
       tags:
@@ -7288,15 +7288,15 @@ paths:
             application/json:
               schema:
                 type: integer
-                format: int32
+                format: uint32
             application/x-yaml:
               schema:
                 type: integer
-                format: int32
+                format: uint32
             application/x-msgpack:
               schema:
                 type: integer
-                format: int32
+                format: uint32
   /pay-mobile/v1/request-products:
     post:
       tags:
@@ -7310,15 +7310,15 @@ paths:
             application/json:
               schema:
                 type: integer
-                format: int32
+                format: uint32
             application/x-yaml:
               schema:
                 type: integer
-                format: int32
+                format: uint32
             application/x-msgpack:
               schema:
                 type: integer
-                format: int32
+                format: uint32
   /pay-mobile/v1/session/resume:
     post:
       tags:
@@ -7332,15 +7332,15 @@ paths:
             application/json:
               schema:
                 type: integer
-                format: int32
+                format: uint32
             application/x-yaml:
               schema:
                 type: integer
-                format: int32
+                format: uint32
             application/x-msgpack:
               schema:
                 type: integer
-                format: int32
+                format: uint32
   /payments/v1/initialize-purchase:
     post:
       tags:
@@ -12159,15 +12159,15 @@ paths:
             application/json:
               schema:
                 type: integer
-                format: int16
+                format: uint16
             application/x-yaml:
               schema:
                 type: integer
-                format: int16
+                format: uint16
             application/x-msgpack:
               schema:
                 type: integer
-                format: int16
+                format: uint16
   /riotclient/auth-token:
     get:
       tags:
@@ -13186,15 +13186,15 @@ paths:
             application/json:
               schema:
                 type: integer
-                format: int64
+                format: uint64
             application/x-yaml:
               schema:
                 type: integer
-                format: int64
+                format: uint64
             application/x-msgpack:
               schema:
                 type: integer
-                format: int64
+                format: uint64
   /rnet-product-registry/v1/background-patching/state:
     get:
       tags:
@@ -13240,15 +13240,15 @@ paths:
             application/json:
               schema:
                 type: integer
-                format: int64
+                format: uint64
             application/x-yaml:
               schema:
                 type: integer
-                format: int64
+                format: uint64
             application/x-msgpack:
               schema:
                 type: integer
-                format: int64
+                format: uint64
   /rnet-product-registry/v1/install-states:
     get:
       tags:
@@ -16860,15 +16860,15 @@ paths:
             application/json:
               schema:
                 type: integer
-                format: int64
+                format: uint64
             application/x-yaml:
               schema:
                 type: integer
-                format: int64
+                format: uint64
             application/x-msgpack:
               schema:
                 type: integer
-                format: int64
+                format: uint64
   /telemetry/v1/availability:
     get:
       tags:

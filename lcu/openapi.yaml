@@ -8045,15 +8045,15 @@ paths:
             application/json:
               schema:
                 type: integer
-                format: int64
+                format: uint64
             application/x-yaml:
               schema:
                 type: integer
-                format: int64
+                format: uint64
             application/x-msgpack:
               schema:
                 type: integer
-                format: int64
+                format: uint64
   /lol-collections/v1/inventories/scouting:
     get:
       tags:
@@ -8156,15 +8156,15 @@ paths:
           application/json:
             schema:
               type: integer
-              format: int8
+              format: uint8
           application/x-yaml:
             schema:
               type: integer
-              format: int8
+              format: uint8
           application/x-msgpack:
             schema:
               type: integer
-              format: int8
+              format: uint8
       responses:
         '200':
           description: Successful response
@@ -8585,19 +8585,19 @@ paths:
                 type: array
                 items:
                   type: integer
-                  format: int64
+                  format: uint64
             application/x-yaml:
               schema:
                 type: array
                 items:
                   type: integer
-                  format: int64
+                  format: uint64
             application/x-msgpack:
               schema:
                 type: array
                 items:
                   type: integer
-                  format: int64
+                  format: uint64
   /lol-end-of-game/v1/state/dismiss-stats:
     post:
       tags:
@@ -8764,19 +8764,19 @@ paths:
                 type: array
                 items:
                   type: integer
-                  format: int64
+                  format: uint64
             application/x-yaml:
               schema:
                 type: array
                 items:
                   type: integer
-                  format: int64
+                  format: uint64
             application/x-msgpack:
               schema:
                 type: array
                 items:
                   type: integer
-                  format: int64
+                  format: uint64
   /lol-game-client-chat/v1/instant-messages:
     post:
       tags:
@@ -8812,19 +8812,19 @@ paths:
                 type: array
                 items:
                   type: integer
-                  format: int64
+                  format: uint64
             application/x-yaml:
               schema:
                 type: array
                 items:
                   type: integer
-                  format: int64
+                  format: uint64
             application/x-msgpack:
               schema:
                 type: array
                 items:
                   type: integer
-                  format: int64
+                  format: uint64
   /lol-game-client-chat/v1/party-messages:
     post:
       tags:
@@ -10424,15 +10424,15 @@ paths:
             application/json:
               schema:
                 type: integer
-                format: int64
+                format: uint64
             application/x-yaml:
               schema:
                 type: integer
-                format: int64
+                format: uint64
             application/x-msgpack:
               schema:
                 type: integer
-                format: int64
+                format: uint64
   /lol-honor-v2/v1/level-change:
     get:
       tags:
@@ -10576,19 +10576,19 @@ paths:
                 type: array
                 items:
                   type: integer
-                  format: int64
+                  format: uint64
             application/x-yaml:
               schema:
                 type: array
                 items:
                   type: integer
-                  format: int64
+                  format: uint64
             application/x-msgpack:
               schema:
                 type: array
                 items:
                   type: integer
-                  format: int64
+                  format: uint64
   /lol-honor-v2/v1/vote-completion:
     get:
       tags:
@@ -13650,15 +13650,15 @@ paths:
             application/json:
               schema:
                 type: integer
-                format: int64
+                format: uint64
             application/x-yaml:
               schema:
                 type: integer
-                format: int64
+                format: uint64
             application/x-msgpack:
               schema:
                 type: integer
-                format: int64
+                format: uint64
   '/lol-lobby/v2/lobby/members/{summonerId}/kick':
     post:
       tags:
@@ -13679,15 +13679,15 @@ paths:
             application/json:
               schema:
                 type: integer
-                format: int64
+                format: uint64
             application/x-yaml:
               schema:
                 type: integer
-                format: int64
+                format: uint64
             application/x-msgpack:
               schema:
                 type: integer
-                format: int64
+                format: uint64
   '/lol-lobby/v2/lobby/members/{summonerId}/promote':
     post:
       tags:
@@ -13708,15 +13708,15 @@ paths:
             application/json:
               schema:
                 type: integer
-                format: int64
+                format: uint64
             application/x-yaml:
               schema:
                 type: integer
-                format: int64
+                format: uint64
             application/x-msgpack:
               schema:
                 type: integer
-                format: int64
+                format: uint64
   '/lol-lobby/v2/lobby/members/{summonerId}/revoke-invite':
     post:
       tags:
@@ -13737,15 +13737,15 @@ paths:
             application/json:
               schema:
                 type: integer
-                format: int64
+                format: uint64
             application/x-yaml:
               schema:
                 type: integer
-                format: int64
+                format: uint64
             application/x-msgpack:
               schema:
                 type: integer
-                format: int64
+                format: uint64
   /lol-lobby/v2/lobby/members/localMember/position-preferences:
     put:
       tags:
@@ -17177,15 +17177,15 @@ paths:
             application/json:
               schema:
                 type: integer
-                format: int32
+                format: uint32
             application/x-yaml:
               schema:
                 type: integer
-                format: int32
+                format: uint32
             application/x-msgpack:
               schema:
                 type: integer
-                format: int32
+                format: uint32
   /lol-perks/v1/servicesettings:
     get:
       tags:
@@ -22944,19 +22944,19 @@ paths:
               type: array
               items:
                 type: integer
-                format: int32
+                format: uint32
           application/x-yaml:
             schema:
               type: array
               items:
                 type: integer
-                format: int32
+                format: uint32
           application/x-msgpack:
             schema:
               type: array
               items:
                 type: integer
-                format: int32
+                format: uint32
       responses:
         '204':
           description: No content
@@ -24474,15 +24474,15 @@ paths:
             application/json:
               schema:
                 type: integer
-                format: int16
+                format: uint16
             application/x-yaml:
               schema:
                 type: integer
-                format: int16
+                format: uint16
             application/x-msgpack:
               schema:
                 type: integer
-                format: int16
+                format: uint16
   /riotclient/auth-token:
     get:
       tags:
@@ -24805,15 +24805,15 @@ paths:
             application/json:
               schema:
                 type: integer
-                format: int32
+                format: uint32
             application/x-yaml:
               schema:
                 type: integer
-                format: int32
+                format: uint32
             application/x-msgpack:
               schema:
                 type: integer
-                format: int32
+                format: uint32
   /riotclient/ux-flash:
     post:
       tags:
@@ -25177,15 +25177,15 @@ paths:
             application/json:
               schema:
                 type: integer
-                format: int64
+                format: uint64
             application/x-yaml:
               schema:
                 type: integer
-                format: int64
+                format: uint64
             application/x-msgpack:
               schema:
                 type: integer
-                format: int64
+                format: uint64
   '/telemetry/v1/common-data/{key}':
     post:
       tags:

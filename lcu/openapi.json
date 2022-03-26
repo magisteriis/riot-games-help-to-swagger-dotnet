@@ -13008,19 +13008,19 @@
               "application/json": {
                 "schema": {
                   "type": "integer",
-                  "format": "int64"
+                  "format": "uint64"
                 }
               },
               "application/x-yaml": {
                 "schema": {
                   "type": "integer",
-                  "format": "int64"
+                  "format": "uint64"
                 }
               },
               "application/x-msgpack": {
                 "schema": {
                   "type": "integer",
-                  "format": "int64"
+                  "format": "uint64"
                 }
               }
             }
@@ -13187,19 +13187,19 @@
             "application/json": {
               "schema": {
                 "type": "integer",
-                "format": "int8"
+                "format": "uint8"
               }
             },
             "application/x-yaml": {
               "schema": {
                 "type": "integer",
-                "format": "int8"
+                "format": "uint8"
               }
             },
             "application/x-msgpack": {
               "schema": {
                 "type": "integer",
-                "format": "int8"
+                "format": "uint8"
               }
             }
           }
@@ -13883,7 +13883,7 @@
                   "type": "array",
                   "items": {
                     "type": "integer",
-                    "format": "int64"
+                    "format": "uint64"
                   }
                 }
               },
@@ -13892,7 +13892,7 @@
                   "type": "array",
                   "items": {
                     "type": "integer",
-                    "format": "int64"
+                    "format": "uint64"
                   }
                 }
               },
@@ -13901,7 +13901,7 @@
                   "type": "array",
                   "items": {
                     "type": "integer",
-                    "format": "int64"
+                    "format": "uint64"
                   }
                 }
               }
@@ -14172,7 +14172,7 @@
                   "type": "array",
                   "items": {
                     "type": "integer",
-                    "format": "int64"
+                    "format": "uint64"
                   }
                 }
               },
@@ -14181,7 +14181,7 @@
                   "type": "array",
                   "items": {
                     "type": "integer",
-                    "format": "int64"
+                    "format": "uint64"
                   }
                 }
               },
@@ -14190,7 +14190,7 @@
                   "type": "array",
                   "items": {
                     "type": "integer",
-                    "format": "int64"
+                    "format": "uint64"
                   }
                 }
               }
@@ -14247,7 +14247,7 @@
                   "type": "array",
                   "items": {
                     "type": "integer",
-                    "format": "int64"
+                    "format": "uint64"
                   }
                 }
               },
@@ -14256,7 +14256,7 @@
                   "type": "array",
                   "items": {
                     "type": "integer",
-                    "format": "int64"
+                    "format": "uint64"
                   }
                 }
               },
@@ -14265,7 +14265,7 @@
                   "type": "array",
                   "items": {
                     "type": "integer",
-                    "format": "int64"
+                    "format": "uint64"
                   }
                 }
               }
@@ -16859,19 +16859,19 @@
               "application/json": {
                 "schema": {
                   "type": "integer",
-                  "format": "int64"
+                  "format": "uint64"
                 }
               },
               "application/x-yaml": {
                 "schema": {
                   "type": "integer",
-                  "format": "int64"
+                  "format": "uint64"
                 }
               },
               "application/x-msgpack": {
                 "schema": {
                   "type": "integer",
-                  "format": "int64"
+                  "format": "uint64"
                 }
               }
             }
@@ -17101,7 +17101,7 @@
                   "type": "array",
                   "items": {
                     "type": "integer",
-                    "format": "int64"
+                    "format": "uint64"
                   }
                 }
               },
@@ -17110,7 +17110,7 @@
                   "type": "array",
                   "items": {
                     "type": "integer",
-                    "format": "int64"
+                    "format": "uint64"
                   }
                 }
               },
@@ -17119,7 +17119,7 @@
                   "type": "array",
                   "items": {
                     "type": "integer",
-                    "format": "int64"
+                    "format": "uint64"
                   }
                 }
               }
@@ -22068,19 +22068,19 @@
               "application/json": {
                 "schema": {
                   "type": "integer",
-                  "format": "int64"
+                  "format": "uint64"
                 }
               },
               "application/x-yaml": {
                 "schema": {
                   "type": "integer",
-                  "format": "int64"
+                  "format": "uint64"
                 }
               },
               "application/x-msgpack": {
                 "schema": {
                   "type": "integer",
-                  "format": "int64"
+                  "format": "uint64"
                 }
               }
             }
@@ -22113,19 +22113,19 @@
               "application/json": {
                 "schema": {
                   "type": "integer",
-                  "format": "int64"
+                  "format": "uint64"
                 }
               },
               "application/x-yaml": {
                 "schema": {
                   "type": "integer",
-                  "format": "int64"
+                  "format": "uint64"
                 }
               },
               "application/x-msgpack": {
                 "schema": {
                   "type": "integer",
-                  "format": "int64"
+                  "format": "uint64"
                 }
               }
             }
@@ -22158,19 +22158,19 @@
               "application/json": {
                 "schema": {
                   "type": "integer",
-                  "format": "int64"
+                  "format": "uint64"
                 }
               },
               "application/x-yaml": {
                 "schema": {
                   "type": "integer",
-                  "format": "int64"
+                  "format": "uint64"
                 }
               },
               "application/x-msgpack": {
                 "schema": {
                   "type": "integer",
-                  "format": "int64"
+                  "format": "uint64"
                 }
               }
             }
@@ -22203,19 +22203,19 @@
               "application/json": {
                 "schema": {
                   "type": "integer",
-                  "format": "int64"
+                  "format": "uint64"
                 }
               },
               "application/x-yaml": {
                 "schema": {
                   "type": "integer",
-                  "format": "int64"
+                  "format": "uint64"
                 }
               },
               "application/x-msgpack": {
                 "schema": {
                   "type": "integer",
-                  "format": "int64"
+                  "format": "uint64"
                 }
               }
             }
@@ -27775,19 +27775,19 @@
               "application/json": {
                 "schema": {
                   "type": "integer",
-                  "format": "int32"
+                  "format": "uint32"
                 }
               },
               "application/x-yaml": {
                 "schema": {
                   "type": "integer",
-                  "format": "int32"
+                  "format": "uint32"
                 }
               },
               "application/x-msgpack": {
                 "schema": {
                   "type": "integer",
-                  "format": "int32"
+                  "format": "uint32"
                 }
               }
             }
@@ -37131,7 +37131,7 @@
                 "type": "array",
                 "items": {
                   "type": "integer",
-                  "format": "int32"
+                  "format": "uint32"
                 }
               }
             },
@@ -37140,7 +37140,7 @@
                 "type": "array",
                 "items": {
                   "type": "integer",
-                  "format": "int32"
+                  "format": "uint32"
                 }
               }
             },
@@ -37149,7 +37149,7 @@
                 "type": "array",
                 "items": {
                   "type": "integer",
-                  "format": "int32"
+                  "format": "uint32"
                 }
               }
             }
@@ -39595,19 +39595,19 @@
               "application/json": {
                 "schema": {
                   "type": "integer",
-                  "format": "int16"
+                  "format": "uint16"
                 }
               },
               "application/x-yaml": {
                 "schema": {
                   "type": "integer",
-                  "format": "int16"
+                  "format": "uint16"
                 }
               },
               "application/x-msgpack": {
                 "schema": {
                   "type": "integer",
-                  "format": "int16"
+                  "format": "uint16"
                 }
               }
             }
@@ -40120,19 +40120,19 @@
               "application/json": {
                 "schema": {
                   "type": "integer",
-                  "format": "int32"
+                  "format": "uint32"
                 }
               },
               "application/x-yaml": {
                 "schema": {
                   "type": "integer",
-                  "format": "int32"
+                  "format": "uint32"
                 }
               },
               "application/x-msgpack": {
                 "schema": {
                   "type": "integer",
-                  "format": "int32"
+                  "format": "uint32"
                 }
               }
             }
@@ -40718,19 +40718,19 @@
               "application/json": {
                 "schema": {
                   "type": "integer",
-                  "format": "int64"
+                  "format": "uint64"
                 }
               },
               "application/x-yaml": {
                 "schema": {
                   "type": "integer",
-                  "format": "int64"
+                  "format": "uint64"
                 }
               },
               "application/x-msgpack": {
                 "schema": {
                   "type": "integer",
-                  "format": "int64"
+                  "format": "uint64"
                 }
               }
             }

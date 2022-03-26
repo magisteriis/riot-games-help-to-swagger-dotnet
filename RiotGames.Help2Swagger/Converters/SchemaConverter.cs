@@ -62,7 +62,7 @@ internal static class SchemaConverter
                                 contentSchema.Items = new OpenApiSchema
                                 {
                                     Type = "integer",
-                                    Format = ofType.TrimStart('u')
+                                    Format = ofType
                                 };
                             }
                             else
@@ -112,7 +112,7 @@ internal static class SchemaConverter
                                 contentSchema.AdditionalProperties = new OpenApiSchema
                                 {
                                     Type = "integer",
-                                    Format = ofType.TrimStart('u')
+                                    Format = ofType
                                 };
                             }
                             else
@@ -155,7 +155,7 @@ internal static class SchemaConverter
                                 contentSchema = new OpenApiSchema
                                 {
                                     Type = "integer",
-                                    Format = stringValue.TrimStart('u')
+                                    Format = stringValue
                                 };
                             }
                             else if (stringValue == "double")

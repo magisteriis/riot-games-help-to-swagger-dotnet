@@ -10,7 +10,7 @@ internal static class ParameterConverter
     private static readonly string[] queryTypes =
     {
         "string", "uint32", "uint64", "int32", "int64", "double", "float", "bool",
-        "vector of string", "map of string", "vector of uint64",
+        "vector of string", "map of string", "vector of uint64", "vector of int64".
         "" // RCS
         //, "vector of object", "vector of uint32",
         //"map of object"

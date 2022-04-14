@@ -28,8 +28,8 @@ jobs:
     - name: Run (LCU)
       run: dotnet run --project ./RiotGames.Help2Swagger/RiotGames.Help2Swagger.csproj --no-build --verbosity normal -- lcu ./release/wwwroot/lcu/      
       
-    - name: Run (RCS)
-      run: dotnet run --project ./RiotGames.Help2Swagger/RiotGames.Help2Swagger.csproj --no-build --verbosity normal -- rcs ./release/wwwroot/rcs/
+   # - name: Run (RCS)
+   #   run: dotnet run --project ./RiotGames.Help2Swagger/RiotGames.Help2Swagger.csproj --no-build --verbosity normal -- rcs ./release/wwwroot/rcs/
       
     - name: Deploy to GitHub Pages
       if: success()

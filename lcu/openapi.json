@@ -3154,6 +3154,47 @@
         }
       }
     },
+    "/lol-catalog/v1/validation-details": {
+      "get": {
+        "tags": [
+          "Plugins",
+          "Plugin lol-catalog"
+        ],
+        "operationId": "GetLolCatalogV1ValidationDetails",
+        "parameters": [
+          {
+            "name": "offerId",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LolCatalogOfferValidationItem"
+                }
+              },
+              "application/x-yaml": {
+                "schema": {
+                  "$ref": "#/components/schemas/LolCatalogOfferValidationItem"
+                }
+              },
+              "application/x-msgpack": {
+                "schema": {
+                  "$ref": "#/components/schemas/LolCatalogOfferValidationItem"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/lol-challenges/v1/ack-challenge-update/{id}": {
       "post": {
         "tags": [
@@ -25064,13 +25105,13 @@
         }
       }
     },
-    "/lol-loyalty/v1/inventory-request-notification": {
+    "/lol-loyalty/v1/legacy-status-notification": {
       "get": {
         "tags": [
           "Plugins",
           "Plugin lol-loyalty"
         ],
-        "operationId": "GetLolLoyaltyV1InventoryRequestNotification",
+        "operationId": "GetLolLoyaltyV1LegacyStatusNotification",
         "responses": {
           "200": {
             "description": "Successful response",
@@ -31014,47 +31055,6 @@
         }
       }
     },
-    "/lol-purchase-widget/v3/base-skin-line-data/{offerId}": {
-      "get": {
-        "tags": [
-          "Plugins",
-          "Plugin lol-purchase-widget"
-        ],
-        "operationId": "GetLolPurchaseWidgetV3BaseSkinLineDataByOfferId",
-        "parameters": [
-          {
-            "name": "offerId",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Successful response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/LolPurchaseWidgetBaseSkinLineDto"
-                }
-              },
-              "application/x-yaml": {
-                "schema": {
-                  "$ref": "#/components/schemas/LolPurchaseWidgetBaseSkinLineDto"
-                }
-              },
-              "application/x-msgpack": {
-                "schema": {
-                  "$ref": "#/components/schemas/LolPurchaseWidgetBaseSkinLineDto"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
     "/lol-purchase-widget/v3/purchase-offer-order-statuses": {
       "get": {
         "tags": [
@@ -31129,6 +31129,47 @@
               "application/x-msgpack": {
                 "schema": {
                   "$ref": "#/components/schemas/LolPurchaseWidgetPurchaseOfferResponseV3"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/lol-purchase-widget/v3/template-data/{offerId}": {
+      "get": {
+        "tags": [
+          "Plugins",
+          "Plugin lol-purchase-widget"
+        ],
+        "operationId": "GetLolPurchaseWidgetV3TemplateDataByOfferId",
+        "parameters": [
+          {
+            "name": "offerId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LolPurchaseWidgetTemplateDataResource"
+                }
+              },
+              "application/x-yaml": {
+                "schema": {
+                  "$ref": "#/components/schemas/LolPurchaseWidgetTemplateDataResource"
+                }
+              },
+              "application/x-msgpack": {
+                "schema": {
+                  "$ref": "#/components/schemas/LolPurchaseWidgetTemplateDataResource"
                 }
               }
             }
@@ -35790,67 +35831,6 @@
         }
       }
     },
-    "/lol-store/v1/skins/{skinId}/purchase": {
-      "post": {
-        "tags": [
-          "Plugins",
-          "Plugin lol-store"
-        ],
-        "operationId": "PostLolStoreV1SkinsBySkinIdPurchase",
-        "parameters": [
-          {
-            "name": "skinId",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/LolStoreItemCost"
-              }
-            },
-            "application/x-yaml": {
-              "schema": {
-                "$ref": "#/components/schemas/LolStoreItemCost"
-              }
-            },
-            "application/x-msgpack": {
-              "schema": {
-                "$ref": "#/components/schemas/LolStoreItemCost"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Successful response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object"
-                }
-              },
-              "application/x-yaml": {
-                "schema": {
-                  "type": "object"
-                }
-              },
-              "application/x-msgpack": {
-                "schema": {
-                  "type": "object"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
     "/lol-store/v1/status": {
       "get": {
         "tags": [
@@ -37338,30 +37318,30 @@
         }
       }
     },
-    "/lol-tft/v1/tft/hubFooterColors": {
+    "/lol-tft/v1/tft/newsHub": {
       "get": {
         "tags": [
           "Plugins",
           "Plugin lol-tft"
         ],
-        "operationId": "GetLolTftV1TftHubFooterColors",
+        "operationId": "GetLolTftV1TftNewsHub",
         "responses": {
           "200": {
             "description": "Successful response",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/LolTftLolTftHubFooterColors"
+                  "$ref": "#/components/schemas/LolTftLolTftNewsHub"
                 }
               },
               "application/x-yaml": {
                 "schema": {
-                  "$ref": "#/components/schemas/LolTftLolTftHubFooterColors"
+                  "$ref": "#/components/schemas/LolTftLolTftNewsHub"
                 }
               },
               "application/x-msgpack": {
                 "schema": {
-                  "$ref": "#/components/schemas/LolTftLolTftHubFooterColors"
+                  "$ref": "#/components/schemas/LolTftLolTftNewsHub"
                 }
               }
             }
@@ -46743,6 +46723,62 @@
           }
         }
       },
+      "LolCatalogCapOffer": {
+        "type": "object",
+        "properties": {
+          "active": {
+            "type": "boolean"
+          },
+          "createdDate": {
+            "type": "string"
+          },
+          "id": {
+            "type": "string"
+          },
+          "label": {
+            "type": "string"
+          },
+          "merchantId": {
+            "type": "string"
+          },
+          "payload": {
+            "type": "array",
+            "items": {
+              "type": "object"
+            }
+          },
+          "productId": {
+            "type": "string"
+          },
+          "startDate": {
+            "type": "string"
+          },
+          "typeId": {
+            "type": "string"
+          }
+        }
+      },
+      "LolCatalogCapOfferPayloadEntry": {
+        "type": "object",
+        "properties": {
+          "fulfillmentTypeId": {
+            "type": "string"
+          },
+          "inventoryTypeUUID": {
+            "type": "string"
+          },
+          "itemInstanceId": {
+            "type": "string"
+          },
+          "itemPriceMap": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        }
+      },
       "LolCatalogCatalogItem": {
         "type": "object",
         "properties": {
@@ -47416,6 +47452,44 @@
           }
         }
       },
+      "LolCatalogOfferValidationItem": {
+        "type": "object",
+        "properties": {
+          "catalogCreatedDate": {
+            "type": "integer",
+            "format": "uint64"
+          },
+          "catalogId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "catalogStartDate": {
+            "type": "integer",
+            "format": "uint64"
+          },
+          "offerFields": {
+            "$ref": "#/components/schemas/LolCatalogCapOffer"
+          },
+          "owned": {
+            "type": "boolean"
+          },
+          "requiredItems": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LolCatalogCatalogPluginItemWithDetails"
+            }
+          },
+          "sale": {
+            "$ref": "#/components/schemas/LolCatalogSale"
+          },
+          "tags": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
       "LolCatalogSale": {
         "type": "object",
         "properties": {
@@ -47696,6 +47770,10 @@
           "percentile": {
             "type": "number",
             "format": "double"
+          },
+          "position": {
+            "type": "integer",
+            "format": "int32"
           }
         }
       },
@@ -48189,9 +48267,16 @@
             "type": "number",
             "format": "double"
           },
+          "parentCapstoneName": {
+            "type": "string"
+          },
           "percentile": {
             "type": "number",
             "format": "double"
+          },
+          "playersInLevel": {
+            "type": "integer",
+            "format": "int32"
           },
           "pointsAwarded": {
             "type": "integer",
@@ -48270,11 +48355,18 @@
             "type": "integer",
             "format": "int64"
           },
+          "apexLeaderboardPosition": {
+            "type": "integer",
+            "format": "int32"
+          },
           "categoryProgress": {
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/LolChallengesUICategoryProgress"
             }
+          },
+          "isApex": {
+            "type": "boolean"
           },
           "overallChallengeLevel": {
             "type": "string"
@@ -56442,7 +56534,7 @@
           "payload": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/LolCosmeticsCapOfferPayloadEntry"
+              "type": "object"
             }
           },
           "productId": {
@@ -56453,27 +56545,6 @@
           },
           "typeId": {
             "type": "string"
-          }
-        }
-      },
-      "LolCosmeticsCapOfferPayloadEntry": {
-        "type": "object",
-        "properties": {
-          "fulfillmentTypeId": {
-            "type": "string"
-          },
-          "inventoryTypeUUID": {
-            "type": "string"
-          },
-          "itemInstanceId": {
-            "type": "string"
-          },
-          "itemPriceMap": {
-            "type": "object",
-            "additionalProperties": {
-              "type": "integer",
-              "format": "int32"
-            }
           }
         }
       },
@@ -56670,7 +56741,7 @@
           },
           "price": {
             "type": "integer",
-            "format": "uint32"
+            "format": "uint64"
           }
         }
       },
@@ -60557,6 +60628,9 @@
             "type": "boolean"
           },
           "Honor2018Enabled": {
+            "type": "boolean"
+          },
+          "RecallRewardEnabled": {
             "type": "boolean"
           },
           "SecondsToVote": {
@@ -76375,7 +76449,7 @@
           "payload": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/LolPurchaseWidgetCapOfferPayloadEntry"
+              "type": "object"
             }
           },
           "productId": {
@@ -76386,27 +76460,6 @@
           },
           "typeId": {
             "type": "string"
-          }
-        }
-      },
-      "LolPurchaseWidgetCapOfferPayloadEntry": {
-        "type": "object",
-        "properties": {
-          "fulfillmentTypeId": {
-            "type": "string"
-          },
-          "inventoryTypeUUID": {
-            "type": "string"
-          },
-          "itemInstanceId": {
-            "type": "string"
-          },
-          "itemPriceMap": {
-            "type": "object",
-            "additionalProperties": {
-              "type": "integer",
-              "format": "int32"
-            }
           }
         }
       },
@@ -76707,6 +76760,46 @@
           }
         }
       },
+      "LolPurchaseWidgetComponentConnectionResource": {
+        "type": "object",
+        "properties": {
+          "connections": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "uint32"
+            }
+          },
+          "source": {
+            "type": "integer",
+            "format": "uint32"
+          }
+        }
+      },
+      "LolPurchaseWidgetComponentDataResource": {
+        "type": "object",
+        "properties": {
+          "componentType": {
+            "$ref": "#/components/schemas/LolPurchaseWidgetComponentType"
+          },
+          "data": {
+            "type": "string"
+          }
+        }
+      },
+      "LolPurchaseWidgetComponentType": {
+        "enum": [
+          "EMPTY",
+          "IMAGE_CAROUSEL",
+          "MEDIA",
+          "PURCHASE",
+          "SCROLL_LIST",
+          "TEXT",
+          "TITLE_SUBTITLE",
+          "VERTICAL_LIST"
+        ],
+        "type": "string"
+      },
       "LolPurchaseWidgetDiscountPricingInfo": {
         "type": "object",
         "properties": {
@@ -76723,6 +76816,37 @@
           "discount": {
             "type": "number",
             "format": "float"
+          }
+        }
+      },
+      "LolPurchaseWidgetImageCarouselComponentDataResource": {
+        "type": "object",
+        "properties": {
+          "images": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LolPurchaseWidgetImageCarouselImagesDataResource"
+            }
+          },
+          "localizedAssociatedTextData": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "LolPurchaseWidgetImageCarouselImagesDataResource": {
+        "type": "object",
+        "properties": {
+          "large": {
+            "$ref": "#/components/schemas/LolPurchaseWidgetMediaDataResource"
+          },
+          "thumbnail": {
+            "$ref": "#/components/schemas/LolPurchaseWidgetMediaDataResource"
+          },
+          "video": {
+            "$ref": "#/components/schemas/LolPurchaseWidgetMediaDataResource"
           }
         }
       },
@@ -76950,6 +77074,101 @@
         ],
         "type": "string"
       },
+      "LolPurchaseWidgetMediaCaptionDataResource": {
+        "type": "object",
+        "properties": {
+          "index": {
+            "type": "integer",
+            "format": "uint16"
+          },
+          "localizedTitle": {
+            "type": "string"
+          },
+          "total": {
+            "type": "integer",
+            "format": "uint16"
+          }
+        }
+      },
+      "LolPurchaseWidgetMediaComponentDataResource": {
+        "type": "object",
+        "properties": {
+          "caption": {
+            "$ref": "#/components/schemas/LolPurchaseWidgetMediaCaptionDataResource"
+          },
+          "media": {
+            "$ref": "#/components/schemas/LolPurchaseWidgetMediaDataResource"
+          }
+        }
+      },
+      "LolPurchaseWidgetMediaDataResource": {
+        "type": "object",
+        "properties": {
+          "loadType": {
+            "$ref": "#/components/schemas/LolPurchaseWidgetMediaLoadType"
+          },
+          "location": {
+            "type": "string"
+          },
+          "type": {
+            "$ref": "#/components/schemas/LolPurchaseWidgetMediaType"
+          }
+        }
+      },
+      "LolPurchaseWidgetMediaLoadType": {
+        "enum": [
+          "LOCAL_ASSET",
+          "EXTERNAL_URL",
+          "GAME_DATA"
+        ],
+        "type": "string"
+      },
+      "LolPurchaseWidgetMediaType": {
+        "enum": [
+          "SVG",
+          "IMAGE",
+          "VIDEO"
+        ],
+        "type": "string"
+      },
+      "LolPurchaseWidgetOfferValidationItem": {
+        "type": "object",
+        "properties": {
+          "catalogCreatedDate": {
+            "type": "integer",
+            "format": "uint64"
+          },
+          "catalogId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "catalogStartDate": {
+            "type": "integer",
+            "format": "uint64"
+          },
+          "offerFields": {
+            "$ref": "#/components/schemas/LolPurchaseWidgetCapOffer"
+          },
+          "owned": {
+            "type": "boolean"
+          },
+          "requiredItems": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LolPurchaseWidgetCatalogPluginItemWithDetails"
+            }
+          },
+          "sale": {
+            "$ref": "#/components/schemas/LolPurchaseWidgetSale"
+          },
+          "tags": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
       "LolPurchaseWidgetOrderNotificationResource": {
         "type": "object",
         "properties": {
@@ -77027,6 +77246,17 @@
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/LolPurchaseWidgetValidationErrorEntry"
+            }
+          }
+        }
+      },
+      "LolPurchaseWidgetPurchaseComponentDataResource": {
+        "type": "object",
+        "properties": {
+          "purchaseOptions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LolPurchaseWidgetPurchaseOptionResource"
             }
           }
         }
@@ -77121,6 +77351,28 @@
           }
         }
       },
+      "LolPurchaseWidgetPurchaseOptionResource": {
+        "type": "object",
+        "properties": {
+          "currencyImage": {
+            "$ref": "#/components/schemas/LolPurchaseWidgetMediaDataResource"
+          },
+          "currencyName": {
+            "type": "string"
+          },
+          "currencyPaymentOption": {
+            "type": "string"
+          },
+          "price": {
+            "type": "integer",
+            "format": "uint32"
+          },
+          "quantity": {
+            "type": "integer",
+            "format": "uint32"
+          }
+        }
+      },
       "LolPurchaseWidgetPurchaseRequest": {
         "type": "object",
         "properties": {
@@ -77149,6 +77401,20 @@
           },
           "useRMSConfirmation": {
             "type": "boolean"
+          }
+        }
+      },
+      "LolPurchaseWidgetPurchaseSuccessInfoComponentDataResource": {
+        "type": "object",
+        "properties": {
+          "purchaseSuccessImage": {
+            "$ref": "#/components/schemas/LolPurchaseWidgetMediaDataResource"
+          },
+          "purchaseSuccessItemDescription": {
+            "type": "string"
+          },
+          "purchaseSuccessItemName": {
+            "type": "string"
           }
         }
       },
@@ -77200,6 +77466,56 @@
             }
           },
           "startDate": {
+            "type": "string"
+          }
+        }
+      },
+      "LolPurchaseWidgetScrollListComponentDataResource": {
+        "type": "object",
+        "properties": {
+          "sections": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LolPurchaseWidgetScrollListSectionDataResource"
+            }
+          }
+        }
+      },
+      "LolPurchaseWidgetScrollListDisplayType": {
+        "enum": [
+          "EXPANDED",
+          "COMPACT",
+          "DETAILED"
+        ],
+        "type": "string"
+      },
+      "LolPurchaseWidgetScrollListItemDataResource": {
+        "type": "object",
+        "properties": {
+          "localizedSubtitle": {
+            "type": "string"
+          },
+          "localizedTitle": {
+            "type": "string"
+          },
+          "thumbnail": {
+            "$ref": "#/components/schemas/LolPurchaseWidgetMediaDataResource"
+          }
+        }
+      },
+      "LolPurchaseWidgetScrollListSectionDataResource": {
+        "type": "object",
+        "properties": {
+          "displayType": {
+            "$ref": "#/components/schemas/LolPurchaseWidgetScrollListDisplayType"
+          },
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LolPurchaseWidgetScrollListItemDataResource"
+            }
+          },
+          "localizedTitle": {
             "type": "string"
           }
         }
@@ -77323,6 +77639,58 @@
             "type": "string"
           },
           "uncenteredSplashPath": {
+            "type": "string"
+          }
+        }
+      },
+      "LolPurchaseWidgetTemplateDataResource": {
+        "type": "object",
+        "properties": {
+          "baseSkinLineData": {
+            "$ref": "#/components/schemas/LolPurchaseWidgetBaseSkinLineDto"
+          },
+          "componentConnections": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LolPurchaseWidgetComponentConnectionResource"
+            }
+          },
+          "components": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LolPurchaseWidgetComponentDataResource"
+            }
+          },
+          "purchaseSuccessInfo": {
+            "$ref": "#/components/schemas/LolPurchaseWidgetPurchaseSuccessInfoComponentDataResource"
+          },
+          "templateType": {
+            "$ref": "#/components/schemas/LolPurchaseWidgetTemplateType"
+          }
+        }
+      },
+      "LolPurchaseWidgetTemplateType": {
+        "enum": [
+          "DEFAULT",
+          "LARGE_TWO_COLUMN_LANDSCAPE"
+        ],
+        "type": "string"
+      },
+      "LolPurchaseWidgetTextComponentDataResource": {
+        "type": "object",
+        "properties": {
+          "localizedText": {
+            "type": "string"
+          }
+        }
+      },
+      "LolPurchaseWidgetTitleSubtitleComponentDataResource": {
+        "type": "object",
+        "properties": {
+          "localizedSubtitle": {
+            "type": "string"
+          },
+          "localizedTitle": {
             "type": "string"
           }
         }
@@ -82028,7 +82396,7 @@
           "payload": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/LolStoreCapOfferPayloadEntry"
+              "type": "object"
             }
           },
           "productId": {
@@ -82039,27 +82407,6 @@
           },
           "typeId": {
             "type": "string"
-          }
-        }
-      },
-      "LolStoreCapOfferPayloadEntry": {
-        "type": "object",
-        "properties": {
-          "fulfillmentTypeId": {
-            "type": "string"
-          },
-          "inventoryTypeUUID": {
-            "type": "string"
-          },
-          "itemInstanceId": {
-            "type": "string"
-          },
-          "itemPriceMap": {
-            "type": "object",
-            "additionalProperties": {
-              "type": "integer",
-              "format": "int32"
-            }
           }
         }
       },
@@ -83339,16 +83686,13 @@
           }
         }
       },
-      "LolTftLolTftHubFooterColors": {
+      "LolTftLolTftNewsHub": {
         "type": "object",
         "properties": {
-          "bottomColor": {
-            "type": "string"
+          "enabled": {
+            "type": "boolean"
           },
-          "lineColor": {
-            "type": "string"
-          },
-          "topColor": {
+          "url": {
             "type": "string"
           }
         }

@@ -17542,6 +17542,25 @@ paths:
             application/x-msgpack:
               schema:
                 type: object
+  /lol-personalized-offers/v1/modal:
+    get:
+      tags:
+        - Plugins
+        - Plugin lol-personalized-offers
+      operationId: GetLolPersonalizedOffersV1Modal
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: boolean
+            application/x-yaml:
+              schema:
+                type: boolean
+            application/x-msgpack:
+              schema:
+                type: boolean
   /lol-personalized-offers/v1/offers:
     get:
       tags:
@@ -17623,6 +17642,36 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/LolPersonalizedOffersUIOffer'
+  /lol-personalized-offers/v1/permissions:
+    post:
+      tags:
+        - Plugins
+        - Plugin lol-personalized-offers
+      operationId: PostLolPersonalizedOffersV1Permissions
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/LolPersonalizedOffersPlayerPermissions'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/LolPersonalizedOffersPlayerPermissions'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/LolPersonalizedOffersPlayerPermissions'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/LolPersonalizedOffersPlayerPermissions'
+            application/x-yaml:
+              schema:
+                $ref: '#/components/schemas/LolPersonalizedOffersPlayerPermissions'
+            application/x-msgpack:
+              schema:
+                $ref: '#/components/schemas/LolPersonalizedOffersPlayerPermissions'
   /lol-personalized-offers/v1/ready:
     get:
       tags:
@@ -18106,6 +18155,40 @@ paths:
       responses:
         '204':
           description: No content
+  '/lol-player-behavior/v3/reform-card/{id}':
+    put:
+      tags:
+        - Plugins
+        - Plugin lol-player-behavior
+      operationId: PutLolPlayerBehaviorV3ReformCardById
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '204':
+          description: No content
+  /lol-player-behavior/v3/reform-cards:
+    get:
+      tags:
+        - Plugins
+        - Plugin lol-player-behavior
+      operationId: GetLolPlayerBehaviorV3ReformCards
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+            application/x-yaml:
+              schema:
+                type: object
+            application/x-msgpack:
+              schema:
+                type: object
   /lol-player-level-up/v1/level-up:
     get:
       tags:
@@ -22033,6 +22116,31 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/LolStoreCapOffer'
+  '/lol-store/v1/offers/{offerId}':
+    get:
+      tags:
+        - Plugins
+        - Plugin lol-store
+      operationId: GetLolStoreV1OffersByOfferId
+      parameters:
+        - name: offerId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/LolStoreCapOffer'
+            application/x-yaml:
+              schema:
+                $ref: '#/components/schemas/LolStoreCapOffer'
+            application/x-msgpack:
+              schema:
+                $ref: '#/components/schemas/LolStoreCapOffer'
   /lol-store/v1/order-notifications:
     get:
       tags:
@@ -22201,6 +22309,36 @@ paths:
             application/x-msgpack:
               schema:
                 $ref: '#/components/schemas/LolStoreWallet'
+  /lol-store/v2/offers:
+    get:
+      tags:
+        - Plugins
+        - Plugin lol-store
+      operationId: GetLolStoreV2Offers
+      parameters:
+        - name: typeId
+          in: query
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/LolStoreCapOffer'
+            application/x-yaml:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/LolStoreCapOffer'
+            application/x-msgpack:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/LolStoreCapOffer'
   /lol-suggested-players/v1/reported-player:
     post:
       tags:
@@ -29198,9 +29336,7 @@ components:
         merchantId:
           type: string
         payload:
-          type: array
-          items:
-            type: object
+          type: object
         productId:
           type: string
         startDate:
@@ -29221,6 +29357,8 @@ components:
           additionalProperties:
             type: integer
             format: int32
+        templateType:
+          type: string
     LolCatalogCatalogItem:
       type: object
       properties:
@@ -30307,6 +30445,8 @@ components:
         positionPercentile:
           type: number
           format: double
+        selectedChallengesString:
+          type: string
         title:
           $ref: '#/components/schemas/LolChallengesUITitle'
         topChallenges:
@@ -30335,6 +30475,13 @@ components:
           type: string
         purchaseDate:
           type: string
+    LolChallengesUserResource:
+      type: object
+      properties:
+        lol:
+          type: object
+          additionalProperties:
+            type: string
     LolChampionsChampionQuestSkinInfo:
       type: object
       properties:
@@ -48007,6 +48154,11 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/LolPersonalizedOffersOfferRequest'
+    LolPersonalizedOffersPlayerPermissions:
+      type: object
+      properties:
+        useData:
+          type: string
     LolPersonalizedOffersPromotion:
       type: object
       properties:
@@ -49552,9 +49704,7 @@ components:
         merchantId:
           type: string
         payload:
-          type: array
-          items:
-            type: object
+          type: object
         productId:
           type: string
         startDate:
@@ -49972,6 +50122,8 @@ components:
     LolPurchaseWidgetMediaCaptionDataResource:
       type: object
       properties:
+        captionImagePath:
+          type: string
         index:
           type: integer
           format: uint16
@@ -50309,6 +50461,8 @@ components:
     LolPurchaseWidgetSkinLineItemDto:
       type: object
       properties:
+        captionImagePath:
+          type: string
         largeImagePath:
           type: string
         largeVideoPath:
@@ -53593,9 +53747,7 @@ components:
         merchantId:
           type: string
         payload:
-          type: array
-          items:
-            type: object
+          type: object
         productId:
           type: string
         startDate:

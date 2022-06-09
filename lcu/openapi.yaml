@@ -2156,24 +2156,8 @@ paths:
         - Plugin lol-challenges
       operationId: PostLolChallengesV1ProcessMissedUpdates
       responses:
-        '200':
-          description: Successful response
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/LolChallengesChallengePlayerData'
-            application/x-yaml:
-              schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/LolChallengesChallengePlayerData'
-            application/x-msgpack:
-              schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/LolChallengesChallengePlayerData'
+        '204':
+          description: No content
   /lol-challenges/v1/suggested-challenges/local-player:
     get:
       tags:
@@ -4595,6 +4579,31 @@ paths:
             application/x-msgpack:
               schema:
                 type: object
+  /lol-chat/v1/conversations/eog-chat-toggle:
+    post:
+      tags:
+        - Plugins
+        - Plugin lol-chat
+      operationId: PostLolChatV1ConversationsEogChatToggle
+      parameters:
+        - name: isToggledOn
+          in: query
+          required: true
+          schema:
+            type: boolean
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+            application/x-yaml:
+              schema:
+                type: object
+            application/x-msgpack:
+              schema:
+                type: object
   /lol-chat/v1/conversations/notify:
     get:
       tags:
@@ -5184,6 +5193,78 @@ paths:
             application/x-msgpack:
               schema:
                 $ref: '#/components/schemas/LolChatUserResource'
+  /lol-chat/v1/player-mutes:
+    delete:
+      tags:
+        - Plugins
+        - Plugin lol-chat
+      operationId: DeleteLolChatV1PlayerMutes
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+            application/x-yaml:
+              schema:
+                type: object
+            application/x-msgpack:
+              schema:
+                type: object
+    get:
+      tags:
+        - Plugins
+        - Plugin lol-chat
+      operationId: GetLolChatV1PlayerMutes
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: string
+            application/x-yaml:
+              schema:
+                type: array
+                items:
+                  type: string
+            application/x-msgpack:
+              schema:
+                type: array
+                items:
+                  type: string
+    post:
+      tags:
+        - Plugins
+        - Plugin lol-chat
+      operationId: PostLolChatV1PlayerMutes
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/LolChatPlayerMuteUpdate'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/LolChatPlayerMuteUpdate'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/LolChatPlayerMuteUpdate'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+            application/x-yaml:
+              schema:
+                type: object
+            application/x-msgpack:
+              schema:
+                type: object
   /lol-chat/v1/resources:
     get:
       tags:
@@ -5470,6 +5551,25 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/TournamentDTO'
+  /lol-clash/v1/awaiting-resent-eog:
+    get:
+      tags:
+        - Plugins
+        - Plugin lol-clash
+      operationId: GetLolClashV1AwaitingResentEog
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: boolean
+            application/x-yaml:
+              schema:
+                type: boolean
+            application/x-msgpack:
+              schema:
+                type: boolean
   '/lol-clash/v1/bracket/{bracketId}':
     get:
       tags:
@@ -10803,6 +10903,39 @@ paths:
         - Plugins
         - Plugin lol-inventory
       operationId: GetLolInventoryV1InventoryEmotes
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/LolInventoryInventoryItemWithPayload'
+            application/x-yaml:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/LolInventoryInventoryItemWithPayload'
+            application/x-msgpack:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/LolInventoryInventoryItemWithPayload'
+  /lol-inventory/v1/inventoryWithF2P:
+    get:
+      tags:
+        - Plugins
+        - Plugin lol-inventory
+      operationId: GetLolInventoryV1InventoryWithF2P
+      parameters:
+        - name: inventoryTypes
+          in: query
+          required: true
+          schema:
+            type: array
+            items:
+              type: string
       responses:
         '200':
           description: Successful response
@@ -19073,6 +19206,37 @@ paths:
             application/x-msgpack:
               schema:
                 type: boolean
+  '/lol-publishing-content/v1/listeners/allow-list/{region}':
+    get:
+      tags:
+        - Plugins
+        - Plugin lol-publishing-content
+      operationId: GetLolPublishingContentV1ListenersAllowListByRegion
+      parameters:
+        - name: region
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: string
+            application/x-yaml:
+              schema:
+                type: array
+                items:
+                  type: string
+            application/x-msgpack:
+              schema:
+                type: array
+                items:
+                  type: string
   /lol-publishing-content/v1/listeners/client-data:
     get:
       tags:
@@ -30059,14 +30223,23 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/LolChallengesUIChallenge'
+        challengeId:
+          type: integer
+          format: int64
+        challengeName:
+          type: string
         displayType:
           $ref: '#/components/schemas/LolChallengesNotificationDisplayType'
+        iconPath:
+          type: string
         id:
           type: integer
           format: uint64
         level:
           type: string
         msgId:
+          type: string
+        updateReason:
           type: string
     LolChallengesNotificationDisplayType:
       enum:
@@ -30852,13 +31025,17 @@ components:
       properties:
         expirationDate:
           type: string
+        f2p:
+          type: boolean
         inventoryType:
           type: string
         itemId:
           type: integer
           format: int32
-        ownershipType:
-          $ref: '#/components/schemas/LolChampionsItemOwnershipType'
+        loyalty:
+          type: boolean
+        owned:
+          type: boolean
         payload:
           type: object
         purchaseDate:
@@ -30866,15 +31043,10 @@ components:
         quantity:
           type: integer
           format: uint64
+        rental:
+          type: boolean
         uuid:
           type: string
-    LolChampionsItemOwnershipType:
-      enum:
-        - OWNED
-        - RENTED
-        - LOYALTY
-        - F2P
-      type: string
     LolChampionsLcdsDynamicClientConfig:
       type: object
       properties:
@@ -30949,8 +31121,6 @@ components:
     LolChampionsSummoner:
       type: object
       properties:
-        puuid:
-          type: string
         summonerId:
           type: integer
           format: uint64
@@ -33205,6 +33375,15 @@ components:
       properties:
         pid:
           type: string
+    LolChatPlayerMuteUpdate:
+      type: object
+      properties:
+        isMuted:
+          type: boolean
+        puuids:
+          type: array
+          items:
+            type: string
     LolChatPlayerPreferences:
       type: object
       properties:
@@ -37157,6 +37336,8 @@ components:
           format: int32
         name:
           type: string
+        nameId:
+          type: string
     LolEndOfGameTFTEndOfGamePieceViewModel:
       type: object
       properties:
@@ -39231,6 +39412,9 @@ components:
           type: boolean
         lsb:
           type: boolean
+        ownedQuantity:
+          type: integer
+          format: uint64
         payload:
           type: object
         purchaseDate:
@@ -39250,11 +39434,17 @@ components:
       properties:
         expirationDate:
           type: string
+        f2p:
+          type: boolean
         inventoryType:
           type: string
         itemId:
           type: integer
           format: int32
+        loyalty:
+          type: boolean
+        owned:
+          type: boolean
         ownershipType:
           $ref: '#/components/schemas/LolInventoryItemOwnershipType'
         payload:
@@ -39264,6 +39454,8 @@ components:
         quantity:
           type: integer
           format: uint64
+        rental:
+          type: boolean
         uuid:
           type: string
     LolInventoryInventoryNotification:
@@ -43489,6 +43681,106 @@ components:
           type: string
         requiredTokens:
           type: string
+    LolLootCosmeticsTFTDamageSkin:
+      type: object
+      properties:
+        contentId:
+          type: string
+        description:
+          type: string
+        f2p:
+          type: boolean
+        groupId:
+          type: integer
+          format: uint32
+        groupName:
+          type: string
+        itemId:
+          type: integer
+          format: int32
+        level:
+          type: integer
+          format: uint32
+        loadoutsIcon:
+          type: string
+        loyalty:
+          type: boolean
+        name:
+          type: string
+        owned:
+          type: boolean
+        purchaseDate:
+          type: string
+        rarityValue:
+          type: integer
+          format: uint32
+        selected:
+          type: boolean
+        upgrades:
+          type: array
+          items:
+            type: string
+    LolLootCosmeticsTFTDamageSkinViewModel:
+      type: object
+      properties:
+        contentId:
+          type: string
+        description:
+          type: string
+        f2p:
+          type: boolean
+        groupId:
+          type: integer
+          format: uint32
+        groupName:
+          type: string
+        isRecentItem:
+          type: boolean
+        itemId:
+          type: integer
+          format: int32
+        level:
+          type: integer
+          format: uint32
+        loadoutsIcon:
+          type: string
+        loyalty:
+          type: boolean
+        name:
+          type: string
+        owned:
+          type: boolean
+        purchaseDate:
+          type: string
+        rarityValue:
+          type: integer
+          format: uint32
+        selected:
+          type: boolean
+        upgrades:
+          type: array
+          items:
+            $ref: '#/components/schemas/LolLootCosmeticsTFTDamageSkinViewModel'
+    LolLootCosmeticsTFTMapSkinViewModel:
+      type: object
+      properties:
+        description:
+          type: string
+        f2p:
+          type: boolean
+        itemId:
+          type: integer
+          format: int32
+        loadoutsIcon:
+          type: string
+        loyalty:
+          type: boolean
+        name:
+          type: string
+        owned:
+          type: boolean
+        selected:
+          type: boolean
     LolLootCounter:
       type: object
       properties:
@@ -44643,6 +44935,55 @@ components:
           type: array
           items:
             type: string
+    LolLootTFTDamageSkinGroupedViewModel:
+      type: object
+      properties:
+        defaultItemId:
+          type: integer
+          format: int32
+        groups:
+          type: array
+          items:
+            $ref: '#/components/schemas/LolLootTFTDamageSkinGroupViewModel'
+        selectedLoadoutItem:
+          $ref: '#/components/schemas/LolLootCosmeticsTFTDamageSkinViewModel'
+    LolLootTFTDamageSkinGroupViewModel:
+      type: object
+      properties:
+        groupId:
+          type: integer
+          format: uint32
+        groupName:
+          type: string
+        items:
+          type: array
+          items:
+            $ref: '#/components/schemas/LolLootCosmeticsTFTDamageSkinViewModel'
+        numAvailable:
+          type: integer
+          format: uint32
+        numOwned:
+          type: integer
+          format: uint32
+    LolLootTFTMapSkinGroupedViewModel:
+      type: object
+      properties:
+        defaultItemId:
+          type: integer
+          format: int32
+        groups:
+          type: array
+          items:
+            $ref: '#/components/schemas/LolLootTFTMapSkinGroupViewModel'
+        selectedLoadoutItem:
+          $ref: '#/components/schemas/LolLootCosmeticsTFTMapSkinViewModel'
+    LolLootTFTMapSkinGroupViewModel:
+      type: object
+      properties:
+        items:
+          type: array
+          items:
+            $ref: '#/components/schemas/LolLootCosmeticsTFTMapSkinViewModel'
     LolLootVerboseLootOddsResponse:
       type: object
       properties:
@@ -49589,11 +49930,19 @@ components:
           type: string
         locale:
           type: string
+        port:
+          type: integer
+          format: uint16
+        protocol:
+          type: string
         puuid:
           type: string
         summoner_level:
-          type: string
+          type: integer
+          format: uint16
         summoner_name:
+          type: string
+        system_os:
           type: string
         web_region:
           type: string
@@ -49669,6 +50018,26 @@ components:
         region:
           type: string
         webRegion:
+          type: string
+    LolPublishingContentSummonerInfo:
+      type: object
+      properties:
+        displayName:
+          type: string
+        summonerLevel:
+          type: integer
+          format: uint16
+    LolPublishingContentSystemInfo:
+      type: object
+      properties:
+        operatingSystem:
+          $ref: '#/components/schemas/LolPublishingContentSystemInfoOperatingSystem'
+    LolPublishingContentSystemInfoOperatingSystem:
+      type: object
+      properties:
+        platform:
+          type: string
+        versionMajor:
           type: string
     LolPurchaseWidgetBalance:
       type: object
@@ -50861,6 +51230,9 @@ components:
           type: string
         wasAfkOrLeaver:
           type: boolean
+        winStreak:
+          type: integer
+          format: int32
     LolRankedLeagueNotifications:
       type: object
       properties:
@@ -54749,8 +55121,8 @@ components:
     LolWorldsTokenCardTokenUpsellLockedType:
       enum:
         - UNASSIGNED
-        - UNLOCKED
         - LOCKED
+        - UNLOCKED
       type: string
     LootItemClientDTO:
       type: object

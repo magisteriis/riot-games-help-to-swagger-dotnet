@@ -1086,6 +1086,26 @@ paths:
             application/x-msgpack:
               schema:
                 $ref: '#/components/schemas/LolAccountVerificationAuthenticateResponse'
+  /lol-account-verification/v1/confirmActivationPin:
+    post:
+      tags:
+        - Plugins
+        - Plugin lol-account-verification
+      operationId: PostLolAccountVerificationV1ConfirmActivationPin
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/LolAccountVerificationConfirmActivationPinRequest'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/LolAccountVerificationConfirmActivationPinRequest'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/LolAccountVerificationConfirmActivationPinRequest'
+      responses:
+        '204':
+          description: No content
   /lol-account-verification/v1/device:
     get:
       tags:
@@ -1173,6 +1193,26 @@ paths:
             application/x-msgpack:
               schema:
                 $ref: '#/components/schemas/LolAccountVerificationSendTokenResponse'
+  /lol-account-verification/v1/sendActivationPin:
+    post:
+      tags:
+        - Plugins
+        - Plugin lol-account-verification
+      operationId: PostLolAccountVerificationV1SendActivationPin
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/LolAccountVerificationSendActivationPinRequest'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/LolAccountVerificationSendActivationPinRequest'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/LolAccountVerificationSendActivationPinRequest'
+      responses:
+        '204':
+          description: No content
   /lol-account-verification/v1/verify:
     post:
       tags:
@@ -2149,15 +2189,6 @@ paths:
             application/x-msgpack:
               schema:
                 $ref: '#/components/schemas/LolChallengesUIChallengePenalty'
-  /lol-challenges/v1/process-missed-updates:
-    post:
-      tags:
-        - Plugins
-        - Plugin lol-challenges
-      operationId: PostLolChallengesV1ProcessMissedUpdates
-      responses:
-        '204':
-          description: No content
   /lol-challenges/v1/suggested-challenges/local-player:
     get:
       tags:
@@ -16991,21 +17022,6 @@ paths:
             application/x-msgpack:
               schema:
                 $ref: '#/components/schemas/LolPatchSupportedGameReleases'
-  /lol-patch/v1/self-update-restart:
-    put:
-      tags:
-        - Plugins
-        - Plugin lol-patch
-      operationId: PutLolPatchV1SelfUpdateRestart
-      parameters:
-        - name: forceRestartOnSelfUpdate
-          in: query
-          required: true
-          schema:
-            type: boolean
-      responses:
-        '204':
-          description: No content
   /lol-patch/v1/status:
     get:
       tags:
@@ -23385,6 +23401,25 @@ paths:
             application/x-msgpack:
               schema:
                 type: object
+  /lol-tft/v1/tft/directToHub:
+    get:
+      tags:
+        - Plugins
+        - Plugin lol-tft
+      operationId: GetLolTftV1TftDirectToHub
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: boolean
+            application/x-yaml:
+              schema:
+                type: boolean
+            application/x-msgpack:
+              schema:
+                type: boolean
   /lol-tft/v1/tft/homeHub:
     get:
       tags:
@@ -23998,31 +24033,6 @@ paths:
                 type: object
                 additionalProperties:
                   type: string
-  /patcher/v1/self-update-restart:
-    put:
-      tags:
-        - Plugins
-        - Plugin patcher
-      operationId: PutPatcherV1SelfUpdateRestart
-      parameters:
-        - name: forceRestartOnSelfUpdate
-          in: query
-          required: true
-          schema:
-            type: boolean
-      responses:
-        '200':
-          description: Successful response
-          content:
-            application/json:
-              schema:
-                type: object
-            application/x-yaml:
-              schema:
-                type: object
-            application/x-msgpack:
-              schema:
-                type: object
   /patcher/v1/status:
     get:
       tags:
@@ -24604,27 +24614,6 @@ paths:
         - process-control
       summary: Quits the application.
       operationId: PostProcessControlV1ProcessQuit
-      responses:
-        '204':
-          description: No content
-  /process-control/v1/process/restart:
-    post:
-      tags:
-        - process-control
-      summary: Restarts the application.  Does nothing if there is already a waiting delayed restart.  Optionally accepts specific version to restart.
-      operationId: PostProcessControlV1ProcessRestart
-      parameters:
-        - name: delaySeconds
-          in: query
-          required: true
-          schema:
-            type: integer
-            format: uint32
-        - name: restartVersion
-          in: query
-          schema:
-            type: integer
-            format: uint32
       responses:
         '204':
           description: No content
@@ -25534,25 +25523,6 @@ paths:
           application/x-msgpack:
             schema:
               $ref: '#/components/schemas/ElevationRequest'
-      responses:
-        '204':
-          description: No content
-  /riotclient/v1/self-update-info:
-    put:
-      tags:
-        - riotclient
-      operationId: PutRiotclientV1SelfUpdateInfo
-      parameters:
-        - name: url
-          in: query
-          required: true
-          schema:
-            type: string
-        - name: uuid
-          in: query
-          required: true
-          schema:
-            type: string
       responses:
         '204':
           description: No content
@@ -28100,6 +28070,8 @@ components:
         profileIconId:
           type: integer
           format: int32
+        puuid:
+          type: string
         selectedPosition:
           type: string
         skinIndex:
@@ -28922,6 +28894,26 @@ components:
           type: boolean
         PasswordEnabled:
           type: boolean
+    LolAccountVerificationConfirmActivationPinRequest:
+      type: object
+      properties:
+        oneTimePin:
+          type: string
+    LolAccountVerificationConfirmActivationPinResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+    LolAccountVerificationConfirmDeactivationPinRequest:
+      type: object
+      properties:
+        locale:
+          type: string
+    LolAccountVerificationConfirmDeactivationPinResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
     LolAccountVerificationDeviceResponse:
       type: object
       properties:
@@ -28975,6 +28967,28 @@ components:
         - LOGGING_OUT
         - ERROR
       type: string
+    LolAccountVerificationSendActivationPinRequest:
+      type: object
+      properties:
+        locale:
+          type: string
+        phoneNumber:
+          type: string
+    LolAccountVerificationSendActivationPinResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+    LolAccountVerificationSendDeactivationPinRequest:
+      type: object
+      properties:
+        locale:
+          type: string
+    LolAccountVerificationSendDeactivationPinResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
     LolAccountVerificationSendTokenRequest:
       type: object
       properties:
@@ -36791,6 +36805,8 @@ components:
         profileIconId:
           type: integer
           format: int32
+        puuid:
+          type: string
         selectedPosition:
           type: string
         skinEmblemPaths:
@@ -47350,10 +47366,6 @@ components:
     LolPatchChunkingPatcherEnvironment:
       type: object
       properties:
-        client_patcher_available:
-          type: boolean
-        client_patcher_enabled:
-          type: boolean
         game_patcher_available:
           type: boolean
         game_patcher_enabled:
@@ -47447,7 +47459,6 @@ components:
         - ConnectionError
         - MissingFilesError
         - FailedToWriteError
-        - WillRestoreClientBackupOnRestart
         - DidRestoreClientBackup
         - NotEnoughDiskSpace
         - BrokenPermissions
@@ -47455,12 +47466,6 @@ components:
     LolPatchPatcherInstallSettings:
       type: object
       properties:
-        client_patch_url:
-          type: string
-        client_patcher:
-          type: string
-        client_patcher_available:
-          type: boolean
         game_patch_url:
           type: string
         game_patcher:
@@ -47477,8 +47482,6 @@ components:
     LolPatchPatcherRegionSettings:
       type: object
       properties:
-        client_patcher:
-          type: string
         game_patcher:
           type: string
         patchline:
@@ -47573,23 +47576,6 @@ components:
         percentPatched:
           type: number
           format: double
-    LolPatchPublishedReleaseResponse:
-      type: object
-      properties:
-        client_patch_url:
-          type: string
-        game_patch_url:
-          type: string
-        timestamp:
-          type: string
-        toggles:
-          type: object
-          additionalProperties:
-            type: number
-            format: double
-        version:
-          type: integer
-          format: int32
     LolPatchRegionLocale:
       type: object
       properties:
@@ -47622,8 +47608,6 @@ components:
       type: object
       properties:
         connectedToPatchServer:
-          type: boolean
-        hasUpdatesOnRestart:
           type: boolean
     LolPatchSupportedGameRelease:
       type: object
@@ -55121,8 +55105,8 @@ components:
     LolWorldsTokenCardTokenUpsellLockedType:
       enum:
         - UNASSIGNED
-        - LOCKED
         - UNLOCKED
+        - LOCKED
       type: string
     LootItemClientDTO:
       type: object
@@ -55790,10 +55774,6 @@ components:
     PatcherChunkingPatcherEnvironment:
       type: object
       properties:
-        client_patcher_available:
-          type: boolean
-        client_patcher_enabled:
-          type: boolean
         game_patcher_available:
           type: boolean
         game_patcher_enabled:
@@ -55869,7 +55849,6 @@ components:
         - ConnectionError
         - MissingFilesError
         - FailedToWriteError
-        - WillRestoreClientBackupOnRestart
         - DidRestoreClientBackup
         - NotEnoughDiskSpace
         - BrokenPermissions
@@ -55919,8 +55898,6 @@ components:
       type: object
       properties:
         connectedToPatchServer:
-          type: boolean
-        hasUpdatesOnRestart:
           type: boolean
         successfullyInstalledVersion:
           type: integer
@@ -56793,9 +56770,6 @@ components:
     ProcessControlProcess:
       type: object
       properties:
-        restart-countdown-seconds:
-          type: number
-          format: float
         status:
           type: string
     PublicPhaseSubDTO:

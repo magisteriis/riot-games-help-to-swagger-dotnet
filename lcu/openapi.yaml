@@ -5254,19 +5254,13 @@ paths:
           content:
             application/json:
               schema:
-                type: array
-                items:
-                  type: string
+                $ref: '#/components/schemas/LolChatPlayerMutesResponse'
             application/x-yaml:
               schema:
-                type: array
-                items:
-                  type: string
+                $ref: '#/components/schemas/LolChatPlayerMutesResponse'
             application/x-msgpack:
               schema:
-                type: array
-                items:
-                  type: string
+                $ref: '#/components/schemas/LolChatPlayerMutesResponse'
     post:
       tags:
         - Plugins
@@ -15656,25 +15650,6 @@ paths:
             application/x-msgpack:
               schema:
                 $ref: '#/components/schemas/LolLootPlayerLootMap'
-  /lol-loyalty/v1/legacy-status-notification:
-    get:
-      tags:
-        - Plugins
-        - Plugin lol-loyalty
-      operationId: GetLolLoyaltyV1LegacyStatusNotification
-      responses:
-        '200':
-          description: Successful response
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/LolLoyaltyLoyaltyStatusNotification'
-            application/x-yaml:
-              schema:
-                $ref: '#/components/schemas/LolLoyaltyLoyaltyStatusNotification'
-            application/x-msgpack:
-              schema:
-                $ref: '#/components/schemas/LolLoyaltyLoyaltyStatusNotification'
   /lol-loyalty/v1/status-notification:
     get:
       tags:
@@ -15694,12 +15669,12 @@ paths:
             application/x-msgpack:
               schema:
                 $ref: '#/components/schemas/LolLoyaltyLoyaltyStatusNotification'
-  /lol-loyalty/v1/updateTftInventory:
+  /lol-loyalty/v1/updateLoyaltyInventory:
     post:
       tags:
         - Plugins
         - Plugin lol-loyalty
-      operationId: PostLolLoyaltyV1UpdateTftInventory
+      operationId: PostLolLoyaltyV1UpdateLoyaltyInventory
       requestBody:
         content:
           application/json:
@@ -25883,6 +25858,146 @@ paths:
       responses:
         '204':
           description: No content
+  /telemetry/v3/uptime-tracking/add-bool-diagnostic:
+    patch:
+      tags:
+        - telemetry
+      summary: Add bool diagnostic to be sent with SLIs.
+      operationId: PatchTelemetryV3UptimeTrackingAddBoolDiagnostic
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/SLIBoolDiagnostic'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/SLIBoolDiagnostic'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/SLIBoolDiagnostic'
+      responses:
+        '204':
+          description: No content
+  /telemetry/v3/uptime-tracking/add-double-diagnostic:
+    patch:
+      tags:
+        - telemetry
+      summary: Add double diagnostic to be sent with SLIs.
+      operationId: PatchTelemetryV3UptimeTrackingAddDoubleDiagnostic
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/SLIDoubleDiagnostic'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/SLIDoubleDiagnostic'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/SLIDoubleDiagnostic'
+      responses:
+        '204':
+          description: No content
+  /telemetry/v3/uptime-tracking/add-int-diagnostic:
+    patch:
+      tags:
+        - telemetry
+      summary: Add int diagnostic to be sent with SLIs.
+      operationId: PatchTelemetryV3UptimeTrackingAddIntDiagnostic
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/SLIIntDiagnostic'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/SLIIntDiagnostic'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/SLIIntDiagnostic'
+      responses:
+        '204':
+          description: No content
+  /telemetry/v3/uptime-tracking/add-label:
+    patch:
+      tags:
+        - telemetry
+      summary: 'Add label to be sent with SLI '
+      operationId: PatchTelemetryV3UptimeTrackingAddLabel
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/SLILabel'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/SLILabel'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/SLILabel'
+      responses:
+        '204':
+          description: No content
+  /telemetry/v3/uptime-tracking/add-string-diagnostic:
+    patch:
+      tags:
+        - telemetry
+      summary: Add string diagnostic to be sent with SLIs.
+      operationId: PatchTelemetryV3UptimeTrackingAddStringDiagnostic
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/SLIStringDiagnostic'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/SLIStringDiagnostic'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/SLIStringDiagnostic'
+      responses:
+        '204':
+          description: No content
+  /telemetry/v3/uptime-tracking/notify-failure:
+    post:
+      tags:
+        - telemetry
+      summary: Mark an availability item's operation as failure on uptime tracking mechanism.
+      operationId: PostTelemetryV3UptimeTrackingNotifyFailure
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/NotifyFailureRequest'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/NotifyFailureRequest'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/NotifyFailureRequest'
+      responses:
+        '204':
+          description: No content
+  /telemetry/v3/uptime-tracking/notify-success:
+    post:
+      tags:
+        - telemetry
+      summary: Mark an availability item's operation as success on uptime tracking mechanism.
+      operationId: PostTelemetryV3UptimeTrackingNotifySuccess
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/NotifySuccessRequest'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/NotifySuccessRequest'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/NotifySuccessRequest'
+      responses:
+        '204':
+          description: No content
   '/tracing/v1/performance/{name}':
     delete:
       tags:
@@ -30052,6 +30167,7 @@ components:
         - NONE
         - CHAMPION
         - CHAMPION_SKIN
+        - ITEM
       type: string
     LolChallengesChallengeSignedUpdatePayload:
       type: object
@@ -30069,7 +30185,7 @@ components:
           type: array
           items:
             type: integer
-            format: uint64
+            format: int64
         signedJWTPayload:
           $ref: '#/components/schemas/LolChallengesChallengeSignedUpdatePayload'
         title:
@@ -30264,15 +30380,15 @@ components:
     LolChallengesPlayerClientPreferences:
       type: object
       properties:
-        tabard:
-          type: string
-        title:
-          type: string
-        tokens:
+        challengeIds:
           type: array
           items:
             type: integer
             format: int64
+        tabard:
+          type: string
+        title:
+          type: string
     LolChallengesQueue:
       type: object
       properties:
@@ -31095,6 +31211,8 @@ components:
     LolChampionsLoyaltyStatusNotification:
       type: object
       properties:
+        reloadInventory:
+          type: boolean
         status:
           $ref: '#/components/schemas/LolChampionsLoyaltyStatus'
     LolChampionsPlayerNotification:
@@ -32756,6 +32874,31 @@ components:
           type: boolean
         triggerChatDisconnect:
           type: boolean
+    LolChatEndOfGamePlayer:
+      type: object
+      properties:
+        isLocalPlayer:
+          type: boolean
+        puuid:
+          type: string
+    LolChatEndOfGameStats:
+      type: object
+      properties:
+        localPlayer:
+          $ref: '#/components/schemas/LolChatEndOfGamePlayer'
+        teams:
+          type: array
+          items:
+            $ref: '#/components/schemas/LolChatEndOfGameTeam'
+    LolChatEndOfGameTeam:
+      type: object
+      properties:
+        isPlayerTeam:
+          type: boolean
+        players:
+          type: array
+          items:
+            $ref: '#/components/schemas/LolChatEndOfGamePlayer'
     LolChatError:
       type: object
       properties:
@@ -33389,6 +33532,17 @@ components:
       properties:
         pid:
           type: string
+    LolChatPlayerMutesResponse:
+      type: object
+      properties:
+        mutedPuuids:
+          type: array
+          items:
+            type: string
+        systemMutedPuuids:
+          type: array
+          items:
+            type: string
     LolChatPlayerMuteUpdate:
       type: object
       properties:
@@ -39576,6 +39730,8 @@ components:
     LolInventoryLoyaltyStatusNotification:
       type: object
       properties:
+        reloadInventory:
+          type: boolean
         rewards:
           $ref: '#/components/schemas/LolInventoryLoyaltyRewards'
         status:
@@ -45113,6 +45269,8 @@ components:
     LolLoyaltyLoyaltyStatusNotification:
       type: object
       properties:
+        reloadInventory:
+          type: boolean
         rewards:
           $ref: '#/components/schemas/LolLoyaltyLoyaltyRewards'
         status:
@@ -55696,6 +55854,18 @@ components:
           type: integer
           description: timestamp in microseconds of when the event occurred
           format: uint64
+    NotifyFailureRequest:
+      type: object
+      properties:
+        availabilityItemName:
+          type: string
+        failureInfo:
+          type: string
+    NotifySuccessRequest:
+      type: object
+      properties:
+        availabilityItemName:
+          type: string
     NpeReward:
       type: object
       properties:
@@ -57513,6 +57683,43 @@ components:
         command:
           type: string
         msgId:
+          type: string
+    SLIBoolDiagnostic:
+      type: object
+      properties:
+        key:
+          type: string
+        value:
+          type: boolean
+    SLIDoubleDiagnostic:
+      type: object
+      properties:
+        key:
+          type: string
+        value:
+          type: number
+          format: double
+    SLIIntDiagnostic:
+      type: object
+      properties:
+        key:
+          type: string
+        value:
+          type: integer
+          format: int64
+    SLILabel:
+      type: object
+      properties:
+        key:
+          type: string
+        value:
+          type: string
+    SLIStringDiagnostic:
+      type: object
+      properties:
+        key:
+          type: string
+        value:
           type: string
     SpectatorLcdsSpectateAvailabilityDto:
       type: object

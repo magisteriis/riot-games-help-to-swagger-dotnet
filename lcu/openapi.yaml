@@ -5346,36 +5346,6 @@ paths:
             application/x-msgpack:
               schema:
                 $ref: '#/components/schemas/LolChatSessionResource'
-  /lol-chat/v1/session/plain:
-    post:
-      tags:
-        - Plugins
-        - Plugin lol-chat
-      operationId: PostLolChatV1SessionPlain
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/LolChatAuthResourcePlain'
-          application/x-yaml:
-            schema:
-              $ref: '#/components/schemas/LolChatAuthResourcePlain'
-          application/x-msgpack:
-            schema:
-              $ref: '#/components/schemas/LolChatAuthResourcePlain'
-      responses:
-        '200':
-          description: Successful response
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/LolChatSessionResource'
-            application/x-yaml:
-              schema:
-                $ref: '#/components/schemas/LolChatSessionResource'
-            application/x-msgpack:
-              schema:
-                $ref: '#/components/schemas/LolChatSessionResource'
   /lol-chat/v1/session/rso:
     post:
       tags:
@@ -17634,6 +17604,25 @@ paths:
             application/x-msgpack:
               schema:
                 type: object
+  /lol-personalized-offers/v1/has-permissions:
+    get:
+      tags:
+        - Plugins
+        - Plugin lol-personalized-offers
+      operationId: GetLolPersonalizedOffersV1HasPermissions
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: boolean
+            application/x-yaml:
+              schema:
+                type: boolean
+            application/x-msgpack:
+              schema:
+                type: boolean
   /lol-personalized-offers/v1/modal:
     get:
       tags:
@@ -21597,55 +21586,32 @@ paths:
             application/x-msgpack:
               schema:
                 type: object
-  /lol-statstones/v1/eog-notifications:
-    delete:
-      tags:
-        - Plugins
-        - Plugin lol-statstones
-      operationId: DeleteLolStatstonesV1EogNotifications
-      responses:
-        '204':
-          description: No content
+  '/lol-statstones/v1/eog-notifications/{gameId}':
     get:
       tags:
         - Plugins
         - Plugin lol-statstones
-      operationId: GetLolStatstonesV1EogNotifications
+      operationId: GetLolStatstonesV1EogNotificationsByGameId
+      parameters:
+        - name: gameId
+          in: path
+          required: true
+          schema:
+            type: integer
+            format: uint64
       responses:
         '200':
           description: Successful response
           content:
             application/json:
               schema:
-                type: array
-                items:
-                  type: object
+                $ref: '#/components/schemas/LolStatstonesEogNotificationEnvelope'
             application/x-yaml:
               schema:
-                type: array
-                items:
-                  type: object
+                $ref: '#/components/schemas/LolStatstonesEogNotificationEnvelope'
             application/x-msgpack:
               schema:
-                type: array
-                items:
-                  type: object
-  '/lol-statstones/v1/eog-notifications/{key}':
-    delete:
-      tags:
-        - Plugins
-        - Plugin lol-statstones
-      operationId: DeleteLolStatstonesV1EogNotificationsByKey
-      parameters:
-        - name: key
-          in: path
-          required: true
-          schema:
-            type: integer
-            format: int32
-      responses:
-        '204':
-          description: No content
+                $ref: '#/components/schemas/LolStatstonesEogNotificationEnvelope'
   '/lol-statstones/v1/featured-champion-statstones/{championItemId}':
     get:
       tags:
@@ -32432,15 +32398,6 @@ components:
       properties:
         id:
           type: string
-    LolChatAuthResourcePlain:
-      type: object
-      properties:
-        gasToken:
-          type: object
-        password:
-          type: string
-        username:
-          type: string
     LolChatAuthResourceRsoAccessToken:
       type: object
       properties:
@@ -32455,7 +32412,6 @@ components:
           type: string
     LolChatAuthType:
       enum:
-        - plain
         - rsoCreate
         - rsoRefresh
       type: string
@@ -38825,8 +38781,6 @@ components:
         accountId:
           type: integer
           format: uint64
-        gasToken:
-          type: object
         state:
           $ref: '#/components/schemas/LolGameSettingsLoginSessionStates'
         summonerId:
@@ -39098,12 +39052,16 @@ components:
       properties:
         honorCategory:
           type: string
+        senderPuuid:
+          type: string
         voterRelationship:
           type: string
     LolHonorV2HonorConfig:
       type: object
       properties:
         Enabled:
+          type: boolean
+        HonorVisibilityEnabled:
           type: boolean
         RecallRewardEnabled:
           type: boolean
@@ -39123,6 +39081,18 @@ components:
         summonerId:
           type: integer
           format: uint64
+    LolHonorV2LoginSession:
+      type: object
+      properties:
+        state:
+          $ref: '#/components/schemas/LolHonorV2LoginSessionStates'
+    LolHonorV2LoginSessionStates:
+      enum:
+        - IN_PROGRESS
+        - SUCCEEDED
+        - LOGGING_OUT
+        - ERROR
+      type: string
     LolHonorV2MutualHonor:
       type: object
       properties:
@@ -39669,8 +39639,6 @@ components:
         accountId:
           type: integer
           format: uint64
-        gasToken:
-          type: object
         idToken:
           type: string
         puuid:
@@ -40415,8 +40383,6 @@ components:
         accountId:
           type: integer
           format: uint64
-        gasToken:
-          type: object
         idToken:
           type: string
         puuid:
@@ -41665,8 +41631,6 @@ components:
           format: uint64
         connected:
           type: boolean
-        gasToken:
-          type: object
         idToken:
           type: string
         puuid:
@@ -43659,8 +43623,6 @@ components:
           type: boolean
         error:
           $ref: '#/components/schemas/LolLoginLoginError'
-        gasToken:
-          type: object
         idToken:
           type: string
         isInLoginQueue:
@@ -43697,8 +43659,6 @@ components:
     LolLoginPlatformGeneratedCredentials:
       type: object
       properties:
-        gasToken:
-          type: object
         password:
           type: string
         username:
@@ -45433,8 +45393,6 @@ components:
         accountId:
           type: integer
           format: uint64
-        gasToken:
-          type: object
         idToken:
           type: string
         state:
@@ -49565,11 +49523,6 @@ components:
         - EndOfGame
         - TerminatedInError
       type: string
-    LolPreEndOfGameGameflowSessionResource:
-      type: object
-      properties:
-        phase:
-          $ref: '#/components/schemas/LolPreEndOfGameGameflowPhase'
     LolPreEndOfGameSequenceEvent:
       type: object
       properties:
@@ -53152,8 +53105,6 @@ components:
         accountId:
           type: integer
           format: uint64
-        gasToken:
-          type: object
         state:
           $ref: '#/components/schemas/LolSettingsLoginSessionStates'
         summonerId:
@@ -54290,8 +54241,6 @@ components:
         accountId:
           type: integer
           format: uint64
-        gasToken:
-          type: object
         idToken:
           type: string
         state:

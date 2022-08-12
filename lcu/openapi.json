@@ -10965,248 +10965,6 @@
         }
       }
     },
-    "/lol-clash/v1/roster/{rosterId}/substitute/{summonerId}/revoke": {
-      "post": {
-        "tags": [
-          "Plugins",
-          "Plugin lol-clash"
-        ],
-        "operationId": "PostLolClashV1RosterByRosterIdSubstituteBySummonerIdRevoke",
-        "parameters": [
-          {
-            "name": "rosterId",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "summonerId",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "uint64"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Successful response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object"
-                }
-              },
-              "application/x-yaml": {
-                "schema": {
-                  "type": "object"
-                }
-              },
-              "application/x-msgpack": {
-                "schema": {
-                  "type": "object"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/lol-clash/v1/roster/{rosterId}/substitute/accept": {
-      "post": {
-        "tags": [
-          "Plugins",
-          "Plugin lol-clash"
-        ],
-        "operationId": "PostLolClashV1RosterByRosterIdSubstituteAccept",
-        "parameters": [
-          {
-            "name": "rosterId",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Successful response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object"
-                }
-              },
-              "application/x-yaml": {
-                "schema": {
-                  "type": "object"
-                }
-              },
-              "application/x-msgpack": {
-                "schema": {
-                  "type": "object"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/lol-clash/v1/roster/{rosterId}/substitute/decline": {
-      "post": {
-        "tags": [
-          "Plugins",
-          "Plugin lol-clash"
-        ],
-        "operationId": "PostLolClashV1RosterByRosterIdSubstituteDecline",
-        "parameters": [
-          {
-            "name": "rosterId",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Successful response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object"
-                }
-              },
-              "application/x-yaml": {
-                "schema": {
-                  "type": "object"
-                }
-              },
-              "application/x-msgpack": {
-                "schema": {
-                  "type": "object"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/lol-clash/v1/roster/{rosterId}/substitute/invite": {
-      "post": {
-        "tags": [
-          "Plugins",
-          "Plugin lol-clash"
-        ],
-        "operationId": "PostLolClashV1RosterByRosterIdSubstituteInvite",
-        "parameters": [
-          {
-            "name": "rosterId",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/LolClashInviteSubRequest"
-              }
-            },
-            "application/x-yaml": {
-              "schema": {
-                "$ref": "#/components/schemas/LolClashInviteSubRequest"
-              }
-            },
-            "application/x-msgpack": {
-              "schema": {
-                "$ref": "#/components/schemas/LolClashInviteSubRequest"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Successful response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/LolClashClientFailedInvite"
-                  }
-                }
-              },
-              "application/x-yaml": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/LolClashClientFailedInvite"
-                  }
-                }
-              },
-              "application/x-msgpack": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/LolClashClientFailedInvite"
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/lol-clash/v1/roster/{rosterId}/substitute/reclaim": {
-      "post": {
-        "tags": [
-          "Plugins",
-          "Plugin lol-clash"
-        ],
-        "operationId": "PostLolClashV1RosterByRosterIdSubstituteReclaim",
-        "parameters": [
-          {
-            "name": "rosterId",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Successful response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object"
-                }
-              },
-              "application/x-yaml": {
-                "schema": {
-                  "type": "object"
-                }
-              },
-              "application/x-msgpack": {
-                "schema": {
-                  "type": "object"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
     "/lol-clash/v1/roster/{rosterId}/suggest": {
       "post": {
         "tags": [
@@ -14372,6 +14130,667 @@
               "application/x-msgpack": {
                 "schema": {
                   "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/lol-event-shop/v1/categories-offers": {
+      "get": {
+        "tags": [
+          "Plugins",
+          "Plugin lol-event-shop"
+        ],
+        "operationId": "GetLolEventShopV1CategoriesOffers",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/LolEventShopCategoryOffersUIData"
+                  }
+                }
+              },
+              "application/x-yaml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/LolEventShopCategoryOffersUIData"
+                  }
+                }
+              },
+              "application/x-msgpack": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/LolEventShopCategoryOffersUIData"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/lol-event-shop/v1/celebration-data": {
+      "get": {
+        "tags": [
+          "Plugins",
+          "Plugin lol-event-shop"
+        ],
+        "operationId": "GetLolEventShopV1CelebrationData",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LolEventShopCelebrationUIData"
+                }
+              },
+              "application/x-yaml": {
+                "schema": {
+                  "$ref": "#/components/schemas/LolEventShopCelebrationUIData"
+                }
+              },
+              "application/x-msgpack": {
+                "schema": {
+                  "$ref": "#/components/schemas/LolEventShopCelebrationUIData"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/lol-event-shop/v1/claim-select-all": {
+      "post": {
+        "tags": [
+          "Plugins",
+          "Plugin lol-event-shop"
+        ],
+        "operationId": "PostLolEventShopV1ClaimSelectAll",
+        "responses": {
+          "204": {
+            "description": "No content"
+          }
+        }
+      }
+    },
+    "/lol-event-shop/v1/claim-select-bonus-iteration": {
+      "post": {
+        "tags": [
+          "Plugins",
+          "Plugin lol-event-shop"
+        ],
+        "operationId": "PostLolEventShopV1ClaimSelectBonusIteration",
+        "responses": {
+          "204": {
+            "description": "No content"
+          }
+        }
+      }
+    },
+    "/lol-event-shop/v1/claim-select-data": {
+      "get": {
+        "tags": [
+          "Plugins",
+          "Plugin lol-event-shop"
+        ],
+        "operationId": "GetLolEventShopV1ClaimSelectData",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LolEventShopClaimSelectUIData"
+                }
+              },
+              "application/x-yaml": {
+                "schema": {
+                  "$ref": "#/components/schemas/LolEventShopClaimSelectUIData"
+                }
+              },
+              "application/x-msgpack": {
+                "schema": {
+                  "$ref": "#/components/schemas/LolEventShopClaimSelectUIData"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/lol-event-shop/v1/event-header-data": {
+      "get": {
+        "tags": [
+          "Plugins",
+          "Plugin lol-event-shop"
+        ],
+        "operationId": "GetLolEventShopV1EventHeaderData",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LolEventShopEventHeaderUIData"
+                }
+              },
+              "application/x-yaml": {
+                "schema": {
+                  "$ref": "#/components/schemas/LolEventShopEventHeaderUIData"
+                }
+              },
+              "application/x-msgpack": {
+                "schema": {
+                  "$ref": "#/components/schemas/LolEventShopEventHeaderUIData"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/lol-event-shop/v1/failure-loading-reward-track": {
+      "get": {
+        "tags": [
+          "Plugins",
+          "Plugin lol-event-shop"
+        ],
+        "operationId": "GetLolEventShopV1FailureLoadingRewardTrack",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LolEventShopEventShopError"
+                }
+              },
+              "application/x-yaml": {
+                "schema": {
+                  "$ref": "#/components/schemas/LolEventShopEventShopError"
+                }
+              },
+              "application/x-msgpack": {
+                "schema": {
+                  "$ref": "#/components/schemas/LolEventShopEventShopError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/lol-event-shop/v1/failure-loading-token-shop": {
+      "get": {
+        "tags": [
+          "Plugins",
+          "Plugin lol-event-shop"
+        ],
+        "operationId": "GetLolEventShopV1FailureLoadingTokenShop",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LolEventShopEventShopError"
+                }
+              },
+              "application/x-yaml": {
+                "schema": {
+                  "$ref": "#/components/schemas/LolEventShopEventShopError"
+                }
+              },
+              "application/x-msgpack": {
+                "schema": {
+                  "$ref": "#/components/schemas/LolEventShopEventShopError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/lol-event-shop/v1/is-grace-period": {
+      "get": {
+        "tags": [
+          "Plugins",
+          "Plugin lol-event-shop"
+        ],
+        "operationId": "GetLolEventShopV1IsGracePeriod",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "boolean"
+                }
+              },
+              "application/x-yaml": {
+                "schema": {
+                  "type": "boolean"
+                }
+              },
+              "application/x-msgpack": {
+                "schema": {
+                  "type": "boolean"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/lol-event-shop/v1/level-boost-purchase-data": {
+      "get": {
+        "tags": [
+          "Plugins",
+          "Plugin lol-event-shop"
+        ],
+        "operationId": "GetLolEventShopV1LevelBoostPurchaseData",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LolEventShopLevelBoostPurchaseUIData"
+                }
+              },
+              "application/x-yaml": {
+                "schema": {
+                  "$ref": "#/components/schemas/LolEventShopLevelBoostPurchaseUIData"
+                }
+              },
+              "application/x-msgpack": {
+                "schema": {
+                  "$ref": "#/components/schemas/LolEventShopLevelBoostPurchaseUIData"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/lol-event-shop/v1/load-progression-data": {
+      "post": {
+        "tags": [
+          "Plugins",
+          "Plugin lol-event-shop"
+        ],
+        "operationId": "PostLolEventShopV1LoadProgressionData",
+        "responses": {
+          "204": {
+            "description": "No content"
+          }
+        }
+      }
+    },
+    "/lol-event-shop/v1/navigation-button-data": {
+      "get": {
+        "tags": [
+          "Plugins",
+          "Plugin lol-event-shop"
+        ],
+        "operationId": "GetLolEventShopV1NavigationButtonData",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LolEventShopNavigationButtonUIData"
+                }
+              },
+              "application/x-yaml": {
+                "schema": {
+                  "$ref": "#/components/schemas/LolEventShopNavigationButtonUIData"
+                }
+              },
+              "application/x-msgpack": {
+                "schema": {
+                  "$ref": "#/components/schemas/LolEventShopNavigationButtonUIData"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/lol-event-shop/v1/pass-background-data": {
+      "get": {
+        "tags": [
+          "Plugins",
+          "Plugin lol-event-shop"
+        ],
+        "operationId": "GetLolEventShopV1PassBackgroundData",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LolEventShopEventBackgroundUIData"
+                }
+              },
+              "application/x-yaml": {
+                "schema": {
+                  "$ref": "#/components/schemas/LolEventShopEventBackgroundUIData"
+                }
+              },
+              "application/x-msgpack": {
+                "schema": {
+                  "$ref": "#/components/schemas/LolEventShopEventBackgroundUIData"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/lol-event-shop/v1/progress-info-data": {
+      "get": {
+        "tags": [
+          "Plugins",
+          "Plugin lol-event-shop"
+        ],
+        "operationId": "GetLolEventShopV1ProgressInfoData",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LolEventShopProgressInfoUIData"
+                }
+              },
+              "application/x-yaml": {
+                "schema": {
+                  "$ref": "#/components/schemas/LolEventShopProgressInfoUIData"
+                }
+              },
+              "application/x-msgpack": {
+                "schema": {
+                  "$ref": "#/components/schemas/LolEventShopProgressInfoUIData"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/lol-event-shop/v1/reward-choice-data": {
+      "get": {
+        "tags": [
+          "Plugins",
+          "Plugin lol-event-shop"
+        ],
+        "operationId": "GetLolEventShopV1RewardChoiceData",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LolEventShopRewardChoiceUIData"
+                }
+              },
+              "application/x-yaml": {
+                "schema": {
+                  "$ref": "#/components/schemas/LolEventShopRewardChoiceUIData"
+                }
+              },
+              "application/x-msgpack": {
+                "schema": {
+                  "$ref": "#/components/schemas/LolEventShopRewardChoiceUIData"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/lol-event-shop/v1/reward-track-bonus-items": {
+      "get": {
+        "tags": [
+          "Plugins",
+          "Plugin lol-event-shop"
+        ],
+        "operationId": "GetLolEventShopV1RewardTrackBonusItems",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/LolEventShopRewardTrackItem"
+                  }
+                }
+              },
+              "application/x-yaml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/LolEventShopRewardTrackItem"
+                  }
+                }
+              },
+              "application/x-msgpack": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/LolEventShopRewardTrackItem"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/lol-event-shop/v1/reward-track-bonus-progress": {
+      "get": {
+        "tags": [
+          "Plugins",
+          "Plugin lol-event-shop"
+        ],
+        "operationId": "GetLolEventShopV1RewardTrackBonusProgress",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LolEventShopRewardTrackProgress"
+                }
+              },
+              "application/x-yaml": {
+                "schema": {
+                  "$ref": "#/components/schemas/LolEventShopRewardTrackProgress"
+                }
+              },
+              "application/x-msgpack": {
+                "schema": {
+                  "$ref": "#/components/schemas/LolEventShopRewardTrackProgress"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/lol-event-shop/v1/reward-track-items": {
+      "get": {
+        "tags": [
+          "Plugins",
+          "Plugin lol-event-shop"
+        ],
+        "operationId": "GetLolEventShopV1RewardTrackItems",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/LolEventShopRewardTrackItem"
+                  }
+                }
+              },
+              "application/x-yaml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/LolEventShopRewardTrackItem"
+                  }
+                }
+              },
+              "application/x-msgpack": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/LolEventShopRewardTrackItem"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/lol-event-shop/v1/reward-track-progress": {
+      "get": {
+        "tags": [
+          "Plugins",
+          "Plugin lol-event-shop"
+        ],
+        "operationId": "GetLolEventShopV1RewardTrackProgress",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LolEventShopRewardTrackProgress"
+                }
+              },
+              "application/x-yaml": {
+                "schema": {
+                  "$ref": "#/components/schemas/LolEventShopRewardTrackProgress"
+                }
+              },
+              "application/x-msgpack": {
+                "schema": {
+                  "$ref": "#/components/schemas/LolEventShopRewardTrackProgress"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/lol-event-shop/v1/token-balance": {
+      "get": {
+        "tags": [
+          "Plugins",
+          "Plugin lol-event-shop"
+        ],
+        "operationId": "GetLolEventShopV1TokenBalance",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "integer",
+                  "format": "uint32"
+                }
+              },
+              "application/x-yaml": {
+                "schema": {
+                  "type": "integer",
+                  "format": "uint32"
+                }
+              },
+              "application/x-msgpack": {
+                "schema": {
+                  "type": "integer",
+                  "format": "uint32"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/lol-event-shop/v1/token-shop-data": {
+      "get": {
+        "tags": [
+          "Plugins",
+          "Plugin lol-event-shop"
+        ],
+        "operationId": "GetLolEventShopV1TokenShopData",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LolEventShopTokenShopUIData"
+                }
+              },
+              "application/x-yaml": {
+                "schema": {
+                  "$ref": "#/components/schemas/LolEventShopTokenShopUIData"
+                }
+              },
+              "application/x-msgpack": {
+                "schema": {
+                  "$ref": "#/components/schemas/LolEventShopTokenShopUIData"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/lol-event-shop/v1/unclaimed-rewards": {
+      "get": {
+        "tags": [
+          "Plugins",
+          "Plugin lol-event-shop"
+        ],
+        "operationId": "GetLolEventShopV1UnclaimedRewards",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LolEventShopUnclaimedRewardsUIData"
+                }
+              },
+              "application/x-yaml": {
+                "schema": {
+                  "$ref": "#/components/schemas/LolEventShopUnclaimedRewardsUIData"
+                }
+              },
+              "application/x-msgpack": {
+                "schema": {
+                  "$ref": "#/components/schemas/LolEventShopUnclaimedRewardsUIData"
                 }
               }
             }
@@ -44232,9 +44651,6 @@
               "$ref": "#/components/schemas/ClashRewardConfigEntry"
             }
           },
-          "grantToSub": {
-            "type": "boolean"
-          },
           "keyDef": {
             "type": "array",
             "items": {
@@ -44692,7 +45108,6 @@
           "ALREADY_VOTE_WITHDRAW",
           "ALREADY_IN_PHASE",
           "CAPTAIN_NOT_ALLOWED",
-          "CANNOT_SUB",
           "CLASH_BANNED",
           "CLASH_BANNED_INVITEE",
           "ELIGIBILITY_SERVER_ERROR",
@@ -44703,14 +45118,12 @@
           "LOGOCOLOR_NOT_ALLOWED",
           "IN_OTHER_ROSTER",
           "IN_OTHER_PENDINGROSTER",
-          "IN_OTHER_PENDINGSUB",
           "IN_OTHER_PHASE_OF_PERIOD",
           "INACTIVE_REGISTRATION",
           "INACTIVE_PHASE",
           "INTERNAL_ERROR",
           "INVALID_ROSTER",
           "INVALID_BUY_BACK",
-          "INVALID_SUB",
           "INVALID_TOURNAMENT",
           "INVALID_PHASE",
           "INVALID_INVITEE",
@@ -44730,10 +45143,7 @@
           "INVALID_REWARD_CONFIG_NAME",
           "INVALID_SEASON",
           "MAX_INVITED",
-          "MAX_SUBED",
           "MAX_ROSTER_FETCHSIZE",
-          "MAX_SUB_SIZE",
-          "SUB_IN_OTHER_ROSTER",
           "NO_SAME_PLAYER",
           "NO_AVAILABLE_PHASE",
           "NOT_CAPTAIN",
@@ -54010,19 +54420,6 @@
           }
         }
       },
-      "LolClashInviteSubRequest": {
-        "type": "object",
-        "properties": {
-          "replacedSummonerId": {
-            "type": "integer",
-            "format": "uint64"
-          },
-          "substituteSummonerId": {
-            "type": "integer",
-            "format": "uint64"
-          }
-        }
-      },
       "LolClashKdaClassification": {
         "enum": [
           "LOW",
@@ -54511,9 +54908,6 @@
           "bracketId": {
             "type": "integer",
             "format": "int64"
-          },
-          "isSub": {
-            "type": "boolean"
           },
           "rosterId": {
             "type": "string"
@@ -55065,15 +55459,6 @@
           "inviteType": {
             "$ref": "#/components/schemas/InviteType"
           },
-          "isSubbedOut": {
-            "type": "boolean"
-          },
-          "isSubForOtherTeam": {
-            "type": "boolean"
-          },
-          "isSubstitute": {
-            "type": "boolean"
-          },
           "position": {
             "$ref": "#/components/schemas/Position"
           },
@@ -55134,18 +55519,6 @@
           "GAME_END_ERROR",
           "QUEUE_DODGE",
           "OWNER_TRANSFER",
-          "SUB_INVITE",
-          "SUB_ACCEPT",
-          "SUB_DECLINE",
-          "SUB_REVOKE",
-          "SUB_SUGGEST",
-          "SUB_ACCEPTSUGGEST",
-          "SUB_DECLINESUGGEST",
-          "SUB_RECLAIM",
-          "SUB_LEAVE",
-          "MEMBER_SUBBED",
-          "MEMBER_SUB_REVOKE",
-          "MEMBER_SUB_RECLAIM",
           "VOTE_WITHDRAW_UPDATE",
           "VOTE_WITHDRAW_DISMISS",
           "WITHDRAW",
@@ -55161,7 +55534,6 @@
           "TICKET_CHARGED",
           "TICKET_REFUNDED",
           "TICKET_COULD_NOT_BE_CHARGED",
-          "SUB_INVITE_SELF",
           "GAME_START_RETRY",
           "GAME_START_RETRY_SUMMONERS",
           "GAME_START_RETRY_OPPONENT",
@@ -55238,9 +55610,6 @@
               "type": "integer",
               "format": "int32"
             }
-          },
-          "sub": {
-            "type": "boolean"
           }
         }
       },
@@ -55643,10 +56012,6 @@
             "type": "boolean"
           },
           "maxInvites": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "maxSubstitutes": {
             "type": "integer",
             "format": "int32"
           },
@@ -59338,6 +59703,1645 @@
           },
           "type": {
             "type": "string"
+          }
+        }
+      },
+      "LolEventShopAccessTokenResource": {
+        "type": "object",
+        "properties": {
+          "expiry": {
+            "type": "integer",
+            "format": "uint64"
+          },
+          "scopes": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "token": {
+            "type": "string"
+          }
+        }
+      },
+      "LolEventShopCatalogEntry": {
+        "type": "object",
+        "properties": {
+          "contentId": {
+            "type": "string"
+          },
+          "itemId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "offerId": {
+            "type": "string"
+          },
+          "typeId": {
+            "type": "string"
+          }
+        }
+      },
+      "LolEventShopCatalogItem": {
+        "type": "object",
+        "properties": {
+          "inventoryType": {
+            "type": "string"
+          },
+          "itemId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "itemInstanceId": {
+            "type": "string"
+          }
+        }
+      },
+      "LolEventShopCategoryOffersUIData": {
+        "type": "object",
+        "properties": {
+          "category": {
+            "$ref": "#/components/schemas/LolEventShopOfferCategory"
+          },
+          "categoryIconPath": {
+            "type": "string"
+          },
+          "offers": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LolEventShopOfferUIData"
+            }
+          }
+        }
+      },
+      "LolEventShopCelebrationType": {
+        "enum": [
+          "NONE",
+          "TOAST"
+        ],
+        "type": "string"
+      },
+      "LolEventShopCelebrationUIData": {
+        "type": "object",
+        "properties": {
+          "rewardTrackItems": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LolEventShopRewardTrackItem"
+            }
+          }
+        }
+      },
+      "LolEventShopClaimSelectUIData": {
+        "type": "object",
+        "properties": {
+          "selectedRewardTrackItem": {
+            "$ref": "#/components/schemas/LolEventShopRewardTrackItem"
+          },
+          "unclaimedRewardCount": {
+            "type": "integer",
+            "format": "uint16"
+          }
+        }
+      },
+      "LolEventShopClientCacheClearMessageDTO": {
+        "type": "object",
+        "properties": {
+          "clearAll": {
+            "type": "boolean"
+          },
+          "inventoryTypes": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "regions": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "LolEventShopCounter": {
+        "type": "object",
+        "properties": {
+          "direction": {
+            "type": "string"
+          },
+          "groupId": {
+            "type": "string"
+          },
+          "id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "startValue": {
+            "type": "integer",
+            "format": "int64"
+          }
+        }
+      },
+      "LolEventShopCounterInstance": {
+        "type": "object",
+        "properties": {
+          "counterId": {
+            "type": "string"
+          },
+          "counterValue": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "groupId": {
+            "type": "string"
+          },
+          "ownerId": {
+            "type": "string"
+          },
+          "productId": {
+            "type": "string"
+          }
+        }
+      },
+      "LolEventShopCurrencyDTO": {
+        "type": "object",
+        "properties": {
+          "amount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "subCurrencies": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        }
+      },
+      "LolEventShopEntityInstance": {
+        "type": "object",
+        "properties": {
+          "counters": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LolEventShopCounterInstance"
+            }
+          },
+          "groupId": {
+            "type": "string"
+          },
+          "milestones": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LolEventShopMilestoneInstance"
+            }
+          }
+        }
+      },
+      "LolEventShopEventBackgroundUIData": {
+        "type": "object",
+        "properties": {
+          "backgroundImagePath": {
+            "type": "string"
+          }
+        }
+      },
+      "LolEventShopEventHeaderUIData": {
+        "type": "object",
+        "properties": {
+          "eventIconPath": {
+            "type": "string"
+          },
+          "eventName": {
+            "type": "string"
+          },
+          "helpModalImagePath": {
+            "type": "string"
+          },
+          "progressEndDate": {
+            "type": "string"
+          },
+          "shopEndDate": {
+            "type": "string"
+          }
+        }
+      },
+      "LolEventShopEventShop": {
+        "type": "object",
+        "properties": {
+          "backgroundImage": {
+            "type": "string"
+          },
+          "eventId": {
+            "type": "string"
+          },
+          "eventPassBundlesCatalogEntry": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LolEventShopCatalogEntry"
+            }
+          },
+          "headerIconImage": {
+            "type": "string"
+          },
+          "helpModalImage": {
+            "type": "string"
+          },
+          "localizedName": {
+            "type": "string"
+          },
+          "navbarIconImage": {
+            "type": "string"
+          },
+          "progressEndDate": {
+            "type": "string"
+          },
+          "rewardTrack": {
+            "$ref": "#/components/schemas/LolEventShopRewardTrack"
+          },
+          "shopEndDate": {
+            "type": "string"
+          },
+          "startDate": {
+            "type": "string"
+          },
+          "tokenShop": {
+            "$ref": "#/components/schemas/LolEventShopTokenShop"
+          }
+        }
+      },
+      "LolEventShopEventShopClientConfig": {
+        "type": "object",
+        "properties": {
+          "ActiveEventId": {
+            "type": "string"
+          },
+          "Enabled": {
+            "type": "boolean"
+          }
+        }
+      },
+      "LolEventShopEventShopError": {
+        "type": "object",
+        "properties": {
+          "errorId": {
+            "type": "string"
+          },
+          "errorMessage": {
+            "type": "string"
+          }
+        }
+      },
+      "LolEventShopGrantorDescription": {
+        "type": "object",
+        "properties": {
+          "appName": {
+            "type": "string"
+          },
+          "entityId": {
+            "type": "string"
+          }
+        }
+      },
+      "LolEventShopGrantStatus": {
+        "enum": [
+          "PENDING_FULFILLMENT",
+          "PENDING_SELECTION",
+          "FULFILLED",
+          "FAILED"
+        ],
+        "type": "string"
+      },
+      "LolEventShopGroup": {
+        "type": "object",
+        "properties": {
+          "counters": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LolEventShopCounter"
+            }
+          },
+          "id": {
+            "type": "string"
+          },
+          "milestones": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LolEventShopMilestone"
+            }
+          },
+          "name": {
+            "type": "string"
+          },
+          "productId": {
+            "type": "string"
+          },
+          "repeat": {
+            "$ref": "#/components/schemas/LolEventShopRepeat"
+          }
+        }
+      },
+      "LolEventShopInventoryCacheEntry": {
+        "type": "object",
+        "properties": {
+          "expirationMS": {
+            "type": "integer",
+            "format": "uint64"
+          },
+          "issuedAtMS": {
+            "type": "integer",
+            "format": "uint64"
+          },
+          "receivedAtMS": {
+            "type": "integer",
+            "format": "uint64"
+          },
+          "signedInventoryJwt": {
+            "type": "string"
+          },
+          "valid": {
+            "type": "boolean"
+          }
+        }
+      },
+      "LolEventShopInventoryDTO": {
+        "type": "object",
+        "properties": {
+          "accountId": {
+            "type": "integer",
+            "format": "uint64"
+          },
+          "expires": {
+            "type": "string"
+          },
+          "items": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "object"
+            }
+          },
+          "itemsJwt": {
+            "type": "string"
+          },
+          "puuid": {
+            "type": "string"
+          },
+          "summonerId": {
+            "type": "integer",
+            "format": "uint64"
+          }
+        }
+      },
+      "LolEventShopInventoryItem": {
+        "type": "object",
+        "properties": {
+          "expirationDate": {
+            "type": "string"
+          },
+          "inventoryType": {
+            "type": "string"
+          },
+          "itemId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "ownershipType": {
+            "$ref": "#/components/schemas/LolEventShopItemOwnershipType"
+          },
+          "purchaseDate": {
+            "type": "string"
+          },
+          "quantity": {
+            "type": "integer",
+            "format": "uint64"
+          },
+          "uuid": {
+            "type": "string"
+          }
+        }
+      },
+      "LolEventShopInventoryItemDTO": {
+        "type": "object",
+        "properties": {
+          "entitlementId": {
+            "type": "string"
+          },
+          "entitlementTypeId": {
+            "type": "string"
+          },
+          "expirationDate": {
+            "type": "string"
+          },
+          "f2p": {
+            "type": "boolean"
+          },
+          "instanceId": {
+            "type": "string"
+          },
+          "instanceTypeId": {
+            "type": "string"
+          },
+          "inventoryType": {
+            "type": "string"
+          },
+          "itemId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "loyalty": {
+            "type": "boolean"
+          },
+          "lsb": {
+            "type": "boolean"
+          },
+          "ownedQuantity": {
+            "type": "integer",
+            "format": "uint64"
+          },
+          "payload": {
+            "type": "object"
+          },
+          "purchaseDate": {
+            "type": "string"
+          },
+          "quantity": {
+            "type": "integer",
+            "format": "uint64"
+          },
+          "rental": {
+            "type": "boolean"
+          },
+          "usedInGameDate": {
+            "type": "string"
+          },
+          "wins": {
+            "type": "integer",
+            "format": "uint64"
+          }
+        }
+      },
+      "LolEventShopInventoryItemWithPayload": {
+        "type": "object",
+        "properties": {
+          "expirationDate": {
+            "type": "string"
+          },
+          "f2p": {
+            "type": "boolean"
+          },
+          "inventoryType": {
+            "type": "string"
+          },
+          "itemId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "loyalty": {
+            "type": "boolean"
+          },
+          "owned": {
+            "type": "boolean"
+          },
+          "ownershipType": {
+            "$ref": "#/components/schemas/LolEventShopItemOwnershipType"
+          },
+          "payload": {
+            "type": "object"
+          },
+          "purchaseDate": {
+            "type": "string"
+          },
+          "quantity": {
+            "type": "integer",
+            "format": "uint64"
+          },
+          "rental": {
+            "type": "boolean"
+          },
+          "uuid": {
+            "type": "string"
+          }
+        }
+      },
+      "LolEventShopInventoryNotification": {
+        "type": "object",
+        "properties": {
+          "acknowledged": {
+            "type": "boolean"
+          },
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "inventoryType": {
+            "type": "string"
+          },
+          "itemId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "type": {
+            "type": "string"
+          }
+        }
+      },
+      "LolEventShopInventoryResponseDTO": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "$ref": "#/components/schemas/LolEventShopInventoryDTO"
+          }
+        }
+      },
+      "LolEventShopItem": {
+        "type": "object",
+        "properties": {
+          "inventoryType": {
+            "type": "string"
+          },
+          "itemId": {
+            "type": "string"
+          },
+          "price": {
+            "type": "integer",
+            "format": "uint32"
+          }
+        }
+      },
+      "LolEventShopItemKey": {
+        "type": "object",
+        "properties": {
+          "inventoryType": {
+            "type": "string"
+          },
+          "itemId": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "LolEventShopItemOwnershipType": {
+        "enum": [
+          "OWNED",
+          "RENTED",
+          "LOYALTY",
+          "F2P"
+        ],
+        "type": "string"
+      },
+      "LolEventShopItemUIData": {
+        "type": "object",
+        "properties": {
+          "inventoryType": {
+            "type": "string"
+          },
+          "itemId": {
+            "type": "string"
+          },
+          "price": {
+            "type": "integer",
+            "format": "uint32"
+          }
+        }
+      },
+      "LolEventShopLargeSelectionDisplayUIData": {
+        "type": "object",
+        "properties": {
+          "selectedRewardTrackItem": {
+            "$ref": "#/components/schemas/LolEventShopRewardTrackItem"
+          }
+        }
+      },
+      "LolEventShopLevelBoostPurchaseUIData": {
+        "type": "object",
+        "properties": {
+          "offerId": {
+            "type": "string"
+          },
+          "rewardTrackItems": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LolEventShopRewardTrackItem"
+            }
+          }
+        }
+      },
+      "LolEventShopLoginSession": {
+        "type": "object",
+        "properties": {
+          "accountId": {
+            "type": "integer",
+            "format": "uint64"
+          },
+          "idToken": {
+            "type": "string"
+          },
+          "puuid": {
+            "type": "string"
+          },
+          "state": {
+            "$ref": "#/components/schemas/LolEventShopLoginSessionStates"
+          },
+          "summonerId": {
+            "type": "integer",
+            "format": "uint64"
+          }
+        }
+      },
+      "LolEventShopLoginSessionStates": {
+        "enum": [
+          "IN_PROGRESS",
+          "SUCCEEDED",
+          "LOGGING_OUT",
+          "ERROR"
+        ],
+        "type": "string"
+      },
+      "LolEventShopLoyaltyRewards": {
+        "type": "object",
+        "properties": {
+          "championIds": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          "freeRewardedChampionsCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "freeRewardedSkinsCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "ipBoost": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "loyaltyTFTCompanionCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "loyaltyTFTMapSkinCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "skinIds": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          "xpBoost": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "LolEventShopLoyaltyStatus": {
+        "enum": [
+          "LEGACY",
+          "REWARDS_GRANT",
+          "EXPIRY",
+          "CHANGE",
+          "REVOKE",
+          "DISABLED"
+        ],
+        "type": "string"
+      },
+      "LolEventShopLoyaltyStatusNotification": {
+        "type": "object",
+        "properties": {
+          "reloadInventory": {
+            "type": "boolean"
+          },
+          "rewards": {
+            "$ref": "#/components/schemas/LolEventShopLoyaltyRewards"
+          },
+          "status": {
+            "$ref": "#/components/schemas/LolEventShopLoyaltyStatus"
+          }
+        }
+      },
+      "LolEventShopMilestone": {
+        "type": "object",
+        "properties": {
+          "counterId": {
+            "type": "string"
+          },
+          "groupId": {
+            "type": "string"
+          },
+          "id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "properties": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "string"
+            }
+          },
+          "triggerValue": {
+            "type": "integer",
+            "format": "int64"
+          }
+        }
+      },
+      "LolEventShopMilestoneInstance": {
+        "type": "object",
+        "properties": {
+          "counterId": {
+            "type": "string"
+          },
+          "groupId": {
+            "type": "string"
+          },
+          "milestoneId": {
+            "type": "string"
+          },
+          "ownerId": {
+            "type": "string"
+          },
+          "productId": {
+            "type": "string"
+          },
+          "repeatSequence": {
+            "type": "integer",
+            "format": "uint32"
+          },
+          "triggered": {
+            "type": "boolean"
+          },
+          "triggerValue": {
+            "type": "integer",
+            "format": "int64"
+          }
+        }
+      },
+      "LolEventShopNavigationButtonUIData": {
+        "type": "object",
+        "properties": {
+          "activeEventId": {
+            "type": "string"
+          },
+          "iconPath": {
+            "type": "string"
+          },
+          "showPip": {
+            "type": "boolean"
+          }
+        }
+      },
+      "LolEventShopOffer": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "image": {
+            "type": "string"
+          },
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LolEventShopItem"
+            }
+          },
+          "localizedDescription": {
+            "type": "string"
+          },
+          "localizedTitle": {
+            "type": "string"
+          },
+          "offerCategory": {
+            "$ref": "#/components/schemas/LolEventShopOfferCategory"
+          },
+          "promotionType": {
+            "$ref": "#/components/schemas/LolEventShopOfferPromotionType"
+          }
+        }
+      },
+      "LolEventShopOfferCategory": {
+        "enum": [
+          "Featured",
+          "Chromas",
+          "Skins",
+          "Borders",
+          "Loot",
+          "Tft",
+          "Currencies"
+        ],
+        "type": "string"
+      },
+      "LolEventShopOfferPromotionType": {
+        "enum": [
+          "kNone",
+          "kFeatured",
+          "kFeaturedHighlighted"
+        ],
+        "type": "string"
+      },
+      "LolEventShopOfferStates": {
+        "enum": [
+          "kOwned",
+          "kAvailable",
+          "kUnavailable",
+          "kUnrevealed"
+        ],
+        "type": "string"
+      },
+      "LolEventShopOfferUIData": {
+        "type": "object",
+        "properties": {
+          "highlighted": {
+            "type": "boolean"
+          },
+          "id": {
+            "type": "string"
+          },
+          "image": {
+            "type": "string"
+          },
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LolEventShopItemUIData"
+            }
+          },
+          "localizedDescription": {
+            "type": "string"
+          },
+          "localizedTitle": {
+            "type": "string"
+          },
+          "offerState": {
+            "$ref": "#/components/schemas/LolEventShopOfferStates"
+          },
+          "price": {
+            "type": "integer",
+            "format": "uint32"
+          }
+        }
+      },
+      "LolEventShopPassOwnershipTypes": {
+        "enum": [
+          "Unowned",
+          "Purchased"
+        ],
+        "type": "string"
+      },
+      "LolEventShopPlayerSettingsData": {
+        "type": "object",
+        "properties": {
+          "lastSeenTokenBalance": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "lastTimeSeen": {
+            "type": "string"
+          }
+        }
+      },
+      "LolEventShopProgressInfoUIData": {
+        "type": "object",
+        "properties": {
+          "eventPassBundlesCatalogEntry": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LolEventShopCatalogEntry"
+            }
+          },
+          "passPurchased": {
+            "type": "boolean"
+          },
+          "tokenImage": {
+            "type": "string"
+          }
+        }
+      },
+      "LolEventShopRegionLocale": {
+        "type": "object",
+        "properties": {
+          "locale": {
+            "type": "string"
+          },
+          "region": {
+            "type": "string"
+          }
+        }
+      },
+      "LolEventShopRepeat": {
+        "type": "object",
+        "properties": {
+          "count": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "multiplier": {
+            "type": "number",
+            "format": "float"
+          },
+          "scope": {
+            "type": "integer",
+            "format": "uint32"
+          }
+        }
+      },
+      "LolEventShopRequestDTO-SelectionRequestDTO": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "$ref": "#/components/schemas/LolEventShopSelectionRequestDTO"
+          },
+          "metadata": {
+            "$ref": "#/components/schemas/LolEventShopRequestMetadataDTO"
+          }
+        }
+      },
+      "LolEventShopRequestMetadataDTO": {
+        "type": "object",
+        "properties": {
+          "transactionId": {
+            "type": "string"
+          }
+        }
+      },
+      "LolEventShopResponseDTO-SvcRewardGrant": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "$ref": "#/components/schemas/LolEventShopSvcRewardGrant"
+          },
+          "metadata": {
+            "$ref": "#/components/schemas/LolEventShopResponseMetadataDTO"
+          }
+        }
+      },
+      "LolEventShopResponseDTO-vector-SvcRewardGrant": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LolEventShopSvcRewardGrant"
+            }
+          },
+          "metadata": {
+            "$ref": "#/components/schemas/LolEventShopResponseMetadataDTO"
+          }
+        }
+      },
+      "LolEventShopResponseDTO-vector-SvcRewardGroup": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LolEventShopSvcRewardGroup"
+            }
+          },
+          "metadata": {
+            "$ref": "#/components/schemas/LolEventShopResponseMetadataDTO"
+          }
+        }
+      },
+      "LolEventShopResponseMetadataDTO": {
+        "type": "object"
+      },
+      "LolEventShopReward": {
+        "type": "object",
+        "properties": {
+          "fulfillmentSource": {
+            "type": "string"
+          },
+          "id": {
+            "type": "string"
+          },
+          "itemId": {
+            "type": "string"
+          },
+          "itemType": {
+            "type": "string"
+          },
+          "localizations": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "string"
+            }
+          },
+          "media": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "string"
+            }
+          },
+          "quantity": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "LolEventShopRewardChoiceUIData": {
+        "type": "object",
+        "properties": {
+          "rewardTrackItems": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LolEventShopRewardTrackItem"
+            }
+          }
+        }
+      },
+      "LolEventShopRewardGrant": {
+        "type": "object",
+        "properties": {
+          "info": {
+            "$ref": "#/components/schemas/LolEventShopSvcRewardGrant"
+          },
+          "rewardGroup": {
+            "$ref": "#/components/schemas/LolEventShopSvcRewardGroup"
+          }
+        }
+      },
+      "LolEventShopRewardsConfig": {
+        "type": "object",
+        "properties": {
+          "Enabled": {
+            "type": "boolean"
+          }
+        }
+      },
+      "LolEventShopRewardStatus": {
+        "enum": [
+          "PENDING",
+          "FULFILLED",
+          "FAILED"
+        ],
+        "type": "string"
+      },
+      "LolEventShopRewardStrategy": {
+        "enum": [
+          "ALL",
+          "RANDOM",
+          "SELECTION"
+        ],
+        "type": "string"
+      },
+      "LolEventShopRewardTrack": {
+        "type": "object",
+        "properties": {
+          "trackConfig": {
+            "$ref": "#/components/schemas/LolEventShopRewardTrackConfiguration"
+          }
+        }
+      },
+      "LolEventShopRewardTrackConfiguration": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "premiumEntitlementId": {
+            "type": "string"
+          }
+        }
+      },
+      "LolEventShopRewardTrackItem": {
+        "type": "object",
+        "properties": {
+          "progressRequired": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "rewardDescription": {
+            "type": "string"
+          },
+          "rewardName": {
+            "type": "string"
+          },
+          "rewardOptions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LolEventShopRewardTrackItemOption"
+            }
+          },
+          "rewardTags": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LolEventShopRewardTrackItemTag"
+            }
+          },
+          "state": {
+            "$ref": "#/components/schemas/LolEventShopRewardTrackItemStates"
+          }
+        }
+      },
+      "LolEventShopRewardTrackItemHeaderType": {
+        "enum": [
+          "PREMIUM",
+          "FREE",
+          "NONE"
+        ],
+        "type": "string"
+      },
+      "LolEventShopRewardTrackItemOption": {
+        "type": "object",
+        "properties": {
+          "headerType": {
+            "$ref": "#/components/schemas/LolEventShopRewardTrackItemHeaderType"
+          },
+          "largeDisplayImagePath": {
+            "type": "string"
+          },
+          "overrideFooter": {
+            "type": "string"
+          },
+          "rewardDescription": {
+            "type": "string"
+          },
+          "rewardName": {
+            "type": "string"
+          },
+          "selected": {
+            "type": "boolean"
+          },
+          "state": {
+            "$ref": "#/components/schemas/LolEventShopRewardTrackItemStates"
+          },
+          "thumbIconPath": {
+            "type": "string"
+          }
+        }
+      },
+      "LolEventShopRewardTrackItemStates": {
+        "enum": [
+          "Locked",
+          "Unlocked",
+          "Unselected",
+          "Selected"
+        ],
+        "type": "string"
+      },
+      "LolEventShopRewardTrackItemTag": {
+        "enum": [
+          "Rare",
+          "Free",
+          "Instant",
+          "Choice",
+          "Multiple"
+        ],
+        "type": "string"
+      },
+      "LolEventShopRewardTrackProgress": {
+        "type": "object",
+        "properties": {
+          "currentLevelXP": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "futureLevelProgress": {
+            "type": "integer",
+            "format": "uint16"
+          },
+          "iteration": {
+            "type": "integer",
+            "format": "uint32"
+          },
+          "level": {
+            "type": "integer",
+            "format": "int16"
+          },
+          "levelProgress": {
+            "type": "integer",
+            "format": "uint16"
+          },
+          "passProgress": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "totalLevelXP": {
+            "type": "integer",
+            "format": "int64"
+          }
+        }
+      },
+      "LolEventShopRiotMessagingServiceMessage": {
+        "type": "object",
+        "properties": {
+          "payload": {
+            "type": "string"
+          },
+          "resource": {
+            "type": "string"
+          },
+          "service": {
+            "type": "string"
+          },
+          "timestamp": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "version": {
+            "type": "string"
+          }
+        }
+      },
+      "LolEventShopRmsEntitlementPayload": {
+        "type": "object",
+        "properties": {
+          "entitlementTypeId": {
+            "type": "string"
+          },
+          "itemId": {
+            "type": "string"
+          },
+          "itemTypeId": {
+            "type": "string"
+          },
+          "resourceOperation": {
+            "type": "string"
+          }
+        }
+      },
+      "LolEventShopRMSPayload": {
+        "type": "object",
+        "properties": {
+          "affinities": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "productId": {
+            "type": "string"
+          }
+        }
+      },
+      "LolEventShopRmsStoreEntitlementItem": {
+        "type": "object",
+        "properties": {
+          "inventoryType": {
+            "type": "string"
+          },
+          "itemId": {
+            "type": "string"
+          }
+        }
+      },
+      "LolEventShopRmsStoreEntitlementPayload": {
+        "type": "object",
+        "properties": {
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LolEventShopRmsStoreEntitlementItem"
+            }
+          },
+          "transactionId": {
+            "type": "string"
+          }
+        }
+      },
+      "LolEventShopRmsWalletPayload": {
+        "type": "object"
+      },
+      "LolEventShopSelectionRequestDTO": {
+        "type": "object",
+        "properties": {
+          "rewardGroupId": {
+            "type": "string"
+          },
+          "selections": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "LolEventShopSelectionStrategyConfig": {
+        "type": "object",
+        "properties": {
+          "maxSelectionsAllowed": {
+            "type": "integer",
+            "format": "uint32"
+          },
+          "minSelectionsAllowed": {
+            "type": "integer",
+            "format": "uint32"
+          }
+        }
+      },
+      "LolEventShopSettingsResource": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "$ref": "#/components/schemas/LolEventShopPlayerSettingsData"
+          },
+          "schemaVersion": {
+            "type": "integer",
+            "format": "int16"
+          }
+        }
+      },
+      "LolEventShopSimpleInventoryDTO": {
+        "type": "object",
+        "properties": {
+          "expires": {
+            "type": "string"
+          },
+          "items": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "object"
+            }
+          },
+          "itemsJwt": {
+            "type": "string"
+          }
+        }
+      },
+      "LolEventShopSimpleInventoryResponseDTO": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "$ref": "#/components/schemas/LolEventShopSimpleInventoryDTO"
+          }
+        }
+      },
+      "LolEventShopSummonerIcon": {
+        "type": "object",
+        "properties": {
+          "itemId": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "LolEventShopSvcRewardGrant": {
+        "type": "object",
+        "properties": {
+          "dateCreated": {
+            "type": "string"
+          },
+          "granteeId": {
+            "type": "string"
+          },
+          "grantElements": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LolEventShopSvcRewardGrantElement"
+            }
+          },
+          "grantorDescription": {
+            "$ref": "#/components/schemas/LolEventShopGrantorDescription"
+          },
+          "id": {
+            "type": "string"
+          },
+          "rewardGroupId": {
+            "type": "string"
+          },
+          "selectedIds": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "status": {
+            "$ref": "#/components/schemas/LolEventShopGrantStatus"
+          },
+          "viewed": {
+            "type": "boolean"
+          }
+        }
+      },
+      "LolEventShopSvcRewardGrantElement": {
+        "type": "object",
+        "properties": {
+          "elementId": {
+            "type": "string"
+          },
+          "fulfillmentSource": {
+            "type": "string"
+          },
+          "itemId": {
+            "type": "string"
+          },
+          "itemType": {
+            "type": "string"
+          },
+          "localizations": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "string"
+            }
+          },
+          "media": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "string"
+            }
+          },
+          "quantity": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "status": {
+            "$ref": "#/components/schemas/LolEventShopRewardStatus"
+          }
+        }
+      },
+      "LolEventShopSvcRewardGroup": {
+        "type": "object",
+        "properties": {
+          "active": {
+            "type": "boolean"
+          },
+          "celebrationType": {
+            "$ref": "#/components/schemas/LolEventShopCelebrationType"
+          },
+          "childRewardGroupIds": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "id": {
+            "type": "string"
+          },
+          "internalName": {
+            "type": "string"
+          },
+          "localizations": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "string"
+            }
+          },
+          "media": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "string"
+            }
+          },
+          "productId": {
+            "type": "string"
+          },
+          "rewards": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LolEventShopReward"
+            }
+          },
+          "rewardStrategy": {
+            "$ref": "#/components/schemas/LolEventShopRewardStrategy"
+          },
+          "selectionStrategyConfig": {
+            "$ref": "#/components/schemas/LolEventShopSelectionStrategyConfig"
+          },
+          "types": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "LolEventShopTokenShop": {
+        "type": "object",
+        "properties": {
+          "offers": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LolEventShopOffer"
+            }
+          },
+          "tokenBundlesCatalogEntry": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LolEventShopCatalogEntry"
+            }
+          },
+          "tokenImage": {
+            "type": "string"
+          },
+          "tokenName": {
+            "type": "string"
+          },
+          "tokenUuid": {
+            "type": "string"
+          }
+        }
+      },
+      "LolEventShopTokenShopUIData": {
+        "type": "object",
+        "properties": {
+          "tokenBundlesCatalogEntry": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LolEventShopCatalogEntry"
+            }
+          },
+          "tokenImage": {
+            "type": "string"
+          },
+          "tokenName": {
+            "type": "string"
+          },
+          "tokenUuid": {
+            "type": "string"
+          }
+        }
+      },
+      "LolEventShopUnclaimedRewardsUIData": {
+        "type": "object",
+        "properties": {
+          "lockedTokensCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "rewardsCount": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "LolEventShopWallet": {
+        "type": "object",
+        "properties": {
+          "ip": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "rp": {
+            "type": "integer",
+            "format": "int64"
+          }
+        }
+      },
+      "LolEventShopWalletCacheEntry": {
+        "type": "object",
+        "properties": {
+          "expirationMS": {
+            "type": "integer",
+            "format": "uint64"
+          },
+          "issuedAtMS": {
+            "type": "integer",
+            "format": "uint64"
+          },
+          "receivedAtMS": {
+            "type": "integer",
+            "format": "uint64"
+          },
+          "signedBalancesJwt": {
+            "type": "string"
+          },
+          "valid": {
+            "type": "boolean"
+          }
+        }
+      },
+      "LolEventShopWalletDTO": {
+        "type": "object",
+        "properties": {
+          "accountId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "balances": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          "balancesJwt": {
+            "type": "string"
+          },
+          "expires": {
+            "type": "string"
+          },
+          "puuid": {
+            "type": "string"
+          }
+        }
+      },
+      "LolEventShopWalletResponseDTO": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "$ref": "#/components/schemas/LolEventShopWalletDTO"
           }
         }
       },
@@ -84847,8 +86851,8 @@
       "LolWorldsTokenCardTokenUpsellLockedType": {
         "enum": [
           "UNASSIGNED",
-          "UNLOCKED",
-          "LOCKED"
+          "LOCKED",
+          "UNLOCKED"
         ],
         "type": "string"
       },
@@ -86434,50 +88438,6 @@
           "phaseId": {
             "type": "integer",
             "format": "int64"
-          },
-          "phaseRosterSubs": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/PhaseRosterSubDTO"
-            }
-          }
-        }
-      },
-      "PhaseRosterSubDTO": {
-        "type": "object",
-        "properties": {
-          "bet": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "betType": {
-            "$ref": "#/components/schemas/TicketType"
-          },
-          "pay": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "playerId": {
-            "type": "integer",
-            "format": "uint64"
-          },
-          "position": {
-            "$ref": "#/components/schemas/Position"
-          },
-          "premiumPay": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "replacedPlayerId": {
-            "type": "integer",
-            "format": "uint64"
-          },
-          "subState": {
-            "$ref": "#/components/schemas/SubState"
-          },
-          "tier": {
-            "type": "integer",
-            "format": "int32"
           }
         }
       },
@@ -87331,34 +89291,6 @@
           }
         }
       },
-      "PublicPhaseSubDTO": {
-        "type": "object",
-        "properties": {
-          "playerId": {
-            "type": "integer",
-            "format": "uint64"
-          },
-          "replacedPlayerId": {
-            "type": "integer",
-            "format": "uint64"
-          }
-        }
-      },
-      "PublicPhaseSubsDTO": {
-        "type": "object",
-        "properties": {
-          "phaseId": {
-            "type": "integer",
-            "format": "int64"
-          },
-          "phaseSubs": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/PublicPhaseSubDTO"
-            }
-          }
-        }
-      },
       "PublicRosterDTO": {
         "type": "object",
         "properties": {
@@ -87383,12 +89315,6 @@
           },
           "name": {
             "type": "string"
-          },
-          "phasesSubs": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/PublicPhaseSubsDTO"
-            }
           },
           "shortName": {
             "type": "string"
@@ -87895,22 +89821,9 @@
               "format": "uint64"
             }
           },
-          "phaseRosterSubs": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/PhaseRosterSubDTO"
-            }
-          },
           "rosterId": {
             "type": "integer",
             "format": "int64"
-          },
-          "subbedMemberIds": {
-            "type": "array",
-            "items": {
-              "type": "integer",
-              "format": "uint64"
-            }
           },
           "ticketOffers": {
             "type": "array",
@@ -88069,9 +89982,6 @@
               "type": "integer",
               "format": "int32"
             }
-          },
-          "sub": {
-            "type": "boolean"
           }
         }
       },
@@ -88646,18 +90556,6 @@
           }
         }
       },
-      "SubState": {
-        "enum": [
-          "SUGGESTED",
-          "PENDING",
-          "DECLINED",
-          "REVOKED",
-          "NOT_READY",
-          "FORCED_NOT_READY",
-          "READY"
-        ],
-        "type": "string"
-      },
       "ThemeVp": {
         "type": "object",
         "properties": {
@@ -88826,10 +90724,6 @@
             "type": "integer",
             "format": "int32"
           },
-          "maxSub": {
-            "type": "integer",
-            "format": "int32"
-          },
           "maxSuggestionsPerPlayer": {
             "type": "integer",
             "format": "int32"
@@ -88936,12 +90830,6 @@
           },
           "roster": {
             "$ref": "#/components/schemas/RosterDTO"
-          },
-          "subRosters": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/RosterDTO"
-            }
           },
           "themeVp": {
             "type": "integer",
@@ -89927,6 +91815,9 @@
     },
     {
       "name": "Plugin lol-esport-stream-notifications"
+    },
+    {
+      "name": "Plugin lol-event-shop"
     },
     {
       "name": "Plugin lol-game-client-chat"

@@ -8763,25 +8763,6 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/LolEventShopCategoryOffersUIData'
-  /lol-event-shop/v1/celebration-data:
-    get:
-      tags:
-        - Plugins
-        - Plugin lol-event-shop
-      operationId: GetLolEventShopV1CelebrationData
-      responses:
-        '200':
-          description: Successful response
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/LolEventShopCelebrationUIData'
-            application/x-yaml:
-              schema:
-                $ref: '#/components/schemas/LolEventShopCelebrationUIData'
-            application/x-msgpack:
-              schema:
-                $ref: '#/components/schemas/LolEventShopCelebrationUIData'
   /lol-event-shop/v1/claim-select-all:
     post:
       tags:
@@ -8800,25 +8781,6 @@ paths:
       responses:
         '204':
           description: No content
-  /lol-event-shop/v1/claim-select-data:
-    get:
-      tags:
-        - Plugins
-        - Plugin lol-event-shop
-      operationId: GetLolEventShopV1ClaimSelectData
-      responses:
-        '200':
-          description: Successful response
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/LolEventShopClaimSelectUIData'
-            application/x-yaml:
-              schema:
-                $ref: '#/components/schemas/LolEventShopClaimSelectUIData'
-            application/x-msgpack:
-              schema:
-                $ref: '#/components/schemas/LolEventShopClaimSelectUIData'
   /lol-event-shop/v1/event-header-data:
     get:
       tags:
@@ -8895,25 +8857,6 @@ paths:
             application/x-msgpack:
               schema:
                 type: boolean
-  /lol-event-shop/v1/level-boost-purchase-data:
-    get:
-      tags:
-        - Plugins
-        - Plugin lol-event-shop
-      operationId: GetLolEventShopV1LevelBoostPurchaseData
-      responses:
-        '200':
-          description: Successful response
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/LolEventShopLevelBoostPurchaseUIData'
-            application/x-yaml:
-              schema:
-                $ref: '#/components/schemas/LolEventShopLevelBoostPurchaseUIData'
-            application/x-msgpack:
-              schema:
-                $ref: '#/components/schemas/LolEventShopLevelBoostPurchaseUIData'
   /lol-event-shop/v1/load-progression-data:
     post:
       tags:
@@ -8980,25 +8923,36 @@ paths:
             application/x-msgpack:
               schema:
                 $ref: '#/components/schemas/LolEventShopProgressInfoUIData'
-  /lol-event-shop/v1/reward-choice-data:
-    get:
+  /lol-event-shop/v1/purchase-offer:
+    post:
       tags:
         - Plugins
         - Plugin lol-event-shop
-      operationId: GetLolEventShopV1RewardChoiceData
+      operationId: PostLolEventShopV1PurchaseOffer
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/LolEventShopPurchaseOfferRequest'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/LolEventShopPurchaseOfferRequest'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/LolEventShopPurchaseOfferRequest'
       responses:
         '200':
           description: Successful response
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/LolEventShopRewardChoiceUIData'
+                $ref: '#/components/schemas/LolEventShopPurchaseOfferResponseV3'
             application/x-yaml:
               schema:
-                $ref: '#/components/schemas/LolEventShopRewardChoiceUIData'
+                $ref: '#/components/schemas/LolEventShopPurchaseOfferResponseV3'
             application/x-msgpack:
               schema:
-                $ref: '#/components/schemas/LolEventShopRewardChoiceUIData'
+                $ref: '#/components/schemas/LolEventShopPurchaseOfferResponseV3'
   /lol-event-shop/v1/reward-track-bonus-items:
     get:
       tags:
@@ -38014,6 +37968,151 @@ components:
             type: string
         token:
           type: string
+    LolEventShopBalance:
+      type: object
+      properties:
+        amount:
+          type: integer
+          format: int32
+        currencyType:
+          type: string
+    LolEventShopBaseSkinLineDto:
+      type: object
+      properties:
+        collectionCardPath:
+          type: string
+        collectionDescription:
+          type: string
+        items:
+          type: array
+          items:
+            $ref: '#/components/schemas/LolEventShopSkinLineItemDto'
+        localizedName:
+          type: string
+        pricingOptions:
+          type: array
+          items:
+            $ref: '#/components/schemas/LolEventShopPriceOptionDto'
+        skinLineDescriptions:
+          type: array
+          items:
+            $ref: '#/components/schemas/LolEventShopSkinLineDescriptionDto'
+        splashPath:
+          type: string
+        tilePath:
+          type: string
+        uncenteredSplashPath:
+          type: string
+    LolEventShopBundledItemPricingInfo:
+      type: object
+      properties:
+        discountPrices:
+          type: array
+          items:
+            $ref: '#/components/schemas/LolEventShopDiscountPricingInfo'
+        inventoryType:
+          type: string
+        itemId:
+          type: integer
+          format: int32
+        quantity:
+          type: integer
+          format: int32
+    LolEventShopCapOffer:
+      type: object
+      properties:
+        active:
+          type: boolean
+        createdDate:
+          type: string
+        id:
+          type: string
+        label:
+          type: string
+        merchantId:
+          type: string
+        payload:
+          type: array
+          items:
+            $ref: '#/components/schemas/LolEventShopCapOfferPayloadEntry'
+        productId:
+          type: string
+        startDate:
+          type: string
+        typeId:
+          type: string
+    LolEventShopCapOfferPayloadEntry:
+      type: object
+      properties:
+        fulfillmentTypeId:
+          type: string
+        inventoryTypeUUID:
+          type: string
+        itemInstanceId:
+          type: string
+        itemPriceMap:
+          type: object
+          additionalProperties:
+            type: integer
+            format: int32
+    LolEventShopCapOrdersDataDto:
+      type: object
+      properties:
+        id:
+          type: string
+        location:
+          type: string
+        purchaser:
+          $ref: '#/components/schemas/LolEventShopCapOrdersTypedIdentifierDto'
+        source:
+          type: string
+        subOrders:
+          type: array
+          items:
+            $ref: '#/components/schemas/LolEventShopCapOrdersSubOrderDto'
+    LolEventShopCapOrdersMetaDto:
+      type: object
+      properties:
+        xid:
+          type: string
+    LolEventShopCapOrdersOfferContextDto:
+      type: object
+      properties:
+        paymentOption:
+          type: string
+        quantity:
+          type: integer
+          format: uint32
+    LolEventShopCapOrdersOfferDto:
+      type: object
+      properties:
+        id:
+          type: string
+        productId:
+          type: string
+    LolEventShopCapOrdersOrderDto:
+      type: object
+      properties:
+        data:
+          $ref: '#/components/schemas/LolEventShopCapOrdersDataDto'
+        meta:
+          $ref: '#/components/schemas/LolEventShopCapOrdersMetaDto'
+    LolEventShopCapOrdersSubOrderDto:
+      type: object
+      properties:
+        offer:
+          $ref: '#/components/schemas/LolEventShopCapOrdersOfferDto'
+        offerContext:
+          $ref: '#/components/schemas/LolEventShopCapOrdersOfferContextDto'
+        recipientId:
+          type: string
+    LolEventShopCapOrdersTypedIdentifierDto:
+      type: object
+      properties:
+        id:
+          type: string
+        typeId:
+          type: string
     LolEventShopCatalogEntry:
       type: object
       properties:
@@ -38035,6 +38134,121 @@ components:
           type: integer
           format: int32
         itemInstanceId:
+          type: string
+    LolEventShopCatalogPluginItem:
+      type: object
+      properties:
+        active:
+          type: boolean
+        description:
+          type: string
+        imagePath:
+          type: string
+        inactiveDate:
+          type: integer
+          format: uint64
+        inventoryType:
+          type: string
+        itemId:
+          type: integer
+          format: int32
+        itemInstanceId:
+          type: string
+        metadata:
+          type: array
+          items:
+            $ref: '#/components/schemas/LolEventShopItemMetadataEntry'
+        name:
+          type: string
+        owned:
+          type: boolean
+        prices:
+          type: array
+          items:
+            $ref: '#/components/schemas/LolEventShopCatalogPluginPrice'
+        purchaseDate:
+          type: integer
+          format: uint64
+        questSkinInfo:
+          $ref: '#/components/schemas/LolEventShopSkinLineInfo'
+        releaseDate:
+          type: integer
+          format: uint64
+        subInventoryType:
+          type: string
+        subTitle:
+          type: string
+        tags:
+          type: array
+          items:
+            type: string
+    LolEventShopCatalogPluginItemAssets:
+      type: object
+      properties:
+        colors:
+          type: array
+          items:
+            type: string
+        emblems:
+          type: array
+          items:
+            $ref: '#/components/schemas/LolEventShopChampionSkinEmblem'
+        iconPath:
+          type: string
+        splashPath:
+          type: string
+        tilePath:
+          type: string
+    LolEventShopCatalogPluginItemWithDetails:
+      type: object
+      properties:
+        assets:
+          $ref: '#/components/schemas/LolEventShopCatalogPluginItemAssets'
+        bundledDiscountPrices:
+          type: array
+          items:
+            $ref: '#/components/schemas/LolEventShopCatalogPluginPrice'
+        bundledItems:
+          type: array
+          items:
+            $ref: '#/components/schemas/LolEventShopCatalogPluginItemWithDetails'
+        item:
+          $ref: '#/components/schemas/LolEventShopCatalogPluginItem'
+        minimumBundlePrices:
+          type: array
+          items:
+            $ref: '#/components/schemas/LolEventShopCatalogPluginPrice'
+        quantity:
+          type: integer
+          format: uint32
+        requiredItems:
+          type: array
+          items:
+            $ref: '#/components/schemas/LolEventShopCatalogPluginItemWithDetails'
+    LolEventShopCatalogPluginPrice:
+      type: object
+      properties:
+        cost:
+          type: integer
+          format: int64
+        costType:
+          type: string
+        currency:
+          type: string
+        sale:
+          $ref: '#/components/schemas/LolEventShopCatalogPluginSale'
+    LolEventShopCatalogPluginSale:
+      type: object
+      properties:
+        cost:
+          type: integer
+          format: int64
+        discount:
+          type: number
+          format: float
+        endDate:
+          type: string
+        startDate:
           type: string
     LolEventShopCategoryOffersUIData:
       type: object
@@ -38059,6 +38273,29 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/LolEventShopRewardTrackItem'
+    LolEventShopChampionSkinEmblem:
+      type: object
+      properties:
+        emblemPath:
+          $ref: '#/components/schemas/LolEventShopChampionSkinEmblemPath'
+        emblemPosition:
+          $ref: '#/components/schemas/LolEventShopChampionSkinEmblemPosition'
+        name:
+          type: string
+    LolEventShopChampionSkinEmblemPath:
+      type: object
+      properties:
+        large:
+          type: string
+        small:
+          type: string
+    LolEventShopChampionSkinEmblemPosition:
+      type: object
+      properties:
+        horizontal:
+          type: string
+        vertical:
+          type: string
     LolEventShopClaimSelectUIData:
       type: object
       properties:
@@ -38119,6 +38356,19 @@ components:
           additionalProperties:
             type: integer
             format: int32
+    LolEventShopDiscountPricingInfo:
+      type: object
+      properties:
+        cost:
+          type: integer
+          format: int32
+        costType:
+          type: string
+        currency:
+          type: string
+        discount:
+          type: number
+          format: float
     LolEventShopEntityInstance:
       type: object
       properties:
@@ -38380,12 +38630,112 @@ components:
         price:
           type: integer
           format: uint32
+    LolEventShopItemChoiceDetails:
+      type: object
+      properties:
+        backgroundImage:
+          type: string
+        contents:
+          type: array
+          items:
+            $ref: '#/components/schemas/LolEventShopItemDetails'
+        discount:
+          type: string
+        displayType:
+          type: string
+        fullPrice:
+          type: integer
+          format: uint32
+        item:
+          $ref: '#/components/schemas/LolEventShopCatalogPluginItem'
+        purchaseOptions:
+          type: array
+          items:
+            $ref: '#/components/schemas/LolEventShopPurchaseOption'
+    LolEventShopItemChoices:
+      type: object
+      properties:
+        choices:
+          type: array
+          items:
+            $ref: '#/components/schemas/LolEventShopItemChoiceDetails'
+        validationErrors:
+          type: array
+          items:
+            $ref: '#/components/schemas/LolEventShopValidationErrorEntry'
+    LolEventShopItemCost:
+      type: object
+      properties:
+        cost:
+          type: integer
+          format: int64
+        currency:
+          type: string
+        discount:
+          type: number
+          format: float
+    LolEventShopItemDefinition:
+      type: object
+      properties:
+        assets:
+          $ref: '#/components/schemas/LolEventShopCatalogPluginItemAssets'
+        bundledItemPrice:
+          $ref: '#/components/schemas/LolEventShopBundledItemPricingInfo'
+        description:
+          type: string
+        inventoryType:
+          type: string
+        itemId:
+          type: integer
+          format: int32
+        metadata:
+          type: array
+          items:
+            $ref: '#/components/schemas/LolEventShopItemMetadataEntry'
+        name:
+          type: string
+        owned:
+          type: boolean
+        subInventoryType:
+          type: string
+        subTitle:
+          type: string
+        tags:
+          type: array
+          items:
+            type: string
+    LolEventShopItemDetails:
+      type: object
+      properties:
+        description:
+          type: string
+        iconUrl:
+          type: string
+        subTitle:
+          type: string
+        title:
+          type: string
     LolEventShopItemKey:
       type: object
       properties:
         inventoryType:
           type: string
         itemId:
+          type: integer
+          format: int32
+    LolEventShopItemMetadataEntry:
+      type: object
+      properties:
+        type:
+          type: string
+        value:
+          type: string
+    LolEventShopItemOwnership:
+      type: object
+      properties:
+        itemKey:
+          $ref: '#/components/schemas/LolEventShopItemKey'
+        quantity:
           type: integer
           format: int32
     LolEventShopItemOwnershipType:
@@ -38395,6 +38745,26 @@ components:
         - LOYALTY
         - F2P
       type: string
+    LolEventShopItemPrice:
+      type: object
+      properties:
+        currencyType:
+          type: string
+        price:
+          type: integer
+          format: int64
+        purchasable:
+          type: boolean
+    LolEventShopItemSale:
+      type: object
+      properties:
+        discount:
+          type: number
+          format: float
+        endDate:
+          type: string
+        startDate:
+          type: string
     LolEventShopItemUIData:
       type: object
       properties:
@@ -38579,6 +38949,7 @@ components:
         - kAvailable
         - kUnavailable
         - kUnrevealed
+        - kPurchasing
       type: string
     LolEventShopOfferUIData:
       type: object
@@ -38602,6 +38973,15 @@ components:
         price:
           type: integer
           format: uint32
+    LolEventShopOrderNotificationResource:
+      type: object
+      properties:
+        eventType:
+          type: string
+        eventTypeId:
+          type: string
+        status:
+          type: string
     LolEventShopPassOwnershipTypes:
       enum:
         - Unowned
@@ -38615,6 +38995,27 @@ components:
           format: int64
         lastTimeSeen:
           type: string
+    LolEventShopPriceDetail:
+      type: object
+      properties:
+        itemKey:
+          $ref: '#/components/schemas/LolEventShopItemKey'
+        price:
+          $ref: '#/components/schemas/LolEventShopItemPrice'
+    LolEventShopPriceOptionDto:
+      type: object
+      properties:
+        currencyImagePath:
+          type: string
+        currencyName:
+          type: string
+        currencyPaymentOption:
+          type: string
+        currencyType:
+          type: string
+        price:
+          type: integer
+          format: int64
     LolEventShopProgressInfoUIData:
       type: object
       properties:
@@ -38626,6 +39027,123 @@ components:
           type: boolean
         tokenImage:
           type: string
+    LolEventShopPurchasableItem:
+      type: object
+      properties:
+        bundledItems:
+          type: array
+          items:
+            $ref: '#/components/schemas/LolEventShopItemDefinition'
+        dependencies:
+          type: array
+          items:
+            $ref: '#/components/schemas/LolEventShopItemDefinition'
+        item:
+          $ref: '#/components/schemas/LolEventShopItemDefinition'
+        purchaseOptions:
+          type: array
+          items:
+            $ref: '#/components/schemas/LolEventShopPurchaseOption'
+        sale:
+          $ref: '#/components/schemas/LolEventShopItemSale'
+        validationErrors:
+          type: array
+          items:
+            $ref: '#/components/schemas/LolEventShopValidationErrorEntry'
+    LolEventShopPurchaseItem:
+      type: object
+      properties:
+        itemKey:
+          $ref: '#/components/schemas/LolEventShopItemKey'
+        purchaseCurrencyInfo:
+          $ref: '#/components/schemas/LolEventShopItemPrice'
+        quantity:
+          type: integer
+          format: int32
+        source:
+          type: string
+    LolEventShopPurchaseOfferOrderStates:
+      enum:
+        - NOT_STARTED
+        - IN_PROGRESS
+        - FAIL
+        - SUCCESS
+      type: string
+    LolEventShopPurchaseOfferOrderStatus:
+      type: object
+      properties:
+        message:
+          type: string
+        orderState:
+          $ref: '#/components/schemas/LolEventShopPurchaseOfferOrderStates'
+    LolEventShopPurchaseOfferOrderStatuses:
+      type: object
+      properties:
+        statuses:
+          type: object
+          additionalProperties:
+            $ref: '#/components/schemas/LolEventShopPurchaseOfferOrderStatus'
+    LolEventShopPurchaseOfferRequest:
+      type: object
+      properties:
+        offerId:
+          type: string
+    LolEventShopPurchaseOfferRequestV3:
+      type: object
+      properties:
+        currencyType:
+          type: string
+        offerId:
+          type: string
+        price:
+          type: integer
+          format: uint32
+        quantity:
+          type: integer
+          format: uint32
+    LolEventShopPurchaseOfferResponseV3:
+      type: object
+      properties:
+        legacy:
+          type: boolean
+        orderDto:
+          $ref: '#/components/schemas/LolEventShopCapOrdersOrderDto'
+    LolEventShopPurchaseOption:
+      type: object
+      properties:
+        priceDetails:
+          type: array
+          items:
+            $ref: '#/components/schemas/LolEventShopPriceDetail'
+    LolEventShopPurchaseRequest:
+      type: object
+      properties:
+        items:
+          type: array
+          items:
+            $ref: '#/components/schemas/LolEventShopPurchaseItem'
+    LolEventShopPurchaseResponse:
+      type: object
+      properties:
+        items:
+          type: array
+          items:
+            $ref: '#/components/schemas/LolEventShopPurchaseItem'
+        transactions:
+          type: array
+          items:
+            $ref: '#/components/schemas/LolEventShopTransaction'
+        useRMSConfirmation:
+          type: boolean
+    LolEventShopPurchaseWidgetConfig:
+      type: object
+      properties:
+        alwaysShowPurchaseDisclaimer:
+          type: boolean
+        enabled:
+          type: boolean
+        nonRefundableDisclaimerEnabled:
+          type: boolean
     LolEventShopRegionLocale:
       type: object
       properties:
@@ -38755,10 +39273,6 @@ components:
         progressRequired:
           type: integer
           format: int64
-        rewardDescription:
-          type: string
-        rewardName:
-          type: string
         rewardOptions:
           type: array
           items:
@@ -38885,6 +39399,17 @@ components:
           type: string
     LolEventShopRmsWalletPayload:
       type: object
+    LolEventShopSale:
+      type: object
+      properties:
+        endDate:
+          type: string
+        prices:
+          type: array
+          items:
+            $ref: '#/components/schemas/LolEventShopItemCost'
+        startDate:
+          type: string
     LolEventShopSelectionRequestDTO:
       type: object
       properties:
@@ -38927,6 +39452,87 @@ components:
       properties:
         data:
           $ref: '#/components/schemas/LolEventShopSimpleInventoryDTO'
+    LolEventShopSkinLineDescriptionDto:
+      type: object
+      properties:
+        description:
+          type: string
+        iconImagePath:
+          type: string
+        title:
+          type: string
+    LolEventShopSkinLineDescriptionInfo:
+      type: object
+      properties:
+        description:
+          type: string
+        iconPath:
+          type: string
+        title:
+          type: string
+    LolEventShopSkinLineInfo:
+      type: object
+      properties:
+        collectionCardPath:
+          type: string
+        collectionDescription:
+          type: string
+        descriptionInfo:
+          type: array
+          items:
+            $ref: '#/components/schemas/LolEventShopSkinLineDescriptionInfo'
+        name:
+          type: string
+        splashPath:
+          type: string
+        tiers:
+          type: array
+          items:
+            $ref: '#/components/schemas/LolEventShopSkinLineTier'
+        tilePath:
+          type: string
+        uncenteredSplashPath:
+          type: string
+    LolEventShopSkinLineItemDto:
+      type: object
+      properties:
+        largeImagePath:
+          type: string
+        largeVideoPath:
+          type: string
+        localizedLongName:
+          type: string
+        localizedShortName:
+          type: string
+        thumbnailImagePath:
+          type: string
+    LolEventShopSkinLineTier:
+      type: object
+      properties:
+        collectionSplashVideoPath:
+          type: string
+        description:
+          type: string
+        id:
+          type: integer
+          format: int64
+        loadScreenPath:
+          type: string
+        name:
+          type: string
+        shortName:
+          type: string
+        splashPath:
+          type: string
+        splashVideoPath:
+          type: string
+        stage:
+          type: integer
+          format: int64
+        tilePath:
+          type: string
+        uncenteredSplashPath:
+          type: string
     LolEventShopSummonerIcon:
       type: object
       properties:
@@ -39049,6 +39655,17 @@ components:
           type: string
         tokenUuid:
           type: string
+    LolEventShopTransaction:
+      type: object
+      properties:
+        iconUrl:
+          type: string
+        itemKey:
+          $ref: '#/components/schemas/LolEventShopItemKey'
+        itemName:
+          type: string
+        transactionId:
+          type: string
     LolEventShopUnclaimedRewardsUIData:
       type: object
       properties:
@@ -39058,15 +39675,104 @@ components:
         rewardsCount:
           type: integer
           format: int32
+    LolEventShopValidateOfferError:
+      type: object
+      properties:
+        errorKey:
+          type: string
+        meta:
+          type: string
+    LolEventShopValidateOfferRequestV3:
+      type: object
+      properties:
+        offerId:
+          type: string
+    LolEventShopValidateOfferResponseV3:
+      type: object
+      properties:
+        validationErrors:
+          type: array
+          items:
+            $ref: '#/components/schemas/LolEventShopValidateOfferError'
+    LolEventShopValidationError:
+      type: object
+      properties:
+        errorCode:
+          type: string
+        errorDetails:
+          type: object
+          additionalProperties:
+            type: string
+        message:
+          type: string
+        responseItems:
+          type: array
+          items:
+            type: string
+    LolEventShopValidationErrorEntry:
+      type: object
+      properties:
+        id:
+          type: string
+    LolEventShopValidationRequest:
+      type: object
+      properties:
+        items:
+          type: array
+          items:
+            $ref: '#/components/schemas/LolEventShopValidationRequestItem'
+        ownedItems:
+          type: array
+          items:
+            $ref: '#/components/schemas/LolEventShopItemOwnership'
+    LolEventShopValidationRequestItem:
+      type: object
+      properties:
+        itemKey:
+          $ref: '#/components/schemas/LolEventShopItemKey'
+        quantity:
+          type: integer
+          format: int32
+    LolEventShopValidationResponse:
+      type: object
+      properties:
+        items:
+          type: array
+          items:
+            $ref: '#/components/schemas/LolEventShopValidationResponseItem'
+        valid:
+          type: boolean
+    LolEventShopValidationResponseItem:
+      type: object
+      properties:
+        description:
+          type: string
+        itemKey:
+          $ref: '#/components/schemas/LolEventShopItemKey'
+        name:
+          type: string
+        quantity:
+          type: integer
+          format: int32
+        sale:
+          $ref: '#/components/schemas/LolEventShopSale'
+        validationCurrencyInfo:
+          type: array
+          items:
+            $ref: '#/components/schemas/LolEventShopItemPrice'
     LolEventShopWallet:
       type: object
       properties:
-        ip:
+        accountId:
           type: integer
-          format: int64
-        rp:
+          format: uint64
+        balances:
+          type: array
+          items:
+            $ref: '#/components/schemas/LolEventShopBalance'
+        version:
           type: integer
-          format: int64
+          format: int32
     LolEventShopWalletCacheEntry:
       type: object
       properties:
@@ -41335,6 +42041,8 @@ components:
     LolLeagueSessionLeagueSessionRMSNotification:
       type: object
       properties:
+        product:
+          type: string
         puuid:
           type: string
         sessionId:
@@ -56140,6 +56848,8 @@ components:
       type: object
       properties:
         displayName:
+          type: string
+        puuid:
           type: string
         summonerId:
           type: integer

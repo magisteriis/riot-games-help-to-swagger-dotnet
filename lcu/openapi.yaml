@@ -57860,8 +57860,8 @@ components:
     LolWorldsTokenCardTokenUpsellLockedType:
       enum:
         - UNASSIGNED
-        - LOCKED
         - UNLOCKED
+        - LOCKED
       type: string
     LootItemClientDTO:
       type: object

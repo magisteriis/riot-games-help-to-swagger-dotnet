@@ -1419,6 +1419,37 @@
         }
       }
     },
+    "/config/v1/config": {
+      "get": {
+        "tags": [
+          "Config"
+        ],
+        "summary": "Returns a merged object of both public and player configs",
+        "operationId": "GetConfigV1Config",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              },
+              "application/x-yaml": {
+                "schema": {
+                  "type": "object"
+                }
+              },
+              "application/x-msgpack": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/cookie-jar/v1/cookies": {
       "get": {
         "tags": [
@@ -1821,6 +1852,39 @@
         }
       }
     },
+    "/lol-account-verification/v1/confirmDeactivationPin": {
+      "post": {
+        "tags": [
+          "Plugins",
+          "Plugin lol-account-verification"
+        ],
+        "operationId": "PostLolAccountVerificationV1ConfirmDeactivationPin",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LolAccountVerificationConfirmDeactivationPinRequest"
+              }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/LolAccountVerificationConfirmDeactivationPinRequest"
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "$ref": "#/components/schemas/LolAccountVerificationConfirmDeactivationPinRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "204": {
+            "description": "No content"
+          }
+        }
+      }
+    },
     "/lol-account-verification/v1/device": {
       "get": {
         "tags": [
@@ -1990,6 +2054,31 @@
             }
           }
         },
+        "responses": {
+          "204": {
+            "description": "No content"
+          }
+        }
+      }
+    },
+    "/lol-account-verification/v1/sendDeactivationPin": {
+      "post": {
+        "tags": [
+          "Plugins",
+          "Plugin lol-account-verification"
+        ],
+        "operationId": "PostLolAccountVerificationV1SendDeactivationPin",
+        "parameters": [
+          {
+            "name": "SendDeactivationPinRequest",
+            "in": "query",
+            "required": true,
+            "style": "form",
+            "schema": {
+              "type": ""
+            }
+          }
+        ],
         "responses": {
           "204": {
             "description": "No content"
@@ -8616,17 +8705,26 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/LolChatPlayerMutesResponse"
+                  "type": "object",
+                  "additionalProperties": {
+                    "$ref": "#/components/schemas/LolChatPlayerMuteStatus"
+                  }
                 }
               },
               "application/x-yaml": {
                 "schema": {
-                  "$ref": "#/components/schemas/LolChatPlayerMutesResponse"
+                  "type": "object",
+                  "additionalProperties": {
+                    "$ref": "#/components/schemas/LolChatPlayerMuteStatus"
+                  }
                 }
               },
               "application/x-msgpack": {
                 "schema": {
-                  "$ref": "#/components/schemas/LolChatPlayerMutesResponse"
+                  "type": "object",
+                  "additionalProperties": {
+                    "$ref": "#/components/schemas/LolChatPlayerMuteStatus"
+                  }
                 }
               }
             }
@@ -9069,6 +9167,56 @@
         }
       }
     },
+    "/lol-chat/v1/system-mutes": {
+      "post": {
+        "tags": [
+          "Plugins",
+          "Plugin lol-chat"
+        ],
+        "operationId": "PostLolChatV1SystemMutes",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LolChatPlayerMuteUpdate"
+              }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/LolChatPlayerMuteUpdate"
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "$ref": "#/components/schemas/LolChatPlayerMuteUpdate"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              },
+              "application/x-yaml": {
+                "schema": {
+                  "type": "object"
+                }
+              },
+              "application/x-msgpack": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/lol-clash/v1/all-tournaments": {
       "get": {
         "tags": [
@@ -9388,17 +9536,6 @@
           "Plugin lol-clash"
         ],
         "operationId": "GetLolClashV1EventByUuid",
-        "parameters": [
-          {
-            "name": "uuid",
-            "in": "path",
-            "required": true,
-            "style": "simple",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
         "responses": {
           "200": {
             "description": "Successful response",
@@ -13096,58 +13233,6 @@
               "application/x-msgpack": {
                 "schema": {
                   "$ref": "#/components/schemas/LolCollectionsCollectionsSummonerSpells"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/lol-collections/v1/inventories/{summonerId}/verification": {
-      "put": {
-        "tags": [
-          "Plugins",
-          "Plugin lol-collections"
-        ],
-        "operationId": "PutLolCollectionsV1InventoriesBySummonerIdVerification",
-        "parameters": [
-          {
-            "name": "summonerId",
-            "in": "path",
-            "required": true,
-            "style": "simple",
-            "schema": {
-              "type": "integer",
-              "format": "uint64"
-            }
-          },
-          {
-            "name": "verificationCode",
-            "in": "query",
-            "required": true,
-            "style": "form",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Successful response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "string"
-                }
-              },
-              "application/x-yaml": {
-                "schema": {
-                  "type": "string"
-                }
-              },
-              "application/x-msgpack": {
-                "schema": {
-                  "type": "string"
                 }
               }
             }
@@ -28908,40 +28993,6 @@
                     "type": "integer",
                     "format": "int32"
                   }
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/lol-perks/v1/schema-version": {
-      "get": {
-        "tags": [
-          "Plugins",
-          "Plugin lol-perks"
-        ],
-        "operationId": "GetLolPerksV1SchemaVersion",
-        "responses": {
-          "200": {
-            "description": "Successful response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "integer",
-                  "format": "uint32"
-                }
-              },
-              "application/x-yaml": {
-                "schema": {
-                  "type": "integer",
-                  "format": "uint32"
-                }
-              },
-              "application/x-msgpack": {
-                "schema": {
-                  "type": "integer",
-                  "format": "uint32"
                 }
               }
             }
@@ -47415,6 +47466,24 @@
           }
         }
       },
+      "LolAccountVerificationAuthResourceRsoAccessToken": {
+        "type": "object",
+        "properties": {
+          "expiry": {
+            "type": "integer",
+            "format": "uint64"
+          },
+          "scopes": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "token": {
+            "type": "string"
+          }
+        }
+      },
       "LolAccountVerificationAVSConfig": {
         "type": "object",
         "properties": {
@@ -47437,8 +47506,19 @@
       "LolAccountVerificationConfirmActivationPinResponse": {
         "type": "object",
         "properties": {
-          "success": {
-            "type": "boolean"
+          "clientMessageId": {
+            "type": "string"
+          },
+          "data": {
+            "$ref": "#/components/schemas/LolAccountVerificationConfirmActivationPinResponseData"
+          }
+        }
+      },
+      "LolAccountVerificationConfirmActivationPinResponseData": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "string"
           }
         }
       },
@@ -47534,6 +47614,40 @@
           "ERROR"
         ],
         "type": "string"
+      },
+      "LolAccountVerificationPhoneNumberObfuscated": {
+        "type": "object",
+        "properties": {
+          "countryCode": {
+            "type": "string"
+          },
+          "endsWith": {
+            "type": "string"
+          },
+          "length": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "LolAccountVerificationPhoneNumberResponse": {
+        "type": "object",
+        "properties": {
+          "clientMessageId": {
+            "type": "string"
+          },
+          "data": {
+            "$ref": "#/components/schemas/LolAccountVerificationPhoneNumberResponseData"
+          }
+        }
+      },
+      "LolAccountVerificationPhoneNumberResponseData": {
+        "type": "object",
+        "properties": {
+          "phoneNumberObfuscated": {
+            "$ref": "#/components/schemas/LolAccountVerificationPhoneNumberObfuscated"
+          }
+        }
       },
       "LolAccountVerificationSendActivationPinRequest": {
         "type": "object",
@@ -54010,6 +54124,14 @@
           }
         }
       },
+      "LolChatMuteType": {
+        "enum": [
+          "PLAYER_MUTE",
+          "SETTINGS_MUTE",
+          "SYSTEM_MUTE"
+        ],
+        "type": "string"
+      },
       "LolChatNameBody": {
         "type": "object",
         "properties": {
@@ -54089,20 +54211,20 @@
           }
         }
       },
-      "LolChatPlayerMutesResponse": {
+      "LolChatPlayerMuteStatus": {
         "type": "object",
         "properties": {
-          "mutedPuuids": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
+          "isPlayerMuted": {
+            "type": "boolean"
           },
-          "systemMutedPuuids": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
+          "isSettingsMuted": {
+            "type": "boolean"
+          },
+          "isSystemMuted": {
+            "type": "boolean"
+          },
+          "puuid": {
+            "type": "string"
           }
         }
       },
@@ -57536,14 +57658,6 @@
           }
         }
       },
-      "LolCollectionsTPVSaveResponseDTO": {
-        "type": "object",
-        "properties": {
-          "data": {
-            "type": "string"
-          }
-        }
-      },
       "LolContentTargetingAccountIdAndSummonerId": {
         "type": "object",
         "properties": {
@@ -60972,6 +61086,15 @@
           },
           "Enabled": {
             "type": "boolean"
+          },
+          "ProgressEndDate": {
+            "type": "string"
+          },
+          "ShopEndDate": {
+            "type": "string"
+          },
+          "StartDate": {
+            "type": "string"
           }
         }
       },
@@ -62232,6 +62355,9 @@
           },
           "state": {
             "$ref": "#/components/schemas/LolEventShopRewardTrackItemStates"
+          },
+          "threshold": {
+            "type": "string"
           }
         }
       },
@@ -82853,7 +82979,7 @@
               "$ref": "#/components/schemas/LolRankedGlobalNotification"
             }
           },
-          "notifications": {
+          "leagueNotifications": {
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/LolRankedLeagueNotification"
@@ -88541,8 +88667,8 @@
       "LolWorldsTokenCardTokenUpsellLockedType": {
         "enum": [
           "UNASSIGNED",
-          "LOCKED",
-          "UNLOCKED"
+          "UNLOCKED",
+          "LOCKED"
         ],
         "type": "string"
       },
@@ -93367,6 +93493,9 @@
     },
     {
       "name": "builtin"
+    },
+    {
+      "name": "Config"
     },
     {
       "name": "cookie-jar"

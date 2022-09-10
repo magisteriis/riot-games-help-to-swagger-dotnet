@@ -901,6 +901,25 @@ paths:
                 type: object
                 additionalProperties:
                   type: object
+  /config/v1/config:
+    get:
+      tags:
+        - Config
+      summary: Returns a merged object of both public and player configs
+      operationId: GetConfigV1Config
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+            application/x-yaml:
+              schema:
+                type: object
+            application/x-msgpack:
+              schema:
+                type: object
   /cookie-jar/v1/cookies:
     get:
       tags:
@@ -1149,6 +1168,26 @@ paths:
       responses:
         '204':
           description: No content
+  /lol-account-verification/v1/confirmDeactivationPin:
+    post:
+      tags:
+        - Plugins
+        - Plugin lol-account-verification
+      operationId: PostLolAccountVerificationV1ConfirmDeactivationPin
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/LolAccountVerificationConfirmDeactivationPinRequest'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/LolAccountVerificationConfirmDeactivationPinRequest'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/LolAccountVerificationConfirmDeactivationPinRequest'
+      responses:
+        '204':
+          description: No content
   /lol-account-verification/v1/device:
     get:
       tags:
@@ -1253,6 +1292,22 @@ paths:
           application/x-msgpack:
             schema:
               $ref: '#/components/schemas/LolAccountVerificationSendActivationPinRequest'
+      responses:
+        '204':
+          description: No content
+  /lol-account-verification/v1/sendDeactivationPin:
+    post:
+      tags:
+        - Plugins
+        - Plugin lol-account-verification
+      operationId: PostLolAccountVerificationV1SendDeactivationPin
+      parameters:
+        - name: SendDeactivationPinRequest
+          in: query
+          required: true
+          style: form
+          schema:
+            type: ''
       responses:
         '204':
           description: No content
@@ -5401,13 +5456,19 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/LolChatPlayerMutesResponse'
+                type: object
+                additionalProperties:
+                  $ref: '#/components/schemas/LolChatPlayerMuteStatus'
             application/x-yaml:
               schema:
-                $ref: '#/components/schemas/LolChatPlayerMutesResponse'
+                type: object
+                additionalProperties:
+                  $ref: '#/components/schemas/LolChatPlayerMuteStatus'
             application/x-msgpack:
               schema:
-                $ref: '#/components/schemas/LolChatPlayerMutesResponse'
+                type: object
+                additionalProperties:
+                  $ref: '#/components/schemas/LolChatPlayerMuteStatus'
     post:
       tags:
         - Plugins
@@ -5674,6 +5735,36 @@ paths:
             application/x-msgpack:
               schema:
                 type: object
+  /lol-chat/v1/system-mutes:
+    post:
+      tags:
+        - Plugins
+        - Plugin lol-chat
+      operationId: PostLolChatV1SystemMutes
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/LolChatPlayerMuteUpdate'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/LolChatPlayerMuteUpdate'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/LolChatPlayerMuteUpdate'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+            application/x-yaml:
+              schema:
+                type: object
+            application/x-msgpack:
+              schema:
+                type: object
   /lol-clash/v1/all-tournaments:
     get:
       tags:
@@ -5874,13 +5965,6 @@ paths:
         - Plugins
         - Plugin lol-clash
       operationId: GetLolClashV1EventByUuid
-      parameters:
-        - name: uuid
-          in: path
-          required: true
-          style: simple
-          schema:
-            type: string
       responses:
         '200':
           description: Successful response
@@ -8183,39 +8267,6 @@ paths:
             application/x-msgpack:
               schema:
                 $ref: '#/components/schemas/LolCollectionsCollectionsSummonerSpells'
-  '/lol-collections/v1/inventories/{summonerId}/verification':
-    put:
-      tags:
-        - Plugins
-        - Plugin lol-collections
-      operationId: PutLolCollectionsV1InventoriesBySummonerIdVerification
-      parameters:
-        - name: summonerId
-          in: path
-          required: true
-          style: simple
-          schema:
-            type: integer
-            format: uint64
-        - name: verificationCode
-          in: query
-          required: true
-          style: form
-          schema:
-            type: string
-      responses:
-        '200':
-          description: Successful response
-          content:
-            application/json:
-              schema:
-                type: string
-            application/x-yaml:
-              schema:
-                type: string
-            application/x-msgpack:
-              schema:
-                type: string
   '/lol-collections/v1/inventories/{summonerId}/ward-skins':
     get:
       tags:
@@ -18029,28 +18080,6 @@ paths:
                 items:
                   type: integer
                   format: int32
-  /lol-perks/v1/schema-version:
-    get:
-      tags:
-        - Plugins
-        - Plugin lol-perks
-      operationId: GetLolPerksV1SchemaVersion
-      responses:
-        '200':
-          description: Successful response
-          content:
-            application/json:
-              schema:
-                type: integer
-                format: uint32
-            application/x-yaml:
-              schema:
-                type: integer
-                format: uint32
-            application/x-msgpack:
-              schema:
-                type: integer
-                format: uint32
   /lol-perks/v1/servicesettings:
     get:
       tags:
@@ -29792,6 +29821,18 @@ components:
           format: int32
         success:
           type: boolean
+    LolAccountVerificationAuthResourceRsoAccessToken:
+      type: object
+      properties:
+        expiry:
+          type: integer
+          format: uint64
+        scopes:
+          type: array
+          items:
+            type: string
+        token:
+          type: string
     LolAccountVerificationAVSConfig:
       type: object
       properties:
@@ -29807,8 +29848,15 @@ components:
     LolAccountVerificationConfirmActivationPinResponse:
       type: object
       properties:
-        success:
-          type: boolean
+        clientMessageId:
+          type: string
+        data:
+          $ref: '#/components/schemas/LolAccountVerificationConfirmActivationPinResponseData'
+    LolAccountVerificationConfirmActivationPinResponseData:
+      type: object
+      properties:
+        status:
+          type: string
     LolAccountVerificationConfirmDeactivationPinRequest:
       type: object
       properties:
@@ -29872,6 +29920,28 @@ components:
         - LOGGING_OUT
         - ERROR
       type: string
+    LolAccountVerificationPhoneNumberObfuscated:
+      type: object
+      properties:
+        countryCode:
+          type: string
+        endsWith:
+          type: string
+        length:
+          type: integer
+          format: int32
+    LolAccountVerificationPhoneNumberResponse:
+      type: object
+      properties:
+        clientMessageId:
+          type: string
+        data:
+          $ref: '#/components/schemas/LolAccountVerificationPhoneNumberResponseData'
+    LolAccountVerificationPhoneNumberResponseData:
+      type: object
+      properties:
+        phoneNumberObfuscated:
+          $ref: '#/components/schemas/LolAccountVerificationPhoneNumberObfuscated'
     LolAccountVerificationSendActivationPinRequest:
       type: object
       properties:
@@ -34261,6 +34331,12 @@ components:
         summonerId:
           type: integer
           format: uint64
+    LolChatMuteType:
+      enum:
+        - PLAYER_MUTE
+        - SETTINGS_MUTE
+        - SYSTEM_MUTE
+      type: string
     LolChatNameBody:
       type: object
       properties:
@@ -34312,17 +34388,17 @@ components:
       properties:
         pid:
           type: string
-    LolChatPlayerMutesResponse:
+    LolChatPlayerMuteStatus:
       type: object
       properties:
-        mutedPuuids:
-          type: array
-          items:
-            type: string
-        systemMutedPuuids:
-          type: array
-          items:
-            type: string
+        isPlayerMuted:
+          type: boolean
+        isSettingsMuted:
+          type: boolean
+        isSystemMuted:
+          type: boolean
+        puuid:
+          type: string
     LolChatPlayerMuteUpdate:
       type: object
       properties:
@@ -36713,11 +36789,6 @@ components:
           type: string
         value:
           type: object
-    LolCollectionsTPVSaveResponseDTO:
-      type: object
-      properties:
-        data:
-          type: string
     LolContentTargetingAccountIdAndSummonerId:
       type: object
       properties:
@@ -39053,6 +39124,12 @@ components:
           type: string
         Enabled:
           type: boolean
+        ProgressEndDate:
+          type: string
+        ShopEndDate:
+          type: string
+        StartDate:
+          type: string
     LolEventShopEventShopError:
       type: object
       properties:
@@ -39900,6 +39977,8 @@ components:
             $ref: '#/components/schemas/LolEventShopRewardTrackItemTag'
         state:
           $ref: '#/components/schemas/LolEventShopRewardTrackItemStates'
+        threshold:
+          type: string
     LolEventShopRewardTrackItemHeaderType:
       enum:
         - PREMIUM
@@ -53981,7 +54060,7 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/LolRankedGlobalNotification'
-        notifications:
+        leagueNotifications:
           type: array
           items:
             $ref: '#/components/schemas/LolRankedLeagueNotification'
@@ -57860,8 +57939,8 @@ components:
     LolWorldsTokenCardTokenUpsellLockedType:
       enum:
         - UNASSIGNED
-        - LOCKED
         - UNLOCKED
+        - LOCKED
       type: string
     LootItemClientDTO:
       type: object
@@ -61163,6 +61242,7 @@ security:
 tags:
   - name: async
   - name: builtin
+  - name: Config
   - name: cookie-jar
   - name: core
   - name: crash-reporting

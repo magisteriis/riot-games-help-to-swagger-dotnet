@@ -9326,6 +9326,25 @@ paths:
             application/x-msgpack:
               schema:
                 $ref: '#/components/schemas/LolEventShopRewardTrackProgress'
+  /lol-event-shop/v1/reward-track-xp:
+    get:
+      tags:
+        - Plugins
+        - Plugin lol-event-shop
+      operationId: GetLolEventShopV1RewardTrackXp
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/LolEventShopRewardTrackXP'
+            application/x-yaml:
+              schema:
+                $ref: '#/components/schemas/LolEventShopRewardTrackXP'
+            application/x-msgpack:
+              schema:
+                $ref: '#/components/schemas/LolEventShopRewardTrackXP'
   /lol-event-shop/v1/token-balance:
     get:
       tags:
@@ -11217,6 +11236,31 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/LolHonorV2Honor'
+  /lol-honor-v2/v1/recognition-history:
+    get:
+      tags:
+        - Plugins
+        - Plugin lol-honor-v2
+      operationId: GetLolHonorV2V1RecognitionHistory
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/LolHonorV2HonorInteraction'
+            application/x-yaml:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/LolHonorV2HonorInteraction'
+            application/x-msgpack:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/LolHonorV2HonorInteraction'
   /lol-honor-v2/v1/reward-granted:
     get:
       tags:
@@ -13779,6 +13823,45 @@ paths:
           application/x-msgpack:
             schema:
               $ref: '#/components/schemas/LolLobbyLobbyPositionPreferences'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+            application/x-yaml:
+              schema:
+                type: object
+            application/x-msgpack:
+              schema:
+                type: object
+  /lol-lobby/v1/lobby/members/localMember/preferred-champions:
+    put:
+      tags:
+        - Plugins
+        - Plugin lol-lobby
+      operationId: PutLolLobbyV1LobbyMembersLocalMemberPreferredChampions
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                type: integer
+                format: int32
+          application/x-yaml:
+            schema:
+              type: array
+              items:
+                type: integer
+                format: int32
+          application/x-msgpack:
+            schema:
+              type: array
+              items:
+                type: integer
+                format: int32
       responses:
         '200':
           description: Successful response
@@ -18239,214 +18322,6 @@ paths:
             application/x-msgpack:
               schema:
                 type: object
-  /lol-personalized-offers/v1/has-permissions:
-    get:
-      tags:
-        - Plugins
-        - Plugin lol-personalized-offers
-      operationId: GetLolPersonalizedOffersV1HasPermissions
-      responses:
-        '200':
-          description: Successful response
-          content:
-            application/json:
-              schema:
-                type: boolean
-            application/x-yaml:
-              schema:
-                type: boolean
-            application/x-msgpack:
-              schema:
-                type: boolean
-  /lol-personalized-offers/v1/modal:
-    get:
-      tags:
-        - Plugins
-        - Plugin lol-personalized-offers
-      operationId: GetLolPersonalizedOffersV1Modal
-      responses:
-        '200':
-          description: Successful response
-          content:
-            application/json:
-              schema:
-                type: boolean
-            application/x-yaml:
-              schema:
-                type: boolean
-            application/x-msgpack:
-              schema:
-                type: boolean
-  /lol-personalized-offers/v1/offers:
-    get:
-      tags:
-        - Plugins
-        - Plugin lol-personalized-offers
-      operationId: GetLolPersonalizedOffersV1Offers
-      responses:
-        '200':
-          description: Successful response
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/LolPersonalizedOffersUIOffer'
-            application/x-yaml:
-              schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/LolPersonalizedOffersUIOffer'
-            application/x-msgpack:
-              schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/LolPersonalizedOffersUIOffer'
-  '/lol-personalized-offers/v1/offers/{id}/purchase':
-    post:
-      tags:
-        - Plugins
-        - Plugin lol-personalized-offers
-      operationId: PostLolPersonalizedOffersV1OffersByIdPurchase
-      parameters:
-        - name: id
-          in: path
-          required: true
-          style: simple
-          schema:
-            type: string
-      responses:
-        '200':
-          description: Successful response
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/LolPersonalizedOffersPurchaseResponse'
-            application/x-yaml:
-              schema:
-                $ref: '#/components/schemas/LolPersonalizedOffersPurchaseResponse'
-            application/x-msgpack:
-              schema:
-                $ref: '#/components/schemas/LolPersonalizedOffersPurchaseResponse'
-  '/lol-personalized-offers/v1/offers/{id}/reveal':
-    post:
-      tags:
-        - Plugins
-        - Plugin lol-personalized-offers
-      operationId: PostLolPersonalizedOffersV1OffersByIdReveal
-      parameters:
-        - name: id
-          in: path
-          required: true
-          style: simple
-          schema:
-            type: string
-      responses:
-        '200':
-          description: Successful response
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/LolPersonalizedOffersUIOffer'
-            application/x-yaml:
-              schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/LolPersonalizedOffersUIOffer'
-            application/x-msgpack:
-              schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/LolPersonalizedOffersUIOffer'
-  /lol-personalized-offers/v1/permissions:
-    post:
-      tags:
-        - Plugins
-        - Plugin lol-personalized-offers
-      operationId: PostLolPersonalizedOffersV1Permissions
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/LolPersonalizedOffersPlayerPermissions'
-          application/x-yaml:
-            schema:
-              $ref: '#/components/schemas/LolPersonalizedOffersPlayerPermissions'
-          application/x-msgpack:
-            schema:
-              $ref: '#/components/schemas/LolPersonalizedOffersPlayerPermissions'
-      responses:
-        '200':
-          description: Successful response
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/LolPersonalizedOffersPlayerPermissions'
-            application/x-yaml:
-              schema:
-                $ref: '#/components/schemas/LolPersonalizedOffersPlayerPermissions'
-            application/x-msgpack:
-              schema:
-                $ref: '#/components/schemas/LolPersonalizedOffersPlayerPermissions'
-  /lol-personalized-offers/v1/ready:
-    get:
-      tags:
-        - Plugins
-        - Plugin lol-personalized-offers
-      operationId: GetLolPersonalizedOffersV1Ready
-      responses:
-        '200':
-          description: Successful response
-          content:
-            application/json:
-              schema:
-                type: boolean
-            application/x-yaml:
-              schema:
-                type: boolean
-            application/x-msgpack:
-              schema:
-                type: boolean
-  /lol-personalized-offers/v1/status:
-    get:
-      tags:
-        - Plugins
-        - Plugin lol-personalized-offers
-      operationId: GetLolPersonalizedOffersV1Status
-      responses:
-        '200':
-          description: Successful response
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/LolPersonalizedOffersUIStatus'
-            application/x-yaml:
-              schema:
-                $ref: '#/components/schemas/LolPersonalizedOffersUIStatus'
-            application/x-msgpack:
-              schema:
-                $ref: '#/components/schemas/LolPersonalizedOffersUIStatus'
-  /lol-personalized-offers/v1/themed:
-    get:
-      tags:
-        - Plugins
-        - Plugin lol-personalized-offers
-      operationId: GetLolPersonalizedOffersV1Themed
-      responses:
-        '200':
-          description: Successful response
-          content:
-            application/json:
-              schema:
-                type: boolean
-            application/x-yaml:
-              schema:
-                type: boolean
-            application/x-msgpack:
-              schema:
-                type: boolean
   /lol-pft/v2/events:
     post:
       tags:
@@ -21277,6 +21152,48 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/LolRewardsSvcRewardGroup'
+  /lol-rewards/v1/select-bulk:
+    post:
+      tags:
+        - Plugins
+        - Plugin lol-rewards
+      operationId: PostLolRewardsV1SelectBulk
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                $ref: '#/components/schemas/LolRewardsSelectionRequestDTO'
+          application/x-yaml:
+            schema:
+              type: array
+              items:
+                $ref: '#/components/schemas/LolRewardsSelectionRequestDTO'
+          application/x-msgpack:
+            schema:
+              type: array
+              items:
+                $ref: '#/components/schemas/LolRewardsSelectionRequestDTO'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties:
+                  $ref: '#/components/schemas/LolRewardsSelectGrantStatusResponse'
+            application/x-yaml:
+              schema:
+                type: object
+                additionalProperties:
+                  $ref: '#/components/schemas/LolRewardsSelectGrantStatusResponse'
+            application/x-msgpack:
+              schema:
+                type: object
+                additionalProperties:
+                  $ref: '#/components/schemas/LolRewardsSelectGrantStatusResponse'
   /lol-rms/v1/champion-mastery-leaveup-update:
     get:
       tags:
@@ -21975,6 +21892,25 @@ paths:
             application/x-msgpack:
               schema:
                 type: object
+  /lol-settings/v2/config:
+    get:
+      tags:
+        - Plugins
+        - Plugin lol-settings
+      operationId: GetLolSettingsV2Config
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/LolSettingsSettingsConfig'
+            application/x-yaml:
+              schema:
+                $ref: '#/components/schemas/LolSettingsSettingsConfig'
+            application/x-msgpack:
+              schema:
+                $ref: '#/components/schemas/LolSettingsSettingsConfig'
   '/lol-settings/v2/didreset/{ppType}':
     get:
       tags:
@@ -24255,6 +24191,214 @@ paths:
             application/x-msgpack:
               schema:
                 $ref: '#/components/schemas/LolTrophiesTrophyProfileData'
+  /lol-yourshop/v1/has-permissions:
+    get:
+      tags:
+        - Plugins
+        - Plugin lol-yourshop
+      operationId: GetLolYourshopV1HasPermissions
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: boolean
+            application/x-yaml:
+              schema:
+                type: boolean
+            application/x-msgpack:
+              schema:
+                type: boolean
+  /lol-yourshop/v1/modal:
+    get:
+      tags:
+        - Plugins
+        - Plugin lol-yourshop
+      operationId: GetLolYourshopV1Modal
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: boolean
+            application/x-yaml:
+              schema:
+                type: boolean
+            application/x-msgpack:
+              schema:
+                type: boolean
+  /lol-yourshop/v1/offers:
+    get:
+      tags:
+        - Plugins
+        - Plugin lol-yourshop
+      operationId: GetLolYourshopV1Offers
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/LolYourshopUIOffer'
+            application/x-yaml:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/LolYourshopUIOffer'
+            application/x-msgpack:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/LolYourshopUIOffer'
+  '/lol-yourshop/v1/offers/{id}/purchase':
+    post:
+      tags:
+        - Plugins
+        - Plugin lol-yourshop
+      operationId: PostLolYourshopV1OffersByIdPurchase
+      parameters:
+        - name: id
+          in: path
+          required: true
+          style: simple
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/LolYourshopPurchaseResponse'
+            application/x-yaml:
+              schema:
+                $ref: '#/components/schemas/LolYourshopPurchaseResponse'
+            application/x-msgpack:
+              schema:
+                $ref: '#/components/schemas/LolYourshopPurchaseResponse'
+  '/lol-yourshop/v1/offers/{id}/reveal':
+    post:
+      tags:
+        - Plugins
+        - Plugin lol-yourshop
+      operationId: PostLolYourshopV1OffersByIdReveal
+      parameters:
+        - name: id
+          in: path
+          required: true
+          style: simple
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/LolYourshopUIOffer'
+            application/x-yaml:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/LolYourshopUIOffer'
+            application/x-msgpack:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/LolYourshopUIOffer'
+  /lol-yourshop/v1/permissions:
+    post:
+      tags:
+        - Plugins
+        - Plugin lol-yourshop
+      operationId: PostLolYourshopV1Permissions
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/LolYourshopPlayerPermissions'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/LolYourshopPlayerPermissions'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/LolYourshopPlayerPermissions'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/LolYourshopPlayerPermissions'
+            application/x-yaml:
+              schema:
+                $ref: '#/components/schemas/LolYourshopPlayerPermissions'
+            application/x-msgpack:
+              schema:
+                $ref: '#/components/schemas/LolYourshopPlayerPermissions'
+  /lol-yourshop/v1/ready:
+    get:
+      tags:
+        - Plugins
+        - Plugin lol-yourshop
+      operationId: GetLolYourshopV1Ready
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: boolean
+            application/x-yaml:
+              schema:
+                type: boolean
+            application/x-msgpack:
+              schema:
+                type: boolean
+  /lol-yourshop/v1/status:
+    get:
+      tags:
+        - Plugins
+        - Plugin lol-yourshop
+      operationId: GetLolYourshopV1Status
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/LolYourshopUIStatus'
+            application/x-yaml:
+              schema:
+                $ref: '#/components/schemas/LolYourshopUIStatus'
+            application/x-msgpack:
+              schema:
+                $ref: '#/components/schemas/LolYourshopUIStatus'
+  /lol-yourshop/v1/themed:
+    get:
+      tags:
+        - Plugins
+        - Plugin lol-yourshop
+      operationId: GetLolYourshopV1Themed
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: boolean
+            application/x-yaml:
+              schema:
+                type: boolean
+            application/x-msgpack:
+              schema:
+                type: boolean
   /memory/v1/fe-processes-ready:
     get:
       tags:
@@ -26659,12 +26803,12 @@ paths:
       responses:
         '204':
           description: No content
-  /telemetry/v3/uptime-tracking/add-bool-diagnostic:
+  /telemetry/v3/slis/add-bool-diagnostic:
     patch:
       tags:
         - telemetry
       summary: Add bool diagnostic to be sent with SLIs.
-      operationId: PatchTelemetryV3UptimeTrackingAddBoolDiagnostic
+      operationId: PatchTelemetryV3SlisAddBoolDiagnostic
       requestBody:
         content:
           application/json:
@@ -26679,12 +26823,12 @@ paths:
       responses:
         '204':
           description: No content
-  /telemetry/v3/uptime-tracking/add-double-diagnostic:
+  /telemetry/v3/slis/add-double-diagnostic:
     patch:
       tags:
         - telemetry
       summary: Add double diagnostic to be sent with SLIs.
-      operationId: PatchTelemetryV3UptimeTrackingAddDoubleDiagnostic
+      operationId: PatchTelemetryV3SlisAddDoubleDiagnostic
       requestBody:
         content:
           application/json:
@@ -26699,12 +26843,12 @@ paths:
       responses:
         '204':
           description: No content
-  /telemetry/v3/uptime-tracking/add-int-diagnostic:
+  /telemetry/v3/slis/add-int-diagnostic:
     patch:
       tags:
         - telemetry
       summary: Add int diagnostic to be sent with SLIs.
-      operationId: PatchTelemetryV3UptimeTrackingAddIntDiagnostic
+      operationId: PatchTelemetryV3SlisAddIntDiagnostic
       requestBody:
         content:
           application/json:
@@ -26719,12 +26863,12 @@ paths:
       responses:
         '204':
           description: No content
-  /telemetry/v3/uptime-tracking/add-label:
+  /telemetry/v3/slis/add-label:
     patch:
       tags:
         - telemetry
-      summary: 'Add label to be sent with SLI '
-      operationId: PatchTelemetryV3UptimeTrackingAddLabel
+      summary: Add label to be sent with SLIs.
+      operationId: PatchTelemetryV3SlisAddLabel
       requestBody:
         content:
           application/json:
@@ -26739,12 +26883,12 @@ paths:
       responses:
         '204':
           description: No content
-  /telemetry/v3/uptime-tracking/add-string-diagnostic:
+  /telemetry/v3/slis/add-string-diagnostic:
     patch:
       tags:
         - telemetry
       summary: Add string diagnostic to be sent with SLIs.
-      operationId: PatchTelemetryV3UptimeTrackingAddStringDiagnostic
+      operationId: PatchTelemetryV3SlisAddStringDiagnostic
       requestBody:
         content:
           application/json:
@@ -26756,6 +26900,26 @@ paths:
           application/x-msgpack:
             schema:
               $ref: '#/components/schemas/SLIStringDiagnostic'
+      responses:
+        '204':
+          description: No content
+  /telemetry/v3/slis/counts:
+    post:
+      tags:
+        - telemetry
+      summary: Report an SLI to the collector
+      operationId: PostTelemetryV3SlisCounts
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/SLICount'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/SLICount'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/SLICount'
       responses:
         '204':
           description: No content
@@ -28092,10 +28256,8 @@ components:
         id:
           type: integer
           format: uint64
-        multiUserChatJwtMap:
-          type: object
-          additionalProperties:
-            type: string
+        multiUserChatJWT:
+          type: string
         name:
           type: string
         optimisticLock:
@@ -28903,7 +29065,7 @@ components:
         loyaltyBoostXpEarned:
           type: integer
           format: int32
-        multiUserChatJwt:
+        multiUserChatJWT:
           type: string
         myTeamInfo:
           $ref: '#/components/schemas/EndOfGameLcdsTeamInfo'
@@ -29396,10 +29558,8 @@ components:
         maxNumPlayers:
           type: integer
           format: int32
-        multiUserChatJwtMap:
-          type: object
-          additionalProperties:
-            type: string
+        multiUserChatJWT:
+          type: string
         name:
           type: string
         observers:
@@ -32119,6 +32279,14 @@ components:
         summonerLevel:
           type: integer
           format: uint32
+    LolChampSelectBenchChampion:
+      type: object
+      properties:
+        championId:
+          type: integer
+          format: int32
+        isPriority:
+          type: boolean
     LolChampSelectChampGridChampion:
       type: object
       properties:
@@ -32324,11 +32492,10 @@ components:
           type: boolean
         bans:
           $ref: '#/components/schemas/LolChampSelectChampSelectBannedChampions'
-        benchChampionIds:
+        benchChampions:
           type: array
           items:
-            type: integer
-            format: int32
+            $ref: '#/components/schemas/LolChampSelectBenchChampion'
         benchEnabled:
           type: boolean
         boostableSkinCount:
@@ -32791,6 +32958,8 @@ components:
         chatRoomName:
           type: string
         chatRoomPassword:
+          type: string
+        multiUserChatJWT:
           type: string
     LolChampSelectLegacyChampSelectMySelection:
       type: object
@@ -33651,6 +33820,8 @@ components:
           type: boolean
         lastMessage:
           $ref: '#/components/schemas/LolChatConversationMessageResource'
+        multiUserChatJWT:
+          type: string
         name:
           type: string
         password:
@@ -37925,6 +38096,8 @@ components:
         missionsXpEarned:
           type: integer
           format: int32
+        multiUserChatJWT:
+          type: string
         myTeamStatus:
           type: string
         newSpells:
@@ -39864,11 +40037,29 @@ components:
           $ref: '#/components/schemas/LolEventShopSelectionRequestDTO'
         metadata:
           $ref: '#/components/schemas/LolEventShopRequestMetadataDTO'
+    LolEventShopRequestDTO-vector-SelectionRequestDTO:
+      type: object
+      properties:
+        data:
+          type: array
+          items:
+            $ref: '#/components/schemas/LolEventShopSelectionRequestDTO'
+        metadata:
+          $ref: '#/components/schemas/LolEventShopRequestMetadataDTO'
     LolEventShopRequestMetadataDTO:
       type: object
       properties:
         transactionId:
           type: string
+    LolEventShopResponseDTO-map-RewardGroupId-SelectGrantStatus:
+      type: object
+      properties:
+        data:
+          type: object
+          additionalProperties:
+            $ref: '#/components/schemas/LolEventShopSelectGrantStatusResponse'
+        metadata:
+          $ref: '#/components/schemas/LolEventShopResponseMetadataDTO'
     LolEventShopResponseDTO-SvcRewardGrant:
       type: object
       properties:
@@ -40043,6 +40234,23 @@ components:
         totalLevelXP:
           type: integer
           format: int64
+    LolEventShopRewardTrackXP:
+      type: object
+      properties:
+        currentLevel:
+          type: integer
+          format: int64
+        currentLevelXP:
+          type: integer
+          format: int64
+        isBonusPhase:
+          type: boolean
+        iteration:
+          type: integer
+          format: uint32
+        totalLevelXP:
+          type: integer
+          format: int64
     LolEventShopRiotMessagingServiceMessage:
       type: object
       properties:
@@ -40106,9 +40314,16 @@ components:
             $ref: '#/components/schemas/LolEventShopItemCost'
         startDate:
           type: string
+    LolEventShopSelectGrantStatusResponse:
+      enum:
+        - SELECTED
+        - FAILED
+      type: string
     LolEventShopSelectionRequestDTO:
       type: object
       properties:
+        grantId:
+          type: string
         rewardGroupId:
           type: string
         selections:
@@ -41329,6 +41544,8 @@ components:
           type: string
         showPositionSelector:
           type: boolean
+        showPreferredChampions:
+          type: boolean
         spectatorEnabled:
           type: boolean
         type:
@@ -41784,6 +42001,8 @@ components:
       properties:
         Enabled:
           type: boolean
+        HonorSuggestionsEnabled:
+          type: boolean
         HonorVisibilityEnabled:
           type: boolean
         RecallRewardEnabled:
@@ -41791,6 +42010,17 @@ components:
         SecondsToVote:
           type: integer
           format: int32
+    LolHonorV2HonorInteraction:
+      type: object
+      properties:
+        displayName:
+          type: string
+        gameId:
+          type: integer
+          format: uint64
+        summonerId:
+          type: integer
+          format: uint64
     LolHonorV2HonorRecipient:
       type: object
       properties:
@@ -41801,6 +42031,14 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/LolHonorV2Honor'
+        summonerId:
+          type: integer
+          format: uint64
+    LolHonorV2HonorSummoner:
+      type: object
+      properties:
+        displayName:
+          type: string
         summonerId:
           type: integer
           format: uint64
@@ -43745,6 +43983,8 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/LolLobbyLobbyMember'
+        multiUserChatJWT:
+          type: string
         premadeSizeAllowed:
           type: boolean
         queueAvailability:
@@ -43970,6 +44210,10 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/LolLobbyEligibilityRestriction'
+        scarcePositions:
+          type: array
+          items:
+            type: string
         warnings:
           type: array
           items:
@@ -44032,6 +44276,8 @@ components:
           type: integer
           format: int32
         showPositionSelector:
+          type: boolean
+        showPreferredChampions:
           type: boolean
     LolLobbyLobbyInvitation:
       type: object
@@ -44247,6 +44493,11 @@ components:
           type: boolean
         isSpectator:
           type: boolean
+        preferredChampions:
+          type: array
+          items:
+            type: integer
+            format: int32
         puuid:
           type: string
         ready:
@@ -44579,6 +44830,11 @@ components:
           type: array
           items:
             type: string
+        preferredChampions:
+          type: array
+          items:
+            type: integer
+            format: int32
         properties:
           type: object
         skinSelection:
@@ -44842,6 +45098,8 @@ components:
         shortName:
           type: string
         showPositionSelector:
+          type: boolean
+        showPreferredChampions:
           type: boolean
         spectatorEnabled:
           type: boolean
@@ -45133,6 +45391,14 @@ components:
           items:
             type: integer
             format: uint64
+    LolLobbyTeamBuilderBenchChampion:
+      type: object
+      properties:
+        championId:
+          type: integer
+          format: int32
+        isPriority:
+          type: boolean
     LolLobbyTeamBuilderCellsV1:
       type: object
       properties:
@@ -45183,9 +45449,21 @@ components:
           format: int64
         name:
           type: string
+    LolLobbyTeamBuilderChampionBenchChampionV1:
+      type: object
+      properties:
+        championId:
+          type: integer
+          format: int32
+        isPriority:
+          type: boolean
     LolLobbyTeamBuilderChampionBenchStateV1:
       type: object
       properties:
+        benchChampions:
+          type: array
+          items:
+            $ref: '#/components/schemas/LolLobbyTeamBuilderChampionBenchChampionV1'
         benchEnabled:
           type: boolean
         championIds:
@@ -45408,11 +45686,10 @@ components:
           type: boolean
         allowSkinSelection:
           type: boolean
-        benchChampionIds:
+        benchChampions:
           type: array
           items:
-            type: integer
-            format: int32
+            $ref: '#/components/schemas/LolLobbyTeamBuilderBenchChampion'
         benchEnabled:
           type: boolean
         boostableSkinCount:
@@ -47595,11 +47872,29 @@ components:
           $ref: '#/components/schemas/LolLootSelectionRequestDTO'
         metadata:
           $ref: '#/components/schemas/LolLootRequestMetadataDTO'
+    LolLootRequestDTO-vector-SelectionRequestDTO:
+      type: object
+      properties:
+        data:
+          type: array
+          items:
+            $ref: '#/components/schemas/LolLootSelectionRequestDTO'
+        metadata:
+          $ref: '#/components/schemas/LolLootRequestMetadataDTO'
     LolLootRequestMetadataDTO:
       type: object
       properties:
         transactionId:
           type: string
+    LolLootResponseDTO-map-RewardGroupId-SelectGrantStatus:
+      type: object
+      properties:
+        data:
+          type: object
+          additionalProperties:
+            $ref: '#/components/schemas/LolLootSelectGrantStatusResponse'
+        metadata:
+          $ref: '#/components/schemas/LolLootResponseMetadataDTO'
     LolLootResponseDTO-SvcRewardGrant:
       type: object
       properties:
@@ -47682,9 +47977,16 @@ components:
             type: string
         productId:
           type: string
+    LolLootSelectGrantStatusResponse:
+      enum:
+        - SELECTED
+        - FAILED
+      type: string
     LolLootSelectionRequestDTO:
       type: object
       properties:
+        grantId:
+          type: string
         rewardGroupId:
           type: string
         selections:
@@ -51145,177 +51447,6 @@ components:
           format: int32
         name:
           type: string
-    LolPersonalizedOffersAccessTokenResource:
-      type: object
-      properties:
-        expiry:
-          type: integer
-          format: uint64
-        scopes:
-          type: array
-          items:
-            type: string
-        token:
-          type: string
-    LolPersonalizedOffersOffer:
-      type: object
-      properties:
-        discountPrice:
-          type: integer
-          format: int64
-        expirationDate:
-          type: string
-        inventoryType:
-          type: string
-        itemId:
-          type: integer
-          format: int32
-        name:
-          type: string
-        offerId:
-          type: string
-        originalPrice:
-          type: integer
-          format: int64
-        owned:
-          type: boolean
-        revealed:
-          type: boolean
-        spotIndex:
-          type: integer
-          format: uint32
-    LolPersonalizedOffersOfferData:
-      type: object
-      properties:
-        offers:
-          type: array
-          items:
-            $ref: '#/components/schemas/LolPersonalizedOffersOffer'
-        promotion:
-          $ref: '#/components/schemas/LolPersonalizedOffersPromotion'
-    LolPersonalizedOffersOfferId:
-      type: object
-      properties:
-        offerId:
-          type: string
-    LolPersonalizedOffersOfferIds:
-      type: object
-      properties:
-        offers:
-          type: array
-          items:
-            $ref: '#/components/schemas/LolPersonalizedOffersOfferId'
-    LolPersonalizedOffersOfferRequest:
-      type: object
-      properties:
-        inventoryType:
-          type: string
-        itemId:
-          type: integer
-          format: int32
-        offerId:
-          type: string
-        price:
-          type: integer
-          format: int64
-    LolPersonalizedOffersOfferRequests:
-      type: object
-      properties:
-        offers:
-          type: array
-          items:
-            $ref: '#/components/schemas/LolPersonalizedOffersOfferRequest'
-    LolPersonalizedOffersPlayerPermissions:
-      type: object
-      properties:
-        useData:
-          type: string
-    LolPersonalizedOffersPromotion:
-      type: object
-      properties:
-        endTime:
-          type: string
-        name:
-          type: string
-        startTime:
-          type: string
-    LolPersonalizedOffersPurchaseItem:
-      type: object
-      properties:
-        inventoryType:
-          type: string
-        itemId:
-          type: integer
-          format: int32
-        pricePaid:
-          type: integer
-          format: int64
-    LolPersonalizedOffersPurchaseResponse:
-      type: object
-      properties:
-        items:
-          type: array
-          items:
-            $ref: '#/components/schemas/LolPersonalizedOffersPurchaseItem'
-        wallet:
-          $ref: '#/components/schemas/LolPersonalizedOffersWallet'
-    LolPersonalizedOffersUIOffer:
-      type: object
-      properties:
-        championId:
-          type: integer
-          format: int32
-        discountPrice:
-          type: integer
-          format: int64
-        expirationDate:
-          type: string
-        id:
-          type: string
-        originalPrice:
-          type: integer
-          format: int64
-        owned:
-          type: boolean
-        revealed:
-          type: boolean
-        skinId:
-          type: integer
-          format: int32
-        skinName:
-          type: string
-        type:
-          type: string
-    LolPersonalizedOffersUIStatus:
-      type: object
-      properties:
-        endTime:
-          type: string
-        hubEnabled:
-          type: boolean
-        name:
-          type: string
-        startTime:
-          type: string
-    LolPersonalizedOffersWallet:
-      type: object
-      properties:
-        rp:
-          type: integer
-          format: int64
-    LolPersonalizedOffersYourShopConfig:
-      type: object
-      properties:
-        Active:
-          type: boolean
-        PromotionEndDate:
-          type: string
-        PromotionName:
-          type: string
-        PromotionStartDate:
-          type: string
-        ThemedBackground:
-          type: boolean
     LolPftGameClientEndOfGameStats:
       type: object
       properties:
@@ -53721,12 +53852,35 @@ components:
         - SECOND_WARNING
         - SEASON_ENDED
       type: string
+    LolRankedEosRewardData:
+      type: object
+      properties:
+        id:
+          type: string
+        overrideImagePath:
+          type: string
+        type:
+          type: string
+    LolRankedEosRewardGroupsConfig:
+      type: object
+      properties:
+        rewardGroups:
+          type: object
+          additionalProperties:
+            $ref: '#/components/schemas/LolRankedEosRewardGroupsRewardsList'
+    LolRankedEosRewardGroupsRewardsList:
+      type: object
+      properties:
+        rewards:
+          type: array
+          items:
+            type: string
     LolRankedEosRewardsConfig:
       type: object
       properties:
-        config:
-          type: array
-          items:
+        seasons:
+          type: object
+          additionalProperties:
             $ref: '#/components/schemas/LolRankedEosRewardsConfigEntry'
     LolRankedEosRewardsConfigEntry:
       type: object
@@ -53734,10 +53888,7 @@ components:
         rewards:
           type: object
           additionalProperties:
-            type: string
-        season:
-          type: integer
-          format: int32
+            $ref: '#/components/schemas/LolRankedEosRewardData'
     LolRankedEosSettingsData:
       type: object
       properties:
@@ -53858,6 +54009,8 @@ components:
         rewardEarnedId:
           type: string
         rewardEarnedType:
+          type: string
+        rewardOverrideImagePath:
           type: string
         splitPointsNotification:
           $ref: '#/components/schemas/LolRankedSplitPointsNotification'
@@ -54064,6 +54217,10 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/LolRankedLeagueNotification'
+        rewardNotifications:
+          type: array
+          items:
+            $ref: '#/components/schemas/LolRankedRewardNotification'
     LolRankedLeagueQueueType:
       enum:
         - NONE
@@ -54468,6 +54625,14 @@ components:
         - PURPLE
         - ORANGE
       type: string
+    LolRankedRewardNotification:
+      type: object
+      properties:
+        rewardGroupId:
+          type: string
+        seasonId:
+          type: integer
+          format: int32
     LolRankedRewardsInfo:
       type: object
       properties:
@@ -55217,11 +55382,29 @@ components:
           $ref: '#/components/schemas/LolRewardsSelectionRequestDTO'
         metadata:
           $ref: '#/components/schemas/LolRewardsRequestMetadataDTO'
+    LolRewardsRequestDTO-vector-SelectionRequestDTO:
+      type: object
+      properties:
+        data:
+          type: array
+          items:
+            $ref: '#/components/schemas/LolRewardsSelectionRequestDTO'
+        metadata:
+          $ref: '#/components/schemas/LolRewardsRequestMetadataDTO'
     LolRewardsRequestMetadataDTO:
       type: object
       properties:
         transactionId:
           type: string
+    LolRewardsResponseDTO-map-RewardGroupId-SelectGrantStatus:
+      type: object
+      properties:
+        data:
+          type: object
+          additionalProperties:
+            $ref: '#/components/schemas/LolRewardsSelectGrantStatusResponse'
+        metadata:
+          $ref: '#/components/schemas/LolRewardsResponseMetadataDTO'
     LolRewardsResponseDTO-SvcRewardGrant:
       type: object
       properties:
@@ -55304,9 +55487,16 @@ components:
             type: string
         productId:
           type: string
+    LolRewardsSelectGrantStatusResponse:
+      enum:
+        - SELECTED
+        - FAILED
+      type: string
     LolRewardsSelectionRequestDTO:
       type: object
       properties:
+        grantId:
+          type: string
         rewardGroupId:
           type: string
         selections:
@@ -55824,6 +56014,19 @@ components:
           type: string
         updatedAt:
           type: string
+    LolSettingsLCUGameSettingsConfig:
+      type: object
+      properties:
+        GameplayEnabled:
+          type: boolean
+        HotkeysEnabled:
+          type: boolean
+        InterfaceEnabled:
+          type: boolean
+        ReplaysEnabled:
+          type: boolean
+        SoundEnabled:
+          type: boolean
     LolSettingsLoginSession:
       type: object
       properties:
@@ -55842,6 +56045,18 @@ components:
         - LOGGING_OUT
         - ERROR
       type: string
+    LolSettingsRegionLocale:
+      type: object
+      properties:
+        locale:
+          type: string
+        region:
+          type: string
+    LolSettingsReplaysConfig:
+      type: object
+      properties:
+        replayServiceEnabled:
+          type: boolean
     LolSettingsSettingCategory:
       type: object
       properties:
@@ -55850,6 +56065,27 @@ components:
         schemaVersion:
           type: integer
           format: int32
+    LolSettingsSettingsConfig:
+      type: object
+      properties:
+        isGameplayEnabled:
+          type: boolean
+        isHotkeysEnabled:
+          type: boolean
+        isInterfaceEnabled:
+          type: boolean
+        isLegalStatementsEnabled:
+          type: boolean
+        isPrivacyNoticeEnabled:
+          type: boolean
+        isReplaysEnabled:
+          type: boolean
+        isSoundEnabled:
+          type: boolean
+        isTermsEnabled:
+          type: boolean
+        localizedLicensesURL:
+          type: string
     LolShutdownShutdownNotification:
       type: object
       properties:
@@ -57177,6 +57413,34 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/LolSuggestedPlayersEndOfGamePlayer'
+    LolSuggestedPlayersGameflowPhase:
+      enum:
+        - None
+        - Lobby
+        - Matchmaking
+        - CheckedIntoTournament
+        - ReadyCheck
+        - ChampSelect
+        - GameStart
+        - FailedToLaunch
+        - InProgress
+        - Reconnect
+        - WaitingForStats
+        - PreEndOfGame
+        - EndOfGame
+        - TerminatedInError
+      type: string
+    LolSuggestedPlayersHonorInteraction:
+      type: object
+      properties:
+        displayName:
+          type: string
+        gameId:
+          type: integer
+          format: uint64
+        summonerId:
+          type: integer
+          format: uint64
     LolSuggestedPlayersSuggestedPlayersConfig:
       type: object
       properties:
@@ -57185,6 +57449,9 @@ components:
         FriendsOfFriendsEnabled:
           type: boolean
         FriendsOfFriendsLimit:
+          type: integer
+          format: uint32
+        MaxHonorInteractionPlayers:
           type: integer
           format: uint32
         MaxNumReplacements:
@@ -57263,6 +57530,7 @@ components:
         - OnlineFriend
         - FriendOfFriend
         - VictoriousComrade
+        - HonorInteractions
         - LegacyPlayAgain
       type: string
     LolSuggestedPlayersSuggestedPlayersReportedPlayer:
@@ -57279,6 +57547,9 @@ components:
           format: uint64
         commonFriendName:
           type: string
+        gameId:
+          type: integer
+          format: uint64
         reason:
           $ref: '#/components/schemas/LolSuggestedPlayersSuggestedPlayersReason'
         summonerId:
@@ -57477,8 +57748,6 @@ components:
         summonerIcon:
           type: integer
           format: int32
-        summonerName:
-          type: string
     LolSummonerSummonerCreatedId:
       type: object
       properties:
@@ -57942,6 +58211,177 @@ components:
         - UNLOCKED
         - LOCKED
       type: string
+    LolYourshopAccessTokenResource:
+      type: object
+      properties:
+        expiry:
+          type: integer
+          format: uint64
+        scopes:
+          type: array
+          items:
+            type: string
+        token:
+          type: string
+    LolYourshopOffer:
+      type: object
+      properties:
+        discountPrice:
+          type: integer
+          format: int64
+        expirationDate:
+          type: string
+        inventoryType:
+          type: string
+        itemId:
+          type: integer
+          format: int32
+        name:
+          type: string
+        offerId:
+          type: string
+        originalPrice:
+          type: integer
+          format: int64
+        owned:
+          type: boolean
+        revealed:
+          type: boolean
+        spotIndex:
+          type: integer
+          format: uint32
+    LolYourshopOfferData:
+      type: object
+      properties:
+        offers:
+          type: array
+          items:
+            $ref: '#/components/schemas/LolYourshopOffer'
+        promotion:
+          $ref: '#/components/schemas/LolYourshopPromotion'
+    LolYourshopOfferId:
+      type: object
+      properties:
+        offerId:
+          type: string
+    LolYourshopOfferIds:
+      type: object
+      properties:
+        offers:
+          type: array
+          items:
+            $ref: '#/components/schemas/LolYourshopOfferId'
+    LolYourshopOfferRequest:
+      type: object
+      properties:
+        inventoryType:
+          type: string
+        itemId:
+          type: integer
+          format: int32
+        offerId:
+          type: string
+        price:
+          type: integer
+          format: int64
+    LolYourshopOfferRequests:
+      type: object
+      properties:
+        offers:
+          type: array
+          items:
+            $ref: '#/components/schemas/LolYourshopOfferRequest'
+    LolYourshopPlayerPermissions:
+      type: object
+      properties:
+        useData:
+          type: string
+    LolYourshopPromotion:
+      type: object
+      properties:
+        endTime:
+          type: string
+        name:
+          type: string
+        startTime:
+          type: string
+    LolYourshopPurchaseItem:
+      type: object
+      properties:
+        inventoryType:
+          type: string
+        itemId:
+          type: integer
+          format: int32
+        pricePaid:
+          type: integer
+          format: int64
+    LolYourshopPurchaseResponse:
+      type: object
+      properties:
+        items:
+          type: array
+          items:
+            $ref: '#/components/schemas/LolYourshopPurchaseItem'
+        wallet:
+          $ref: '#/components/schemas/LolYourshopWallet'
+    LolYourshopUIOffer:
+      type: object
+      properties:
+        championId:
+          type: integer
+          format: int32
+        discountPrice:
+          type: integer
+          format: int64
+        expirationDate:
+          type: string
+        id:
+          type: string
+        originalPrice:
+          type: integer
+          format: int64
+        owned:
+          type: boolean
+        revealed:
+          type: boolean
+        skinId:
+          type: integer
+          format: int32
+        skinName:
+          type: string
+        type:
+          type: string
+    LolYourshopUIStatus:
+      type: object
+      properties:
+        endTime:
+          type: string
+        hubEnabled:
+          type: boolean
+        name:
+          type: string
+        startTime:
+          type: string
+    LolYourshopWallet:
+      type: object
+      properties:
+        rp:
+          type: integer
+          format: int64
+    LolYourshopYourshopConfig:
+      type: object
+      properties:
+        Active:
+          type: boolean
+        PromotionEndDate:
+          type: string
+        PromotionName:
+          type: string
+        PromotionStartDate:
+          type: string
+        ThemedBackground:
+          type: boolean
     LootItemClientDTO:
       type: object
       properties:
@@ -58950,39 +59390,6 @@ components:
         - LEFT
         - KICK
       type: string
-    PersonalizedOffersLcdsChampionDTO:
-      type: object
-      properties:
-        championId:
-          type: integer
-          format: int32
-        owned:
-          type: boolean
-    PersonalizedOffersLcdsChampionSkinDTO:
-      type: object
-      properties:
-        championId:
-          type: integer
-          format: int32
-        owned:
-          type: boolean
-        skinId:
-          type: integer
-          format: int32
-    PersonalizedOffersLcdsClientDynamicConfigurationNotification:
-      type: object
-      properties:
-        configs:
-          type: string
-        delta:
-          type: boolean
-    PersonalizedOffersStoreFulfillmentNotification:
-      type: object
-      properties:
-        data:
-          type: object
-        inventoryType:
-          type: string
     PhaseInMember:
       type: object
       properties:
@@ -60302,6 +60709,47 @@ components:
           type: string
         value:
           type: boolean
+    SLICount:
+      type: object
+      properties:
+        boolDiagnostics:
+          type: object
+          additionalProperties:
+            type: boolean
+        doubleDiagnostics:
+          type: object
+          additionalProperties:
+            type: number
+            format: double
+        endTimeEpochMs:
+          type: integer
+          format: int64
+        failures:
+          type: number
+          format: double
+        idempotencyKey:
+          type: string
+        intDiagnostics:
+          type: object
+          additionalProperties:
+            type: integer
+            format: int64
+        labels:
+          type: object
+          additionalProperties:
+            type: string
+        sliName:
+          type: string
+        startTimeEpochMs:
+          type: integer
+          format: int64
+        stringDiagnostics:
+          type: object
+          additionalProperties:
+            type: string
+        successes:
+          type: number
+          format: double
     SLIDoubleDiagnostic:
       type: object
       properties:
@@ -61232,6 +61680,39 @@ components:
           format: uint64
         statusString:
           type: string
+    YourshopLcdsChampionDTO:
+      type: object
+      properties:
+        championId:
+          type: integer
+          format: int32
+        owned:
+          type: boolean
+    YourshopLcdsChampionSkinDTO:
+      type: object
+      properties:
+        championId:
+          type: integer
+          format: int32
+        owned:
+          type: boolean
+        skinId:
+          type: integer
+          format: int32
+    YourshopLcdsClientDynamicConfigurationNotification:
+      type: object
+      properties:
+        configs:
+          type: string
+        delta:
+          type: boolean
+    YourshopStoreFulfillmentNotification:
+      type: object
+      properties:
+        data:
+          type: object
+        inventoryType:
+          type: string
   securitySchemes:
     basicAuth:
       type: http
@@ -61321,7 +61802,6 @@ tags:
   - name: Plugin lol-npe-tutorial-path
   - name: Plugin lol-patch
   - name: Plugin lol-perks
-  - name: Plugin lol-personalized-offers
   - name: Plugin lol-pft
   - name: Plugin lol-platform-config
   - name: Plugin lol-player-behavior
@@ -61354,3 +61834,4 @@ tags:
   - name: Plugin lol-tft
   - name: Plugin lol-trophies
   - name: Plugin lol-worlds-token-card
+  - name: Plugin lol-yourshop

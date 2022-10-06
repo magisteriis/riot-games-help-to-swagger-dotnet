@@ -3696,6 +3696,46 @@
         }
       }
     },
+    "/lol-challenges/v1/seasons": {
+      "get": {
+        "tags": [
+          "Plugins",
+          "Plugin lol-challenges"
+        ],
+        "operationId": "GetLolChallengesV1Seasons",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/LolChallengesChallengeSeason"
+                  }
+                }
+              },
+              "application/x-yaml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/LolChallengesChallengeSeason"
+                  }
+                }
+              },
+              "application/x-msgpack": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/LolChallengesChallengeSeason"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/lol-challenges/v1/suggested-challenges/local-player": {
       "get": {
         "tags": [
@@ -14617,6 +14657,37 @@
         }
       }
     },
+    "/lol-event-shop/v1/info": {
+      "get": {
+        "tags": [
+          "Plugins",
+          "Plugin lol-event-shop"
+        ],
+        "operationId": "GetLolEventShopV1Info",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LolEventShopEventShopInfoUIData"
+                }
+              },
+              "application/x-yaml": {
+                "schema": {
+                  "$ref": "#/components/schemas/LolEventShopEventShopInfoUIData"
+                }
+              },
+              "application/x-msgpack": {
+                "schema": {
+                  "$ref": "#/components/schemas/LolEventShopEventShopInfoUIData"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/lol-event-shop/v1/is-grace-period": {
       "get": {
         "tags": [
@@ -14648,13 +14719,13 @@
         }
       }
     },
-    "/lol-event-shop/v1/load-progression-data": {
+    "/lol-event-shop/v1/lazy-load-data": {
       "post": {
         "tags": [
           "Plugins",
           "Plugin lol-event-shop"
         ],
-        "operationId": "PostLolEventShopV1LoadProgressionData",
+        "operationId": "PostLolEventShopV1LazyLoadData",
         "responses": {
           "204": {
             "description": "No content"
@@ -28522,37 +28593,6 @@
               "application/x-msgpack": {
                 "schema": {
                   "type": "object"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/lol-perks/v1/customizationlimits": {
-      "get": {
-        "tags": [
-          "Plugins",
-          "Plugin lol-perks"
-        ],
-        "operationId": "GetLolPerksV1Customizationlimits",
-        "responses": {
-          "200": {
-            "description": "Successful response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/LolPerksCustomizationLimits"
-                }
-              },
-              "application/x-yaml": {
-                "schema": {
-                  "$ref": "#/components/schemas/LolPerksCustomizationLimits"
-                }
-              },
-              "application/x-msgpack": {
-                "schema": {
-                  "$ref": "#/components/schemas/LolPerksCustomizationLimits"
                 }
               }
             }
@@ -49475,6 +49515,12 @@
           "puuid": {
             "type": "string"
           },
+          "seasons": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LolChallengesChallengeSeason"
+            }
+          },
           "source": {
             "$ref": "#/components/schemas/LolChallengesSource"
           },
@@ -49521,6 +49567,26 @@
           "ITEM"
         ],
         "type": "string"
+      },
+      "LolChallengesChallengeSeason": {
+        "type": "object",
+        "properties": {
+          "isActive": {
+            "type": "boolean"
+          },
+          "seasonEnd": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "seasonId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "seasonStart": {
+            "type": "integer",
+            "format": "int64"
+          }
+        }
       },
       "LolChallengesChallengeSignedUpdatePayload": {
         "type": "object",
@@ -49659,6 +49725,10 @@
           "descriptionShort": {
             "type": "string"
           },
+          "endTimestamp": {
+            "type": "integer",
+            "format": "int64"
+          },
           "iconPath": {
             "type": "string"
           },
@@ -49683,6 +49753,13 @@
           },
           "reverseDirection": {
             "type": "boolean"
+          },
+          "seasons": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "int32"
+            }
           },
           "source": {
             "type": "string"
@@ -50043,6 +50120,10 @@
           "priority": {
             "type": "number",
             "format": "double"
+          },
+          "retireTimestamp": {
+            "type": "integer",
+            "format": "int64"
           },
           "source": {
             "type": "string"
@@ -51303,6 +51384,9 @@
             "type": "string"
           },
           "chatRoomPassword": {
+            "type": "string"
+          },
+          "multiUserChatJWT": {
             "type": "string"
           }
         }
@@ -55690,6 +55774,9 @@
             "type": "string"
           },
           "logoUrl": {
+            "type": "string"
+          },
+          "multiUserChatJWT": {
             "type": "string"
           },
           "name": {
@@ -61388,6 +61475,56 @@
           }
         }
       },
+      "LolEventShopEventShopInfoUIData": {
+        "type": "object",
+        "properties": {
+          "currentTokenBalance": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "eventIcon": {
+            "type": "string"
+          },
+          "eventId": {
+            "type": "string"
+          },
+          "eventName": {
+            "type": "string"
+          },
+          "eventPassBundles": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LolEventShopCatalogEntry"
+            }
+          },
+          "eventTokenImage": {
+            "type": "string"
+          },
+          "isEventActive": {
+            "type": "boolean"
+          },
+          "isPassPurchased": {
+            "type": "boolean"
+          },
+          "lockedTokenCount": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "showPip": {
+            "type": "boolean"
+          },
+          "tokenBundles": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LolEventShopCatalogEntry"
+            }
+          },
+          "unclaimedRewardCount": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
       "LolEventShopGrantorDescription": {
         "type": "object",
         "properties": {
@@ -62595,14 +62732,6 @@
           },
           "rewardGroup": {
             "$ref": "#/components/schemas/LolEventShopSvcRewardGroup"
-          }
-        }
-      },
-      "LolEventShopRewardsConfig": {
-        "type": "object",
-        "properties": {
-          "Enabled": {
-            "type": "boolean"
           }
         }
       },
@@ -68556,6 +68685,9 @@
               "$ref": "#/components/schemas/LolLobbyLobbyParticipantDto"
             }
           },
+          "multiUserChatJWT": {
+            "type": "string"
+          },
           "partyId": {
             "type": "string"
           },
@@ -74045,14 +74177,6 @@
           }
         }
       },
-      "LolLootRewardsConfig": {
-        "type": "object",
-        "properties": {
-          "Enabled": {
-            "type": "boolean"
-          }
-        }
-      },
       "LolLootRewardStatus": {
         "enum": [
           "PENDING",
@@ -78238,6 +78362,9 @@
           },
           "chatRoomPassword": {
             "type": "string"
+          },
+          "multiUserChatJWT": {
+            "type": "string"
           }
         }
       },
@@ -78397,17 +78524,6 @@
           "INVALID",
           "RECEIVED",
           "SENT"
-        ],
-        "type": "string"
-      },
-      "LolPerksCustomizationLimits": {
-        "enum": [
-          "Locked",
-          "CanSelectPages",
-          "CanSelectKeystones",
-          "CanSelectPrimaries",
-          "CanSelectSplash",
-          "CanUseAdvancedStyles"
         ],
         "type": "string"
       },
@@ -78698,6 +78814,17 @@
           }
         }
       },
+      "LolPerksPerksConfigDTO": {
+        "type": "object",
+        "properties": {
+          "styles": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LolPerksPerkStyleResource"
+            }
+          }
+        }
+      },
       "LolPerksPerkSettingResource": {
         "type": "object",
         "properties": {
@@ -78970,27 +79097,6 @@
           },
           "isTeamBuilderManaged": {
             "type": "boolean"
-          }
-        }
-      },
-      "LolPerksRiotMessagingServiceMessage": {
-        "type": "object",
-        "properties": {
-          "payload": {
-            "type": "string"
-          },
-          "resource": {
-            "type": "string"
-          },
-          "service": {
-            "type": "string"
-          },
-          "timestamp": {
-            "type": "integer",
-            "format": "int64"
-          },
-          "version": {
-            "type": "string"
           }
         }
       },
@@ -85037,14 +85143,6 @@
           }
         }
       },
-      "LolRewardsRewardsConfig": {
-        "type": "object",
-        "properties": {
-          "Enabled": {
-            "type": "boolean"
-          }
-        }
-      },
       "LolRewardsRewardStatus": {
         "enum": [
           "PENDING",
@@ -89084,8 +89182,8 @@
       "LolWorldsTokenCardTokenUpsellLockedType": {
         "enum": [
           "UNASSIGNED",
-          "UNLOCKED",
-          "LOCKED"
+          "LOCKED",
+          "UNLOCKED"
         ],
         "type": "string"
       },
@@ -89104,6 +89202,389 @@
           },
           "token": {
             "type": "string"
+          }
+        }
+      },
+      "LolYourshopCatalogItem": {
+        "type": "object",
+        "properties": {
+          "inventoryType": {
+            "type": "string"
+          },
+          "itemId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "itemInstanceId": {
+            "type": "string"
+          }
+        }
+      },
+      "LolYourshopClientCacheClearMessageDTO": {
+        "type": "object",
+        "properties": {
+          "clearAll": {
+            "type": "boolean"
+          },
+          "inventoryTypes": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "regions": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "LolYourshopCurrencyDTO": {
+        "type": "object",
+        "properties": {
+          "amount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "subCurrencies": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        }
+      },
+      "LolYourshopInventoryCacheEntry": {
+        "type": "object",
+        "properties": {
+          "expirationMS": {
+            "type": "integer",
+            "format": "uint64"
+          },
+          "issuedAtMS": {
+            "type": "integer",
+            "format": "uint64"
+          },
+          "receivedAtMS": {
+            "type": "integer",
+            "format": "uint64"
+          },
+          "signedInventoryJwt": {
+            "type": "string"
+          },
+          "valid": {
+            "type": "boolean"
+          }
+        }
+      },
+      "LolYourshopInventoryDTO": {
+        "type": "object",
+        "properties": {
+          "accountId": {
+            "type": "integer",
+            "format": "uint64"
+          },
+          "expires": {
+            "type": "string"
+          },
+          "items": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "object"
+            }
+          },
+          "itemsJwt": {
+            "type": "string"
+          },
+          "puuid": {
+            "type": "string"
+          },
+          "summonerId": {
+            "type": "integer",
+            "format": "uint64"
+          }
+        }
+      },
+      "LolYourshopInventoryItem": {
+        "type": "object",
+        "properties": {
+          "expirationDate": {
+            "type": "string"
+          },
+          "inventoryType": {
+            "type": "string"
+          },
+          "itemId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "ownershipType": {
+            "$ref": "#/components/schemas/LolYourshopItemOwnershipType"
+          },
+          "purchaseDate": {
+            "type": "string"
+          },
+          "quantity": {
+            "type": "integer",
+            "format": "uint64"
+          },
+          "uuid": {
+            "type": "string"
+          }
+        }
+      },
+      "LolYourshopInventoryItemDTO": {
+        "type": "object",
+        "properties": {
+          "entitlementId": {
+            "type": "string"
+          },
+          "entitlementTypeId": {
+            "type": "string"
+          },
+          "expirationDate": {
+            "type": "string"
+          },
+          "f2p": {
+            "type": "boolean"
+          },
+          "instanceId": {
+            "type": "string"
+          },
+          "instanceTypeId": {
+            "type": "string"
+          },
+          "inventoryType": {
+            "type": "string"
+          },
+          "itemId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "loyalty": {
+            "type": "boolean"
+          },
+          "lsb": {
+            "type": "boolean"
+          },
+          "ownedQuantity": {
+            "type": "integer",
+            "format": "uint64"
+          },
+          "payload": {
+            "type": "object"
+          },
+          "purchaseDate": {
+            "type": "string"
+          },
+          "quantity": {
+            "type": "integer",
+            "format": "uint64"
+          },
+          "rental": {
+            "type": "boolean"
+          },
+          "usedInGameDate": {
+            "type": "string"
+          },
+          "wins": {
+            "type": "integer",
+            "format": "uint64"
+          }
+        }
+      },
+      "LolYourshopInventoryItemWithPayload": {
+        "type": "object",
+        "properties": {
+          "expirationDate": {
+            "type": "string"
+          },
+          "f2p": {
+            "type": "boolean"
+          },
+          "inventoryType": {
+            "type": "string"
+          },
+          "itemId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "loyalty": {
+            "type": "boolean"
+          },
+          "owned": {
+            "type": "boolean"
+          },
+          "ownershipType": {
+            "$ref": "#/components/schemas/LolYourshopItemOwnershipType"
+          },
+          "payload": {
+            "type": "object"
+          },
+          "purchaseDate": {
+            "type": "string"
+          },
+          "quantity": {
+            "type": "integer",
+            "format": "uint64"
+          },
+          "rental": {
+            "type": "boolean"
+          },
+          "uuid": {
+            "type": "string"
+          }
+        }
+      },
+      "LolYourshopInventoryNotification": {
+        "type": "object",
+        "properties": {
+          "acknowledged": {
+            "type": "boolean"
+          },
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "inventoryType": {
+            "type": "string"
+          },
+          "itemId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "type": {
+            "type": "string"
+          }
+        }
+      },
+      "LolYourshopInventoryResponseDTO": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "$ref": "#/components/schemas/LolYourshopInventoryDTO"
+          }
+        }
+      },
+      "LolYourshopItemKey": {
+        "type": "object",
+        "properties": {
+          "inventoryType": {
+            "type": "string"
+          },
+          "itemId": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "LolYourshopItemOwnershipType": {
+        "enum": [
+          "OWNED",
+          "RENTED",
+          "LOYALTY",
+          "F2P"
+        ],
+        "type": "string"
+      },
+      "LolYourshopLoginSession": {
+        "type": "object",
+        "properties": {
+          "accountId": {
+            "type": "integer",
+            "format": "uint64"
+          },
+          "idToken": {
+            "type": "string"
+          },
+          "puuid": {
+            "type": "string"
+          },
+          "state": {
+            "$ref": "#/components/schemas/LolYourshopLoginSessionStates"
+          },
+          "summonerId": {
+            "type": "integer",
+            "format": "uint64"
+          }
+        }
+      },
+      "LolYourshopLoginSessionStates": {
+        "enum": [
+          "IN_PROGRESS",
+          "SUCCEEDED",
+          "LOGGING_OUT",
+          "ERROR"
+        ],
+        "type": "string"
+      },
+      "LolYourshopLoyaltyRewards": {
+        "type": "object",
+        "properties": {
+          "championIds": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          "freeRewardedChampionsCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "freeRewardedSkinsCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "ipBoost": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "loyaltyTFTCompanionCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "loyaltyTFTMapSkinCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "skinIds": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          "xpBoost": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "LolYourshopLoyaltyStatus": {
+        "enum": [
+          "LEGACY",
+          "REWARDS_GRANT",
+          "EXPIRY",
+          "CHANGE",
+          "REVOKE",
+          "DISABLED"
+        ],
+        "type": "string"
+      },
+      "LolYourshopLoyaltyStatusNotification": {
+        "type": "object",
+        "properties": {
+          "reloadInventory": {
+            "type": "boolean"
+          },
+          "rewards": {
+            "$ref": "#/components/schemas/LolYourshopLoyaltyRewards"
+          },
+          "status": {
+            "$ref": "#/components/schemas/LolYourshopLoyaltyStatus"
           }
         }
       },
@@ -89261,6 +89742,106 @@
           }
         }
       },
+      "LolYourshopRiotMessagingServiceMessage": {
+        "type": "object",
+        "properties": {
+          "payload": {
+            "type": "string"
+          },
+          "resource": {
+            "type": "string"
+          },
+          "service": {
+            "type": "string"
+          },
+          "timestamp": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "version": {
+            "type": "string"
+          }
+        }
+      },
+      "LolYourshopRmsEntitlementPayload": {
+        "type": "object",
+        "properties": {
+          "entitlementTypeId": {
+            "type": "string"
+          },
+          "itemId": {
+            "type": "string"
+          },
+          "itemTypeId": {
+            "type": "string"
+          },
+          "resourceOperation": {
+            "type": "string"
+          }
+        }
+      },
+      "LolYourshopRmsStoreEntitlementItem": {
+        "type": "object",
+        "properties": {
+          "inventoryType": {
+            "type": "string"
+          },
+          "itemId": {
+            "type": "string"
+          }
+        }
+      },
+      "LolYourshopRmsStoreEntitlementPayload": {
+        "type": "object",
+        "properties": {
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LolYourshopRmsStoreEntitlementItem"
+            }
+          },
+          "transactionId": {
+            "type": "string"
+          }
+        }
+      },
+      "LolYourshopRmsWalletPayload": {
+        "type": "object"
+      },
+      "LolYourshopSimpleInventoryDTO": {
+        "type": "object",
+        "properties": {
+          "expires": {
+            "type": "string"
+          },
+          "items": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "object"
+            }
+          },
+          "itemsJwt": {
+            "type": "string"
+          }
+        }
+      },
+      "LolYourshopSimpleInventoryResponseDTO": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "$ref": "#/components/schemas/LolYourshopSimpleInventoryDTO"
+          }
+        }
+      },
+      "LolYourshopSummonerIcon": {
+        "type": "object",
+        "properties": {
+          "itemId": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
       "LolYourshopUIOffer": {
         "type": "object",
         "properties": {
@@ -89323,6 +89904,62 @@
           "rp": {
             "type": "integer",
             "format": "int64"
+          }
+        }
+      },
+      "LolYourshopWalletCacheEntry": {
+        "type": "object",
+        "properties": {
+          "expirationMS": {
+            "type": "integer",
+            "format": "uint64"
+          },
+          "issuedAtMS": {
+            "type": "integer",
+            "format": "uint64"
+          },
+          "receivedAtMS": {
+            "type": "integer",
+            "format": "uint64"
+          },
+          "signedBalancesJwt": {
+            "type": "string"
+          },
+          "valid": {
+            "type": "boolean"
+          }
+        }
+      },
+      "LolYourshopWalletDTO": {
+        "type": "object",
+        "properties": {
+          "accountId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "balances": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          "balancesJwt": {
+            "type": "string"
+          },
+          "expires": {
+            "type": "string"
+          },
+          "puuid": {
+            "type": "string"
+          }
+        }
+      },
+      "LolYourshopWalletResponseDTO": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "$ref": "#/components/schemas/LolYourshopWalletDTO"
           }
         }
       },

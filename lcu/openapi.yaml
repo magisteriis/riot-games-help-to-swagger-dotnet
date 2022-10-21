@@ -18004,13 +18004,13 @@ paths:
           content:
             application/json:
               schema:
-                type: object
+                $ref: '#/components/schemas/LolPerksPerkPageResource'
             application/x-yaml:
               schema:
-                type: object
+                $ref: '#/components/schemas/LolPerksPerkPageResource'
             application/x-msgpack:
               schema:
-                type: object
+                $ref: '#/components/schemas/LolPerksPerkPageResource'
   '/lol-perks/v1/pages/{id}/auto-modified-selections':
     delete:
       tags:
@@ -18188,25 +18188,6 @@ paths:
                 items:
                   type: integer
                   format: int32
-  /lol-perks/v1/servicesettings:
-    get:
-      tags:
-        - Plugins
-        - Plugin lol-perks
-      operationId: GetLolPerksV1Servicesettings
-      responses:
-        '200':
-          description: Successful response
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/LolPerksServiceSettings'
-            application/x-yaml:
-              schema:
-                $ref: '#/components/schemas/LolPerksServiceSettings'
-            application/x-msgpack:
-              schema:
-                $ref: '#/components/schemas/LolPerksServiceSettings'
   /lol-perks/v1/settings:
     get:
       tags:
@@ -29433,6 +29414,9 @@ components:
         lastToggledOnTime:
           type: integer
           format: uint64
+        mapId:
+          type: integer
+          format: int32
         mapSelectionAlgorithm:
           type: string
         matchingThrottleConfig:
@@ -30024,6 +30008,8 @@ components:
         Enabled:
           type: boolean
         PasswordEnabled:
+          type: boolean
+        ShouldUseNewAvs:
           type: boolean
     LolAccountVerificationConfirmActivationPinRequest:
       type: object
@@ -31182,10 +31168,6 @@ components:
           $ref: '#/components/schemas/LolChallengesPlayerClientPreferences'
         puuid:
           type: string
-        seasons:
-          type: array
-          items:
-            $ref: '#/components/schemas/LolChallengesChallengeSeason'
         source:
           $ref: '#/components/schemas/LolChallengesSource'
         tags:
@@ -31442,6 +31424,17 @@ components:
           type: string
         updateReason:
           type: string
+    LolChallengesLoginPlayerData:
+      type: object
+      properties:
+        clientPlayerDataList:
+          type: array
+          items:
+            $ref: '#/components/schemas/LolChallengesChallengePlayerData'
+        seasons:
+          type: array
+          items:
+            $ref: '#/components/schemas/LolChallengesChallengeSeason'
     LolChallengesNotificationDisplayType:
       enum:
         - NONE
@@ -39353,6 +39346,10 @@ components:
       properties:
         ActiveEventId:
           type: string
+        DisabledOfferIds:
+          type: array
+          items:
+            type: string
         Enabled:
           type: boolean
         ProgressEndDate:
@@ -39952,6 +39949,9 @@ components:
         lastSeenTokenBalance:
           type: integer
           format: int64
+        lastSeenTokenShopOffersVersion:
+          type: integer
+          format: uint32
         lastTimeSeen:
           type: string
     LolEventShopPriceDetail:
@@ -40643,6 +40643,9 @@ components:
     LolEventShopTokenShopUIData:
       type: object
       properties:
+        offersVersion:
+          type: integer
+          format: uint32
         tokenBundlesCatalogEntry:
           type: array
           items:
@@ -45659,6 +45662,8 @@ components:
         chatRoomName:
           type: string
         chatRoomPassword:
+          type: string
+        multiUserChatJWT:
           type: string
     LolLobbyTeamBuilderChampSelectDevPanelData:
       type: object
@@ -51197,6 +51202,8 @@ components:
           type: boolean
         isEditable:
           type: boolean
+        isTemporary:
+          type: boolean
         isValid:
           type: boolean
         lastModified:
@@ -51400,6 +51407,13 @@ components:
     LolPerksPlayerInventory:
       type: object
       properties:
+        canAddCustomPage:
+          type: boolean
+        customPageCount:
+          type: integer
+          format: uint32
+        isCustomPageCreationUnlocked:
+          type: boolean
         ownedPageCount:
           type: integer
           format: uint32
@@ -51410,11 +51424,6 @@ components:
           type: integer
           format: int32
         isTeamBuilderManaged:
-          type: boolean
-    LolPerksServiceSettings:
-      type: object
-      properties:
-        serverSideStorageAvailable:
           type: boolean
     LolPerksSettingsStorageContainer:
       type: object

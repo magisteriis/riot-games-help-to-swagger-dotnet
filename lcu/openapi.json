@@ -4482,6 +4482,35 @@
       }
     },
     "/lol-champ-select-legacy/v1/session/my-selection": {
+      "get": {
+        "tags": [
+          "Plugins",
+          "Plugin lol-champ-select-legacy"
+        ],
+        "operationId": "GetLolChampSelectLegacyV1SessionMySelection",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LolChampSelectLegacyChampSelectPlayerSelection"
+                }
+              },
+              "application/x-yaml": {
+                "schema": {
+                  "$ref": "#/components/schemas/LolChampSelectLegacyChampSelectPlayerSelection"
+                }
+              },
+              "application/x-msgpack": {
+                "schema": {
+                  "$ref": "#/components/schemas/LolChampSelectLegacyChampSelectPlayerSelection"
+                }
+              }
+            }
+          }
+        }
+      },
       "patch": {
         "tags": [
           "Plugins",
@@ -5153,6 +5182,80 @@
         }
       }
     },
+    "/lol-champ-select/v1/ongoing-swap": {
+      "get": {
+        "tags": [
+          "Plugins",
+          "Plugin lol-champ-select"
+        ],
+        "operationId": "GetLolChampSelectV1OngoingSwap",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LolChampSelectChampSelectSwapNotification"
+                }
+              },
+              "application/x-yaml": {
+                "schema": {
+                  "$ref": "#/components/schemas/LolChampSelectChampSelectSwapNotification"
+                }
+              },
+              "application/x-msgpack": {
+                "schema": {
+                  "$ref": "#/components/schemas/LolChampSelectChampSelectSwapNotification"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/lol-champ-select/v1/ongoing-swap/{id}/clear": {
+      "post": {
+        "tags": [
+          "Plugins",
+          "Plugin lol-champ-select"
+        ],
+        "operationId": "PostLolChampSelectV1OngoingSwapByIdClear",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              },
+              "application/x-yaml": {
+                "schema": {
+                  "type": "object"
+                }
+              },
+              "application/x-msgpack": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/lol-champ-select/v1/ongoing-trade": {
       "get": {
         "tags": [
@@ -5555,6 +5658,35 @@
       }
     },
     "/lol-champ-select/v1/session/my-selection": {
+      "get": {
+        "tags": [
+          "Plugins",
+          "Plugin lol-champ-select"
+        ],
+        "operationId": "GetLolChampSelectV1SessionMySelection",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LolChampSelectChampSelectPlayerSelection"
+                }
+              },
+              "application/x-yaml": {
+                "schema": {
+                  "$ref": "#/components/schemas/LolChampSelectChampSelectPlayerSelection"
+                }
+              },
+              "application/x-msgpack": {
+                "schema": {
+                  "$ref": "#/components/schemas/LolChampSelectChampSelectPlayerSelection"
+                }
+              }
+            }
+          }
+        }
+      },
       "patch": {
         "tags": [
           "Plugins",
@@ -5659,6 +5791,261 @@
               "application/x-msgpack": {
                 "schema": {
                   "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/lol-champ-select/v1/session/swaps": {
+      "get": {
+        "tags": [
+          "Plugins",
+          "Plugin lol-champ-select"
+        ],
+        "operationId": "GetLolChampSelectV1SessionSwaps",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/LolChampSelectChampSelectSwapContract"
+                  }
+                }
+              },
+              "application/x-yaml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/LolChampSelectChampSelectSwapContract"
+                  }
+                }
+              },
+              "application/x-msgpack": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/LolChampSelectChampSelectSwapContract"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/lol-champ-select/v1/session/swaps/{id}": {
+      "get": {
+        "tags": [
+          "Plugins",
+          "Plugin lol-champ-select"
+        ],
+        "operationId": "GetLolChampSelectV1SessionSwapsById",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LolChampSelectChampSelectSwapContract"
+                }
+              },
+              "application/x-yaml": {
+                "schema": {
+                  "$ref": "#/components/schemas/LolChampSelectChampSelectSwapContract"
+                }
+              },
+              "application/x-msgpack": {
+                "schema": {
+                  "$ref": "#/components/schemas/LolChampSelectChampSelectSwapContract"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/lol-champ-select/v1/session/swaps/{id}/accept": {
+      "post": {
+        "tags": [
+          "Plugins",
+          "Plugin lol-champ-select"
+        ],
+        "operationId": "PostLolChampSelectV1SessionSwapsByIdAccept",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              },
+              "application/x-yaml": {
+                "schema": {
+                  "type": "object"
+                }
+              },
+              "application/x-msgpack": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/lol-champ-select/v1/session/swaps/{id}/cancel": {
+      "post": {
+        "tags": [
+          "Plugins",
+          "Plugin lol-champ-select"
+        ],
+        "operationId": "PostLolChampSelectV1SessionSwapsByIdCancel",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              },
+              "application/x-yaml": {
+                "schema": {
+                  "type": "object"
+                }
+              },
+              "application/x-msgpack": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/lol-champ-select/v1/session/swaps/{id}/decline": {
+      "post": {
+        "tags": [
+          "Plugins",
+          "Plugin lol-champ-select"
+        ],
+        "operationId": "PostLolChampSelectV1SessionSwapsByIdDecline",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              },
+              "application/x-yaml": {
+                "schema": {
+                  "type": "object"
+                }
+              },
+              "application/x-msgpack": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/lol-champ-select/v1/session/swaps/{id}/request": {
+      "post": {
+        "tags": [
+          "Plugins",
+          "Plugin lol-champ-select"
+        ],
+        "operationId": "PostLolChampSelectV1SessionSwapsByIdRequest",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LolChampSelectChampSelectSwapContract"
+                }
+              },
+              "application/x-yaml": {
+                "schema": {
+                  "$ref": "#/components/schemas/LolChampSelectChampSelectSwapContract"
+                }
+              },
+              "application/x-msgpack": {
+                "schema": {
+                  "$ref": "#/components/schemas/LolChampSelectChampSelectSwapContract"
                 }
               }
             }
@@ -20924,6 +21311,35 @@
       }
     },
     "/lol-lobby-team-builder/champ-select/v1/session/my-selection": {
+      "get": {
+        "tags": [
+          "Plugins",
+          "Plugin lol-lobby-team-builder"
+        ],
+        "operationId": "GetLolLobbyTeamBuilderChampSelectV1SessionMySelection",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LolLobbyTeamBuilderChampSelectPlayerSelection"
+                }
+              },
+              "application/x-yaml": {
+                "schema": {
+                  "$ref": "#/components/schemas/LolLobbyTeamBuilderChampSelectPlayerSelection"
+                }
+              },
+              "application/x-msgpack": {
+                "schema": {
+                  "$ref": "#/components/schemas/LolLobbyTeamBuilderChampSelectPlayerSelection"
+                }
+              }
+            }
+          }
+        }
+      },
       "patch": {
         "tags": [
           "Plugins",
@@ -20997,6 +21413,261 @@
               "application/x-msgpack": {
                 "schema": {
                   "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/lol-lobby-team-builder/champ-select/v1/session/swaps": {
+      "get": {
+        "tags": [
+          "Plugins",
+          "Plugin lol-lobby-team-builder"
+        ],
+        "operationId": "GetLolLobbyTeamBuilderChampSelectV1SessionSwaps",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/LolLobbyTeamBuilderChampSelectSwapContract"
+                  }
+                }
+              },
+              "application/x-yaml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/LolLobbyTeamBuilderChampSelectSwapContract"
+                  }
+                }
+              },
+              "application/x-msgpack": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/LolLobbyTeamBuilderChampSelectSwapContract"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/lol-lobby-team-builder/champ-select/v1/session/swaps/{id}": {
+      "get": {
+        "tags": [
+          "Plugins",
+          "Plugin lol-lobby-team-builder"
+        ],
+        "operationId": "GetLolLobbyTeamBuilderChampSelectV1SessionSwapsById",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "integer",
+              "format": "int64"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LolLobbyTeamBuilderChampSelectSwapContract"
+                }
+              },
+              "application/x-yaml": {
+                "schema": {
+                  "$ref": "#/components/schemas/LolLobbyTeamBuilderChampSelectSwapContract"
+                }
+              },
+              "application/x-msgpack": {
+                "schema": {
+                  "$ref": "#/components/schemas/LolLobbyTeamBuilderChampSelectSwapContract"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/lol-lobby-team-builder/champ-select/v1/session/swaps/{id}/accept": {
+      "post": {
+        "tags": [
+          "Plugins",
+          "Plugin lol-lobby-team-builder"
+        ],
+        "operationId": "PostLolLobbyTeamBuilderChampSelectV1SessionSwapsByIdAccept",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              },
+              "application/x-yaml": {
+                "schema": {
+                  "type": "object"
+                }
+              },
+              "application/x-msgpack": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/lol-lobby-team-builder/champ-select/v1/session/swaps/{id}/cancel": {
+      "post": {
+        "tags": [
+          "Plugins",
+          "Plugin lol-lobby-team-builder"
+        ],
+        "operationId": "PostLolLobbyTeamBuilderChampSelectV1SessionSwapsByIdCancel",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              },
+              "application/x-yaml": {
+                "schema": {
+                  "type": "object"
+                }
+              },
+              "application/x-msgpack": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/lol-lobby-team-builder/champ-select/v1/session/swaps/{id}/decline": {
+      "post": {
+        "tags": [
+          "Plugins",
+          "Plugin lol-lobby-team-builder"
+        ],
+        "operationId": "PostLolLobbyTeamBuilderChampSelectV1SessionSwapsByIdDecline",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              },
+              "application/x-yaml": {
+                "schema": {
+                  "type": "object"
+                }
+              },
+              "application/x-msgpack": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/lol-lobby-team-builder/champ-select/v1/session/swaps/{id}/request": {
+      "post": {
+        "tags": [
+          "Plugins",
+          "Plugin lol-lobby-team-builder"
+        ],
+        "operationId": "PostLolLobbyTeamBuilderChampSelectV1SessionSwapsByIdRequest",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LolLobbyTeamBuilderChampSelectSwapContract"
+                }
+              },
+              "application/x-yaml": {
+                "schema": {
+                  "$ref": "#/components/schemas/LolLobbyTeamBuilderChampSelectSwapContract"
+                }
+              },
+              "application/x-msgpack": {
+                "schema": {
+                  "$ref": "#/components/schemas/LolLobbyTeamBuilderChampSelectSwapContract"
                 }
               }
             }
@@ -29165,6 +29836,77 @@
                   "items": {
                     "type": "integer",
                     "format": "int32"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/lol-perks/v1/recommended-pages/champion/{championId}/position/{position}/map/{mapId}": {
+      "get": {
+        "tags": [
+          "Plugins",
+          "Plugin lol-perks"
+        ],
+        "operationId": "GetLolPerksV1RecommendedPagesChampionByChampionIdPositionByPositionMapByMapId",
+        "parameters": [
+          {
+            "name": "championId",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "position",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "mapId",
+            "in": "path",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/LolPerksPerkUIRecommendedPage"
+                  }
+                }
+              },
+              "application/x-yaml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/LolPerksPerkUIRecommendedPage"
+                  }
+                }
+              },
+              "application/x-msgpack": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/LolPerksPerkUIRecommendedPage"
                   }
                 }
               }
@@ -46853,16 +47595,6 @@
       "GameQueuesLcdsGameQueueConfig": {
         "type": "object",
         "properties": {
-          "blockedMinutesThreshold": {
-            "type": "integer",
-            "format": "uint32"
-          },
-          "botsCanSpawnOnBlueSide": {
-            "type": "boolean"
-          },
-          "cacheName": {
-            "type": "string"
-          },
           "disallowFreeChampions": {
             "type": "boolean"
           },
@@ -46895,29 +47627,11 @@
             "type": "integer",
             "format": "int32"
           },
-          "mapSelectionAlgorithm": {
-            "type": "string"
-          },
-          "matchingThrottleConfig": {
-            "$ref": "#/components/schemas/GameQueuesLcdsMatchingThrottleConfig"
-          },
           "maximumParticipantListSize": {
             "type": "integer",
             "format": "uint32"
           },
-          "maxLevel": {
-            "type": "integer",
-            "format": "uint32"
-          },
-          "maxSummonerLevelForFirstWinOfTheDay": {
-            "type": "integer",
-            "format": "uint32"
-          },
           "minimumParticipantListSize": {
-            "type": "integer",
-            "format": "uint32"
-          },
-          "minimumQueueDodgeDelayTime": {
             "type": "integer",
             "format": "uint32"
           },
@@ -46929,20 +47643,8 @@
             "type": "integer",
             "format": "uint32"
           },
-          "pointsConfigKey": {
-            "type": "string"
-          },
-          "queueBonusKey": {
-            "type": "string"
-          },
           "queueState": {
             "type": "string"
-          },
-          "queueStateString": {
-            "type": "string"
-          },
-          "randomizeTeamSizes": {
-            "type": "boolean"
           },
           "ranked": {
             "type": "boolean"
@@ -46961,33 +47663,8 @@
               "format": "int32"
             }
           },
-          "teamOnly": {
-            "type": "boolean"
-          },
-          "thresholdEnabled": {
-            "type": "boolean"
-          },
-          "thresholdSize": {
-            "type": "integer",
-            "format": "int64"
-          },
           "type": {
             "type": "string"
-          },
-          "typeString": {
-            "type": "string"
-          }
-        }
-      },
-      "GameQueuesLcdsMatchingThrottleConfig": {
-        "type": "object",
-        "properties": {
-          "cacheName": {
-            "type": "string"
-          },
-          "limit": {
-            "type": "integer",
-            "format": "int64"
           }
         }
       },
@@ -51459,6 +52136,12 @@
           "entitledFeatureType": {
             "type": "string"
           },
+          "nameVisibilityType": {
+            "type": "string"
+          },
+          "puuid": {
+            "type": "string"
+          },
           "selectedSkinId": {
             "type": "integer",
             "format": "int32"
@@ -51576,6 +52259,12 @@
           "skipChampionSelect": {
             "type": "boolean"
           },
+          "swaps": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LolChampSelectChampSelectSwapContract"
+            }
+          },
           "theirTeam": {
             "type": "array",
             "items": {
@@ -51646,7 +52335,13 @@
           "isSelf": {
             "type": "boolean"
           },
+          "nameVisibilityType": {
+            "type": "string"
+          },
           "pickSnipedClass": {
+            "type": "string"
+          },
+          "puuid": {
             "type": "string"
           },
           "shouldShowActingBar": {
@@ -51668,6 +52363,9 @@
             "type": "boolean"
           },
           "showMuted": {
+            "type": "boolean"
+          },
+          "showSwaps": {
             "type": "boolean"
           },
           "showTrades": {
@@ -51697,11 +52395,71 @@
             "type": "integer",
             "format": "uint64"
           },
+          "swapId": {
+            "type": "integer",
+            "format": "int64"
+          },
           "tradeId": {
             "type": "integer",
             "format": "int64"
           }
         }
+      },
+      "LolChampSelectChampSelectSwapContract": {
+        "type": "object",
+        "properties": {
+          "cellId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "state": {
+            "$ref": "#/components/schemas/LolChampSelectChampSelectSwapState"
+          }
+        }
+      },
+      "LolChampSelectChampSelectSwapNotification": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "initiatedByLocalPlayer": {
+            "type": "boolean"
+          },
+          "otherSummonerId": {
+            "type": "integer",
+            "format": "uint64"
+          },
+          "requestorIndex": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "responderIndex": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "state": {
+            "$ref": "#/components/schemas/LolChampSelectChampSelectSwapState"
+          }
+        }
+      },
+      "LolChampSelectChampSelectSwapState": {
+        "enum": [
+          "AVAILABLE",
+          "BUSY",
+          "INVALID",
+          "RECEIVED",
+          "SENT",
+          "DECLINED",
+          "CANCELLED",
+          "ACCEPTED"
+        ],
+        "type": "string"
       },
       "LolChampSelectChampSelectTimer": {
         "type": "object",
@@ -54459,6 +55217,20 @@
           }
         }
       },
+      "LolChatMultiUserChatJWTPayload": {
+        "type": "object",
+        "properties": {
+          "chn": {
+            "type": "string"
+          },
+          "tgt": {
+            "type": "string"
+          },
+          "typ": {
+            "type": "string"
+          }
+        }
+      },
       "LolChatMutedPlayerInfo": {
         "type": "object",
         "properties": {
@@ -56016,9 +56788,6 @@
           "isTeamBuilderManaged": {
             "type": "boolean"
           },
-          "isTeamOnly": {
-            "type": "boolean"
-          },
           "mapId": {
             "type": "integer",
             "format": "int32"
@@ -56026,14 +56795,6 @@
           "maximumParticipantListSize": {
             "type": "integer",
             "format": "int32"
-          },
-          "maxLevel": {
-            "type": "integer",
-            "format": "uint32"
-          },
-          "maxSummonerLevelForFirstWinOfTheDay": {
-            "type": "integer",
-            "format": "uint32"
           },
           "minimumParticipantListSize": {
             "type": "integer",
@@ -57045,6 +57806,10 @@
             "items": {
               "$ref": "#/components/schemas/LolClashTournamentPhase"
             }
+          },
+          "queueId": {
+            "type": "integer",
+            "format": "int32"
           },
           "resumeTime": {
             "type": "integer",
@@ -63766,6 +64531,7 @@
           "Available",
           "Initializing",
           "Patching",
+          "EligibilityInfoMissing",
           "PlayerBanned",
           "InGameFlow",
           "Configuration"
@@ -64388,9 +65154,6 @@
           "isTeamBuilderManaged": {
             "type": "boolean"
           },
-          "isTeamOnly": {
-            "type": "boolean"
-          },
           "lastToggledOffTime": {
             "type": "integer",
             "format": "uint64"
@@ -64406,14 +65169,6 @@
           "maximumParticipantListSize": {
             "type": "integer",
             "format": "int32"
-          },
-          "maxLevel": {
-            "type": "integer",
-            "format": "uint32"
-          },
-          "maxSummonerLevelForFirstWinOfTheDay": {
-            "type": "integer",
-            "format": "uint32"
           },
           "minimumParticipantListSize": {
             "type": "integer",
@@ -64730,9 +65485,6 @@
           "isTeamBuilderManaged": {
             "type": "boolean"
           },
-          "isTeamOnly": {
-            "type": "boolean"
-          },
           "lastToggledOffTime": {
             "type": "integer",
             "format": "uint64"
@@ -64751,14 +65503,6 @@
           "maximumParticipantListSize": {
             "type": "integer",
             "format": "int32"
-          },
-          "maxLevel": {
-            "type": "integer",
-            "format": "uint32"
-          },
-          "maxSummonerLevelForFirstWinOfTheDay": {
-            "type": "integer",
-            "format": "uint32"
           },
           "maxTierForPremadeSize2": {
             "type": "string"
@@ -64874,10 +65618,6 @@
           "maximumParticipantListSize": {
             "type": "integer",
             "format": "int32"
-          },
-          "maxLevel": {
-            "type": "integer",
-            "format": "uint32"
           },
           "maxPlayerCount": {
             "type": "integer",
@@ -69923,9 +70663,6 @@
           "isTeamBuilderManaged": {
             "type": "boolean"
           },
-          "isTeamOnly": {
-            "type": "boolean"
-          },
           "lastToggledOffTime": {
             "type": "integer",
             "format": "uint64"
@@ -69944,14 +70681,6 @@
           "maximumParticipantListSize": {
             "type": "integer",
             "format": "int32"
-          },
-          "maxLevel": {
-            "type": "integer",
-            "format": "uint32"
-          },
-          "maxSummonerLevelForFirstWinOfTheDay": {
-            "type": "integer",
-            "format": "uint32"
           },
           "maxTierForPremadeSize2": {
             "type": "string"
@@ -70473,6 +71202,12 @@
           "entitledFeatureType": {
             "type": "string"
           },
+          "nameVisibilityType": {
+            "type": "string"
+          },
+          "puuid": {
+            "type": "string"
+          },
           "skinId": {
             "type": "integer",
             "format": "int32"
@@ -70634,6 +71369,12 @@
           "subphase": {
             "type": "string"
           },
+          "swaps": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LolLobbyTeamBuilderSwapV1"
+            }
+          },
           "teamChatRoomId": {
             "type": "string"
           },
@@ -70754,7 +71495,13 @@
           "entitledFeatureType": {
             "type": "string"
           },
+          "nameVisibilityType": {
+            "type": "string"
+          },
           "playerType": {
+            "type": "string"
+          },
+          "puuid": {
             "type": "string"
           },
           "selectedSkinId": {
@@ -70917,6 +71664,12 @@
           "skipChampionSelect": {
             "type": "boolean"
           },
+          "swaps": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LolLobbyTeamBuilderChampSelectSwapContract"
+            }
+          },
           "theirTeam": {
             "type": "array",
             "items": {
@@ -70933,6 +71686,32 @@
             }
           }
         }
+      },
+      "LolLobbyTeamBuilderChampSelectSwapContract": {
+        "type": "object",
+        "properties": {
+          "cellId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "state": {
+            "$ref": "#/components/schemas/LolLobbyTeamBuilderChampSelectSwapState"
+          }
+        }
+      },
+      "LolLobbyTeamBuilderChampSelectSwapState": {
+        "enum": [
+          "AVAILABLE",
+          "BUSY",
+          "INVALID",
+          "RECEIVED",
+          "SENT"
+        ],
+        "type": "string"
       },
       "LolLobbyTeamBuilderChampSelectTimer": {
         "type": "object",
@@ -71561,9 +72340,6 @@
           "isTeamBuilderManaged": {
             "type": "boolean"
           },
-          "isTeamOnly": {
-            "type": "boolean"
-          },
           "lastToggledOffTime": {
             "type": "integer",
             "format": "uint64"
@@ -71579,14 +72355,6 @@
           "maximumParticipantListSize": {
             "type": "integer",
             "format": "int32"
-          },
-          "maxLevel": {
-            "type": "integer",
-            "format": "uint32"
-          },
-          "maxSummonerLevelForFirstWinOfTheDay": {
-            "type": "integer",
-            "format": "uint32"
           },
           "minimumParticipantListSize": {
             "type": "integer",
@@ -71652,6 +72420,9 @@
         "type": "object",
         "properties": {
           "advancedLearningQuests": {
+            "type": "boolean"
+          },
+          "allowSwaps": {
             "type": "boolean"
           },
           "allowTrades": {
@@ -71760,6 +72531,22 @@
           "schemaVersion": {
             "type": "integer",
             "format": "int32"
+          }
+        }
+      },
+      "LolLobbyTeamBuilderSwapV1": {
+        "type": "object",
+        "properties": {
+          "cellId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "state": {
+            "type": "string"
           }
         }
       },
@@ -78312,6 +79099,24 @@
           }
         }
       },
+      "LolPerksChampionRuneRecommendationsGDSResource": {
+        "type": "object",
+        "properties": {
+          "championId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "isOverride": {
+            "type": "boolean"
+          },
+          "runeRecommendations": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LolPerksRuneRecommendationGDSResource"
+            }
+          }
+        }
+      },
       "LolPerksChampSelectAction": {
         "type": "object",
         "properties": {
@@ -78741,6 +79546,16 @@
           "name": {
             "type": "string"
           },
+          "recommendationDescriptor": {
+            "type": "string"
+          },
+          "recommendationDescriptorAttributes": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "integer",
+              "format": "uint32"
+            }
+          },
           "shortDesc": {
             "type": "string"
           },
@@ -78992,11 +79807,65 @@
           "name": {
             "type": "string"
           },
+          "recommendationDescriptor": {
+            "type": "string"
+          },
           "shortDesc": {
+            "type": "string"
+          },
+          "slotType": {
+            "type": "string"
+          },
+          "styleId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "styleIdName": {
             "type": "string"
           },
           "tooltip": {
             "type": "string"
+          }
+        }
+      },
+      "LolPerksPerkUIRecommendedPage": {
+        "type": "object",
+        "properties": {
+          "isDefaultPosition": {
+            "type": "boolean"
+          },
+          "keystone": {
+            "$ref": "#/components/schemas/LolPerksPerkUIPerk"
+          },
+          "perks": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LolPerksPerkUIPerk"
+            }
+          },
+          "position": {
+            "type": "string"
+          },
+          "primaryPerkStyleId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "primaryRecommendationAttribute": {
+            "type": "string"
+          },
+          "secondaryPerkStyleId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "secondaryRecommendationAttribute": {
+            "type": "string"
+          },
+          "summonerSpellIds": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "int32"
+            }
           }
         }
       },
@@ -79054,6 +79923,9 @@
           "id": {
             "type": "integer",
             "format": "int32"
+          },
+          "idName": {
+            "type": "string"
           },
           "name": {
             "type": "string"
@@ -79114,6 +79986,47 @@
           },
           "isTeamBuilderManaged": {
             "type": "boolean"
+          }
+        }
+      },
+      "LolPerksRuneRecommendationGDSResource": {
+        "type": "object",
+        "properties": {
+          "isDefaultPosition": {
+            "type": "boolean"
+          },
+          "mapId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "minSummonerLevel": {
+            "type": "integer",
+            "format": "uint32"
+          },
+          "perkIds": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          "position": {
+            "type": "string"
+          },
+          "primaryPerkStyleId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "secondaryPerkStyleId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "summonerSpellIds": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "int32"
+            }
           }
         }
       },
@@ -88790,6 +89703,9 @@
             "items": {
               "type": "string"
             }
+          },
+          "tftEventPromoEnabled": {
+            "type": "boolean"
           }
         }
       },
@@ -89191,8 +90107,8 @@
       "LolWorldsTokenCardTokenUpsellLockedType": {
         "enum": [
           "UNASSIGNED",
-          "UNLOCKED",
-          "LOCKED"
+          "LOCKED",
+          "UNLOCKED"
         ],
         "type": "string"
       },

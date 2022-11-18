@@ -1769,6 +1769,37 @@
         }
       }
     },
+    "/lol-account-verification/v1/activationPin": {
+      "get": {
+        "tags": [
+          "Plugins",
+          "Plugin lol-account-verification"
+        ],
+        "operationId": "GetLolAccountVerificationV1ActivationPin",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LolAccountVerificationSendActivationPinResponse"
+                }
+              },
+              "application/x-yaml": {
+                "schema": {
+                  "$ref": "#/components/schemas/LolAccountVerificationSendActivationPinResponse"
+                }
+              },
+              "application/x-msgpack": {
+                "schema": {
+                  "$ref": "#/components/schemas/LolAccountVerificationSendActivationPinResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/lol-account-verification/v1/authenticate": {
       "post": {
         "tags": [
@@ -1909,6 +1940,37 @@
               "application/x-msgpack": {
                 "schema": {
                   "$ref": "#/components/schemas/LolAccountVerificationDeviceResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/lol-account-verification/v1/get-phone-number": {
+      "get": {
+        "tags": [
+          "Plugins",
+          "Plugin lol-account-verification"
+        ],
+        "operationId": "GetLolAccountVerificationV1GetPhoneNumber",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LolAccountVerificationPhoneNumberResponse"
+                }
+              },
+              "application/x-yaml": {
+                "schema": {
+                  "$ref": "#/components/schemas/LolAccountVerificationPhoneNumberResponse"
+                }
+              },
+              "application/x-msgpack": {
+                "schema": {
+                  "$ref": "#/components/schemas/LolAccountVerificationPhoneNumberResponse"
                 }
               }
             }
@@ -15501,6 +15563,46 @@
         }
       }
     },
+    "/lol-event-shop/v1/token-upsell": {
+      "get": {
+        "tags": [
+          "Plugins",
+          "Plugin lol-event-shop"
+        ],
+        "operationId": "GetLolEventShopV1TokenUpsell",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/LolEventShopTokenUpsell"
+                  }
+                }
+              },
+              "application/x-yaml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/LolEventShopTokenUpsell"
+                  }
+                }
+              },
+              "application/x-msgpack": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/LolEventShopTokenUpsell"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/lol-event-shop/v1/unclaimed-rewards": {
       "get": {
         "tags": [
@@ -18117,6 +18219,303 @@
         }
       }
     },
+    "/lol-honeyfruit/v1/debug-linking-status": {
+      "delete": {
+        "tags": [
+          "Plugins",
+          "Plugin lol-honeyfruit"
+        ],
+        "operationId": "DeleteLolHoneyfruitV1DebugLinkingStatus",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              },
+              "application/x-yaml": {
+                "schema": {
+                  "type": "object"
+                }
+              },
+              "application/x-msgpack": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Plugins",
+          "Plugin lol-honeyfruit"
+        ],
+        "operationId": "PutLolHoneyfruitV1DebugLinkingStatus",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LolHoneyfruitHoneyfruitLinkingStatus"
+              }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/LolHoneyfruitHoneyfruitLinkingStatus"
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "$ref": "#/components/schemas/LolHoneyfruitHoneyfruitLinkingStatus"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              },
+              "application/x-yaml": {
+                "schema": {
+                  "type": "object"
+                }
+              },
+              "application/x-msgpack": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/lol-honeyfruit/v1/debug-vng-publisher-settings": {
+      "delete": {
+        "tags": [
+          "Plugins",
+          "Plugin lol-honeyfruit"
+        ],
+        "operationId": "DeleteLolHoneyfruitV1DebugVngPublisherSettings",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              },
+              "application/x-yaml": {
+                "schema": {
+                  "type": "object"
+                }
+              },
+              "application/x-msgpack": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Plugins",
+          "Plugin lol-honeyfruit"
+        ],
+        "operationId": "PutLolHoneyfruitV1DebugVngPublisherSettings",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LolHoneyfruitHoneyfruitVNGPublisherSettings"
+              }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/LolHoneyfruitHoneyfruitVNGPublisherSettings"
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "$ref": "#/components/schemas/LolHoneyfruitHoneyfruitVNGPublisherSettings"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              },
+              "application/x-yaml": {
+                "schema": {
+                  "type": "object"
+                }
+              },
+              "application/x-msgpack": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/lol-honeyfruit/v1/linking-status": {
+      "get": {
+        "tags": [
+          "Plugins",
+          "Plugin lol-honeyfruit"
+        ],
+        "operationId": "GetLolHoneyfruitV1LinkingStatus",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LolHoneyfruitHoneyfruitLinkingStatus"
+                }
+              },
+              "application/x-yaml": {
+                "schema": {
+                  "$ref": "#/components/schemas/LolHoneyfruitHoneyfruitLinkingStatus"
+                }
+              },
+              "application/x-msgpack": {
+                "schema": {
+                  "$ref": "#/components/schemas/LolHoneyfruitHoneyfruitLinkingStatus"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Plugins",
+          "Plugin lol-honeyfruit"
+        ],
+        "operationId": "PutLolHoneyfruitV1LinkingStatus",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LolHoneyfruitHoneyfruitLinkingAction"
+              }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/LolHoneyfruitHoneyfruitLinkingAction"
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "$ref": "#/components/schemas/LolHoneyfruitHoneyfruitLinkingAction"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              },
+              "application/x-yaml": {
+                "schema": {
+                  "type": "object"
+                }
+              },
+              "application/x-msgpack": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/lol-honeyfruit/v1/vng-publisher-settings": {
+      "get": {
+        "tags": [
+          "Plugins",
+          "Plugin lol-honeyfruit"
+        ],
+        "operationId": "GetLolHoneyfruitV1VngPublisherSettings",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LolHoneyfruitHoneyfruitVNGPublisherSettings"
+                }
+              },
+              "application/x-yaml": {
+                "schema": {
+                  "$ref": "#/components/schemas/LolHoneyfruitHoneyfruitVNGPublisherSettings"
+                }
+              },
+              "application/x-msgpack": {
+                "schema": {
+                  "$ref": "#/components/schemas/LolHoneyfruitHoneyfruitVNGPublisherSettings"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Plugins",
+          "Plugin lol-honeyfruit"
+        ],
+        "operationId": "PostLolHoneyfruitV1VngPublisherSettings",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              },
+              "application/x-yaml": {
+                "schema": {
+                  "type": "object"
+                }
+              },
+              "application/x-msgpack": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/lol-honor-v2/v1/ballot": {
       "get": {
         "tags": [
@@ -19468,6 +19867,37 @@
                     "type": "integer",
                     "format": "int32"
                   }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/lol-inventory/v1/xbox-subscription-status": {
+      "get": {
+        "tags": [
+          "Plugins",
+          "Plugin lol-inventory"
+        ],
+        "operationId": "GetLolInventoryV1XboxSubscriptionStatus",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LolInventoryXboxSubscriptionStatus"
+                }
+              },
+              "application/x-yaml": {
+                "schema": {
+                  "$ref": "#/components/schemas/LolInventoryXboxSubscriptionStatus"
+                }
+              },
+              "application/x-msgpack": {
+                "schema": {
+                  "$ref": "#/components/schemas/LolInventoryXboxSubscriptionStatus"
                 }
               }
             }
@@ -21420,6 +21850,49 @@
         }
       }
     },
+    "/lol-lobby-team-builder/champ-select/v1/session/obfuscated-summoner-ids": {
+      "get": {
+        "tags": [
+          "Plugins",
+          "Plugin lol-lobby-team-builder"
+        ],
+        "operationId": "GetLolLobbyTeamBuilderChampSelectV1SessionObfuscatedSummonerIds",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "integer",
+                    "format": "uint64"
+                  }
+                }
+              },
+              "application/x-yaml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "integer",
+                    "format": "uint64"
+                  }
+                }
+              },
+              "application/x-msgpack": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "integer",
+                    "format": "uint64"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/lol-lobby-team-builder/champ-select/v1/session/swaps": {
       "get": {
         "tags": [
@@ -22908,68 +23381,6 @@
             "application/x-msgpack": {
               "schema": {
                 "$ref": "#/components/schemas/LolLobbyLobbyPositionPreferences"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Successful response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object"
-                }
-              },
-              "application/x-yaml": {
-                "schema": {
-                  "type": "object"
-                }
-              },
-              "application/x-msgpack": {
-                "schema": {
-                  "type": "object"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/lol-lobby/v1/lobby/members/localMember/preferred-champions": {
-      "put": {
-        "tags": [
-          "Plugins",
-          "Plugin lol-lobby"
-        ],
-        "operationId": "PutLolLobbyV1LobbyMembersLocalMemberPreferredChampions",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "array",
-                "items": {
-                  "type": "integer",
-                  "format": "int32"
-                }
-              }
-            },
-            "application/x-yaml": {
-              "schema": {
-                "type": "array",
-                "items": {
-                  "type": "integer",
-                  "format": "int32"
-                }
-              }
-            },
-            "application/x-msgpack": {
-              "schema": {
-                "type": "array",
-                "items": {
-                  "type": "integer",
-                  "format": "int32"
-                }
               }
             }
           }
@@ -31386,23 +31797,14 @@
         }
       }
     },
-    "/lol-player-report-sender/v1/champ-select-reports/puuid/{puuid}/category/{category}": {
+    "/lol-player-report-sender/v1/champ-select-reports/category/{category}": {
       "post": {
         "tags": [
           "Plugins",
           "Plugin lol-player-report-sender"
         ],
-        "operationId": "PostLolPlayerReportSenderV1ChampSelectReportsPuuidByPuuidCategoryByCategory",
+        "operationId": "PostLolPlayerReportSenderV1ChampSelectReportsCategoryByCategory",
         "parameters": [
-          {
-            "name": "puuid",
-            "in": "path",
-            "required": true,
-            "style": "simple",
-            "schema": {
-              "type": "string"
-            }
-          },
           {
             "name": "category",
             "in": "path",
@@ -31413,6 +31815,25 @@
             }
           }
         ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LolPlayerReportSenderChampSelectSummonerInfo"
+              }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/LolPlayerReportSenderChampSelectSummonerInfo"
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "$ref": "#/components/schemas/LolPlayerReportSenderChampSelectSummonerInfo"
+              }
+            }
+          }
+        },
         "responses": {
           "200": {
             "description": "Successful response",
@@ -44430,900 +44851,6 @@
           }
         }
       }
-    },
-    "/voice-chat/v1/audio-properties": {
-      "get": {
-        "tags": [
-          "Plugins",
-          "Plugin voice-chat"
-        ],
-        "operationId": "GetVoiceChatV1AudioProperties",
-        "responses": {
-          "200": {
-            "description": "Successful response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/VoiceChatAudioPropertiesResource"
-                }
-              },
-              "application/x-yaml": {
-                "schema": {
-                  "$ref": "#/components/schemas/VoiceChatAudioPropertiesResource"
-                }
-              },
-              "application/x-msgpack": {
-                "schema": {
-                  "$ref": "#/components/schemas/VoiceChatAudioPropertiesResource"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/voice-chat/v1/call-stats/{id}": {
-      "get": {
-        "tags": [
-          "Plugins",
-          "Plugin voice-chat"
-        ],
-        "operationId": "GetVoiceChatV1CallStatsById",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "style": "simple",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Successful response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/VoiceChatCallStatsResource"
-                  }
-                }
-              },
-              "application/x-yaml": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/VoiceChatCallStatsResource"
-                  }
-                }
-              },
-              "application/x-msgpack": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/VoiceChatCallStatsResource"
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/voice-chat/v1/call-stats/aggregate": {
-      "get": {
-        "tags": [
-          "Plugins",
-          "Plugin voice-chat"
-        ],
-        "operationId": "GetVoiceChatV1CallStatsAggregate",
-        "responses": {
-          "200": {
-            "description": "Successful response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/VoiceChatCallStatsResource"
-                }
-              },
-              "application/x-yaml": {
-                "schema": {
-                  "$ref": "#/components/schemas/VoiceChatCallStatsResource"
-                }
-              },
-              "application/x-msgpack": {
-                "schema": {
-                  "$ref": "#/components/schemas/VoiceChatCallStatsResource"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/voice-chat/v1/codec-settings": {
-      "get": {
-        "tags": [
-          "Plugins",
-          "Plugin voice-chat"
-        ],
-        "operationId": "GetVoiceChatV1CodecSettings",
-        "responses": {
-          "200": {
-            "description": "Successful response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/VoiceChatCodecSettingsResource"
-                }
-              },
-              "application/x-yaml": {
-                "schema": {
-                  "$ref": "#/components/schemas/VoiceChatCodecSettingsResource"
-                }
-              },
-              "application/x-msgpack": {
-                "schema": {
-                  "$ref": "#/components/schemas/VoiceChatCodecSettingsResource"
-                }
-              }
-            }
-          }
-        }
-      },
-      "put": {
-        "tags": [
-          "Plugins",
-          "Plugin voice-chat"
-        ],
-        "operationId": "PutVoiceChatV1CodecSettings",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/VoiceChatUpdateCodecSettingsResource"
-              }
-            },
-            "application/x-yaml": {
-              "schema": {
-                "$ref": "#/components/schemas/VoiceChatUpdateCodecSettingsResource"
-              }
-            },
-            "application/x-msgpack": {
-              "schema": {
-                "$ref": "#/components/schemas/VoiceChatUpdateCodecSettingsResource"
-              }
-            }
-          }
-        },
-        "responses": {
-          "204": {
-            "description": "No content"
-          }
-        }
-      }
-    },
-    "/voice-chat/v1/config": {
-      "get": {
-        "tags": [
-          "Plugins",
-          "Plugin voice-chat"
-        ],
-        "operationId": "GetVoiceChatV1Config",
-        "responses": {
-          "200": {
-            "description": "Successful response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/VoiceChatConfigResource"
-                }
-              },
-              "application/x-yaml": {
-                "schema": {
-                  "$ref": "#/components/schemas/VoiceChatConfigResource"
-                }
-              },
-              "application/x-msgpack": {
-                "schema": {
-                  "$ref": "#/components/schemas/VoiceChatConfigResource"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/voice-chat/v1/errors": {
-      "get": {
-        "tags": [
-          "Plugins",
-          "Plugin voice-chat"
-        ],
-        "operationId": "GetVoiceChatV1Errors",
-        "responses": {
-          "200": {
-            "description": "Successful response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/VoiceChatVoiceErrorCounterResource"
-                  }
-                }
-              },
-              "application/x-yaml": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/VoiceChatVoiceErrorCounterResource"
-                  }
-                }
-              },
-              "application/x-msgpack": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/VoiceChatVoiceErrorCounterResource"
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/voice-chat/v1/push-to-talk": {
-      "get": {
-        "tags": [
-          "Plugins",
-          "Plugin voice-chat"
-        ],
-        "operationId": "GetVoiceChatV1PushToTalk",
-        "responses": {
-          "200": {
-            "description": "Successful response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/VoiceChatPushToTalkResource"
-                }
-              },
-              "application/x-yaml": {
-                "schema": {
-                  "$ref": "#/components/schemas/VoiceChatPushToTalkResource"
-                }
-              },
-              "application/x-msgpack": {
-                "schema": {
-                  "$ref": "#/components/schemas/VoiceChatPushToTalkResource"
-                }
-              }
-            }
-          }
-        }
-      },
-      "put": {
-        "tags": [
-          "Plugins",
-          "Plugin voice-chat"
-        ],
-        "operationId": "PutVoiceChatV1PushToTalk",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/VoiceChatPushToTalkResource"
-              }
-            },
-            "application/x-yaml": {
-              "schema": {
-                "$ref": "#/components/schemas/VoiceChatPushToTalkResource"
-              }
-            },
-            "application/x-msgpack": {
-              "schema": {
-                "$ref": "#/components/schemas/VoiceChatPushToTalkResource"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "Successful response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object"
-                }
-              },
-              "application/x-yaml": {
-                "schema": {
-                  "type": "object"
-                }
-              },
-              "application/x-msgpack": {
-                "schema": {
-                  "type": "object"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/voice-chat/v1/push-to-talk/check-available": {
-      "post": {
-        "tags": [
-          "Plugins",
-          "Plugin voice-chat"
-        ],
-        "operationId": "PostVoiceChatV1PushToTalkCheckAvailable",
-        "parameters": [
-          {
-            "name": "prompt",
-            "in": "query",
-            "required": true,
-            "style": "form",
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Successful response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "boolean"
-                }
-              },
-              "application/x-yaml": {
-                "schema": {
-                  "type": "boolean"
-                }
-              },
-              "application/x-msgpack": {
-                "schema": {
-                  "type": "boolean"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/voice-chat/v2/devices/capture": {
-      "get": {
-        "tags": [
-          "Plugins",
-          "Plugin voice-chat"
-        ],
-        "operationId": "GetVoiceChatV2DevicesCapture",
-        "responses": {
-          "200": {
-            "description": "Successful response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/VoiceChatDeviceResource"
-                  }
-                }
-              },
-              "application/x-yaml": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/VoiceChatDeviceResource"
-                  }
-                }
-              },
-              "application/x-msgpack": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/VoiceChatDeviceResource"
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/voice-chat/v2/devices/capture/permission": {
-      "get": {
-        "tags": [
-          "Plugins",
-          "Plugin voice-chat"
-        ],
-        "operationId": "GetVoiceChatV2DevicesCapturePermission",
-        "responses": {
-          "200": {
-            "description": "Successful response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/VoiceChatCaptureDevicePermissionStatus"
-                }
-              },
-              "application/x-yaml": {
-                "schema": {
-                  "$ref": "#/components/schemas/VoiceChatCaptureDevicePermissionStatus"
-                }
-              },
-              "application/x-msgpack": {
-                "schema": {
-                  "$ref": "#/components/schemas/VoiceChatCaptureDevicePermissionStatus"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/voice-chat/v2/devices/capture/prompt-for-permission": {
-      "put": {
-        "tags": [
-          "Plugins",
-          "Plugin voice-chat"
-        ],
-        "operationId": "PutVoiceChatV2DevicesCapturePromptForPermission",
-        "responses": {
-          "204": {
-            "description": "No content"
-          }
-        }
-      }
-    },
-    "/voice-chat/v2/devices/render": {
-      "get": {
-        "tags": [
-          "Plugins",
-          "Plugin voice-chat"
-        ],
-        "operationId": "GetVoiceChatV2DevicesRender",
-        "responses": {
-          "200": {
-            "description": "Successful response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/VoiceChatDeviceResource"
-                  }
-                }
-              },
-              "application/x-yaml": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/VoiceChatDeviceResource"
-                  }
-                }
-              },
-              "application/x-msgpack": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/VoiceChatDeviceResource"
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/voice-chat/v2/sessions": {
-      "delete": {
-        "tags": [
-          "Plugins",
-          "Plugin voice-chat"
-        ],
-        "operationId": "DeleteVoiceChatV2Sessions",
-        "responses": {
-          "204": {
-            "description": "No content"
-          }
-        }
-      },
-      "get": {
-        "tags": [
-          "Plugins",
-          "Plugin voice-chat"
-        ],
-        "operationId": "GetVoiceChatV2Sessions",
-        "responses": {
-          "200": {
-            "description": "Successful response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/VoiceChatSessionResource"
-                  }
-                }
-              },
-              "application/x-yaml": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/VoiceChatSessionResource"
-                  }
-                }
-              },
-              "application/x-msgpack": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/VoiceChatSessionResource"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "post": {
-        "tags": [
-          "Plugins",
-          "Plugin voice-chat"
-        ],
-        "operationId": "PostVoiceChatV2Sessions",
-        "parameters": [
-          {
-            "name": "JWT",
-            "in": "header",
-            "required": true,
-            "style": "simple",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Successful response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/VoiceChatSessionResource"
-                }
-              },
-              "application/x-yaml": {
-                "schema": {
-                  "$ref": "#/components/schemas/VoiceChatSessionResource"
-                }
-              },
-              "application/x-msgpack": {
-                "schema": {
-                  "$ref": "#/components/schemas/VoiceChatSessionResource"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/voice-chat/v2/sessions/{id}": {
-      "delete": {
-        "tags": [
-          "Plugins",
-          "Plugin voice-chat"
-        ],
-        "operationId": "DeleteVoiceChatV2SessionsById",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "style": "simple",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "204": {
-            "description": "No content"
-          }
-        }
-      },
-      "get": {
-        "tags": [
-          "Plugins",
-          "Plugin voice-chat"
-        ],
-        "operationId": "GetVoiceChatV2SessionsById",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "style": "simple",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Successful response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/VoiceChatSessionResource"
-                }
-              },
-              "application/x-yaml": {
-                "schema": {
-                  "$ref": "#/components/schemas/VoiceChatSessionResource"
-                }
-              },
-              "application/x-msgpack": {
-                "schema": {
-                  "$ref": "#/components/schemas/VoiceChatSessionResource"
-                }
-              }
-            }
-          }
-        }
-      },
-      "post": {
-        "tags": [
-          "Plugins",
-          "Plugin voice-chat"
-        ],
-        "operationId": "PostVoiceChatV2SessionsById",
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "style": "simple",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "JWT",
-            "in": "header",
-            "required": true,
-            "style": "simple",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Successful response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/VoiceChatSessionResource"
-                }
-              },
-              "application/x-yaml": {
-                "schema": {
-                  "$ref": "#/components/schemas/VoiceChatSessionResource"
-                }
-              },
-              "application/x-msgpack": {
-                "schema": {
-                  "$ref": "#/components/schemas/VoiceChatSessionResource"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/voice-chat/v2/sessions/{sessionId}/participants/{participantId}": {
-      "get": {
-        "tags": [
-          "Plugins",
-          "Plugin voice-chat"
-        ],
-        "operationId": "GetVoiceChatV2SessionsBySessionIdParticipantsByParticipantId",
-        "parameters": [
-          {
-            "name": "sessionId",
-            "in": "path",
-            "required": true,
-            "style": "simple",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "participantId",
-            "in": "path",
-            "required": true,
-            "style": "simple",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Successful response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/VoiceChatParticipantResource"
-                }
-              },
-              "application/x-yaml": {
-                "schema": {
-                  "$ref": "#/components/schemas/VoiceChatParticipantResource"
-                }
-              },
-              "application/x-msgpack": {
-                "schema": {
-                  "$ref": "#/components/schemas/VoiceChatParticipantResource"
-                }
-              }
-            }
-          }
-        }
-      },
-      "put": {
-        "tags": [
-          "Plugins",
-          "Plugin voice-chat"
-        ],
-        "operationId": "PutVoiceChatV2SessionsBySessionIdParticipantsByParticipantId",
-        "parameters": [
-          {
-            "name": "sessionId",
-            "in": "path",
-            "required": true,
-            "style": "simple",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "participantId",
-            "in": "path",
-            "required": true,
-            "style": "simple",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/VoiceChatUpdateParticipantResource"
-              }
-            },
-            "application/x-yaml": {
-              "schema": {
-                "$ref": "#/components/schemas/VoiceChatUpdateParticipantResource"
-              }
-            },
-            "application/x-msgpack": {
-              "schema": {
-                "$ref": "#/components/schemas/VoiceChatUpdateParticipantResource"
-              }
-            }
-          }
-        },
-        "responses": {
-          "204": {
-            "description": "No content"
-          }
-        }
-      }
-    },
-    "/voice-chat/v2/settings": {
-      "get": {
-        "tags": [
-          "Plugins",
-          "Plugin voice-chat"
-        ],
-        "operationId": "GetVoiceChatV2Settings",
-        "responses": {
-          "200": {
-            "description": "Successful response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/VoiceChatSettingsResource"
-                }
-              },
-              "application/x-yaml": {
-                "schema": {
-                  "$ref": "#/components/schemas/VoiceChatSettingsResource"
-                }
-              },
-              "application/x-msgpack": {
-                "schema": {
-                  "$ref": "#/components/schemas/VoiceChatSettingsResource"
-                }
-              }
-            }
-          }
-        }
-      },
-      "put": {
-        "tags": [
-          "Plugins",
-          "Plugin voice-chat"
-        ],
-        "operationId": "PutVoiceChatV2Settings",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/VoiceChatUpdateSettingsResource"
-              }
-            },
-            "application/x-yaml": {
-              "schema": {
-                "$ref": "#/components/schemas/VoiceChatUpdateSettingsResource"
-              }
-            },
-            "application/x-msgpack": {
-              "schema": {
-                "$ref": "#/components/schemas/VoiceChatUpdateSettingsResource"
-              }
-            }
-          }
-        },
-        "responses": {
-          "204": {
-            "description": "No content"
-          }
-        }
-      }
-    },
-    "/voice-chat/v2/state": {
-      "get": {
-        "tags": [
-          "Plugins",
-          "Plugin voice-chat"
-        ],
-        "operationId": "GetVoiceChatV2State",
-        "responses": {
-          "200": {
-            "description": "Successful response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/VoiceChatStateResource"
-                }
-              },
-              "application/x-yaml": {
-                "schema": {
-                  "$ref": "#/components/schemas/VoiceChatStateResource"
-                }
-              },
-              "application/x-msgpack": {
-                "schema": {
-                  "$ref": "#/components/schemas/VoiceChatStateResource"
-                }
-              }
-            }
-          }
-        }
-      }
     }
   },
   "components": {
@@ -46807,6 +46334,12 @@
             "type": "integer",
             "format": "uint64"
           },
+          "f2pRewardSources": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
           "freeToPlay": {
             "type": "boolean"
           },
@@ -46849,6 +46382,12 @@
           "endDate": {
             "type": "integer",
             "format": "uint64"
+          },
+          "f2pRewardSources": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           },
           "freeToPlayReward": {
             "type": "boolean"
@@ -48415,24 +47954,6 @@
           }
         }
       },
-      "LolAccountVerificationAuthResourceRsoAccessToken": {
-        "type": "object",
-        "properties": {
-          "expiry": {
-            "type": "integer",
-            "format": "uint64"
-          },
-          "scopes": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "token": {
-            "type": "string"
-          }
-        }
-      },
       "LolAccountVerificationAVSConfig": {
         "type": "object",
         "properties": {
@@ -48462,15 +47983,7 @@
             "type": "string"
           },
           "data": {
-            "$ref": "#/components/schemas/LolAccountVerificationConfirmActivationPinResponseData"
-          }
-        }
-      },
-      "LolAccountVerificationConfirmActivationPinResponseData": {
-        "type": "object",
-        "properties": {
-          "status": {
-            "type": "string"
+            "$ref": "#/components/schemas/LolAccountVerificationPinResponseData"
           }
         }
       },
@@ -48485,8 +47998,11 @@
       "LolAccountVerificationConfirmDeactivationPinResponse": {
         "type": "object",
         "properties": {
-          "success": {
-            "type": "boolean"
+          "clientMessageId": {
+            "type": "string"
+          },
+          "data": {
+            "$ref": "#/components/schemas/LolAccountVerificationPinResponseData"
           }
         }
       },
@@ -48590,6 +48106,9 @@
           },
           "data": {
             "$ref": "#/components/schemas/LolAccountVerificationPhoneNumberResponseData"
+          },
+          "error": {
+            "$ref": "#/components/schemas/LolAccountVerificationResponseError"
           }
         }
       },
@@ -48598,6 +48117,25 @@
         "properties": {
           "phoneNumberObfuscated": {
             "$ref": "#/components/schemas/LolAccountVerificationPhoneNumberObfuscated"
+          }
+        }
+      },
+      "LolAccountVerificationPinResponseData": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "string"
+          }
+        }
+      },
+      "LolAccountVerificationResponseError": {
+        "type": "object",
+        "properties": {
+          "errorCode": {
+            "type": "string"
+          },
+          "message": {
+            "type": "string"
           }
         }
       },
@@ -48615,8 +48153,23 @@
       "LolAccountVerificationSendActivationPinResponse": {
         "type": "object",
         "properties": {
-          "success": {
-            "type": "boolean"
+          "clientMessageId": {
+            "type": "string"
+          },
+          "data": {
+            "$ref": "#/components/schemas/LolAccountVerificationSendActivationPinResponseData"
+          },
+          "error": {
+            "$ref": "#/components/schemas/LolAccountVerificationResponseError"
+          }
+        }
+      },
+      "LolAccountVerificationSendActivationPinResponseData": {
+        "type": "object",
+        "properties": {
+          "pinExpiresAtEpochMillis": {
+            "type": "integer",
+            "format": "int64"
           }
         }
       },
@@ -48631,8 +48184,14 @@
       "LolAccountVerificationSendDeactivationPinResponse": {
         "type": "object",
         "properties": {
-          "success": {
-            "type": "boolean"
+          "clientMessageId": {
+            "type": "string"
+          },
+          "data": {
+            "$ref": "#/components/schemas/LolAccountVerificationSendActivationPinResponseData"
+          },
+          "error": {
+            "$ref": "#/components/schemas/LolAccountVerificationResponseError"
           }
         }
       },
@@ -51172,7 +50731,7 @@
             "type": "integer",
             "format": "uint32"
           },
-          "championsFreeToPlayReward": {
+          "championsLoyaltyReward": {
             "type": "integer",
             "format": "uint32"
           },
@@ -51181,6 +50740,10 @@
             "format": "uint32"
           },
           "championsRented": {
+            "type": "integer",
+            "format": "uint32"
+          },
+          "championsXboxGPReward": {
             "type": "integer",
             "format": "uint32"
           }
@@ -51430,7 +50993,7 @@
       "LolChampionsCollectionsOwnership": {
         "type": "object",
         "properties": {
-          "freeToPlayReward": {
+          "loyaltyReward": {
             "type": "boolean"
           },
           "owned": {
@@ -51438,6 +51001,9 @@
           },
           "rental": {
             "$ref": "#/components/schemas/LolChampionsCollectionsRental"
+          },
+          "xboxGPReward": {
+            "type": "boolean"
           }
         }
       },
@@ -51734,6 +51300,12 @@
           "loyalty": {
             "type": "boolean"
           },
+          "loyaltySources": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
           "owned": {
             "type": "boolean"
           },
@@ -51899,12 +51471,12 @@
           "freeToPlayForQueue": {
             "type": "boolean"
           },
-          "freeToPlayReward": {
-            "type": "boolean"
-          },
           "id": {
             "type": "integer",
             "format": "int32"
+          },
+          "loyaltyReward": {
+            "type": "boolean"
           },
           "masteryChestGranted": {
             "type": "boolean"
@@ -51943,6 +51515,9 @@
           },
           "squarePortraitPath": {
             "type": "string"
+          },
+          "xboxGPReward": {
+            "type": "boolean"
           }
         }
       },
@@ -52139,6 +51714,13 @@
           "nameVisibilityType": {
             "type": "string"
           },
+          "obfuscatedPuuid": {
+            "type": "string"
+          },
+          "obfuscatedSummonerId": {
+            "type": "integer",
+            "format": "uint64"
+          },
           "puuid": {
             "type": "string"
           },
@@ -52248,6 +51830,12 @@
               "$ref": "#/components/schemas/LolChampSelectChampSelectPlayerSelection"
             }
           },
+          "pickOrderSwaps": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LolChampSelectChampSelectSwapContract"
+            }
+          },
           "recoveryCounter": {
             "type": "integer",
             "format": "int64"
@@ -52258,12 +51846,6 @@
           },
           "skipChampionSelect": {
             "type": "boolean"
-          },
-          "swaps": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/LolChampSelectChampSelectSwapContract"
-            }
           },
           "theirTeam": {
             "type": "array",
@@ -52337,6 +51919,13 @@
           },
           "nameVisibilityType": {
             "type": "string"
+          },
+          "obfuscatedPuuid": {
+            "type": "string"
+          },
+          "obfuscatedSummonerId": {
+            "type": "integer",
+            "format": "uint64"
           },
           "pickSnipedClass": {
             "type": "string"
@@ -52431,9 +52020,9 @@
           "initiatedByLocalPlayer": {
             "type": "boolean"
           },
-          "otherSummonerId": {
+          "otherSummonerIndex": {
             "type": "integer",
-            "format": "uint64"
+            "format": "int64"
           },
           "requestorIndex": {
             "type": "integer",
@@ -52510,9 +52099,9 @@
           "initiatedByLocalPlayer": {
             "type": "boolean"
           },
-          "otherSummonerId": {
+          "otherSummonerIndex": {
             "type": "integer",
-            "format": "uint64"
+            "format": "int64"
           },
           "requesterChampionName": {
             "type": "string"
@@ -52825,7 +52414,7 @@
       "LolChampSelectCollectionsOwnership": {
         "type": "object",
         "properties": {
-          "freeToPlayReward": {
+          "loyaltyReward": {
             "type": "boolean"
           },
           "owned": {
@@ -52833,6 +52422,9 @@
           },
           "rental": {
             "$ref": "#/components/schemas/LolChampSelectCollectionsRental"
+          },
+          "xboxGPReward": {
+            "type": "boolean"
           }
         }
       },
@@ -53171,7 +52763,7 @@
       "LolChampSelectLegacyCollectionsOwnership": {
         "type": "object",
         "properties": {
-          "freeToPlayReward": {
+          "loyaltyReward": {
             "type": "boolean"
           },
           "owned": {
@@ -53179,6 +52771,9 @@
           },
           "rental": {
             "$ref": "#/components/schemas/LolChampSelectLegacyCollectionsRental"
+          },
+          "xboxGPReward": {
+            "type": "boolean"
           }
         }
       },
@@ -53440,6 +53035,13 @@
       "LolChampSelectMutedPlayerInfo": {
         "type": "object",
         "properties": {
+          "obfuscatedPuuid": {
+            "type": "string"
+          },
+          "obfuscatedSummonerId": {
+            "type": "integer",
+            "format": "uint64"
+          },
           "puuid": {
             "type": "string"
           },
@@ -54176,6 +53778,10 @@
           },
           "fromId": {
             "type": "string"
+          },
+          "fromObfuscatedSummonerId": {
+            "type": "integer",
+            "format": "uint64"
           },
           "fromPid": {
             "type": "string"
@@ -55234,6 +54840,13 @@
       "LolChatMutedPlayerInfo": {
         "type": "object",
         "properties": {
+          "obfuscatedPuuid": {
+            "type": "string"
+          },
+          "obfuscatedSummonerId": {
+            "type": "integer",
+            "format": "uint64"
+          },
           "puuid": {
             "type": "string"
           },
@@ -55341,6 +54954,9 @@
           },
           "isSystemMuted": {
             "type": "boolean"
+          },
+          "obfuscatedPuuid": {
+            "type": "string"
           },
           "puuid": {
             "type": "string"
@@ -55746,6 +55362,10 @@
           },
           "name": {
             "type": "string"
+          },
+          "obfuscatedSummonerId": {
+            "type": "integer",
+            "format": "uint64"
           },
           "patchline": {
             "type": "string"
@@ -58209,7 +57829,7 @@
       "LolCollectionsCollectionsOwnership": {
         "type": "object",
         "properties": {
-          "freeToPlayReward": {
+          "loyaltyReward": {
             "type": "boolean"
           },
           "owned": {
@@ -58217,6 +57837,9 @@
           },
           "rental": {
             "$ref": "#/components/schemas/LolCollectionsCollectionsRental"
+          },
+          "xboxGPReward": {
+            "type": "boolean"
           }
         }
       },
@@ -58533,6 +58156,10 @@
           },
           "lsb": {
             "type": "boolean"
+          },
+          "ownedQuantity": {
+            "type": "integer",
+            "format": "uint64"
           },
           "payload": {
             "type": "object"
@@ -61499,6 +61126,15 @@
           }
         }
       },
+      "LolEventShopAccountIdAndSummonerId": {
+        "type": "object",
+        "properties": {
+          "summonerId": {
+            "type": "integer",
+            "format": "uint64"
+          }
+        }
+      },
       "LolEventShopBalance": {
         "type": "object",
         "properties": {
@@ -61790,6 +61426,9 @@
           },
           "owned": {
             "type": "boolean"
+          },
+          "ownershipType": {
+            "$ref": "#/components/schemas/LolEventShopInventoryOwnership"
           },
           "prices": {
             "type": "array",
@@ -62176,6 +61815,18 @@
           "localizedName": {
             "type": "string"
           },
+          "localizedUpsellButtonText": {
+            "type": "string"
+          },
+          "localizedUpsellTitle": {
+            "type": "string"
+          },
+          "localizedUpsellTooltipDescription": {
+            "type": "string"
+          },
+          "localizedUpsellTooltipTitle": {
+            "type": "string"
+          },
           "navbarIconImage": {
             "type": "string"
           },
@@ -62193,6 +61844,12 @@
           },
           "tokenShop": {
             "$ref": "#/components/schemas/LolEventShopTokenShop"
+          },
+          "upsellBackgroundImageUrl": {
+            "type": "string"
+          },
+          "upsellTooltipBackgroundImageUrl": {
+            "type": "string"
           }
         }
       },
@@ -62442,6 +62099,12 @@
           "loyalty": {
             "type": "boolean"
           },
+          "loyaltySources": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
           "lsb": {
             "type": "boolean"
           },
@@ -62490,6 +62153,12 @@
           "loyalty": {
             "type": "boolean"
           },
+          "loyaltySources": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
           "owned": {
             "type": "boolean"
           },
@@ -62535,6 +62204,15 @@
             "type": "string"
           }
         }
+      },
+      "LolEventShopInventoryOwnership": {
+        "enum": [
+          "OWNED",
+          "RENTED",
+          "LOYALTY",
+          "F2P"
+        ],
+        "type": "string"
       },
       "LolEventShopInventoryResponseDTO": {
         "type": "object",
@@ -62643,6 +62321,9 @@
           "itemId": {
             "type": "integer",
             "format": "int32"
+          },
+          "loyaltyUnlocked": {
+            "type": "boolean"
           },
           "metadata": {
             "type": "array",
@@ -62829,6 +62510,70 @@
         ],
         "type": "string"
       },
+      "LolEventShopLootDataGdsResource": {
+        "type": "object",
+        "properties": {
+          "LootTokenBankCards": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LolEventShopLootTokenBankCardGdsResource"
+            }
+          }
+        }
+      },
+      "LolEventShopLootTokenBankCardGdsResource": {
+        "type": "object",
+        "properties": {
+          "activationDate": {
+            "type": "string"
+          },
+          "backsplashImagePath": {
+            "type": "string"
+          },
+          "buttonText": {
+            "type": "string"
+          },
+          "deactivationDate": {
+            "type": "string"
+          },
+          "lootItemName": {
+            "type": "string"
+          },
+          "nonPremiumCapCurrencyId": {
+            "type": "string"
+          },
+          "premiumCapCurrencyId": {
+            "type": "string"
+          },
+          "storeLinkItem": {
+            "type": "string"
+          },
+          "storeLinkType": {
+            "type": "string"
+          },
+          "titleText": {
+            "type": "string"
+          },
+          "tokenIconPath": {
+            "type": "string"
+          },
+          "tooltipDescriptionText": {
+            "type": "string"
+          },
+          "tooltipSplashPath": {
+            "type": "string"
+          },
+          "tooltipTitleText": {
+            "type": "string"
+          },
+          "unlockItemId": {
+            "type": "string"
+          },
+          "unlockItemType": {
+            "type": "string"
+          }
+        }
+      },
       "LolEventShopLoyaltyRewards": {
         "type": "object",
         "properties": {
@@ -62850,6 +62595,12 @@
           "ipBoost": {
             "type": "integer",
             "format": "int32"
+          },
+          "loyaltySources": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "boolean"
+            }
           },
           "loyaltyTFTCompanionCount": {
             "type": "integer",
@@ -63081,6 +62832,32 @@
           "Purchased"
         ],
         "type": "string"
+      },
+      "LolEventShopPlayerNotification": {
+        "type": "object",
+        "properties": {
+          "critical": {
+            "type": "boolean"
+          },
+          "detailKey": {
+            "type": "string"
+          },
+          "iconUrl": {
+            "type": "string"
+          },
+          "source": {
+            "type": "string"
+          },
+          "state": {
+            "type": "string"
+          },
+          "titleKey": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          }
+        }
       },
       "LolEventShopPlayerSettingsData": {
         "type": "object",
@@ -63752,6 +63529,23 @@
       "LolEventShopRmsWalletPayload": {
         "type": "object"
       },
+      "LolEventShopRmsXboxSubscriptionChange": {
+        "type": "object",
+        "properties": {
+          "active": {
+            "type": "boolean"
+          },
+          "identityProvider": {
+            "type": "string"
+          },
+          "puuid": {
+            "type": "string"
+          },
+          "subscriptionId": {
+            "type": "string"
+          }
+        }
+      },
       "LolEventShopSale": {
         "type": "object",
         "properties": {
@@ -64155,6 +63949,72 @@
           }
         }
       },
+      "LolEventShopTokenUpsell": {
+        "type": "object",
+        "properties": {
+          "backgroundUrl": {
+            "type": "string"
+          },
+          "buttonText": {
+            "type": "string"
+          },
+          "currencyUrl": {
+            "type": "string"
+          },
+          "currentlyLocked": {
+            "$ref": "#/components/schemas/LolEventShopTokenUpsellLockedType"
+          },
+          "dependentInventoryId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "dependentInventoryType": {
+            "type": "string"
+          },
+          "endDate": {
+            "type": "string"
+          },
+          "id": {
+            "type": "string"
+          },
+          "internalName": {
+            "type": "string"
+          },
+          "lockedCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "premiumCurrencyName": {
+            "type": "string"
+          },
+          "purchaseUrl": {
+            "type": "string"
+          },
+          "startDate": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "tooltipBackgroundUrl": {
+            "type": "string"
+          },
+          "tooltipDescription": {
+            "type": "string"
+          },
+          "tooltipTitle": {
+            "type": "string"
+          }
+        }
+      },
+      "LolEventShopTokenUpsellLockedType": {
+        "enum": [
+          "UNASSIGNED",
+          "LOCKED",
+          "UNLOCKED"
+        ],
+        "type": "string"
+      },
       "LolEventShopTransaction": {
         "type": "object",
         "properties": {
@@ -64391,6 +64251,17 @@
           }
         }
       },
+      "LolEventShopXboxSubscriptionStatus": {
+        "type": "object",
+        "properties": {
+          "active": {
+            "type": "boolean"
+          },
+          "subscriptionId": {
+            "type": "string"
+          }
+        }
+      },
       "LolFeaturedModesAccountIdAndSummonerId": {
         "type": "object",
         "properties": {
@@ -64403,10 +64274,13 @@
       "LolFeaturedModesCollectionsOwnership": {
         "type": "object",
         "properties": {
-          "freeToPlayReward": {
+          "loyaltyReward": {
             "type": "boolean"
           },
           "owned": {
+            "type": "boolean"
+          },
+          "xboxGPReward": {
             "type": "boolean"
           }
         }
@@ -64710,6 +64584,13 @@
       "LolGameClientChatMutedPlayerInfo": {
         "type": "object",
         "properties": {
+          "obfuscatedPuuid": {
+            "type": "string"
+          },
+          "obfuscatedSummonerId": {
+            "type": "integer",
+            "format": "uint64"
+          },
           "puuid": {
             "type": "string"
           },
@@ -65541,9 +65422,6 @@
           "showPositionSelector": {
             "type": "boolean"
           },
-          "showPreferredChampions": {
-            "type": "boolean"
-          },
           "spectatorEnabled": {
             "type": "boolean"
           },
@@ -65987,6 +65865,238 @@
         "properties": {
           "data": {
             "$ref": "#/components/schemas/LolHighlightsHighlightsSettingsData"
+          }
+        }
+      },
+      "LolHoneyfruitGameflowPhase": {
+        "enum": [
+          "None",
+          "Lobby",
+          "Matchmaking",
+          "CheckedIntoTournament",
+          "ReadyCheck",
+          "ChampSelect",
+          "GameStart",
+          "FailedToLaunch",
+          "InProgress",
+          "Reconnect",
+          "WaitingForStats",
+          "PreEndOfGame",
+          "EndOfGame",
+          "TerminatedInError"
+        ],
+        "type": "string"
+      },
+      "LolHoneyfruitHoneyfruitActionType": {
+        "enum": [
+          "dismiss",
+          "dismiss_temporarily",
+          "dismiss_permanently",
+          "link"
+        ],
+        "type": "string"
+      },
+      "LolHoneyfruitHoneyfruitAuthRedirectMock": {
+        "type": "object",
+        "properties": {
+          "redirectLatency": {
+            "type": "integer",
+            "format": "uint32"
+          },
+          "redirectStatusCode": {
+            "type": "integer",
+            "format": "uint32"
+          },
+          "redirectURL": {
+            "type": "string"
+          }
+        }
+      },
+      "LolHoneyfruitHoneyfruitLinkingAction": {
+        "type": "object",
+        "properties": {
+          "action": {
+            "$ref": "#/components/schemas/LolHoneyfruitHoneyfruitActionType"
+          },
+          "target": {
+            "type": "string"
+          }
+        }
+      },
+      "LolHoneyfruitHoneyfruitLinkingFailureReason": {
+        "enum": [
+          "ALREADY_LINKED",
+          "ACCESS_TOKEN_EXPIRED",
+          "BAD_AUTHORIZATION_PARAM",
+          "DEGRADED",
+          "DISABLED",
+          "NOT_LINKED",
+          "REQUEST_FAILURE",
+          "UNHANDLED_SERVER_SIDE_ERROR"
+        ],
+        "type": "string"
+      },
+      "LolHoneyfruitHoneyfruitLinkingNotification": {
+        "type": "object",
+        "properties": {
+          "linkedAccount": {
+            "type": "string"
+          }
+        }
+      },
+      "LolHoneyfruitHoneyfruitLinkingState": {
+        "enum": [
+          "hidden",
+          "snoozed",
+          "prompt",
+          "confirm_snooze",
+          "error",
+          "in_progress",
+          "linking_complete",
+          "linked"
+        ],
+        "type": "string"
+      },
+      "LolHoneyfruitHoneyfruitLinkingStatus": {
+        "type": "object",
+        "properties": {
+          "error": {
+            "$ref": "#/components/schemas/LolHoneyfruitHoneyfruitLinkingStatusError"
+          },
+          "linkedAccount": {
+            "type": "string"
+          },
+          "state": {
+            "$ref": "#/components/schemas/LolHoneyfruitHoneyfruitLinkingState"
+          }
+        }
+      },
+      "LolHoneyfruitHoneyfruitLinkingStatusError": {
+        "enum": [
+          "no_error",
+          "not_signed_in",
+          "service_unavailable",
+          "unknown_error"
+        ],
+        "type": "string"
+      },
+      "LolHoneyfruitHoneyfruitPublisher": {
+        "enum": [
+          "garena",
+          "riot",
+          "tencent",
+          "twm",
+          "vng"
+        ],
+        "type": "string"
+      },
+      "LolHoneyfruitHoneyfruitRegionLocale": {
+        "type": "object",
+        "properties": {
+          "locale": {
+            "type": "string"
+          },
+          "region": {
+            "type": "string"
+          }
+        }
+      },
+      "LolHoneyfruitHoneyfruitSettingCategoryResource": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "$ref": "#/components/schemas/LolHoneyfruitHoneyfruitSettings"
+          },
+          "schemaVersion": {
+            "type": "integer",
+            "format": "uint32"
+          }
+        }
+      },
+      "LolHoneyfruitHoneyfruitSettings": {
+        "type": "object",
+        "properties": {
+          "isSnoozedPermanently": {
+            "type": "boolean"
+          },
+          "snoozeUntilMS": {
+            "type": "integer",
+            "format": "uint64"
+          }
+        }
+      },
+      "LolHoneyfruitHoneyfruitVNGPublisherSettings": {
+        "type": "object",
+        "properties": {
+          "visible": {
+            "type": "boolean"
+          }
+        }
+      },
+      "LolHoneyfruitV1AuthenticationRedirectInput": {
+        "type": "object",
+        "properties": {
+          "language": {
+            "type": "string"
+          },
+          "redirect_uri": {
+            "type": "string"
+          }
+        }
+      },
+      "LolHoneyfruitV1AuthenticationResponse": {
+        "type": "object",
+        "properties": {
+          "country": {
+            "type": "string"
+          },
+          "error": {
+            "type": "string"
+          },
+          "success": {
+            "$ref": "#/components/schemas/LolHoneyfruitV1SuccessResponseDetails"
+          },
+          "type": {
+            "$ref": "#/components/schemas/LolHoneyfruitV1ResponseType"
+          }
+        }
+      },
+      "LolHoneyfruitV1ResponseType": {
+        "enum": [
+          "auth",
+          "healup",
+          "signup",
+          "multifactor",
+          "success",
+          "error"
+        ],
+        "type": "string"
+      },
+      "LolHoneyfruitV1SuccessResponseDetails": {
+        "type": "object",
+        "properties": {
+          "linked": {
+            "type": "string"
+          },
+          "login_token": {
+            "type": "string"
+          },
+          "redirect_url": {
+            "type": "string"
+          }
+        }
+      },
+      "LolHoneyfruitVNGStatusResponse": {
+        "type": "object",
+        "properties": {
+          "action_required": {
+            "type": "boolean"
+          },
+          "action_url": {
+            "type": "string"
+          },
+          "action_url_raw": {
+            "type": "string"
           }
         }
       },
@@ -66960,6 +67070,12 @@
           "loyalty": {
             "type": "boolean"
           },
+          "loyaltySources": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
           "lsb": {
             "type": "boolean"
           },
@@ -67007,6 +67123,12 @@
           },
           "loyalty": {
             "type": "boolean"
+          },
+          "loyaltySources": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           },
           "owned": {
             "type": "boolean"
@@ -67136,6 +67258,12 @@
             "type": "integer",
             "format": "int32"
           },
+          "loyaltySources": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "boolean"
+            }
+          },
           "loyaltyTFTCompanionCount": {
             "type": "integer",
             "format": "int32"
@@ -67179,6 +67307,32 @@
           },
           "status": {
             "$ref": "#/components/schemas/LolInventoryLoyaltyStatus"
+          }
+        }
+      },
+      "LolInventoryPlayerNotification": {
+        "type": "object",
+        "properties": {
+          "critical": {
+            "type": "boolean"
+          },
+          "detailKey": {
+            "type": "string"
+          },
+          "iconUrl": {
+            "type": "string"
+          },
+          "source": {
+            "type": "string"
+          },
+          "state": {
+            "type": "string"
+          },
+          "titleKey": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
           }
         }
       },
@@ -67247,6 +67401,23 @@
       },
       "LolInventoryRmsWalletPayload": {
         "type": "object"
+      },
+      "LolInventoryRmsXboxSubscriptionChange": {
+        "type": "object",
+        "properties": {
+          "active": {
+            "type": "boolean"
+          },
+          "identityProvider": {
+            "type": "string"
+          },
+          "puuid": {
+            "type": "string"
+          },
+          "subscriptionId": {
+            "type": "string"
+          }
+        }
       },
       "LolInventorySimpleInventoryDTO": {
         "type": "object",
@@ -67348,6 +67519,17 @@
         "properties": {
           "data": {
             "$ref": "#/components/schemas/LolInventoryWalletDTO"
+          }
+        }
+      },
+      "LolInventoryXboxSubscriptionStatus": {
+        "type": "object",
+        "properties": {
+          "active": {
+            "type": "boolean"
+          },
+          "subscriptionId": {
+            "type": "string"
           }
         }
       },
@@ -68489,7 +68671,7 @@
       "LolLobbyCollectionsOwnership": {
         "type": "object",
         "properties": {
-          "freeToPlayReward": {
+          "loyaltyReward": {
             "type": "boolean"
           },
           "owned": {
@@ -68497,6 +68679,9 @@
           },
           "rental": {
             "$ref": "#/components/schemas/LolLobbyCollectionsRental"
+          },
+          "xboxGPReward": {
+            "type": "boolean"
           }
         }
       },
@@ -69538,9 +69723,6 @@
           },
           "showPositionSelector": {
             "type": "boolean"
-          },
-          "showPreferredChampions": {
-            "type": "boolean"
           }
         }
       },
@@ -69852,13 +70034,6 @@
           },
           "isSpectator": {
             "type": "boolean"
-          },
-          "preferredChampions": {
-            "type": "array",
-            "items": {
-              "type": "integer",
-              "format": "int32"
-            }
           },
           "puuid": {
             "type": "string"
@@ -70340,13 +70515,6 @@
               "type": "string"
             }
           },
-          "preferredChampions": {
-            "type": "array",
-            "items": {
-              "type": "integer",
-              "format": "int32"
-            }
-          },
           "properties": {
             "type": "object"
           },
@@ -70717,9 +70885,6 @@
             "type": "string"
           },
           "showPositionSelector": {
-            "type": "boolean"
-          },
-          "showPreferredChampions": {
             "type": "boolean"
           },
           "spectatorEnabled": {
@@ -71205,6 +71370,13 @@
           "nameVisibilityType": {
             "type": "string"
           },
+          "obfuscatedPuuid": {
+            "type": "string"
+          },
+          "obfuscatedSummonerId": {
+            "type": "integer",
+            "format": "uint64"
+          },
           "puuid": {
             "type": "string"
           },
@@ -71360,6 +71532,12 @@
           "pickIntentClearedReason": {
             "type": "string"
           },
+          "pickOrderSwaps": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LolLobbyTeamBuilderPickOrderSwapV1"
+            }
+          },
           "rerollState": {
             "$ref": "#/components/schemas/LolLobbyTeamBuilderRerollStateV1"
           },
@@ -71368,12 +71546,6 @@
           },
           "subphase": {
             "type": "string"
-          },
-          "swaps": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/LolLobbyTeamBuilderSwapV1"
-            }
           },
           "teamChatRoomId": {
             "type": "string"
@@ -71497,6 +71669,13 @@
           },
           "nameVisibilityType": {
             "type": "string"
+          },
+          "obfuscatedPuuid": {
+            "type": "string"
+          },
+          "obfuscatedSummonerId": {
+            "type": "integer",
+            "format": "uint64"
           },
           "playerType": {
             "type": "string"
@@ -71653,6 +71832,12 @@
               "$ref": "#/components/schemas/LolLobbyTeamBuilderChampSelectPlayerSelection"
             }
           },
+          "pickOrderSwaps": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LolLobbyTeamBuilderChampSelectSwapContract"
+            }
+          },
           "recoveryCounter": {
             "type": "integer",
             "format": "int64"
@@ -71663,12 +71848,6 @@
           },
           "skipChampionSelect": {
             "type": "boolean"
-          },
-          "swaps": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/LolLobbyTeamBuilderChampSelectSwapContract"
-            }
           },
           "theirTeam": {
             "type": "array",
@@ -72295,6 +72474,22 @@
         ],
         "type": "string"
       },
+      "LolLobbyTeamBuilderPickOrderSwapV1": {
+        "type": "object",
+        "properties": {
+          "cellId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "state": {
+            "type": "string"
+          }
+        }
+      },
       "LolLobbyTeamBuilderQueue": {
         "type": "object",
         "properties": {
@@ -72422,7 +72617,7 @@
           "advancedLearningQuests": {
             "type": "boolean"
           },
-          "allowSwaps": {
+          "allowPickOrderSwaps": {
             "type": "boolean"
           },
           "allowTrades": {
@@ -72531,22 +72726,6 @@
           "schemaVersion": {
             "type": "integer",
             "format": "int32"
-          }
-        }
-      },
-      "LolLobbyTeamBuilderSwapV1": {
-        "type": "object",
-        "properties": {
-          "cellId": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "id": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "state": {
-            "type": "string"
           }
         }
       },
@@ -73190,7 +73369,7 @@
       "LolLootCollectionsOwnership": {
         "type": "object",
         "properties": {
-          "freeToPlayReward": {
+          "loyaltyReward": {
             "type": "boolean"
           },
           "owned": {
@@ -73198,6 +73377,9 @@
           },
           "rental": {
             "$ref": "#/components/schemas/LolLootCollectionsRental"
+          },
+          "xboxGPReward": {
+            "type": "boolean"
           }
         }
       },
@@ -75375,6 +75557,12 @@
             "type": "integer",
             "format": "int32"
           },
+          "loyaltySources": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "boolean"
+            }
+          },
           "loyaltyTFTCompanionCount": {
             "type": "integer",
             "format": "int32"
@@ -77103,7 +77291,7 @@
       "LolMissionsCollectionsOwnership": {
         "type": "object",
         "properties": {
-          "freeToPlayReward": {
+          "loyaltyReward": {
             "type": "boolean"
           },
           "owned": {
@@ -77111,6 +77299,9 @@
           },
           "rental": {
             "$ref": "#/components/schemas/LolMissionsCollectionsRental"
+          },
+          "xboxGPReward": {
+            "type": "boolean"
           }
         }
       },
@@ -81460,6 +81651,17 @@
           }
         }
       },
+      "LolPlayerReportSenderChampSelectSummonerInfo": {
+        "type": "object",
+        "properties": {
+          "obfuscatedPuuid": {
+            "type": "string"
+          },
+          "puuid": {
+            "type": "string"
+          }
+        }
+      },
       "LolPlayerReportSenderEndOfGamePlayerReport": {
         "type": "object",
         "properties": {
@@ -82697,6 +82899,9 @@
           "owned": {
             "type": "boolean"
           },
+          "ownershipType": {
+            "$ref": "#/components/schemas/LolPurchaseWidgetInventoryOwnership"
+          },
           "prices": {
             "type": "array",
             "items": {
@@ -82885,6 +83090,15 @@
           }
         }
       },
+      "LolPurchaseWidgetInventoryOwnership": {
+        "enum": [
+          "OWNED",
+          "RENTED",
+          "LOYALTY",
+          "F2P"
+        ],
+        "type": "string"
+      },
       "LolPurchaseWidgetItemChoiceDetails": {
         "type": "object",
         "properties": {
@@ -82969,6 +83183,9 @@
           "itemId": {
             "type": "integer",
             "format": "int32"
+          },
+          "loyaltyUnlocked": {
+            "type": "boolean"
           },
           "metadata": {
             "type": "array",
@@ -86933,6 +87150,16 @@
         ],
         "type": "string"
       },
+      "LolSettingsPublisher": {
+        "enum": [
+          "riot",
+          "garena",
+          "tencent",
+          "twm",
+          "vng"
+        ],
+        "type": "string"
+      },
       "LolSettingsRegionLocale": {
         "type": "object",
         "properties": {
@@ -90107,8 +90334,8 @@
       "LolWorldsTokenCardTokenUpsellLockedType": {
         "enum": [
           "UNASSIGNED",
-          "UNLOCKED",
-          "LOCKED"
+          "LOCKED",
+          "UNLOCKED"
         ],
         "type": "string"
       },
@@ -90291,6 +90518,12 @@
           "loyalty": {
             "type": "boolean"
           },
+          "loyaltySources": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
           "lsb": {
             "type": "boolean"
           },
@@ -90338,6 +90571,12 @@
           },
           "loyalty": {
             "type": "boolean"
+          },
+          "loyaltySources": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           },
           "owned": {
             "type": "boolean"
@@ -90466,6 +90705,12 @@
           "ipBoost": {
             "type": "integer",
             "format": "int32"
+          },
+          "loyaltySources": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "boolean"
+            }
           },
           "loyaltyTFTCompanionCount": {
             "type": "integer",
@@ -90615,6 +90860,32 @@
           }
         }
       },
+      "LolYourshopPlayerNotification": {
+        "type": "object",
+        "properties": {
+          "critical": {
+            "type": "boolean"
+          },
+          "detailKey": {
+            "type": "string"
+          },
+          "iconUrl": {
+            "type": "string"
+          },
+          "source": {
+            "type": "string"
+          },
+          "state": {
+            "type": "string"
+          },
+          "titleKey": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          }
+        }
+      },
       "LolYourshopPlayerPermissions": {
         "type": "object",
         "properties": {
@@ -90732,6 +91003,23 @@
       },
       "LolYourshopRmsWalletPayload": {
         "type": "object"
+      },
+      "LolYourshopRmsXboxSubscriptionChange": {
+        "type": "object",
+        "properties": {
+          "active": {
+            "type": "boolean"
+          },
+          "identityProvider": {
+            "type": "string"
+          },
+          "puuid": {
+            "type": "string"
+          },
+          "subscriptionId": {
+            "type": "string"
+          }
+        }
       },
       "LolYourshopSimpleInventoryDTO": {
         "type": "object",
@@ -90885,6 +91173,17 @@
         "properties": {
           "data": {
             "$ref": "#/components/schemas/LolYourshopWalletDTO"
+          }
+        }
+      },
+      "LolYourshopXboxSubscriptionStatus": {
+        "type": "object",
+        "properties": {
+          "active": {
+            "type": "boolean"
+          },
+          "subscriptionId": {
+            "type": "string"
           }
         }
       },
@@ -94478,6 +94777,12 @@
             "type": "integer",
             "format": "uint64"
           },
+          "f2pRewardSources": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
           "freeToPlay": {
             "type": "boolean"
           },
@@ -94516,6 +94821,12 @@
           "endDate": {
             "type": "integer",
             "format": "uint64"
+          },
+          "f2pRewardSources": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           },
           "freeToPlayReward": {
             "type": "boolean"
@@ -95182,542 +95493,6 @@
           }
         }
       },
-      "VoiceChatAudioPropertiesResource": {
-        "type": "object",
-        "properties": {
-          "fastEnergyMeter": {
-            "type": "number",
-            "format": "double"
-          },
-          "isLoopbackEnabled": {
-            "type": "boolean"
-          },
-          "isMicActive": {
-            "type": "boolean"
-          },
-          "isSpeakerActive": {
-            "type": "boolean"
-          },
-          "micEnergy": {
-            "type": "integer",
-            "format": "uint32"
-          },
-          "micVolume": {
-            "type": "integer",
-            "format": "uint32"
-          },
-          "noiseFloorMeter": {
-            "type": "number",
-            "format": "double"
-          },
-          "speakerEnergy": {
-            "type": "integer",
-            "format": "uint32"
-          },
-          "speakerVolume": {
-            "type": "integer",
-            "format": "uint32"
-          },
-          "speechThresholdMeter": {
-            "type": "number",
-            "format": "double"
-          }
-        }
-      },
-      "VoiceChatCallStatsResource": {
-        "type": "object",
-        "properties": {
-          "callId": {
-            "type": "string"
-          },
-          "captureDeviceConsecutivelyReadCount": {
-            "type": "array",
-            "items": {
-              "type": "integer",
-              "format": "uint64"
-            }
-          },
-          "codecName": {
-            "type": "string"
-          },
-          "currentBars": {
-            "type": "integer",
-            "format": "uint64"
-          },
-          "currentOpusBandwidth": {
-            "type": "integer",
-            "format": "uint64"
-          },
-          "currentOpusBitRate": {
-            "type": "integer",
-            "format": "uint64"
-          },
-          "currentOpusComplexity": {
-            "type": "integer",
-            "format": "uint64"
-          },
-          "currentOpusMaxPacketSize": {
-            "type": "integer",
-            "format": "uint64"
-          },
-          "currentOpusVbrMode": {
-            "type": "integer",
-            "format": "uint64"
-          },
-          "incomingDiscarded": {
-            "type": "integer",
-            "format": "uint64"
-          },
-          "incomingOutOfTime": {
-            "type": "integer",
-            "format": "uint64"
-          },
-          "incomingPacketloss": {
-            "type": "integer",
-            "format": "uint64"
-          },
-          "incomingReceived": {
-            "type": "integer",
-            "format": "uint64"
-          },
-          "lastLatencyMeasured": {
-            "type": "number",
-            "format": "double"
-          },
-          "latencyMeasurementCount": {
-            "type": "integer",
-            "format": "uint64"
-          },
-          "latencyPacketsDropped": {
-            "type": "integer",
-            "format": "uint64"
-          },
-          "latencyPacketsLost": {
-            "type": "integer",
-            "format": "uint64"
-          },
-          "latencyPacketsMalformed": {
-            "type": "integer",
-            "format": "uint64"
-          },
-          "latencyPacketsNegativeLatency": {
-            "type": "integer",
-            "format": "uint64"
-          },
-          "latencyPacketsSent": {
-            "type": "integer",
-            "format": "uint64"
-          },
-          "latencySum": {
-            "type": "number",
-            "format": "double"
-          },
-          "maxLatency": {
-            "type": "number",
-            "format": "double"
-          },
-          "minLatency": {
-            "type": "number",
-            "format": "double"
-          },
-          "outgoingSent": {
-            "type": "integer",
-            "format": "uint64"
-          },
-          "plcOn": {
-            "type": "integer",
-            "format": "uint64"
-          },
-          "plcSyntheticFrames": {
-            "type": "integer",
-            "format": "uint64"
-          },
-          "renderDeviceErrors": {
-            "type": "integer",
-            "format": "uint64"
-          },
-          "renderDeviceOverruns": {
-            "type": "integer",
-            "format": "uint64"
-          },
-          "renderDeviceUnderruns": {
-            "type": "integer",
-            "format": "uint64"
-          },
-          "rFactor": {
-            "type": "number",
-            "format": "double"
-          },
-          "sampleIntervalBegin": {
-            "type": "number",
-            "format": "double"
-          },
-          "sampleIntervalEnd": {
-            "type": "number",
-            "format": "double"
-          }
-        }
-      },
-      "VoiceChatCaptureDevicePermissionStatus": {
-        "enum": [
-          "promptForPermission",
-          "permissionDenied",
-          "permissionGranted"
-        ],
-        "type": "string"
-      },
-      "VoiceChatCodecSettingsResource": {
-        "type": "object",
-        "properties": {
-          "codecBandwidth": {
-            "type": "integer",
-            "format": "uint32"
-          },
-          "codecBitrate": {
-            "type": "integer",
-            "format": "uint32"
-          },
-          "codecComplexity": {
-            "type": "integer",
-            "format": "uint32"
-          },
-          "codecVbrMode": {
-            "type": "integer",
-            "format": "uint32"
-          }
-        }
-      },
-      "VoiceChatConfigReadinessEnum": {
-        "enum": [
-          "NotReady",
-          "Ready",
-          "Disabled"
-        ],
-        "type": "string"
-      },
-      "VoiceChatConfigResource": {
-        "type": "object",
-        "properties": {
-          "accessTokenUri": {
-            "type": "string"
-          },
-          "authTokenUri": {
-            "type": "string"
-          },
-          "jwt2gvtUrl": {
-            "type": "string"
-          },
-          "logLevel": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "logLevelName": {
-            "type": "string"
-          },
-          "logsPath": {
-            "type": "string"
-          },
-          "provider": {
-            "type": "string"
-          },
-          "useExternalAuth": {
-            "type": "boolean"
-          },
-          "voiceDomain": {
-            "type": "string"
-          },
-          "voiceServerUri": {
-            "type": "string"
-          }
-        }
-      },
-      "VoiceChatConfigStatus": {
-        "type": "object",
-        "properties": {
-          "readiness": {
-            "$ref": "#/components/schemas/VoiceChatConfigReadinessEnum"
-          }
-        }
-      },
-      "VoiceChatConfigType": {
-        "enum": [
-          "public",
-          "player"
-        ],
-        "type": "string"
-      },
-      "VoiceChatDeviceResource": {
-        "type": "object",
-        "properties": {
-          "handle": {
-            "type": "string"
-          },
-          "is_current_device": {
-            "type": "boolean"
-          },
-          "is_default": {
-            "type": "boolean"
-          },
-          "is_effective_device": {
-            "type": "boolean"
-          },
-          "name": {
-            "type": "string"
-          }
-        }
-      },
-      "VoiceChatParticipantResource": {
-        "type": "object",
-        "properties": {
-          "energy": {
-            "type": "integer",
-            "format": "uint32"
-          },
-          "id": {
-            "type": "string"
-          },
-          "isMuted": {
-            "type": "boolean"
-          },
-          "isSpeaking": {
-            "type": "boolean"
-          },
-          "name": {
-            "type": "string"
-          },
-          "speakingTimestamp": {
-            "type": "integer",
-            "format": "uint32"
-          },
-          "uri": {
-            "type": "string"
-          },
-          "volume": {
-            "type": "integer",
-            "format": "uint32"
-          }
-        }
-      },
-      "VoiceChatPushToTalkResource": {
-        "type": "object",
-        "properties": {
-          "pttEnabled": {
-            "type": "boolean"
-          },
-          "pttKeyBinding": {
-            "type": "string"
-          }
-        }
-      },
-      "VoiceChatRsoAuthorizationResource": {
-        "type": "object",
-        "properties": {
-          "currentAccountId": {
-            "type": "integer",
-            "format": "uint64"
-          },
-          "currentPlatformId": {
-            "type": "string"
-          },
-          "subject": {
-            "type": "string"
-          }
-        }
-      },
-      "VoiceChatSessionResource": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "string"
-          },
-          "isMuted": {
-            "type": "boolean"
-          },
-          "isTransmitEnabled": {
-            "type": "boolean"
-          },
-          "participants": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/VoiceChatParticipantResource"
-            }
-          },
-          "status": {
-            "$ref": "#/components/schemas/VoiceChatSessionStatus"
-          },
-          "volume": {
-            "type": "integer",
-            "format": "uint32"
-          }
-        }
-      },
-      "VoiceChatSessionStatus": {
-        "enum": [
-          "active",
-          "onHold"
-        ],
-        "type": "string"
-      },
-      "VoiceChatSettingsResource": {
-        "type": "object",
-        "properties": {
-          "currentCaptureDeviceHandle": {
-            "type": "string"
-          },
-          "currentRenderDeviceHandle": {
-            "type": "string"
-          },
-          "localMicMuted": {
-            "type": "boolean"
-          },
-          "loopbackEnabled": {
-            "type": "boolean"
-          },
-          "micLevel": {
-            "type": "integer",
-            "format": "uint32"
-          },
-          "speakerLevel": {
-            "type": "integer",
-            "format": "uint32"
-          },
-          "vadHangoverTime": {
-            "type": "integer",
-            "format": "uint32"
-          },
-          "vadSensitivity": {
-            "type": "integer",
-            "format": "uint32"
-          }
-        }
-      },
-      "VoiceChatStateResource": {
-        "type": "object",
-        "properties": {
-          "connected": {
-            "type": "boolean"
-          }
-        }
-      },
-      "VoiceChatStateType": {
-        "enum": [
-          "disconnected",
-          "connecting",
-          "connected",
-          "disconnecting",
-          "initialized",
-          "shuttingdown"
-        ],
-        "type": "string"
-      },
-      "VoiceChatUpdateCodecSettingsResource": {
-        "type": "object",
-        "properties": {
-          "codecBandwidth": {
-            "type": "integer",
-            "format": "uint32"
-          },
-          "codecBitrate": {
-            "type": "integer",
-            "format": "uint32"
-          },
-          "codecComplexity": {
-            "type": "integer",
-            "format": "uint32"
-          },
-          "codecVbrMode": {
-            "type": "integer",
-            "format": "uint32"
-          }
-        }
-      },
-      "VoiceChatUpdateParticipantResource": {
-        "type": "object",
-        "properties": {
-          "isMuted": {
-            "type": "boolean"
-          },
-          "volume": {
-            "type": "integer",
-            "format": "uint32"
-          }
-        }
-      },
-      "VoiceChatUpdateSettingsResource": {
-        "type": "object",
-        "properties": {
-          "currentCaptureDeviceHandle": {
-            "type": "string"
-          },
-          "currentRenderDeviceHandle": {
-            "type": "string"
-          },
-          "localMicMuted": {
-            "type": "boolean"
-          },
-          "loopbackEnabled": {
-            "type": "boolean"
-          },
-          "micLevel": {
-            "type": "integer",
-            "format": "uint32"
-          },
-          "speakerLevel": {
-            "type": "integer",
-            "format": "uint32"
-          },
-          "vadHangoverTime": {
-            "type": "integer",
-            "format": "uint32"
-          },
-          "vadSensitivity": {
-            "type": "integer",
-            "format": "uint32"
-          }
-        }
-      },
-      "VoiceChatVoiceErrorCounterResource": {
-        "type": "object",
-        "properties": {
-          "count": {
-            "type": "integer",
-            "format": "uint64"
-          },
-          "error": {
-            "$ref": "#/components/schemas/VoiceChatVoiceErrorResource"
-          },
-          "timeOfLastError": {
-            "type": "integer",
-            "format": "uint64"
-          }
-        }
-      },
-      "VoiceChatVoiceErrorResource": {
-        "type": "object",
-        "properties": {
-          "errorString": {
-            "type": "string"
-          },
-          "responseType": {
-            "type": "integer",
-            "format": "uint64"
-          },
-          "responseTypeString": {
-            "type": "string"
-          },
-          "returnCode": {
-            "type": "integer",
-            "format": "uint64"
-          },
-          "statusCode": {
-            "type": "integer",
-            "format": "uint64"
-          },
-          "statusString": {
-            "type": "string"
-          }
-        }
-      },
       "YourshopLcdsChampionDTO": {
         "type": "object",
         "properties": {
@@ -95871,9 +95646,6 @@
       "name": "Plugin sanitizer"
     },
     {
-      "name": "Plugin voice-chat"
-    },
-    {
       "name": "Plugin lol-account-verification"
     },
     {
@@ -95950,6 +95722,9 @@
     },
     {
       "name": "Plugin lol-highlights"
+    },
+    {
+      "name": "Plugin lol-honeyfruit"
     },
     {
       "name": "Plugin lol-honor-v2"

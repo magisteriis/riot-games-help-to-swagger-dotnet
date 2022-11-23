@@ -59051,8 +59051,8 @@ components:
     LolWorldsTokenCardTokenUpsellLockedType:
       enum:
         - UNASSIGNED
-        - UNLOCKED
         - LOCKED
+        - UNLOCKED
       type: string
     LolYourshopAccessTokenResource:
       type: object

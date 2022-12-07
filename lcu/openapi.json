@@ -38,7 +38,6 @@
             "in": "query",
             "description": "ID of the asynchronous operation to remove",
             "required": true,
-            "style": "form",
             "schema": {
               "type": "integer",
               "format": "uint32"
@@ -83,7 +82,6 @@
             "in": "query",
             "description": "ID of the asynchronous operation to check",
             "required": true,
-            "style": "form",
             "schema": {
               "type": "integer",
               "format": "uint32"
@@ -128,7 +126,6 @@
             "in": "query",
             "description": "ID of the asynchronous operation to check",
             "required": true,
-            "style": "form",
             "schema": {
               "type": "integer",
               "format": "uint32"
@@ -173,7 +170,6 @@
             "in": "query",
             "description": "Operation to cancel",
             "required": true,
-            "style": "form",
             "schema": {
               "type": "integer",
               "format": "uint32"
@@ -248,7 +244,6 @@
             "name": "target",
             "in": "query",
             "description": "Name of the function or type to describe",
-            "style": "form",
             "schema": {
               "type": "string"
             }
@@ -257,7 +252,6 @@
             "name": "format",
             "in": "query",
             "description": "Format for returned information",
-            "style": "form",
             "schema": {
               "$ref": "#/components/schemas/RemotingHelpFormat"
             }
@@ -405,7 +399,6 @@
             "name": "buffered",
             "in": "query",
             "description": "Specifies whether logs will be buffered for LoggingGetEntries to work",
-            "style": "form",
             "schema": {
               "type": "boolean"
             }
@@ -414,7 +407,6 @@
             "name": "severity",
             "in": "query",
             "description": "Minimum severity level to fire a log event",
-            "style": "form",
             "schema": {
               "$ref": "#/components/schemas/LogSeverityLevels"
             }
@@ -455,7 +447,6 @@
             "name": "contextName",
             "in": "query",
             "description": "Name of the context to find (optional)",
-            "style": "form",
             "schema": {
               "type": "string"
             }
@@ -498,7 +489,6 @@
             "in": "query",
             "description": "Name of the event to subscribe to",
             "required": true,
-            "style": "form",
             "schema": {
               "type": "string"
             }
@@ -507,7 +497,6 @@
             "name": "format",
             "in": "query",
             "description": "Desired format to receive events in. If unspecified, events will be sent in the active result format at the time.",
-            "style": "form",
             "schema": {
               "$ref": "#/components/schemas/RemotingSerializedFormat"
             }
@@ -550,7 +539,6 @@
             "in": "query",
             "description": "Name of the event to unsubscribe from",
             "required": true,
-            "style": "form",
             "schema": {
               "type": "string"
             }
@@ -594,7 +582,6 @@
             "name": "format",
             "in": "query",
             "description": "Output format to switch to",
-            "style": "form",
             "schema": {
               "$ref": "#/components/schemas/RemotingSerializedFormat"
             }
@@ -639,7 +626,6 @@
             "in": "path",
             "description": "Plugin name to serve from",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -649,7 +635,6 @@
             "in": "path",
             "description": "Path to the asset to serve",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -658,7 +643,6 @@
             "name": "if-none-match",
             "in": "header",
             "description": "optional ETag of the asset that the caller has cached",
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -701,7 +685,6 @@
             "in": "path",
             "description": "Plugin name to serve from",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -711,7 +694,6 @@
             "in": "path",
             "description": "Path to the asset to serve",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -720,7 +702,6 @@
             "name": "if-none-match",
             "in": "header",
             "description": "optional ETag of the asset that the caller has cached",
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -762,7 +743,6 @@
             "name": "policyType",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "$ref": "#/components/schemas/LolAntiAddictionPolicyType"
             }
@@ -807,7 +787,6 @@
             "in": "path",
             "description": "ID of the asynchronous operation to check",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "uint32"
@@ -853,7 +832,6 @@
             "in": "path",
             "description": "ID of the asynchronous operation to remove",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "uint32"
@@ -897,7 +875,6 @@
             "in": "path",
             "description": "ID of the asynchronous operation to check",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "uint32"
@@ -940,7 +917,6 @@
             "name": "type",
             "in": "query",
             "required": true,
-            "style": "form",
             "schema": {
               "$ref": "#/components/schemas/ClientConfigConfigType"
             }
@@ -948,7 +924,6 @@
           {
             "name": "app",
             "in": "query",
-            "style": "form",
             "schema": {
               "type": "string"
             }
@@ -956,7 +931,6 @@
           {
             "name": "version",
             "in": "query",
-            "style": "form",
             "schema": {
               "type": "string"
             }
@@ -964,7 +938,6 @@
           {
             "name": "patchline",
             "in": "query",
-            "style": "form",
             "schema": {
               "type": "string"
             }
@@ -972,7 +945,6 @@
           {
             "name": "region",
             "in": "query",
-            "style": "form",
             "schema": {
               "type": "string"
             }
@@ -980,7 +952,6 @@
           {
             "name": "namespace",
             "in": "query",
-            "style": "form",
             "schema": {
               "type": "string"
             }
@@ -1031,7 +1002,6 @@
             "name": "name",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -1040,7 +1010,6 @@
             "name": "type",
             "in": "query",
             "required": true,
-            "style": "form",
             "schema": {
               "$ref": "#/components/schemas/ClientConfigConfigType"
             }
@@ -1048,7 +1017,6 @@
           {
             "name": "app",
             "in": "query",
-            "style": "form",
             "schema": {
               "type": "string"
             }
@@ -1056,7 +1024,6 @@
           {
             "name": "version",
             "in": "query",
-            "style": "form",
             "schema": {
               "type": "string"
             }
@@ -1064,7 +1031,6 @@
           {
             "name": "patchline",
             "in": "query",
-            "style": "form",
             "schema": {
               "type": "string"
             }
@@ -1072,7 +1038,6 @@
           {
             "name": "region",
             "in": "query",
-            "style": "form",
             "schema": {
               "type": "string"
             }
@@ -1161,7 +1126,6 @@
             "name": "type",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "$ref": "#/components/schemas/ClientConfigConfigType"
             }
@@ -1203,7 +1167,6 @@
             "name": "name",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -1278,7 +1241,6 @@
             "name": "namespace",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -1329,7 +1291,6 @@
             "name": "namespace",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -1380,7 +1341,6 @@
             "name": "namespace",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -1622,7 +1582,6 @@
             "in": "path",
             "description": "The path to the settings key",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -1663,7 +1622,6 @@
             "in": "path",
             "description": "The path to the settings key",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -1708,7 +1666,6 @@
             "in": "path",
             "description": "The path to the settings key",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -2135,7 +2092,6 @@
             "name": "SendDeactivationPinRequest",
             "in": "query",
             "required": true,
-            "style": "form",
             "schema": {
               "type": ""
             }
@@ -2422,7 +2378,6 @@
             "name": "puuid",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -2464,7 +2419,6 @@
             "name": "championId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -2474,7 +2428,6 @@
             "name": "position",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "$ref": "#/components/schemas/LolCareerStatsSummonersRiftPosition"
             }
@@ -2483,7 +2436,6 @@
             "name": "tier",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "$ref": "#/components/schemas/LolCareerStatsRankedTier"
             }
@@ -2492,7 +2444,6 @@
             "name": "queue",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "$ref": "#/components/schemas/LolCareerStatsCareerStatsQueueType"
             }
@@ -2534,7 +2485,6 @@
             "name": "season",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "uint32"
@@ -2544,7 +2494,6 @@
             "name": "championId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -2554,7 +2503,6 @@
             "name": "position",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "$ref": "#/components/schemas/LolCareerStatsSummonersRiftPosition"
             }
@@ -2563,7 +2511,6 @@
             "name": "tier",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "$ref": "#/components/schemas/LolCareerStatsRankedTier"
             }
@@ -2572,7 +2519,6 @@
             "name": "queue",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "$ref": "#/components/schemas/LolCareerStatsCareerStatsQueueType"
             }
@@ -2614,7 +2560,6 @@
             "name": "championId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -2624,7 +2569,6 @@
             "name": "position",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "$ref": "#/components/schemas/LolCareerStatsSummonersRiftPosition"
             }
@@ -2675,7 +2619,6 @@
             "name": "season",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "uint32"
@@ -2685,7 +2628,6 @@
             "name": "championId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -2695,7 +2637,6 @@
             "name": "position",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "$ref": "#/components/schemas/LolCareerStatsSummonersRiftPosition"
             }
@@ -2814,7 +2755,6 @@
             "name": "position",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "$ref": "#/components/schemas/LolCareerStatsSummonersRiftPosition"
             }
@@ -2823,7 +2763,6 @@
             "name": "tier",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "$ref": "#/components/schemas/LolCareerStatsRankedTier"
             }
@@ -2832,7 +2771,6 @@
             "name": "queue",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "$ref": "#/components/schemas/LolCareerStatsCareerStatsQueueType"
             }
@@ -2874,7 +2812,6 @@
             "name": "season",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "uint32"
@@ -2884,7 +2821,6 @@
             "name": "position",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "$ref": "#/components/schemas/LolCareerStatsSummonersRiftPosition"
             }
@@ -2893,7 +2829,6 @@
             "name": "tier",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "$ref": "#/components/schemas/LolCareerStatsRankedTier"
             }
@@ -2902,7 +2837,6 @@
             "name": "queue",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "$ref": "#/components/schemas/LolCareerStatsCareerStatsQueueType"
             }
@@ -2944,7 +2878,6 @@
             "name": "position",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "$ref": "#/components/schemas/LolCareerStatsSummonersRiftPosition"
             }
@@ -2995,7 +2928,6 @@
             "name": "season",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "uint32"
@@ -3005,7 +2937,6 @@
             "name": "position",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "$ref": "#/components/schemas/LolCareerStatsSummonersRiftPosition"
             }
@@ -3124,7 +3055,6 @@
             "name": "puuid",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -3166,7 +3096,6 @@
             "name": "puuid",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -3175,7 +3104,6 @@
             "name": "season",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "uint32"
@@ -3218,7 +3146,6 @@
             "name": "puuid",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -3227,7 +3154,6 @@
             "name": "season",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "uint32"
@@ -3237,7 +3163,6 @@
             "name": "queue",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "$ref": "#/components/schemas/LolCareerStatsCareerStatsQueueType"
             }
@@ -3246,7 +3171,6 @@
             "name": "position",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "$ref": "#/components/schemas/LolCareerStatsSummonersRiftPosition"
             }
@@ -3254,7 +3178,6 @@
           {
             "name": "championId",
             "in": "query",
-            "style": "form",
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -3297,7 +3220,6 @@
             "name": "inventoryType",
             "in": "query",
             "required": true,
-            "style": "form",
             "schema": {
               "type": "string"
             }
@@ -3306,7 +3228,6 @@
             "name": "itemId",
             "in": "query",
             "required": true,
-            "style": "form",
             "schema": {
               "type": "integer",
               "format": "int64"
@@ -3349,7 +3270,6 @@
             "name": "inventoryType",
             "in": "query",
             "required": true,
-            "style": "form",
             "schema": {
               "type": "string"
             }
@@ -3358,7 +3278,6 @@
             "name": "itemIds",
             "in": "query",
             "required": true,
-            "style": "form",
             "schema": {
               "type": "array",
               "items": {
@@ -3413,7 +3332,6 @@
             "name": "inventoryType",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -3464,7 +3382,6 @@
             "name": "id",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "uint64"
@@ -3687,7 +3604,6 @@
             "name": "gameId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "uint64"
@@ -3881,7 +3797,6 @@
             "name": "puuid",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -3923,7 +3838,6 @@
             "name": "puuids",
             "in": "query",
             "required": true,
-            "style": "form",
             "schema": {
               "type": "array",
               "items": {
@@ -4090,7 +4004,6 @@
             "name": "gameId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "uint64"
@@ -4100,7 +4013,6 @@
             "name": "puuid",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -4450,7 +4362,6 @@
             "name": "id",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "uint64"
@@ -4512,7 +4423,6 @@
             "name": "id",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "int64"
@@ -4736,7 +4646,6 @@
             "name": "id",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "int64"
@@ -4779,7 +4688,6 @@
             "name": "id",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "int64"
@@ -4822,7 +4730,6 @@
             "name": "id",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "int64"
@@ -4865,7 +4772,6 @@
             "name": "id",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "int64"
@@ -4908,7 +4814,6 @@
             "name": "id",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "int64"
@@ -5173,7 +5078,6 @@
             "name": "championId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -5287,7 +5191,6 @@
             "name": "id",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "int64"
@@ -5361,7 +5264,6 @@
             "name": "id",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "int64"
@@ -5583,7 +5485,6 @@
             "name": "id",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "int64"
@@ -5645,7 +5546,6 @@
             "name": "id",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "int64"
@@ -5688,7 +5588,6 @@
             "name": "championId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -5912,7 +5811,6 @@
             "name": "id",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "int64"
@@ -5955,7 +5853,6 @@
             "name": "id",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "int64"
@@ -5998,7 +5895,6 @@
             "name": "id",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "int64"
@@ -6041,7 +5937,6 @@
             "name": "id",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "int64"
@@ -6084,7 +5979,6 @@
             "name": "id",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "int64"
@@ -6198,7 +6092,6 @@
             "name": "id",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "int64"
@@ -6241,7 +6134,6 @@
             "name": "id",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "int64"
@@ -6284,7 +6176,6 @@
             "name": "id",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "int64"
@@ -6327,7 +6218,6 @@
             "name": "id",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "int64"
@@ -6370,7 +6260,6 @@
             "name": "id",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "int64"
@@ -6524,7 +6413,6 @@
             "name": "slotId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "uint32"
@@ -6629,7 +6517,6 @@
             "name": "championId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "int64"
@@ -6639,7 +6526,6 @@
             "name": "position",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -6731,7 +6617,6 @@
             "name": "summonerId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "uint64"
@@ -6783,7 +6668,6 @@
             "name": "summonerId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "uint64"
@@ -6835,7 +6719,6 @@
             "name": "summonerId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "uint64"
@@ -6878,7 +6761,6 @@
             "name": "summonerId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "uint64"
@@ -6888,7 +6770,6 @@
             "name": "championId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -6931,7 +6812,6 @@
             "name": "summonerId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "uint64"
@@ -6941,7 +6821,6 @@
             "name": "championId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -6993,7 +6872,6 @@
             "name": "summonerId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "uint64"
@@ -7003,7 +6881,6 @@
             "name": "championId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -7013,7 +6890,6 @@
             "name": "championSkinId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -7056,7 +6932,6 @@
             "name": "summonerId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "uint64"
@@ -7066,7 +6941,6 @@
             "name": "championId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -7076,7 +6950,6 @@
             "name": "skinId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -7128,7 +7001,6 @@
             "name": "summonerId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "uint64"
@@ -7308,7 +7180,6 @@
             "name": "id",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -7348,7 +7219,6 @@
             "name": "id",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -7509,7 +7379,6 @@
             "name": "id",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -7549,7 +7418,6 @@
             "name": "id",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -7589,7 +7457,6 @@
             "name": "id",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -7650,7 +7517,6 @@
             "name": "id",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -7690,7 +7556,6 @@
             "name": "id",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -7732,7 +7597,6 @@
             "name": "id",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -7772,7 +7636,6 @@
             "name": "id",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -7821,7 +7684,6 @@
             "name": "id",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -7882,7 +7744,6 @@
             "name": "id",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -7931,7 +7792,6 @@
             "name": "id",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -7992,7 +7852,6 @@
             "name": "id",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -8001,7 +7860,6 @@
             "name": "pid",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -8151,7 +8009,6 @@
             "name": "isToggledOn",
             "in": "query",
             "required": true,
-            "style": "form",
             "schema": {
               "type": "boolean"
             }
@@ -8264,7 +8121,6 @@
             "name": "id",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "uint64"
@@ -8338,7 +8194,6 @@
             "name": "summonerId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "uint64"
@@ -8469,7 +8324,6 @@
             "name": "id",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "uint32"
@@ -8510,7 +8364,6 @@
             "name": "id",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "uint32"
@@ -8551,7 +8404,6 @@
             "name": "id",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "uint32"
@@ -8613,7 +8465,6 @@
             "name": "id",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "uint32"
@@ -8803,7 +8654,6 @@
             "name": "id",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -8843,7 +8693,6 @@
             "name": "id",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -8944,7 +8793,6 @@
             "name": "id",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -8984,7 +8832,6 @@
             "name": "id",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -9024,7 +8871,6 @@
             "name": "id",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -9450,7 +9296,6 @@
           {
             "name": "doAsync",
             "in": "query",
-            "style": "form",
             "schema": {
               "type": "boolean"
             }
@@ -9511,7 +9356,6 @@
             "name": "key",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -9519,7 +9363,6 @@
           {
             "name": "doAsync",
             "in": "query",
-            "style": "form",
             "schema": {
               "type": "boolean"
             }
@@ -9559,7 +9402,6 @@
             "name": "key",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -9599,7 +9441,6 @@
             "name": "key",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -9607,7 +9448,6 @@
           {
             "name": "doAsync",
             "in": "query",
-            "style": "form",
             "schema": {
               "type": "boolean"
             }
@@ -9789,7 +9629,6 @@
             "name": "bracketId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "int64"
@@ -10061,7 +9900,6 @@
             "name": "uuids",
             "in": "query",
             "required": true,
-            "style": "form",
             "schema": {
               "type": "array",
               "items": {
@@ -10438,7 +10276,6 @@
             "name": "rosterId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -10480,7 +10317,6 @@
             "name": "tournamentId",
             "in": "query",
             "required": true,
-            "style": "form",
             "schema": {
               "type": "integer",
               "format": "int64"
@@ -10950,7 +10786,6 @@
             "name": "rosterId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -10992,7 +10827,6 @@
             "name": "rosterId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -11034,7 +10868,6 @@
             "name": "rosterId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -11076,7 +10909,6 @@
             "name": "rosterId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -11137,7 +10969,6 @@
             "name": "rosterId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -11198,7 +11029,6 @@
             "name": "rosterId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -11259,7 +11089,6 @@
             "name": "rosterId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -11320,7 +11149,6 @@
             "name": "rosterId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -11362,7 +11190,6 @@
             "name": "rosterId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -11404,7 +11231,6 @@
             "name": "rosterId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -11413,7 +11239,6 @@
             "name": "summonerIds",
             "in": "query",
             "required": true,
-            "style": "form",
             "schema": {
               "type": "array",
               "items": {
@@ -11468,7 +11293,6 @@
             "name": "rosterId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -11529,7 +11353,6 @@
             "name": "rosterId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -11571,7 +11394,6 @@
             "name": "rosterId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -11613,7 +11435,6 @@
             "name": "rosterId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -11674,7 +11495,6 @@
             "name": "rosterId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -11735,7 +11555,6 @@
             "name": "rosterId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "int64"
@@ -11778,7 +11597,6 @@
             "name": "rosterId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -11787,7 +11605,6 @@
             "name": "summonerIds",
             "in": "query",
             "required": true,
-            "style": "form",
             "schema": {
               "type": "array",
               "items": {
@@ -11833,7 +11650,6 @@
             "name": "rosterId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -11842,7 +11658,6 @@
             "name": "summonerId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "uint64"
@@ -11885,7 +11700,6 @@
             "name": "rosterId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -11894,7 +11708,6 @@
             "name": "summonerId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "uint64"
@@ -11937,7 +11750,6 @@
             "name": "rosterId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -11946,7 +11758,6 @@
             "name": "summonerId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "uint64"
@@ -11989,7 +11800,6 @@
             "name": "rosterId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -11998,7 +11808,6 @@
             "name": "summonerId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "uint64"
@@ -12041,7 +11850,6 @@
             "name": "rosterId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -12050,7 +11858,6 @@
             "name": "summonerId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "uint64"
@@ -12093,7 +11900,6 @@
             "name": "rosterId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -12102,7 +11908,6 @@
             "name": "summonerId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "uint64"
@@ -12164,7 +11969,6 @@
             "name": "rosterId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -12173,7 +11977,6 @@
             "name": "summonerId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "uint64"
@@ -12216,7 +12019,6 @@
             "name": "rosterId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -12225,7 +12027,6 @@
             "name": "newCaptainSummonerId",
             "in": "query",
             "required": true,
-            "style": "form",
             "schema": {
               "type": "integer",
               "format": "uint64"
@@ -12268,7 +12069,6 @@
             "name": "rosterId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -12310,7 +12110,6 @@
             "name": "rosterId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -12352,7 +12151,6 @@
             "name": "rosterId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -12394,7 +12192,6 @@
             "name": "rosterId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -12436,7 +12233,6 @@
             "name": "summonerIds",
             "in": "query",
             "required": true,
-            "style": "form",
             "schema": {
               "type": "array",
               "items": {
@@ -12491,7 +12287,6 @@
             "name": "summonerIds",
             "in": "query",
             "required": true,
-            "style": "form",
             "schema": {
               "type": "array",
               "items": {
@@ -12537,7 +12332,6 @@
             "name": "seasonId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -12620,7 +12414,6 @@
             "name": "id",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -12807,7 +12600,6 @@
             "name": "tournamentId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "int64"
@@ -12850,7 +12642,6 @@
             "name": "tournamentId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "int64"
@@ -12912,7 +12703,6 @@
             "name": "tournamentId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "int64"
@@ -12922,7 +12712,6 @@
             "name": "summonerIds",
             "in": "query",
             "required": true,
-            "style": "form",
             "schema": {
               "type": "array",
               "items": {
@@ -12977,7 +12766,6 @@
             "name": "tournamentId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "int64"
@@ -13020,7 +12808,6 @@
             "name": "tournamentId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "int64"
@@ -13063,7 +12850,6 @@
             "name": "tournamentId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "int64"
@@ -13106,7 +12892,6 @@
             "name": "tournamentId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "int64"
@@ -13354,7 +13139,6 @@
             "name": "delaySeconds",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "number",
               "format": "double"
@@ -13395,7 +13179,6 @@
             "name": "delaySeconds",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "number",
               "format": "double"
@@ -13500,7 +13283,6 @@
             "name": "name",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -13542,7 +13324,6 @@
             "name": "summonerId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "uint64"
@@ -13585,7 +13366,6 @@
             "name": "summonerId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "uint64"
@@ -13637,7 +13417,6 @@
             "name": "summonerId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "uint64"
@@ -13647,7 +13426,6 @@
             "name": "limit",
             "in": "query",
             "required": true,
-            "style": "form",
             "schema": {
               "type": "integer",
               "format": "uint64"
@@ -13656,7 +13434,6 @@
           {
             "name": "sortRule",
             "in": "query",
-            "style": "form",
             "schema": {
               "type": "string"
             }
@@ -13698,7 +13475,6 @@
             "name": "summonerId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "uint64"
@@ -13741,7 +13517,6 @@
             "name": "summonerId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "uint64"
@@ -13793,7 +13568,6 @@
             "name": "summonerId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "uint64"
@@ -13803,7 +13577,6 @@
             "name": "wardSkinId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "int64"
@@ -13911,7 +13684,6 @@
             "name": "summonerIds",
             "in": "query",
             "required": true,
-            "style": "form",
             "schema": {
               "type": "array",
               "items": {
@@ -14059,7 +13831,6 @@
             "name": "setName",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -14101,7 +13872,6 @@
             "name": "setName",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -14143,7 +13913,6 @@
             "name": "setName",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -14185,7 +13954,6 @@
             "name": "type",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -14194,7 +13962,6 @@
             "name": "contentIds",
             "in": "query",
             "required": true,
-            "style": "form",
             "schema": {
               "type": "array",
               "items": {
@@ -14268,7 +14035,6 @@
             "name": "itemId",
             "in": "query",
             "required": true,
-            "style": "form",
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -14340,7 +14106,6 @@
             "name": "itemId",
             "in": "query",
             "required": true,
-            "style": "form",
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -14412,7 +14177,6 @@
             "name": "itemId",
             "in": "query",
             "required": true,
-            "style": "form",
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -14892,7 +14656,6 @@
             "name": "eventType",
             "in": "query",
             "required": true,
-            "style": "form",
             "schema": {
               "type": "string"
             }
@@ -14901,7 +14664,6 @@
             "name": "matchId",
             "in": "query",
             "required": true,
-            "style": "form",
             "schema": {
               "type": "string"
             }
@@ -15729,7 +15491,6 @@
             "name": "summonerName",
             "in": "query",
             "required": true,
-            "style": "form",
             "schema": {
               "type": "string"
             }
@@ -15738,7 +15499,6 @@
             "name": "message",
             "in": "query",
             "required": true,
-            "style": "form",
             "schema": {
               "type": "string"
             }
@@ -15806,7 +15566,6 @@
             "name": "message",
             "in": "query",
             "required": true,
-            "style": "form",
             "schema": {
               "type": "string"
             }
@@ -15893,7 +15652,6 @@
             "name": "gameTypeConfigId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "uint32"
@@ -15936,7 +15694,6 @@
             "name": "gameTypeConfigId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "uint32"
@@ -15946,7 +15703,6 @@
             "name": "mapId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -16029,7 +15785,6 @@
             "name": "id",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -16072,7 +15827,6 @@
             "name": "queueType",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -16672,7 +16426,6 @@
             "name": "messsage",
             "in": "query",
             "required": true,
-            "style": "form",
             "schema": {
               "type": "string"
             }
@@ -16780,7 +16533,6 @@
             "name": "key",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -16858,7 +16610,6 @@
             "name": "key",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -16922,7 +16673,6 @@
             "name": "extraGameClientArgs",
             "in": "query",
             "required": true,
-            "style": "form",
             "schema": {
               "type": "array",
               "items": {
@@ -17105,7 +16855,6 @@
             "name": "enabled",
             "in": "query",
             "required": true,
-            "style": "form",
             "schema": {
               "type": "boolean"
             }
@@ -17225,7 +16974,6 @@
             "name": "session",
             "in": "query",
             "required": true,
-            "style": "form",
             "schema": {
               "type": "string"
             }
@@ -17425,7 +17173,6 @@
             "name": "eventType",
             "in": "query",
             "required": true,
-            "style": "form",
             "schema": {
               "type": "string"
             }
@@ -17587,7 +17334,6 @@
           {
             "name": "targetSummonerName",
             "in": "query",
-            "style": "form",
             "schema": {
               "type": "string"
             }
@@ -17705,7 +17451,6 @@
             "name": "args",
             "in": "query",
             "required": true,
-            "style": "form",
             "schema": {
               "type": "array",
               "items": {
@@ -17800,7 +17545,6 @@
             "name": "ip_address",
             "in": "query",
             "required": true,
-            "style": "form",
             "schema": {
               "type": "string"
             }
@@ -17904,7 +17648,6 @@
             "name": "highlightId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "uint64"
@@ -18087,7 +17830,6 @@
             "name": "id",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "uint64"
@@ -18128,7 +17870,6 @@
             "name": "id",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "uint64"
@@ -18169,7 +17910,6 @@
             "name": "id",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "uint64"
@@ -19048,7 +18788,6 @@
             "name": "summonerId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "uint64"
@@ -19091,7 +18830,6 @@
             "name": "puuid",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -19195,7 +18933,6 @@
             "name": "inventoryTypes",
             "in": "query",
             "required": true,
-            "style": "form",
             "schema": {
               "type": "array",
               "items": {
@@ -19289,7 +19026,6 @@
             "name": "inventoryTypes",
             "in": "query",
             "required": true,
-            "style": "form",
             "schema": {
               "type": "array",
               "items": {
@@ -19343,7 +19079,6 @@
             "name": "id",
             "in": "query",
             "required": true,
-            "style": "form",
             "schema": {
               "type": "integer",
               "format": "int64"
@@ -19369,7 +19104,6 @@
             "name": "inventoryType",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -19420,7 +19154,6 @@
             "name": "puuid",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -19429,7 +19162,6 @@
             "name": "inventoryTypes",
             "in": "query",
             "required": true,
-            "style": "form",
             "schema": {
               "type": "array",
               "items": {
@@ -19483,7 +19215,6 @@
             "name": "inventoryTypes",
             "in": "query",
             "required": true,
-            "style": "form",
             "schema": {
               "type": "array",
               "items": {
@@ -19537,7 +19268,6 @@
             "name": "inventoryTypes",
             "in": "query",
             "required": true,
-            "style": "form",
             "schema": {
               "type": "array",
               "items": {
@@ -19548,7 +19278,6 @@
           {
             "name": "queryParams",
             "in": "query",
-            "style": "form",
             "schema": {
               "type": "map of string"
             }
@@ -19670,7 +19399,6 @@
             "name": "currencyTypes",
             "in": "query",
             "required": true,
-            "style": "form",
             "schema": {
               "type": "array",
               "items": {
@@ -19724,7 +19452,6 @@
             "name": "currencyType",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -19775,7 +19502,6 @@
             "name": "currencyTypes",
             "in": "query",
             "required": true,
-            "style": "form",
             "schema": {
               "type": "array",
               "items": {
@@ -19832,7 +19558,6 @@
             "name": "currencyType",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -19917,7 +19642,6 @@
             "name": "inventoryType",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -19968,7 +19692,6 @@
             "name": "summonerId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "uint64"
@@ -20009,7 +19732,6 @@
             "name": "summonerId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "uint64"
@@ -20052,7 +19774,6 @@
             "name": "summonerId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "uint64"
@@ -20345,7 +20066,6 @@
             "name": "queue_id",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -20535,7 +20255,6 @@
             "name": "id",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "uint32"
@@ -20576,7 +20295,6 @@
             "name": "id",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "uint32"
@@ -20659,7 +20377,6 @@
             "name": "id",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -20701,7 +20418,6 @@
             "name": "id",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -20895,7 +20611,6 @@
             "name": "id",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -20918,7 +20633,6 @@
             "name": "id",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -20977,7 +20691,6 @@
             "name": "id",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -21038,7 +20751,6 @@
             "name": "loadoutId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -21080,7 +20792,6 @@
             "name": "scope",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -21089,7 +20800,6 @@
             "name": "scopeItemId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "uint32"
@@ -21604,7 +21314,6 @@
             "name": "id",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -21666,7 +21375,6 @@
             "name": "id",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -21709,7 +21417,6 @@
             "name": "championId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -21945,7 +21652,6 @@
             "name": "id",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "int64"
@@ -21988,7 +21694,6 @@
             "name": "id",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -22031,7 +21736,6 @@
             "name": "id",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -22074,7 +21778,6 @@
             "name": "id",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -22117,7 +21820,6 @@
             "name": "id",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -22231,7 +21933,6 @@
             "name": "id",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "int64"
@@ -22274,7 +21975,6 @@
             "name": "id",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -22317,7 +22017,6 @@
             "name": "id",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -22360,7 +22059,6 @@
             "name": "id",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -22403,7 +22101,6 @@
             "name": "id",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -22704,7 +22401,6 @@
             "name": "token",
             "in": "query",
             "required": true,
-            "style": "form",
             "schema": {
               "type": "string"
             }
@@ -22786,7 +22482,6 @@
             "name": "id",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -22829,7 +22524,6 @@
             "name": "id",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "uint64"
@@ -23037,7 +22731,6 @@
             "name": "summonerInternalName",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -23077,7 +22770,6 @@
             "name": "summonerInternalName",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -23199,7 +22891,6 @@
           {
             "name": "team",
             "in": "query",
-            "style": "form",
             "schema": {
               "type": "string"
             }
@@ -23329,7 +23020,6 @@
             "name": "id",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -23421,7 +23111,6 @@
             "name": "partyId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -23430,7 +23119,6 @@
             "name": "puuid",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -23439,7 +23127,6 @@
             "name": "role",
             "in": "query",
             "required": true,
-            "style": "form",
             "schema": {
               "type": "string"
             }
@@ -23464,7 +23151,6 @@
             "name": "active",
             "in": "query",
             "required": true,
-            "style": "form",
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -23585,7 +23271,6 @@
             "name": "queueId",
             "in": "query",
             "required": true,
-            "style": "form",
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -23611,7 +23296,6 @@
             "name": "ready",
             "in": "query",
             "required": true,
-            "style": "form",
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -23668,7 +23352,6 @@
             "name": "id",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -24384,7 +24067,6 @@
             "name": "summonerId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "uint64"
@@ -24430,7 +24112,6 @@
             "name": "summonerId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "uint64"
@@ -24476,7 +24157,6 @@
             "name": "summonerId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "uint64"
@@ -24522,7 +24202,6 @@
             "name": "summonerId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "uint64"
@@ -24618,7 +24297,6 @@
             "name": "partyType",
             "in": "query",
             "required": true,
-            "style": "form",
             "schema": {
               "type": "string"
             }
@@ -24660,7 +24338,6 @@
             "name": "team",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -24806,7 +24483,6 @@
             "name": "notificationId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -24848,7 +24524,6 @@
             "name": "enabledForTeambuilderQueues",
             "in": "query",
             "required": true,
-            "style": "form",
             "schema": {
               "type": "boolean"
             }
@@ -24904,7 +24579,6 @@
             "name": "partyId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -25098,7 +24772,6 @@
             "name": "invitationId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -25123,7 +24796,6 @@
             "name": "invitationId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -25222,7 +24894,6 @@
             "name": "name",
             "in": "query",
             "required": true,
-            "style": "form",
             "schema": {
               "type": "string"
             }
@@ -25295,7 +24966,6 @@
             "name": "LeagueSession",
             "in": "query",
             "required": true,
-            "style": "form",
             "schema": {
               "$ref": "#/components/schemas/LolLoginLeagueSessionStatus"
             }
@@ -25475,7 +25145,6 @@
             "name": "serviceName",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -25484,7 +25153,6 @@
             "name": "methodName",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -25493,7 +25161,6 @@
             "name": "pluginId",
             "in": "query",
             "required": true,
-            "style": "form",
             "schema": {
               "type": "integer",
               "format": "uint32"
@@ -25517,7 +25184,6 @@
             "name": "serviceName",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -25526,7 +25192,6 @@
             "name": "methodName",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -25535,7 +25200,6 @@
             "name": "pluginId",
             "in": "query",
             "required": true,
-            "style": "form",
             "schema": {
               "type": "integer",
               "format": "uint32"
@@ -25561,7 +25225,6 @@
             "name": "serviceName",
             "in": "query",
             "required": true,
-            "style": "form",
             "schema": {
               "type": "string"
             }
@@ -25570,7 +25233,6 @@
             "name": "methodName",
             "in": "query",
             "required": true,
-            "style": "form",
             "schema": {
               "type": "string"
             }
@@ -25579,7 +25241,6 @@
             "name": "pluginId",
             "in": "query",
             "required": true,
-            "style": "form",
             "schema": {
               "type": "integer",
               "format": "uint32"
@@ -25589,7 +25250,6 @@
             "name": "timeoutMillis",
             "in": "query",
             "required": true,
-            "style": "form",
             "schema": {
               "type": "integer",
               "format": "uint64"
@@ -25599,7 +25259,6 @@
             "name": "payload",
             "in": "query",
             "required": true,
-            "style": "form",
             "schema": {
               "type": "string"
             }
@@ -25732,7 +25391,6 @@
             "name": "destination",
             "in": "query",
             "required": true,
-            "style": "form",
             "schema": {
               "type": "string"
             }
@@ -25741,7 +25399,6 @@
             "name": "method",
             "in": "query",
             "required": true,
-            "style": "form",
             "schema": {
               "type": "string"
             }
@@ -25811,7 +25468,6 @@
             "name": "lockName",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -25834,7 +25490,6 @@
             "name": "lockName",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -25909,7 +25564,6 @@
             "name": "responseCode",
             "in": "query",
             "required": true,
-            "style": "form",
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -26099,7 +25753,6 @@
             "name": "id",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "int64"
@@ -26182,7 +25835,6 @@
             "name": "recipeName",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -26283,7 +25935,6 @@
             "name": "minimizeResponse",
             "in": "query",
             "required": true,
-            "style": "form",
             "schema": {
               "type": "boolean"
             }
@@ -26334,7 +25985,6 @@
             "name": "lootMilestonesId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -26376,7 +26026,6 @@
             "name": "lootMilestonesId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -26401,7 +26050,6 @@
             "name": "lootMilestonesId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -26443,7 +26091,6 @@
             "name": "lootMilestonesId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -26596,7 +26243,6 @@
             "name": "newValue",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "boolean"
             }
@@ -26798,7 +26444,6 @@
             "name": "id",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -26840,7 +26485,6 @@
             "name": "lootId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -26882,7 +26526,6 @@
             "name": "lootId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -26931,7 +26574,6 @@
             "name": "lootId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -26982,7 +26624,6 @@
             "name": "lootId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -27024,7 +26665,6 @@
             "name": "lootName",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -27097,7 +26737,6 @@
             "name": "recipeName",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -27106,7 +26745,6 @@
             "name": "playerLootList",
             "in": "query",
             "required": true,
-            "style": "form",
             "schema": {
               "type": "array",
               "items": {
@@ -27117,7 +26755,6 @@
           {
             "name": "repeat",
             "in": "query",
-            "style": "form",
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -27174,7 +26811,6 @@
             "name": "lootId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -27223,7 +26859,6 @@
             "name": "lootId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -27274,7 +26909,6 @@
             "name": "force",
             "in": "query",
             "required": true,
-            "style": "form",
             "schema": {
               "type": "boolean"
             }
@@ -27444,7 +27078,6 @@
             "name": "id",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "int64"
@@ -27527,7 +27160,6 @@
             "name": "id",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "int64"
@@ -27537,7 +27169,6 @@
             "name": "gameMode",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -27579,7 +27210,6 @@
             "name": "id",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "int64"
@@ -27589,7 +27219,6 @@
             "name": "gameMode",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -27598,7 +27227,6 @@
             "name": "gameMutator",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -27680,7 +27308,6 @@
             "name": "partitionKey",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -27729,7 +27356,6 @@
             "name": "partitionKey",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -27738,7 +27364,6 @@
             "name": "body",
             "in": "query",
             "required": true,
-            "style": "form",
             "schema": {
               "type": "map of string"
             }
@@ -27901,7 +27526,6 @@
             "name": "gameId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "uint64"
@@ -27944,7 +27568,6 @@
             "name": "gameId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "uint64"
@@ -27987,7 +27610,6 @@
             "name": "puuid",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -27995,7 +27617,6 @@
           {
             "name": "begIndex",
             "in": "query",
-            "style": "form",
             "schema": {
               "type": "integer",
               "format": "uint32"
@@ -28004,7 +27625,6 @@
           {
             "name": "endIndex",
             "in": "query",
-            "style": "form",
             "schema": {
               "type": "integer",
               "format": "uint32"
@@ -28046,7 +27666,6 @@
           {
             "name": "begIndex",
             "in": "query",
-            "style": "form",
             "schema": {
               "type": "integer",
               "format": "uint32"
@@ -28055,7 +27674,6 @@
           {
             "name": "endIndex",
             "in": "query",
-            "style": "form",
             "schema": {
               "type": "integer",
               "format": "uint32"
@@ -28098,7 +27716,6 @@
             "name": "puuid",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -28106,7 +27723,6 @@
           {
             "name": "begin",
             "in": "query",
-            "style": "form",
             "schema": {
               "type": "integer",
               "format": "uint32"
@@ -28115,7 +27731,6 @@
           {
             "name": "count",
             "in": "query",
-            "style": "form",
             "schema": {
               "type": "integer",
               "format": "uint32"
@@ -28124,7 +27739,6 @@
           {
             "name": "tag",
             "in": "query",
-            "style": "form",
             "schema": {
               "type": "string"
             }
@@ -28237,7 +27851,6 @@
             "name": "accountId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "uint64"
@@ -28246,7 +27859,6 @@
           {
             "name": "begIndex",
             "in": "query",
-            "style": "form",
             "schema": {
               "type": "integer",
               "format": "uint32"
@@ -28255,7 +27867,6 @@
           {
             "name": "endIndex",
             "in": "query",
-            "style": "form",
             "schema": {
               "type": "integer",
               "format": "uint32"
@@ -28568,7 +28179,6 @@
             "name": "id",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -28729,7 +28339,6 @@
             "name": "missionId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -29148,7 +28757,6 @@
             "name": "tutorialId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -29249,7 +28857,6 @@
             "name": "url",
             "in": "query",
             "required": true,
-            "style": "form",
             "schema": {
               "type": "string"
             }
@@ -29345,7 +28952,6 @@
             "name": "id",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -29502,7 +29108,6 @@
             "name": "restart",
             "in": "query",
             "required": true,
-            "style": "form",
             "schema": {
               "type": "boolean"
             }
@@ -29651,7 +29256,6 @@
             "name": "id",
             "in": "query",
             "required": true,
-            "style": "form",
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -29842,7 +29446,6 @@
             "name": "id",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -29883,7 +29486,6 @@
             "name": "id",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -29924,7 +29526,6 @@
             "name": "id",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -29986,7 +29587,6 @@
             "name": "id",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -30267,7 +29867,6 @@
             "name": "championId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -30277,7 +29876,6 @@
             "name": "position",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -30286,7 +29884,6 @@
             "name": "mapId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -30741,7 +30338,6 @@
             "name": "ns",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -30783,7 +30379,6 @@
             "name": "ns",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -30792,7 +30387,6 @@
             "name": "key",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -31089,7 +30683,6 @@
             "name": "id",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -31129,7 +30722,6 @@
             "name": "id",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -31242,7 +30834,6 @@
             "name": "key",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -31267,7 +30858,6 @@
             "name": "id",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -31354,7 +30944,6 @@
             "name": "pluginName",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -31394,7 +30983,6 @@
             "name": "pluginName",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -31469,7 +31057,6 @@
             "name": "id",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "uint32"
@@ -31543,7 +31130,6 @@
             "name": "id",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "uint32"
@@ -31586,7 +31172,6 @@
             "name": "preferences",
             "in": "query",
             "required": true,
-            "style": "form",
             "schema": {
               "type": "string"
             }
@@ -31759,7 +31344,6 @@
             "name": "type",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -31767,7 +31351,6 @@
           {
             "name": "hash",
             "in": "query",
-            "style": "form",
             "schema": {
               "type": "string"
             }
@@ -31809,7 +31392,6 @@
             "name": "category",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -31920,7 +31502,6 @@
             "name": "sequenceEventName",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -31976,7 +31557,6 @@
             "name": "sequenceEventName",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -32001,7 +31581,6 @@
             "name": "sequenceEventName",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -32010,7 +31589,6 @@
             "name": "priority",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -32105,7 +31683,6 @@
             "name": "handle",
             "in": "query",
             "required": true,
-            "style": "form",
             "schema": {
               "type": "string"
             }
@@ -32203,7 +31780,6 @@
             "name": "newKey",
             "in": "query",
             "required": true,
-            "style": "form",
             "schema": {
               "type": "string"
             }
@@ -32397,7 +31973,6 @@
             "name": "puuid",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -32406,7 +31981,6 @@
             "name": "muted",
             "in": "query",
             "required": true,
-            "style": "form",
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -32432,7 +32006,6 @@
             "name": "puuid",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -32441,7 +32014,6 @@
             "name": "volume",
             "in": "query",
             "required": true,
-            "style": "form",
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -32467,7 +32039,6 @@
             "name": "prompt",
             "in": "query",
             "required": true,
-            "style": "form",
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -32510,7 +32081,6 @@
             "name": "sensitivity",
             "in": "query",
             "required": true,
-            "style": "form",
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -32536,7 +32106,6 @@
             "name": "inputMode",
             "in": "query",
             "required": true,
-            "style": "form",
             "schema": {
               "$ref": "#/components/schemas/LolPremadeVoiceInputMode"
             }
@@ -32561,7 +32130,6 @@
             "name": "micLevel",
             "in": "query",
             "required": true,
-            "style": "form",
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -32587,7 +32155,6 @@
             "name": "muted",
             "in": "query",
             "required": true,
-            "style": "form",
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -32684,7 +32251,6 @@
             "name": "groupId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -32726,7 +32292,6 @@
             "name": "groupId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -32839,7 +32404,6 @@
             "name": "region",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -33116,7 +32680,6 @@
             "name": "inventoryType",
             "in": "query",
             "required": true,
-            "style": "form",
             "schema": {
               "type": "string"
             }
@@ -33125,7 +32688,6 @@
             "name": "itemId",
             "in": "query",
             "required": true,
-            "style": "form",
             "schema": {
               "type": "integer",
               "format": "int64"
@@ -33168,7 +32730,6 @@
             "name": "inventoryType",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -33177,7 +32738,6 @@
             "name": "itemIds",
             "in": "query",
             "required": true,
-            "style": "form",
             "schema": {
               "type": "array",
               "items": {
@@ -33273,7 +32833,6 @@
             "name": "offerId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -33446,7 +33005,6 @@
             "name": "queueType",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "$ref": "#/components/schemas/LolRankedLeagueQueueType"
             }
@@ -33455,7 +33013,6 @@
             "name": "tier",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "$ref": "#/components/schemas/LolRankedLeagueTier"
             }
@@ -33639,7 +33196,6 @@
             "name": "id",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -33712,7 +33268,6 @@
             "name": "puuid",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -33803,7 +33358,6 @@
             "name": "id",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "uint64"
@@ -33846,7 +33400,6 @@
             "name": "puuids",
             "in": "query",
             "required": true,
-            "style": "form",
             "schema": {
               "type": "array",
               "items": {
@@ -33900,7 +33453,6 @@
             "name": "puuid",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -33942,7 +33494,6 @@
             "name": "queueType",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "$ref": "#/components/schemas/LolRankedLeagueQueueType"
             }
@@ -34015,7 +33566,6 @@
             "name": "queueType",
             "in": "query",
             "required": true,
-            "style": "form",
             "schema": {
               "$ref": "#/components/schemas/LolRankedLeagueQueueType"
             }
@@ -34024,7 +33574,6 @@
             "name": "puuids",
             "in": "query",
             "required": true,
-            "style": "form",
             "schema": {
               "type": "array",
               "items": {
@@ -34149,7 +33698,6 @@
             "name": "summonerIds",
             "in": "query",
             "required": true,
-            "style": "form",
             "schema": {
               "type": "array",
               "items": {
@@ -34342,7 +33890,6 @@
             "name": "summonerId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "uint64"
@@ -34352,7 +33899,6 @@
             "name": "queue",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -34361,7 +33907,6 @@
             "name": "position",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -34403,7 +33948,6 @@
             "name": "summonerId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "uint64"
@@ -34413,7 +33957,6 @@
             "name": "queue",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -34455,7 +33998,6 @@
             "name": "summonerId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "uint64"
@@ -34465,7 +34007,6 @@
             "name": "hovercard",
             "in": "query",
             "required": true,
-            "style": "form",
             "schema": {
               "type": "boolean"
             }
@@ -34507,7 +34048,6 @@
             "name": "summonerId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "uint64"
@@ -34581,7 +34121,6 @@
             "name": "gameId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "uint64"
@@ -34624,7 +34163,6 @@
             "name": "gameId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "uint64"
@@ -34634,7 +34172,6 @@
             "name": "gameVersion",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -34643,7 +34180,6 @@
             "name": "gameType",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -34652,7 +34188,6 @@
             "name": "queueId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -34678,7 +34213,6 @@
             "name": "gameId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "uint64"
@@ -34723,7 +34257,6 @@
             "name": "gameId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "uint64"
@@ -34768,7 +34301,6 @@
             "name": "gameId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "uint64"
@@ -34889,7 +34421,6 @@
             "name": "gameId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "uint64"
@@ -34933,7 +34464,6 @@
           {
             "name": "status",
             "in": "query",
-            "style": "form",
             "schema": {
               "$ref": "#/components/schemas/LolRewardsGrantStatus"
             }
@@ -34984,7 +34514,6 @@
             "name": "grantId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -35045,7 +34574,6 @@
             "name": "grantId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -35069,7 +34597,6 @@
           {
             "name": "types",
             "in": "query",
-            "style": "form",
             "schema": {
               "type": "array",
               "items": {
@@ -35231,7 +34758,6 @@
             "name": "id",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "uint64"
@@ -35670,7 +35196,6 @@
             "name": "platformId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -35828,7 +35353,6 @@
             "name": "category",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -35868,7 +35392,6 @@
             "name": "category",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -35927,7 +35450,6 @@
             "name": "category",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -36033,7 +35555,6 @@
             "name": "category",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -36073,7 +35594,6 @@
             "name": "category",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -36134,7 +35654,6 @@
             "name": "ppType",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -36143,7 +35662,6 @@
             "name": "category",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -36183,7 +35701,6 @@
             "name": "ppType",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -36192,7 +35709,6 @@
             "name": "category",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -36251,7 +35767,6 @@
             "name": "ppType",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -36260,7 +35775,6 @@
             "name": "category",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -36352,7 +35866,6 @@
             "name": "ppType",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -36394,7 +35907,6 @@
             "name": "category",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -36434,7 +35946,6 @@
             "name": "category",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -36645,7 +36156,6 @@
             "name": "messageId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "int64"
@@ -36688,7 +36198,6 @@
             "name": "queueType",
             "in": "query",
             "required": true,
-            "style": "form",
             "schema": {
               "$ref": "#/components/schemas/LolSocialLeaderboardLeagueQueueType"
             }
@@ -36733,7 +36242,6 @@
             "name": "queueType",
             "in": "query",
             "required": true,
-            "style": "form",
             "schema": {
               "$ref": "#/components/schemas/LolSocialLeaderboardLeagueQueueType"
             }
@@ -36775,7 +36283,6 @@
             "name": "summonerOrTeamNames",
             "in": "query",
             "required": true,
-            "style": "form",
             "schema": {
               "type": "array",
               "items": {
@@ -36901,7 +36408,6 @@
             "name": "gameId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "uint64"
@@ -36944,7 +36450,6 @@
             "name": "championItemId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -36996,7 +36501,6 @@
             "name": "championItemId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -37006,7 +36510,6 @@
             "name": "statstoneId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -37067,7 +36570,6 @@
             "name": "puuid",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -37118,7 +36620,6 @@
             "name": "contentId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -37255,7 +36756,6 @@
             "name": "key",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -37281,7 +36781,6 @@
             "name": "championItemId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -37373,7 +36872,6 @@
             "name": "pageType",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -37414,7 +36912,6 @@
           {
             "name": "inventoryType",
             "in": "query",
-            "style": "form",
             "schema": {
               "type": "array",
               "items": {
@@ -37499,7 +36996,6 @@
             "name": "inventoryType",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -37621,7 +37117,6 @@
             "name": "instanceIds",
             "in": "query",
             "required": true,
-            "style": "form",
             "schema": {
               "type": "array",
               "items": {
@@ -37746,7 +37241,6 @@
             "name": "instanceIds",
             "in": "query",
             "required": true,
-            "style": "form",
             "schema": {
               "type": "array",
               "items": {
@@ -37800,7 +37294,6 @@
             "name": "offerIds",
             "in": "query",
             "required": true,
-            "style": "form",
             "schema": {
               "type": "array",
               "items": {
@@ -37883,7 +37376,6 @@
             "name": "pageType",
             "in": "query",
             "required": true,
-            "style": "form",
             "schema": {
               "type": "string"
             }
@@ -37908,7 +37400,6 @@
             "name": "id",
             "in": "query",
             "required": true,
-            "style": "form",
             "schema": {
               "type": "string"
             }
@@ -37949,7 +37440,6 @@
           {
             "name": "inventoryTypeUUIDs",
             "in": "query",
-            "style": "form",
             "schema": {
               "type": "array",
               "items": {
@@ -38003,7 +37493,6 @@
             "name": "offerId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -38085,7 +37574,6 @@
             "name": "id",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "uint64"
@@ -38128,7 +37616,6 @@
             "name": "action",
             "in": "query",
             "required": true,
-            "style": "form",
             "schema": {
               "type": "string"
             }
@@ -38136,7 +37623,6 @@
           {
             "name": "giftRecipientAccountId",
             "in": "query",
-            "style": "form",
             "schema": {
               "type": "integer",
               "format": "uint64"
@@ -38145,7 +37631,6 @@
           {
             "name": "giftMessage",
             "in": "query",
-            "style": "form",
             "schema": {
               "type": "string"
             }
@@ -38187,7 +37672,6 @@
             "name": "skinId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -38322,7 +37806,6 @@
           {
             "name": "typeId",
             "in": "query",
-            "style": "form",
             "schema": {
               "type": "string"
             }
@@ -38446,7 +37929,6 @@
             "name": "summonerId",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "uint64"
@@ -38522,7 +38004,6 @@
             "name": "name",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -38564,7 +38045,6 @@
             "name": "name",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -38789,7 +38269,6 @@
             "name": "name",
             "in": "query",
             "required": true,
-            "style": "form",
             "schema": {
               "type": "string"
             }
@@ -38860,7 +38339,6 @@
             "name": "body",
             "in": "query",
             "required": true,
-            "style": "form",
             "schema": {
               "$ref": "#/components/schemas/LolSummonerProfilePrivacySetting"
             }
@@ -39074,7 +38552,6 @@
             "name": "puuid",
             "in": "query",
             "required": true,
-            "style": "form",
             "schema": {
               "type": "string"
             }
@@ -39147,7 +38624,6 @@
             "name": "name",
             "in": "query",
             "required": true,
-            "style": "form",
             "schema": {
               "type": "string"
             }
@@ -39237,7 +38713,6 @@
             "name": "puuid",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -39279,7 +38754,6 @@
             "name": "id",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "uint64"
@@ -39322,7 +38796,6 @@
             "name": "ids",
             "in": "query",
             "required": true,
-            "style": "form",
             "schema": {
               "type": "array",
               "items": {
@@ -39377,7 +38850,6 @@
             "name": "ids",
             "in": "query",
             "required": true,
-            "style": "form",
             "schema": {
               "type": "array",
               "items": {
@@ -39431,7 +38903,6 @@
           {
             "name": "ids",
             "in": "query",
-            "style": "form",
             "schema": {
               "type": "array",
               "items": {
@@ -39486,7 +38957,6 @@
             "name": "summonerNames",
             "in": "query",
             "required": true,
-            "style": "form",
             "schema": {
               "type": "array",
               "items": {
@@ -39540,7 +39010,6 @@
             "name": "puuids",
             "in": "query",
             "required": true,
-            "style": "form",
             "schema": {
               "type": "array",
               "items": {
@@ -39594,7 +39063,6 @@
             "name": "puuid",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -39977,7 +39445,6 @@
             "name": "puuid",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -40121,7 +39588,6 @@
             "name": "id",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -40163,7 +39629,6 @@
             "name": "id",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -40402,7 +39867,6 @@
             "name": "context",
             "in": "query",
             "required": true,
-            "style": "form",
             "schema": {
               "type": "string"
             }
@@ -40496,7 +39960,6 @@
             "name": "notificationId",
             "in": "query",
             "required": true,
-            "style": "form",
             "schema": {
               "$ref": "#/components/schemas/PatcherNotificationId"
             }
@@ -40521,7 +39984,6 @@
             "name": "id",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -40682,7 +40144,6 @@
             "name": "product-id",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -40724,7 +40185,6 @@
             "name": "product-id",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -40766,7 +40226,6 @@
             "name": "product-id",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -40808,7 +40267,6 @@
             "name": "product-id",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -40859,7 +40317,6 @@
             "name": "product-id",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -40901,7 +40358,6 @@
             "name": "product-id",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -40943,7 +40399,6 @@
             "name": "product-id",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -40985,7 +40440,6 @@
             "name": "product-id",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -41027,7 +40481,6 @@
             "name": "product-id",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -41069,7 +40522,6 @@
             "name": "product-id",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -41111,7 +40563,6 @@
             "name": "product-id",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -41308,7 +40759,6 @@
             "in": "path",
             "description": "Id of the process to track performance information.",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "uint32"
@@ -41374,7 +40824,6 @@
             "name": "sampleLength",
             "in": "query",
             "description": "Time in seconds for each CPU timing sample.",
-            "style": "form",
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -41384,7 +40833,6 @@
             "name": "sampleCount",
             "in": "query",
             "description": "Number of samples to record.",
-            "style": "form",
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -41436,7 +40884,6 @@
             "name": "full",
             "in": "query",
             "description": "Returns all available system information",
-            "style": "form",
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -41646,7 +41093,6 @@
             "name": "id",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "uint64"
@@ -41687,7 +41133,6 @@
             "name": "id",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "uint64"
@@ -41728,7 +41173,6 @@
             "name": "id",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "integer",
               "format": "uint64"
@@ -41901,7 +41345,6 @@
             "in": "path",
             "description": "Plugin name",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -41988,7 +41431,6 @@
             "in": "path",
             "description": "Plugin name",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -42120,7 +41562,6 @@
             "name": "idToken",
             "in": "query",
             "required": true,
-            "style": "form",
             "schema": {
               "type": "string"
             }
@@ -42190,7 +41631,6 @@
             "name": "a",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -42232,7 +41672,6 @@
             "name": "a",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -42241,7 +41680,6 @@
             "name": "b",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -42283,7 +41721,6 @@
             "name": "a",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -42292,7 +41729,6 @@
             "name": "b",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -42301,7 +41737,6 @@
             "name": "c",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -42343,7 +41778,6 @@
             "name": "a",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -42352,7 +41786,6 @@
             "name": "b",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -42361,7 +41794,6 @@
             "name": "c",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -42370,7 +41802,6 @@
             "name": "d",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -42412,7 +41843,6 @@
             "name": "a",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -42421,7 +41851,6 @@
             "name": "b",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -42430,7 +41859,6 @@
             "name": "c",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -42439,7 +41867,6 @@
             "name": "d",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -42448,7 +41875,6 @@
             "name": "e",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -42490,7 +41916,6 @@
             "name": "a",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -42499,7 +41924,6 @@
             "name": "b",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -42508,7 +41932,6 @@
             "name": "c",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -42517,7 +41940,6 @@
             "name": "d",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -42526,7 +41948,6 @@
             "name": "e",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -42535,7 +41956,6 @@
             "name": "f",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -42653,7 +42073,6 @@
             "in": "query",
             "description": "Name of metric group",
             "required": true,
-            "style": "form",
             "schema": {
               "type": "string"
             }
@@ -42663,7 +42082,6 @@
             "in": "query",
             "description": "Name of metric object",
             "required": true,
-            "style": "form",
             "schema": {
               "type": "string"
             }
@@ -42673,7 +42091,6 @@
             "in": "query",
             "description": "Name of metric item",
             "required": true,
-            "style": "form",
             "schema": {
               "type": "string"
             }
@@ -42683,7 +42100,6 @@
             "in": "query",
             "description": "Value to store",
             "required": true,
-            "style": "form",
             "schema": {
               "type": "integer",
               "format": "uint64"
@@ -42751,7 +42167,6 @@
             "in": "query",
             "description": "The new affinity to use.",
             "required": true,
-            "style": "form",
             "schema": {
               "type": "string"
             }
@@ -43017,7 +42432,6 @@
             "in": "query",
             "description": "Vector of new command line arguments",
             "required": true,
-            "style": "form",
             "schema": {
               "type": "array",
               "items": {
@@ -43047,7 +42461,6 @@
             "in": "query",
             "description": "The URL to open.",
             "required": true,
-            "style": "form",
             "schema": {
               "type": "string"
             }
@@ -43129,7 +42542,6 @@
             "name": "splash",
             "in": "query",
             "required": true,
-            "style": "form",
             "schema": {
               "type": "string"
             }
@@ -43366,7 +42778,6 @@
             "in": "query",
             "description": "The ux change requestId that is being acknowledged.",
             "required": true,
-            "style": "form",
             "schema": {
               "type": "integer",
               "format": "uint32"
@@ -43392,7 +42803,6 @@
             "name": "authToken",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -43433,7 +42843,6 @@
             "in": "path",
             "description": "Authentication token to add.",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -43538,7 +42947,6 @@
             "in": "query",
             "description": "Full path to the log file.",
             "required": true,
-            "style": "form",
             "schema": {
               "type": "string"
             }
@@ -43628,7 +43036,6 @@
             "in": "query",
             "description": "The new value of the zoom scale.",
             "required": true,
-            "style": "form",
             "schema": {
               "type": "number",
               "format": "double"
@@ -43851,7 +43258,6 @@
             "in": "path",
             "description": "The name of the common data key",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -43861,7 +43267,6 @@
             "in": "query",
             "description": "The value of the common data key",
             "required": true,
-            "style": "form",
             "schema": {
               "type": "string"
             }
@@ -43887,7 +43292,6 @@
             "in": "path",
             "description": "The name of the event type",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -43897,7 +43301,6 @@
             "in": "query",
             "description": "A unique tag used to ensure this event is sent only once",
             "required": true,
-            "style": "form",
             "schema": {
               "type": "string"
             }
@@ -43951,7 +43354,6 @@
             "in": "path",
             "description": "The name of the event type",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -44005,7 +43407,6 @@
             "in": "path",
             "description": "The name of the event type",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -44059,7 +43460,6 @@
             "in": "path",
             "description": "The name of the event type",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -44069,7 +43469,6 @@
             "in": "query",
             "description": "A unique tag used to ensure this event is sent only once",
             "required": true,
-            "style": "form",
             "schema": {
               "type": "string"
             }
@@ -44123,7 +43522,6 @@
             "in": "path",
             "description": "The name of the event type",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -44440,7 +43838,6 @@
             "name": "name",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -44463,7 +43860,6 @@
             "name": "name",
             "in": "path",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -44588,7 +43984,6 @@
             "in": "path",
             "description": "Name of the event",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -44598,7 +43993,6 @@
             "in": "query",
             "description": "When the event occurred",
             "required": true,
-            "style": "form",
             "schema": {
               "type": "integer",
               "format": "uint64"
@@ -44609,7 +44003,6 @@
             "in": "query",
             "description": "The value to be recorded",
             "required": true,
-            "style": "form",
             "schema": {
               "type": "string"
             }
@@ -44619,7 +44012,6 @@
             "in": "query",
             "description": "The unit of measurement for the value",
             "required": true,
-            "style": "form",
             "schema": {
               "type": "string"
             }
@@ -44711,7 +44103,6 @@
             "in": "query",
             "description": "Name of the event",
             "required": true,
-            "style": "form",
             "schema": {
               "type": "string"
             }
@@ -44737,7 +44128,6 @@
             "in": "path",
             "description": "Name of the event",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -44747,7 +44137,6 @@
             "in": "query",
             "description": "When the event occurred",
             "required": true,
-            "style": "form",
             "schema": {
               "type": "integer",
               "format": "uint64"
@@ -44757,7 +44146,6 @@
             "name": "suffix",
             "in": "query",
             "description": "Optional eventName suffix to apply that mutates the event name to indicate the outcome",
-            "style": "form",
             "schema": {
               "type": "string"
             }
@@ -44781,7 +44169,6 @@
             "in": "path",
             "description": "Name of the event",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -44791,7 +44178,6 @@
             "in": "query",
             "description": "When the event occurred",
             "required": true,
-            "style": "form",
             "schema": {
               "type": "integer",
               "format": "uint64"
@@ -44818,7 +44204,6 @@
             "in": "path",
             "description": "Plugin name",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -44828,7 +44213,6 @@
             "in": "path",
             "description": "Name of the marker within the event",
             "required": true,
-            "style": "simple",
             "schema": {
               "type": "string"
             }
@@ -44838,7 +44222,6 @@
             "in": "query",
             "description": "When the marker event occurred",
             "required": true,
-            "style": "form",
             "schema": {
               "type": "integer",
               "format": "uint64"
@@ -64010,8 +63393,8 @@
       "LolEventShopTokenUpsellLockedType": {
         "enum": [
           "UNASSIGNED",
-          "LOCKED",
-          "UNLOCKED"
+          "UNLOCKED",
+          "LOCKED"
         ],
         "type": "string"
       },

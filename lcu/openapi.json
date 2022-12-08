@@ -17959,6 +17959,140 @@
         }
       }
     },
+    "/lol-honeyfruit/v1/account-claim/account-status": {
+      "get": {
+        "tags": [
+          "Plugins",
+          "Plugin lol-honeyfruit"
+        ],
+        "operationId": "GetLolHoneyfruitV1AccountClaimAccountStatus",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LolHoneyfruitAccountClaimStatus"
+                }
+              },
+              "application/x-yaml": {
+                "schema": {
+                  "$ref": "#/components/schemas/LolHoneyfruitAccountClaimStatus"
+                }
+              },
+              "application/x-msgpack": {
+                "schema": {
+                  "$ref": "#/components/schemas/LolHoneyfruitAccountClaimStatus"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/lol-honeyfruit/v1/account-claim/linking-redirect": {
+      "post": {
+        "tags": [
+          "Plugins",
+          "Plugin lol-honeyfruit"
+        ],
+        "operationId": "PostLolHoneyfruitV1AccountClaimLinkingRedirect",
+        "responses": {
+          "204": {
+            "description": "No content"
+          }
+        }
+      }
+    },
+    "/lol-honeyfruit/v1/account-claim/migration": {
+      "delete": {
+        "tags": [
+          "Plugins",
+          "Plugin lol-honeyfruit"
+        ],
+        "operationId": "DeleteLolHoneyfruitV1AccountClaimMigration",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              },
+              "application/x-yaml": {
+                "schema": {
+                  "type": "object"
+                }
+              },
+              "application/x-msgpack": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "Plugins",
+          "Plugin lol-honeyfruit"
+        ],
+        "operationId": "GetLolHoneyfruitV1AccountClaimMigration",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "application/x-yaml": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "application/x-msgpack": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Plugins",
+          "Plugin lol-honeyfruit"
+        ],
+        "operationId": "PostLolHoneyfruitV1AccountClaimMigration",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "application/x-yaml": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "application/x-msgpack": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/lol-honeyfruit/v1/debug-linking-status": {
       "delete": {
         "tags": [
@@ -18110,6 +18244,37 @@
               "application/x-msgpack": {
                 "schema": {
                   "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/lol-honeyfruit/v1/linking-settings-button-available": {
+      "get": {
+        "tags": [
+          "Plugins",
+          "Plugin lol-honeyfruit"
+        ],
+        "operationId": "GetLolHoneyfruitV1LinkingSettingsButtonAvailable",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "boolean"
+                }
+              },
+              "application/x-yaml": {
+                "schema": {
+                  "type": "boolean"
+                }
+              },
+              "application/x-msgpack": {
+                "schema": {
+                  "type": "boolean"
                 }
               }
             }
@@ -39269,6 +39434,37 @@
         }
       }
     },
+    "/lol-tft/v1/tft/events": {
+      "get": {
+        "tags": [
+          "Plugins",
+          "Plugin lol-tft"
+        ],
+        "operationId": "GetLolTftV1TftEvents",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LolTftLolTftEvents"
+                }
+              },
+              "application/x-yaml": {
+                "schema": {
+                  "$ref": "#/components/schemas/LolTftLolTftEvents"
+                }
+              },
+              "application/x-msgpack": {
+                "schema": {
+                  "$ref": "#/components/schemas/LolTftLolTftEvents"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/lol-tft/v1/tft/homeHub": {
       "get": {
         "tags": [
@@ -45682,6 +45878,7 @@
           "ROSTER_ELIMINATED",
           "ROSTER_DISBAND_NOT_ALLOWED",
           "SUGGEST_INVITEE_NOT_EXIST",
+          "SUMMONER_LEVEL_REQUIREMENT_NOT_MET",
           "SMS_NOT_VERIFIED",
           "TICKET_ALREADY_SET",
           "TICKET_OFFER_NOT_EXIST",
@@ -51271,6 +51468,10 @@
           },
           "championIconStyle": {
             "type": "string"
+          },
+          "championId": {
+            "type": "integer",
+            "format": "int32"
           },
           "championName": {
             "type": "string"
@@ -59501,6 +59702,10 @@
           "timeUntilNextFirstWinBonus": {
             "type": "integer",
             "format": "int32"
+          },
+          "xbgpBoostXpEarned": {
+            "type": "integer",
+            "format": "int32"
           }
         }
       },
@@ -62001,6 +62206,58 @@
             }
           },
           "xpBoost": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        }
+      },
+      "LolEventShopLoyaltyRewardsSimplified": {
+        "type": "object",
+        "properties": {
+          "championIds": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          "freeRewardedChampionsCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "freeRewardedSkinsCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "ipBoost": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "loyaltySources": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "boolean"
+            }
+          },
+          "loyaltyTFTCompanionCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "loyaltyTFTMapSkinCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "skinIds": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          "xpBoost": {
             "type": "integer",
             "format": "int32"
           }
@@ -62024,7 +62281,7 @@
             "type": "boolean"
           },
           "rewards": {
-            "$ref": "#/components/schemas/LolEventShopLoyaltyRewards"
+            "$ref": "#/components/schemas/LolEventShopLoyaltyRewardsSimplified"
           },
           "status": {
             "$ref": "#/components/schemas/LolEventShopLoyaltyStatus"
@@ -62657,6 +62914,14 @@
           }
         }
       },
+      "LolEventShopRewardsConfig": {
+        "type": "object",
+        "properties": {
+          "GrantFiltering": {
+            "type": "boolean"
+          }
+        }
+      },
       "LolEventShopRewardStatus": {
         "enum": [
           "PENDING",
@@ -62916,10 +63181,13 @@
         "type": "object",
         "properties": {
           "active": {
-            "type": "boolean"
+            "type": "string"
           },
           "identityProvider": {
-            "type": "string"
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           },
           "puuid": {
             "type": "string"
@@ -63638,7 +63906,7 @@
         "type": "object",
         "properties": {
           "active": {
-            "type": "boolean"
+            "type": "string"
           },
           "subscriptionId": {
             "type": "string"
@@ -65251,6 +65519,39 @@
           }
         }
       },
+      "LolHoneyfruitAccountClaimStatus": {
+        "type": "object",
+        "properties": {
+          "linking_status": {
+            "$ref": "#/components/schemas/LolHoneyfruitHoneyfruitLinkingServiceResponse"
+          },
+          "migration_status": {
+            "type": "string"
+          }
+        }
+      },
+      "LolHoneyfruitAccountDetails": {
+        "type": "object",
+        "properties": {
+          "platformId": {
+            "type": "string"
+          },
+          "puuid": {
+            "type": "string"
+          },
+          "summonerIconId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "summonerLevel": {
+            "type": "integer",
+            "format": "uint32"
+          },
+          "summonerName": {
+            "type": "string"
+          }
+        }
+      },
       "LolHoneyfruitGameflowPhase": {
         "enum": [
           "None",
@@ -65269,6 +65570,55 @@
           "TerminatedInError"
         ],
         "type": "string"
+      },
+      "LolHoneyfruitGAMHSMatchHistoryData": {
+        "type": "object"
+      },
+      "LolHoneyfruitGAMHSMatchHistoryList": {
+        "type": "object",
+        "properties": {
+          "active_puuid": {
+            "type": "string"
+          },
+          "games": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LolHoneyfruitGAMHSMatchHistoryData"
+            }
+          }
+        }
+      },
+      "LolHoneyfruitGarenaRegionLeagueAccount": {
+        "type": "object",
+        "properties": {
+          "garena_id": {
+            "type": "integer",
+            "format": "uint64"
+          },
+          "garena_puuid": {
+            "type": "string"
+          },
+          "has_played_a_game": {
+            "type": "boolean"
+          },
+          "is_reserved_summoner_name": {
+            "type": "boolean"
+          },
+          "platform_id": {
+            "type": "string"
+          },
+          "summoner_icon_id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "summoner_level": {
+            "type": "integer",
+            "format": "uint32"
+          },
+          "summoner_name": {
+            "type": "string"
+          }
+        }
       },
       "LolHoneyfruitHoneyfruitActionType": {
         "enum": [
@@ -65324,6 +65674,23 @@
         "properties": {
           "linkedAccount": {
             "type": "string"
+          }
+        }
+      },
+      "LolHoneyfruitHoneyfruitLinkingServiceResponse": {
+        "type": "object",
+        "properties": {
+          "account_details": {
+            "$ref": "#/components/schemas/LolHoneyfruitGarenaRegionLeagueAccount"
+          },
+          "eligible": {
+            "type": "boolean"
+          },
+          "email": {
+            "type": "string"
+          },
+          "reason_code": {
+            "$ref": "#/components/schemas/LolHoneyfruitHoneyfruitLinkingFailureReason"
           }
         }
       },
@@ -65413,6 +65780,101 @@
         "properties": {
           "visible": {
             "type": "boolean"
+          }
+        }
+      },
+      "LolHoneyfruitMatchHistoryGame": {
+        "type": "object"
+      },
+      "LolHoneyfruitMatchHistoryGameList": {
+        "type": "object",
+        "properties": {
+          "gameBeginDate": {
+            "type": "string"
+          },
+          "gameCount": {
+            "type": "integer",
+            "format": "uint64"
+          },
+          "gameEndDate": {
+            "type": "string"
+          },
+          "gameIndexBegin": {
+            "type": "integer",
+            "format": "uint64"
+          },
+          "gameIndexEnd": {
+            "type": "integer",
+            "format": "uint64"
+          },
+          "games": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LolHoneyfruitMatchHistoryGame"
+            }
+          }
+        }
+      },
+      "LolHoneyfruitMatchHistoryList": {
+        "type": "object",
+        "properties": {
+          "accountId": {
+            "type": "integer",
+            "format": "uint64"
+          },
+          "games": {
+            "$ref": "#/components/schemas/LolHoneyfruitMatchHistoryGameList"
+          },
+          "platformId": {
+            "type": "string"
+          }
+        }
+      },
+      "LolHoneyfruitSummoner": {
+        "type": "object",
+        "properties": {
+          "accountId": {
+            "type": "integer",
+            "format": "uint64"
+          },
+          "displayName": {
+            "type": "string"
+          },
+          "internalName": {
+            "type": "string"
+          },
+          "nameChangeFlag": {
+            "type": "boolean"
+          },
+          "percentCompleteForNextLevel": {
+            "type": "integer",
+            "format": "uint32"
+          },
+          "profileIconId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "puuid": {
+            "type": "string"
+          },
+          "summonerId": {
+            "type": "integer",
+            "format": "uint64"
+          },
+          "summonerLevel": {
+            "type": "integer",
+            "format": "uint32"
+          },
+          "unnamed": {
+            "type": "boolean"
+          },
+          "xpSinceLastLevel": {
+            "type": "integer",
+            "format": "uint64"
+          },
+          "xpUntilNextLevel": {
+            "type": "integer",
+            "format": "uint64"
           }
         }
       },
@@ -66663,6 +67125,58 @@
             }
           },
           "xpBoost": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        }
+      },
+      "LolInventoryLoyaltyRewardsSimplified": {
+        "type": "object",
+        "properties": {
+          "championIds": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          "freeRewardedChampionsCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "freeRewardedSkinsCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "ipBoost": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "loyaltySources": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "boolean"
+            }
+          },
+          "loyaltyTFTCompanionCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "loyaltyTFTMapSkinCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "skinIds": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          "xpBoost": {
             "type": "integer",
             "format": "int32"
           }
@@ -66686,7 +67200,7 @@
             "type": "boolean"
           },
           "rewards": {
-            "$ref": "#/components/schemas/LolInventoryLoyaltyRewards"
+            "$ref": "#/components/schemas/LolInventoryLoyaltyRewardsSimplified"
           },
           "status": {
             "$ref": "#/components/schemas/LolInventoryLoyaltyStatus"
@@ -66789,10 +67303,13 @@
         "type": "object",
         "properties": {
           "active": {
-            "type": "boolean"
+            "type": "string"
           },
           "identityProvider": {
-            "type": "string"
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           },
           "puuid": {
             "type": "string"
@@ -66909,7 +67426,7 @@
         "type": "object",
         "properties": {
           "active": {
-            "type": "boolean"
+            "type": "string"
           },
           "subscriptionId": {
             "type": "string"
@@ -74533,6 +75050,14 @@
           }
         }
       },
+      "LolLootRewardsConfig": {
+        "type": "object",
+        "properties": {
+          "GrantFiltering": {
+            "type": "boolean"
+          }
+        }
+      },
       "LolLootRewardStatus": {
         "enum": [
           "PENDING",
@@ -74962,6 +75487,61 @@
             }
           },
           "xpBoost": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        }
+      },
+      "LolLoyaltyLoyaltyRewardsSimplified": {
+        "type": "object",
+        "properties": {
+          "championIds": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          "freeRewardedChampionsCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "freeRewardedSkinsCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "global": {
+            "$ref": "#/components/schemas/LolLoyaltyGlobalRewards"
+          },
+          "ipBoost": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "loyaltySources": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "boolean"
+            }
+          },
+          "loyaltyTFTCompanionCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "loyaltyTFTMapSkinCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "skinIds": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          "xpBoost": {
             "type": "integer",
             "format": "int32"
           }
@@ -74985,10 +75565,36 @@
             "type": "boolean"
           },
           "rewards": {
-            "$ref": "#/components/schemas/LolLoyaltyLoyaltyRewards"
+            "$ref": "#/components/schemas/LolLoyaltyLoyaltyRewardsSimplified"
           },
           "status": {
             "$ref": "#/components/schemas/LolLoyaltyLoyaltyStatus"
+          }
+        }
+      },
+      "LolLoyaltyPlayerNotification": {
+        "type": "object",
+        "properties": {
+          "critical": {
+            "type": "boolean"
+          },
+          "detailKey": {
+            "type": "string"
+          },
+          "iconUrl": {
+            "type": "string"
+          },
+          "source": {
+            "type": "string"
+          },
+          "state": {
+            "type": "string"
+          },
+          "titleKey": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
           }
         }
       },
@@ -78944,6 +79550,18 @@
           }
         }
       },
+      "LolPerksGameDataChampionSummary": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "name": {
+            "type": "string"
+          }
+        }
+      },
       "LolPerksGameflowGameData": {
         "type": "object",
         "properties": {
@@ -79560,6 +80178,10 @@
           },
           "isTeamBuilderManaged": {
             "type": "boolean"
+          },
+          "mapId": {
+            "type": "integer",
+            "format": "int32"
           }
         }
       },
@@ -84528,6 +85150,9 @@
           "startTimeMillis": {
             "type": "integer",
             "format": "uint64"
+          },
+          "victoriousSkin": {
+            "$ref": "#/components/schemas/LolRankedVictoriousSkin"
           }
         }
       },
@@ -84555,6 +85180,9 @@
           "startTime": {
             "type": "integer",
             "format": "uint64"
+          },
+          "victoriousSkin": {
+            "$ref": "#/components/schemas/LolRankedVictoriousSkinDTO"
           }
         }
       },
@@ -84860,6 +85488,36 @@
           "summonerId": {
             "type": "integer",
             "format": "uint64"
+          }
+        }
+      },
+      "LolRankedVictoriousSkin": {
+        "type": "object",
+        "properties": {
+          "itemInstanceId": {
+            "type": "string"
+          },
+          "splitPointsByHighestAchievedTier": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        }
+      },
+      "LolRankedVictoriousSkinDTO": {
+        "type": "object",
+        "properties": {
+          "itemInstanceId": {
+            "type": "string"
+          },
+          "splitPointsByHighestAchievedTier": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "integer",
+              "format": "int32"
+            }
           }
         }
       },
@@ -85662,6 +86320,14 @@
           },
           "rewardGroup": {
             "$ref": "#/components/schemas/LolRewardsSvcRewardGroup"
+          }
+        }
+      },
+      "LolRewardsRewardsConfig": {
+        "type": "object",
+        "properties": {
+          "GrantFiltering": {
+            "type": "boolean"
           }
         }
       },
@@ -87686,6 +88352,9 @@
           "statstoneName": {
             "type": "string"
           },
+          "totalProgressPercent": {
+            "type": "string"
+          },
           "value": {
             "type": "string"
           }
@@ -89284,6 +89953,31 @@
           }
         }
       },
+      "LolTftLolTftEvent": {
+        "type": "object",
+        "properties": {
+          "enabled": {
+            "type": "boolean"
+          },
+          "titleTranslationKey": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string"
+          }
+        }
+      },
+      "LolTftLolTftEvents": {
+        "type": "object",
+        "properties": {
+          "events": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LolTftLolTftEvent"
+            }
+          }
+        }
+      },
       "LolTftLolTftHomeHub": {
         "type": "object",
         "properties": {
@@ -89326,6 +90020,14 @@
             "type": "boolean"
           },
           "url": {
+            "type": "string"
+          }
+        }
+      },
+      "LolTftPublishingSettings": {
+        "type": "object",
+        "properties": {
+          "publishingLocale": {
             "type": "string"
           }
         }
@@ -89717,8 +90419,8 @@
       "LolWorldsTokenCardTokenUpsellLockedType": {
         "enum": [
           "UNASSIGNED",
-          "LOCKED",
-          "UNLOCKED"
+          "UNLOCKED",
+          "LOCKED"
         ],
         "type": "string"
       },
@@ -90111,6 +90813,58 @@
             }
           },
           "xpBoost": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        }
+      },
+      "LolYourshopLoyaltyRewardsSimplified": {
+        "type": "object",
+        "properties": {
+          "championIds": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          "freeRewardedChampionsCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "freeRewardedSkinsCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "ipBoost": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "loyaltySources": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "boolean"
+            }
+          },
+          "loyaltyTFTCompanionCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "loyaltyTFTMapSkinCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "skinIds": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          "xpBoost": {
             "type": "integer",
             "format": "int32"
           }
@@ -90134,7 +90888,7 @@
             "type": "boolean"
           },
           "rewards": {
-            "$ref": "#/components/schemas/LolYourshopLoyaltyRewards"
+            "$ref": "#/components/schemas/LolYourshopLoyaltyRewardsSimplified"
           },
           "status": {
             "$ref": "#/components/schemas/LolYourshopLoyaltyStatus"
@@ -90391,10 +91145,13 @@
         "type": "object",
         "properties": {
           "active": {
-            "type": "boolean"
+            "type": "string"
           },
           "identityProvider": {
-            "type": "string"
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           },
           "puuid": {
             "type": "string"
@@ -90563,7 +91320,7 @@
         "type": "object",
         "properties": {
           "active": {
-            "type": "boolean"
+            "type": "string"
           },
           "subscriptionId": {
             "type": "string"

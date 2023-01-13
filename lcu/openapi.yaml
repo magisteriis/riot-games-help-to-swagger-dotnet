@@ -2494,12 +2494,12 @@ paths:
                 type: object
                 additionalProperties:
                   $ref: '#/components/schemas/LolChallengesUIPlayerSummary'
-  /lol-challenges/v1/titles:
+  /lol-challenges/v1/titles/all:
     get:
       tags:
         - Plugins
         - Plugin lol-challenges
-      operationId: GetLolChallengesV1Titles
+      operationId: GetLolChallengesV1TitlesAll
       responses:
         '200':
           description: Successful response
@@ -11361,19 +11361,12 @@ paths:
             application/x-msgpack:
               schema:
                 $ref: '#/components/schemas/LolHighlightsHighlight'
-  '/lol-honeyfruit/v1/account-claim/account-status/{puuid}':
+  /lol-honeyfruit/v1/account-claim/account-status:
     get:
       tags:
         - Plugins
         - Plugin lol-honeyfruit
-      operationId: GetLolHoneyfruitV1AccountClaimAccountStatusByPuuid
-      parameters:
-        - name: puuid
-          in: path
-          required: true
-          style: simple
-          schema:
-            type: string
+      operationId: GetLolHoneyfruitV1AccountClaimAccountStatus
       responses:
         '200':
           description: Successful response
@@ -11387,50 +11380,6 @@ paths:
             application/x-msgpack:
               schema:
                 $ref: '#/components/schemas/LolHoneyfruitAccountClaimStatus'
-  /lol-honeyfruit/v1/account-claim/auto-dismiss:
-    get:
-      tags:
-        - Plugins
-        - Plugin lol-honeyfruit
-      operationId: GetLolHoneyfruitV1AccountClaimAutoDismiss
-      responses:
-        '200':
-          description: Successful response
-          content:
-            application/json:
-              schema:
-                type: boolean
-            application/x-yaml:
-              schema:
-                type: boolean
-            application/x-msgpack:
-              schema:
-                type: boolean
-    put:
-      tags:
-        - Plugins
-        - Plugin lol-honeyfruit
-      operationId: PutLolHoneyfruitV1AccountClaimAutoDismiss
-      parameters:
-        - name: shouldDismiss
-          in: query
-          required: true
-          style: form
-          schema:
-            type: boolean
-      responses:
-        '200':
-          description: Successful response
-          content:
-            application/json:
-              schema:
-                type: object
-            application/x-yaml:
-              schema:
-                type: object
-            application/x-msgpack:
-              schema:
-                type: object
   /lol-honeyfruit/v1/account-claim/linking-redirect:
     post:
       tags:
@@ -21676,6 +21625,65 @@ paths:
             application/x-msgpack:
               schema:
                 $ref: '#/components/schemas/LolRegaliaRegaliaAsync'
+  '/lol-regalia/v3/inventory/{inventoryType}':
+    get:
+      tags:
+        - Plugins
+        - Plugin lol-regalia
+      operationId: GetLolRegaliaV3InventoryByInventoryType
+      parameters:
+        - name: inventoryType
+          in: path
+          required: true
+          style: simple
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties:
+                  $ref: '#/components/schemas/LolRegaliaRegaliaInventoryItem'
+            application/x-yaml:
+              schema:
+                type: object
+                additionalProperties:
+                  $ref: '#/components/schemas/LolRegaliaRegaliaInventoryItem'
+            application/x-msgpack:
+              schema:
+                type: object
+                additionalProperties:
+                  $ref: '#/components/schemas/LolRegaliaRegaliaInventoryItem'
+  '/lol-regalia/v3/summoners/{summonerId}/regalia':
+    get:
+      tags:
+        - Plugins
+        - Plugin lol-regalia
+      operationId: GetLolRegaliaV3SummonersBySummonerIdRegalia
+      parameters:
+        - name: summonerId
+          in: path
+          required: true
+          style: simple
+          schema:
+            type: integer
+            format: uint64
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/LolRegaliaRegalia'
+            application/x-yaml:
+              schema:
+                $ref: '#/components/schemas/LolRegaliaRegalia'
+            application/x-msgpack:
+              schema:
+                $ref: '#/components/schemas/LolRegaliaRegalia'
   /lol-replays/v1/configuration:
     get:
       tags:
@@ -24894,6 +24902,257 @@ paths:
             application/x-msgpack:
               schema:
                 $ref: '#/components/schemas/LolTastesDataModelResponse'
+  /lol-tft-team-planner/v1/config:
+    get:
+      tags:
+        - Plugins
+        - Plugin lol-tft-team-planner
+      operationId: GetLolTftTeamPlannerV1Config
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/LolTftTeamPlannerTFTTeamPlannerConfig'
+            application/x-yaml:
+              schema:
+                $ref: '#/components/schemas/LolTftTeamPlannerTFTTeamPlannerConfig'
+            application/x-msgpack:
+              schema:
+                $ref: '#/components/schemas/LolTftTeamPlannerTFTTeamPlannerConfig'
+  /lol-tft-team-planner/v1/team:
+    put:
+      tags:
+        - Plugins
+        - Plugin lol-tft-team-planner
+      operationId: PutLolTftTeamPlannerV1Team
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+            application/x-yaml:
+              schema:
+                type: object
+            application/x-msgpack:
+              schema:
+                type: object
+  /lol-tft-team-planner/v1/team/champions:
+    delete:
+      tags:
+        - Plugins
+        - Plugin lol-tft-team-planner
+      operationId: DeleteLolTftTeamPlannerV1TeamChampions
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+            application/x-yaml:
+              schema:
+                type: object
+            application/x-msgpack:
+              schema:
+                type: object
+    patch:
+      tags:
+        - Plugins
+        - Plugin lol-tft-team-planner
+      operationId: PatchLolTftTeamPlannerV1TeamChampions
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                type: integer
+                format: uint32
+          application/x-yaml:
+            schema:
+              type: array
+              items:
+                type: integer
+                format: uint32
+          application/x-msgpack:
+            schema:
+              type: array
+              items:
+                type: integer
+                format: uint32
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+            application/x-yaml:
+              schema:
+                type: object
+            application/x-msgpack:
+              schema:
+                type: object
+  '/lol-tft-team-planner/v1/team/champions/{index}':
+    delete:
+      tags:
+        - Plugins
+        - Plugin lol-tft-team-planner
+      operationId: DeleteLolTftTeamPlannerV1TeamChampionsByIndex
+      parameters:
+        - name: index
+          in: path
+          required: true
+          style: simple
+          schema:
+            type: integer
+            format: uint32
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+            application/x-yaml:
+              schema:
+                type: object
+            application/x-msgpack:
+              schema:
+                type: object
+    post:
+      tags:
+        - Plugins
+        - Plugin lol-tft-team-planner
+      operationId: PostLolTftTeamPlannerV1TeamChampionsByIndex
+      parameters:
+        - name: index
+          in: path
+          required: true
+          style: simple
+          schema:
+            type: integer
+            format: uint32
+        - name: championName
+          in: query
+          required: true
+          style: form
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+            application/x-yaml:
+              schema:
+                type: object
+            application/x-msgpack:
+              schema:
+                type: object
+  '/lol-tft-team-planner/v1/team/championsById/{championName}':
+    delete:
+      tags:
+        - Plugins
+        - Plugin lol-tft-team-planner
+      operationId: DeleteLolTftTeamPlannerV1TeamChampionsByIdByChampionName
+      parameters:
+        - name: championName
+          in: path
+          required: true
+          style: simple
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+            application/x-yaml:
+              schema:
+                type: object
+            application/x-msgpack:
+              schema:
+                type: object
+    post:
+      tags:
+        - Plugins
+        - Plugin lol-tft-team-planner
+      operationId: PostLolTftTeamPlannerV1TeamChampionsByIdByChampionName
+      parameters:
+        - name: championName
+          in: path
+          required: true
+          style: simple
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+            application/x-yaml:
+              schema:
+                type: object
+            application/x-msgpack:
+              schema:
+                type: object
+  /lol-tft-team-planner/v1/team/dirty:
+    delete:
+      tags:
+        - Plugins
+        - Plugin lol-tft-team-planner
+      operationId: DeleteLolTftTeamPlannerV1TeamDirty
+      responses:
+        '204':
+          description: No content
+    get:
+      tags:
+        - Plugins
+        - Plugin lol-tft-team-planner
+      operationId: GetLolTftTeamPlannerV1TeamDirty
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/LolTftTeamPlannerTeamPlan'
+            application/x-yaml:
+              schema:
+                $ref: '#/components/schemas/LolTftTeamPlannerTeamPlan'
+            application/x-msgpack:
+              schema:
+                $ref: '#/components/schemas/LolTftTeamPlannerTeamPlan'
+  /lol-tft-team-planner/v1/team/local:
+    get:
+      tags:
+        - Plugins
+        - Plugin lol-tft-team-planner
+      operationId: GetLolTftTeamPlannerV1TeamLocal
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/LolTftTeamPlannerTeamSettings'
+            application/x-yaml:
+              schema:
+                $ref: '#/components/schemas/LolTftTeamPlannerTeamSettings'
+            application/x-msgpack:
+              schema:
+                $ref: '#/components/schemas/LolTftTeamPlannerTeamSettings'
   /lol-tft/v1/tft_experiment_bucket:
     put:
       tags:
@@ -24927,6 +25186,25 @@ paths:
             application/x-msgpack:
               schema:
                 type: object
+  /lol-tft/v1/tft/battlePassHub:
+    get:
+      tags:
+        - Plugins
+        - Plugin lol-tft
+      operationId: GetLolTftV1TftBattlePassHub
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/LolTftLolTftBattlePassHub'
+            application/x-yaml:
+              schema:
+                $ref: '#/components/schemas/LolTftLolTftBattlePassHub'
+            application/x-msgpack:
+              schema:
+                $ref: '#/components/schemas/LolTftLolTftBattlePassHub'
   /lol-tft/v1/tft/directToHub:
     get:
       tags:
@@ -31705,7 +31983,7 @@ components:
           $ref: '#/components/schemas/LolChallengesGameflowGameData'
         phase:
           $ref: '#/components/schemas/LolChallengesGameflowPhase'
-    LolChallengesInventoryTypeAchievementTitle:
+    LolChallengesInventoryItem:
       type: object
       properties:
         itemId:
@@ -31760,13 +32038,13 @@ components:
     LolChallengesPlayerClientPreferences:
       type: object
       properties:
+        bannerAccent:
+          type: string
         challengeIds:
           type: array
           items:
             type: integer
             format: int64
-        tabard:
-          type: string
         title:
           type: string
     LolChallengesQueue:
@@ -31958,6 +32236,8 @@ components:
         apexLeaderboardPosition:
           type: integer
           format: int32
+        bannerId:
+          type: string
         categoryProgress:
           type: array
           items:
@@ -39617,6 +39897,7 @@ components:
       enum:
         - NONE
         - TOAST
+        - FULLSCREEN
       type: string
     LolEventShopCelebrationUIData:
       type: object
@@ -41285,8 +41566,8 @@ components:
     LolEventShopTokenUpsellLockedType:
       enum:
         - UNASSIGNED
-        - UNLOCKED
         - LOCKED
+        - UNLOCKED
       type: string
     LolEventShopTransaction:
       type: object
@@ -42742,14 +43023,6 @@ components:
         schemaVersion:
           type: integer
           format: uint32
-    LolHoneyfruitHoneyfruitSettingCategoryResourceAccountClaim:
-      type: object
-      properties:
-        data:
-          $ref: '#/components/schemas/LolHoneyfruitHoneyfruitSettingsAccountClaim'
-        schemaVersion:
-          type: integer
-          format: uint32
     LolHoneyfruitHoneyfruitSettings:
       type: object
       properties:
@@ -42758,11 +43031,6 @@ components:
         snoozeUntilMS:
           type: integer
           format: uint64
-    LolHoneyfruitHoneyfruitSettingsAccountClaim:
-      type: object
-      properties:
-        isAccountClaimAutoDismiss:
-          type: boolean
     LolHoneyfruitHoneyfruitVNGPublisherSettings:
       type: object
       properties:
@@ -47859,6 +48127,7 @@ components:
       enum:
         - NONE
         - TOAST
+        - FULLSCREEN
       type: string
     LolLootCollectionsChampionMinimal:
       type: object
@@ -52351,6 +52620,8 @@ components:
           type: boolean
         isEditable:
           type: boolean
+        isRecommendationOverride:
+          type: boolean
         isTemporary:
           type: boolean
         isValid:
@@ -52366,6 +52637,14 @@ components:
         primaryStyleId:
           type: integer
           format: int32
+        recommendationChampionId:
+          type: integer
+          format: int32
+        recommendationIndex:
+          type: integer
+          format: int32
+        runeRecommendationId:
+          type: string
         selectedPerkIds:
           type: array
           items:
@@ -52509,6 +52788,8 @@ components:
       properties:
         isDefaultPosition:
           type: boolean
+        isRecommendationOverride:
+          type: boolean
         keystone:
           $ref: '#/components/schemas/LolPerksPerkUIPerk'
         perks:
@@ -52521,6 +52802,11 @@ components:
           type: integer
           format: int32
         primaryRecommendationAttribute:
+          type: string
+        recommendationChampionId:
+          type: integer
+          format: int32
+        recommendationId:
           type: string
         secondaryPerkStyleId:
           type: integer
@@ -52637,6 +52923,8 @@ components:
         primaryPerkStyleId:
           type: integer
           format: int32
+        recommendationId:
+          type: string
         secondaryPerkStyleId:
           type: integer
           format: int32
@@ -55699,6 +55987,10 @@ components:
       properties:
         division:
           $ref: '#/components/schemas/LolRankedLeagueDivision'
+        highestDivision:
+          $ref: '#/components/schemas/LolRankedLeagueDivision'
+        highestTier:
+          $ref: '#/components/schemas/LolRankedLeagueTier'
         isProvisional:
           type: boolean
         leaguePoints:
@@ -55740,6 +56032,10 @@ components:
     LolRankedRankedQueueStatsDTO:
       type: object
       properties:
+        highestRank:
+          type: string
+        highestTier:
+          type: string
         leaguePoints:
           type: integer
           format: int32
@@ -55816,6 +56112,8 @@ components:
           type: array
           items:
             type: string
+        highestCurrentSeasonReachedTierSR:
+          $ref: '#/components/schemas/LolRankedLeagueTier'
         highestPreviousSeasonAchievedDivision:
           $ref: '#/components/schemas/LolRankedLeagueDivision'
         highestPreviousSeasonAchievedTier:
@@ -56000,7 +56298,7 @@ components:
         startTimeMillis:
           type: integer
           format: uint64
-        victoriousSkin:
+        victoriousSkinRewardGroup:
           $ref: '#/components/schemas/LolRankedVictoriousSkin'
     LolRankedSeasonSplitDTO:
       type: object
@@ -56021,7 +56319,7 @@ components:
         startTime:
           type: integer
           format: uint64
-        victoriousSkin:
+        victoriousSkinRewardGroup:
           $ref: '#/components/schemas/LolRankedVictoriousSkinDTO'
     LolRankedSequenceEvent:
       type: object
@@ -56306,6 +56604,33 @@ components:
           format: int32
         regalia:
           $ref: '#/components/schemas/LolRegaliaRegaliaSettings'
+    LolRegaliaGameDataRegalia:
+      type: object
+      properties:
+        assetPath:
+          type: string
+        id:
+          type: string
+        idSecondary:
+          type: string
+        isSelectable:
+          type: boolean
+        localizedDescription:
+          type: string
+        localizedName:
+          type: string
+        regaliaType:
+          type: string
+    LolRegaliaInventoryItem:
+      type: object
+      properties:
+        itemId:
+          type: integer
+          format: int32
+        purchaseDate:
+          type: string
+        uuid:
+          type: string
     LolRegaliaItemKey:
       type: object
       properties:
@@ -56426,6 +56751,15 @@ components:
           type: boolean
         selectionsEnabled:
           type: boolean
+    LolRegaliaRegaliaInventoryItem:
+      type: object
+      properties:
+        isOwned:
+          type: boolean
+        items:
+          type: array
+          items:
+            $ref: '#/components/schemas/LolRegaliaGameDataRegalia'
     LolRegaliaRegaliaLoadout:
       type: object
       properties:
@@ -56694,6 +57028,7 @@ components:
       enum:
         - NONE
         - TOAST
+        - FULLSCREEN
       type: string
     LolRewardsGrantorDescription:
       type: object
@@ -59267,6 +59602,11 @@ components:
           $ref: '#/components/schemas/LolTftGameflowGameData'
         phase:
           $ref: '#/components/schemas/LolTftGameflowPhase'
+    LolTftLolTftBattlePassHub:
+      type: object
+      properties:
+        battlePassXPBoosted:
+          type: boolean
     LolTftLolTftEvent:
       type: object
       properties:
@@ -59304,8 +59644,6 @@ components:
           type: array
           items:
             type: string
-        tftEventPromoEnabled:
-          type: boolean
     LolTftLolTftNewsHub:
       type: object
       properties:
@@ -59344,6 +59682,55 @@ components:
       properties:
         data:
           type: object
+    LolTftTeamPlannerChampion:
+      type: object
+      properties:
+        championId:
+          type: string
+    LolTftTeamPlannerGameDataTFTSets:
+      type: object
+      properties:
+        LCTFTModeData:
+          $ref: '#/components/schemas/LolTftTeamPlannerTFTModeData'
+    LolTftTeamPlannerSettingsStorageContainer:
+      type: object
+      properties:
+        data:
+          $ref: '#/components/schemas/LolTftTeamPlannerTeamSettings'
+        schemaVersion:
+          type: integer
+          format: uint32
+    LolTftTeamPlannerTeamPlan:
+      type: object
+      properties:
+        champions:
+          type: array
+          items:
+            $ref: '#/components/schemas/LolTftTeamPlannerChampion'
+        setName:
+          type: string
+    LolTftTeamPlannerTeamSettings:
+      type: object
+      properties:
+        teams:
+          type: array
+          items:
+            $ref: '#/components/schemas/LolTftTeamPlannerTeamPlan'
+    LolTftTeamPlannerTFTMapSetData:
+      type: object
+      properties:
+        SetCoreName:
+          type: string
+    LolTftTeamPlannerTFTModeData:
+      type: object
+      properties:
+        mDefaultSet:
+          $ref: '#/components/schemas/LolTftTeamPlannerTFTMapSetData'
+    LolTftTeamPlannerTFTTeamPlannerConfig:
+      type: object
+      properties:
+        enabled:
+          type: boolean
     LolTrophiesCapClashTrophyEntitlementPayload:
       type: object
       properties:
@@ -59582,8 +59969,8 @@ components:
     LolWorldsTokenCardTokenUpsellLockedType:
       enum:
         - UNASSIGNED
-        - UNLOCKED
         - LOCKED
+        - UNLOCKED
       type: string
     LolYourshopAccessTokenResource:
       type: object
@@ -63290,6 +63677,7 @@ tags:
   - name: Plugin lol-summoner
   - name: Plugin lol-tastes
   - name: Plugin lol-tft
+  - name: Plugin lol-tft-team-planner
   - name: Plugin lol-trophies
   - name: Plugin lol-worlds-token-card
   - name: Plugin lol-yourshop

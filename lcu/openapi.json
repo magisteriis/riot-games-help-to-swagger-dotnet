@@ -17959,13 +17959,23 @@
         }
       }
     },
-    "/lol-honeyfruit/v1/account-claim/account-status": {
+    "/lol-honeyfruit/v1/account-claim/account-status/{puuid}": {
       "get": {
         "tags": [
           "Plugins",
           "Plugin lol-honeyfruit"
         ],
-        "operationId": "GetLolHoneyfruitV1AccountClaimAccountStatus",
+        "operationId": "GetLolHoneyfruitV1AccountClaimAccountStatusByPuuid",
+        "parameters": [
+          {
+            "name": "puuid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
         "responses": {
           "200": {
             "description": "Successful response",
@@ -17983,6 +17993,76 @@
               "application/x-msgpack": {
                 "schema": {
                   "$ref": "#/components/schemas/LolHoneyfruitAccountClaimStatus"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/lol-honeyfruit/v1/account-claim/auto-dismiss": {
+      "get": {
+        "tags": [
+          "Plugins",
+          "Plugin lol-honeyfruit"
+        ],
+        "operationId": "GetLolHoneyfruitV1AccountClaimAutoDismiss",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "boolean"
+                }
+              },
+              "application/x-yaml": {
+                "schema": {
+                  "type": "boolean"
+                }
+              },
+              "application/x-msgpack": {
+                "schema": {
+                  "type": "boolean"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Plugins",
+          "Plugin lol-honeyfruit"
+        ],
+        "operationId": "PutLolHoneyfruitV1AccountClaimAutoDismiss",
+        "parameters": [
+          {
+            "name": "shouldDismiss",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "boolean"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              },
+              "application/x-yaml": {
+                "schema": {
+                  "type": "object"
+                }
+              },
+              "application/x-msgpack": {
+                "schema": {
+                  "type": "object"
                 }
               }
             }
@@ -66287,6 +66367,18 @@
           }
         }
       },
+      "LolHoneyfruitHoneyfruitSettingCategoryResourceAccountClaim": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "$ref": "#/components/schemas/LolHoneyfruitHoneyfruitSettingsAccountClaim"
+          },
+          "schemaVersion": {
+            "type": "integer",
+            "format": "uint32"
+          }
+        }
+      },
       "LolHoneyfruitHoneyfruitSettings": {
         "type": "object",
         "properties": {
@@ -66296,6 +66388,14 @@
           "snoozeUntilMS": {
             "type": "integer",
             "format": "uint64"
+          }
+        }
+      },
+      "LolHoneyfruitHoneyfruitSettingsAccountClaim": {
+        "type": "object",
+        "properties": {
+          "isAccountClaimAutoDismiss": {
+            "type": "boolean"
           }
         }
       },

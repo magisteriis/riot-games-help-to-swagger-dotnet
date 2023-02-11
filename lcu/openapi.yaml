@@ -21236,40 +21236,6 @@ paths:
             application/x-msgpack:
               schema:
                 type: object
-  /lol-ranked/v1/ranked-stats:
-    get:
-      tags:
-        - Plugins
-        - Plugin lol-ranked
-      operationId: GetLolRankedV1RankedStats
-      parameters:
-        - name: puuids
-          in: query
-          required: true
-          style: form
-          schema:
-            type: array
-            items:
-              type: string
-      responses:
-        '200':
-          description: Successful response
-          content:
-            application/json:
-              schema:
-                type: object
-                additionalProperties:
-                  $ref: '#/components/schemas/LolRankedRankedStats'
-            application/x-yaml:
-              schema:
-                type: object
-                additionalProperties:
-                  $ref: '#/components/schemas/LolRankedRankedStats'
-            application/x-msgpack:
-              schema:
-                type: object
-                additionalProperties:
-                  $ref: '#/components/schemas/LolRankedRankedStats'
   '/lol-ranked/v1/ranked-stats/{puuid}':
     get:
       tags:
@@ -33103,7 +33069,11 @@ components:
           type: string
         chatRoomPassword:
           type: string
+        multiUserChatId:
+          type: string
         multiUserChatJWT:
+          type: string
+        multiUserChatPassword:
           type: string
     LolChampSelectChampSelectMySelection:
       type: object
@@ -33739,7 +33709,11 @@ components:
           type: string
         chatRoomPassword:
           type: string
+        multiUserChatId:
+          type: string
         multiUserChatJWT:
+          type: string
+        multiUserChatPassword:
           type: string
     LolChampSelectLegacyChampSelectMySelection:
       type: object
@@ -36209,7 +36183,11 @@ components:
           type: string
         logoUrl:
           type: string
+        multiUserChatId:
+          type: string
         multiUserChatJWT:
+          type: string
+        multiUserChatPassword:
           type: string
         name:
           type: string
@@ -38907,7 +38885,11 @@ components:
         missionsXpEarned:
           type: integer
           format: int32
+        multiUserChatId:
+          type: string
         multiUserChatJWT:
+          type: string
+        multiUserChatPassword:
           type: string
         myTeamStatus:
           type: string
@@ -41617,8 +41599,8 @@ components:
     LolEventShopTokenUpsellLockedType:
       enum:
         - UNASSIGNED
-        - LOCKED
         - UNLOCKED
+        - LOCKED
       type: string
     LolEventShopTransaction:
       type: object
@@ -45430,7 +45412,11 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/LolLobbyLobbyMember'
+        multiUserChatId:
+          type: string
         multiUserChatJWT:
+          type: string
+        multiUserChatPassword:
           type: string
         premadeSizeAllowed:
           type: boolean
@@ -45649,7 +45635,11 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/LolLobbyLobbyParticipantDto'
+        multiUserChatId:
+          type: string
         multiUserChatJWT:
+          type: string
+        multiUserChatPassword:
           type: string
         partyId:
           type: string
@@ -47011,7 +47001,11 @@ components:
           type: string
         chatRoomPassword:
           type: string
+        multiUserChatId:
+          type: string
         multiUserChatJWT:
+          type: string
+        multiUserChatPassword:
           type: string
     LolLobbyTeamBuilderChampSelectDevPanelData:
       type: object
@@ -47371,6 +47365,10 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/LolLobbyTeamBuilderLobbyMember'
+        multiUserChatId:
+          type: string
+        multiUserChatPassword:
+          type: string
         premadeSizeAllowed:
           type: boolean
         queueId:
@@ -52379,7 +52377,11 @@ components:
           type: string
         chatRoomPassword:
           type: string
+        multiUserChatId:
+          type: string
         multiUserChatJWT:
+          type: string
+        multiUserChatPassword:
           type: string
     LolPerksChampSelectMySelection:
       type: object
@@ -52562,13 +52564,6 @@ components:
       type: object
       properties:
         queueType:
-          type: string
-    LolPerksGetResultFromServiceDTO:
-      type: object
-      properties:
-        error:
-          type: string
-        result:
           type: string
     LolPerksInventoryRunePageCount:
       type: object
@@ -60033,8 +60028,8 @@ components:
     LolWorldsTokenCardTokenUpsellLockedType:
       enum:
         - UNASSIGNED
-        - LOCKED
         - UNLOCKED
+        - LOCKED
       type: string
     LolYourshopAccessTokenResource:
       type: object

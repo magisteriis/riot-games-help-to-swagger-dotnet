@@ -33633,59 +33633,6 @@
         }
       }
     },
-    "/lol-ranked/v1/ranked-stats": {
-      "get": {
-        "tags": [
-          "Plugins",
-          "Plugin lol-ranked"
-        ],
-        "operationId": "GetLolRankedV1RankedStats",
-        "parameters": [
-          {
-            "name": "puuids",
-            "in": "query",
-            "required": true,
-            "schema": {
-              "type": "array",
-              "items": {
-                "type": "string"
-              }
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Successful response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "additionalProperties": {
-                    "$ref": "#/components/schemas/LolRankedRankedStats"
-                  }
-                }
-              },
-              "application/x-yaml": {
-                "schema": {
-                  "type": "object",
-                  "additionalProperties": {
-                    "$ref": "#/components/schemas/LolRankedRankedStats"
-                  }
-                }
-              },
-              "application/x-msgpack": {
-                "schema": {
-                  "type": "object",
-                  "additionalProperties": {
-                    "$ref": "#/components/schemas/LolRankedRankedStats"
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    },
     "/lol-ranked/v1/ranked-stats/{puuid}": {
       "get": {
         "tags": [
@@ -51808,7 +51755,13 @@
           "chatRoomPassword": {
             "type": "string"
           },
+          "multiUserChatId": {
+            "type": "string"
+          },
           "multiUserChatJWT": {
+            "type": "string"
+          },
+          "multiUserChatPassword": {
             "type": "string"
           }
         }
@@ -52734,7 +52687,13 @@
           "chatRoomPassword": {
             "type": "string"
           },
+          "multiUserChatId": {
+            "type": "string"
+          },
           "multiUserChatJWT": {
+            "type": "string"
+          },
+          "multiUserChatPassword": {
             "type": "string"
           }
         }
@@ -56342,7 +56301,13 @@
           "logoUrl": {
             "type": "string"
           },
+          "multiUserChatId": {
+            "type": "string"
+          },
           "multiUserChatJWT": {
+            "type": "string"
+          },
+          "multiUserChatPassword": {
             "type": "string"
           },
           "name": {
@@ -60234,7 +60199,13 @@
             "type": "integer",
             "format": "int32"
           },
+          "multiUserChatId": {
+            "type": "string"
+          },
           "multiUserChatJWT": {
+            "type": "string"
+          },
+          "multiUserChatPassword": {
             "type": "string"
           },
           "myTeamStatus": {
@@ -64265,8 +64236,8 @@
       "LolEventShopTokenUpsellLockedType": {
         "enum": [
           "UNASSIGNED",
-          "LOCKED",
-          "UNLOCKED"
+          "UNLOCKED",
+          "LOCKED"
         ],
         "type": "string"
       },
@@ -69812,7 +69783,13 @@
               "$ref": "#/components/schemas/LolLobbyLobbyMember"
             }
           },
+          "multiUserChatId": {
+            "type": "string"
+          },
           "multiUserChatJWT": {
+            "type": "string"
+          },
+          "multiUserChatPassword": {
             "type": "string"
           },
           "premadeSizeAllowed": {
@@ -70135,7 +70112,13 @@
               "$ref": "#/components/schemas/LolLobbyLobbyParticipantDto"
             }
           },
+          "multiUserChatId": {
+            "type": "string"
+          },
           "multiUserChatJWT": {
+            "type": "string"
+          },
+          "multiUserChatPassword": {
             "type": "string"
           },
           "partyId": {
@@ -72123,7 +72106,13 @@
           "chatRoomPassword": {
             "type": "string"
           },
+          "multiUserChatId": {
+            "type": "string"
+          },
           "multiUserChatJWT": {
+            "type": "string"
+          },
+          "multiUserChatPassword": {
             "type": "string"
           }
         }
@@ -72647,6 +72636,12 @@
             "items": {
               "$ref": "#/components/schemas/LolLobbyTeamBuilderLobbyMember"
             }
+          },
+          "multiUserChatId": {
+            "type": "string"
+          },
+          "multiUserChatPassword": {
+            "type": "string"
           },
           "premadeSizeAllowed": {
             "type": "boolean"
@@ -79977,7 +79972,13 @@
           "chatRoomPassword": {
             "type": "string"
           },
+          "multiUserChatId": {
+            "type": "string"
+          },
           "multiUserChatJWT": {
+            "type": "string"
+          },
+          "multiUserChatPassword": {
             "type": "string"
           }
         }
@@ -80236,17 +80237,6 @@
         "type": "object",
         "properties": {
           "queueType": {
-            "type": "string"
-          }
-        }
-      },
-      "LolPerksGetResultFromServiceDTO": {
-        "type": "object",
-        "properties": {
-          "error": {
-            "type": "string"
-          },
-          "result": {
             "type": "string"
           }
         }
@@ -91224,8 +91214,8 @@
       "LolWorldsTokenCardTokenUpsellLockedType": {
         "enum": [
           "UNASSIGNED",
-          "LOCKED",
-          "UNLOCKED"
+          "UNLOCKED",
+          "LOCKED"
         ],
         "type": "string"
       },

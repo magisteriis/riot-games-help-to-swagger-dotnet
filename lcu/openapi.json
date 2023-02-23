@@ -64236,8 +64236,8 @@
       "LolEventShopTokenUpsellLockedType": {
         "enum": [
           "UNASSIGNED",
-          "LOCKED",
-          "UNLOCKED"
+          "UNLOCKED",
+          "LOCKED"
         ],
         "type": "string"
       },
@@ -91214,8 +91214,8 @@
       "LolWorldsTokenCardTokenUpsellLockedType": {
         "enum": [
           "UNASSIGNED",
-          "LOCKED",
-          "UNLOCKED"
+          "UNLOCKED",
+          "LOCKED"
         ],
         "type": "string"
       },

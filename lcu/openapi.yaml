@@ -1118,55 +1118,6 @@ paths:
             application/x-msgpack:
               schema:
                 $ref: '#/components/schemas/EntitlementsToken'
-  /lol-account-verification/v1/activationPin:
-    get:
-      tags:
-        - Plugins
-        - Plugin lol-account-verification
-      operationId: GetLolAccountVerificationV1ActivationPin
-      responses:
-        '200':
-          description: Successful response
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/LolAccountVerificationSendActivationPinResponse'
-            application/x-yaml:
-              schema:
-                $ref: '#/components/schemas/LolAccountVerificationSendActivationPinResponse'
-            application/x-msgpack:
-              schema:
-                $ref: '#/components/schemas/LolAccountVerificationSendActivationPinResponse'
-  /lol-account-verification/v1/authenticate:
-    post:
-      tags:
-        - Plugins
-        - Plugin lol-account-verification
-      operationId: PostLolAccountVerificationV1Authenticate
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/LolAccountVerificationAuthenticateRequest'
-          application/x-yaml:
-            schema:
-              $ref: '#/components/schemas/LolAccountVerificationAuthenticateRequest'
-          application/x-msgpack:
-            schema:
-              $ref: '#/components/schemas/LolAccountVerificationAuthenticateRequest'
-      responses:
-        '200':
-          description: Successful response
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/LolAccountVerificationAuthenticateResponse'
-            application/x-yaml:
-              schema:
-                $ref: '#/components/schemas/LolAccountVerificationAuthenticateResponse'
-            application/x-msgpack:
-              schema:
-                $ref: '#/components/schemas/LolAccountVerificationAuthenticateResponse'
   /lol-account-verification/v1/confirmActivationPin:
     post:
       tags:
@@ -1207,63 +1158,6 @@ paths:
       responses:
         '204':
           description: No content
-  /lol-account-verification/v1/device:
-    get:
-      tags:
-        - Plugins
-        - Plugin lol-account-verification
-      operationId: GetLolAccountVerificationV1Device
-      responses:
-        '200':
-          description: Successful response
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/LolAccountVerificationDeviceResponse'
-            application/x-yaml:
-              schema:
-                $ref: '#/components/schemas/LolAccountVerificationDeviceResponse'
-            application/x-msgpack:
-              schema:
-                $ref: '#/components/schemas/LolAccountVerificationDeviceResponse'
-  /lol-account-verification/v1/get-phone-number:
-    get:
-      tags:
-        - Plugins
-        - Plugin lol-account-verification
-      operationId: GetLolAccountVerificationV1GetPhoneNumber
-      responses:
-        '200':
-          description: Successful response
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/LolAccountVerificationPhoneNumberResponse'
-            application/x-yaml:
-              schema:
-                $ref: '#/components/schemas/LolAccountVerificationPhoneNumberResponse'
-            application/x-msgpack:
-              schema:
-                $ref: '#/components/schemas/LolAccountVerificationPhoneNumberResponse'
-  /lol-account-verification/v1/invalidate:
-    post:
-      tags:
-        - Plugins
-        - Plugin lol-account-verification
-      operationId: PostLolAccountVerificationV1Invalidate
-      responses:
-        '200':
-          description: Successful response
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/LolAccountVerificationInvalidateResponse'
-            application/x-yaml:
-              schema:
-                $ref: '#/components/schemas/LolAccountVerificationInvalidateResponse'
-            application/x-msgpack:
-              schema:
-                $ref: '#/components/schemas/LolAccountVerificationInvalidateResponse'
   /lol-account-verification/v1/is-verified:
     get:
       tags:
@@ -1283,36 +1177,25 @@ paths:
             application/x-msgpack:
               schema:
                 $ref: '#/components/schemas/LolAccountVerificationIsVerifiedResponse'
-  /lol-account-verification/v1/send-token:
-    post:
+  /lol-account-verification/v1/phone-number:
+    get:
       tags:
         - Plugins
         - Plugin lol-account-verification
-      operationId: PostLolAccountVerificationV1SendToken
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/LolAccountVerificationSendTokenRequest'
-          application/x-yaml:
-            schema:
-              $ref: '#/components/schemas/LolAccountVerificationSendTokenRequest'
-          application/x-msgpack:
-            schema:
-              $ref: '#/components/schemas/LolAccountVerificationSendTokenRequest'
+      operationId: GetLolAccountVerificationV1PhoneNumber
       responses:
         '200':
           description: Successful response
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/LolAccountVerificationSendTokenResponse'
+                $ref: '#/components/schemas/LolAccountVerificationPhoneNumberResponse'
             application/x-yaml:
               schema:
-                $ref: '#/components/schemas/LolAccountVerificationSendTokenResponse'
+                $ref: '#/components/schemas/LolAccountVerificationPhoneNumberResponse'
             application/x-msgpack:
               schema:
-                $ref: '#/components/schemas/LolAccountVerificationSendTokenResponse'
+                $ref: '#/components/schemas/LolAccountVerificationPhoneNumberResponse'
   /lol-account-verification/v1/sendActivationPin:
     post:
       tags:
@@ -1349,36 +1232,6 @@ paths:
       responses:
         '204':
           description: No content
-  /lol-account-verification/v1/verify:
-    post:
-      tags:
-        - Plugins
-        - Plugin lol-account-verification
-      operationId: PostLolAccountVerificationV1Verify
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/LolAccountVerificationVerifyRequest'
-          application/x-yaml:
-            schema:
-              $ref: '#/components/schemas/LolAccountVerificationVerifyRequest'
-          application/x-msgpack:
-            schema:
-              $ref: '#/components/schemas/LolAccountVerificationVerifyRequest'
-      responses:
-        '200':
-          description: Successful response
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/LolAccountVerificationVerifyResponse'
-            application/x-yaml:
-              schema:
-                $ref: '#/components/schemas/LolAccountVerificationVerifyResponse'
-            application/x-msgpack:
-              schema:
-                $ref: '#/components/schemas/LolAccountVerificationVerifyResponse'
   /lol-active-boosts/v1/active-boosts:
     get:
       tags:
@@ -9466,15 +9319,6 @@ paths:
             application/x-msgpack:
               schema:
                 type: boolean
-  /lol-event-shop/v1/lazy-load-data:
-    post:
-      tags:
-        - Plugins
-        - Plugin lol-event-shop
-      operationId: PostLolEventShopV1LazyLoadData
-      responses:
-        '204':
-          description: No content
   /lol-event-shop/v1/navigation-button-data:
     get:
       tags:
@@ -19013,6 +18857,66 @@ paths:
                 items:
                   type: integer
                   format: int32
+  '/lol-perks/v1/recommended-pages-position/champion/{championId}':
+    get:
+      tags:
+        - Plugins
+        - Plugin lol-perks
+      operationId: GetLolPerksV1RecommendedPagesPositionChampionByChampionId
+      parameters:
+        - name: championId
+          in: path
+          required: true
+          style: simple
+          schema:
+            type: integer
+            format: int32
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: string
+            application/x-yaml:
+              schema:
+                type: string
+            application/x-msgpack:
+              schema:
+                type: string
+  '/lol-perks/v1/recommended-pages-position/champion/{championId}/position/{position}':
+    post:
+      tags:
+        - Plugins
+        - Plugin lol-perks
+      operationId: PostLolPerksV1RecommendedPagesPositionChampionByChampionIdPositionByPosition
+      parameters:
+        - name: championId
+          in: path
+          required: true
+          style: simple
+          schema:
+            type: integer
+            format: int32
+        - name: position
+          in: path
+          required: true
+          style: simple
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+            application/x-yaml:
+              schema:
+                type: object
+            application/x-msgpack:
+              schema:
+                type: object
   '/lol-perks/v1/recommended-pages/champion/{championId}/position/{position}/map/{mapId}':
     get:
       tags:
@@ -19059,6 +18963,43 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/LolPerksPerkUIRecommendedPage'
+  /lol-perks/v1/rune-recommender-auto-select:
+    get:
+      tags:
+        - Plugins
+        - Plugin lol-perks
+      operationId: GetLolPerksV1RuneRecommenderAutoSelect
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: boolean
+            application/x-yaml:
+              schema:
+                type: boolean
+            application/x-msgpack:
+              schema:
+                type: boolean
+    post:
+      tags:
+        - Plugins
+        - Plugin lol-perks
+      operationId: PostLolPerksV1RuneRecommenderAutoSelect
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+            application/x-yaml:
+              schema:
+                type: object
+            application/x-msgpack:
+              schema:
+                type: object
   /lol-perks/v1/settings:
     get:
       tags:
@@ -25317,31 +25258,6 @@ paths:
             application/x-msgpack:
               schema:
                 $ref: '#/components/schemas/LolMissionsTftPaidBattlepass'
-  /lol-token-upsell/v1/all:
-    get:
-      tags:
-        - Plugins
-        - Plugin lol-worlds-token-card
-      operationId: GetLolTokenUpsellV1All
-      responses:
-        '200':
-          description: Successful response
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/LolWorldsTokenCardTokenUpsell'
-            application/x-yaml:
-              schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/LolWorldsTokenCardTokenUpsell'
-            application/x-msgpack:
-              schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/LolWorldsTokenCardTokenUpsell'
   /lol-trophies/v1/current-summoner/trophies/profile:
     get:
       tags:
@@ -27815,47 +27731,6 @@ paths:
       responses:
         '204':
           description: No content
-  '/telemetry/v1/events-once/{eventType}':
-    post:
-      tags:
-        - telemetry
-      summary: Adds a new event to be sent to Dradis and/or other analytics/monitoring data sinks that will be sent only once during this client executable run regardless of any javascript frontend restarts. All events will have their eventType prefixed with "riot__rclient__"
-      operationId: PostTelemetryV1EventsOnceByEventType
-      parameters:
-        - name: eventType
-          in: path
-          description: The name of the event type
-          required: true
-          style: simple
-          schema:
-            type: string
-        - name: onceTag
-          in: query
-          description: A unique tag used to ensure this event is sent only once
-          required: true
-          style: form
-          schema:
-            type: string
-      requestBody:
-        content:
-          application/json:
-            schema:
-              type: object
-              additionalProperties:
-                type: object
-          application/x-yaml:
-            schema:
-              type: object
-              additionalProperties:
-                type: object
-          application/x-msgpack:
-            schema:
-              type: object
-              additionalProperties:
-                type: object
-      responses:
-        '204':
-          description: No content
   '/telemetry/v1/events-with-perf-info/{eventType}':
     post:
       tags:
@@ -27924,12 +27799,12 @@ paths:
       responses:
         '204':
           description: No content
-  '/telemetry/v3/events-once/{eventType}':
+  '/telemetry/v3/events-once/{eventType}/{onceTag}':
     post:
       tags:
         - telemetry
       summary: Adds a new event to be sent to Dradis and/or other analytics/monitoring data sinks using the Riot Data API that will be sent only once during this client executable run regardless of any javascript frontend restarts. All events will have their eventType prefixed with "riot__rclient__"
-      operationId: PostTelemetryV3EventsOnceByEventType
+      operationId: PostTelemetryV3EventsOnceByEventTypeByOnceTag
       parameters:
         - name: eventType
           in: path
@@ -27939,29 +27814,19 @@ paths:
           schema:
             type: string
         - name: onceTag
-          in: query
+          in: path
           description: A unique tag used to ensure this event is sent only once
+          required: true
+          style: simple
+          schema:
+            type: string
+        - name: eventData
+          in: query
+          description: A map of event data
           required: true
           style: form
           schema:
-            type: string
-      requestBody:
-        content:
-          application/json:
-            schema:
-              type: object
-              additionalProperties:
-                type: object
-          application/x-yaml:
-            schema:
-              type: object
-              additionalProperties:
-                type: object
-          application/x-msgpack:
-            schema:
-              type: object
-              additionalProperties:
-                type: object
+            type: map of string
       responses:
         '204':
           description: No content
@@ -30571,31 +30436,12 @@ components:
         - Always
       type: string
       description: Allowable severity levels for log events.
-    LolAccountVerificationAuthenticateRequest:
-      type: object
-      properties:
-        password:
-          type: string
-        username:
-          type: string
-    LolAccountVerificationAuthenticateResponse:
-      type: object
-      properties:
-        message:
-          type: string
-        status:
-          type: integer
-          format: int32
-        success:
-          type: boolean
     LolAccountVerificationAVSConfig:
       type: object
       properties:
+        DisableGetActivePhoneNumberCall:
+          type: boolean
         Enabled:
-          type: boolean
-        PasswordEnabled:
-          type: boolean
-        ShouldUseNewAvs:
           type: boolean
     LolAccountVerificationConfirmActivationPinRequest:
       type: object
@@ -30612,7 +30458,7 @@ components:
     LolAccountVerificationConfirmDeactivationPinRequest:
       type: object
       properties:
-        locale:
+        oneTimePin:
           type: string
     LolAccountVerificationConfirmDeactivationPinResponse:
       type: object
@@ -30621,29 +30467,6 @@ components:
           type: string
         data:
           $ref: '#/components/schemas/LolAccountVerificationPinResponseData'
-    LolAccountVerificationDeviceResponse:
-      type: object
-      properties:
-        message:
-          type: string
-        status:
-          type: integer
-          format: int32
-        success:
-          type: boolean
-    LolAccountVerificationInvalidateResponse:
-      type: object
-      properties:
-        message:
-          type: string
-        smsTokenExpireDurationInSec:
-          type: integer
-          format: int32
-        status:
-          type: integer
-          format: int32
-        success:
-          type: boolean
     LolAccountVerificationIsVerifiedResponse:
       type: object
       properties:
@@ -30746,45 +30569,6 @@ components:
           $ref: '#/components/schemas/LolAccountVerificationSendActivationPinResponseData'
         error:
           $ref: '#/components/schemas/LolAccountVerificationResponseError'
-    LolAccountVerificationSendTokenRequest:
-      type: object
-      properties:
-        device:
-          type: string
-        locale:
-          type: string
-        mediator:
-          type: string
-    LolAccountVerificationSendTokenResponse:
-      type: object
-      properties:
-        message:
-          type: string
-        smsTokenExpireDurationInSec:
-          type: integer
-          format: int32
-        status:
-          type: integer
-          format: int32
-        success:
-          type: boolean
-    LolAccountVerificationVerifyRequest:
-      type: object
-      properties:
-        mediator:
-          type: string
-        token:
-          type: string
-    LolAccountVerificationVerifyResponse:
-      type: object
-      properties:
-        message:
-          type: string
-        status:
-          type: integer
-          format: int32
-        success:
-          type: boolean
     LolActiveBoostsActiveBoosts:
       type: object
       properties:
@@ -33065,10 +32849,6 @@ components:
     LolChampSelectChampSelectChatRoomDetails:
       type: object
       properties:
-        chatRoomName:
-          type: string
-        chatRoomPassword:
-          type: string
         multiUserChatId:
           type: string
         multiUserChatJWT:
@@ -33705,10 +33485,6 @@ components:
     LolChampSelectLegacyChampSelectChatRoomDetails:
       type: object
       properties:
-        chatRoomName:
-          type: string
-        chatRoomPassword:
-          type: string
         multiUserChatId:
           type: string
         multiUserChatJWT:
@@ -36179,13 +35955,9 @@ components:
           type: string
         isRegistered:
           type: boolean
-        key:
-          type: string
         logoUrl:
           type: string
         multiUserChatId:
-          type: string
-        multiUserChatJWT:
           type: string
         multiUserChatPassword:
           type: string
@@ -38922,10 +38694,6 @@ components:
           format: uint64
         rerollData:
           $ref: '#/components/schemas/LolEndOfGameEndOfGamePoints'
-        roomName:
-          type: string
-        roomPassword:
-          type: string
         rpEarned:
           type: integer
           format: int32
@@ -39625,12 +39393,6 @@ components:
             type: string
         token:
           type: string
-    LolEventShopAccountIdAndSummonerId:
-      type: object
-      properties:
-        summonerId:
-          type: integer
-          format: uint64
     LolEventShopBalance:
       type: object
       properties:
@@ -40110,6 +39872,9 @@ components:
     LolEventShopEventShopClientConfig:
       type: object
       properties:
+        ActivationSpreadSeconds:
+          type: number
+          format: double
         ActiveEventId:
           type: string
         DisabledOfferIds:
@@ -40118,6 +39883,9 @@ components:
             type: string
         Enabled:
           type: boolean
+        FirstActivationThresholdSeconds:
+          type: number
+          format: double
         ProgressEndDate:
           type: string
         ShopEndDate:
@@ -40550,48 +40318,6 @@ components:
         - LOGGING_OUT
         - ERROR
       type: string
-    LolEventShopLootDataGdsResource:
-      type: object
-      properties:
-        LootTokenBankCards:
-          type: array
-          items:
-            $ref: '#/components/schemas/LolEventShopLootTokenBankCardGdsResource'
-    LolEventShopLootTokenBankCardGdsResource:
-      type: object
-      properties:
-        activationDate:
-          type: string
-        backsplashImagePath:
-          type: string
-        buttonText:
-          type: string
-        deactivationDate:
-          type: string
-        lootItemName:
-          type: string
-        nonPremiumCapCurrencyId:
-          type: string
-        premiumCapCurrencyId:
-          type: string
-        storeLinkItem:
-          type: string
-        storeLinkType:
-          type: string
-        titleText:
-          type: string
-        tokenIconPath:
-          type: string
-        tooltipDescriptionText:
-          type: string
-        tooltipSplashPath:
-          type: string
-        tooltipTitleText:
-          type: string
-        unlockItemId:
-          type: string
-        unlockItemType:
-          type: string
     LolEventShopLoyaltyRewards:
       type: object
       properties:
@@ -41453,6 +41179,10 @@ components:
           $ref: '#/components/schemas/LolEventShopGrantorDescription'
         id:
           type: string
+        messageParameters:
+          type: object
+          additionalProperties:
+            type: string
         rewardGroupId:
           type: string
         selectedIds:
@@ -41499,8 +41229,6 @@ components:
           items:
             type: string
         id:
-          type: string
-        internalName:
           type: string
         localizations:
           type: object
@@ -41599,8 +41327,8 @@ components:
     LolEventShopTokenUpsellLockedType:
       enum:
         - UNASSIGNED
-        - UNLOCKED
         - LOCKED
+        - UNLOCKED
       type: string
     LolEventShopTransaction:
       type: object
@@ -45382,10 +45110,6 @@ components:
           type: boolean
         canStartMatchmaking:
           type: boolean
-        chatRoomId:
-          type: string
-        chatRoomKey:
-          type: string
         customGameLobby:
           $ref: '#/components/schemas/LolLobbyLobbyCustomGameLobby'
         gameMode:
@@ -45619,10 +45343,6 @@ components:
       properties:
         canStartActivity:
           type: boolean
-        chatRoomId:
-          type: string
-        chatRoomKey:
-          type: string
         gameConfig:
           $ref: '#/components/schemas/LolLobbyLobbyGameConfigDto'
         invitations:
@@ -46997,10 +46717,6 @@ components:
     LolLobbyTeamBuilderChampSelectChatRoomDetails:
       type: object
       properties:
-        chatRoomName:
-          type: string
-        chatRoomPassword:
-          type: string
         multiUserChatId:
           type: string
         multiUserChatJWT:
@@ -47347,10 +47063,6 @@ components:
           type: boolean
         canStartMatchmaking:
           type: boolean
-        chatRoomId:
-          type: string
-        chatRoomKey:
-          type: string
         invitationId:
           type: string
         invitations:
@@ -49503,6 +49215,10 @@ components:
           $ref: '#/components/schemas/LolLootGrantorDescription'
         id:
           type: string
+        messageParameters:
+          type: object
+          additionalProperties:
+            type: string
         rewardGroupId:
           type: string
         selectedIds:
@@ -49549,8 +49265,6 @@ components:
           items:
             type: string
         id:
-          type: string
-        internalName:
           type: string
         localizations:
           type: object
@@ -52373,15 +52087,7 @@ components:
     LolPerksChampSelectChatRoomDetails:
       type: object
       properties:
-        chatRoomName:
-          type: string
-        chatRoomPassword:
-          type: string
-        multiUserChatId:
-          type: string
         multiUserChatJWT:
-          type: string
-        multiUserChatPassword:
           type: string
     LolPerksChampSelectMySelection:
       type: object
@@ -53324,10 +53030,6 @@ components:
           format: uint64
         rerollData:
           $ref: '#/components/schemas/LolPftPFTEndOfGamePoints'
-        roomName:
-          type: string
-        roomPassword:
-          type: string
         rpEarned:
           type: integer
           format: int32
@@ -57262,6 +56964,10 @@ components:
           $ref: '#/components/schemas/LolRewardsGrantorDescription'
         id:
           type: string
+        messageParameters:
+          type: object
+          additionalProperties:
+            type: string
         rewardGroupId:
           type: string
         selectedIds:
@@ -57308,8 +57014,6 @@ components:
           items:
             type: string
         id:
-          type: string
-        internalName:
           type: string
         localizations:
           type: object
@@ -59914,123 +59618,6 @@ components:
       properties:
         phase:
           $ref: '#/components/schemas/LolUserExperienceGameflowPhase'
-    LolWorldsTokenCardAccountIdAndSummonerId:
-      type: object
-      properties:
-        summonerId:
-          type: integer
-          format: uint64
-    LolWorldsTokenCardInventoryItem:
-      type: object
-      properties:
-        inventoryType:
-          type: string
-        itemId:
-          type: integer
-          format: int32
-        ownershipType:
-          $ref: '#/components/schemas/LolWorldsTokenCardItemOwnershipType'
-        purchaseDate:
-          type: string
-        quantity:
-          type: integer
-          format: uint64
-        uuid:
-          type: string
-    LolWorldsTokenCardItemOwnershipType:
-      enum:
-        - OWNED
-        - RENTED
-        - LOYALTY
-        - F2P
-      type: string
-    LolWorldsTokenCardLootDataGdsResource:
-      type: object
-      properties:
-        LootTokenBankCards:
-          type: array
-          items:
-            $ref: '#/components/schemas/LolWorldsTokenCardLootTokenBankCardGdsResource'
-    LolWorldsTokenCardLootTokenBankCardGdsResource:
-      type: object
-      properties:
-        activationDate:
-          type: string
-        backsplashImagePath:
-          type: string
-        buttonText:
-          type: string
-        deactivationDate:
-          type: string
-        lootItemName:
-          type: string
-        nonPremiumCapCurrencyId:
-          type: string
-        premiumCapCurrencyId:
-          type: string
-        storeLinkItem:
-          type: string
-        storeLinkType:
-          type: string
-        titleText:
-          type: string
-        tokenIconPath:
-          type: string
-        tooltipDescriptionText:
-          type: string
-        tooltipSplashPath:
-          type: string
-        tooltipTitleText:
-          type: string
-        unlockItemId:
-          type: string
-        unlockItemType:
-          type: string
-    LolWorldsTokenCardTokenUpsell:
-      type: object
-      properties:
-        backgroundUrl:
-          type: string
-        buttonText:
-          type: string
-        currencyUrl:
-          type: string
-        currentlyLocked:
-          $ref: '#/components/schemas/LolWorldsTokenCardTokenUpsellLockedType'
-        dependentInventoryId:
-          type: integer
-          format: int32
-        dependentInventoryType:
-          type: string
-        endDate:
-          type: string
-        id:
-          type: string
-        internalName:
-          type: string
-        lockedCount:
-          type: integer
-          format: int32
-        premiumCurrencyName:
-          type: string
-        purchaseUrl:
-          type: string
-        startDate:
-          type: string
-        title:
-          type: string
-        tooltipBackgroundUrl:
-          type: string
-        tooltipDescription:
-          type: string
-        tooltipTitle:
-          type: string
-    LolWorldsTokenCardTokenUpsellLockedType:
-      enum:
-        - UNASSIGNED
-        - UNLOCKED
-        - LOCKED
-      type: string
     LolYourshopAccessTokenResource:
       type: object
       properties:
@@ -63738,5 +63325,4 @@ tags:
   - name: Plugin lol-tft
   - name: Plugin lol-tft-team-planner
   - name: Plugin lol-trophies
-  - name: Plugin lol-worlds-token-card
   - name: Plugin lol-yourshop

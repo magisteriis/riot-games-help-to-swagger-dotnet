@@ -909,7 +909,7 @@
       "get": {
         "tags": [
           "Plugins",
-          "Plugin client-config"
+          "Plugin rga-client-config"
         ],
         "operationId": "GetClientConfigV1Config",
         "parameters": [
@@ -918,7 +918,7 @@
             "in": "query",
             "required": true,
             "schema": {
-              "$ref": "#/components/schemas/ClientConfigConfigType"
+              "type": "string"
             }
           },
           {
@@ -963,26 +963,17 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "object",
-                  "additionalProperties": {
-                    "type": "object"
-                  }
+                  "type": "object"
                 }
               },
               "application/x-yaml": {
                 "schema": {
-                  "type": "object",
-                  "additionalProperties": {
-                    "type": "object"
-                  }
+                  "type": "object"
                 }
               },
               "application/x-msgpack": {
                 "schema": {
-                  "type": "object",
-                  "additionalProperties": {
-                    "type": "object"
-                  }
+                  "type": "object"
                 }
               }
             }
@@ -994,7 +985,7 @@
       "get": {
         "tags": [
           "Plugins",
-          "Plugin client-config"
+          "Plugin rga-client-config"
         ],
         "operationId": "GetClientConfigV1ConfigByName",
         "parameters": [
@@ -1011,7 +1002,7 @@
             "in": "query",
             "required": true,
             "schema": {
-              "$ref": "#/components/schemas/ClientConfigConfigType"
+              "type": "string"
             }
           },
           {
@@ -1067,58 +1058,11 @@
         }
       }
     },
-    "/client-config/v1/entitlements-token": {
-      "put": {
-        "tags": [
-          "Plugins",
-          "Plugin client-config"
-        ],
-        "operationId": "PutClientConfigV1EntitlementsToken",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/ClientConfigEntitlementsUpdate"
-              }
-            },
-            "application/x-yaml": {
-              "schema": {
-                "$ref": "#/components/schemas/ClientConfigEntitlementsUpdate"
-              }
-            },
-            "application/x-msgpack": {
-              "schema": {
-                "$ref": "#/components/schemas/ClientConfigEntitlementsUpdate"
-              }
-            }
-          }
-        },
-        "responses": {
-          "204": {
-            "description": "No content"
-          }
-        }
-      }
-    },
-    "/client-config/v1/refresh-config-status": {
-      "put": {
-        "tags": [
-          "Plugins",
-          "Plugin client-config"
-        ],
-        "operationId": "PutClientConfigV1RefreshConfigStatus",
-        "responses": {
-          "204": {
-            "description": "No content"
-          }
-        }
-      }
-    },
     "/client-config/v1/status/{type}": {
       "get": {
         "tags": [
           "Plugins",
-          "Plugin client-config"
+          "Plugin rga-client-config"
         ],
         "operationId": "GetClientConfigV1StatusByType",
         "parameters": [
@@ -1127,7 +1071,7 @@
             "in": "path",
             "required": true,
             "schema": {
-              "$ref": "#/components/schemas/ClientConfigConfigType"
+              "type": "string"
             }
           }
         ],
@@ -1137,17 +1081,17 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ClientConfigConfigStatus"
+                  "$ref": "#/components/schemas/RgaClientConfigConfigStatus"
                 }
               },
               "application/x-yaml": {
                 "schema": {
-                  "$ref": "#/components/schemas/ClientConfigConfigStatus"
+                  "$ref": "#/components/schemas/RgaClientConfigConfigStatus"
                 }
               },
               "application/x-msgpack": {
                 "schema": {
-                  "$ref": "#/components/schemas/ClientConfigConfigStatus"
+                  "$ref": "#/components/schemas/RgaClientConfigConfigStatus"
                 }
               }
             }
@@ -1159,7 +1103,7 @@
       "get": {
         "tags": [
           "Plugins",
-          "Plugin client-config"
+          "Plugin rga-client-config"
         ],
         "operationId": "GetClientConfigV2ConfigByName",
         "parameters": [
@@ -1196,44 +1140,11 @@
         }
       }
     },
-    "/client-config/v2/namespace-changes": {
-      "put": {
-        "tags": [
-          "Plugins",
-          "Plugin client-config"
-        ],
-        "operationId": "PutClientConfigV2NamespaceChanges",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/ClientConfigConfigNamespaceUpdate"
-              }
-            },
-            "application/x-yaml": {
-              "schema": {
-                "$ref": "#/components/schemas/ClientConfigConfigNamespaceUpdate"
-              }
-            },
-            "application/x-msgpack": {
-              "schema": {
-                "$ref": "#/components/schemas/ClientConfigConfigNamespaceUpdate"
-              }
-            }
-          }
-        },
-        "responses": {
-          "204": {
-            "description": "No content"
-          }
-        }
-      }
-    },
     "/client-config/v2/namespace/{namespace}": {
       "get": {
         "tags": [
           "Plugins",
-          "Plugin client-config"
+          "Plugin rga-client-config"
         ],
         "operationId": "GetClientConfigV2NamespaceByNamespace",
         "parameters": [
@@ -1252,26 +1163,17 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "object",
-                  "additionalProperties": {
-                    "type": "object"
-                  }
+                  "type": "object"
                 }
               },
               "application/x-yaml": {
                 "schema": {
-                  "type": "object",
-                  "additionalProperties": {
-                    "type": "object"
-                  }
+                  "type": "object"
                 }
               },
               "application/x-msgpack": {
                 "schema": {
-                  "type": "object",
-                  "additionalProperties": {
-                    "type": "object"
-                  }
+                  "type": "object"
                 }
               }
             }
@@ -1283,7 +1185,7 @@
       "get": {
         "tags": [
           "Plugins",
-          "Plugin client-config"
+          "Plugin rga-client-config"
         ],
         "operationId": "GetClientConfigV2NamespaceByNamespacePlayer",
         "parameters": [
@@ -1302,26 +1204,17 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "object",
-                  "additionalProperties": {
-                    "type": "object"
-                  }
+                  "type": "object"
                 }
               },
               "application/x-yaml": {
                 "schema": {
-                  "type": "object",
-                  "additionalProperties": {
-                    "type": "object"
-                  }
+                  "type": "object"
                 }
               },
               "application/x-msgpack": {
                 "schema": {
-                  "type": "object",
-                  "additionalProperties": {
-                    "type": "object"
-                  }
+                  "type": "object"
                 }
               }
             }
@@ -1333,7 +1226,7 @@
       "get": {
         "tags": [
           "Plugins",
-          "Plugin client-config"
+          "Plugin rga-client-config"
         ],
         "operationId": "GetClientConfigV2NamespaceByNamespacePublic",
         "parameters": [
@@ -1352,26 +1245,17 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "object",
-                  "additionalProperties": {
-                    "type": "object"
-                  }
+                  "type": "object"
                 }
               },
               "application/x-yaml": {
                 "schema": {
-                  "type": "object",
-                  "additionalProperties": {
-                    "type": "object"
-                  }
+                  "type": "object"
                 }
               },
               "application/x-msgpack": {
                 "schema": {
-                  "type": "object",
-                  "additionalProperties": {
-                    "type": "object"
-                  }
+                  "type": "object"
                 }
               }
             }
@@ -44879,10 +44763,6 @@
           "physicalProcessorCores": {
             "type": "integer",
             "format": "uint32"
-          },
-          "processorSpeed": {
-            "type": "integer",
-            "format": "uint32"
           }
         },
         "description": "User Experience Settings System Information"
@@ -45852,164 +45732,6 @@
         ],
         "type": "string"
       },
-      "ClientConfigAuthenticatedConnection": {
-        "type": "object",
-        "properties": {
-          "authToken": {
-            "type": "string"
-          },
-          "connectionId": {
-            "type": "integer",
-            "format": "uint32"
-          },
-          "subscribed": {
-            "type": "boolean"
-          }
-        }
-      },
-      "ClientConfigBuildInfo": {
-        "type": "object",
-        "properties": {
-          "branch": {
-            "type": "string"
-          },
-          "branchFull": {
-            "type": "string"
-          },
-          "codeBuildId": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "contentBuildId": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "gameBranch": {
-            "type": "string"
-          },
-          "gameBranchFull": {
-            "type": "string"
-          },
-          "gameDataBuildId": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "patchline": {
-            "type": "string"
-          },
-          "patchlineVisibleName": {
-            "type": "string"
-          },
-          "version": {
-            "type": "string"
-          }
-        }
-      },
-      "ClientConfigClientConfig": {
-        "type": "object",
-        "properties": {
-          "data": {
-            "type": "object",
-            "additionalProperties": {
-              "type": "object"
-            }
-          },
-          "params": {
-            "$ref": "#/components/schemas/ClientConfigConfigParams"
-          },
-          "updateTime": {
-            "type": "integer",
-            "format": "int64"
-          }
-        }
-      },
-      "ClientConfigConfigNamespaceUpdate": {
-        "type": "object",
-        "properties": {
-          "player": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "public": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          }
-        }
-      },
-      "ClientConfigConfigParams": {
-        "type": "object",
-        "properties": {
-          "appName": {
-            "type": "string"
-          },
-          "namespace": {
-            "type": "string"
-          },
-          "patchline": {
-            "type": "string"
-          },
-          "region": {
-            "type": "string"
-          },
-          "type": {
-            "$ref": "#/components/schemas/ClientConfigConfigType"
-          },
-          "version": {
-            "type": "string"
-          }
-        }
-      },
-      "ClientConfigConfigReadinessEnum": {
-        "enum": [
-          "NotReady",
-          "Ready",
-          "Disabled"
-        ],
-        "type": "string"
-      },
-      "ClientConfigConfigStatus": {
-        "type": "object",
-        "properties": {
-          "readiness": {
-            "$ref": "#/components/schemas/ClientConfigConfigReadinessEnum"
-          },
-          "updateId": {
-            "type": "integer",
-            "format": "uint64"
-          }
-        }
-      },
-      "ClientConfigConfigType": {
-        "enum": [
-          "public",
-          "player"
-        ],
-        "type": "string"
-      },
-      "ClientConfigDataPaths": {
-        "type": "object",
-        "properties": {
-          "configRoot": {
-            "type": "string"
-          },
-          "dataRoot": {
-            "type": "string"
-          },
-          "localSettingsPath": {
-            "type": "string"
-          },
-          "privateSettingsPath": {
-            "type": "string"
-          },
-          "userDataRoot": {
-            "type": "string"
-          }
-        }
-      },
       "ClientConfigDepInjectorEntitlements": {
         "type": "object",
         "properties": {
@@ -46045,71 +45767,6 @@
         }
       },
       "ClientConfigDepInjectorEntitlementsUpdateType": {
-        "enum": [
-          "Create",
-          "Update",
-          "Delete"
-        ],
-        "type": "string"
-      },
-      "ClientConfigEntitlements": {
-        "type": "object",
-        "properties": {
-          "accessToken": {
-            "type": "string"
-          },
-          "entitlements": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "issuer": {
-            "type": "string"
-          },
-          "subject": {
-            "type": "string"
-          },
-          "token": {
-            "type": "string"
-          }
-        }
-      },
-      "ClientConfigEntitlementsUpdate": {
-        "type": "object",
-        "properties": {
-          "EntitlementsTokenResource": {
-            "$ref": "#/components/schemas/ClientConfigEntitlements"
-          },
-          "UpdateType": {
-            "$ref": "#/components/schemas/ClientConfigUpdateType"
-          }
-        }
-      },
-      "ClientConfigSession": {
-        "type": "object",
-        "properties": {
-          "connections": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/ClientConfigAuthenticatedConnection"
-            }
-          },
-          "isInternal": {
-            "type": "boolean"
-          },
-          "patchlineId": {
-            "type": "string"
-          },
-          "productId": {
-            "type": "string"
-          },
-          "version": {
-            "type": "string"
-          }
-        }
-      },
-      "ClientConfigUpdateType": {
         "enum": [
           "Create",
           "Update",
@@ -53611,9 +53268,6 @@
           "lastMessage": {
             "$ref": "#/components/schemas/LolChatConversationMessageResource"
           },
-          "multiUserChatJWT": {
-            "type": "string"
-          },
           "name": {
             "type": "string"
           },
@@ -54606,20 +54260,6 @@
           },
           "state": {
             "$ref": "#/components/schemas/LolChatAccountState"
-          }
-        }
-      },
-      "LolChatMultiUserChatJWTPayload": {
-        "type": "object",
-        "properties": {
-          "chn": {
-            "type": "string"
-          },
-          "tgt": {
-            "type": "string"
-          },
-          "typ": {
-            "type": "string"
           }
         }
       },
@@ -59055,6 +58695,103 @@
           }
         }
       },
+      "LolCosmeticsCosmeticsTFTPlaybook": {
+        "type": "object",
+        "properties": {
+          "contentId": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "f2p": {
+            "type": "boolean"
+          },
+          "itemId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "loadoutsIcon": {
+            "type": "string"
+          },
+          "loyalty": {
+            "type": "boolean"
+          },
+          "name": {
+            "type": "string"
+          },
+          "owned": {
+            "type": "boolean"
+          },
+          "purchaseDate": {
+            "type": "string"
+          },
+          "rarityValue": {
+            "type": "integer",
+            "format": "uint32"
+          },
+          "selected": {
+            "type": "boolean"
+          }
+        }
+      },
+      "LolCosmeticsCosmeticsTFTPlaybookAugment": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          }
+        }
+      },
+      "LolCosmeticsCosmeticsTFTPlaybookViewModel": {
+        "type": "object",
+        "properties": {
+          "augments": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LolCosmeticsCosmeticsTFTPlaybookAugment"
+            }
+          },
+          "contentId": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "f2p": {
+            "type": "boolean"
+          },
+          "isRecentItem": {
+            "type": "boolean"
+          },
+          "itemId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "loadoutsIcon": {
+            "type": "string"
+          },
+          "loyalty": {
+            "type": "boolean"
+          },
+          "name": {
+            "type": "string"
+          },
+          "owned": {
+            "type": "boolean"
+          },
+          "purchaseDate": {
+            "type": "string"
+          },
+          "rarityValue": {
+            "type": "integer",
+            "format": "uint32"
+          },
+          "selected": {
+            "type": "boolean"
+          }
+        }
+      },
       "LolCosmeticsGameDataCompanion": {
         "type": "object",
         "properties": {
@@ -59100,6 +58837,23 @@
             "items": {
               "type": "string"
             }
+          }
+        }
+      },
+      "LolCosmeticsGameDataTFTCosmeticsDefaultItem": {
+        "type": "object",
+        "properties": {
+          "itemId": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "LolCosmeticsGameDataTFTCosmeticsDefaults": {
+        "type": "object",
+        "properties": {
+          "playbook": {
+            "$ref": "#/components/schemas/LolCosmeticsGameDataTFTCosmeticsDefaultItem"
           }
         }
       },
@@ -59168,6 +58922,36 @@
           "rarityValue": {
             "type": "integer",
             "format": "uint32"
+          }
+        }
+      },
+      "LolCosmeticsGameDataTFTPlaybook": {
+        "type": "object",
+        "properties": {
+          "augments": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LolCosmeticsCosmeticsTFTPlaybookAugment"
+            }
+          },
+          "contentId": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "itemId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "loadoutsIcon": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "translatedName": {
+            "type": "string"
           }
         }
       },
@@ -59297,6 +59081,50 @@
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/LolCosmeticsCosmeticsTFTMapSkinViewModel"
+            }
+          },
+          "numAvailable": {
+            "type": "integer",
+            "format": "uint32"
+          },
+          "numOwned": {
+            "type": "integer",
+            "format": "uint32"
+          }
+        }
+      },
+      "LolCosmeticsTFTPlaybookGroupedViewModel": {
+        "type": "object",
+        "properties": {
+          "defaultItemId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "groups": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LolCosmeticsTFTPlaybookGroupViewModel"
+            }
+          },
+          "selectedLoadoutItem": {
+            "$ref": "#/components/schemas/LolCosmeticsCosmeticsTFTPlaybookViewModel"
+          }
+        }
+      },
+      "LolCosmeticsTFTPlaybookGroupViewModel": {
+        "type": "object",
+        "properties": {
+          "groupId": {
+            "type": "integer",
+            "format": "uint32"
+          },
+          "groupName": {
+            "type": "string"
+          },
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LolCosmeticsCosmeticsTFTPlaybookViewModel"
             }
           },
           "numAvailable": {
@@ -61448,6 +61276,23 @@
           }
         }
       },
+      "LolEventShopContentDrop": {
+        "type": "object",
+        "properties": {
+          "activationDate": {
+            "type": "string"
+          },
+          "offers": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LolEventShopOffer"
+            }
+          },
+          "patch": {
+            "type": "string"
+          }
+        }
+      },
       "LolEventShopCounter": {
         "type": "object",
         "properties": {
@@ -62332,6 +62177,10 @@
             "type": "integer",
             "format": "int32"
           },
+          "loyaltyTFTDamageSkinCount": {
+            "type": "integer",
+            "format": "int32"
+          },
           "loyaltyTFTMapSkinCount": {
             "type": "integer",
             "format": "int32"
@@ -62381,6 +62230,10 @@
             }
           },
           "loyaltyTFTCompanionCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "loyaltyTFTDamageSkinCount": {
             "type": "integer",
             "format": "int32"
           },
@@ -63582,7 +63435,7 @@
           "messageParameters": {
             "type": "object",
             "additionalProperties": {
-              "type": "string"
+              "type": "object"
             }
           },
           "rewardGroupId": {
@@ -63694,6 +63547,12 @@
       "LolEventShopTokenShop": {
         "type": "object",
         "properties": {
+          "contentDrops": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LolEventShopContentDrop"
+            }
+          },
           "offers": {
             "type": "array",
             "items": {
@@ -64652,6 +64511,24 @@
               "type": "integer",
               "format": "uint64"
             }
+          }
+        }
+      },
+      "LolGameflowGameStateUpdate": {
+        "type": "object",
+        "properties": {
+          "errorMessage": {
+            "type": "string"
+          },
+          "gameState": {
+            "type": "string"
+          },
+          "gameType": {
+            "type": "string"
+          },
+          "id": {
+            "type": "integer",
+            "format": "uint64"
           }
         }
       },
@@ -67274,6 +67151,10 @@
             "type": "integer",
             "format": "int32"
           },
+          "loyaltyTFTDamageSkinCount": {
+            "type": "integer",
+            "format": "int32"
+          },
           "loyaltyTFTMapSkinCount": {
             "type": "integer",
             "format": "int32"
@@ -67323,6 +67204,10 @@
             }
           },
           "loyaltyTFTCompanionCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "loyaltyTFTDamageSkinCount": {
             "type": "integer",
             "format": "int32"
           },
@@ -75320,7 +75205,7 @@
           "messageParameters": {
             "type": "object",
             "additionalProperties": {
-              "type": "string"
+              "type": "object"
             }
           },
           "rewardGroupId": {
@@ -75640,6 +75525,10 @@
             "type": "integer",
             "format": "int32"
           },
+          "loyaltyTFTDamageSkinCount": {
+            "type": "integer",
+            "format": "int32"
+          },
           "loyaltyTFTMapSkinCount": {
             "type": "integer",
             "format": "int32"
@@ -75692,6 +75581,10 @@
             }
           },
           "loyaltyTFTCompanionCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "loyaltyTFTDamageSkinCount": {
             "type": "integer",
             "format": "int32"
           },
@@ -86662,7 +86555,7 @@
           "messageParameters": {
             "type": "object",
             "additionalProperties": {
-              "type": "string"
+              "type": "object"
             }
           },
           "rewardGroupId": {
@@ -90953,6 +90846,10 @@
             "type": "integer",
             "format": "int32"
           },
+          "loyaltyTFTDamageSkinCount": {
+            "type": "integer",
+            "format": "int32"
+          },
           "loyaltyTFTMapSkinCount": {
             "type": "integer",
             "format": "int32"
@@ -91002,6 +90899,10 @@
             }
           },
           "loyaltyTFTCompanionCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "loyaltyTFTDamageSkinCount": {
             "type": "integer",
             "format": "int32"
           },
@@ -93778,7 +93679,7 @@
               "type": "string"
             }
           },
-          "orderWADFileMounted": {
+          "orderWadFileMounted": {
             "type": "integer",
             "format": "int32"
           },
@@ -94192,6 +94093,18 @@
           "selectMinGroupCount": {
             "type": "integer",
             "format": "uint16"
+          }
+        }
+      },
+      "RgaClientConfigConfigStatus": {
+        "type": "object",
+        "properties": {
+          "readiness": {
+            "type": "string"
+          },
+          "updateId": {
+            "type": "integer",
+            "format": "uint64"
           }
         }
       },
@@ -95917,9 +95830,6 @@
       "name": "Plugin Asset Serving"
     },
     {
-      "name": "Plugin client-config"
-    },
-    {
       "name": "Plugin entitlements"
     },
     {
@@ -95930,6 +95840,9 @@
     },
     {
       "name": "Plugin player-notifications"
+    },
+    {
+      "name": "Plugin rga-client-config"
     },
     {
       "name": "Plugin riot-messaging-service"

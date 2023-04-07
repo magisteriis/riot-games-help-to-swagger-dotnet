@@ -9246,6 +9246,25 @@ paths:
             application/x-msgpack:
               schema:
                 type: boolean
+  /lol-event-shop/v1/is-pass-purchase-enabled:
+    get:
+      tags:
+        - Plugins
+        - Plugin lol-event-shop
+      operationId: GetLolEventShopV1IsPassPurchaseEnabled
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: boolean
+            application/x-yaml:
+              schema:
+                type: boolean
+            application/x-msgpack:
+              schema:
+                type: boolean
   /lol-event-shop/v1/navigation-button-data:
     get:
       tags:
@@ -9284,6 +9303,31 @@ paths:
             application/x-msgpack:
               schema:
                 $ref: '#/components/schemas/LolEventShopEventBackgroundUIData'
+  /lol-event-shop/v1/pass-bundles:
+    get:
+      tags:
+        - Plugins
+        - Plugin lol-event-shop
+      operationId: GetLolEventShopV1PassBundles
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/LolEventShopBundleOfferUIData'
+            application/x-yaml:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/LolEventShopBundleOfferUIData'
+            application/x-msgpack:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/LolEventShopBundleOfferUIData'
   /lol-event-shop/v1/progress-info-data:
     get:
       tags:
@@ -14379,6 +14423,42 @@ paths:
             application/x-msgpack:
               schema:
                 $ref: '#/components/schemas/LolLobbyLobbyInvitation'
+  /lol-lobby/v1/lobby/members/localMember/player-slots:
+    put:
+      tags:
+        - Plugins
+        - Plugin lol-lobby
+      operationId: PutLolLobbyV1LobbyMembersLocalMemberPlayerSlots
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                $ref: '#/components/schemas/LolLobbyQuickPlayPresetSlotDto'
+          application/x-yaml:
+            schema:
+              type: array
+              items:
+                $ref: '#/components/schemas/LolLobbyQuickPlayPresetSlotDto'
+          application/x-msgpack:
+            schema:
+              type: array
+              items:
+                $ref: '#/components/schemas/LolLobbyQuickPlayPresetSlotDto'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+            application/x-yaml:
+              schema:
+                type: object
+            application/x-msgpack:
+              schema:
+                type: object
   /lol-lobby/v1/lobby/members/localMember/position-preferences:
     put:
       tags:
@@ -19794,6 +19874,79 @@ paths:
             application/x-msgpack:
               schema:
                 type: object
+  /lol-player-report-sender/v1/in-game-reports:
+    get:
+      tags:
+        - Plugins
+        - Plugin lol-player-report-sender
+      operationId: GetLolPlayerReportSenderV1InGameReports
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/LolPlayerReportSenderInGameReport'
+            application/x-yaml:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/LolPlayerReportSenderInGameReport'
+            application/x-msgpack:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/LolPlayerReportSenderInGameReport'
+    post:
+      tags:
+        - Plugins
+        - Plugin lol-player-report-sender
+      operationId: PostLolPlayerReportSenderV1InGameReports
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/LolPlayerReportSenderInGameReport'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/LolPlayerReportSenderInGameReport'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/LolPlayerReportSenderInGameReport'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+            application/x-yaml:
+              schema:
+                type: object
+            application/x-msgpack:
+              schema:
+                type: object
+  /lol-player-report-sender/v1/in-game-reports/submit:
+    post:
+      tags:
+        - Plugins
+        - Plugin lol-player-report-sender
+      operationId: PostLolPlayerReportSenderV1InGameReportsSubmit
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+            application/x-yaml:
+              schema:
+                type: object
+            application/x-msgpack:
+              schema:
+                type: object
   '/lol-pre-end-of-game/v1/complete/{sequenceEventName}':
     post:
       tags:
@@ -22687,6 +22840,22 @@ paths:
             application/x-msgpack:
               schema:
                 type: boolean
+  '/lol-settings/v2/reload/{ppType}':
+    post:
+      tags:
+        - Plugins
+        - Plugin lol-settings
+      operationId: PostLolSettingsV2ReloadByPpType
+      parameters:
+        - name: ppType
+          in: path
+          required: true
+          style: simple
+          schema:
+            type: string
+      responses:
+        '204':
+          description: No content
   /lol-shutdown/v1/notification:
     get:
       tags:
@@ -28590,8 +28759,6 @@ components:
           format: uint64
         mucJwtDto:
           $ref: '#/components/schemas/MucJwtDto'
-        multiUserChatJWT:
-          type: string
         name:
           type: string
         optimisticLock:
@@ -29261,8 +29428,6 @@ components:
           format: int32
         mucJwtDto:
           $ref: '#/components/schemas/MucJwtDto'
-        multiUserChatJWT:
-          type: string
         myTeamInfo:
           $ref: '#/components/schemas/EndOfGameLcdsTeamInfo'
         myTeamStatus:
@@ -29714,8 +29879,6 @@ components:
           format: int32
         mucJwtDto:
           $ref: '#/components/schemas/MucJwtDto'
-        multiUserChatJWT:
-          type: string
         name:
           type: string
         observers:
@@ -32535,8 +32698,6 @@ components:
           $ref: '#/components/schemas/LolChampSelectMucJwtDto'
         multiUserChatId:
           type: string
-        multiUserChatJWT:
-          type: string
         multiUserChatPassword:
           type: string
     LolChampSelectChampSelectMySelection:
@@ -33173,8 +33334,6 @@ components:
           $ref: '#/components/schemas/LolChampSelectLegacyMucJwtDto'
         multiUserChatId:
           type: string
-        multiUserChatJWT:
-          type: string
         multiUserChatPassword:
           type: string
     LolChampSelectLegacyChampSelectMySelection:
@@ -33442,7 +33601,11 @@ components:
       properties:
         channelClaim:
           type: string
+        domain:
+          type: string
         jwt:
+          type: string
+        targetRegion:
           type: string
     LolChampSelectLegacyPlayerStatus:
       type: object
@@ -33521,7 +33684,11 @@ components:
       properties:
         channelClaim:
           type: string
+        domain:
+          type: string
         jwt:
+          type: string
+        targetRegion:
           type: string
     LolChampSelectMutedPlayerInfo:
       type: object
@@ -34060,6 +34227,8 @@ components:
           type: boolean
         lastMessage:
           $ref: '#/components/schemas/LolChatConversationMessageResource'
+        mucJwtDto:
+          $ref: '#/components/schemas/LolChatMucJwtDto'
         name:
           type: string
         password:
@@ -34650,6 +34819,17 @@ components:
         - dm
         - system
       type: string
+    LolChatMucJwtDto:
+      type: object
+      properties:
+        channelClaim:
+          type: string
+        domain:
+          type: string
+        jwt:
+          type: string
+        targetRegion:
+          type: string
     LolChatMultiGamePresence:
       type: object
       properties:
@@ -35522,6 +35702,17 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/MemberBanUnbanTournament'
+    LolClashMucJwtDto:
+      type: object
+      properties:
+        channelClaim:
+          type: string
+        domain:
+          type: string
+        jwt:
+          type: string
+        targetRegion:
+          type: string
     LolClashNoShowPingDTO:
       type: object
       properties:
@@ -35646,6 +35837,8 @@ components:
           type: boolean
         logoUrl:
           type: string
+        mucJwtDto:
+          $ref: '#/components/schemas/LolClashMucJwtDto'
         multiUserChatId:
           type: string
         multiUserChatPassword:
@@ -37815,15 +38008,27 @@ components:
           type: string
         description:
           type: string
+        earlyAugments:
+          type: array
+          items:
+            $ref: '#/components/schemas/LolCosmeticsCosmeticsTFTPlaybookAugment'
         f2p:
           type: boolean
         itemId:
           type: integer
           format: int32
+        lateAugments:
+          type: array
+          items:
+            $ref: '#/components/schemas/LolCosmeticsCosmeticsTFTPlaybookAugment'
         loadoutsIcon:
           type: string
         loyalty:
           type: boolean
+        midAugments:
+          type: array
+          items:
+            $ref: '#/components/schemas/LolCosmeticsCosmeticsTFTPlaybookAugment'
         name:
           type: string
         owned:
@@ -37843,14 +38048,14 @@ components:
     LolCosmeticsCosmeticsTFTPlaybookViewModel:
       type: object
       properties:
-        augments:
-          type: array
-          items:
-            $ref: '#/components/schemas/LolCosmeticsCosmeticsTFTPlaybookAugment'
         contentId:
           type: string
         description:
           type: string
+        earlyAugments:
+          type: array
+          items:
+            $ref: '#/components/schemas/LolCosmeticsCosmeticsTFTPlaybookAugment'
         f2p:
           type: boolean
         isRecentItem:
@@ -37858,10 +38063,18 @@ components:
         itemId:
           type: integer
           format: int32
+        lateAugments:
+          type: array
+          items:
+            $ref: '#/components/schemas/LolCosmeticsCosmeticsTFTPlaybookAugment'
         loadoutsIcon:
           type: string
         loyalty:
           type: boolean
+        midAugments:
+          type: array
+          items:
+            $ref: '#/components/schemas/LolCosmeticsCosmeticsTFTPlaybookAugment'
         name:
           type: string
         owned:
@@ -37961,19 +38174,27 @@ components:
     LolCosmeticsGameDataTFTPlaybook:
       type: object
       properties:
-        augments:
-          type: array
-          items:
-            $ref: '#/components/schemas/LolCosmeticsCosmeticsTFTPlaybookAugment'
         contentId:
           type: string
         description:
           type: string
+        earlyAugments:
+          type: array
+          items:
+            $ref: '#/components/schemas/LolCosmeticsCosmeticsTFTPlaybookAugment'
         itemId:
           type: integer
           format: int32
+        lateAugments:
+          type: array
+          items:
+            $ref: '#/components/schemas/LolCosmeticsCosmeticsTFTPlaybookAugment'
         loadoutsIcon:
           type: string
+        midAugments:
+          type: array
+          items:
+            $ref: '#/components/schemas/LolCosmeticsCosmeticsTFTPlaybookAugment'
         name:
           type: string
         translatedName:
@@ -38466,9 +38687,9 @@ components:
         missionsXpEarned:
           type: integer
           format: int32
+        mucJwtDto:
+          $ref: '#/components/schemas/LolEndOfGameMucJwtDto'
         multiUserChatId:
-          type: string
-        multiUserChatJWT:
           type: string
         multiUserChatPassword:
           type: string
@@ -38781,6 +39002,17 @@ components:
         - LOGGING_OUT
         - ERROR
       type: string
+    LolEndOfGameMucJwtDto:
+      type: object
+      properties:
+        channelClaim:
+          type: string
+        domain:
+          type: string
+        jwt:
+          type: string
+        targetRegion:
+          type: string
     LolEndOfGameQueue:
       type: object
       properties:
@@ -39252,6 +39484,40 @@ components:
         quantity:
           type: integer
           format: int32
+    LolEventShopBundledItemUIData:
+      type: object
+      properties:
+        description:
+          type: string
+        name:
+          type: string
+        owned:
+          type: boolean
+        splashImage:
+          type: string
+    LolEventShopBundleOfferUIData:
+      type: object
+      properties:
+        bundledItems:
+          type: array
+          items:
+            $ref: '#/components/schemas/LolEventShopBundledItemUIData'
+        details:
+          $ref: '#/components/schemas/LolEventShopBundledItemUIData'
+        discountPercentage:
+          type: number
+          format: double
+        finalPrice:
+          type: integer
+          format: int64
+        futureBalance:
+          type: integer
+          format: int64
+        initialPrice:
+          type: integer
+          format: int64
+        isPurchasable:
+          type: boolean
     LolEventShopCapOffer:
       type: object
       properties:
@@ -39757,6 +40023,142 @@ components:
         unclaimedRewardCount:
           type: integer
           format: int32
+    LolEventShopExternalCatalogInventoryOwnership:
+      enum:
+        - OWNED
+        - RENTED
+        - LOYALTY
+        - F2P
+      type: string
+    LolEventShopExternalCatalogItemCost:
+      type: object
+      properties:
+        cost:
+          type: integer
+          format: int64
+        currency:
+          type: string
+        discount:
+          type: number
+          format: float
+    LolEventShopExternalCatalogPluginItem:
+      type: object
+      properties:
+        active:
+          type: boolean
+        description:
+          type: string
+        imagePath:
+          type: string
+        inactiveDate:
+          type: integer
+          format: uint64
+        inventoryType:
+          type: string
+        itemId:
+          type: integer
+          format: int32
+        itemInstanceId:
+          type: string
+        name:
+          type: string
+        offerId:
+          type: string
+        owned:
+          type: boolean
+        ownershipType:
+          $ref: '#/components/schemas/LolEventShopExternalCatalogInventoryOwnership'
+        prices:
+          type: array
+          items:
+            $ref: '#/components/schemas/LolEventShopExternalCatalogPluginPrice'
+        purchaseDate:
+          type: integer
+          format: uint64
+        releaseDate:
+          type: integer
+          format: uint64
+        sale:
+          $ref: '#/components/schemas/LolEventShopExternalCatalogSale'
+        subInventoryType:
+          type: string
+        subTitle:
+          type: string
+        tags:
+          type: array
+          items:
+            type: string
+    LolEventShopExternalCatalogPluginItemAssets:
+      type: object
+      properties:
+        colors:
+          type: array
+          items:
+            type: string
+        iconPath:
+          type: string
+        splashPath:
+          type: string
+        tilePath:
+          type: string
+    LolEventShopExternalCatalogPluginItemWithDetails:
+      type: object
+      properties:
+        bundledDiscountPrices:
+          type: array
+          items:
+            $ref: '#/components/schemas/LolEventShopExternalCatalogPluginPrice'
+        bundledItems:
+          type: array
+          items:
+            $ref: '#/components/schemas/LolEventShopExternalCatalogPluginItemWithDetails'
+        item:
+          $ref: '#/components/schemas/LolEventShopExternalCatalogPluginItem'
+        minimumBundlePrices:
+          type: array
+          items:
+            $ref: '#/components/schemas/LolEventShopExternalCatalogPluginPrice'
+        quantity:
+          type: integer
+          format: uint32
+        requiredItems:
+          type: array
+          items:
+            $ref: '#/components/schemas/LolEventShopExternalCatalogPluginItemWithDetails'
+    LolEventShopExternalCatalogPluginPrice:
+      type: object
+      properties:
+        cost:
+          type: integer
+          format: int64
+        costType:
+          type: string
+        currency:
+          type: string
+    LolEventShopExternalCatalogPluginRetailDiscount:
+      type: object
+      properties:
+        cost:
+          type: integer
+          format: int64
+        discount:
+          type: number
+          format: float
+        endDate:
+          type: string
+        startDate:
+          type: string
+    LolEventShopExternalCatalogSale:
+      type: object
+      properties:
+        endDate:
+          type: string
+        prices:
+          type: array
+          items:
+            $ref: '#/components/schemas/LolEventShopExternalCatalogItemCost'
+        startDate:
+          type: string
     LolEventShopGrantorDescription:
       type: object
       properties:
@@ -40284,6 +40686,8 @@ components:
           type: string
         iconPath:
           type: string
+        showGlow:
+          type: boolean
         showPip:
           type: boolean
     LolEventShopOffer:
@@ -41161,8 +41565,8 @@ components:
     LolEventShopTokenUpsellLockedType:
       enum:
         - UNASSIGNED
-        - UNLOCKED
         - LOCKED
+        - UNLOCKED
       type: string
     LolEventShopTransaction:
       type: object
@@ -42782,7 +43186,9 @@ components:
         gameId:
           type: integer
           format: uint64
-        honorCategory:
+        honorType:
+          type: string
+        puuid:
           type: string
         summonerId:
           type: integer
@@ -43020,6 +43426,17 @@ components:
           format: int32
         type:
           type: string
+    LolHonorV2RetrieveProfileResponse:
+      type: object
+      properties:
+        checkpoint:
+          type: integer
+          format: int32
+        honorLevel:
+          type: integer
+          format: int32
+        rewardsLocked:
+          type: boolean
     LolHonorV2Reward:
       type: object
       properties:
@@ -43036,28 +43453,6 @@ components:
         priority:
           type: integer
           format: int32
-    LolHonorV2ServiceProxyHonorPlayerServerRequest:
-      type: object
-      properties:
-        gameId:
-          type: integer
-          format: uint64
-        honorType:
-          type: string
-        summonerId:
-          type: integer
-          format: uint64
-    LolHonorV2ServiceProxyRetrieveProfileResponse:
-      type: object
-      properties:
-        checkpoint:
-          type: integer
-          format: int32
-        honorLevel:
-          type: integer
-          format: int32
-        rewardsLocked:
-          type: boolean
     LolHonorV2VendedHonorChange:
       type: object
       properties:
@@ -44992,8 +45387,6 @@ components:
           $ref: '#/components/schemas/LolLobbyMucJwtDto'
         multiUserChatId:
           type: string
-        multiUserChatJWT:
-          type: string
         multiUserChatPassword:
           type: string
         premadeSizeAllowed:
@@ -45212,8 +45605,6 @@ components:
         mucJwtDto:
           $ref: '#/components/schemas/LolLobbyMucJwtDto'
         multiUserChatId:
-          type: string
-        multiUserChatJWT:
           type: string
         multiUserChatPassword:
           type: string
@@ -45508,10 +45899,16 @@ components:
           type: boolean
         isSpectator:
           type: boolean
+        primaryChampionPreference:
+          type: integer
+          format: int32
         puuid:
           type: string
         ready:
           type: boolean
+        secondaryChampionPreference:
+          type: integer
+          format: int32
         secondPositionPreference:
           type: string
         showGhostedBanner:
@@ -45648,7 +46045,11 @@ components:
       properties:
         channelClaim:
           type: string
+        domain:
+          type: string
         jwt:
+          type: string
+        targetRegion:
           type: string
     LolLobbyOpenPartyToggleAnalytics:
       type: object
@@ -45723,8 +46124,6 @@ components:
           type: string
         mucJwtDto:
           $ref: '#/components/schemas/LolLobbyMucJwtDto'
-        multiUserChatJWT:
-          type: string
     LolLobbyPartyDto:
       type: object
       properties:
@@ -45845,6 +46244,10 @@ components:
         championSelection:
           type: integer
           format: int32
+        playerSlots:
+          type: array
+          items:
+            $ref: '#/components/schemas/LolLobbyQuickPlayPresetSlotDto'
         positionPref:
           type: array
           items:
@@ -46209,6 +46612,25 @@ components:
           items:
             type: integer
             format: int32
+    LolLobbyQuickPlayPresetSlotDto:
+      type: object
+      properties:
+        championId:
+          type: integer
+          format: int32
+        perks:
+          type: string
+        positionPreference:
+          type: string
+        skinId:
+          type: integer
+          format: int32
+        spell1:
+          type: integer
+          format: uint64
+        spell2:
+          type: integer
+          format: uint64
     LolLobbyRankedPositionInfoDTO:
       type: object
       properties:
@@ -46384,8 +46806,6 @@ components:
           format: uint32
         mucJwtDto:
           $ref: '#/components/schemas/LolLobbyTeamBuilderMucJwtDto'
-        multiUserChatJWT:
-          type: string
         remainingAfkMillis:
           type: integer
           format: int32
@@ -46588,9 +47008,9 @@ components:
     LolLobbyTeamBuilderChampSelectChatRoomDetails:
       type: object
       properties:
+        mucJwtDto:
+          $ref: '#/components/schemas/LolLobbyTeamBuilderMucJwtDto'
         multiUserChatId:
-          type: string
-        multiUserChatJWT:
           type: string
         multiUserChatPassword:
           type: string
@@ -47203,7 +47623,11 @@ components:
       properties:
         channelClaim:
           type: string
+        domain:
+          type: string
         jwt:
+          type: string
+        targetRegion:
           type: string
     LolLobbyTeamBuilderPickOrderSwapV1:
       type: object
@@ -51973,7 +52397,11 @@ components:
     LolPerksChampSelectChatRoomDetails:
       type: object
       properties:
-        multiUserChatJWT:
+        mucJwtDto:
+          $ref: '#/components/schemas/LolPerksMucJwtDto'
+        multiUserChatId:
+          type: string
+        multiUserChatPassword:
           type: string
     LolPerksChampSelectMySelection:
       type: object
@@ -52181,6 +52609,17 @@ components:
         - LOGGING_OUT
         - ERROR
       type: string
+    LolPerksMucJwtDto:
+      type: object
+      properties:
+        channelClaim:
+          type: string
+        domain:
+          type: string
+        jwt:
+          type: string
+        targetRegion:
+          type: string
     LolPerksNamecheckAuthorization:
       type: object
       properties:
@@ -53602,6 +54041,18 @@ components:
         token:
           type: string
         tokenType:
+          type: string
+    LolPlayerReportSenderInGameReport:
+      type: object
+      properties:
+        categories:
+          type: array
+          items:
+            type: string
+        gameId:
+          type: integer
+          format: uint64
+        offenderPuuid:
           type: string
     LolPreEndOfGameGameflowPhase:
       enum:
@@ -59270,7 +59721,7 @@ components:
     LolTftLolTftEvents:
       type: object
       properties:
-        events:
+        subNavTabs:
           type: array
           items:
             $ref: '#/components/schemas/LolTftLolTftEvent'
@@ -59302,6 +59753,20 @@ components:
           type: boolean
         url:
           type: string
+    LolTftLolTftPromoButton:
+      type: object
+      properties:
+        eventKey:
+          type: string
+        url:
+          type: string
+    LolTftLolTftPromoButtons:
+      type: object
+      properties:
+        promoButtons:
+          type: array
+          items:
+            $ref: '#/components/schemas/LolTftLolTftPromoButton'
     LolTftPublishingSettings:
       type: object
       properties:
@@ -59343,6 +59808,40 @@ components:
       properties:
         LCTFTModeData:
           $ref: '#/components/schemas/LolTftTeamPlannerTFTModeData'
+    LolTftTeamPlannerGameflowGameData:
+      type: object
+      properties:
+        queue:
+          $ref: '#/components/schemas/LolTftTeamPlannerQueue'
+    LolTftTeamPlannerGameflowPhase:
+      enum:
+        - None
+        - Lobby
+        - Matchmaking
+        - CheckedIntoTournament
+        - ReadyCheck
+        - ChampSelect
+        - GameStart
+        - FailedToLaunch
+        - InProgress
+        - Reconnect
+        - WaitingForStats
+        - PreEndOfGame
+        - EndOfGame
+        - TerminatedInError
+      type: string
+    LolTftTeamPlannerGameflowSession:
+      type: object
+      properties:
+        gameData:
+          $ref: '#/components/schemas/LolTftTeamPlannerGameflowGameData'
+        phase:
+          $ref: '#/components/schemas/LolTftTeamPlannerGameflowPhase'
+    LolTftTeamPlannerQueue:
+      type: object
+      properties:
+        gameMode:
+          type: string
     LolTftTeamPlannerSettingsStorageContainer:
       type: object
       properties:
@@ -60680,7 +61179,11 @@ components:
       properties:
         channelClaim:
           type: string
+        domain:
+          type: string
         jwt:
+          type: string
+        targetRegion:
           type: string
     MultipleReplayMetadataRequestV2:
       type: object
@@ -61057,8 +61560,6 @@ components:
             $ref: '#/components/schemas/PendingRosterMemberDTO'
         mucJwtDto:
           $ref: '#/components/schemas/MucJwtDto'
-        multiUserChatJWT:
-          type: string
         name:
           type: string
         rewardLogos:
@@ -62092,8 +62593,6 @@ components:
             $ref: '#/components/schemas/RosterMemberDTO'
         mucJwtDto:
           $ref: '#/components/schemas/MucJwtDto'
-        multiUserChatJWT:
-          type: string
         name:
           type: string
         phases:

@@ -599,7 +599,7 @@ paths:
     get:
       tags:
         - Plugins
-        - Plugin rga-client-config
+        - Plugin client-config
       operationId: GetClientConfigV1Config
       parameters:
         - name: type
@@ -607,7 +607,7 @@ paths:
           required: true
           style: form
           schema:
-            type: string
+            $ref: '#/components/schemas/ClientConfigConfigType'
         - name: app
           in: query
           style: form
@@ -640,17 +640,23 @@ paths:
             application/json:
               schema:
                 type: object
+                additionalProperties:
+                  type: object
             application/x-yaml:
               schema:
                 type: object
+                additionalProperties:
+                  type: object
             application/x-msgpack:
               schema:
                 type: object
+                additionalProperties:
+                  type: object
   '/client-config/v1/config/{name}':
     get:
       tags:
         - Plugins
-        - Plugin rga-client-config
+        - Plugin client-config
       operationId: GetClientConfigV1ConfigByName
       parameters:
         - name: name
@@ -664,7 +670,7 @@ paths:
           required: true
           style: form
           schema:
-            type: string
+            $ref: '#/components/schemas/ClientConfigConfigType'
         - name: app
           in: query
           style: form
@@ -698,11 +704,40 @@ paths:
             application/x-msgpack:
               schema:
                 type: object
+  /client-config/v1/entitlements-token:
+    put:
+      tags:
+        - Plugins
+        - Plugin client-config
+      operationId: PutClientConfigV1EntitlementsToken
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ClientConfigEntitlementsUpdate'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/ClientConfigEntitlementsUpdate'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/ClientConfigEntitlementsUpdate'
+      responses:
+        '204':
+          description: No content
+  /client-config/v1/refresh-config-status:
+    put:
+      tags:
+        - Plugins
+        - Plugin client-config
+      operationId: PutClientConfigV1RefreshConfigStatus
+      responses:
+        '204':
+          description: No content
   '/client-config/v1/status/{type}':
     get:
       tags:
         - Plugins
-        - Plugin rga-client-config
+        - Plugin client-config
       operationId: GetClientConfigV1StatusByType
       parameters:
         - name: type
@@ -710,25 +745,25 @@ paths:
           required: true
           style: simple
           schema:
-            type: string
+            $ref: '#/components/schemas/ClientConfigConfigType'
       responses:
         '200':
           description: Successful response
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/RgaClientConfigConfigStatus'
+                $ref: '#/components/schemas/ClientConfigConfigStatus'
             application/x-yaml:
               schema:
-                $ref: '#/components/schemas/RgaClientConfigConfigStatus'
+                $ref: '#/components/schemas/ClientConfigConfigStatus'
             application/x-msgpack:
               schema:
-                $ref: '#/components/schemas/RgaClientConfigConfigStatus'
+                $ref: '#/components/schemas/ClientConfigConfigStatus'
   '/client-config/v2/config/{name}':
     get:
       tags:
         - Plugins
-        - Plugin rga-client-config
+        - Plugin client-config
       operationId: GetClientConfigV2ConfigByName
       parameters:
         - name: name
@@ -750,11 +785,31 @@ paths:
             application/x-msgpack:
               schema:
                 type: object
+  /client-config/v2/namespace-changes:
+    put:
+      tags:
+        - Plugins
+        - Plugin client-config
+      operationId: PutClientConfigV2NamespaceChanges
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ClientConfigConfigNamespaceUpdate'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/ClientConfigConfigNamespaceUpdate'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/ClientConfigConfigNamespaceUpdate'
+      responses:
+        '204':
+          description: No content
   '/client-config/v2/namespace/{namespace}':
     get:
       tags:
         - Plugins
-        - Plugin rga-client-config
+        - Plugin client-config
       operationId: GetClientConfigV2NamespaceByNamespace
       parameters:
         - name: namespace
@@ -770,17 +825,23 @@ paths:
             application/json:
               schema:
                 type: object
+                additionalProperties:
+                  type: object
             application/x-yaml:
               schema:
                 type: object
+                additionalProperties:
+                  type: object
             application/x-msgpack:
               schema:
                 type: object
+                additionalProperties:
+                  type: object
   '/client-config/v2/namespace/{namespace}/player':
     get:
       tags:
         - Plugins
-        - Plugin rga-client-config
+        - Plugin client-config
       operationId: GetClientConfigV2NamespaceByNamespacePlayer
       parameters:
         - name: namespace
@@ -796,17 +857,23 @@ paths:
             application/json:
               schema:
                 type: object
+                additionalProperties:
+                  type: object
             application/x-yaml:
               schema:
                 type: object
+                additionalProperties:
+                  type: object
             application/x-msgpack:
               schema:
                 type: object
+                additionalProperties:
+                  type: object
   '/client-config/v2/namespace/{namespace}/public':
     get:
       tags:
         - Plugins
-        - Plugin rga-client-config
+        - Plugin client-config
       operationId: GetClientConfigV2NamespaceByNamespacePublic
       parameters:
         - name: namespace
@@ -822,12 +889,18 @@ paths:
             application/json:
               schema:
                 type: object
+                additionalProperties:
+                  type: object
             application/x-yaml:
               schema:
                 type: object
+                additionalProperties:
+                  type: object
             application/x-msgpack:
               schema:
                 type: object
+                additionalProperties:
+                  type: object
   /config/v1/config:
     get:
       tags:
@@ -29060,6 +29133,112 @@ components:
         - STARTED
         - COMPLETED
       type: string
+    ClientConfigAuthenticatedConnection:
+      type: object
+      properties:
+        authToken:
+          type: string
+        connectionId:
+          type: integer
+          format: uint32
+        subscribed:
+          type: boolean
+    ClientConfigBuildInfo:
+      type: object
+      properties:
+        branch:
+          type: string
+        branchFull:
+          type: string
+        codeBuildId:
+          type: integer
+          format: int32
+        contentBuildId:
+          type: integer
+          format: int32
+        gameBranch:
+          type: string
+        gameBranchFull:
+          type: string
+        gameDataBuildId:
+          type: integer
+          format: int32
+        patchline:
+          type: string
+        patchlineVisibleName:
+          type: string
+        version:
+          type: string
+    ClientConfigClientConfig:
+      type: object
+      properties:
+        data:
+          type: object
+          additionalProperties:
+            type: object
+        params:
+          $ref: '#/components/schemas/ClientConfigConfigParams'
+        updateTime:
+          type: integer
+          format: int64
+    ClientConfigConfigNamespaceUpdate:
+      type: object
+      properties:
+        player:
+          type: array
+          items:
+            type: string
+        public:
+          type: array
+          items:
+            type: string
+    ClientConfigConfigParams:
+      type: object
+      properties:
+        appName:
+          type: string
+        namespace:
+          type: string
+        patchline:
+          type: string
+        region:
+          type: string
+        type:
+          $ref: '#/components/schemas/ClientConfigConfigType'
+        version:
+          type: string
+    ClientConfigConfigReadinessEnum:
+      enum:
+        - NotReady
+        - Ready
+        - Disabled
+      type: string
+    ClientConfigConfigStatus:
+      type: object
+      properties:
+        readiness:
+          $ref: '#/components/schemas/ClientConfigConfigReadinessEnum'
+        updateId:
+          type: integer
+          format: uint64
+    ClientConfigConfigType:
+      enum:
+        - public
+        - player
+      type: string
+    ClientConfigDataPaths:
+      type: object
+      properties:
+        configRoot:
+          type: string
+        dataRoot:
+          type: string
+        localSettingsPath:
+          type: string
+        privateSettingsPath:
+          type: string
+        userDataRoot:
+          type: string
     ClientConfigDepInjectorEntitlements:
       type: object
       properties:
@@ -29083,6 +29262,49 @@ components:
         EntitlementsUpdateType:
           $ref: '#/components/schemas/ClientConfigDepInjectorEntitlementsUpdateType'
     ClientConfigDepInjectorEntitlementsUpdateType:
+      enum:
+        - Create
+        - Update
+        - Delete
+      type: string
+    ClientConfigEntitlements:
+      type: object
+      properties:
+        accessToken:
+          type: string
+        entitlements:
+          type: array
+          items:
+            type: string
+        issuer:
+          type: string
+        subject:
+          type: string
+        token:
+          type: string
+    ClientConfigEntitlementsUpdate:
+      type: object
+      properties:
+        EntitlementsTokenResource:
+          $ref: '#/components/schemas/ClientConfigEntitlements'
+        UpdateType:
+          $ref: '#/components/schemas/ClientConfigUpdateType'
+    ClientConfigSession:
+      type: object
+      properties:
+        connections:
+          type: array
+          items:
+            $ref: '#/components/schemas/ClientConfigAuthenticatedConnection'
+        isInternal:
+          type: boolean
+        patchlineId:
+          type: string
+        productId:
+          type: string
+        version:
+          type: string
+    ClientConfigUpdateType:
       enum:
         - Create
         - Update
@@ -41565,8 +41787,8 @@ components:
     LolEventShopTokenUpsellLockedType:
       enum:
         - UNASSIGNED
-        - LOCKED
         - UNLOCKED
+        - LOCKED
       type: string
     LolEventShopTransaction:
       type: object
@@ -62469,14 +62691,6 @@ components:
         selectMinGroupCount:
           type: integer
           format: uint16
-    RgaClientConfigConfigStatus:
-      type: object
-      properties:
-        readiness:
-          type: string
-        updateId:
-          type: integer
-          format: uint64
     RiotMessagingServiceAcknowledgeBody:
       type: object
       properties:
@@ -63640,11 +63854,11 @@ tags:
   - name: Plugin Manager Diagnostics
   - name: Plugin Manager Info
   - name: Plugin Asset Serving
+  - name: Plugin client-config
   - name: Plugin entitlements
   - name: Plugin patcher
   - name: Plugin payments
   - name: Plugin player-notifications
-  - name: Plugin rga-client-config
   - name: Plugin riot-messaging-service
   - name: Plugin sanitizer
   - name: Plugin lol-account-verification

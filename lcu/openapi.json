@@ -3208,24 +3208,24 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "$ref": "#/components/schemas/LolChallengesUIChallenge"
                   }
                 }
               },
               "application/x-yaml": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "$ref": "#/components/schemas/LolChallengesUIChallenge"
                   }
                 }
               },
               "application/x-msgpack": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "$ref": "#/components/schemas/LolChallengesUIChallenge"
                   }
                 }
@@ -3248,24 +3248,24 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "$ref": "#/components/schemas/LolChallengesUIChallenge"
                   }
                 }
               },
               "application/x-yaml": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "$ref": "#/components/schemas/LolChallengesUIChallenge"
                   }
                 }
               },
               "application/x-msgpack": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "$ref": "#/components/schemas/LolChallengesUIChallenge"
                   }
                 }
@@ -3373,24 +3373,24 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "$ref": "#/components/schemas/LolChallengesUIChallenge"
                   }
                 }
               },
               "application/x-yaml": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "$ref": "#/components/schemas/LolChallengesUIChallenge"
                   }
                 }
               },
               "application/x-msgpack": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "$ref": "#/components/schemas/LolChallengesUIChallenge"
                   }
                 }
@@ -3463,46 +3463,6 @@
                   "type": "array",
                   "items": {
                     "$ref": "#/components/schemas/LolChallengesChallengeSeason"
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/lol-challenges/v1/suggested-challenges/local-player": {
-      "get": {
-        "tags": [
-          "Plugins",
-          "Plugin lol-challenges"
-        ],
-        "operationId": "GetLolChallengesV1SuggestedChallengesLocalPlayer",
-        "responses": {
-          "200": {
-            "description": "Successful response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/LolChallengesUIChallenge"
-                  }
-                }
-              },
-              "application/x-yaml": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/LolChallengesUIChallenge"
-                  }
-                }
-              },
-              "application/x-msgpack": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/LolChallengesUIChallenge"
                   }
                 }
               }
@@ -3781,24 +3741,24 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "$ref": "#/components/schemas/LolChallengesUIChallenge"
                   }
                 }
               },
               "application/x-yaml": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "$ref": "#/components/schemas/LolChallengesUIChallenge"
                   }
                 }
               },
               "application/x-msgpack": {
                 "schema": {
-                  "type": "array",
-                  "items": {
+                  "type": "object",
+                  "additionalProperties": {
                     "$ref": "#/components/schemas/LolChallengesUIChallenge"
                   }
                 }
@@ -6172,7 +6132,7 @@
             "required": true,
             "schema": {
               "type": "integer",
-              "format": "uint32"
+              "format": "uint64"
             }
           }
         ],
@@ -14320,28 +14280,28 @@
         }
       }
     },
-    "/lol-end-of-game/v2/player-complaints": {
+    "/lol-end-of-game/v2/player-reports": {
       "post": {
         "tags": [
           "Plugins",
           "Plugin lol-end-of-game"
         ],
-        "operationId": "PostLolEndOfGameV2PlayerComplaints",
+        "operationId": "PostLolEndOfGameV2PlayerReports",
         "requestBody": {
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/LolEndOfGameEndOfGamePlayerComplaintV2"
+                "$ref": "#/components/schemas/LolEndOfGamePlayerReport"
               }
             },
             "application/x-yaml": {
               "schema": {
-                "$ref": "#/components/schemas/LolEndOfGameEndOfGamePlayerComplaintV2"
+                "$ref": "#/components/schemas/LolEndOfGamePlayerReport"
               }
             },
             "application/x-msgpack": {
               "schema": {
-                "$ref": "#/components/schemas/LolEndOfGameEndOfGamePlayerComplaintV2"
+                "$ref": "#/components/schemas/LolEndOfGamePlayerReport"
               }
             }
           }
@@ -14352,17 +14312,17 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/LolEndOfGameEndOfGamePlayerComplaintV2"
+                  "$ref": "#/components/schemas/LolEndOfGamePlayerReport"
                 }
               },
               "application/x-yaml": {
                 "schema": {
-                  "$ref": "#/components/schemas/LolEndOfGameEndOfGamePlayerComplaintV2"
+                  "$ref": "#/components/schemas/LolEndOfGamePlayerReport"
                 }
               },
               "application/x-msgpack": {
                 "schema": {
-                  "$ref": "#/components/schemas/LolEndOfGameEndOfGamePlayerComplaintV2"
+                  "$ref": "#/components/schemas/LolEndOfGamePlayerReport"
                 }
               }
             }
@@ -14532,30 +14492,30 @@
         }
       }
     },
-    "/lol-event-shop/v1/event-header-data": {
+    "/lol-event-shop/v1/event-details-data": {
       "get": {
         "tags": [
           "Plugins",
           "Plugin lol-event-shop"
         ],
-        "operationId": "GetLolEventShopV1EventHeaderData",
+        "operationId": "GetLolEventShopV1EventDetailsData",
         "responses": {
           "200": {
             "description": "Successful response",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/LolEventShopEventHeaderUIData"
+                  "$ref": "#/components/schemas/LolEventShopEventDetailsUIData"
                 }
               },
               "application/x-yaml": {
                 "schema": {
-                  "$ref": "#/components/schemas/LolEventShopEventHeaderUIData"
+                  "$ref": "#/components/schemas/LolEventShopEventDetailsUIData"
                 }
               },
               "application/x-msgpack": {
                 "schema": {
-                  "$ref": "#/components/schemas/LolEventShopEventHeaderUIData"
+                  "$ref": "#/components/schemas/LolEventShopEventDetailsUIData"
                 }
               }
             }
@@ -14844,6 +14804,56 @@
               "application/x-msgpack": {
                 "schema": {
                   "$ref": "#/components/schemas/LolEventShopProgressInfoUIData"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/lol-event-shop/v1/purchase-item": {
+      "post": {
+        "tags": [
+          "Plugins",
+          "Plugin lol-event-shop"
+        ],
+        "operationId": "PostLolEventShopV1PurchaseItem",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LolEventShopItemOrderDTO"
+              }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "$ref": "#/components/schemas/LolEventShopItemOrderDTO"
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "$ref": "#/components/schemas/LolEventShopItemOrderDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LolEventShopPurchaseOrderResponseDTO"
+                }
+              },
+              "application/x-yaml": {
+                "schema": {
+                  "$ref": "#/components/schemas/LolEventShopPurchaseOrderResponseDTO"
+                }
+              },
+              "application/x-msgpack": {
+                "schema": {
+                  "$ref": "#/components/schemas/LolEventShopPurchaseOrderResponseDTO"
                 }
               }
             }
@@ -31255,47 +31265,6 @@
         }
       }
     },
-    "/lol-player-preferences/v1/hash": {
-      "post": {
-        "tags": [
-          "Plugins",
-          "Plugin lol-player-preferences"
-        ],
-        "operationId": "PostLolPlayerPreferencesV1Hash",
-        "parameters": [
-          {
-            "name": "preferences",
-            "in": "query",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Successful response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "string"
-                }
-              },
-              "application/x-yaml": {
-                "schema": {
-                  "type": "string"
-                }
-              },
-              "application/x-msgpack": {
-                "schema": {
-                  "type": "string"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
     "/lol-player-preferences/v1/player-preferences-endpoint-override": {
       "post": {
         "tags": [
@@ -31442,13 +31411,6 @@
             "schema": {
               "type": "string"
             }
-          },
-          {
-            "name": "hash",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
           }
         ],
         "responses": {
@@ -31546,17 +31508,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/LolPlayerReportSenderEndOfGamePlayerReport"
+                "$ref": "#/components/schemas/LolPlayerReportSenderPlayerReport"
               }
             },
             "application/x-yaml": {
               "schema": {
-                "$ref": "#/components/schemas/LolPlayerReportSenderEndOfGamePlayerReport"
+                "$ref": "#/components/schemas/LolPlayerReportSenderPlayerReport"
               }
             },
             "application/x-msgpack": {
               "schema": {
-                "$ref": "#/components/schemas/LolPlayerReportSenderEndOfGamePlayerReport"
+                "$ref": "#/components/schemas/LolPlayerReportSenderPlayerReport"
               }
             }
           }
@@ -31600,7 +31562,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/LolPlayerReportSenderInGameReport"
+                    "$ref": "#/components/schemas/LolPlayerReportSenderPlayerReport"
                   }
                 }
               },
@@ -31608,7 +31570,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/LolPlayerReportSenderInGameReport"
+                    "$ref": "#/components/schemas/LolPlayerReportSenderPlayerReport"
                   }
                 }
               },
@@ -31616,7 +31578,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/LolPlayerReportSenderInGameReport"
+                    "$ref": "#/components/schemas/LolPlayerReportSenderPlayerReport"
                   }
                 }
               }
@@ -31634,52 +31596,21 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/LolPlayerReportSenderInGameReport"
+                "$ref": "#/components/schemas/LolPlayerReportSenderPlayerReport"
               }
             },
             "application/x-yaml": {
               "schema": {
-                "$ref": "#/components/schemas/LolPlayerReportSenderInGameReport"
+                "$ref": "#/components/schemas/LolPlayerReportSenderPlayerReport"
               }
             },
             "application/x-msgpack": {
               "schema": {
-                "$ref": "#/components/schemas/LolPlayerReportSenderInGameReport"
+                "$ref": "#/components/schemas/LolPlayerReportSenderPlayerReport"
               }
             }
           }
         },
-        "responses": {
-          "200": {
-            "description": "Successful response",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object"
-                }
-              },
-              "application/x-yaml": {
-                "schema": {
-                  "type": "object"
-                }
-              },
-              "application/x-msgpack": {
-                "schema": {
-                  "type": "object"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/lol-player-report-sender/v1/in-game-reports/submit": {
-      "post": {
-        "tags": [
-          "Plugins",
-          "Plugin lol-player-report-sender"
-        ],
-        "operationId": "PostLolPlayerReportSenderV1InGameReportsSubmit",
         "responses": {
           "200": {
             "description": "Successful response",
@@ -38121,6 +38052,65 @@
         }
       }
     },
+    "/lol-store/v3/purchase": {
+      "post": {
+        "tags": [
+          "Plugins",
+          "Plugin lol-store"
+        ],
+        "operationId": "PostLolStoreV3Purchase",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/LolStoreItemOrderDTO"
+                }
+              }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/LolStoreItemOrderDTO"
+                }
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/LolStoreItemOrderDTO"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LolStorePurchaseOrderResponseDTO"
+                }
+              },
+              "application/x-yaml": {
+                "schema": {
+                  "$ref": "#/components/schemas/LolStorePurchaseOrderResponseDTO"
+                }
+              },
+              "application/x-msgpack": {
+                "schema": {
+                  "$ref": "#/components/schemas/LolStorePurchaseOrderResponseDTO"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/lol-suggested-players/v1/reported-player": {
       "post": {
         "tags": [
@@ -39560,37 +39550,20 @@
           "Plugin lol-tft-team-planner"
         ],
         "operationId": "PatchLolTftTeamPlannerV1TeamChampions",
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "array",
-                "items": {
-                  "type": "integer",
-                  "format": "uint32"
-                }
-              }
-            },
-            "application/x-yaml": {
-              "schema": {
-                "type": "array",
-                "items": {
-                  "type": "integer",
-                  "format": "uint32"
-                }
-              }
-            },
-            "application/x-msgpack": {
-              "schema": {
-                "type": "array",
-                "items": {
-                  "type": "integer",
-                  "format": "uint32"
-                }
+        "parameters": [
+          {
+            "name": "indices",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "integer",
+                "format": "uint64"
               }
             }
           }
-        },
+        ],
         "responses": {
           "200": {
             "description": "Successful response",
@@ -39629,7 +39602,7 @@
             "required": true,
             "schema": {
               "type": "integer",
-              "format": "uint32"
+              "format": "uint64"
             }
           }
         ],
@@ -39669,7 +39642,7 @@
             "required": true,
             "schema": {
               "type": "integer",
-              "format": "uint32"
+              "format": "uint64"
             }
           },
           {
@@ -40005,20 +39978,6 @@
         }
       }
     },
-    "/lol-tft/v1/tft/events/redirect": {
-      "post": {
-        "tags": [
-          "Plugins",
-          "Plugin lol-tft"
-        ],
-        "operationId": "PostLolTftV1TftEventsRedirect",
-        "responses": {
-          "204": {
-            "description": "No content"
-          }
-        }
-      }
-    },
     "/lol-tft/v1/tft/homeHub": {
       "get": {
         "tags": [
@@ -40050,6 +40009,20 @@
         }
       }
     },
+    "/lol-tft/v1/tft/homeHub/redirect": {
+      "post": {
+        "tags": [
+          "Plugins",
+          "Plugin lol-tft"
+        ],
+        "operationId": "PostLolTftV1TftHomeHubRedirect",
+        "responses": {
+          "204": {
+            "description": "No content"
+          }
+        }
+      }
+    },
     "/lol-tft/v1/tft/newsHub": {
       "get": {
         "tags": [
@@ -40074,6 +40047,37 @@
               "application/x-msgpack": {
                 "schema": {
                   "$ref": "#/components/schemas/LolTftLolTftNewsHub"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/lol-tft/v1/tft/promoButtons": {
+      "get": {
+        "tags": [
+          "Plugins",
+          "Plugin lol-tft"
+        ],
+        "operationId": "GetLolTftV1TftPromoButtons",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LolTftLolTftPromoButtons"
+                }
+              },
+              "application/x-yaml": {
+                "schema": {
+                  "$ref": "#/components/schemas/LolTftLolTftPromoButtons"
+                }
+              },
+              "application/x-msgpack": {
+                "schema": {
+                  "$ref": "#/components/schemas/LolTftLolTftPromoButtons"
                 }
               }
             }
@@ -44990,7 +44994,7 @@
           },
           "physicalProcessorCores": {
             "type": "integer",
-            "format": "uint32"
+            "format": "uint64"
           }
         },
         "description": "User Experience Settings System Information"
@@ -48893,6 +48897,12 @@
           "item": {
             "$ref": "#/components/schemas/LolCatalogCatalogPluginItem"
           },
+          "metadata": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LolCatalogItemMetadataEntry"
+            }
+          },
           "minimumBundlePrices": {
             "type": "array",
             "items": {
@@ -49964,8 +49974,8 @@
         "type": "object",
         "properties": {
           "categoryChallenges": {
-            "type": "array",
-            "items": {
+            "type": "object",
+            "additionalProperties": {
               "$ref": "#/components/schemas/LolChallengesUIChallenge"
             }
           },
@@ -50102,12 +50112,15 @@
           "capstoneGroupName": {
             "type": "string"
           },
-          "capstoneId": {
-            "type": "integer",
-            "format": "int64"
-          },
           "category": {
             "type": "string"
+          },
+          "childrenIds": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "int64"
+            }
           },
           "completedIds": {
             "type": "array",
@@ -50190,7 +50203,11 @@
             "type": "number",
             "format": "double"
           },
-          "parentCapstoneName": {
+          "parentId": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "parentName": {
             "type": "string"
           },
           "percentile": {
@@ -50684,7 +50701,7 @@
           },
           "stage": {
             "type": "integer",
-            "format": "uint32"
+            "format": "uint64"
           },
           "stillObtainable": {
             "type": "boolean"
@@ -51015,7 +51032,7 @@
           },
           "stage": {
             "type": "integer",
-            "format": "uint32"
+            "format": "uint64"
           },
           "tilePath": {
             "type": "string"
@@ -51565,14 +51582,14 @@
           },
           "lanePosition": {
             "type": "integer",
-            "format": "uint32"
+            "format": "uint64"
           },
           "position": {
             "type": "string"
           },
           "slotId": {
             "type": "integer",
-            "format": "uint32"
+            "format": "uint64"
           }
         }
       },
@@ -51728,7 +51745,7 @@
           },
           "rerollsRemaining": {
             "type": "integer",
-            "format": "uint32"
+            "format": "uint64"
           },
           "skipChampionSelect": {
             "type": "boolean"
@@ -51859,7 +51876,7 @@
           },
           "slotId": {
             "type": "integer",
-            "format": "uint32"
+            "format": "uint64"
           },
           "spell1IconPath": {
             "type": "string"
@@ -52160,7 +52177,7 @@
           },
           "stage": {
             "type": "integer",
-            "format": "uint32"
+            "format": "uint64"
           },
           "stillObtainable": {
             "type": "boolean"
@@ -52331,7 +52348,7 @@
         "properties": {
           "additionalRerolls": {
             "type": "integer",
-            "format": "uint32"
+            "format": "uint64"
           },
           "unlockedSkinIds": {
             "type": "array",
@@ -52558,7 +52575,7 @@
           },
           "rerollsRemaining": {
             "type": "integer",
-            "format": "uint32"
+            "format": "uint64"
           },
           "theirTeam": {
             "type": "array",
@@ -53055,7 +53072,7 @@
           },
           "stage": {
             "type": "integer",
-            "format": "uint32"
+            "format": "uint64"
           },
           "stillObtainable": {
             "type": "boolean"
@@ -54908,9 +54925,6 @@
         "type": "object",
         "properties": {
           "data": {
-            "type": "string"
-          },
-          "hash": {
             "type": "string"
           },
           "modified": {
@@ -59277,6 +59291,12 @@
       "LolCosmeticsCosmeticsTFTPlaybookAugment": {
         "type": "object",
         "properties": {
+          "description": {
+            "type": "string"
+          },
+          "iconPath": {
+            "type": "string"
+          },
           "name": {
             "type": "string"
           }
@@ -59502,6 +59522,9 @@
             }
           },
           "name": {
+            "type": "string"
+          },
+          "translatedDescription": {
             "type": "string"
           },
           "translatedName": {
@@ -59746,7 +59769,7 @@
         "properties": {
           "maxPlayers": {
             "type": "integer",
-            "format": "uint32"
+            "format": "uint64"
           },
           "partyId": {
             "type": "string"
@@ -60046,43 +60069,6 @@
           "wins": {
             "type": "integer",
             "format": "int32"
-          }
-        }
-      },
-      "LolEndOfGameEndOfGamePlayerComplaintV2": {
-        "type": "object",
-        "properties": {
-          "comment": {
-            "type": "string"
-          },
-          "gameId": {
-            "type": "integer",
-            "format": "uint64"
-          },
-          "offenses": {
-            "type": "string"
-          },
-          "reportedSummonerId": {
-            "type": "integer",
-            "format": "uint64"
-          }
-        }
-      },
-      "LolEndOfGameEndOfGamePlayerReport": {
-        "type": "object",
-        "properties": {
-          "comment": {
-            "type": "string"
-          },
-          "gameId": {
-            "type": "integer",
-            "format": "uint64"
-          },
-          "offense": {
-            "type": "string"
-          },
-          "reportedPuuid": {
-            "type": "string"
           }
         }
       },
@@ -60695,6 +60681,31 @@
           }
         }
       },
+      "LolEndOfGamePlayerReport": {
+        "type": "object",
+        "properties": {
+          "categories": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "comment": {
+            "type": "string"
+          },
+          "gameId": {
+            "type": "integer",
+            "format": "uint64"
+          },
+          "offenderPuuid": {
+            "type": "string"
+          },
+          "offenderSummonerId": {
+            "type": "integer",
+            "format": "uint64"
+          }
+        }
+      },
       "LolEndOfGameQueue": {
         "type": "object",
         "properties": {
@@ -60709,14 +60720,6 @@
             "type": "string"
           }
         }
-      },
-      "LolEndOfGameReportRecipientMode": {
-        "enum": [
-          "Legacy",
-          "Game-Agnostic",
-          "Combined"
-        ],
-        "type": "string"
       },
       "LolEndOfGameRerollDataBagForClientV1": {
         "type": "object",
@@ -60891,6 +60894,10 @@
           "partnerGroupId": {
             "type": "integer",
             "format": "uint8"
+          },
+          "playbookItemId": {
+            "type": "integer",
+            "format": "uint32"
           },
           "puuid": {
             "type": "string"
@@ -61396,6 +61403,10 @@
           "description": {
             "type": "string"
           },
+          "itemId": {
+            "type": "integer",
+            "format": "int32"
+          },
           "name": {
             "type": "string"
           },
@@ -61897,6 +61908,17 @@
           }
         }
       },
+      "LolEventShopClientConfigContentDrop": {
+        "type": "object",
+        "properties": {
+          "ActivationDate": {
+            "type": "string"
+          },
+          "Patch": {
+            "type": "string"
+          }
+        }
+      },
       "LolEventShopContentDrop": {
         "type": "object",
         "properties": {
@@ -62019,7 +62041,7 @@
           }
         }
       },
-      "LolEventShopEventHeaderUIData": {
+      "LolEventShopEventDetailsUIData": {
         "type": "object",
         "properties": {
           "eventIconPath": {
@@ -62114,7 +62136,7 @@
           "ContentDrops": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/LolEventShopContentDrop"
+              "$ref": "#/components/schemas/LolEventShopClientConfigContentDrop"
             }
           },
           "DisabledOfferIds": {
@@ -62334,6 +62356,12 @@
           "item": {
             "$ref": "#/components/schemas/LolEventShopExternalCatalogPluginItem"
           },
+          "metadata": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LolEventShopExternalItemMetadataEntry"
+            }
+          },
           "minimumBundlePrices": {
             "type": "array",
             "items": {
@@ -62399,6 +62427,17 @@
             }
           },
           "startDate": {
+            "type": "string"
+          }
+        }
+      },
+      "LolEventShopExternalItemMetadataEntry": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string"
+          },
+          "value": {
             "type": "string"
           }
         }
@@ -62851,6 +62890,26 @@
           },
           "value": {
             "type": "string"
+          }
+        }
+      },
+      "LolEventShopItemOrderDTO": {
+        "type": "object",
+        "properties": {
+          "inventoryType": {
+            "type": "string"
+          },
+          "itemId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "quantity": {
+            "type": "integer",
+            "format": "uint32"
+          },
+          "rpCost": {
+            "type": "integer",
+            "format": "uint32"
           }
         }
       },
@@ -63515,6 +63574,40 @@
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/LolEventShopPriceDetail"
+            }
+          }
+        }
+      },
+      "LolEventShopPurchaseOrderRequestDTO": {
+        "type": "object",
+        "properties": {
+          "accountId": {
+            "type": "integer",
+            "format": "uint64"
+          },
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LolEventShopItemOrderDTO"
+            }
+          }
+        }
+      },
+      "LolEventShopPurchaseOrderResponseDTO": {
+        "type": "object",
+        "properties": {
+          "ipBalance": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "rpBalance": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "transactions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LolEventShopTransactionResponseDTO"
             }
           }
         }
@@ -64492,8 +64585,8 @@
       "LolEventShopTokenUpsellLockedType": {
         "enum": [
           "UNASSIGNED",
-          "LOCKED",
-          "UNLOCKED"
+          "UNLOCKED",
+          "LOCKED"
         ],
         "type": "string"
       },
@@ -64511,6 +64604,21 @@
           },
           "transactionId": {
             "type": "string"
+          }
+        }
+      },
+      "LolEventShopTransactionResponseDTO": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "inventoryType": {
+            "type": "string"
+          },
+          "itemId": {
+            "type": "integer",
+            "format": "int32"
           }
         }
       },
@@ -65301,6 +65409,9 @@
             "items": {
               "type": "string"
             }
+          },
+          "standalone": {
+            "type": "boolean"
           }
         }
       },
@@ -66879,6 +66990,9 @@
           "championName": {
             "type": "string"
           },
+          "puuid": {
+            "type": "string"
+          },
           "skinSplashPath": {
             "type": "string"
           },
@@ -66906,6 +67020,9 @@
           },
           "leaver": {
             "type": "boolean"
+          },
+          "puuid": {
+            "type": "string"
           },
           "skinSplashPath": {
             "type": "string"
@@ -67030,6 +67147,9 @@
         "type": "object",
         "properties": {
           "Enabled": {
+            "type": "boolean"
+          },
+          "honorEndpointsV2Enabled": {
             "type": "boolean"
           },
           "HonorSuggestionsEnabled": {
@@ -71350,7 +71470,7 @@
         "properties": {
           "maxPlayers": {
             "type": "integer",
-            "format": "uint32"
+            "format": "uint64"
           },
           "partyId": {
             "type": "string"
@@ -72672,7 +72792,7 @@
           },
           "rerollsRemaining": {
             "type": "integer",
-            "format": "uint32"
+            "format": "uint64"
           },
           "skipChampionSelect": {
             "type": "boolean"
@@ -72790,7 +72910,7 @@
         "properties": {
           "additionalRerolls": {
             "type": "integer",
-            "format": "uint32"
+            "format": "uint64"
           },
           "unlockedSkinIds": {
             "type": "array",
@@ -72806,7 +72926,7 @@
         "properties": {
           "additionalRerolls": {
             "type": "integer",
-            "format": "uint32"
+            "format": "uint64"
           },
           "unlockedSkinsState": {
             "$ref": "#/components/schemas/LolLobbyTeamBuilderUnlockedSkinsStateV1"
@@ -73561,7 +73681,7 @@
           },
           "rerollsRemaining": {
             "type": "integer",
-            "format": "uint32"
+            "format": "uint64"
           }
         }
       },
@@ -77096,6 +77216,9 @@
           "profileIcon": {
             "type": "integer",
             "format": "int32"
+          },
+          "puuid": {
+            "type": "string"
           },
           "summonerId": {
             "type": "integer",
@@ -82588,9 +82711,6 @@
           "data": {
             "type": "string"
           },
-          "hash": {
-            "type": "string"
-          },
           "type": {
             "type": "string"
           },
@@ -82654,24 +82774,6 @@
           }
         }
       },
-      "LolPlayerReportSenderEndOfGamePlayerReport": {
-        "type": "object",
-        "properties": {
-          "comment": {
-            "type": "string"
-          },
-          "gameId": {
-            "type": "integer",
-            "format": "uint64"
-          },
-          "offense": {
-            "type": "string"
-          },
-          "reportedPuuid": {
-            "type": "string"
-          }
-        }
-      },
       "LolPlayerReportSenderGameAgnosticReportPayload": {
         "type": "object",
         "properties": {
@@ -82698,7 +82800,46 @@
           }
         }
       },
-      "LolPlayerReportSenderInGameReport": {
+      "LolPlayerReportSenderGameflowGameData": {
+        "type": "object",
+        "properties": {
+          "gameId": {
+            "type": "integer",
+            "format": "uint64"
+          }
+        }
+      },
+      "LolPlayerReportSenderGameflowPhase": {
+        "enum": [
+          "None",
+          "Lobby",
+          "Matchmaking",
+          "CheckedIntoTournament",
+          "ReadyCheck",
+          "ChampSelect",
+          "GameStart",
+          "FailedToLaunch",
+          "InProgress",
+          "Reconnect",
+          "WaitingForStats",
+          "PreEndOfGame",
+          "EndOfGame",
+          "TerminatedInError"
+        ],
+        "type": "string"
+      },
+      "LolPlayerReportSenderGameflowSession": {
+        "type": "object",
+        "properties": {
+          "gameData": {
+            "$ref": "#/components/schemas/LolPlayerReportSenderGameflowGameData"
+          },
+          "phase": {
+            "$ref": "#/components/schemas/LolPlayerReportSenderGameflowPhase"
+          }
+        }
+      },
+      "LolPlayerReportSenderPlayerReport": {
         "type": "object",
         "properties": {
           "categories": {
@@ -82707,12 +82848,51 @@
               "type": "string"
             }
           },
+          "comment": {
+            "type": "string"
+          },
           "gameId": {
             "type": "integer",
             "format": "uint64"
           },
           "offenderPuuid": {
             "type": "string"
+          },
+          "offenderSummonerId": {
+            "type": "integer",
+            "format": "uint64"
+          }
+        }
+      },
+      "LolPlayerReportSenderReportRecipientMode": {
+        "enum": [
+          "Legacy",
+          "Game-Agnostic",
+          "Combined"
+        ],
+        "type": "string"
+      },
+      "LolPlayerReportSenderSummoner": {
+        "type": "object",
+        "properties": {
+          "puuid": {
+            "type": "string"
+          },
+          "summonerId": {
+            "type": "integer",
+            "format": "uint64"
+          },
+          "summonerLevel": {
+            "type": "integer",
+            "format": "uint32"
+          },
+          "xpSinceLastLevel": {
+            "type": "integer",
+            "format": "uint64"
+          },
+          "xpUntilNextLevel": {
+            "type": "integer",
+            "format": "uint64"
           }
         }
       },
@@ -85165,7 +85345,7 @@
           },
           "numberOfPromotions": {
             "type": "integer",
-            "format": "uint32"
+            "format": "uint64"
           },
           "promoSeriesForRanksEnabled": {
             "type": "boolean"
@@ -89955,6 +90135,26 @@
           }
         }
       },
+      "LolStoreItemOrderDTO": {
+        "type": "object",
+        "properties": {
+          "inventoryType": {
+            "type": "string"
+          },
+          "itemId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "quantity": {
+            "type": "integer",
+            "format": "uint32"
+          },
+          "rpCost": {
+            "type": "integer",
+            "format": "uint32"
+          }
+        }
+      },
       "LolStoreItemSale": {
         "type": "object",
         "properties": {
@@ -90145,6 +90345,40 @@
           }
         }
       },
+      "LolStorePurchaseOrderRequestDTO": {
+        "type": "object",
+        "properties": {
+          "accountId": {
+            "type": "integer",
+            "format": "uint64"
+          },
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LolStoreItemOrderDTO"
+            }
+          }
+        }
+      },
+      "LolStorePurchaseOrderResponseDTO": {
+        "type": "object",
+        "properties": {
+          "ipBalance": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "rpBalance": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "transactions": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LolStoreTransactionResponseDTO"
+            }
+          }
+        }
+      },
       "LolStoreRiotMessagingServiceMessage": {
         "type": "object",
         "properties": {
@@ -90261,6 +90495,21 @@
           }
         }
       },
+      "LolStoreTransactionResponseDTO": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "inventoryType": {
+            "type": "string"
+          },
+          "itemId": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
       "LolStoreWallet": {
         "type": "object",
         "properties": {
@@ -90357,31 +90606,31 @@
           },
           "FriendsOfFriendsLimit": {
             "type": "integer",
-            "format": "uint32"
+            "format": "uint64"
           },
           "MaxHonorInteractionPlayers": {
             "type": "integer",
-            "format": "uint32"
+            "format": "uint64"
           },
           "MaxNumReplacements": {
             "type": "integer",
-            "format": "uint32"
+            "format": "uint64"
           },
           "MaxNumSuggestedPlayers": {
             "type": "integer",
-            "format": "uint32"
+            "format": "uint64"
           },
           "OnlineFriendsLimit": {
             "type": "integer",
-            "format": "uint32"
+            "format": "uint64"
           },
           "PreviousPremadesLimit": {
             "type": "integer",
-            "format": "uint32"
+            "format": "uint64"
           },
           "VicoriousComradesLimit": {
             "type": "integer",
-            "format": "uint32"
+            "format": "uint64"
           }
         }
       },
@@ -91046,9 +91295,6 @@
           "enabled": {
             "type": "boolean"
           },
-          "redirect": {
-            "type": "boolean"
-          },
           "titleTranslationKey": {
             "type": "string"
           },
@@ -91086,6 +91332,9 @@
               "type": "string"
             }
           },
+          "primeGamingPromoOffer": {
+            "$ref": "#/components/schemas/LolTftLolTftPrimeGaming"
+          },
           "storePromoOfferIds": {
             "type": "array",
             "items": {
@@ -91105,6 +91354,17 @@
         "properties": {
           "enabled": {
             "type": "boolean"
+          },
+          "url": {
+            "type": "string"
+          }
+        }
+      },
+      "LolTftLolTftPrimeGaming": {
+        "type": "object",
+        "properties": {
+          "assetId": {
+            "type": "string"
           },
           "url": {
             "type": "string"
@@ -92111,9 +92371,46 @@
             "type": "integer",
             "format": "int32"
           },
+          "offerId": {
+            "type": "string"
+          },
+          "orderId": {
+            "type": "string"
+          },
           "pricePaid": {
             "type": "integer",
             "format": "int64"
+          }
+        }
+      },
+      "LolYourshopPurchaseOfferOrderStates": {
+        "enum": [
+          "NOT_STARTED",
+          "IN_PROGRESS",
+          "FAIL",
+          "SUCCESS"
+        ],
+        "type": "string"
+      },
+      "LolYourshopPurchaseOfferOrderStatus": {
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string"
+          },
+          "orderState": {
+            "$ref": "#/components/schemas/LolYourshopPurchaseOfferOrderStates"
+          }
+        }
+      },
+      "LolYourshopPurchaseOfferOrderStatuses": {
+        "type": "object",
+        "properties": {
+          "statuses": {
+            "type": "object",
+            "additionalProperties": {
+              "$ref": "#/components/schemas/LolYourshopPurchaseOfferOrderStatus"
+            }
           }
         }
       },

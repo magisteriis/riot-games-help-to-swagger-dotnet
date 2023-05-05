@@ -27,7 +27,6 @@ paths:
           in: query
           description: ID of the asynchronous operation to remove
           required: true
-          style: form
           schema:
             type: integer
             format: uint32
@@ -56,7 +55,6 @@ paths:
           in: query
           description: ID of the asynchronous operation to check
           required: true
-          style: form
           schema:
             type: integer
             format: uint32
@@ -85,7 +83,6 @@ paths:
           in: query
           description: ID of the asynchronous operation to check
           required: true
-          style: form
           schema:
             type: integer
             format: uint32
@@ -114,7 +111,6 @@ paths:
           in: query
           description: Operation to cancel
           required: true
-          style: form
           schema:
             type: integer
             format: uint32
@@ -161,13 +157,11 @@ paths:
         - name: target
           in: query
           description: Name of the function or type to describe
-          style: form
           schema:
             type: string
         - name: format
           in: query
           description: Format for returned information
-          style: form
           schema:
             $ref: '#/components/schemas/RemotingHelpFormat'
       responses:
@@ -260,13 +254,11 @@ paths:
         - name: buffered
           in: query
           description: Specifies whether logs will be buffered for LoggingGetEntries to work
-          style: form
           schema:
             type: boolean
         - name: severity
           in: query
           description: Minimum severity level to fire a log event
-          style: form
           schema:
             $ref: '#/components/schemas/LogSeverityLevels'
       responses:
@@ -293,7 +285,6 @@ paths:
         - name: contextName
           in: query
           description: Name of the context to find (optional)
-          style: form
           schema:
             type: string
       responses:
@@ -320,13 +311,11 @@ paths:
           in: query
           description: Name of the event to subscribe to
           required: true
-          style: form
           schema:
             type: string
         - name: format
           in: query
           description: 'Desired format to receive events in. If unspecified, events will be sent in the active result format at the time.'
-          style: form
           schema:
             $ref: '#/components/schemas/RemotingSerializedFormat'
       responses:
@@ -353,7 +342,6 @@ paths:
           in: query
           description: Name of the event to unsubscribe from
           required: true
-          style: form
           schema:
             type: string
       responses:
@@ -381,7 +369,6 @@ paths:
         - name: format
           in: query
           description: Output format to switch to
-          style: form
           schema:
             $ref: '#/components/schemas/RemotingSerializedFormat'
       responses:
@@ -410,20 +397,17 @@ paths:
           in: path
           description: Plugin name to serve from
           required: true
-          style: simple
           schema:
             type: string
         - name: path
           in: path
           description: Path to the asset to serve
           required: true
-          style: simple
           schema:
             type: string
         - name: if-none-match
           in: header
           description: optional ETag of the asset that the caller has cached
-          style: simple
           schema:
             type: string
       responses:
@@ -451,20 +435,17 @@ paths:
           in: path
           description: Plugin name to serve from
           required: true
-          style: simple
           schema:
             type: string
         - name: path
           in: path
           description: Path to the asset to serve
           required: true
-          style: simple
           schema:
             type: string
         - name: if-none-match
           in: header
           description: optional ETag of the asset that the caller has cached
-          style: simple
           schema:
             type: string
       responses:
@@ -490,7 +471,6 @@ paths:
         - name: policyType
           in: path
           required: true
-          style: simple
           schema:
             $ref: '#/components/schemas/LolAntiAddictionPolicyType'
       responses:
@@ -519,7 +499,6 @@ paths:
           in: path
           description: ID of the asynchronous operation to check
           required: true
-          style: simple
           schema:
             type: integer
             format: uint32
@@ -549,7 +528,6 @@ paths:
           in: path
           description: ID of the asynchronous operation to remove
           required: true
-          style: simple
           schema:
             type: integer
             format: uint32
@@ -578,7 +556,6 @@ paths:
           in: path
           description: ID of the asynchronous operation to check
           required: true
-          style: simple
           schema:
             type: integer
             format: uint32
@@ -605,32 +582,26 @@ paths:
         - name: type
           in: query
           required: true
-          style: form
           schema:
             $ref: '#/components/schemas/ClientConfigConfigType'
         - name: app
           in: query
-          style: form
           schema:
             type: string
         - name: version
           in: query
-          style: form
           schema:
             type: string
         - name: patchline
           in: query
-          style: form
           schema:
             type: string
         - name: region
           in: query
-          style: form
           schema:
             type: string
         - name: namespace
           in: query
-          style: form
           schema:
             type: string
       responses:
@@ -662,33 +633,27 @@ paths:
         - name: name
           in: path
           required: true
-          style: simple
           schema:
             type: string
         - name: type
           in: query
           required: true
-          style: form
           schema:
             $ref: '#/components/schemas/ClientConfigConfigType'
         - name: app
           in: query
-          style: form
           schema:
             type: string
         - name: version
           in: query
-          style: form
           schema:
             type: string
         - name: patchline
           in: query
-          style: form
           schema:
             type: string
         - name: region
           in: query
-          style: form
           schema:
             type: string
       responses:
@@ -743,7 +708,6 @@ paths:
         - name: type
           in: path
           required: true
-          style: simple
           schema:
             $ref: '#/components/schemas/ClientConfigConfigType'
       responses:
@@ -769,7 +733,6 @@ paths:
         - name: name
           in: path
           required: true
-          style: simple
           schema:
             type: string
       responses:
@@ -815,7 +778,6 @@ paths:
         - name: namespace
           in: path
           required: true
-          style: simple
           schema:
             type: string
       responses:
@@ -847,7 +809,6 @@ paths:
         - name: namespace
           in: path
           required: true
-          style: simple
           schema:
             type: string
       responses:
@@ -879,7 +840,6 @@ paths:
         - name: namespace
           in: path
           required: true
-          style: simple
           schema:
             type: string
       responses:
@@ -1029,7 +989,6 @@ paths:
           in: path
           description: The path to the settings key
           required: true
-          style: simple
           schema:
             type: string
       responses:
@@ -1055,7 +1014,6 @@ paths:
           in: path
           description: The path to the settings key
           required: true
-          style: simple
           schema:
             type: string
       requestBody:
@@ -1083,7 +1041,6 @@ paths:
           in: path
           description: The path to the settings key
           required: true
-          style: simple
           schema:
             type: string
       responses:
@@ -1226,7 +1183,6 @@ paths:
         - name: SendDeactivationPinRequest
           in: query
           required: true
-          style: form
           schema:
             type: ''
       responses:
@@ -1372,7 +1328,6 @@ paths:
         - name: puuid
           in: path
           required: true
-          style: simple
           schema:
             type: string
       responses:
@@ -1398,26 +1353,22 @@ paths:
         - name: championId
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: int32
         - name: position
           in: path
           required: true
-          style: simple
           schema:
             $ref: '#/components/schemas/LolCareerStatsSummonersRiftPosition'
         - name: tier
           in: path
           required: true
-          style: simple
           schema:
             $ref: '#/components/schemas/LolCareerStatsRankedTier'
         - name: queue
           in: path
           required: true
-          style: simple
           schema:
             $ref: '#/components/schemas/LolCareerStatsCareerStatsQueueType'
       responses:
@@ -1443,33 +1394,28 @@ paths:
         - name: season
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: uint32
         - name: championId
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: int32
         - name: position
           in: path
           required: true
-          style: simple
           schema:
             $ref: '#/components/schemas/LolCareerStatsSummonersRiftPosition'
         - name: tier
           in: path
           required: true
-          style: simple
           schema:
             $ref: '#/components/schemas/LolCareerStatsRankedTier'
         - name: queue
           in: path
           required: true
-          style: simple
           schema:
             $ref: '#/components/schemas/LolCareerStatsCareerStatsQueueType'
       responses:
@@ -1495,14 +1441,12 @@ paths:
         - name: championId
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: int32
         - name: position
           in: path
           required: true
-          style: simple
           schema:
             $ref: '#/components/schemas/LolCareerStatsSummonersRiftPosition'
       responses:
@@ -1534,21 +1478,18 @@ paths:
         - name: season
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: uint32
         - name: championId
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: int32
         - name: position
           in: path
           required: true
-          style: simple
           schema:
             $ref: '#/components/schemas/LolCareerStatsSummonersRiftPosition'
       responses:
@@ -1622,19 +1563,16 @@ paths:
         - name: position
           in: path
           required: true
-          style: simple
           schema:
             $ref: '#/components/schemas/LolCareerStatsSummonersRiftPosition'
         - name: tier
           in: path
           required: true
-          style: simple
           schema:
             $ref: '#/components/schemas/LolCareerStatsRankedTier'
         - name: queue
           in: path
           required: true
-          style: simple
           schema:
             $ref: '#/components/schemas/LolCareerStatsCareerStatsQueueType'
       responses:
@@ -1660,26 +1598,22 @@ paths:
         - name: season
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: uint32
         - name: position
           in: path
           required: true
-          style: simple
           schema:
             $ref: '#/components/schemas/LolCareerStatsSummonersRiftPosition'
         - name: tier
           in: path
           required: true
-          style: simple
           schema:
             $ref: '#/components/schemas/LolCareerStatsRankedTier'
         - name: queue
           in: path
           required: true
-          style: simple
           schema:
             $ref: '#/components/schemas/LolCareerStatsCareerStatsQueueType'
       responses:
@@ -1705,7 +1639,6 @@ paths:
         - name: position
           in: path
           required: true
-          style: simple
           schema:
             $ref: '#/components/schemas/LolCareerStatsSummonersRiftPosition'
       responses:
@@ -1737,14 +1670,12 @@ paths:
         - name: season
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: uint32
         - name: position
           in: path
           required: true
-          style: simple
           schema:
             $ref: '#/components/schemas/LolCareerStatsSummonersRiftPosition'
       responses:
@@ -1818,7 +1749,6 @@ paths:
         - name: puuid
           in: path
           required: true
-          style: simple
           schema:
             type: string
       responses:
@@ -1844,13 +1774,11 @@ paths:
         - name: puuid
           in: path
           required: true
-          style: simple
           schema:
             type: string
         - name: season
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: uint32
@@ -1877,31 +1805,26 @@ paths:
         - name: puuid
           in: path
           required: true
-          style: simple
           schema:
             type: string
         - name: season
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: uint32
         - name: queue
           in: path
           required: true
-          style: simple
           schema:
             $ref: '#/components/schemas/LolCareerStatsCareerStatsQueueType'
         - name: position
           in: path
           required: true
-          style: simple
           schema:
             $ref: '#/components/schemas/LolCareerStatsSummonersRiftPosition'
         - name: championId
           in: query
-          style: form
           schema:
             type: integer
             format: int32
@@ -1928,13 +1851,11 @@ paths:
         - name: inventoryType
           in: query
           required: true
-          style: form
           schema:
             type: string
         - name: itemId
           in: query
           required: true
-          style: form
           schema:
             type: integer
             format: int64
@@ -1961,13 +1882,11 @@ paths:
         - name: inventoryType
           in: query
           required: true
-          style: form
           schema:
             type: string
         - name: itemIds
           in: query
           required: true
-          style: form
           schema:
             type: array
             items:
@@ -1992,6 +1911,48 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/LolCatalogItemChoiceDetails'
+  /lol-catalog/v1/items-list-details/skip-cache:
+    get:
+      tags:
+        - Plugins
+        - Plugin lol-catalog
+      operationId: GetLolCatalogV1ItemsListDetailsSkipCache
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                $ref: '#/components/schemas/LolCatalogItemKey'
+          application/x-yaml:
+            schema:
+              type: array
+              items:
+                $ref: '#/components/schemas/LolCatalogItemKey'
+          application/x-msgpack:
+            schema:
+              type: array
+              items:
+                $ref: '#/components/schemas/LolCatalogItemKey'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/LolCatalogCatalogPluginItemWithDetails'
+            application/x-yaml:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/LolCatalogCatalogPluginItemWithDetails'
+            application/x-msgpack:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/LolCatalogCatalogPluginItemWithDetails'
   '/lol-catalog/v1/items/{inventoryType}':
     get:
       tags:
@@ -2002,7 +1963,6 @@ paths:
         - name: inventoryType
           in: path
           required: true
-          style: simple
           schema:
             type: string
       responses:
@@ -2034,7 +1994,6 @@ paths:
         - name: id
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: uint64
@@ -2176,7 +2135,6 @@ paths:
         - name: gameId
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: uint64
@@ -2272,7 +2230,6 @@ paths:
         - name: puuid
           in: path
           required: true
-          style: simple
           schema:
             type: string
       responses:
@@ -2298,7 +2255,6 @@ paths:
         - name: puuids
           in: query
           required: true
-          style: form
           schema:
             type: array
             items:
@@ -2402,14 +2358,12 @@ paths:
         - name: gameId
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: uint64
         - name: puuid
           in: path
           required: true
-          style: simple
           schema:
             type: string
       responses:
@@ -2632,7 +2586,6 @@ paths:
         - name: id
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: uint64
@@ -2670,7 +2623,6 @@ paths:
         - name: id
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: int64
@@ -2808,7 +2760,6 @@ paths:
         - name: id
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: int64
@@ -2835,7 +2786,6 @@ paths:
         - name: id
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: int64
@@ -2862,7 +2812,6 @@ paths:
         - name: id
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: int64
@@ -2889,7 +2838,6 @@ paths:
         - name: id
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: int64
@@ -2916,7 +2864,6 @@ paths:
         - name: id
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: int64
@@ -3084,7 +3031,6 @@ paths:
         - name: championId
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: int32
@@ -3155,7 +3101,6 @@ paths:
         - name: id
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: int64
@@ -3201,7 +3146,6 @@ paths:
         - name: id
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: int64
@@ -3341,7 +3285,6 @@ paths:
         - name: id
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: int64
@@ -3379,7 +3322,6 @@ paths:
         - name: id
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: int64
@@ -3406,7 +3348,6 @@ paths:
         - name: championId
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: int32
@@ -3544,7 +3485,6 @@ paths:
         - name: id
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: int64
@@ -3571,7 +3511,6 @@ paths:
         - name: id
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: int64
@@ -3598,7 +3537,6 @@ paths:
         - name: id
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: int64
@@ -3625,7 +3563,6 @@ paths:
         - name: id
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: int64
@@ -3652,7 +3589,6 @@ paths:
         - name: id
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: int64
@@ -3723,7 +3659,6 @@ paths:
         - name: id
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: int64
@@ -3750,7 +3685,6 @@ paths:
         - name: id
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: int64
@@ -3777,7 +3711,6 @@ paths:
         - name: id
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: int64
@@ -3804,7 +3737,6 @@ paths:
         - name: id
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: int64
@@ -3831,7 +3763,6 @@ paths:
         - name: id
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: int64
@@ -3927,7 +3858,6 @@ paths:
         - name: slotId
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: uint64
@@ -3992,14 +3922,12 @@ paths:
         - name: championId
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: int64
         - name: position
           in: path
           required: true
-          style: simple
           schema:
             type: string
       responses:
@@ -4055,7 +3983,6 @@ paths:
         - name: summonerId
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: uint64
@@ -4088,7 +4015,6 @@ paths:
         - name: summonerId
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: uint64
@@ -4121,7 +4047,6 @@ paths:
         - name: summonerId
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: uint64
@@ -4148,14 +4073,12 @@ paths:
         - name: summonerId
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: uint64
         - name: championId
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: int32
@@ -4182,14 +4105,12 @@ paths:
         - name: summonerId
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: uint64
         - name: championId
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: int32
@@ -4222,21 +4143,18 @@ paths:
         - name: summonerId
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: uint64
         - name: championId
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: int32
         - name: championSkinId
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: int32
@@ -4263,21 +4181,18 @@ paths:
         - name: summonerId
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: uint64
         - name: championId
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: int32
         - name: skinId
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: int32
@@ -4310,7 +4225,6 @@ paths:
         - name: summonerId
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: uint64
@@ -4422,7 +4336,6 @@ paths:
         - name: id
           in: path
           required: true
-          style: simple
           schema:
             type: string
       responses:
@@ -4447,7 +4360,6 @@ paths:
         - name: id
           in: path
           required: true
-          style: simple
           schema:
             type: string
       responses:
@@ -4546,7 +4458,6 @@ paths:
         - name: id
           in: path
           required: true
-          style: simple
           schema:
             type: string
       responses:
@@ -4571,7 +4482,6 @@ paths:
         - name: id
           in: path
           required: true
-          style: simple
           schema:
             type: string
       responses:
@@ -4596,7 +4506,6 @@ paths:
         - name: id
           in: path
           required: true
-          style: simple
           schema:
             type: string
       requestBody:
@@ -4633,7 +4542,6 @@ paths:
         - name: id
           in: path
           required: true
-          style: simple
           schema:
             type: string
       responses:
@@ -4658,7 +4566,6 @@ paths:
         - name: id
           in: path
           required: true
-          style: simple
           schema:
             type: string
       responses:
@@ -4684,7 +4591,6 @@ paths:
         - name: id
           in: path
           required: true
-          style: simple
           schema:
             type: string
       responses:
@@ -4709,7 +4615,6 @@ paths:
         - name: id
           in: path
           required: true
-          style: simple
           schema:
             type: string
       responses:
@@ -4740,7 +4645,6 @@ paths:
         - name: id
           in: path
           required: true
-          style: simple
           schema:
             type: string
       requestBody:
@@ -4777,7 +4681,6 @@ paths:
         - name: id
           in: path
           required: true
-          style: simple
           schema:
             type: string
       responses:
@@ -4808,7 +4711,6 @@ paths:
         - name: id
           in: path
           required: true
-          style: simple
           schema:
             type: string
       requestBody:
@@ -4845,13 +4747,11 @@ paths:
         - name: id
           in: path
           required: true
-          style: simple
           schema:
             type: string
         - name: pid
           in: path
           required: true
-          style: simple
           schema:
             type: string
       responses:
@@ -4943,7 +4843,6 @@ paths:
         - name: isToggledOn
           in: query
           required: true
-          style: form
           schema:
             type: boolean
       responses:
@@ -5013,7 +4912,6 @@ paths:
         - name: id
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: uint64
@@ -5059,7 +4957,6 @@ paths:
         - name: summonerId
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: uint64
@@ -5140,7 +5037,6 @@ paths:
         - name: id
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: uint32
@@ -5166,7 +5062,6 @@ paths:
         - name: id
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: uint32
@@ -5192,7 +5087,6 @@ paths:
         - name: id
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: uint32
@@ -5230,7 +5124,6 @@ paths:
         - name: id
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: uint32
@@ -5347,7 +5240,6 @@ paths:
         - name: id
           in: path
           required: true
-          style: simple
           schema:
             type: string
       responses:
@@ -5372,7 +5264,6 @@ paths:
         - name: id
           in: path
           required: true
-          style: simple
           schema:
             type: string
       requestBody:
@@ -5434,7 +5325,6 @@ paths:
         - name: id
           in: path
           required: true
-          style: simple
           schema:
             type: string
       responses:
@@ -5459,7 +5349,6 @@ paths:
         - name: id
           in: path
           required: true
-          style: simple
           schema:
             type: string
       responses:
@@ -5484,7 +5373,6 @@ paths:
         - name: id
           in: path
           required: true
-          style: simple
           schema:
             type: string
       requestBody:
@@ -5744,7 +5632,6 @@ paths:
       parameters:
         - name: doAsync
           in: query
-          style: form
           schema:
             type: boolean
       requestBody:
@@ -5781,12 +5668,10 @@ paths:
         - name: key
           in: path
           required: true
-          style: simple
           schema:
             type: string
         - name: doAsync
           in: query
-          style: form
           schema:
             type: boolean
       responses:
@@ -5811,7 +5696,6 @@ paths:
         - name: key
           in: path
           required: true
-          style: simple
           schema:
             type: string
       responses:
@@ -5836,12 +5720,10 @@ paths:
         - name: key
           in: path
           required: true
-          style: simple
           schema:
             type: string
         - name: doAsync
           in: query
-          style: form
           schema:
             type: boolean
       requestBody:
@@ -5952,7 +5834,6 @@ paths:
         - name: bracketId
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: int64
@@ -6121,7 +6002,6 @@ paths:
         - name: uuids
           in: query
           required: true
-          style: form
           schema:
             type: array
             items:
@@ -6352,7 +6232,6 @@ paths:
         - name: rosterId
           in: path
           required: true
-          style: simple
           schema:
             type: string
       responses:
@@ -6378,7 +6257,6 @@ paths:
         - name: tournamentId
           in: query
           required: true
-          style: form
           schema:
             type: integer
             format: int64
@@ -6668,7 +6546,6 @@ paths:
         - name: rosterId
           in: path
           required: true
-          style: simple
           schema:
             type: string
       responses:
@@ -6694,7 +6571,6 @@ paths:
         - name: rosterId
           in: path
           required: true
-          style: simple
           schema:
             type: string
       responses:
@@ -6720,7 +6596,6 @@ paths:
         - name: rosterId
           in: path
           required: true
-          style: simple
           schema:
             type: string
       responses:
@@ -6746,7 +6621,6 @@ paths:
         - name: rosterId
           in: path
           required: true
-          style: simple
           schema:
             type: string
       requestBody:
@@ -6783,7 +6657,6 @@ paths:
         - name: rosterId
           in: path
           required: true
-          style: simple
           schema:
             type: string
       requestBody:
@@ -6820,7 +6693,6 @@ paths:
         - name: rosterId
           in: path
           required: true
-          style: simple
           schema:
             type: string
       requestBody:
@@ -6857,7 +6729,6 @@ paths:
         - name: rosterId
           in: path
           required: true
-          style: simple
           schema:
             type: string
       requestBody:
@@ -6894,7 +6765,6 @@ paths:
         - name: rosterId
           in: path
           required: true
-          style: simple
           schema:
             type: string
       responses:
@@ -6920,7 +6790,6 @@ paths:
         - name: rosterId
           in: path
           required: true
-          style: simple
           schema:
             type: string
       responses:
@@ -6946,13 +6815,11 @@ paths:
         - name: rosterId
           in: path
           required: true
-          style: simple
           schema:
             type: string
         - name: summonerIds
           in: query
           required: true
-          style: form
           schema:
             type: array
             items:
@@ -6987,7 +6854,6 @@ paths:
         - name: rosterId
           in: path
           required: true
-          style: simple
           schema:
             type: string
       requestBody:
@@ -7024,7 +6890,6 @@ paths:
         - name: rosterId
           in: path
           required: true
-          style: simple
           schema:
             type: string
       responses:
@@ -7050,7 +6915,6 @@ paths:
         - name: rosterId
           in: path
           required: true
-          style: simple
           schema:
             type: string
       responses:
@@ -7076,7 +6940,6 @@ paths:
         - name: rosterId
           in: path
           required: true
-          style: simple
           schema:
             type: string
       requestBody:
@@ -7113,7 +6976,6 @@ paths:
         - name: rosterId
           in: path
           required: true
-          style: simple
           schema:
             type: string
       requestBody:
@@ -7150,7 +7012,6 @@ paths:
         - name: rosterId
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: int64
@@ -7177,13 +7038,11 @@ paths:
         - name: rosterId
           in: path
           required: true
-          style: simple
           schema:
             type: string
         - name: summonerIds
           in: query
           required: true
-          style: form
           schema:
             type: array
             items:
@@ -7212,13 +7071,11 @@ paths:
         - name: rosterId
           in: path
           required: true
-          style: simple
           schema:
             type: string
         - name: summonerId
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: uint64
@@ -7245,13 +7102,11 @@ paths:
         - name: rosterId
           in: path
           required: true
-          style: simple
           schema:
             type: string
         - name: summonerId
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: uint64
@@ -7278,13 +7133,11 @@ paths:
         - name: rosterId
           in: path
           required: true
-          style: simple
           schema:
             type: string
         - name: summonerId
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: uint64
@@ -7311,13 +7164,11 @@ paths:
         - name: rosterId
           in: path
           required: true
-          style: simple
           schema:
             type: string
         - name: summonerId
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: uint64
@@ -7344,13 +7195,11 @@ paths:
         - name: rosterId
           in: path
           required: true
-          style: simple
           schema:
             type: string
         - name: summonerId
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: uint64
@@ -7377,13 +7226,11 @@ paths:
         - name: rosterId
           in: path
           required: true
-          style: simple
           schema:
             type: string
         - name: summonerId
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: uint64
@@ -7421,13 +7268,11 @@ paths:
         - name: rosterId
           in: path
           required: true
-          style: simple
           schema:
             type: string
         - name: summonerId
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: uint64
@@ -7454,13 +7299,11 @@ paths:
         - name: rosterId
           in: path
           required: true
-          style: simple
           schema:
             type: string
         - name: newCaptainSummonerId
           in: query
           required: true
-          style: form
           schema:
             type: integer
             format: uint64
@@ -7487,7 +7330,6 @@ paths:
         - name: rosterId
           in: path
           required: true
-          style: simple
           schema:
             type: string
       responses:
@@ -7513,7 +7355,6 @@ paths:
         - name: rosterId
           in: path
           required: true
-          style: simple
           schema:
             type: string
       responses:
@@ -7539,7 +7380,6 @@ paths:
         - name: rosterId
           in: path
           required: true
-          style: simple
           schema:
             type: string
       responses:
@@ -7565,7 +7405,6 @@ paths:
         - name: rosterId
           in: path
           required: true
-          style: simple
           schema:
             type: string
       responses:
@@ -7591,7 +7430,6 @@ paths:
         - name: summonerIds
           in: query
           required: true
-          style: form
           schema:
             type: array
             items:
@@ -7626,7 +7464,6 @@ paths:
         - name: summonerIds
           in: query
           required: true
-          style: form
           schema:
             type: array
             items:
@@ -7655,7 +7492,6 @@ paths:
         - name: seasonId
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: int32
@@ -7707,7 +7543,6 @@ paths:
         - name: id
           in: path
           required: true
-          style: simple
           schema:
             type: string
       responses:
@@ -7824,7 +7659,6 @@ paths:
         - name: tournamentId
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: int64
@@ -7851,7 +7685,6 @@ paths:
         - name: tournamentId
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: int64
@@ -7889,14 +7722,12 @@ paths:
         - name: tournamentId
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: int64
         - name: summonerIds
           in: query
           required: true
-          style: form
           schema:
             type: array
             items:
@@ -7931,7 +7762,6 @@ paths:
         - name: tournamentId
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: int64
@@ -7958,7 +7788,6 @@ paths:
         - name: tournamentId
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: int64
@@ -7985,7 +7814,6 @@ paths:
         - name: tournamentId
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: int64
@@ -8012,7 +7840,6 @@ paths:
         - name: tournamentId
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: int64
@@ -8167,7 +7994,6 @@ paths:
         - name: delaySeconds
           in: path
           required: true
-          style: simple
           schema:
             type: number
             format: double
@@ -8193,7 +8019,6 @@ paths:
         - name: delaySeconds
           in: path
           required: true
-          style: simple
           schema:
             type: number
             format: double
@@ -8258,7 +8083,6 @@ paths:
         - name: name
           in: path
           required: true
-          style: simple
           schema:
             type: string
       responses:
@@ -8284,7 +8108,6 @@ paths:
         - name: summonerId
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: uint64
@@ -8311,7 +8134,6 @@ paths:
         - name: summonerId
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: uint64
@@ -8344,20 +8166,17 @@ paths:
         - name: summonerId
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: uint64
         - name: limit
           in: query
           required: true
-          style: form
           schema:
             type: integer
             format: uint64
         - name: sortRule
           in: query
-          style: form
           schema:
             type: string
       responses:
@@ -8383,7 +8202,6 @@ paths:
         - name: summonerId
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: uint64
@@ -8410,7 +8228,6 @@ paths:
         - name: summonerId
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: uint64
@@ -8443,14 +8260,12 @@ paths:
         - name: summonerId
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: uint64
         - name: wardSkinId
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: int64
@@ -8518,7 +8333,6 @@ paths:
         - name: summonerIds
           in: query
           required: true
-          style: form
           schema:
             type: array
             items:
@@ -8610,7 +8424,6 @@ paths:
         - name: setName
           in: path
           required: true
-          style: simple
           schema:
             type: string
       responses:
@@ -8636,7 +8449,6 @@ paths:
         - name: setName
           in: path
           required: true
-          style: simple
           schema:
             type: string
       responses:
@@ -8662,7 +8474,6 @@ paths:
         - name: setName
           in: path
           required: true
-          style: simple
           schema:
             type: string
       responses:
@@ -8688,13 +8499,11 @@ paths:
         - name: type
           in: path
           required: true
-          style: simple
           schema:
             type: string
         - name: contentIds
           in: query
           required: true
-          style: form
           schema:
             type: array
             items:
@@ -8740,7 +8549,6 @@ paths:
         - name: itemId
           in: query
           required: true
-          style: form
           schema:
             type: integer
             format: int32
@@ -8785,7 +8593,6 @@ paths:
         - name: itemId
           in: query
           required: true
-          style: form
           schema:
             type: integer
             format: int32
@@ -8830,7 +8637,6 @@ paths:
         - name: itemId
           in: query
           required: true
-          style: form
           schema:
             type: integer
             format: int32
@@ -9125,13 +8931,11 @@ paths:
         - name: eventType
           in: query
           required: true
-          style: form
           schema:
             type: string
         - name: matchId
           in: query
           required: true
-          style: form
           schema:
             type: string
       responses:
@@ -9710,13 +9514,11 @@ paths:
         - name: summonerName
           in: query
           required: true
-          style: form
           schema:
             type: string
         - name: message
           in: query
           required: true
-          style: form
           schema:
             type: string
       responses:
@@ -9760,7 +9562,6 @@ paths:
         - name: message
           in: query
           required: true
-          style: form
           schema:
             type: string
       responses:
@@ -9814,7 +9615,6 @@ paths:
         - name: gameTypeConfigId
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: uint32
@@ -9841,14 +9641,12 @@ paths:
         - name: gameTypeConfigId
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: uint32
         - name: mapId
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: int32
@@ -9900,7 +9698,6 @@ paths:
         - name: id
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: int32
@@ -9927,7 +9724,6 @@ paths:
         - name: queueType
           in: path
           required: true
-          style: simple
           schema:
             type: string
       responses:
@@ -10295,7 +10091,6 @@ paths:
         - name: messsage
           in: query
           required: true
-          style: form
           schema:
             type: string
       responses:
@@ -10363,7 +10158,6 @@ paths:
         - name: key
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: int32
@@ -10413,7 +10207,6 @@ paths:
         - name: key
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: int32
@@ -10454,7 +10247,6 @@ paths:
         - name: extraGameClientArgs
           in: query
           required: true
-          style: form
           schema:
             type: array
             items:
@@ -10567,7 +10359,6 @@ paths:
         - name: enabled
           in: query
           required: true
-          style: form
           schema:
             type: boolean
       responses:
@@ -10641,7 +10432,6 @@ paths:
         - name: session
           in: query
           required: true
-          style: form
           schema:
             type: string
       responses:
@@ -10765,7 +10555,6 @@ paths:
         - name: eventType
           in: query
           required: true
-          style: form
           schema:
             type: string
       responses:
@@ -10865,7 +10654,6 @@ paths:
       parameters:
         - name: targetSummonerName
           in: query
-          style: form
           schema:
             type: string
       responses:
@@ -10938,7 +10726,6 @@ paths:
         - name: args
           in: query
           required: true
-          style: form
           schema:
             type: array
             items:
@@ -10996,7 +10783,6 @@ paths:
         - name: ip_address
           in: query
           required: true
-          style: form
           schema:
             type: string
       responses:
@@ -11060,7 +10846,6 @@ paths:
         - name: highlightId
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: uint64
@@ -11174,7 +10959,6 @@ paths:
         - name: id
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: uint64
@@ -11200,7 +10984,6 @@ paths:
         - name: id
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: uint64
@@ -11226,7 +11009,6 @@ paths:
         - name: id
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: uint64
@@ -11264,7 +11046,6 @@ paths:
         - name: puuid
           in: path
           required: true
-          style: simple
           schema:
             type: string
       responses:
@@ -11308,7 +11089,6 @@ paths:
         - name: shouldDismiss
           in: query
           required: true
-          style: form
           schema:
             type: boolean
       responses:
@@ -11778,7 +11558,6 @@ paths:
         - name: summonerId
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: uint64
@@ -11805,7 +11584,6 @@ paths:
         - name: puuid
           in: path
           required: true
-          style: simple
           schema:
             type: string
       responses:
@@ -11869,7 +11647,6 @@ paths:
         - name: inventoryTypes
           in: query
           required: true
-          style: form
           schema:
             type: array
             items:
@@ -11928,7 +11705,6 @@ paths:
         - name: inventoryTypes
           in: query
           required: true
-          style: form
           schema:
             type: array
             items:
@@ -11962,7 +11738,6 @@ paths:
         - name: id
           in: query
           required: true
-          style: form
           schema:
             type: integer
             format: int64
@@ -11979,7 +11754,6 @@ paths:
         - name: inventoryType
           in: path
           required: true
-          style: simple
           schema:
             type: string
       responses:
@@ -12011,13 +11785,11 @@ paths:
         - name: puuid
           in: path
           required: true
-          style: simple
           schema:
             type: string
         - name: inventoryTypes
           in: query
           required: true
-          style: form
           schema:
             type: array
             items:
@@ -12051,7 +11823,6 @@ paths:
         - name: inventoryTypes
           in: query
           required: true
-          style: form
           schema:
             type: array
             items:
@@ -12085,14 +11856,12 @@ paths:
         - name: inventoryTypes
           in: query
           required: true
-          style: form
           schema:
             type: array
             items:
               type: string
         - name: queryParams
           in: query
-          style: form
           schema:
             type: map of string
       responses:
@@ -12168,7 +11937,6 @@ paths:
         - name: currencyTypes
           in: query
           required: true
-          style: form
           schema:
             type: array
             items:
@@ -12202,7 +11970,6 @@ paths:
         - name: currencyType
           in: path
           required: true
-          style: simple
           schema:
             type: string
       responses:
@@ -12234,7 +12001,6 @@ paths:
         - name: currencyTypes
           in: query
           required: true
-          style: form
           schema:
             type: array
             items:
@@ -12271,7 +12037,6 @@ paths:
         - name: currencyType
           in: path
           required: true
-          style: simple
           schema:
             type: string
       responses:
@@ -12325,7 +12090,6 @@ paths:
         - name: inventoryType
           in: path
           required: true
-          style: simple
           schema:
             type: string
       responses:
@@ -12357,7 +12121,6 @@ paths:
         - name: summonerId
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: uint64
@@ -12383,7 +12146,6 @@ paths:
         - name: summonerId
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: uint64
@@ -12410,7 +12172,6 @@ paths:
         - name: summonerId
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: uint64
@@ -12591,7 +12352,6 @@ paths:
         - name: queue_id
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: int32
@@ -12709,7 +12469,6 @@ paths:
         - name: id
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: uint32
@@ -12735,7 +12494,6 @@ paths:
         - name: id
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: uint32
@@ -12806,7 +12564,6 @@ paths:
         - name: id
           in: path
           required: true
-          style: simple
           schema:
             type: string
       responses:
@@ -12832,7 +12589,6 @@ paths:
         - name: id
           in: path
           required: true
-          style: simple
           schema:
             type: string
       responses:
@@ -12970,7 +12726,6 @@ paths:
         - name: id
           in: path
           required: true
-          style: simple
           schema:
             type: string
       responses:
@@ -12985,7 +12740,6 @@ paths:
         - name: id
           in: path
           required: true
-          style: simple
           schema:
             type: string
       requestBody:
@@ -13021,7 +12775,6 @@ paths:
         - name: id
           in: path
           required: true
-          style: simple
           schema:
             type: string
       requestBody:
@@ -13058,7 +12811,6 @@ paths:
         - name: loadoutId
           in: path
           required: true
-          style: simple
           schema:
             type: string
       responses:
@@ -13084,13 +12836,11 @@ paths:
         - name: scope
           in: path
           required: true
-          style: simple
           schema:
             type: string
         - name: scopeItemId
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: uint32
@@ -13415,7 +13165,6 @@ paths:
         - name: id
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: int32
@@ -13453,7 +13202,6 @@ paths:
         - name: id
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: int32
@@ -13480,7 +13228,6 @@ paths:
         - name: championId
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: int32
@@ -13627,7 +13374,6 @@ paths:
         - name: id
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: int64
@@ -13654,7 +13400,6 @@ paths:
         - name: id
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: int32
@@ -13681,7 +13426,6 @@ paths:
         - name: id
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: int32
@@ -13708,7 +13452,6 @@ paths:
         - name: id
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: int32
@@ -13735,7 +13478,6 @@ paths:
         - name: id
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: int32
@@ -13806,7 +13548,6 @@ paths:
         - name: id
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: int64
@@ -13833,7 +13574,6 @@ paths:
         - name: id
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: int32
@@ -13860,7 +13600,6 @@ paths:
         - name: id
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: int32
@@ -13887,7 +13626,6 @@ paths:
         - name: id
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: int32
@@ -13914,7 +13652,6 @@ paths:
         - name: id
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: int32
@@ -14100,7 +13837,6 @@ paths:
         - name: token
           in: query
           required: true
-          style: form
           schema:
             type: string
       responses:
@@ -14151,7 +13887,6 @@ paths:
         - name: id
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: int32
@@ -14178,7 +13913,6 @@ paths:
         - name: id
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: uint64
@@ -14306,7 +14040,6 @@ paths:
         - name: summonerInternalName
           in: path
           required: true
-          style: simple
           schema:
             type: string
       responses:
@@ -14331,7 +14064,6 @@ paths:
         - name: summonerInternalName
           in: path
           required: true
-          style: simple
           schema:
             type: string
       requestBody:
@@ -14405,7 +14137,6 @@ paths:
       parameters:
         - name: team
           in: query
-          style: form
           schema:
             type: string
       responses:
@@ -14485,7 +14216,6 @@ paths:
         - name: id
           in: path
           required: true
-          style: simple
           schema:
             type: string
       responses:
@@ -14577,19 +14307,16 @@ paths:
         - name: partyId
           in: path
           required: true
-          style: simple
           schema:
             type: string
         - name: puuid
           in: path
           required: true
-          style: simple
           schema:
             type: string
         - name: role
           in: query
           required: true
-          style: form
           schema:
             type: string
       responses:
@@ -14605,7 +14332,6 @@ paths:
         - name: active
           in: query
           required: true
-          style: form
           schema:
             type: integer
             format: int32
@@ -14680,7 +14406,6 @@ paths:
         - name: queueId
           in: query
           required: true
-          style: form
           schema:
             type: integer
             format: int32
@@ -14697,7 +14422,6 @@ paths:
         - name: ready
           in: query
           required: true
-          style: form
           schema:
             type: integer
             format: int32
@@ -14733,7 +14457,6 @@ paths:
         - name: id
           in: path
           required: true
-          style: simple
           schema:
             type: string
       responses:
@@ -15177,7 +14900,6 @@ paths:
         - name: summonerId
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: uint64
@@ -15207,7 +14929,6 @@ paths:
         - name: summonerId
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: uint64
@@ -15237,7 +14958,6 @@ paths:
         - name: summonerId
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: uint64
@@ -15267,7 +14987,6 @@ paths:
         - name: summonerId
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: uint64
@@ -15327,7 +15046,6 @@ paths:
         - name: partyType
           in: query
           required: true
-          style: form
           schema:
             type: string
       responses:
@@ -15353,7 +15071,6 @@ paths:
         - name: team
           in: path
           required: true
-          style: simple
           schema:
             type: string
       responses:
@@ -15443,7 +15160,6 @@ paths:
         - name: notificationId
           in: path
           required: true
-          style: simple
           schema:
             type: string
       responses:
@@ -15469,7 +15185,6 @@ paths:
         - name: enabledForTeambuilderQueues
           in: query
           required: true
-          style: form
           schema:
             type: boolean
       responses:
@@ -15504,7 +15219,6 @@ paths:
         - name: partyId
           in: path
           required: true
-          style: simple
           schema:
             type: string
       requestBody:
@@ -15623,7 +15337,6 @@ paths:
         - name: invitationId
           in: path
           required: true
-          style: simple
           schema:
             type: string
       responses:
@@ -15639,7 +15352,6 @@ paths:
         - name: invitationId
           in: path
           required: true
-          style: simple
           schema:
             type: string
       responses:
@@ -15701,7 +15413,6 @@ paths:
         - name: name
           in: query
           required: true
-          style: form
           schema:
             type: string
       responses:
@@ -15746,7 +15457,6 @@ paths:
         - name: LeagueSession
           in: query
           required: true
-          style: form
           schema:
             $ref: '#/components/schemas/LolLoginLeagueSessionStatus'
       responses:
@@ -15857,19 +15567,16 @@ paths:
         - name: serviceName
           in: path
           required: true
-          style: simple
           schema:
             type: string
         - name: methodName
           in: path
           required: true
-          style: simple
           schema:
             type: string
         - name: pluginId
           in: query
           required: true
-          style: form
           schema:
             type: integer
             format: uint32
@@ -15885,19 +15592,16 @@ paths:
         - name: serviceName
           in: path
           required: true
-          style: simple
           schema:
             type: string
         - name: methodName
           in: path
           required: true
-          style: simple
           schema:
             type: string
         - name: pluginId
           in: query
           required: true
-          style: form
           schema:
             type: integer
             format: uint32
@@ -15914,33 +15618,28 @@ paths:
         - name: serviceName
           in: query
           required: true
-          style: form
           schema:
             type: string
         - name: methodName
           in: query
           required: true
-          style: form
           schema:
             type: string
         - name: pluginId
           in: query
           required: true
-          style: form
           schema:
             type: integer
             format: uint32
         - name: timeoutMillis
           in: query
           required: true
-          style: form
           schema:
             type: integer
             format: uint64
         - name: payload
           in: query
           required: true
-          style: form
           schema:
             type: string
       responses:
@@ -16022,13 +15721,11 @@ paths:
         - name: destination
           in: query
           required: true
-          style: form
           schema:
             type: string
         - name: method
           in: query
           required: true
-          style: form
           schema:
             type: string
       requestBody:
@@ -16071,7 +15768,6 @@ paths:
         - name: lockName
           in: path
           required: true
-          style: simple
           schema:
             type: string
       responses:
@@ -16086,7 +15782,6 @@ paths:
         - name: lockName
           in: path
           required: true
-          style: simple
           schema:
             type: string
       responses:
@@ -16132,7 +15827,6 @@ paths:
         - name: responseCode
           in: query
           required: true
-          style: form
           schema:
             type: integer
             format: int32
@@ -16250,7 +15944,6 @@ paths:
         - name: id
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: int64
@@ -16302,7 +15995,6 @@ paths:
         - name: recipeName
           in: path
           required: true
-          style: simple
           schema:
             type: string
       responses:
@@ -16364,7 +16056,6 @@ paths:
         - name: minimizeResponse
           in: query
           required: true
-          style: form
           schema:
             type: boolean
       responses:
@@ -16396,7 +16087,6 @@ paths:
         - name: lootMilestonesId
           in: path
           required: true
-          style: simple
           schema:
             type: string
       responses:
@@ -16422,7 +16112,6 @@ paths:
         - name: lootMilestonesId
           in: path
           required: true
-          style: simple
           schema:
             type: string
       responses:
@@ -16438,7 +16127,6 @@ paths:
         - name: lootMilestonesId
           in: path
           required: true
-          style: simple
           schema:
             type: string
       responses:
@@ -16464,7 +16152,6 @@ paths:
         - name: lootMilestonesId
           in: path
           required: true
-          style: simple
           schema:
             type: string
       responses:
@@ -16559,7 +16246,6 @@ paths:
         - name: newValue
           in: path
           required: true
-          style: simple
           schema:
             type: boolean
       responses:
@@ -16685,7 +16371,6 @@ paths:
         - name: id
           in: path
           required: true
-          style: simple
           schema:
             type: string
       responses:
@@ -16711,7 +16396,6 @@ paths:
         - name: lootId
           in: path
           required: true
-          style: simple
           schema:
             type: string
       responses:
@@ -16737,7 +16421,6 @@ paths:
         - name: lootId
           in: path
           required: true
-          style: simple
           schema:
             type: string
       responses:
@@ -16768,7 +16451,6 @@ paths:
         - name: lootId
           in: path
           required: true
-          style: simple
           schema:
             type: string
       responses:
@@ -16800,7 +16482,6 @@ paths:
         - name: lootId
           in: path
           required: true
-          style: simple
           schema:
             type: string
       responses:
@@ -16826,7 +16507,6 @@ paths:
         - name: lootName
           in: path
           required: true
-          style: simple
           schema:
             type: string
       responses:
@@ -16871,20 +16551,17 @@ paths:
         - name: recipeName
           in: path
           required: true
-          style: simple
           schema:
             type: string
         - name: playerLootList
           in: query
           required: true
-          style: form
           schema:
             type: array
             items:
               type: string
         - name: repeat
           in: query
-          style: form
           schema:
             type: integer
             format: int32
@@ -16920,7 +16597,6 @@ paths:
         - name: lootId
           in: path
           required: true
-          style: simple
           schema:
             type: string
       responses:
@@ -16951,7 +16627,6 @@ paths:
         - name: lootId
           in: path
           required: true
-          style: simple
           schema:
             type: string
       responses:
@@ -16983,7 +16658,6 @@ paths:
         - name: force
           in: query
           required: true
-          style: form
           schema:
             type: boolean
       responses:
@@ -17087,7 +16761,6 @@ paths:
         - name: id
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: int64
@@ -17139,14 +16812,12 @@ paths:
         - name: id
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: int64
         - name: gameMode
           in: path
           required: true
-          style: simple
           schema:
             type: string
       responses:
@@ -17172,20 +16843,17 @@ paths:
         - name: id
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: int64
         - name: gameMode
           in: path
           required: true
-          style: simple
           schema:
             type: string
         - name: gameMutator
           in: path
           required: true
-          style: simple
           schema:
             type: string
       responses:
@@ -17236,7 +16904,6 @@ paths:
         - name: partitionKey
           in: path
           required: true
-          style: simple
           schema:
             type: string
       responses:
@@ -17267,13 +16934,11 @@ paths:
         - name: partitionKey
           in: path
           required: true
-          style: simple
           schema:
             type: string
         - name: body
           in: query
           required: true
-          style: form
           schema:
             type: map of string
       responses:
@@ -17373,7 +17038,6 @@ paths:
         - name: gameId
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: uint64
@@ -17400,7 +17064,6 @@ paths:
         - name: gameId
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: uint64
@@ -17427,18 +17090,15 @@ paths:
         - name: puuid
           in: path
           required: true
-          style: simple
           schema:
             type: string
         - name: begIndex
           in: query
-          style: form
           schema:
             type: integer
             format: uint32
         - name: endIndex
           in: query
-          style: form
           schema:
             type: integer
             format: uint32
@@ -17464,13 +17124,11 @@ paths:
       parameters:
         - name: begIndex
           in: query
-          style: form
           schema:
             type: integer
             format: uint32
         - name: endIndex
           in: query
-          style: form
           schema:
             type: integer
             format: uint32
@@ -17497,24 +17155,20 @@ paths:
         - name: puuid
           in: path
           required: true
-          style: simple
           schema:
             type: string
         - name: begin
           in: query
-          style: form
           schema:
             type: integer
             format: uint32
         - name: count
           in: query
-          style: form
           schema:
             type: integer
             format: uint32
         - name: tag
           in: query
-          style: form
           schema:
             type: string
       responses:
@@ -17584,19 +17238,16 @@ paths:
         - name: accountId
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: uint64
         - name: begIndex
           in: query
-          style: form
           schema:
             type: integer
             format: uint32
         - name: endIndex
           in: query
-          style: form
           schema:
             type: integer
             format: uint32
@@ -17789,7 +17440,6 @@ paths:
         - name: id
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: int32
@@ -17889,7 +17539,6 @@ paths:
         - name: missionId
           in: path
           required: true
-          style: simple
           schema:
             type: string
       requestBody:
@@ -18147,7 +17796,6 @@ paths:
         - name: tutorialId
           in: path
           required: true
-          style: simple
           schema:
             type: string
       responses:
@@ -18210,7 +17858,6 @@ paths:
         - name: url
           in: query
           required: true
-          style: form
           schema:
             type: string
       responses:
@@ -18270,7 +17917,6 @@ paths:
         - name: id
           in: path
           required: true
-          style: simple
           schema:
             type: string
       responses:
@@ -18369,7 +18015,6 @@ paths:
         - name: restart
           in: query
           required: true
-          style: form
           schema:
             type: boolean
       responses:
@@ -18461,7 +18106,6 @@ paths:
         - name: id
           in: query
           required: true
-          style: form
           schema:
             type: integer
             format: int32
@@ -18579,7 +18223,6 @@ paths:
         - name: id
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: int32
@@ -18605,7 +18248,6 @@ paths:
         - name: id
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: int32
@@ -18631,7 +18273,6 @@ paths:
         - name: id
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: int32
@@ -18669,7 +18310,6 @@ paths:
         - name: id
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: int32
@@ -18846,7 +18486,6 @@ paths:
         - name: championId
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: int32
@@ -18873,14 +18512,12 @@ paths:
         - name: championId
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: int32
         - name: position
           in: path
           required: true
-          style: simple
           schema:
             type: string
       responses:
@@ -18906,20 +18543,17 @@ paths:
         - name: championId
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: int32
         - name: position
           in: path
           required: true
-          style: simple
           schema:
             type: string
         - name: mapId
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: int32
@@ -19235,7 +18869,6 @@ paths:
         - name: ns
           in: path
           required: true
-          style: simple
           schema:
             type: string
       responses:
@@ -19261,13 +18894,11 @@ paths:
         - name: ns
           in: path
           required: true
-          style: simple
           schema:
             type: string
         - name: key
           in: path
           required: true
-          style: simple
           schema:
             type: string
       responses:
@@ -19450,7 +19081,6 @@ paths:
         - name: id
           in: path
           required: true
-          style: simple
           schema:
             type: string
       responses:
@@ -19475,7 +19105,6 @@ paths:
         - name: id
           in: path
           required: true
-          style: simple
           schema:
             type: string
       responses:
@@ -19545,7 +19174,6 @@ paths:
         - name: key
           in: path
           required: true
-          style: simple
           schema:
             type: string
       responses:
@@ -19561,7 +19189,6 @@ paths:
         - name: id
           in: path
           required: true
-          style: simple
           schema:
             type: string
       responses:
@@ -19615,7 +19242,6 @@ paths:
         - name: pluginName
           in: path
           required: true
-          style: simple
           schema:
             type: string
       responses:
@@ -19640,7 +19266,6 @@ paths:
         - name: pluginName
           in: path
           required: true
-          style: simple
           schema:
             type: string
       requestBody:
@@ -19686,7 +19311,6 @@ paths:
         - name: id
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: uint32
@@ -19732,7 +19356,6 @@ paths:
         - name: id
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: uint32
@@ -19838,7 +19461,6 @@ paths:
         - name: type
           in: path
           required: true
-          style: simple
           schema:
             type: string
       responses:
@@ -19864,7 +19486,6 @@ paths:
         - name: category
           in: path
           required: true
-          style: simple
           schema:
             type: string
       requestBody:
@@ -19985,7 +19606,6 @@ paths:
         - name: sequenceEventName
           in: path
           required: true
-          style: simple
           schema:
             type: string
       responses:
@@ -20020,7 +19640,6 @@ paths:
         - name: sequenceEventName
           in: path
           required: true
-          style: simple
           schema:
             type: string
       responses:
@@ -20036,13 +19655,11 @@ paths:
         - name: sequenceEventName
           in: path
           required: true
-          style: simple
           schema:
             type: string
         - name: priority
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: int32
@@ -20102,7 +19719,6 @@ paths:
         - name: handle
           in: query
           required: true
-          style: form
           schema:
             type: string
       responses:
@@ -20164,7 +19780,6 @@ paths:
         - name: newKey
           in: query
           required: true
-          style: form
           schema:
             type: string
       responses:
@@ -20285,13 +19900,11 @@ paths:
         - name: puuid
           in: path
           required: true
-          style: simple
           schema:
             type: string
         - name: muted
           in: query
           required: true
-          style: form
           schema:
             type: integer
             format: int32
@@ -20308,13 +19921,11 @@ paths:
         - name: puuid
           in: path
           required: true
-          style: simple
           schema:
             type: string
         - name: volume
           in: query
           required: true
-          style: form
           schema:
             type: integer
             format: int32
@@ -20331,7 +19942,6 @@ paths:
         - name: prompt
           in: query
           required: true
-          style: form
           schema:
             type: integer
             format: int32
@@ -20358,7 +19968,6 @@ paths:
         - name: sensitivity
           in: query
           required: true
-          style: form
           schema:
             type: integer
             format: int32
@@ -20375,7 +19984,6 @@ paths:
         - name: inputMode
           in: query
           required: true
-          style: form
           schema:
             $ref: '#/components/schemas/LolPremadeVoiceInputMode'
       responses:
@@ -20391,7 +19999,6 @@ paths:
         - name: micLevel
           in: query
           required: true
-          style: form
           schema:
             type: integer
             format: int32
@@ -20408,7 +20015,6 @@ paths:
         - name: muted
           in: query
           required: true
-          style: form
           schema:
             type: integer
             format: int32
@@ -20470,7 +20076,6 @@ paths:
         - name: groupId
           in: path
           required: true
-          style: simple
           schema:
             type: string
       responses:
@@ -20496,7 +20101,6 @@ paths:
         - name: groupId
           in: path
           required: true
-          style: simple
           schema:
             type: string
       responses:
@@ -20566,7 +20170,6 @@ paths:
         - name: region
           in: path
           required: true
-          style: simple
           schema:
             type: string
       responses:
@@ -20737,13 +20340,11 @@ paths:
         - name: inventoryType
           in: query
           required: true
-          style: form
           schema:
             type: string
         - name: itemId
           in: query
           required: true
-          style: form
           schema:
             type: integer
             format: int64
@@ -20770,13 +20371,11 @@ paths:
         - name: inventoryType
           in: path
           required: true
-          style: simple
           schema:
             type: string
         - name: itemIds
           in: query
           required: true
-          style: form
           schema:
             type: array
             items:
@@ -20835,7 +20434,6 @@ paths:
         - name: offerId
           in: path
           required: true
-          style: simple
           schema:
             type: string
       responses:
@@ -20940,13 +20538,11 @@ paths:
         - name: queueType
           in: path
           required: true
-          style: simple
           schema:
             $ref: '#/components/schemas/LolRankedLeagueQueueType'
         - name: tier
           in: path
           required: true
-          style: simple
           schema:
             $ref: '#/components/schemas/LolRankedLeagueTier'
       responses:
@@ -21060,7 +20656,6 @@ paths:
         - name: id
           in: path
           required: true
-          style: simple
           schema:
             type: string
       responses:
@@ -21105,7 +20700,6 @@ paths:
         - name: puuid
           in: path
           required: true
-          style: simple
           schema:
             type: string
       responses:
@@ -21162,7 +20756,6 @@ paths:
         - name: id
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: uint64
@@ -21189,7 +20782,6 @@ paths:
         - name: puuid
           in: path
           required: true
-          style: simple
           schema:
             type: string
       responses:
@@ -21215,7 +20807,6 @@ paths:
         - name: queueType
           in: path
           required: true
-          style: simple
           schema:
             $ref: '#/components/schemas/LolRankedLeagueQueueType'
       responses:
@@ -21260,13 +20851,11 @@ paths:
         - name: queueType
           in: query
           required: true
-          style: form
           schema:
             $ref: '#/components/schemas/LolRankedLeagueQueueType'
         - name: puuids
           in: query
           required: true
-          style: form
           schema:
             type: array
             items:
@@ -21344,7 +20933,6 @@ paths:
         - name: summonerIds
           in: query
           required: true
-          style: form
           schema:
             type: array
             items:
@@ -21463,20 +21051,17 @@ paths:
         - name: summonerId
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: uint64
         - name: queue
           in: path
           required: true
-          style: simple
           schema:
             type: string
         - name: position
           in: path
           required: true
-          style: simple
           schema:
             type: string
       responses:
@@ -21502,14 +21087,12 @@ paths:
         - name: summonerId
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: uint64
         - name: queue
           in: path
           required: true
-          style: simple
           schema:
             type: string
       responses:
@@ -21535,14 +21118,12 @@ paths:
         - name: summonerId
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: uint64
         - name: hovercard
           in: query
           required: true
-          style: form
           schema:
             type: boolean
       responses:
@@ -21568,7 +21149,6 @@ paths:
         - name: summonerId
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: uint64
@@ -21595,7 +21175,6 @@ paths:
         - name: inventoryType
           in: path
           required: true
-          style: simple
           schema:
             type: string
       responses:
@@ -21627,7 +21206,6 @@ paths:
         - name: summonerId
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: uint64
@@ -21673,7 +21251,6 @@ paths:
         - name: gameId
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: uint64
@@ -21700,26 +21277,22 @@ paths:
         - name: gameId
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: uint64
         - name: gameVersion
           in: path
           required: true
-          style: simple
           schema:
             type: string
         - name: gameType
           in: path
           required: true
-          style: simple
           schema:
             type: string
         - name: queueId
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: int32
@@ -21736,7 +21309,6 @@ paths:
         - name: gameId
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: uint64
@@ -21764,7 +21336,6 @@ paths:
         - name: gameId
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: uint64
@@ -21792,7 +21363,6 @@ paths:
         - name: gameId
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: uint64
@@ -21867,7 +21437,6 @@ paths:
         - name: gameId
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: uint64
@@ -21894,7 +21463,6 @@ paths:
       parameters:
         - name: status
           in: query
-          style: form
           schema:
             $ref: '#/components/schemas/LolRewardsGrantStatus'
       responses:
@@ -21926,7 +21494,6 @@ paths:
         - name: grantId
           in: path
           required: true
-          style: simple
           schema:
             type: string
       requestBody:
@@ -21963,7 +21530,6 @@ paths:
         - name: grantId
           in: path
           required: true
-          style: simple
           schema:
             type: string
       responses:
@@ -21978,7 +21544,6 @@ paths:
       parameters:
         - name: types
           in: query
-          style: form
           schema:
             type: array
             items:
@@ -22079,7 +21644,6 @@ paths:
         - name: id
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: uint64
@@ -22350,7 +21914,6 @@ paths:
         - name: platformId
           in: path
           required: true
-          style: simple
           schema:
             type: string
       responses:
@@ -22448,7 +22011,6 @@ paths:
         - name: category
           in: path
           required: true
-          style: simple
           schema:
             type: string
       responses:
@@ -22473,7 +22035,6 @@ paths:
         - name: category
           in: path
           required: true
-          style: simple
           schema:
             type: string
       requestBody:
@@ -22509,7 +22070,6 @@ paths:
         - name: category
           in: path
           required: true
-          style: simple
           schema:
             type: string
       requestBody:
@@ -22574,7 +22134,6 @@ paths:
         - name: category
           in: path
           required: true
-          style: simple
           schema:
             type: string
       responses:
@@ -22599,7 +22158,6 @@ paths:
         - name: category
           in: path
           required: true
-          style: simple
           schema:
             type: string
       requestBody:
@@ -22636,13 +22194,11 @@ paths:
         - name: ppType
           in: path
           required: true
-          style: simple
           schema:
             type: string
         - name: category
           in: path
           required: true
-          style: simple
           schema:
             type: string
       responses:
@@ -22667,13 +22223,11 @@ paths:
         - name: ppType
           in: path
           required: true
-          style: simple
           schema:
             type: string
         - name: category
           in: path
           required: true
-          style: simple
           schema:
             type: string
       requestBody:
@@ -22709,13 +22263,11 @@ paths:
         - name: ppType
           in: path
           required: true
-          style: simple
           schema:
             type: string
         - name: category
           in: path
           required: true
-          style: simple
           schema:
             type: string
       requestBody:
@@ -22771,7 +22323,6 @@ paths:
         - name: ppType
           in: path
           required: true
-          style: simple
           schema:
             type: string
       responses:
@@ -22797,7 +22348,6 @@ paths:
         - name: category
           in: path
           required: true
-          style: simple
           schema:
             type: string
       responses:
@@ -22822,7 +22372,6 @@ paths:
         - name: category
           in: path
           required: true
-          style: simple
           schema:
             type: string
       requestBody:
@@ -22878,7 +22427,6 @@ paths:
         - name: ppType
           in: path
           required: true
-          style: simple
           schema:
             type: string
       responses:
@@ -22967,7 +22515,6 @@ paths:
         - name: messageId
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: int64
@@ -22994,7 +22541,6 @@ paths:
         - name: queueType
           in: query
           required: true
-          style: form
           schema:
             $ref: '#/components/schemas/LolSocialLeaderboardLeagueQueueType'
       responses:
@@ -23023,7 +22569,6 @@ paths:
         - name: queueType
           in: query
           required: true
-          style: form
           schema:
             $ref: '#/components/schemas/LolSocialLeaderboardLeagueQueueType'
       responses:
@@ -23049,7 +22594,6 @@ paths:
         - name: summonerOrTeamNames
           in: query
           required: true
-          style: form
           schema:
             type: array
             items:
@@ -23126,7 +22670,6 @@ paths:
         - name: gameId
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: uint64
@@ -23153,7 +22696,6 @@ paths:
         - name: championItemId
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: int32
@@ -23186,14 +22728,12 @@ paths:
         - name: championItemId
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: int32
         - name: statstoneId
           in: path
           required: true
-          style: simple
           schema:
             type: string
       requestBody:
@@ -23230,7 +22770,6 @@ paths:
         - name: puuid
           in: path
           required: true
-          style: simple
           schema:
             type: string
       responses:
@@ -23262,7 +22801,6 @@ paths:
         - name: contentId
           in: path
           required: true
-          style: simple
           schema:
             type: string
       responses:
@@ -23349,7 +22887,6 @@ paths:
         - name: key
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: int32
@@ -23366,7 +22903,6 @@ paths:
         - name: championItemId
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: int32
@@ -23424,7 +22960,6 @@ paths:
         - name: pageType
           in: path
           required: true
-          style: simple
           schema:
             type: string
       responses:
@@ -23449,7 +22984,6 @@ paths:
       parameters:
         - name: inventoryType
           in: query
-          style: form
           schema:
             type: array
             items:
@@ -23503,7 +23037,6 @@ paths:
         - name: inventoryType
           in: path
           required: true
-          style: simple
           schema:
             type: string
       requestBody:
@@ -23526,6 +23059,48 @@ paths:
               items:
                 type: integer
                 format: int32
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/LolStoreCatalogItem'
+            application/x-yaml:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/LolStoreCatalogItem'
+            application/x-msgpack:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/LolStoreCatalogItem'
+  /lol-store/v1/catalog/items/skip-cache:
+    get:
+      tags:
+        - Plugins
+        - Plugin lol-store
+      operationId: GetLolStoreV1CatalogItemsSkipCache
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                $ref: '#/components/schemas/LolStoreItemKey'
+          application/x-yaml:
+            schema:
+              type: array
+              items:
+                $ref: '#/components/schemas/LolStoreItemKey'
+          application/x-msgpack:
+            schema:
+              type: array
+              items:
+                $ref: '#/components/schemas/LolStoreItemKey'
       responses:
         '200':
           description: Successful response
@@ -23580,7 +23155,6 @@ paths:
         - name: instanceIds
           in: query
           required: true
-          style: form
           schema:
             type: array
             items:
@@ -23658,7 +23232,6 @@ paths:
         - name: instanceIds
           in: query
           required: true
-          style: form
           schema:
             type: array
             items:
@@ -23692,7 +23265,6 @@ paths:
         - name: offerIds
           in: query
           required: true
-          style: form
           schema:
             type: array
             items:
@@ -23744,7 +23316,6 @@ paths:
         - name: pageType
           in: query
           required: true
-          style: form
           schema:
             type: string
       responses:
@@ -23760,7 +23331,6 @@ paths:
         - name: id
           in: query
           required: true
-          style: form
           schema:
             type: string
       responses:
@@ -23785,7 +23355,6 @@ paths:
       parameters:
         - name: inventoryTypeUUIDs
           in: query
-          style: form
           schema:
             type: array
             items:
@@ -23819,7 +23388,6 @@ paths:
         - name: offerId
           in: path
           required: true
-          style: simple
           schema:
             type: string
       responses:
@@ -23870,7 +23438,6 @@ paths:
         - name: id
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: uint64
@@ -23897,18 +23464,15 @@ paths:
         - name: action
           in: query
           required: true
-          style: form
           schema:
             type: string
         - name: giftRecipientAccountId
           in: query
-          style: form
           schema:
             type: integer
             format: uint64
         - name: giftMessage
           in: query
-          style: form
           schema:
             type: string
       responses:
@@ -23934,7 +23498,6 @@ paths:
         - name: skinId
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: int32
@@ -24017,7 +23580,6 @@ paths:
       parameters:
         - name: typeId
           in: query
-          style: form
           schema:
             type: string
       responses:
@@ -24130,7 +23692,6 @@ paths:
         - name: summonerId
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: uint64
@@ -24177,7 +23738,6 @@ paths:
         - name: name
           in: path
           required: true
-          style: simple
           schema:
             type: string
       responses:
@@ -24203,7 +23763,6 @@ paths:
         - name: name
           in: path
           required: true
-          style: simple
           schema:
             type: string
       responses:
@@ -24341,7 +23900,6 @@ paths:
         - name: name
           in: query
           required: true
-          style: form
           schema:
             type: string
       responses:
@@ -24385,7 +23943,6 @@ paths:
         - name: body
           in: query
           required: true
-          style: form
           schema:
             $ref: '#/components/schemas/LolSummonerProfilePrivacySetting'
       responses:
@@ -24468,6 +24025,25 @@ paths:
             application/x-msgpack:
               schema:
                 type: object
+  /lol-summoner/v1/player-name-mode:
+    get:
+      tags:
+        - Plugins
+        - Plugin lol-summoner
+      operationId: GetLolSummonerV1PlayerNameMode
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/LolSummonerPlayerNameMode'
+            application/x-yaml:
+              schema:
+                $ref: '#/components/schemas/LolSummonerPlayerNameMode'
+            application/x-msgpack:
+              schema:
+                $ref: '#/components/schemas/LolSummonerPlayerNameMode'
   /lol-summoner/v1/profile-privacy-enabled:
     get:
       tags:
@@ -24516,7 +24092,6 @@ paths:
         - name: puuid
           in: query
           required: true
-          style: form
           schema:
             type: string
       responses:
@@ -24561,7 +24136,6 @@ paths:
         - name: name
           in: query
           required: true
-          style: form
           schema:
             type: string
       responses:
@@ -24616,7 +24190,6 @@ paths:
         - name: puuid
           in: path
           required: true
-          style: simple
           schema:
             type: string
       responses:
@@ -24642,7 +24215,6 @@ paths:
         - name: id
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: uint64
@@ -24669,7 +24241,6 @@ paths:
         - name: ids
           in: query
           required: true
-          style: form
           schema:
             type: array
             items:
@@ -24704,7 +24275,6 @@ paths:
         - name: ids
           in: query
           required: true
-          style: form
           schema:
             type: array
             items:
@@ -24738,7 +24308,6 @@ paths:
       parameters:
         - name: ids
           in: query
-          style: form
           schema:
             type: array
             items:
@@ -24773,7 +24342,6 @@ paths:
         - name: summonerNames
           in: query
           required: true
-          style: form
           schema:
             type: array
             items:
@@ -24807,7 +24375,6 @@ paths:
         - name: puuids
           in: query
           required: true
-          style: form
           schema:
             type: array
             items:
@@ -24841,7 +24408,6 @@ paths:
         - name: puuid
           in: path
           required: true
-          style: simple
           schema:
             type: string
       responses:
@@ -24980,7 +24546,6 @@ paths:
         - name: indices
           in: query
           required: true
-          style: form
           schema:
             type: array
             items:
@@ -25009,7 +24574,6 @@ paths:
         - name: index
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: uint64
@@ -25035,14 +24599,12 @@ paths:
         - name: index
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: uint64
         - name: championName
           in: query
           required: true
-          style: form
           schema:
             type: string
       responses:
@@ -25068,7 +24630,6 @@ paths:
         - name: championName
           in: path
           required: true
-          style: simple
           schema:
             type: string
       responses:
@@ -25093,7 +24654,6 @@ paths:
         - name: championName
           in: path
           required: true
-          style: simple
           schema:
             type: string
       responses:
@@ -25359,7 +24919,6 @@ paths:
         - name: puuid
           in: path
           required: true
-          style: simple
           schema:
             type: string
       responses:
@@ -25448,7 +25007,6 @@ paths:
         - name: id
           in: path
           required: true
-          style: simple
           schema:
             type: string
       responses:
@@ -25474,7 +25032,6 @@ paths:
         - name: id
           in: path
           required: true
-          style: simple
           schema:
             type: string
       responses:
@@ -25621,7 +25178,6 @@ paths:
         - name: context
           in: query
           required: true
-          style: form
           schema:
             type: string
       requestBody:
@@ -25681,7 +25237,6 @@ paths:
         - name: notificationId
           in: query
           required: true
-          style: form
           schema:
             $ref: '#/components/schemas/PatcherNotificationId'
       responses:
@@ -25697,7 +25252,6 @@ paths:
         - name: id
           in: path
           required: true
-          style: simple
           schema:
             type: string
       responses:
@@ -25796,7 +25350,6 @@ paths:
         - name: product-id
           in: path
           required: true
-          style: simple
           schema:
             type: string
       responses:
@@ -25822,7 +25375,6 @@ paths:
         - name: product-id
           in: path
           required: true
-          style: simple
           schema:
             type: string
       responses:
@@ -25848,7 +25400,6 @@ paths:
         - name: product-id
           in: path
           required: true
-          style: simple
           schema:
             type: string
       responses:
@@ -25874,7 +25425,6 @@ paths:
         - name: product-id
           in: path
           required: true
-          style: simple
           schema:
             type: string
       responses:
@@ -25906,7 +25456,6 @@ paths:
         - name: product-id
           in: path
           required: true
-          style: simple
           schema:
             type: string
       responses:
@@ -25932,7 +25481,6 @@ paths:
         - name: product-id
           in: path
           required: true
-          style: simple
           schema:
             type: string
       responses:
@@ -25958,7 +25506,6 @@ paths:
         - name: product-id
           in: path
           required: true
-          style: simple
           schema:
             type: string
       responses:
@@ -25984,7 +25531,6 @@ paths:
         - name: product-id
           in: path
           required: true
-          style: simple
           schema:
             type: string
       responses:
@@ -26010,7 +25556,6 @@ paths:
         - name: product-id
           in: path
           required: true
-          style: simple
           schema:
             type: string
       responses:
@@ -26036,7 +25581,6 @@ paths:
         - name: product-id
           in: path
           required: true
-          style: simple
           schema:
             type: string
       responses:
@@ -26062,7 +25606,6 @@ paths:
         - name: product-id
           in: path
           required: true
-          style: simple
           schema:
             type: string
       responses:
@@ -26183,7 +25726,6 @@ paths:
           in: path
           description: Id of the process to track performance information.
           required: true
-          style: simple
           schema:
             type: integer
             format: uint32
@@ -26225,14 +25767,12 @@ paths:
         - name: sampleLength
           in: query
           description: Time in seconds for each CPU timing sample.
-          style: form
           schema:
             type: integer
             format: int32
         - name: sampleCount
           in: query
           description: Number of samples to record.
-          style: form
           schema:
             type: integer
             format: int32
@@ -26265,7 +25805,6 @@ paths:
         - name: full
           in: query
           description: Returns all available system information
-          style: form
           schema:
             type: integer
             format: int32
@@ -26394,7 +25933,6 @@ paths:
         - name: id
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: uint64
@@ -26420,7 +25958,6 @@ paths:
         - name: id
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: uint64
@@ -26446,7 +25983,6 @@ paths:
         - name: id
           in: path
           required: true
-          style: simple
           schema:
             type: integer
             format: uint64
@@ -26556,7 +26092,6 @@ paths:
           in: path
           description: Plugin name
           required: true
-          style: simple
           schema:
             type: string
       responses:
@@ -26612,7 +26147,6 @@ paths:
           in: path
           description: Plugin name
           required: true
-          style: simple
           schema:
             type: string
       responses:
@@ -26695,7 +26229,6 @@ paths:
         - name: idToken
           in: query
           required: true
-          style: form
           schema:
             type: string
       responses:
@@ -26739,7 +26272,6 @@ paths:
         - name: a
           in: path
           required: true
-          style: simple
           schema:
             type: string
       responses:
@@ -26765,13 +26297,11 @@ paths:
         - name: a
           in: path
           required: true
-          style: simple
           schema:
             type: string
         - name: b
           in: path
           required: true
-          style: simple
           schema:
             type: string
       responses:
@@ -26797,19 +26327,16 @@ paths:
         - name: a
           in: path
           required: true
-          style: simple
           schema:
             type: string
         - name: b
           in: path
           required: true
-          style: simple
           schema:
             type: string
         - name: c
           in: path
           required: true
-          style: simple
           schema:
             type: string
       responses:
@@ -26835,25 +26362,21 @@ paths:
         - name: a
           in: path
           required: true
-          style: simple
           schema:
             type: string
         - name: b
           in: path
           required: true
-          style: simple
           schema:
             type: string
         - name: c
           in: path
           required: true
-          style: simple
           schema:
             type: string
         - name: d
           in: path
           required: true
-          style: simple
           schema:
             type: string
       responses:
@@ -26879,31 +26402,26 @@ paths:
         - name: a
           in: path
           required: true
-          style: simple
           schema:
             type: string
         - name: b
           in: path
           required: true
-          style: simple
           schema:
             type: string
         - name: c
           in: path
           required: true
-          style: simple
           schema:
             type: string
         - name: d
           in: path
           required: true
-          style: simple
           schema:
             type: string
         - name: e
           in: path
           required: true
-          style: simple
           schema:
             type: string
       responses:
@@ -26929,37 +26447,31 @@ paths:
         - name: a
           in: path
           required: true
-          style: simple
           schema:
             type: string
         - name: b
           in: path
           required: true
-          style: simple
           schema:
             type: string
         - name: c
           in: path
           required: true
-          style: simple
           schema:
             type: string
         - name: d
           in: path
           required: true
-          style: simple
           schema:
             type: string
         - name: e
           in: path
           required: true
-          style: simple
           schema:
             type: string
         - name: f
           in: path
           required: true
-          style: simple
           schema:
             type: string
       responses:
@@ -27033,28 +26545,24 @@ paths:
           in: query
           description: Name of metric group
           required: true
-          style: form
           schema:
             type: string
         - name: object
           in: query
           description: Name of metric object
           required: true
-          style: form
           schema:
             type: string
         - name: name
           in: query
           description: Name of metric item
           required: true
-          style: form
           schema:
             type: string
         - name: value
           in: query
           description: Value to store
           required: true
-          style: form
           schema:
             type: integer
             format: uint64
@@ -27098,7 +26606,6 @@ paths:
           in: query
           description: The new affinity to use.
           required: true
-          style: form
           schema:
             type: string
       responses:
@@ -27265,7 +26772,6 @@ paths:
           in: query
           description: Vector of new command line arguments
           required: true
-          style: form
           schema:
             type: array
             items:
@@ -27285,7 +26791,6 @@ paths:
           in: query
           description: The URL to open.
           required: true
-          style: form
           schema:
             type: string
       responses:
@@ -27337,7 +26842,6 @@ paths:
         - name: splash
           in: query
           required: true
-          style: form
           schema:
             type: string
       responses:
@@ -27487,7 +26991,6 @@ paths:
           in: query
           description: The ux change requestId that is being acknowledged.
           required: true
-          style: form
           schema:
             type: integer
             format: uint32
@@ -27504,7 +27007,6 @@ paths:
         - name: authToken
           in: path
           required: true
-          style: simple
           schema:
             type: string
       responses:
@@ -27530,7 +27032,6 @@ paths:
           in: path
           description: Authentication token to add.
           required: true
-          style: simple
           schema:
             type: string
       responses:
@@ -27595,7 +27096,6 @@ paths:
           in: query
           description: Full path to the log file.
           required: true
-          style: form
           schema:
             type: string
       responses:
@@ -27652,7 +27152,6 @@ paths:
           in: query
           description: The new value of the zoom scale.
           required: true
-          style: form
           schema:
             type: number
             format: double
@@ -27790,14 +27289,12 @@ paths:
           in: path
           description: The name of the common data key
           required: true
-          style: simple
           schema:
             type: string
         - name: value
           in: query
           description: The value of the common data key
           required: true
-          style: form
           schema:
             type: string
       responses:
@@ -27814,7 +27311,6 @@ paths:
           in: path
           description: The name of the event type
           required: true
-          style: simple
           schema:
             type: string
       requestBody:
@@ -27848,7 +27344,6 @@ paths:
           in: path
           description: The name of the event type
           required: true
-          style: simple
           schema:
             type: string
       requestBody:
@@ -27882,21 +27377,18 @@ paths:
           in: path
           description: The name of the event type
           required: true
-          style: simple
           schema:
             type: string
         - name: onceTag
           in: path
           description: A unique tag used to ensure this event is sent only once
           required: true
-          style: simple
           schema:
             type: string
         - name: eventData
           in: query
           description: A map of event data
           required: true
-          style: form
           schema:
             type: map of string
       responses:
@@ -27913,7 +27405,6 @@ paths:
           in: path
           description: The name of the event type
           required: true
-          style: simple
           schema:
             type: string
       requestBody:
@@ -28106,7 +27597,6 @@ paths:
         - name: name
           in: path
           required: true
-          style: simple
           schema:
             type: string
       responses:
@@ -28121,7 +27611,6 @@ paths:
         - name: name
           in: path
           required: true
-          style: simple
           schema:
             type: string
       responses:
@@ -28198,14 +27687,12 @@ paths:
           in: path
           description: Name of the event
           required: true
-          style: simple
           schema:
             type: string
         - name: when
           in: query
           description: When the event occurred
           required: true
-          style: form
           schema:
             type: integer
             format: uint64
@@ -28213,19 +27700,36 @@ paths:
           in: query
           description: The value to be recorded
           required: true
-          style: form
           schema:
             type: string
         - name: unit
           in: query
           description: The unit of measurement for the value
           required: true
-          style: form
           schema:
             type: string
       responses:
         '204':
           description: No content
+  /tracing/v1/trace/payloads/enabled:
+    get:
+      tags:
+        - Tracing
+      summary: Returns whether payloads are included in the tracing log.
+      operationId: GetTracingV1TracePayloadsEnabled
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: boolean
+            application/x-yaml:
+              schema:
+                type: boolean
+            application/x-msgpack:
+              schema:
+                type: boolean
   /tracing/v1/trace/phase/begin:
     post:
       tags:
@@ -28277,7 +27781,6 @@ paths:
           in: query
           description: Name of the event
           required: true
-          style: form
           schema:
             type: string
       responses:
@@ -28294,21 +27797,18 @@ paths:
           in: path
           description: Name of the event
           required: true
-          style: simple
           schema:
             type: string
         - name: when
           in: query
           description: When the event occurred
           required: true
-          style: form
           schema:
             type: integer
             format: uint64
         - name: suffix
           in: query
           description: Optional eventName suffix to apply that mutates the event name to indicate the outcome
-          style: form
           schema:
             type: string
       responses:
@@ -28324,14 +27824,12 @@ paths:
           in: path
           description: Name of the event
           required: true
-          style: simple
           schema:
             type: string
         - name: when
           in: query
           description: When the event occurred
           required: true
-          style: form
           schema:
             type: integer
             format: uint64
@@ -28349,21 +27847,18 @@ paths:
           in: path
           description: Plugin name
           required: true
-          style: simple
           schema:
             type: string
         - name: markerName
           in: path
           description: Name of the marker within the event
           required: true
-          style: simple
           schema:
             type: string
         - name: when
           in: query
           description: When the marker event occurred
           required: true
-          style: form
           schema:
             type: integer
             format: uint64
@@ -28372,37 +27867,6 @@ paths:
           description: No content
 components:
   schemas:
-    ActiveBoostsLcdsStoreFulfillmentNotification:
-      type: object
-      properties:
-        data:
-          type: object
-        inventoryType:
-          type: string
-    ActiveBoostsLcdsSummonerActiveBoostsDTO:
-      type: object
-      properties:
-        ipBoostEndDate:
-          type: integer
-          format: int64
-        ipBoostPerWinCount:
-          type: integer
-          format: uint32
-        ipLoyaltyBoost:
-          type: integer
-          format: uint32
-        summonerId:
-          type: integer
-          format: uint64
-        xpBoostEndDate:
-          type: integer
-          format: int64
-        xpBoostPerWinCount:
-          type: integer
-          format: uint32
-        xpLoyaltyBoost:
-          type: integer
-          format: uint32
     AggregationType:
       enum:
         - none
@@ -29554,6 +29018,48 @@ components:
           type: string
         userName:
           type: string
+    CriticalFlowCapture:
+      type: object
+      properties:
+        expected:
+          type: boolean
+        idChain:
+          type: string
+        payloadString:
+          type: string
+        qualifierChain:
+          type: string
+        succeeded:
+          type: boolean
+        timestampInUs:
+          type: integer
+          format: uint64
+    CriticalFlowExpectation:
+      type: object
+      properties:
+        idChain:
+          type: string
+        qualifierChain:
+          type: string
+    CriticalFlowSummary:
+      type: object
+      properties:
+        activeFlowEvents:
+          type: array
+          items:
+            $ref: '#/components/schemas/CriticalFlowExpectation'
+        activeFlows:
+          type: array
+          items:
+            type: string
+        errors:
+          type: array
+          items:
+            type: string
+        events:
+          type: array
+          items:
+            $ref: '#/components/schemas/CriticalFlowCapture'
     DownloadUrlRequestV2:
       type: object
       properties:
@@ -30643,37 +30149,158 @@ components:
       properties:
         firstWinOfTheDayStartTime:
           type: string
-        ipBoostEndDate:
-          type: string
-        ipBoostPerWinCount:
-          type: integer
-          format: uint32
-        ipLoyaltyBoost:
-          type: integer
-          format: uint32
-        summonerId:
-          type: integer
-          format: uint64
         xpBoostEndDate:
           type: string
         xpBoostPerWinCount:
           type: integer
-          format: uint32
+          format: uint64
         xpLoyaltyBoost:
           type: integer
-          format: uint32
+          format: int32
     LolActiveBoostsEndOfGameStats:
       type: object
       properties:
         timeUntilNextFirstWinBonus:
           type: integer
           format: uint64
+    LolActiveBoostsInventoryItem:
+      type: object
+      properties:
+        expirationDate:
+          type: string
+        inventoryType:
+          type: string
+        itemId:
+          type: integer
+          format: int32
+        ownershipType:
+          $ref: '#/components/schemas/LolActiveBoostsItemOwnershipType'
+        purchaseDate:
+          type: string
+        quantity:
+          type: integer
+          format: uint64
+        uuid:
+          type: string
+        wins:
+          type: integer
+          format: uint64
+    LolActiveBoostsInventoryItemDTO:
+      type: object
+      properties:
+        entitlementId:
+          type: string
+        entitlementTypeId:
+          type: string
+        expirationDate:
+          type: string
+        f2p:
+          type: boolean
+        instanceId:
+          type: string
+        instanceTypeId:
+          type: string
+        inventoryType:
+          type: string
+        itemId:
+          type: integer
+          format: int32
+        loyalty:
+          type: boolean
+        loyaltySources:
+          type: array
+          items:
+            type: string
+        lsb:
+          type: boolean
+        ownedQuantity:
+          type: integer
+          format: uint64
+        payload:
+          type: object
+        purchaseDate:
+          type: string
+        quantity:
+          type: integer
+          format: uint64
+        rental:
+          type: boolean
+        usedInGameDate:
+          type: string
+        wins:
+          type: integer
+          format: uint64
+    LolActiveBoostsInventoryItemWithPayload:
+      type: object
+      properties:
+        expirationDate:
+          type: string
+        f2p:
+          type: boolean
+        inventoryType:
+          type: string
+        itemId:
+          type: integer
+          format: int32
+        loyalty:
+          type: boolean
+        loyaltySources:
+          type: array
+          items:
+            type: string
+        owned:
+          type: boolean
+        ownershipType:
+          $ref: '#/components/schemas/LolActiveBoostsItemOwnershipType'
+        payload:
+          type: object
+        purchaseDate:
+          type: string
+        quantity:
+          type: integer
+          format: uint64
+        rental:
+          type: boolean
+        uuid:
+          type: string
+        wins:
+          type: integer
+          format: uint64
+    LolActiveBoostsItemOwnershipType:
+      enum:
+        - OWNED
+        - RENTED
+        - LOYALTY
+        - F2P
+      type: string
     LolActiveBoostsLoginDataPacket:
       type: object
       properties:
         timeUntilFirstWinOfDay:
           type: integer
           format: uint64
+    LolActiveBoostsLoyaltyRewardsSimplified:
+      type: object
+      properties:
+        xpBoost:
+          type: integer
+          format: int32
+    LolActiveBoostsLoyaltyStatus:
+      enum:
+        - LEGACY
+        - REWARDS_GRANT
+        - EXPIRY
+        - CHANGE
+        - REVOKE
+        - DISABLED
+      type: string
+    LolActiveBoostsLoyaltyStatusNotification:
+      type: object
+      properties:
+        rewards:
+          $ref: '#/components/schemas/LolActiveBoostsLoyaltyRewardsSimplified'
+        status:
+          $ref: '#/components/schemas/LolActiveBoostsLoyaltyStatus'
     LolAntiAddictionAntiAddictionState:
       type: object
       properties:
@@ -37852,6 +37479,9 @@ components:
         - RANKED_FLEX_SR
         - RANKED_FLEX_TT
         - RANKED_TFT
+        - RANKED_TFT_TURBO
+        - RANKED_TFT_PAIRS
+        - RANKED_TFT_DOUBLE_UP
       type: string
     LolContentTargetingRankedQueueStats:
       type: object
@@ -38243,6 +37873,8 @@ components:
             $ref: '#/components/schemas/LolCosmeticsCosmeticsTFTPlaybookAugment'
         f2p:
           type: boolean
+        iconPath:
+          type: string
         itemId:
           type: integer
           format: int32
@@ -38269,15 +37901,31 @@ components:
           format: uint32
         selected:
           type: boolean
+        splashPath:
+          type: string
     LolCosmeticsCosmeticsTFTPlaybookAugment:
       type: object
       properties:
         description:
           type: string
+        effectAmounts:
+          type: array
+          items:
+            $ref: '#/components/schemas/LolCosmeticsCosmeticsTFTPlaybookAugmentEffectAmount'
         iconPath:
           type: string
         name:
           type: string
+    LolCosmeticsCosmeticsTFTPlaybookAugmentEffectAmount:
+      type: object
+      properties:
+        formatString:
+          type: string
+        name:
+          type: string
+        value:
+          type: number
+          format: float
     LolCosmeticsCosmeticsTFTPlaybookViewModel:
       type: object
       properties:
@@ -38291,6 +37939,8 @@ components:
             $ref: '#/components/schemas/LolCosmeticsCosmeticsTFTPlaybookAugment'
         f2p:
           type: boolean
+        iconPath:
+          type: string
         isRecentItem:
           type: boolean
         itemId:
@@ -38319,6 +37969,8 @@ components:
           format: uint32
         selected:
           type: boolean
+        splashPath:
+          type: string
     LolCosmeticsGameDataCompanion:
       type: object
       properties:
@@ -38415,6 +38067,10 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/LolCosmeticsCosmeticsTFTPlaybookAugment'
+        enabled:
+          type: boolean
+        iconPath:
+          type: string
         itemId:
           type: integer
           format: int32
@@ -38429,6 +38085,8 @@ components:
           items:
             $ref: '#/components/schemas/LolCosmeticsCosmeticsTFTPlaybookAugment'
         name:
+          type: string
+        splashPath:
           type: string
         translatedDescription:
           type: string
@@ -39713,6 +39371,8 @@ components:
       properties:
         description:
           type: string
+        inventoryType:
+          type: string
         itemId:
           type: integer
           format: int32
@@ -40117,6 +39777,17 @@ components:
         discount:
           type: number
           format: float
+    LolEventShopEndOfGameXp:
+      type: object
+      properties:
+        PER_WIN:
+          type: integer
+          format: uint32
+    LolEventShopEndOfGameXpNotification:
+      type: object
+      properties:
+        xp:
+          $ref: '#/components/schemas/LolEventShopEndOfGameXp'
     LolEventShopEntityInstance:
       type: object
       properties:
@@ -40275,6 +39946,14 @@ components:
         discount:
           type: number
           format: float
+    LolEventShopExternalCatalogItemKey:
+      type: object
+      properties:
+        inventoryType:
+          type: string
+        itemId:
+          type: integer
+          format: int32
     LolEventShopExternalCatalogPluginItem:
       type: object
       properties:
@@ -40491,6 +40170,9 @@ components:
           format: uint64
         uuid:
           type: string
+        wins:
+          type: integer
+          format: uint64
     LolEventShopInventoryItemDTO:
       type: object
       properties:
@@ -40569,6 +40251,9 @@ components:
           type: boolean
         uuid:
           type: string
+        wins:
+          type: integer
+          format: uint64
     LolEventShopInventoryNotification:
       type: object
       properties:
@@ -41847,8 +41532,8 @@ components:
     LolEventShopTokenUpsellLockedType:
       enum:
         - UNASSIGNED
-        - LOCKED
         - UNLOCKED
+        - LOCKED
       type: string
     LolEventShopTransaction:
       type: object
@@ -44045,6 +43730,17 @@ components:
           additionalProperties:
             type: integer
             format: int32
+    LolInventoryEndOfGameXp:
+      type: object
+      properties:
+        PER_WIN:
+          type: integer
+          format: uint32
+    LolInventoryEndOfGameXpNotification:
+      type: object
+      properties:
+        xp:
+          $ref: '#/components/schemas/LolInventoryEndOfGameXp'
     LolInventoryInventoryCacheEntry:
       type: object
       properties:
@@ -44099,6 +43795,9 @@ components:
           format: uint64
         uuid:
           type: string
+        wins:
+          type: integer
+          format: uint64
     LolInventoryInventoryItemDTO:
       type: object
       properties:
@@ -44177,6 +43876,9 @@ components:
           type: boolean
         uuid:
           type: string
+        wins:
+          type: integer
+          format: uint64
     LolInventoryInventoryNotification:
       type: object
       properties:
@@ -51616,39 +51318,6 @@ components:
         quantity:
           type: integer
           format: int32
-    LolMissionsTftBattlepass:
-      type: object
-      properties:
-        milestones:
-          type: array
-          items:
-            $ref: '#/components/schemas/LolMissionsTftBattlepassMilestone'
-        totalPointsEarned:
-          type: integer
-          format: int32
-    LolMissionsTftBattlepassMilestone:
-      type: object
-      properties:
-        description:
-          type: string
-        iconImageUrl:
-          type: string
-        label:
-          type: string
-        missionId:
-          type: string
-        percentComplete:
-          type: integer
-          format: int32
-        pointsForMilestone:
-          type: integer
-          format: int32
-        rewards:
-          type: array
-          items:
-            $ref: '#/components/schemas/PlayerMissionRewardDTO'
-        state:
-          type: string
     LolMissionsTftOrb:
       type: object
       properties:
@@ -51694,15 +51363,11 @@ components:
     LolMissionsTftPaidBattlepassInfo:
       type: object
       properties:
-        backgroundImageUrl:
-          type: string
         description:
           type: string
         endDate:
           type: integer
           format: uint64
-        internalName:
-          type: string
         media:
           type: object
           additionalProperties:
@@ -51711,6 +51376,8 @@ components:
           type: string
         premium:
           type: boolean
+        premiumEntitlementId:
+          type: string
         startDate:
           type: integer
           format: uint64
@@ -51749,7 +51416,7 @@ components:
         rewards:
           type: array
           items:
-            $ref: '#/components/schemas/PlayerMissionRewardDTO'
+            $ref: '#/components/schemas/LolMissionsTftPaidBattlepassReward'
         state:
           type: string
         status:
@@ -51759,6 +51426,17 @@ components:
         totalPointsForMilestone:
           type: integer
           format: int32
+    LolMissionsTftPaidBattlepassReward:
+      type: object
+      properties:
+        description:
+          type: string
+        iconNeedsFrame:
+          type: boolean
+        iconUrl:
+          type: string
+        rewardGroup:
+          type: string
     LolMissionsTftWeeklyMissions:
       type: object
       properties:
@@ -59835,6 +59513,12 @@ components:
         - LOGGING_OUT
         - ERROR
       type: string
+    LolSummonerPlayerNameMode:
+      enum:
+        - SUMMONER
+        - DARKMODE
+        - ALIAS
+      type: string
     LolSummonerProfilePrivacy:
       type: object
       properties:
@@ -60105,6 +59789,10 @@ components:
       properties:
         enabled:
           type: boolean
+        endDate:
+          type: string
+        startDate:
+          type: string
         titleTranslationKey:
           type: string
         url:
@@ -60129,6 +59817,8 @@ components:
           type: array
           items:
             type: string
+        overrideUrl:
+          type: string
         primeGamingPromoOffer:
           $ref: '#/components/schemas/LolTftLolTftPrimeGaming'
         storePromoOfferIds:
@@ -60451,6 +60141,17 @@ components:
           additionalProperties:
             type: integer
             format: int32
+    LolYourshopEndOfGameXp:
+      type: object
+      properties:
+        PER_WIN:
+          type: integer
+          format: uint32
+    LolYourshopEndOfGameXpNotification:
+      type: object
+      properties:
+        xp:
+          $ref: '#/components/schemas/LolYourshopEndOfGameXp'
     LolYourshopInventoryCacheEntry:
       type: object
       properties:
@@ -60505,6 +60206,9 @@ components:
           format: uint64
         uuid:
           type: string
+        wins:
+          type: integer
+          format: uint64
     LolYourshopInventoryItemDTO:
       type: object
       properties:
@@ -60583,6 +60287,9 @@ components:
           type: boolean
         uuid:
           type: string
+        wins:
+          type: integer
+          format: uint64
     LolYourshopInventoryNotification:
       type: object
       properties:

@@ -3077,6 +3077,74 @@
         }
       }
     },
+    "/lol-catalog/v1/items-list-details/skip-cache": {
+      "get": {
+        "tags": [
+          "Plugins",
+          "Plugin lol-catalog"
+        ],
+        "operationId": "GetLolCatalogV1ItemsListDetailsSkipCache",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/LolCatalogItemKey"
+                }
+              }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/LolCatalogItemKey"
+                }
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/LolCatalogItemKey"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/LolCatalogCatalogPluginItemWithDetails"
+                  }
+                }
+              },
+              "application/x-yaml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/LolCatalogCatalogPluginItemWithDetails"
+                  }
+                }
+              },
+              "application/x-msgpack": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/LolCatalogCatalogPluginItemWithDetails"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/lol-catalog/v1/items/{inventoryType}": {
       "get": {
         "tags": [
@@ -37273,6 +37341,74 @@
         }
       }
     },
+    "/lol-store/v1/catalog/items/skip-cache": {
+      "get": {
+        "tags": [
+          "Plugins",
+          "Plugin lol-store"
+        ],
+        "operationId": "GetLolStoreV1CatalogItemsSkipCache",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/LolStoreItemKey"
+                }
+              }
+            },
+            "application/x-yaml": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/LolStoreItemKey"
+                }
+              }
+            },
+            "application/x-msgpack": {
+              "schema": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/LolStoreItemKey"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/LolStoreCatalogItem"
+                  }
+                }
+              },
+              "application/x-yaml": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/LolStoreCatalogItem"
+                  }
+                }
+              },
+              "application/x-msgpack": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/LolStoreCatalogItem"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/lol-store/v1/catalog/sales": {
       "get": {
         "tags": [
@@ -38738,6 +38874,37 @@
               "application/x-msgpack": {
                 "schema": {
                   "type": "object"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/lol-summoner/v1/player-name-mode": {
+      "get": {
+        "tags": [
+          "Plugins",
+          "Plugin lol-summoner"
+        ],
+        "operationId": "GetLolSummonerV1PlayerNameMode",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LolSummonerPlayerNameMode"
+                }
+              },
+              "application/x-yaml": {
+                "schema": {
+                  "$ref": "#/components/schemas/LolSummonerPlayerNameMode"
+                }
+              },
+              "application/x-msgpack": {
+                "schema": {
+                  "$ref": "#/components/schemas/LolSummonerPlayerNameMode"
                 }
               }
             }
@@ -44657,6 +44824,37 @@
         }
       }
     },
+    "/tracing/v1/trace/payloads/enabled": {
+      "get": {
+        "tags": [
+          "Tracing"
+        ],
+        "summary": "Returns whether payloads are included in the tracing log.",
+        "operationId": "GetTracingV1TracePayloadsEnabled",
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "boolean"
+                }
+              },
+              "application/x-yaml": {
+                "schema": {
+                  "type": "boolean"
+                }
+              },
+              "application/x-msgpack": {
+                "schema": {
+                  "type": "boolean"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/tracing/v1/trace/phase/begin": {
       "post": {
         "tags": [
@@ -44871,50 +45069,6 @@
   },
   "components": {
     "schemas": {
-      "ActiveBoostsLcdsStoreFulfillmentNotification": {
-        "type": "object",
-        "properties": {
-          "data": {
-            "type": "object"
-          },
-          "inventoryType": {
-            "type": "string"
-          }
-        }
-      },
-      "ActiveBoostsLcdsSummonerActiveBoostsDTO": {
-        "type": "object",
-        "properties": {
-          "ipBoostEndDate": {
-            "type": "integer",
-            "format": "int64"
-          },
-          "ipBoostPerWinCount": {
-            "type": "integer",
-            "format": "uint32"
-          },
-          "ipLoyaltyBoost": {
-            "type": "integer",
-            "format": "uint32"
-          },
-          "summonerId": {
-            "type": "integer",
-            "format": "uint64"
-          },
-          "xpBoostEndDate": {
-            "type": "integer",
-            "format": "int64"
-          },
-          "xpBoostPerWinCount": {
-            "type": "integer",
-            "format": "uint32"
-          },
-          "xpLoyaltyBoost": {
-            "type": "integer",
-            "format": "uint32"
-          }
-        }
-      },
       "AggregationType": {
         "enum": [
           "none",
@@ -46555,6 +46709,70 @@
           }
         }
       },
+      "CriticalFlowCapture": {
+        "type": "object",
+        "properties": {
+          "expected": {
+            "type": "boolean"
+          },
+          "idChain": {
+            "type": "string"
+          },
+          "payloadString": {
+            "type": "string"
+          },
+          "qualifierChain": {
+            "type": "string"
+          },
+          "succeeded": {
+            "type": "boolean"
+          },
+          "timestampInUs": {
+            "type": "integer",
+            "format": "uint64"
+          }
+        }
+      },
+      "CriticalFlowExpectation": {
+        "type": "object",
+        "properties": {
+          "idChain": {
+            "type": "string"
+          },
+          "qualifierChain": {
+            "type": "string"
+          }
+        }
+      },
+      "CriticalFlowSummary": {
+        "type": "object",
+        "properties": {
+          "activeFlowEvents": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CriticalFlowExpectation"
+            }
+          },
+          "activeFlows": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "events": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CriticalFlowCapture"
+            }
+          }
+        }
+      },
       "DownloadUrlRequestV2": {
         "type": "object",
         "properties": {
@@ -48151,31 +48369,16 @@
           "firstWinOfTheDayStartTime": {
             "type": "string"
           },
-          "ipBoostEndDate": {
-            "type": "string"
-          },
-          "ipBoostPerWinCount": {
-            "type": "integer",
-            "format": "uint32"
-          },
-          "ipLoyaltyBoost": {
-            "type": "integer",
-            "format": "uint32"
-          },
-          "summonerId": {
-            "type": "integer",
-            "format": "uint64"
-          },
           "xpBoostEndDate": {
             "type": "string"
           },
           "xpBoostPerWinCount": {
             "type": "integer",
-            "format": "uint32"
+            "format": "uint64"
           },
           "xpLoyaltyBoost": {
             "type": "integer",
-            "format": "uint32"
+            "format": "int32"
           }
         }
       },
@@ -48188,12 +48391,203 @@
           }
         }
       },
+      "LolActiveBoostsInventoryItem": {
+        "type": "object",
+        "properties": {
+          "expirationDate": {
+            "type": "string"
+          },
+          "inventoryType": {
+            "type": "string"
+          },
+          "itemId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "ownershipType": {
+            "$ref": "#/components/schemas/LolActiveBoostsItemOwnershipType"
+          },
+          "purchaseDate": {
+            "type": "string"
+          },
+          "quantity": {
+            "type": "integer",
+            "format": "uint64"
+          },
+          "uuid": {
+            "type": "string"
+          },
+          "wins": {
+            "type": "integer",
+            "format": "uint64"
+          }
+        }
+      },
+      "LolActiveBoostsInventoryItemDTO": {
+        "type": "object",
+        "properties": {
+          "entitlementId": {
+            "type": "string"
+          },
+          "entitlementTypeId": {
+            "type": "string"
+          },
+          "expirationDate": {
+            "type": "string"
+          },
+          "f2p": {
+            "type": "boolean"
+          },
+          "instanceId": {
+            "type": "string"
+          },
+          "instanceTypeId": {
+            "type": "string"
+          },
+          "inventoryType": {
+            "type": "string"
+          },
+          "itemId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "loyalty": {
+            "type": "boolean"
+          },
+          "loyaltySources": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "lsb": {
+            "type": "boolean"
+          },
+          "ownedQuantity": {
+            "type": "integer",
+            "format": "uint64"
+          },
+          "payload": {
+            "type": "object"
+          },
+          "purchaseDate": {
+            "type": "string"
+          },
+          "quantity": {
+            "type": "integer",
+            "format": "uint64"
+          },
+          "rental": {
+            "type": "boolean"
+          },
+          "usedInGameDate": {
+            "type": "string"
+          },
+          "wins": {
+            "type": "integer",
+            "format": "uint64"
+          }
+        }
+      },
+      "LolActiveBoostsInventoryItemWithPayload": {
+        "type": "object",
+        "properties": {
+          "expirationDate": {
+            "type": "string"
+          },
+          "f2p": {
+            "type": "boolean"
+          },
+          "inventoryType": {
+            "type": "string"
+          },
+          "itemId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "loyalty": {
+            "type": "boolean"
+          },
+          "loyaltySources": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "owned": {
+            "type": "boolean"
+          },
+          "ownershipType": {
+            "$ref": "#/components/schemas/LolActiveBoostsItemOwnershipType"
+          },
+          "payload": {
+            "type": "object"
+          },
+          "purchaseDate": {
+            "type": "string"
+          },
+          "quantity": {
+            "type": "integer",
+            "format": "uint64"
+          },
+          "rental": {
+            "type": "boolean"
+          },
+          "uuid": {
+            "type": "string"
+          },
+          "wins": {
+            "type": "integer",
+            "format": "uint64"
+          }
+        }
+      },
+      "LolActiveBoostsItemOwnershipType": {
+        "enum": [
+          "OWNED",
+          "RENTED",
+          "LOYALTY",
+          "F2P"
+        ],
+        "type": "string"
+      },
       "LolActiveBoostsLoginDataPacket": {
         "type": "object",
         "properties": {
           "timeUntilFirstWinOfDay": {
             "type": "integer",
             "format": "uint64"
+          }
+        }
+      },
+      "LolActiveBoostsLoyaltyRewardsSimplified": {
+        "type": "object",
+        "properties": {
+          "xpBoost": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "LolActiveBoostsLoyaltyStatus": {
+        "enum": [
+          "LEGACY",
+          "REWARDS_GRANT",
+          "EXPIRY",
+          "CHANGE",
+          "REVOKE",
+          "DISABLED"
+        ],
+        "type": "string"
+      },
+      "LolActiveBoostsLoyaltyStatusNotification": {
+        "type": "object",
+        "properties": {
+          "rewards": {
+            "$ref": "#/components/schemas/LolActiveBoostsLoyaltyRewardsSimplified"
+          },
+          "status": {
+            "$ref": "#/components/schemas/LolActiveBoostsLoyaltyStatus"
           }
         }
       },
@@ -58671,7 +59065,10 @@
           "RANKED_SOLO_5x5",
           "RANKED_FLEX_SR",
           "RANKED_FLEX_TT",
-          "RANKED_TFT"
+          "RANKED_TFT",
+          "RANKED_TFT_TURBO",
+          "RANKED_TFT_PAIRS",
+          "RANKED_TFT_DOUBLE_UP"
         ],
         "type": "string"
       },
@@ -59248,6 +59645,9 @@
           "f2p": {
             "type": "boolean"
           },
+          "iconPath": {
+            "type": "string"
+          },
           "itemId": {
             "type": "integer",
             "format": "int32"
@@ -59285,6 +59685,9 @@
           },
           "selected": {
             "type": "boolean"
+          },
+          "splashPath": {
+            "type": "string"
           }
         }
       },
@@ -59294,11 +59697,32 @@
           "description": {
             "type": "string"
           },
+          "effectAmounts": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LolCosmeticsCosmeticsTFTPlaybookAugmentEffectAmount"
+            }
+          },
           "iconPath": {
             "type": "string"
           },
           "name": {
             "type": "string"
+          }
+        }
+      },
+      "LolCosmeticsCosmeticsTFTPlaybookAugmentEffectAmount": {
+        "type": "object",
+        "properties": {
+          "formatString": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "value": {
+            "type": "number",
+            "format": "float"
           }
         }
       },
@@ -59319,6 +59743,9 @@
           },
           "f2p": {
             "type": "boolean"
+          },
+          "iconPath": {
+            "type": "string"
           },
           "isRecentItem": {
             "type": "boolean"
@@ -59360,6 +59787,9 @@
           },
           "selected": {
             "type": "boolean"
+          },
+          "splashPath": {
+            "type": "string"
           }
         }
       },
@@ -59502,6 +59932,12 @@
               "$ref": "#/components/schemas/LolCosmeticsCosmeticsTFTPlaybookAugment"
             }
           },
+          "enabled": {
+            "type": "boolean"
+          },
+          "iconPath": {
+            "type": "string"
+          },
           "itemId": {
             "type": "integer",
             "format": "int32"
@@ -59522,6 +59958,9 @@
             }
           },
           "name": {
+            "type": "string"
+          },
+          "splashPath": {
             "type": "string"
           },
           "translatedDescription": {
@@ -61403,6 +61842,9 @@
           "description": {
             "type": "string"
           },
+          "inventoryType": {
+            "type": "string"
+          },
           "itemId": {
             "type": "integer",
             "format": "int32"
@@ -62013,6 +62455,23 @@
           }
         }
       },
+      "LolEventShopEndOfGameXp": {
+        "type": "object",
+        "properties": {
+          "PER_WIN": {
+            "type": "integer",
+            "format": "uint32"
+          }
+        }
+      },
+      "LolEventShopEndOfGameXpNotification": {
+        "type": "object",
+        "properties": {
+          "xp": {
+            "$ref": "#/components/schemas/LolEventShopEndOfGameXp"
+          }
+        }
+      },
       "LolEventShopEntityInstance": {
         "type": "object",
         "properties": {
@@ -62246,6 +62705,18 @@
           "discount": {
             "type": "number",
             "format": "float"
+          }
+        }
+      },
+      "LolEventShopExternalCatalogItemKey": {
+        "type": "object",
+        "properties": {
+          "inventoryType": {
+            "type": "string"
+          },
+          "itemId": {
+            "type": "integer",
+            "format": "int32"
           }
         }
       },
@@ -62567,6 +63038,10 @@
           },
           "uuid": {
             "type": "string"
+          },
+          "wins": {
+            "type": "integer",
+            "format": "uint64"
           }
         }
       },
@@ -62682,6 +63157,10 @@
           },
           "uuid": {
             "type": "string"
+          },
+          "wins": {
+            "type": "integer",
+            "format": "uint64"
           }
         }
       },
@@ -64585,8 +65064,8 @@
       "LolEventShopTokenUpsellLockedType": {
         "enum": [
           "UNASSIGNED",
-          "LOCKED",
-          "UNLOCKED"
+          "UNLOCKED",
+          "LOCKED"
         ],
         "type": "string"
       },
@@ -67781,6 +68260,23 @@
           }
         }
       },
+      "LolInventoryEndOfGameXp": {
+        "type": "object",
+        "properties": {
+          "PER_WIN": {
+            "type": "integer",
+            "format": "uint32"
+          }
+        }
+      },
+      "LolInventoryEndOfGameXpNotification": {
+        "type": "object",
+        "properties": {
+          "xp": {
+            "$ref": "#/components/schemas/LolInventoryEndOfGameXp"
+          }
+        }
+      },
       "LolInventoryInventoryCacheEntry": {
         "type": "object",
         "properties": {
@@ -67857,6 +68353,10 @@
           },
           "uuid": {
             "type": "string"
+          },
+          "wins": {
+            "type": "integer",
+            "format": "uint64"
           }
         }
       },
@@ -67972,6 +68472,10 @@
           },
           "uuid": {
             "type": "string"
+          },
+          "wins": {
+            "type": "integer",
+            "format": "uint64"
           }
         }
       },
@@ -78815,55 +79319,6 @@
           }
         }
       },
-      "LolMissionsTftBattlepass": {
-        "type": "object",
-        "properties": {
-          "milestones": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/LolMissionsTftBattlepassMilestone"
-            }
-          },
-          "totalPointsEarned": {
-            "type": "integer",
-            "format": "int32"
-          }
-        }
-      },
-      "LolMissionsTftBattlepassMilestone": {
-        "type": "object",
-        "properties": {
-          "description": {
-            "type": "string"
-          },
-          "iconImageUrl": {
-            "type": "string"
-          },
-          "label": {
-            "type": "string"
-          },
-          "missionId": {
-            "type": "string"
-          },
-          "percentComplete": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "pointsForMilestone": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "rewards": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/PlayerMissionRewardDTO"
-            }
-          },
-          "state": {
-            "type": "string"
-          }
-        }
-      },
       "LolMissionsTftOrb": {
         "type": "object",
         "properties": {
@@ -78929,18 +79384,12 @@
       "LolMissionsTftPaidBattlepassInfo": {
         "type": "object",
         "properties": {
-          "backgroundImageUrl": {
-            "type": "string"
-          },
           "description": {
             "type": "string"
           },
           "endDate": {
             "type": "integer",
             "format": "uint64"
-          },
-          "internalName": {
-            "type": "string"
           },
           "media": {
             "type": "object",
@@ -78953,6 +79402,9 @@
           },
           "premium": {
             "type": "boolean"
+          },
+          "premiumEntitlementId": {
+            "type": "string"
           },
           "startDate": {
             "type": "integer",
@@ -79008,7 +79460,7 @@
           "rewards": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/PlayerMissionRewardDTO"
+              "$ref": "#/components/schemas/LolMissionsTftPaidBattlepassReward"
             }
           },
           "state": {
@@ -79023,6 +79475,23 @@
           "totalPointsForMilestone": {
             "type": "integer",
             "format": "int32"
+          }
+        }
+      },
+      "LolMissionsTftPaidBattlepassReward": {
+        "type": "object",
+        "properties": {
+          "description": {
+            "type": "string"
+          },
+          "iconNeedsFrame": {
+            "type": "boolean"
+          },
+          "iconUrl": {
+            "type": "string"
+          },
+          "rewardGroup": {
+            "type": "string"
           }
         }
       },
@@ -90906,6 +91375,14 @@
         ],
         "type": "string"
       },
+      "LolSummonerPlayerNameMode": {
+        "enum": [
+          "SUMMONER",
+          "DARKMODE",
+          "ALIAS"
+        ],
+        "type": "string"
+      },
       "LolSummonerProfilePrivacy": {
         "type": "object",
         "properties": {
@@ -91295,6 +91772,12 @@
           "enabled": {
             "type": "boolean"
           },
+          "endDate": {
+            "type": "string"
+          },
+          "startDate": {
+            "type": "string"
+          },
           "titleTranslationKey": {
             "type": "string"
           },
@@ -91331,6 +91814,9 @@
             "items": {
               "type": "string"
             }
+          },
+          "overrideUrl": {
+            "type": "string"
           },
           "primeGamingPromoOffer": {
             "$ref": "#/components/schemas/LolTftLolTftPrimeGaming"
@@ -91812,6 +92298,23 @@
           }
         }
       },
+      "LolYourshopEndOfGameXp": {
+        "type": "object",
+        "properties": {
+          "PER_WIN": {
+            "type": "integer",
+            "format": "uint32"
+          }
+        }
+      },
+      "LolYourshopEndOfGameXpNotification": {
+        "type": "object",
+        "properties": {
+          "xp": {
+            "$ref": "#/components/schemas/LolYourshopEndOfGameXp"
+          }
+        }
+      },
       "LolYourshopInventoryCacheEntry": {
         "type": "object",
         "properties": {
@@ -91888,6 +92391,10 @@
           },
           "uuid": {
             "type": "string"
+          },
+          "wins": {
+            "type": "integer",
+            "format": "uint64"
           }
         }
       },
@@ -92003,6 +92510,10 @@
           },
           "uuid": {
             "type": "string"
+          },
+          "wins": {
+            "type": "integer",
+            "format": "uint64"
           }
         }
       },

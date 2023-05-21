@@ -8653,6 +8653,192 @@ paths:
             application/x-msgpack:
               schema:
                 type: object
+  /lol-drops/v1/drop-tables:
+    get:
+      tags:
+        - Plugins
+        - Plugin lol-drops
+      operationId: GetLolDropsV1DropTables
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/LolDropsCapDropsDropTableWithPityDTO'
+            application/x-yaml:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/LolDropsCapDropsDropTableWithPityDTO'
+            application/x-msgpack:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/LolDropsCapDropsDropTableWithPityDTO'
+  '/lol-drops/v1/drop-tables/{dropTableId}':
+    get:
+      tags:
+        - Plugins
+        - Plugin lol-drops
+      operationId: GetLolDropsV1DropTablesByDropTableId
+      parameters:
+        - name: dropTableId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/LolDropsCapDropsDropTableWithPityDTO'
+            application/x-yaml:
+              schema:
+                $ref: '#/components/schemas/LolDropsCapDropsDropTableWithPityDTO'
+            application/x-msgpack:
+              schema:
+                $ref: '#/components/schemas/LolDropsCapDropsDropTableWithPityDTO'
+  '/lol-drops/v1/drop-tables/{dropTableId}/odds-list':
+    get:
+      tags:
+        - Plugins
+        - Plugin lol-drops
+      operationId: GetLolDropsV1DropTablesByDropTableIdOddsList
+      parameters:
+        - name: dropTableId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/LolDropsCapDropsOddsListEntryDTO'
+            application/x-yaml:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/LolDropsCapDropsOddsListEntryDTO'
+            application/x-msgpack:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/LolDropsCapDropsOddsListEntryDTO'
+  '/lol-drops/v1/drop-tables/{dropTableId}/odds-tree':
+    get:
+      tags:
+        - Plugins
+        - Plugin lol-drops
+      operationId: GetLolDropsV1DropTablesByDropTableIdOddsTree
+      parameters:
+        - name: dropTableId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/LolDropsCapDropsOddsTreeNodeDTO'
+            application/x-yaml:
+              schema:
+                $ref: '#/components/schemas/LolDropsCapDropsOddsTreeNodeDTO'
+            application/x-msgpack:
+              schema:
+                $ref: '#/components/schemas/LolDropsCapDropsOddsTreeNodeDTO'
+  '/lol-drops/v1/drop-tables/{dropTableId}/players/{playerId}/pity-count':
+    get:
+      tags:
+        - Plugins
+        - Plugin lol-drops
+      operationId: GetLolDropsV1DropTablesByDropTableIdPlayersByPlayerIdPityCount
+      parameters:
+        - name: dropTableId
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: playerId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/LolDropsCapDropsPityCountDTO'
+            application/x-yaml:
+              schema:
+                $ref: '#/components/schemas/LolDropsCapDropsPityCountDTO'
+            application/x-msgpack:
+              schema:
+                $ref: '#/components/schemas/LolDropsCapDropsPityCountDTO'
+  '/lol-drops/v1/players/{playerId}/pity-counts':
+    get:
+      tags:
+        - Plugins
+        - Plugin lol-drops
+      operationId: GetLolDropsV1PlayersByPlayerIdPityCounts
+      parameters:
+        - name: playerId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/LolDropsCapDropsPityCountDTO'
+            application/x-yaml:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/LolDropsCapDropsPityCountDTO'
+            application/x-msgpack:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/LolDropsCapDropsPityCountDTO'
+  /lol-drops/v1/ready:
+    get:
+      tags:
+        - Plugins
+        - Plugin lol-drops
+      operationId: GetLolDropsV1Ready
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: boolean
+            application/x-yaml:
+              schema:
+                type: boolean
+            application/x-msgpack:
+              schema:
+                type: boolean
   /lol-email-verification/v1/confirm-email:
     post:
       tags:
@@ -8806,34 +8992,6 @@ paths:
             application/x-msgpack:
               schema:
                 type: object
-  /lol-end-of-game/v1/reported-players:
-    get:
-      tags:
-        - Plugins
-        - Plugin lol-end-of-game
-      operationId: GetLolEndOfGameV1ReportedPlayers
-      responses:
-        '200':
-          description: Successful response
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  type: integer
-                  format: uint64
-            application/x-yaml:
-              schema:
-                type: array
-                items:
-                  type: integer
-                  format: uint64
-            application/x-msgpack:
-              schema:
-                type: array
-                items:
-                  type: integer
-                  format: uint64
   /lol-end-of-game/v1/state/dismiss-stats:
     post:
       tags:
@@ -9085,6 +9243,25 @@ paths:
         - Plugins
         - Plugin lol-event-shop
       operationId: GetLolEventShopV1IsGracePeriod
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: boolean
+            application/x-yaml:
+              schema:
+                type: boolean
+            application/x-msgpack:
+              schema:
+                type: boolean
+  /lol-event-shop/v1/is-multi-purchase-enabled:
+    get:
+      tags:
+        - Plugins
+        - Plugin lol-event-shop
+      operationId: GetLolEventShopV1IsMultiPurchaseEnabled
       responses:
         '200':
           description: Successful response
@@ -19596,6 +19773,93 @@ paths:
             application/x-msgpack:
               schema:
                 type: object
+  /lol-player-report-sender/v1/match-history-reports:
+    post:
+      tags:
+        - Plugins
+        - Plugin lol-player-report-sender
+      operationId: PostLolPlayerReportSenderV1MatchHistoryReports
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/LolPlayerReportSenderPlayerReport'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/LolPlayerReportSenderPlayerReport'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/LolPlayerReportSenderPlayerReport'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+            application/x-yaml:
+              schema:
+                type: object
+            application/x-msgpack:
+              schema:
+                type: object
+  '/lol-player-report-sender/v1/reported-players/gameId/{gameId}':
+    delete:
+      tags:
+        - Plugins
+        - Plugin lol-player-report-sender
+      operationId: DeleteLolPlayerReportSenderV1ReportedPlayersGameIdByGameId
+      parameters:
+        - name: gameId
+          in: path
+          required: true
+          schema:
+            type: integer
+            format: uint64
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
+            application/x-yaml:
+              schema:
+                type: object
+            application/x-msgpack:
+              schema:
+                type: object
+    get:
+      tags:
+        - Plugins
+        - Plugin lol-player-report-sender
+      operationId: GetLolPlayerReportSenderV1ReportedPlayersGameIdByGameId
+      parameters:
+        - name: gameId
+          in: path
+          required: true
+          schema:
+            type: integer
+            format: uint64
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: string
+            application/x-yaml:
+              schema:
+                type: array
+                items:
+                  type: string
+            application/x-msgpack:
+              schema:
+                type: array
+                items:
+                  type: string
   '/lol-pre-end-of-game/v1/complete/{sequenceEventName}':
     post:
       tags:
@@ -24044,6 +24308,25 @@ paths:
             application/x-msgpack:
               schema:
                 $ref: '#/components/schemas/LolSummonerPlayerNameMode'
+  /lol-summoner/v1/player-name-mode-string:
+    get:
+      tags:
+        - Plugins
+        - Plugin lol-summoner
+      operationId: GetLolSummonerV1PlayerNameModeString
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: string
+            application/x-yaml:
+              schema:
+                type: string
+            application/x-msgpack:
+              schema:
+                type: string
   /lol-summoner/v1/profile-privacy-enabled:
     get:
       tags:
@@ -24715,6 +24998,161 @@ paths:
             application/x-msgpack:
               schema:
                 $ref: '#/components/schemas/LolTftTeamPlannerTeamSettings'
+  /lol-tft-troves/v1/banners:
+    get:
+      tags:
+        - Plugins
+        - Plugin lol-tft-troves
+      operationId: GetLolTftTrovesV1Banners
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/LolTftTrovesTrovesBanner'
+            application/x-yaml:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/LolTftTrovesTrovesBanner'
+            application/x-msgpack:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/LolTftTrovesTrovesBanner'
+  /lol-tft-troves/v1/config:
+    get:
+      tags:
+        - Plugins
+        - Plugin lol-tft-troves
+      operationId: GetLolTftTrovesV1Config
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/LolTftTrovesTrovesConfig'
+            application/x-yaml:
+              schema:
+                $ref: '#/components/schemas/LolTftTrovesTrovesConfig'
+            application/x-msgpack:
+              schema:
+                $ref: '#/components/schemas/LolTftTrovesTrovesConfig'
+  '/lol-tft-troves/v1/loot-odds/{dropTableId}':
+    get:
+      tags:
+        - Plugins
+        - Plugin lol-tft-troves
+      operationId: GetLolTftTrovesV1LootOddsByDropTableId
+      parameters:
+        - name: dropTableId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/LolTftTrovesVerboseLootOddsResponse'
+            application/x-yaml:
+              schema:
+                $ref: '#/components/schemas/LolTftTrovesVerboseLootOddsResponse'
+            application/x-msgpack:
+              schema:
+                $ref: '#/components/schemas/LolTftTrovesVerboseLootOddsResponse'
+  /lol-tft-troves/v1/purchase:
+    post:
+      tags:
+        - Plugins
+        - Plugin lol-tft-troves
+      operationId: PostLolTftTrovesV1Purchase
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/LolTftTrovesTrovesPurchaseRequest'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/LolTftTrovesTrovesPurchaseRequest'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/LolTftTrovesTrovesPurchaseRequest'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/LolTftTrovesCapOrdersResponseDTO'
+            application/x-yaml:
+              schema:
+                $ref: '#/components/schemas/LolTftTrovesCapOrdersResponseDTO'
+            application/x-msgpack:
+              schema:
+                $ref: '#/components/schemas/LolTftTrovesCapOrdersResponseDTO'
+  /lol-tft-troves/v1/roll:
+    post:
+      tags:
+        - Plugins
+        - Plugin lol-tft-troves
+      operationId: PostLolTftTrovesV1Roll
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/LolTftTrovesTrovesRollRequest'
+          application/x-yaml:
+            schema:
+              $ref: '#/components/schemas/LolTftTrovesTrovesRollRequest'
+          application/x-msgpack:
+            schema:
+              $ref: '#/components/schemas/LolTftTrovesTrovesRollRequest'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/LolTftTrovesCapOrdersResponseDTO'
+            application/x-yaml:
+              schema:
+                $ref: '#/components/schemas/LolTftTrovesCapOrdersResponseDTO'
+            application/x-msgpack:
+              schema:
+                $ref: '#/components/schemas/LolTftTrovesCapOrdersResponseDTO'
+  /lol-tft-troves/v1/roll-rewards:
+    delete:
+      tags:
+        - Plugins
+        - Plugin lol-tft-troves
+      operationId: DeleteLolTftTrovesV1RollRewards
+      responses:
+        '204':
+          description: No content
+    get:
+      tags:
+        - Plugins
+        - Plugin lol-tft-troves
+      operationId: GetLolTftTrovesV1RollRewards
+      responses:
+        '204':
+          description: No content
+  /lol-tft-troves/v1/status-notifications:
+    get:
+      tags:
+        - Plugins
+        - Plugin lol-tft-troves
+      operationId: GetLolTftTrovesV1StatusNotifications
+      responses:
+        '204':
+          description: No content
   /lol-tft/v1/tft_experiment_bucket:
     put:
       tags:
@@ -38264,6 +38702,65 @@ components:
           items:
             type: integer
             format: uint64
+    LolDropsCapDropsDropTablePityInfo:
+      type: object
+      properties:
+        chaseContentIds:
+          type: array
+          items:
+            type: string
+        pityLimit:
+          type: integer
+          format: int32
+    LolDropsCapDropsDropTableWithPityDTO:
+      type: object
+      properties:
+        currencyId:
+          type: string
+        endDate:
+          type: string
+        id:
+          type: string
+        pityInfo:
+          $ref: '#/components/schemas/LolDropsCapDropsDropTablePityInfo'
+        productId:
+          type: string
+        rollOffer:
+          type: string
+        sourceId:
+          type: string
+        startDate:
+          type: string
+    LolDropsCapDropsOddsListEntryDTO:
+      type: object
+      properties:
+        contentId:
+          type: string
+        nodeId:
+          type: string
+        odds:
+          type: number
+          format: float
+    LolDropsCapDropsOddsTreeNodeDTO:
+      type: object
+      properties:
+        children:
+          type: array
+          items:
+            $ref: '#/components/schemas/LolDropsCapDropsOddsTreeNodeDTO'
+        nodeId:
+          type: string
+        odds:
+          type: number
+          format: float
+    LolDropsCapDropsPityCountDTO:
+      type: object
+      properties:
+        count:
+          type: integer
+          format: int32
+        dropTableId:
+          type: string
     LolEmailVerificationAccessToken:
       type: object
       properties:
@@ -38782,6 +39279,20 @@ components:
           type: string
         nameId:
           type: string
+    LolEndOfGameGameDataTftPlaybook:
+      type: object
+      properties:
+        enabled:
+          type: boolean
+        iconPath:
+          type: string
+        itemId:
+          type: integer
+          format: int32
+        name:
+          type: string
+        translatedName:
+          type: string
     LolEndOfGameGameDataTftTrait:
       type: object
       properties:
@@ -39002,6 +39513,16 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/LolEndOfGameTFTEndOfGameTraitViewModel'
+    LolEndOfGameTFTEndOfGamePlaybookViewModel:
+      type: object
+      properties:
+        icon:
+          type: string
+        itemId:
+          type: integer
+          format: uint32
+        name:
+          type: string
     LolEndOfGameTFTEndOfGamePlayerViewModel:
       type: object
       properties:
@@ -39029,9 +39550,8 @@ components:
         partnerGroupId:
           type: integer
           format: uint8
-        playbookItemId:
-          type: integer
-          format: uint32
+        playbook:
+          $ref: '#/components/schemas/LolEndOfGameTFTEndOfGamePlaybookViewModel'
         puuid:
           type: string
         rank:
@@ -41532,8 +42052,8 @@ components:
     LolEventShopTokenUpsellLockedType:
       enum:
         - UNASSIGNED
-        - UNLOCKED
         - LOCKED
+        - UNLOCKED
       type: string
     LolEventShopTransaction:
       type: object
@@ -59971,6 +60491,570 @@ components:
       properties:
         enabled:
           type: boolean
+    LolTftTrovesCapOrdersRequestDTO:
+      type: object
+      properties:
+        data:
+          type: object
+        meta:
+          $ref: '#/components/schemas/LolTftTrovesCapOrdersRequestMetaDTO'
+    LolTftTrovesCapOrdersRequestMetaDTO:
+      type: object
+      properties:
+        correlationId:
+          type: string
+        jwt:
+          type: string
+        xid:
+          type: string
+    LolTftTrovesCapOrdersResponseDTO:
+      type: object
+      properties:
+        data:
+          type: object
+    LolTftTrovesDropsDropTablePityInfo:
+      type: object
+      properties:
+        chaseContentIds:
+          type: array
+          items:
+            type: string
+        pityLimit:
+          type: integer
+          format: int32
+    LolTftTrovesDropsDropTableWithPityDTO:
+      type: object
+      properties:
+        currencyId:
+          type: string
+        endDate:
+          type: string
+        id:
+          type: string
+        pityInfo:
+          $ref: '#/components/schemas/LolTftTrovesDropsDropTablePityInfo'
+        productId:
+          type: string
+        rollOffer:
+          type: string
+        sourceId:
+          type: string
+        startDate:
+          type: string
+    LolTftTrovesDropsOddsListEntryDTO:
+      type: object
+      properties:
+        contentId:
+          type: string
+    LolTftTrovesDropsOddsTreeNodeDTO:
+      type: object
+      properties:
+        children:
+          type: array
+          items:
+            $ref: '#/components/schemas/LolTftTrovesDropsOddsTreeNodeDTO'
+        nodeId:
+          type: string
+        odds:
+          type: number
+          format: float
+    LolTftTrovesDropsPityCountDTO:
+      type: object
+      properties:
+        count:
+          type: integer
+          format: int32
+        dropTableId:
+          type: string
+    LolTftTrovesGameDataTrovesActiveBanners:
+      type: object
+      properties:
+        banners:
+          type: array
+          items:
+            $ref: '#/components/schemas/LolTftTrovesGameDataTrovesBanner'
+    LolTftTrovesGameDataTrovesBanner:
+      type: object
+      properties:
+        activationTime:
+          type: string
+        bannerTexture:
+          type: string
+        celebrationTheme:
+          $ref: '#/components/schemas/LolTftTrovesTrovesCelebrationThemeData'
+        chaseTable:
+          $ref: '#/components/schemas/LolTftTrovesGameDataTrovesBannerTable'
+        deactivationTime:
+          type: string
+        description:
+          type: string
+        id:
+          type: string
+        mythicTokenOfferId:
+          type: string
+        name:
+          type: string
+        pityCounterId:
+          type: string
+        pityThreshold:
+          type: integer
+          format: uint32
+        rootTable:
+          $ref: '#/components/schemas/LolTftTrovesGameDataTrovesBannerTable'
+        thumbnailTexture:
+          type: string
+    LolTftTrovesGameDataTrovesBannerReward:
+      type: object
+      properties:
+        currencyId:
+          type: string
+        highlightRewardAssetPath:
+          type: string
+        id:
+          type: string
+        isChaseReward:
+          type: boolean
+        loadoutsItem:
+          $ref: '#/components/schemas/LolTftTrovesLoadoutsItem'
+        name:
+          type: string
+        quantity:
+          type: integer
+          format: uint32
+        rarity:
+          $ref: '#/components/schemas/LolTftTrovesLootRarity'
+        rewardTexturePath:
+          type: string
+    LolTftTrovesGameDataTrovesBannerTable:
+      type: object
+      properties:
+        children:
+          type: array
+          items:
+            $ref: '#/components/schemas/LolTftTrovesGameDataTrovesBannerTableEntry'
+        id:
+          type: string
+        key:
+          type: string
+        loadoutsItem:
+          $ref: '#/components/schemas/LolTftTrovesLoadoutsItem'
+        name:
+          type: string
+    LolTftTrovesGameDataTrovesBannerTableEntry:
+      type: object
+      properties:
+        bannerNode:
+          $ref: '#/components/schemas/LolTftTrovesGameDataTrovesBannerTable'
+    LolTftTrovesInventoryItem:
+      type: object
+      properties:
+        inventoryType:
+          type: string
+        owned:
+          type: boolean
+        uuid:
+          type: string
+    LolTftTrovesLoadoutsItem:
+      type: object
+      properties:
+        itemInstanceId:
+          type: string
+        itemTypeId:
+          type: string
+        name:
+          type: string
+        starLevel:
+          type: integer
+          format: uint32
+    LolTftTrovesLoginSession:
+      type: object
+      properties:
+        accountId:
+          type: integer
+          format: uint64
+        idToken:
+          type: string
+        puuid:
+          type: string
+        state:
+          $ref: '#/components/schemas/LolTftTrovesLoginSessionStates'
+        summonerId:
+          type: integer
+          format: uint64
+    LolTftTrovesLoginSessionStates:
+      enum:
+        - IN_PROGRESS
+        - SUCCEEDED
+        - LOGGING_OUT
+        - ERROR
+      type: string
+    LolTftTrovesLootOddsResponse:
+      type: object
+      properties:
+        children:
+          type: array
+          items:
+            $ref: '#/components/schemas/LolTftTrovesLootOddsResponse'
+        displayPriority:
+          type: integer
+          format: int32
+        dropRate:
+          type: number
+          format: double
+        label:
+          type: string
+        lootId:
+          type: string
+        parentId:
+          type: string
+        quantity:
+          type: integer
+          format: int32
+        query:
+          type: string
+    LolTftTrovesLootRarity:
+      enum:
+        - Default
+        - Epic
+        - Legendary
+        - Mythic
+        - Ultimate
+      type: string
+    LolTftTrovesOrderNotificationResource:
+      type: object
+      properties:
+        eventType:
+          type: string
+        eventTypeId:
+          type: string
+        status:
+          type: string
+    LolTftTrovesPlayerLoot:
+      type: object
+      properties:
+        itemDesc:
+          type: string
+        localizedName:
+          type: string
+        lootName:
+          type: string
+    LolTftTrovesRiotMessagingServiceMessage:
+      type: object
+      properties:
+        payload:
+          type: string
+        resource:
+          type: string
+        service:
+          type: string
+        timestamp:
+          type: integer
+          format: int64
+        version:
+          type: string
+    LolTftTrovesTrovePurchaseResponse:
+      type: object
+      properties:
+        data:
+          type: object
+        errorCode:
+          type: integer
+          format: uint32
+        orderId:
+          type: string
+        status:
+          type: string
+    LolTftTrovesTrovesBanner:
+      type: object
+      properties:
+        bannerTexture:
+          type: string
+        celebrationTheme:
+          $ref: '#/components/schemas/LolTftTrovesTrovesCelebrationThemeData'
+        description:
+          type: string
+        endDate:
+          type: string
+        id:
+          type: string
+        mythicOffer:
+          type: string
+        name:
+          type: string
+        pityLimit:
+          type: integer
+          format: uint32
+        rollOffer:
+          type: string
+        startDate:
+          type: string
+        status:
+          $ref: '#/components/schemas/LolTftTrovesTrovesStatus'
+        thumbnailTexture:
+          type: string
+    LolTftTrovesTrovesCelebrationCurrencySegmentData:
+      type: object
+      properties:
+        lottieJsonPath:
+          type: string
+        multiPullSoundPath:
+          type: string
+        mythicPullSoundPath:
+          type: string
+        singlePullSoundPath:
+          type: string
+    LolTftTrovesTrovesCelebrationHighlightSegmentData:
+      type: object
+      properties:
+        lottieJsonPath:
+          type: string
+        promiseTokenDescription:
+          type: string
+        promiseTokenTitle:
+          type: string
+        revealSoundPath:
+          type: string
+        transitionWipeSoundPath:
+          type: string
+    LolTftTrovesTrovesCelebrationPortalSegmentData:
+      type: object
+      properties:
+        multiPullEpicWebmPath:
+          type: string
+        multiPullLegendaryWebmPath:
+          type: string
+        multiPullMythicWebmPath:
+          type: string
+        multiPullRareWebmPath:
+          type: string
+        multiPullSoundPath:
+          type: string
+        singlePullEpicWebmPath:
+          type: string
+        singlePullLegendaryWebmPath:
+          type: string
+        singlePullMythicWebmPath:
+          type: string
+        singlePullRareWebmPath:
+          type: string
+        singlePullSoundPath:
+          type: string
+    LolTftTrovesTrovesCelebrationStandardSegmentData:
+      type: object
+      properties:
+        FirstItemTimingOffset:
+          type: number
+          format: float
+        InterItemTimingOffset:
+          type: number
+          format: float
+        PCBackgroundPath:
+          type: string
+        PCButtonText:
+          type: string
+        PCGlintSprite:
+          $ref: '#/components/schemas/LolTftTrovesTrovesPCSpriteAnimation'
+        PCHeaderText:
+          type: string
+        PCLegendaryHitSprite:
+          $ref: '#/components/schemas/LolTftTrovesTrovesPCSpriteAnimation'
+        PCLegendarySparkSprite:
+          $ref: '#/components/schemas/LolTftTrovesTrovesPCSpriteAnimation'
+        PCRewardEpicGemPath:
+          type: string
+        PCRewardFadeInDelay:
+          type: number
+          format: float
+        PCRewardFadeInDuration:
+          type: number
+          format: float
+        PCRewardFramePath:
+          type: string
+        PCRewardLegendaryGemPath:
+          type: string
+        PCRewardMythicGemPath:
+          type: string
+        PCRewardOneStarPath:
+          type: string
+        PCRewardRareGemPath:
+          type: string
+        PCRewardSheenDelay:
+          type: number
+          format: float
+        PCRewardSheenDuration:
+          type: number
+          format: float
+        PCRewardSheenPath:
+          type: string
+        PCRewardThreeStarPath:
+          type: string
+        PCRewardTwoStarPath:
+          type: string
+        PCThumbnailFadeInDelay:
+          type: number
+          format: float
+        PCThumbnailFadeInDuration:
+          type: number
+          format: float
+        pullSingleIndividualGlintLegendarySoundPath:
+          type: string
+        pullSingleIndividualGlintSoundPath:
+          type: string
+        revealEpicSoundPath:
+          type: string
+        revealGlobalSoundPath:
+          type: string
+        revealMythicSoundPath:
+          type: string
+        revealRareSoundPath:
+          type: string
+    LolTftTrovesTrovesCelebrationThemeData:
+      type: object
+      properties:
+        currencySegmentData:
+          $ref: '#/components/schemas/LolTftTrovesTrovesCelebrationCurrencySegmentData'
+        highlightSegmentData:
+          $ref: '#/components/schemas/LolTftTrovesTrovesCelebrationHighlightSegmentData'
+        portalSegmentData:
+          $ref: '#/components/schemas/LolTftTrovesTrovesCelebrationPortalSegmentData'
+        standardSegmentData:
+          $ref: '#/components/schemas/LolTftTrovesTrovesCelebrationStandardSegmentData'
+    LolTftTrovesTrovesConfig:
+      type: object
+      properties:
+        enabled:
+          type: boolean
+        rewardTypes:
+          type: array
+          items:
+            type: string
+    LolTftTrovesTrovesPCSpriteAnimation:
+      type: object
+      properties:
+        delay:
+          type: number
+          format: float
+        duration:
+          type: number
+          format: float
+        fps:
+          type: integer
+          format: uint32
+        maxPlayCount:
+          type: integer
+          format: int32
+        numCols:
+          type: integer
+          format: uint32
+        numFrames:
+          type: integer
+          format: uint32
+        numRows:
+          type: integer
+          format: uint32
+        playAtInsert:
+          type: boolean
+        spritesheetPath:
+          type: string
+        startFrame:
+          type: integer
+          format: uint32
+    LolTftTrovesTrovesPurchaseRequest:
+      type: object
+      properties:
+        offerId:
+          type: string
+        paymentOption:
+          type: string
+        quantity:
+          type: integer
+          format: uint32
+    LolTftTrovesTrovesReward:
+      type: object
+      properties:
+        highlightRewardAssetPath:
+          type: string
+        itemId:
+          type: string
+        itemTypeId:
+          type: string
+        name:
+          type: string
+        quantity:
+          type: integer
+          format: uint32
+        rarity:
+          $ref: '#/components/schemas/LolTftTrovesLootRarity'
+        rewardTexturePath:
+          type: string
+        starLevel:
+          type: integer
+          format: uint32
+    LolTftTrovesTrovesRewards:
+      type: object
+      properties:
+        highlight:
+          type: array
+          items:
+            $ref: '#/components/schemas/LolTftTrovesTrovesReward'
+        standard:
+          type: array
+          items:
+            $ref: '#/components/schemas/LolTftTrovesTrovesReward'
+    LolTftTrovesTrovesRewardsResponse:
+      type: object
+      properties:
+        pullType:
+          type: integer
+          format: uint8
+        rewards:
+          $ref: '#/components/schemas/LolTftTrovesTrovesRewards'
+    LolTftTrovesTrovesRollRequest:
+      type: object
+      properties:
+        dropTableId:
+          type: string
+        isMythic:
+          type: boolean
+        numberOfRolls:
+          type: integer
+          format: uint32
+        offerId:
+          type: string
+    LolTftTrovesTrovesStatus:
+      type: object
+      properties:
+        availableContents:
+          type: integer
+          format: uint32
+        dropTableId:
+          type: string
+        hasPullError:
+          type: boolean
+        owned:
+          type: boolean
+        pityCount:
+          type: integer
+          format: uint32
+    LolTftTrovesVerboseLootOddsResponse:
+      type: object
+      properties:
+        chanceToContain:
+          type: array
+          items:
+            $ref: '#/components/schemas/LolTftTrovesLootOddsResponse'
+        checksOwnership:
+          type: boolean
+        guaranteedToContain:
+          type: array
+          items:
+            $ref: '#/components/schemas/LolTftTrovesLootOddsResponse'
+        hasPityRules:
+          type: boolean
+        lootItem:
+          $ref: '#/components/schemas/LolTftTrovesPlayerLoot'
+        recipeName:
+          type: string
     LolTrophiesCapClashTrophyEntitlementPayload:
       type: object
       properties:
@@ -63787,6 +64871,7 @@ tags:
   - name: Plugin lol-collections
   - name: Plugin lol-content-targeting
   - name: Plugin lol-cosmetics
+  - name: Plugin lol-drops
   - name: Plugin lol-email-verification
   - name: Plugin lol-end-of-game
   - name: Plugin lol-esport-stream-notifications
@@ -63854,5 +64939,6 @@ tags:
   - name: Plugin lol-tastes
   - name: Plugin lol-tft
   - name: Plugin lol-tft-team-planner
+  - name: Plugin lol-tft-troves
   - name: Plugin lol-trophies
   - name: Plugin lol-yourshop

@@ -42166,8 +42166,8 @@ components:
     LolEventShopTokenUpsellLockedType:
       enum:
         - UNASSIGNED
-        - LOCKED
         - UNLOCKED
+        - LOCKED
       type: string
     LolEventShopTransaction:
       type: object
